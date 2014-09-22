@@ -1,0 +1,163 @@
+1590;312
+inf;City;Vardø;10;hard;Location: Finnmark county. Vardø municipality#Lokasjon: Finnmark fylke. Vardø kommune#spn#fra#ger;defaulthint1#defaulthint2
+837;587
+inf;City;Hammerfest;10;medium;Location: Finnmark county. Hammerfest municipality#Lokasjon: Finnmark fylke. Hammerfest kommune#spn#fra#ger;defaulthint1#defaulthint2
+899;805
+inf;City;Alta;10;medium;The biggest city in Finnmark county. Location: Alta municipality#Største by i Finnmark fylke. Lokasjon: Alta kommune#spn#fra#ger;defaulthint1#defaulthint2
+1049;697
+inf;City;Lakselv;10;hard;Location: Finnmark county. Porsanger municipality#Lokasjon: Finnmark fylke. Porsanger kommune#spn#fra#ger;defaulthint1#defaulthint2
+1502;459
+inf;City;Vadsø;10;hard;Location: Finnmark county. Vadsø municipality#Lokasjon: Finnmark fylke. Vadsø kommune#spn#fra#ger;defaulthint1#defaulthint2
+1580;539
+inf;City;Kirkenes;10;medium;Endpoint for hurtigruta and E6. Location: Finnmark. Sør-Varanger#Endepunkt for hurtigruta og E6. Lokasjon: Finnmark. Sør-Varanger#spn#fra#ger;defaulthint1#defaulthint2
+1182;832
+qst;sametinget##medium##Where do we find sametinget(indigenous council)?#Hvor ligger sametinget?#spn#fra#ger#overridingHint1#overridingHint2
+inf;City;Karasjok;10;hard;Sametinget(indigenous council) is localized here#Byen som huser sametinget. Lokasjon: Finnmark fylke. Karasjok kommune#spn#fra#ger;defaulthint1#defaulthint2
+1009;383
+inf;City;Honningsvåg;10;medium;Location: Finnmark county. Nordkapp municipality#Lokasjon: Finnmark fylke. Nordkapp kommune#spn#fra#ger;defaulthint1#defaulthint2
+1419;299
+inf;City;Båtsfjord;10;hard;Location: Finnmark county. Båtsfjord municipality#Lokasjon: Finnmark fylke. Båtsfjord kommune#spn#fra#ger;defaulthint1#defaulthint2
+530;1100
+inf;City;Tromsø;10;easy;Biggest city in Troms county. Location: Tromsø municipality#Største by i Troms fylke. Lokasjon: Tromsø kommune#spn#fra#ger;defaulthint1#defaulthint2
+496;1262
+inf;City;Finnsnes;10;medium;Location: Troms county. Lenvik municipality#Lokasjon: Troms fylke. Lenvik kommune#spn#fra#ger;defaulthint1#defaulthint2
+417;1448
+inf;City;Harstad;10;medium;Only city on Hinnøya island. Location: Troms county. Harstad municipality#Eneste by på Hinnøya. Lokasjon: Troms fylke. Harstad kommune#spn#fra#ger;defaulthint1#defaulthint2
+506;1899
+inf;City;Fauske;10;hard;Know for having good quality and quantity of marble. Location: Nordland county. Fauske municipality#Kjent som marmorbyen. Lokasjon: Nordland fylke. Fauske kommune#spn#fra#ger;defaulthint1#defaulthint2
+410;1942
+inf;City;Bodø;10;easy;Biggest city in Nordland county. Location: Bodø municipality#Største by i Nordland fylke. Lokasjon: Bodø kommune#spn#fra#ger;defaulthint1#defaulthint2
+505;2189
+inf;City;Mo i Rana;10;medium;Polarsirkelbyen(Polar-circle-city) Location: Nordland county. Rana municipality#Vil gjerne omtales som Polarsirkelbyen. Lokasjon: Nordland fylke. Rana kommune#spn#fra#ger;defaulthint1#defaulthint2
+420;2479
+inf;City;Brønnøysund;10;hard;Location: Nordland. Brønnøy municipality#Mest kjent for den statlige registeretaten Brønnøysundregistrene. Brønnøy kommune#spn#fra#ger;defaulthint1#defaulthint2
+303;1693
+inf;City;Svolvær;10;medium;Location: Nordland county. Vågan municipality#Lokasjon: Nordland fylke. Vågan kommune#spn#fra#ger;defaulthint1#defaulthint2
+523;2987
+inf;City;Stjørdal;10;hard;Værnes airport is close to this city. Location: Nord-Trøndelag county. Stjørdal municipality#Værnes flyplass ligger nært byen. Lokasjon: Nord-Trøndelag fylke. Stjørdal kommune#spn#fra#ger;defaulthint1#defaulthint2
+518;2841
+inf;City;Steinkjer;10;medium;Nord-Trøndelags biggest city. Location: Steinkjer municipality#Nord-Trøndelags største by. Lokasjon: Steinkjer kommune#spn#fra#ger;defaulthint1#defaulthint2
+542;2890
+inf;City;Verdal;10;hard;Location: Nord-Trøndelags county. Verdal municipality#Lokasjon: Nord-Trøndelags fylke. Verdal kommune#spn#fra#ger;defaulthint1#defaulthint2
+468;2738
+inf;City;Namsos;10;hard;Location: Nord-Trøndelags county. ligger innerst i Namsenfjorden hvor lakseelva namsen #Ligger innerst i Namsenfjorden hvor lakseelva namsen har sitt utløp#spn#fra#ger;defaulthint1#defaulthint2
+476;3021
+inf;City;Trondheim;10;easy;Biggest city in Sør-Trøndelag. Location: Brønnøy municipality#Største by i Sør-Trøndelag. Lokasjon Sør-Trøndelags fylke. Brønnøy kommune#spn#fra#ger;defaulthint1#defaulthint2
+662;3151
+inf;City;Røros;10;hard;Built as result of a Copper Works. Brønnøy municipality#Bygd rundt et kobberverk. Brønnøy kommune#spn#fra#ger;defaulthint1#defaulthint2
+557;3035
+inf;City;Selbu;10;hard;Known for knitting and the Selburose pattern#Kjent for strikking og mønsteret Selburose#spn#fra#ger;defaulthint1#defaulthint2
+378;3001
+inf;City;Brekstad;10;hard;Location: Sør-Trøndelag county. Ørland municipality#Lokasjon: Sør-Trøndelag fylke. Ørland kommune#spn#fra#ger;defaulthint1#defaulthint2
+242;3324
+inf;City;Molde;10;easy;Location: Møre og Romsdal. Molde municipality#Lokasjon: Møre og Romsdal fylke. Molde kommune#spn#fra#ger;defaulthint1#defaulthint2
+174;3428
+inf;City;Ålesund;10;easy;Biggest city in Møre og Romsdal county. Location: Ålesund municipality#Største by i Møre og Romsdal fylke. Ålesund kommune#spn#fra#ger;defaulthint1#defaulthint2
+257;3218
+inf;City;Kristiansund;10;medium;Location: Møre og Romsdal. Kristiansund municipality#Lokasjon: Møre og Romsdal fylke. Kristiansund kommune#spn#fra#ger;defaulthint1#defaulthint2
+158;3469
+inf;City;Ulsteinvik;10;veryhard;Location: Møre og Romsdal. Ulstein municipality#Hødd fotballag. Lokasjon: Møre og Romsdal fylke. Ulstein kommune#spn#fra#ger;defaulthint1#defaulthint2
+312;3334
+inf;City;Åndalsnes;10;hard;The city is located at the end of the river Rauma in Romsdalsfjorden. Rauma municipality#Byen ligger ved utløpet av elva Rauma i Romsdalsfjorden. Rauma kommune#spn#fra#ger;defaulthint1#defaulthint2
+159;3663
+inf;City;Florø;10;hard;Norways vestern most city. Location: Sogn og Fjordane county. Florø municipality#Norges vestligste by. Lokasjon: Sogn og Fjordane fylke. Florø kommune#spn#fra#ger;defaulthint1#defaulthint2
+246;3647
+inf;City;Førde;10;hard;Location: Sogn og Fjordane county. Førde municipality (most populated municipality in the county)#Lokasjon: Sogn og Fjordane fylke. Førde kommune (mest folkerike kommune i fylket)#spn#fra#ger;defaulthint1#defaulthint2
+132;3589
+inf;City;Måløy;10;hard;Location: Sogn og Fjordane county. Vågsøy municipality#Lokasjon: Sogn og Fjordane fylke. Vågsøy kommune#spn#fra#ger;defaulthint1#defaulthint2
+370;3657
+inf;City;Leikanger;10;hard;Location: Sogn og Fjordane county. Leikanger municipality#Lokasjon: Sogn og Fjordane fylke. Leikanger kommune#spn#fra#ger;defaulthint1#defaulthint2
+306;3884
+inf;City;Bergen;10;easy;Biggest city in Hordaland county. Starting point for Hurtigruten#Største by i Hordaland. Utgangspunkt for Hurtigruten#spn#fra#ger;defaulthint1#defaulthint2
+456;3890
+inf;City;Odda;10;hard;Location: Hordaland county. Odda municipality#Lokasjon: Hordaland fylke. Odda kommune#spn#fra#ger;defaulthint1#defaulthint2
+483;4134
+inf;City;Stavanger;10;easy;Biggest city in Rogaland county#Største by i Rogaland fylke#spn#fra#ger;defaulthint1#defaulthint2
+494;4157
+inf;City;Sandnes;10;medium;Located at the end of Gandsfjorden in Rogaland county#Ligger innerst i Gandsfjorden i Rogaland fylke#spn#fra#ger;defaulthint1#defaulthint2
+558;4217
+inf;City;Egersund;10;medium;Location: Rogaland county. Eigersund municipality#Lokasjon: Rogaland fylke. Eigersund kommune#spn#fra#ger;defaulthint1#defaulthint2
+497;4181
+inf;City;Bryne;10;medium;Location: Rogaland county. Time municipality#Lokasjon: Rogaland fylke. Time kommune#spn#fra#ger;defaulthint1#defaulthint2
+397;4074
+inf;City;Haugesund;10;easy;Location: The grave of viking Harald Fairhair is found here#Harald Hårfagre er gravlagt i denne byen#spn#fra#ger;defaulthint1#defaulthint2
+777;4175
+inf;City;Kristiansand;10;easy;Biggest city in Vest-Agder county. Well known for an ape#Største by i Vest-Agder fylke. Julius holder hus her#spn#fra#ger;defaulthint1#defaulthint2
+736;4223
+inf;City;Mandal;10;hard;Location: Vest-Agder. Mandal municipality#Lokasjon: Vest-Agder fylke. Mandal kommune#spn#fra#ger;defaulthint1#defaulthint2
+764;4156
+inf;City;Vennesla;10;hard;Location: Vest-Agder county. Vennesla municipality#Lokasjon: Vest-Agder fylke. Vennesla kommune#spn#fra#ger;defaulthint1#defaulthint2
+667;4243
+inf;City;Farsund;10;hard;Location: Vest-Agder county. Farsund municipality#Lokasjon: Vest-Agder fylke. Farsund kommune#spn#fra#ger;defaulthint1#defaulthint2
+638;4212
+inf;City;Flekkefjord;10;hard;Location: Vest-Agder county. Flekkefjord municipality#Lokasjon: Vest-Agder fylke. Flekkefjord kommune#spn#fra#ger;defaulthint1#defaulthint2
+823;4080
+inf;City;Arendal;10;medium;Location: Vest-Agder county. Nidelva river ends up in the citys harbour#Lokasjon: Vest-Agder fylke. Nidelva munner ut i byens havnebassend#spn#fra#ger;defaulthint1#defaulthint2
+815;4109
+inf;City;Grimstad;10;medium;Location: Vest-Agder county. Grimstad municipality#Lokasjon: Vest-Agder fylke. Grimstad kommune#spn#fra#ger;defaulthint1#defaulthint2
+839;4012
+inf;City;Risør;10;hard;Location: Vest-Agder county. Risør municipality#Lokasjon: Vest-Agder fylke. Risør kommune#spn#fra#ger;defaulthint1#defaulthint2
+823;4043
+inf;City;Tvedestrand;10;hard;Location: Vest-Agder county. Tvedestrand municipality#Lokasjon: Vest-Agder fylke. Tvedestrand kommune#spn#fra#ger;defaulthint1#defaulthint2
+670;3824
+inf;City;Rjukan;10;hard;Location: Telemark county. Tinn municipality#Lokasjon: Telemark fylke. Tinn kommune#spn#fra#ger;defaulthint1#defaulthint2
+764;3853
+inf;City;Notodden;10;medium;Location: Telemark county. Notodden municipality#Lokasjon: Telemark fylke. Notodden kommune#spn#fra#ger;defaulthint1#defaulthint2
+831;3901
+inf;City;Skien;10;medium;Birthplace of the writer Henrik Ibsen#En av norges eldste byer (fra rund år 1000)#spn#fra#ger;defaulthint1#defaulthint2
+842;3913
+inf;City;Porsgrunn;10;medium;Well known for producing toilets#Kjent for produksjon av toaletter#spn#fra#ger;defaulthint1#defaulthint2
+851;3969
+inf;City;Kragerø;10;hard;Location: Telemark county. Kragerø municipality#Lokasjon: Telemark fylke. Kragerø kommune#spn#fra#ger;defaulthint1#defaulthint2
+836;3771
+inf;City;Drammen;10;easy;Biggest city in Buskerud county#Største by i Buskerud fylke#spn#fra#ger;defaulthint1#defaulthint2
+791;3813
+inf;City;Kongsberg;10;medium;Location: Buskerud county. Kongsberg municipality#Lokasjon: Buskerud fylke. Kongsberg kommune#spn#fra#ger;defaulthint1#defaulthint2
+886;3911
+inf;City;Larvik;10;medium;Location: Vestfold county. Larvik municipality#Lokasjon: Vestfold fylke. Larvik kommune#spn#fra#ger;defaulthint1#defaulthint2
+897;3886
+inf;City;Sandefjord;10;easy;Location: Vestfold county. Sandefjord municipality#Lokasjon: Vestfold fylke. Sandefjord kommune#spn#fra#ger;defaulthint1#defaulthint2
+894;3820
+inf;City;Horten;10;hard;Location: Vestfold county. Horten municipality#Lokasjon: Vestfold fylke. Horten kommune#spn#fra#ger;defaulthint1#defaulthint2
+901;3851
+inf;City;Tønsberg;10;easy;Location: Vestfold county. Tønsberg municipality#Lokasjon: Vestfold fylke. Tønsberg kommune#spn#fra#ger;defaulthint1#defaulthint2
+872;3814
+inf;City;Holmestrand;10;hard;Location: Vestfold county. Holmestrand municipality#Lokasjon: Vestfold fylke. Holmestrand kommune#spn#fra#ger;defaulthint1#defaulthint2
+795;3739
+inf;City;Vikersund;10;hard;The worlds largest skijump i located here. Modum municipality#Verdens største skiflyvningsbakke finnes i denne byen. Modum kommune#spn#fra#ger;defaulthint1#defaulthint2
+850;3743
+inf;City;Asker;10;easy;Location: Akershus county. Asker municipality#Lokasjon: Akershus fylke. Asker kommune#spn#fra#ger;defaulthint1#defaulthint2
+897;3690
+inf;City;Lillestrøm;10;medium;Location: Akershus county. Skedsmo municipality#Lokasjon: Akershus fylke. Skedsmo kommune#spn#fra#ger;defaulthint1#defaulthint2
+894;3664
+inf;City;Kløfta;10;veryhard;Location: Akershus county. Ullensaker municipality#Lokasjon: Akershus fylke. Ullensaker kommune#spn#fra#ger;defaulthint1#defaulthint2
+891;3649
+inf;City;Jessheim;10;veryhard;Location: Akershus county. Ullensaker municipality#Lokasjon: Akershus fylke. Ullensaker kommune#spn#fra#ger;defaulthint1#defaulthint2
+872;3713
+inf;City;OsloCityCenter#Oslo;10;easy;The capital. In Oslo county, in Oslo municipality#Hovedstaden. Ligger i Oslo fylke og kommune./nStedet der alle fra distriktene drømmer om å bo.#spn#fra#ger;defaulthint1#defaulthint2
+885;3766
+inf;City;Drøbak;10;medium;Location: Akershus county. Frogn municipality#Lokasjon: Akershus fylke. Frogn kommune#spn#fra#ger;defaulthint1#defaulthint2
+967;3814
+inf;City;Sarpsborg;10;easy;Location: Østfold county. Sarpsborg municipality#Lokasjon: Østfold fylke. Sarpsborg kommune#spn#fra#ger;defaulthint1#defaulthint2
+957;3835
+inf;City;Fredrikstad;10;easy;Located at Glomma rivers end. Biggest city in Østfold#Ligger ved Glommas utløp. Største by i Østfold#spn#fra#ger;defaulthint1#defaulthint2
+881;3608
+inf;City;Eidsvoll;10;hard;The Norwegian constitution was founded at the Eidsvoll building in 1814#Norsk grunnlov ble stiftet i eidsvollsbygningen i 1814#spn#fra#ger;defaulthint1#defaulthint2
+1008;3829
+inf;City;Halden;10;medium;The city and municipality is devided by the river Tista#Byen og kommunen deles i to av elva Tista#spn#fra#ger;defaulthint1#defaulthint2
+944;3755
+inf;City;Askim;10;medium;Location: Østfold county. Askim municipality#Lokasjon: Østfold fylke. Askim kommune#spn#fra#ger;defaulthint1#defaulthint2
+962;3753
+inf;City;Mysen;10;hard;Location: Østfold county. Eidsberg municipality#Lokasjon: Østfold fylke. Eidsberg kommune#spn#fra#ger;defaulthint1#defaulthint2
+911;3808
+inf;City;Moss;10;easy;Known for smelling of cellulose#Kjent for lukten av cellulose. Mosselukta#spn#fra#ger;defaulthint1#defaulthint2
+727;3493
+inf;City;Lillehammer;10;easy;Known for its winter olymic games in 1994#Nordlige endestasjonen for dampskipet Skibladner. Vinter OL 1994#spn#fra#ger;defaulthint1#defaulthint2
+815;3526
+qst;vikingskipet##medium##Where do we find vikingskipet arena?#Hvor ligger vikingskipet sportshall?#spn#fra#ger#overridingHint1#overridingHint2
+inf;City;Hamar;10;easy;Location: Hedmark county. Hamar municipality#Lokasjon: Hedmark fylke. Hamar kommune#spn#fra#ger;defaulthint1#defaulthint2
+855;3485
+inf;City;Elverum;10;medium;Location: Hedmark county. Elverum municipality#Lokasjon: Hedmark fylke. Elverum kommune#spn#fra#ger;defaulthint1#defaulthint2
+965;3599
+inf;City;Kongsvinger;10;hard;Location: Hedmark county. Kongsvinger municipality#Lokasjon: Hedmark fylke. Kongsvinger kommune#spn#fra#ger;defaulthint1#defaulthint2
+eof

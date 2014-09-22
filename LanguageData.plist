@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>no keys for english</key>
+		<string>if returning nil, use key(english)</string>
+	</dict>
+	<dict>
+		<key>Counties</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Fylker</string>
+			<key>german</key>
+			<string>Landkreise</string>
+		</dict>
+		<key>Fjords</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Fjorder</string>
+			<key>german</key>
+			<string>Fjorde
+</string>
+		</dict>
+		<key>Lakes</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Innsjøer</string>
+			<key>german</key>
+			<string>Seen</string>
+		</dict>
+		<key>Mountains</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Fjell</string>
+			<key>german</key>
+			<string>Berge</string>
+		</dict>
+		<key>Islands</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Øyer</string>
+			<key>german</key>
+			<string>Inseln</string>
+		</dict>
+		<key>Other</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Annet</string>
+			<key>german</key>
+			<string>Andere</string>
+		</dict>
+		<key>Showing location, questions answered for given location</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Viser lokasjon og antall spørsmål svart med denne lokasjonen</string>
+			<key>german</key>
+			<string>Zeigt die Lage und Anzahl der Fragen zu diesem Standort</string>
+		</dict>
+		<key>and the average distance made to that target</key>
+		<dict>
+			<key>norwegian</key>
+			<string>samt gjennomsnittlig avstand til dette målet</string>
+			<key>german</key>
+			<string>als auch die durchschnittliche Entfernung zum Ziel</string>
+		</dict>
+		<key>Only for singleplayer games</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Kun for enkeltspiller spill</string>
+			<key>german</key>
+			<string>Nur für einzelne Spieler</string>
+		</dict>
+		<key>Cities</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Byer</string>
+			<key>german</key>
+			<string>Städte</string>
+		</dict>
+		<key>Statistics</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Statistikk</string>
+			<key>german</key>
+			<string>Statistiken</string>
+		</dict>
+		<key>Other info</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Annen info</string>
+			<key>german</key>
+			<string>Weitere Infos</string>
+		</dict>
+		<key>No highscore</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ingen ny rekord</string>
+			<key>german</key>
+			<string>Kein High-Score</string>
+		</dict>
+		<key>RoundResults.png</key>
+		<dict>
+			<key>norwegian</key>
+			<string>RundensResultat.png</string>
+			<key>german</key>
+			<string>RundeErgebnis.png</string>
+		</dict>
+		<key>TheWinner.png</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Vinneren.png</string>
+			<key>german</key>
+			<string>DerGewinner.png</string>
+		</dict>
+		<key>No! Not there</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Nei! Det er veldig feil</string>
+			<key>german</key>
+			<string>Es ist sehr falsch</string>
+		</dict>
+		<key>Are you kidding?</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Tullball.. det er feil</string>
+			<key>german</key>
+			<string>Unsinn! Das ist falsch</string>
+		</dict>
+		<key>Far off</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Langt unna!</string>
+			<key>german</key>
+			<string>weit weg!</string>
+		</dict>
+		<key>What?</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Hva? Det er feil!</string>
+			<key>german</key>
+			<string>Was! Es ist falsch!</string>
+		</dict>
+		<key>Just wrong</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Helt feil</string>
+			<key>german</key>
+			<string>Ganz falsch</string>
+		</dict>
+		<key>Long distance!</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Langt unna!</string>
+			<key>german</key>
+			<string>Weit weg!</string>
+		</dict>
+		<key>Too bad</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Det var synd</string>
+			<key>german</key>
+			<string>Schade!</string>
+		</dict>
+		<key>Not even close</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ikke engang i nabolaget</string>
+			<key>german</key>
+			<string>Nicht in der Nachbarschaft</string>
+		</dict>
+		<key>Way off</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Langt utenfor</string>
+			<key>german</key>
+			<string>Weit ausserhalb</string>
+		</dict>
+		<key>Wrong!</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Feil!</string>
+			<key>german</key>
+			<string>Fehler!</string>
+		</dict>
+		<key>Off target</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Utenfor destinasjon</string>
+			<key>german</key>
+			<string>Ausserhalb Ziel</string>
+		</dict>
+		<key>Not near</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Langt unna</string>
+			<key>german</key>
+			<string>Weit weg</string>
+		</dict>
+		<key>Not correct</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ikke riktig</string>
+			<key>german</key>
+			<string>Nicht richtig!</string>
+		</dict>
+		<key>Too hard?</key>
+		<dict>
+			<key>norwegian</key>
+			<string>For vanskelig?</string>
+			<key>german</key>
+			<string>Zu hart!</string>
+		</dict>
+		<key>Some distance</key>
+		<dict>
+			<key>norwegian</key>
+			<string>God avstand</string>
+			<key>german</key>
+			<string>Gute Abstand</string>
+		</dict>
+		<key>Could do better</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Du kan bedre</string>
+			<key>german</key>
+			<string>Sie konnen verbessern</string>
+		</dict>
+		<key>Not to bad</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ikke verst</string>
+			<key>german</key>
+			<string>Nicht schlecht</string>
+		</dict>
+		<key>In the area</key>
+		<dict>
+			<key>norwegian</key>
+			<string>I nabolaget</string>
+			<key>german</key>
+			<string>In der Nachbarschaft</string>
+		</dict>
+		<key>Bad luck</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Det var en skam</string>
+			<key>german</key>
+			<string>Es war eine Schande</string>
+		</dict>
+		<key>Another time</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Kanskje en annen gang</string>
+			<key>german</key>
+			<string>Ein anderes Mal!</string>
+		</dict>
+		<key>No!</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Nei!</string>
+			<key>german</key>
+			<string>Nein!</string>
+		</dict>
+		<key>Unlucky</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Uheldig</string>
+			<key>german</key>
+			<string>Pech!</string>
+		</dict>
+		<key>Next time</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Neste gang</string>
+			<key>german</key>
+			<string>Das nachste Mal</string>
+		</dict>
+		<key>Not by far</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ikke langt unna</string>
+			<key>german</key>
+			<string>Nicht weit entfernt</string>
+		</dict>
+		<key>Good enough</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Bra nok</string>
+			<key>german</key>
+			<string>Gut genug!</string>
+		</dict>
+		<key>Good</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Bra!</string>
+			<key>german</key>
+			<string>Gut!</string>
+		</dict>
+		<key>So close</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ohh! Det var nesten</string>
+			<key>german</key>
+			<string>Ohh! Es war fast</string>
+		</dict>
+		<key>On the button</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Korrektomundo</string>
+			<key>german</key>
+			<string>Richtig! Brilliant!</string>
+		</dict>
+		<key>Correct!</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Riktig! klapp klapp!</string>
+			<key>german</key>
+			<string>Richtig! clap clap</string>
+		</dict>
+		<key>On the spot</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Flink! klapp klapp!</string>
+			<key>german</key>
+			<string>Gut! pat! pat!</string>
+		</dict>
+		<key>No closer</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Helt riktig</string>
+			<key>german</key>
+			<string>Genau richtig</string>
+		</dict>
+		<key>Way to go</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Godt gjort</string>
+			<key>german</key>
+			<string>Gut gemacht</string>
+		</dict>
+		<key>Super!</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Supert!</string>
+			<key>german</key>
+			<string>Super!</string>
+		</dict>
+		<key>Position set</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ferdig plassert</string>
+			<key>german</key>
+			<string>Fertig</string>
+		</dict>
+		<key>Instructions</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Instruksjoner</string>
+			<key>german</key>
+			<string>Anleitung</string>
+		</dict>
+		<key>Close</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Nært</string>
+			<key>german</key>
+			<string>Nah</string>
+		</dict>
+		<key>Distance exceeded</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Avstand overskredet</string>
+			<key>german</key>
+			<string>Entfernung überschritten</string>
+		</dict>
+		<key>4th</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Jern</string>
+			<key>german</key>
+			<string>Eisen</string>
+		</dict>
+		<key>3rd</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Bronse</string>
+			<key>german</key>
+			<string>Bronze</string>
+		</dict>
+		<key>2nd</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Sølv</string>
+			<key>german</key>
+			<string>Silber</string>
+		</dict>
+		<key>1st</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gull</string>
+			<key>german</key>
+			<string>Gold</string>
+		</dict>
+		<key>Position</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Plassering</string>
+			<key>german</key>
+			<string>Stellung</string>
+		</dict>
+		<key>No</key>
+		<dict>
+			<key>norwegian</key>
+			<string>ingen</string>
+			<key>german</key>
+			<string>keine</string>
+		</dict>
+		<key>point</key>
+		<dict>
+			<key>norwegian</key>
+			<string>poeng</string>
+			<key>german</key>
+			<string>Punkt</string>
+		</dict>
+		<key>points</key>
+		<dict>
+			<key>norwegian</key>
+			<string>poeng</string>
+			<key>german</key>
+			<string>Punkte</string>
+		</dict>
+		<key>Results for this round</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Resultat for denne runden</string>
+			<key>german</key>
+			<string>Ergebnis für diese Runde</string>
+		</dict>
+		<key>this is a long key</key>
+		<dict>
+			<key>norwegian</key>
+			<string>dette er en lang nøkkel</string>
+			<key>german</key>
+			<string>Dies ist ein langer Schlüssel</string>
+		</dict>
+		<key>Settings</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Instillinger</string>
+			<key>german</key>
+			<string>Einstellungen</string>
+		</dict>
+		<key>Language: English</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Språk: Norsk</string>
+			<key>german</key>
+			<string>Sprache: Deutsch</string>
+		</dict>
+		<key>Distance: Miles</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Avstand: Miles</string>
+			<key>german</key>
+			<string>Entfernung: Meilen</string>
+		</dict>
+		<key>Distance: Kilometers</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Avstand: Kilometer</string>
+			<key>german</key>
+			<string>Entfernung: Kilometer</string>
+		</dict>
+		<key>Back</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Tilbake</string>
+			<key>german</key>
+			<string>Zurück</string>
+		</dict>
+		<key>Start game</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Start spill</string>
+			<key>german</key>
+			<string>Start Spiel</string>
+		</dict>
+		<key>Start Game</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Start Spill</string>
+			<key>german</key>
+			<string>Start Spiel</string>
+		</dict>
+		<key>Highscore</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Rekorder</string>
+			<key>german</key>
+			<string>Highscore</string>
+		</dict>
+		<key>Difficulty</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Vanskelighet</string>
+			<key>german</key>
+			<string>Schwierigkeit</string>
+		</dict>
+		<key>Combined distance to targets</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Avstand mot samtlige mål</string>
+			<key>german</key>
+			<string>Entfernung gegen alle Ziele</string>
+		</dict>
+		<key>easy</key>
+		<dict>
+			<key>norwegian</key>
+			<string>lett</string>
+			<key>german</key>
+			<string>leicht</string>
+		</dict>
+		<key>medium</key>
+		<dict>
+			<key>norwegian</key>
+			<string>mediokert</string>
+			<key>german</key>
+			<string>normal</string>
+		</dict>
+		<key>hard</key>
+		<dict>
+			<key>norwegian</key>
+			<string>hardt</string>
+			<key>german</key>
+			<string>schwer</string>
+		</dict>
+		<key>enter name</key>
+		<dict>
+			<key>norwegian</key>
+			<string>skriv navn</string>
+			<key>german</key>
+			<string>Namen eingeben</string>
+		</dict>
+		<key>Last standing</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Utslåing</string>
+			<key>german</key>
+			<string>Letzter Stand</string>
+		</dict>
+		<key>Most points</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Mest poeng</string>
+			<key>german</key>
+			<string>Die meisten Punkte</string>
+		</dict>
+		<key>Player</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Spiller</string>
+			<key>german</key>
+			<string>Spieler</string>
+		</dict>
+		<key>Highscores</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Rekorder</string>
+			<key>german</key>
+			<string>Highscores</string>
+		</dict>
+		<key>Player name</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Spillers navn</string>
+			<key>german</key>
+			<string>Spielername</string>
+		</dict>
+		<key>Tap when ready</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Berør når klar</string>
+			<key>german</key>
+			<string>Touch, wenn Sie bereit</string>
+		</dict>
+		<key>Seconds used</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Sekunder brukt</string>
+			<key>german</key>
+			<string>Sekunden ausgegeben</string>
+		</dict>
+		<key>Questions passed</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Antall besvarte spørsmål</string>
+			<key>german</key>
+			<string>Fragen abgeschlossen</string>
+		</dict>
+		<key>Questions completed</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Antall fullførte spørsmål</string>
+			<key>german</key>
+			<string>Fragen abgeschlossen</string>
+		</dict>
+		<key>Miles left</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gjenstående miles</string>
+			<key>german</key>
+			<string>Verbleibende Meilen</string>
+		</dict>
+		<key>Kilometers left</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gjenstående kilometer</string>
+			<key>german</key>
+			<string>Verbleibende Kilometer</string>
+		</dict>
+		<key>The winner is</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Vinneren er</string>
+			<key>german</key>
+			<string>Der Gewinner ist</string>
+		</dict>
+		<key>Game over</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Spillet ved veis ende</string>
+			<key>german</key>
+			<string>Game over</string>
+		</dict>
+		<key>You got through</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Du fikk svart på</string>
+			<key>german</key>
+			<string>Du hast bis</string>
+		</dict>
+		<key>questions</key>
+		<dict>
+			<key>norwegian</key>
+			<string>spørsmål</string>
+			<key>german</key>
+			<string>Fragen</string>
+		</dict>
+		<key>this is how to play</key>
+		<dict>
+			<key>norwegian</key>
+			<string>slik spiller du</string>
+			<key>german</key>
+			<string>Dies ist, wie man spielt</string>
+		</dict>
+		<key>Drag to move cursor</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Dra for å flytte markør</string>
+			<key>german</key>
+			<string>Ziehen zu bewegen</string>
+		</dict>
+		<key>Tap to move cursor</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Berør for å flytte markør</string>
+			<key>german</key>
+			<string>Tippen für Bewegung</string>
+		</dict>
+		<key>Zoom in</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Zoom inn</string>
+			<key>german</key>
+			<string>Zoom in</string>
+		</dict>
+		<key>Zoom out</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Zoom ut</string>
+			<key>german</key>
+			<string>Verkleinern</string>
+		</dict>
+		<key>understands</key>
+		<dict>
+			<key>norwegian</key>
+			<string>har forstått</string>
+			<key>german</key>
+			<string>versteht</string>
+		</dict>
+		<key>miles from destinations</key>
+		<dict>
+			<key>norwegian</key>
+			<string>miles fra alle mål</string>
+			<key>german</key>
+			<string>Meilen von allen Zielen</string>
+		</dict>
+		<key>km from destinations</key>
+		<dict>
+			<key>norwegian</key>
+			<string>km fra alle mål</string>
+			<key>german</key>
+			<string>km von allen Zielen</string>
+		</dict>
+		<key>km from destination</key>
+		<dict>
+			<key>norwegian</key>
+			<string>km fra destinasjon</string>
+			<key>german</key>
+			<string>km von Reiseziel</string>
+		</dict>
+		<key>miles from destination</key>
+		<dict>
+			<key>norwegian</key>
+			<string>miles fra destinasjon</string>
+			<key>german</key>
+			<string>Meilen von Reiseziel</string>
+		</dict>
+		<key>Score</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Poeng</string>
+			<key>german</key>
+			<string>Ergebnis</string>
+		</dict>
+		<key>Tap this bar to get more info</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Berør linjen for mer info</string>
+			<key>german</key>
+			<string>Druckstange für mehr Infos</string>
+		</dict>
+		<key>Tap image to resize</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Berør bilde for forstørrelse</string>
+			<key>german</key>
+			<string>Touch, um die Größe</string>
+		</dict>
+		<key>Tap to resize image</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Berør for større bilde</string>
+			<key>german</key>
+			<string>Touch, Bild vergrößern</string>
+		</dict>
+		<key>Correct location of</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Riktig lokasjon på</string>
+			<key>german</key>
+			<string>Richtigen Stelle aus</string>
+		</dict>
+		<key>Correct location</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Riktig lokasjon</string>
+			<key>german</key>
+			<string>Richtigen Ort</string>
+		</dict>
+		<key>tapImage2</key>
+		<dict>
+			<key>norwegian</key>
+			<string>tapImageNor2</string>
+			<key>german</key>
+			<string>tapImageGer2</string>
+		</dict>
+		<key>normal</key>
+		<dict>
+			<key>norwegian</key>
+			<string>normal</string>
+			<key>german</key>
+			<string>normal</string>
+		</dict>
+		<key>Game type</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Type spill</string>
+			<key>german</key>
+			<string>Game Art</string>
+		</dict>
+		<key>Number of questions</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Antall spørsmål</string>
+			<key>german</key>
+			<string>Anzahl der Fragen</string>
+		</dict>
+		<key>No. answers</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ant. svar</string>
+			<key>german</key>
+			<string>Anz. Antworten</string>
+		</dict>
+		<key>Time</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Tid</string>
+			<key>german</key>
+			<string>Time</string>
+		</dict>
+		<key>Pos.</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Plassering</string>
+			<key>german</key>
+			<string>Position</string>
+		</dict>
+		<key>InfoEng</key>
+		<dict>
+			<key>norwegian</key>
+			<string>InfoNor</string>
+			<key>german</key>
+			<string>InfoGer</string>
+		</dict>
+		<key>locationNameEng</key>
+		<dict>
+			<key>norwegian</key>
+			<string>locationNameNor</string>
+			<key>german</key>
+			<string>locationNameGer</string>
+		</dict>
+		<key>Not yet answered</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ikke besvart</string>
+			<key>german</key>
+			<string>Nicht beantwortet</string>
+		</dict>
+		<key>from destination</key>
+		<dict>
+			<key>norwegian</key>
+			<string>fra målet</string>
+			<key>german</key>
+			<string>vom Ziel</string>
+		</dict>
+		<key>New</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ny</string>
+			<key>german</key>
+			<string>Neue</string>
+		</dict>
+		<key>game highscore</key>
+		<dict>
+			<key>norwegian</key>
+			<string>spill record</string>
+			<key>german</key>
+			<string>Spiel Ranglisten</string>
+		</dict>
+		<key>at place</key>
+		<dict>
+			<key>norwegian</key>
+			<string>på plass</string>
+			<key>german</key>
+			<string>auf Platz</string>
+		</dict>
+		<key>States</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Stater</string>
+			<key>german</key>
+			<string>Staaten</string>
+		</dict>
+		<key>Restart game</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Start på nytt</string>
+			<key>german</key>
+			<string>Wiederbeginn</string>
+		</dict>
+		<key>Main menu</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Hovedmeny</string>
+			<key>german</key>
+			<string>Hauptmenü</string>
+		</dict>
+		<key>is out</key>
+		<dict>
+			<key>norwegian</key>
+			<string>er ute</string>
+			<key>german</key>
+			<string>ist aus</string>
+		</dict>
+		<key>Questions left</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gjenstående spørsmål</string>
+			<key>german</key>
+			<string>Verbleibende Fragen</string>
+		</dict>
+		<key>Distance left</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gjenværende distanse</string>
+			<key>german</key>
+			<string>Verbleibende Entfernung</string>
+		</dict>
+		<key>kilometers</key>
+		<dict>
+			<key>norwegian</key>
+			<string>kilometer</string>
+			<key>german</key>
+			<string>kilometer</string>
+		</dict>
+		<key>miles</key>
+		<dict>
+			<key>norwegian</key>
+			<string>miles</string>
+			<key>german</key>
+			<string>meilen</string>
+		</dict>
+		<key>Total</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Totale</string>
+			<key>german</key>
+			<string>Insgesamt</string>
+		</dict>
+		<key>No position given</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ingen posisjon gitt</string>
+			<key>german</key>
+			<string>Keine Stellung gegeben</string>
+		</dict>
+		<key>Target</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Mål</string>
+			<key>german</key>
+			<string>Ziel</string>
+		</dict>
+		<key>score</key>
+		<dict>
+			<key>norwegian</key>
+			<string>poeng</string>
+			<key>german</key>
+			<string>punkte</string>
+		</dict>
+		<key>Extra question</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Extra spørsmål</string>
+			<key>german</key>
+			<string>Extra Frage</string>
+		</dict>
+		<key>No more questions</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ingen flere spørsmål</string>
+			<key>german</key>
+			<string>Keine weiteren Fragen</string>
+		</dict>
+		<key>Time used</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Tid brukt</string>
+			<key>german</key>
+			<string>Zeit verwendet</string>
+		</dict>
+		<key>Start training</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Start treningen</string>
+			<key>german</key>
+			<string>Start Schulungen</string>
+		</dict>
+		<key>Training mode:</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Trenings modus:</string>
+			<key>german</key>
+			<string>Schulung-Modus:</string>
+		</dict>
+		<key>Resume</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Fortsett</string>
+			<key>german</key>
+			<string>Fortsetzen</string>
+		</dict>
+		<key>Restart training</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Restart treningen</string>
+			<key>german</key>
+			<string>Neustart Schulung</string>
+		</dict>
+		<key>Current average distance</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gjeldende gjennomsnittlig avstand</string>
+			<key>german</key>
+			<string>Aktuelle durchschnittliche Entfernung</string>
+		</dict>
+		<key>New average distance</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Ny gjennomsnittlig avstand</string>
+			<key>german</key>
+			<string>Neue durchschnittliche Entfernung</string>
+		</dict>
+		<key>End of</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Slutt på</string>
+			<key>german</key>
+			<string>Ende der</string>
+		</dict>
+		<key>training</key>
+		<dict>
+			<key>norwegian</key>
+			<string>trening</string>
+			<key>german</key>
+			<string>Schulung</string>
+		</dict>
+		<key>Avg. distance</key>
+		<dict>
+			<key>norwegian</key>
+			<string>Gjn. avstand</string>
+			<key>german</key>
+			<string>Mittlerer Abstand</string>
+		</dict>
+		<key>(Touch for info)</key>
+		<dict>
+			<key>norwegian</key>
+			<string>(Berør for info)</string>
+			<key>german</key>
+			<string>(Touch for info)</string>
+		</dict>
+	</dict>
+	<string></string>
+	<dict/>
+	<dict/>
+</array>
+</plist>

@@ -1,0 +1,22 @@
+765,1185
+qst,hard#Where is the northern most point against the swedish border?#Hvor ligger det norgligste punktet mot svensk grense?
+inf,UnDefPlace,,10,notUsed,The most northern point towards sweden. Location: Nordland#Det nordligste punktet mot sverige. Lokasjon: Nordland
+604,2053
+inf,Mountain,Saltfjellet,10,hard,Mountain pass that devides Helgeland og Salten. E6 goes through this pass#Skiller regionene Helgeland og Salten. Krysses av E6
+505,1611
+qst,medium#Where is Norways nasjonal mountain located?#Hvor ligger Norges nasjonal fjell?
+inf,Mountain,Stetind,10,hard,Norways national mountain (1392 masl). Location: Nordland county. Tysfjord municipality#Norges nasjonalfjell (1392 moh). Lokasjon: Nordland fylke. Tysfjord kommune
+434,3920
+424,3929
+418,3924
+422,3911
+428,3903
+440,3893
+450,3897
+456,3904
+458,3914
+450,3916
+443,3923
+inf,UnDefRegion,folgefonna,10,hard,Norways third largest glacier. Location: Hordaland#Norges tredje største isbree. Lokasjon: Hordaland
+eof
+

@@ -1,0 +1,86 @@
+Dokumentation for how question files are read
+
+
+coordinates ; separated. one for each line
+
+followed by
+
+qst;#medium##Whats the largest island close to mainland Norway?#Hva er Norges største øy?#spn#fra#ger
+
+qst = its a question
+;
+#medium = is has medium difficulty
+
+# <empty> = it has no picture
+
+next five # separates the question on languages english#norwegian#spanish#french#german 
+
+next two # gives hint on english followed by hint on original language (eg. hint for Munchen    eng:bavaria org:bayern
+
+
+-linked question. This question is linked to the inf/location PotsdamBridgeNU
+qst;PotsdamBridgeNU#medium#GlienickeBridge.jpg#In what city do we find this bridge?#nor#spn#fra#In welcher Stadt finden wir diese Brücke?
+
+-Each inf/location also generates a general question. Eg where is the city Hamburg
+-Because we both have a city and state named Hamburg we give it a unique ID, this is done by separating the ID and 
+name by a # 
+
+1706;1446
+inf;City;HamburgCity#Hamburg;20;easy;The second largest city in germany, over 1.8 million people.\nLocated in the state Hamburg#nor#spn#fra#Die zweitgrößte Stadt in Deutschland, über 1,8 Millionen Menschen.\nEs ist in dem Zustand, Hamburg
+
+
+-In this case a general guestion is not generated because we use notUsed. We can however linke a question to this ID PotsdamBridgeNU
+2762;2109
+inf;UnDefPlace;PotsdamBridgeNU#Potsdam;10;notUsed;The Glienicke bridge spans the Havel River to connect the cities of Potsdam and Berlin#nor#spn#fra#Die Glienicker Brücke überspannt die Havel zur Verbindung der Städte Potsdam und Berlin
+
+
+-region include
+
+....
+1225;1463
+1219;1469
+1216;1472;sl
+inf;UnDefRegion;bremenSmallPartNU;10;notUsed;eng#nor#spn#fra#ger
+
+1215;1648
+1208;1644
+1201;1642
+1198;1644;sl
+inf;State;BremenState#Bremen;10;easy;The smallest state. Consists of two separate enclaves, the City (Stadtgemeinde Bremen) and Bremerhaven (Stadt Bremerhaven).#nor#spn#fra#Der kleinste Staat. Besteht aus zwei getrennten Enklaven, die Stadt Stadtgemeinde Bremen und die Stadt Bremerhaven.;;bremenSmallPartNU
+
+
+-region exclude
+
+.......
+2942;2011
+2929;2004
+2926;2003;sl
+inf;State;BerlinState#Berlin;10;easy;Berlin state covers an area of 891 km2.\n3.4 million people.\nGermanys capital and largest city.#nor#spn#fra#Berlin Staat umfasst eine Fläche von 891 km2.\n3,4 Millionen Menschen. Deutschlands Hauptstadt und größte Stadt
+
+
+......
+3224;1593
+3230;1585;sl
+inf;State;Brandenburg;10;easy;The capital is potsdam.\nThe state surrounds but does not include the city state of Berlin#nor#spn#fra#Die Hauptstadt ist Berlin.\nDer Staat umgibt, nicht als der Stadtstaat Berlin;BerlinState
+
+
+
+
+
+
+			additionalInfo = @"";
+			if (data.count > 5) {
+				additionalInfo = [data objectAtIndex:5];
+			}
+			hint = @"";
+			if (data.count > 6) {
+				hint = [data objectAtIndex:6];
+			}
+			excludedRegions = @"";
+			if (data.count > 7) {
+				excludedRegions = [data objectAtIndex:7];
+			}
+			includedRegions = @"";
+			if (data.count > 8) {
+				includedRegions = [data objectAtIndex:8];
+			}

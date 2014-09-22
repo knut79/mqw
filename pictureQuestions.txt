@@ -1,0 +1,4 @@
+qst;trPicDom#Trondheim#easy#nDomen.jpg#In what city do we find this building?#I hvilken by ligger dette bygget?#spn#fra#ger#overridingHint1#overridingHint2
+qst;berPicBrygge#Bergen#easy#bergenBrygge.jpg#In what city do we find this pier?#I hvilken by ligger denne bryggen?#spn#fra#ger#overridingHint1#overridingHint2
+qst;hamPicViking#Hamar#easy#vikingskipet.jpg#In what city do we find this sports arena?#I hvilken by ligger denne idretts hallen?#spn#fra#ger#overridingHint1#overridingHint2
+eof
