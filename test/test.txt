@@ -1,3 +1,50 @@
+3845;2510
+3877;2515
+3886;2507
+3900;2488
+3900;2474
+3917;2468
+3919;2456
+3930;2444
+3934;2434
+3945;2440
+3961;2416
+3966;2401
+3978;2399
+3981;2378
+3967;2378
+3954;2376
+3947;2353
+3943;2366
+3933;2347
+3920;2337
+3920;2346
+3928;2359
+3935;2361
+3938;2377
+3937;2391
+3933;2396
+3927;2402
+3942;2413
+3938;2428
+3924;2421
+3921;2432
+3916;2416
+3906;2428
+3905;2433
+3901;2443
+3895;2456
+3881;2463
+3867;2478
+3848;2495
+inf;County;TestNewzealand;10;easy;This county consists of 26 municipalitys and covers an area of 9 375 km2#Fylket består av 26 kommuner med et areal på 9 375 km2#spn#fra#ger
+77;818
+inf;City;Kirkenes;10;easy;Endpoint for hurtigruta and E6. Location: Finnmark. Sør-Varanger#Endepunkt for hurtigruta og E6. Lokasjon: Finnmark. Sør-Varanger#spn#fra#ger;defaulthint1#defaulthint2
+eof
+
+//NB NB included and exluded are moved one colon
+
+#eg with exclude region
 236;840
 284;888
 208;930
@@ -66,9 +113,8 @@ inf;State;ExcludeFromAlaska#exsklAlaska;10;easy;Berlin state covers an area of 8
 136;755
 148;754;sl
 inf;State;Alaska;10;easy;The capital is potsdam.\nThe state surrounds but does not include the city state of Berlin#nor#spn#fra#Die Hauptstadt ist Berlin.\nDer Staat umgibt, nicht als der Stadtstaat Berlin;;ExcludeFromAlaska
-eof
+#end eg with exclude region
 
-//NB NB included are moved one colon
 #eg . with included region
 
 1264;2614
@@ -197,43 +243,3 @@ inf;State;TestArgentina#Argentina;10;easy;The smallest state. Consists of two se
 3558;1366
 3560;1332;sl
 inf;County;TestJapan;10;easy;This county consists of 26 municipalitys and covers an area of 9 375 km2#Fylket består av 26 kommuner med et areal på 9 375 km2#spn#fra#ger
-3845;2510
-3877;2515
-3886;2507
-3900;2488
-3900;2474
-3917;2468
-3919;2456
-3930;2444
-3934;2434
-3945;2440
-3961;2416
-3966;2401
-3978;2399
-3981;2378
-3967;2378
-3954;2376
-3947;2353
-3943;2366
-3933;2347
-3920;2337
-3920;2346
-3928;2359
-3935;2361
-3938;2377
-3937;2391
-3933;2396
-3927;2402
-3942;2413
-3938;2428
-3924;2421
-3921;2432
-3916;2416
-3906;2428
-3905;2433
-3901;2443
-3895;2456
-3881;2463
-3867;2478
-3848;2495
-inf;County;TestNewzealand;10;easy;This county consists of 26 municipalitys and covers an area of 9 375 km2#Fylket består av 26 kommuner med et areal på 9 375 km2#spn#fra#ger

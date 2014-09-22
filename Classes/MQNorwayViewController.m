@@ -16,6 +16,7 @@
 #import <stdio.h>
 #import "ChallengeQuestionItem.h"
 #import "GlobalConstants.h"
+#import "MagnifierView.h"
 
 #define ZOOM_VIEW_TAG 100
 #define ZOOM_STEP 1.5
@@ -970,6 +971,15 @@
 	
 	[m_gameRef SetPlayerPositionsByScore];
 	
+    //_?test
+    /*
+    MagnifierView *testloop = [[MagnifierView alloc] initWithFrame:[self view].bounds];
+    testloop.viewref = resultBoardView;//self.view;
+    [testloop setAlpha:1];
+    [[self view] addSubview:testloop];
+    [testloop setNeedsDisplay];*/
+    //_? end test
+   
 	if (m_animTextView == nil) {
 		m_animTextView = [[AnimateTextView alloc] initWithFrame:[[self view] bounds]];
 		[m_animTextView setDelegate:self];
@@ -1112,6 +1122,8 @@
 	[infoBarBottom FadeIn];
 	[self.view bringSubviewToFront:m_animTextView];
 	[self.view bringSubviewToFront:answerBarTop];
+    
+
 }
 
 

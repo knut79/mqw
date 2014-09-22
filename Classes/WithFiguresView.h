@@ -34,7 +34,7 @@
 -(void) DrawPlace:(MpLocation*) loc andContextRef:(CGContextRef) context;
 -(void) DrawRegion:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) DrawPlayerSymbol:(NSString*) playerSymbol andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint;
-
+-(bool) PlayerSymbolInsideBounds:(CGPoint) realMapGamePoint resultMapBounds:(CGRect) resultMapBounds;
 -(void) SetExludedRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context; 
 -(void) SetRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) StrokeUpRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;

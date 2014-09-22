@@ -14,6 +14,7 @@
 #import "Question.h"
 #import "NSArray(dataConversion).h"
 #import "GlobalConstants.h"
+#import "MagnifierView.h"
 
 
 @implementation WithFiguresView
@@ -141,26 +142,19 @@
 			{
 				//set up lastNeededRow and firstneededrow .. column  osv. så det ikke gjøres unødvendig tegning
 				//maxrow og maxcol må settes i forhold til hvilken prosent scale man er i
-				//1800 * 4500
-				
-//				CGSize mapSize = CGSizeMake(1800,4500);
-//				mapSize.width = mapSize.width * (tiledMapViewResolutionPercentage/100);
-//				mapSize.height = mapSize.height * (tiledMapViewResolutionPercentage/100);
 				
 				int minCol = tilesMapViewBounds.origin.x/256 - 0.5; //round down 
 				int minRow = tilesMapViewBounds.origin.y/256 - 0.5;
 				
 				float colvar2 = (tilesMapViewBounds.origin.x/scaledTileWidth) ;
 				float colVar3 = (320.0/scaledTileWidth);
-				//float colVar1 = (mapSize.width/256.0);
-				//int maxCol = (int)(colVar1 - colvar2 + colVar3  + 0.5);
 				int maxCol = (int)(colvar2 + colVar3 + 0.5);
 				
 				float rowVar2 = (tilesMapViewBounds.origin.y/scaledTileWidth) ;
 				float rowVar3 = (480.0/scaledTileWidth);
 				//float rowVar1 = (mapSize.height/256);
 				int maxRow = (int)(rowVar2 + rowVar3  + 0.5);
-				//int maxRow = (int)((mapSize.height/256)- (tilesMapViewBounds.origin.y/256) + (320/256)  + 0.5);
+
 				//dont draw the map upside down
 				CGContextScaleCTM(context, 1.0, -1.0);
 				int tileStandardHeight = 0;
@@ -281,7 +275,8 @@
 			
 			
 			//_? change in NMQ
-			//drawn twice because it ends either outside mask or underneath coloring 
+			//drawn twice because it ends either outside mask or underneath coloring
+            bool playersymbolOutsideBoundsOfDevice = false;
 			for (Player *player in players) 
 			{
 				if ([player IsOut] == NO) {
@@ -291,6 +286,22 @@
 					
 					//NSLog(@"playersymbol %@ x:%d y:%d",playerSymbolString,gamePoint.x,gamePoint.y);
 					[self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
+
+                    if ([players count] < 2) {
+                        playersymbolOutsideBoundsOfDevice = [self PlayerSymbolInsideBounds: gamePoint resultMapBounds:tilesMapViewBounds];
+                        //_? TODO
+                        if (playersymbolOutsideBoundsOfDevice) {
+                            //draw miniwindow with playersymbol location
+
+                            MagnifierView *testloop = [[MagnifierView alloc] initWithFrame:self.bounds];
+                            testloop.viewref = self;
+                            [testloop setAlpha:1];
+                            [self  addSubview:testloop];
+                            [testloop setNeedsDisplay];
+                        }
+                    }
+                    
+                    
 					[playerSymbolString release];
 				}
 			}
@@ -303,6 +314,8 @@
 			[loc release];
 			[question release];
 			
+
+            
 			if ([delegate respondsToSelector:@selector(finishedDrawingResultMap)])
 				[delegate finishedDrawingResultMap];
 			
@@ -338,7 +351,31 @@
 	{
 		//draw line to nearest point 
 		CGPoint nearestPoint = [loc GetNearestPoint:realMapGamePoint];
-		distanceBetweenPoints = [CoordinateHelper GetDistanceInKm:realMapGamePoint andPoint2:nearestPoint];
+        
+
+        distanceBetweenPoints = [CoordinateHelper GetDistanceInKm:realMapGamePoint andPoint2:nearestPoint];
+	
+        //_? only for world map
+        CGPoint realMapGamePointManipulate1 = realMapGamePoint;
+        realMapGamePointManipulate1.x = realMapGamePointManipulate1.x + 4444;
+        
+        NSInteger distanceBetweenPointsTry1 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate1 andPoint2:nearestPoint];
+        if (distanceBetweenPoints > distanceBetweenPointsTry1) {
+            distanceBetweenPoints = distanceBetweenPointsTry1;
+            scaledGamePoint.x = realMapGamePointManipulate1.x * (tiledMapViewResolutionPercentage/100);
+            scaledGamePoint.x = scaledGamePoint.x * tiledMapViewZoomScale;
+        }
+        CGPoint realMapGamePointManipulate2 = realMapGamePoint;
+        realMapGamePointManipulate2.x = realMapGamePointManipulate2.x - 4444;
+        NSInteger distanceBetweenPointsTry2 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate2 andPoint2:nearestPoint];
+        if (distanceBetweenPoints > distanceBetweenPointsTry2) {
+            distanceBetweenPoints = distanceBetweenPointsTry2;
+            scaledGamePoint.x = realMapGamePointManipulate2.x * (tiledMapViewResolutionPercentage/100);
+            scaledGamePoint.x = scaledGamePoint.x * tiledMapViewZoomScale;
+        }
+        
+        
+        
 		
 		//at 100 %
 		//scale to map
@@ -411,21 +448,12 @@
 	
 	float val1 = tiledMapViewResolutionPercentage;
 	float val2 = tiledMapViewZoomScale;
-/*	float testWidth = 1800 * (val1/100);
-	float testHeight = 4500 * (val1/100);*/
     float testWidth = 4444 * (val1/100);
 	float testHeight = 3040 * (val1/100);
-	//float testWidth = 3780 * (val1/100);
-	//float testHeight = 5528 * (val1/100);
+
 	CGRect t_testRect = CGRectMake(0, 0, testWidth * val2, testHeight * val2);
-	/*
-	mask = CGImageMaskCreate(900,2250,
-							 CGImageGetBitsPerComponent(maskRef),
-							 CGImageGetBitsPerPixel(maskRef),
-							 CGImageGetBytesPerRow(maskRef),
-							 CGImageGetDataProvider(maskRef), NULL, false);
-	*/
-    mask = CGImageMaskCreate(2222,1520,
+
+    mask = CGImageMaskCreate( 4444 /2,3040 / 2,
 							 CGImageGetBitsPerComponent(maskRef),
 							 CGImageGetBitsPerPixel(maskRef),
 							 CGImageGetBytesPerRow(maskRef),
@@ -619,7 +647,7 @@
 
 
 //_? change in NMQ
--(NSInteger) DrawLineToPlace:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor 
+-(NSInteger) DrawLineToPlace:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor
 			 andPlayerSymbol:(NSString*) playerSymbol
 {
 	NSInteger distanceBetweenPoints = 0;
@@ -640,6 +668,23 @@
 			//measurement done in map 100% scale 1800*4500
 			distanceBetweenPoints = [CoordinateHelper GetDistanceInKm:realMapGamePoint andPoint2:placeGamePoint];
 			
+            
+            //_? only for world map
+            CGPoint realMapGamePointManipulate1 = realMapGamePoint;
+            realMapGamePointManipulate1.x = realMapGamePointManipulate1.x + 4444;
+            NSInteger distanceBetweenPointsTry1 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate1 andPoint2:placeGamePoint];
+            if (distanceBetweenPoints > distanceBetweenPointsTry1) {
+                distanceBetweenPoints = distanceBetweenPointsTry1;
+                realMapGamePoint.x = realMapGamePointManipulate1.x;
+            }
+            CGPoint realMapGamePointManipulate2 = realMapGamePoint;
+            realMapGamePointManipulate2.x = realMapGamePointManipulate2.x - 4444;
+            NSInteger distanceBetweenPointsTry2 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate2 andPoint2:placeGamePoint];
+            if (distanceBetweenPoints > distanceBetweenPointsTry2) {
+                distanceBetweenPoints = distanceBetweenPointsTry2;
+                realMapGamePoint.x = realMapGamePointManipulate2.x;
+            }
+            
 			distanceBetweenPoints = distanceBetweenPoints - [(MpPlace*)loc GetKmTolerance];
 			
 			//scale to map
@@ -649,6 +694,8 @@
 			placeGamePoint.x = placeGamePoint.x * tiledMapViewZoomScale;
 			placeGamePoint.y = placeGamePoint.y * tiledMapViewZoomScale;
 			
+            
+            
 			realMapGamePoint.x = realMapGamePoint.x * (tiledMapViewResolutionPercentage/100);
 			realMapGamePoint.y = realMapGamePoint.y * (tiledMapViewResolutionPercentage/100);
 			//scale to tile
@@ -672,11 +719,20 @@
 			}
 			[uicolor release];
 			
+            CGContextSetLineWidth(context, 2.0);
+            CGFloat dash[] = {0.0, 3.0};
+            CGContextSetLineCap(context, kCGLineCapButt);
+            CGContextSetLineDash(context, 0.0, dash, 4);
+
 			CGContextMoveToPoint(context, realMapGamePoint.x, realMapGamePoint.y);
 			CGContextAddLineToPoint( context, placeGamePoint.x,placeGamePoint.y);
 			
 			CGContextClosePath(context);
 			CGContextStrokePath(context);
+            
+            //reset line draw attributest
+            CGContextSetLineWidth(context, 1.0);
+            CGContextSetLineDash(context, 0, NULL, 0);
 		}
 	}
 	return distanceBetweenPoints;
@@ -684,18 +740,37 @@
 
 -(void) DrawPlayerSymbol:(NSString*) playerSymbol andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint
 {
-	realMapGamePoint.x = realMapGamePoint.x * (tiledMapViewResolutionPercentage/100);
-	realMapGamePoint.y = realMapGamePoint.y * (tiledMapViewResolutionPercentage/100);
+    CGPoint devicePoint;
+	devicePoint.x = realMapGamePoint.x * (tiledMapViewResolutionPercentage/100);
+	devicePoint.y = realMapGamePoint.y * (tiledMapViewResolutionPercentage/100);
 	//scale to tile
-	realMapGamePoint.x = realMapGamePoint.x * tiledMapViewZoomScale;
-	realMapGamePoint.y = realMapGamePoint.y * tiledMapViewZoomScale;	
+	devicePoint.x = devicePoint.x * tiledMapViewZoomScale;
+	devicePoint.y = devicePoint.y * tiledMapViewZoomScale;
 	
+    
 	
 	NSString *playerSymbolFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:playerSymbol];
 	CGDataProviderRef provider = CGDataProviderCreateWithFilename([playerSymbolFileName UTF8String]);
 	CGImageRef playerSymbolRef = CGImageCreateWithPNGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
-	CGContextDrawImage (context,CGRectMake(realMapGamePoint.x - 15, realMapGamePoint.y - 15, 30, 30),playerSymbolRef);
+	CGContextDrawImage (context,CGRectMake(devicePoint.x - 15, devicePoint.y - 15, 30, 30),playerSymbolRef);
 	CGImageRelease(playerSymbolRef);
+}
+
+-(bool) PlayerSymbolInsideBounds:(CGPoint) realMapGamePoint resultMapBounds:(CGRect) resultMapBounds
+{
+    CGPoint devicePoint;
+	devicePoint.x = realMapGamePoint.x * (tiledMapViewResolutionPercentage/100);
+	devicePoint.y = realMapGamePoint.y * (tiledMapViewResolutionPercentage/100);
+	//scale to tile
+	devicePoint.x = devicePoint.x * tiledMapViewZoomScale;
+	devicePoint.y = devicePoint.y * tiledMapViewZoomScale;
+
+    
+    bool outsideBounds = false;
+    if (!CGRectContainsPoint(resultMapBounds,devicePoint)) {
+        outsideBounds = true;
+    }
+    return outsideBounds;
 }
 
 -(void) DrawPlace:(MpLocation*) loc andContextRef:(CGContextRef) context

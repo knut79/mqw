@@ -225,7 +225,6 @@
 		 
 -(CGPoint) GetNearestPointInPolygonFromSourcePoint:(CGPoint) sourcePoint andPolygons:(NSArray *) currentPolygons
 {
-	NSMutableArray *twoNearestPoints = [[NSMutableArray alloc] init];
 	CGPoint nearestRegionPoint = CGPointMake(0, 0);
 	
 	NSValue *tempNSValue1;
@@ -237,7 +236,17 @@
 	float currentShortestDistance = 9999999999.9f;
 	CGPoint currentNearestRegionPoint = CGPointMake(0, 0);
 	
-	for (NSArray *currentPolygon in currentPolygons) 
+    //_? outer forloop only for worldmap
+    for (int tries = 0; tries < 3; tries++) {
+        if (tries == 1) {
+            sourcePoint.x = sourcePoint.x + 4444;
+        }
+        else if(tries == 2){
+            sourcePoint.x = sourcePoint.x - (4444*2);
+        }
+    
+    
+	for (NSArray *currentPolygon in currentPolygons)
 	{
 		NSValue *polyVal_0 = [currentPolygon objectAtIndex:0];
 		CGPoint polyPoint_0 = [polyVal_0 CGPointValue];
@@ -247,7 +256,6 @@
 		
 		NSValue *polyVal_1 = [currentPolygon objectAtIndex:1];
 		CGPoint polyPoint_1 = [polyVal_1 CGPointValue];
-		float shortestDistance_second = [CoordinateHelper GetDistance:sourcePoint andPoint2:polyPoint_1];
 		NSInteger indexOfShortestPoint_second = 1;
 		m_shortestPoint_second = polyPoint_1;
 		
@@ -334,8 +342,11 @@
 			currentNearestRegionPoint = nearestRegionPoint;
 		}
 		
+        
 	}
 
+    }
+    
 	
 	return currentNearestRegionPoint;
 	//return nearestRegionPoint;
