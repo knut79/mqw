@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "Answer.h"
 #import "Game.h"
-
+#import "PlayerSymbolMiniWindowView.h"
 
 
 @protocol WithFiguresViewDelegate;
@@ -23,6 +23,7 @@
 	UILabel *answerLabel;
 	BOOL m_shouldDrawResult;
 	BOOL m_shouldUpdateGameData;
+    PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
 }
 
 @property (nonatomic, assign) id <WithFiguresViewDelegate> delegate;

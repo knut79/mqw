@@ -487,12 +487,17 @@
         
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:2.5];
-        //[UIView setAnimationDelegate:self];
-        //[UIView setAnimationDidStopSelector:@selector(timePointsShown)];
-        [timePointsLabel setTransform:CGAffineTransformMakeScale(1.2f, 1.2f)];
-        [clockView setTransform:CGAffineTransformMakeScale(1.2f, 1.2f)];
-    //	[timePointsLabel setAlpha:0.0f];
-    //    [clockView setAlpha:0.0f];
+        [timePointsLabel setTransform:CGAffineTransformMakeScale(1.1f, 1.1f)];
+        CGFloat clockViewXTransform = (40.0f*2)-320.0f;
+        if (clockView.self.center.x < (320/2) ) {
+            clockViewXTransform = 40.f;
+        }
+        CGAffineTransform clockScale = CGAffineTransformMakeScale(0.55f, 0.55f);
+        CGAffineTransform clockMove = CGAffineTransformMakeTranslation(clockViewXTransform, -20.0f);
+        //[clockView setTransform:CGAffineTransformMakeScale(0.4f, 0.4f)];
+        //[clockView setTransform:CGAffineTransformMakeTranslation(30.0f, 0.0f)];
+        [clockView setTransform:CGAffineTransformConcat(clockScale, clockMove)];
+
         [UIView commitAnimations];
     }
 }
@@ -970,22 +975,14 @@
 {
 	
 	[m_gameRef SetPlayerPositionsByScore];
-	
-    //_?test
-    /*
-    MagnifierView *testloop = [[MagnifierView alloc] initWithFrame:[self view].bounds];
-    testloop.viewref = resultBoardView;//self.view;
-    [testloop setAlpha:1];
-    [[self view] addSubview:testloop];
-    [testloop setNeedsDisplay];*/
-    //_? end test
    
 	if (m_animTextView == nil) {
 		m_animTextView = [[AnimateTextView alloc] initWithFrame:[[self view] bounds]];
 		[m_animTextView setDelegate:self];
 		[[self view] addSubview:m_animTextView];
 	}
-	
+
+    
 	if ([m_gameRef IsMultiplayer] == NO) {
 
 		Player *currentPlayer = [[m_gameRef GetPlayer] retain];

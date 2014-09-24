@@ -300,6 +300,7 @@
 		72049CF919CCE06600B8AE76 /* world_100_17_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72049C2119CCE06600B8AE76 /* world_100_17_9.jpg */; };
 		72049CFA19CCE06600B8AE76 /* world_100_17_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72049C2219CCE06600B8AE76 /* world_100_17_10.jpg */; };
 		72049CFB19CCE06600B8AE76 /* world_100_17_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72049C2319CCE06600B8AE76 /* world_100_17_11.jpg */; };
+		72049CFE19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72049CFD19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.m */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -774,6 +775,8 @@
 		72049C2119CCE06600B8AE76 /* world_100_17_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_17_9.jpg; path = world_100/world_100_17_9.jpg; sourceTree = SOURCE_ROOT; };
 		72049C2219CCE06600B8AE76 /* world_100_17_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_17_10.jpg; path = world_100/world_100_17_10.jpg; sourceTree = SOURCE_ROOT; };
 		72049C2319CCE06600B8AE76 /* world_100_17_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_17_11.jpg; path = world_100/world_100_17_11.jpg; sourceTree = SOURCE_ROOT; };
+		72049CFC19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSymbolMiniWindowView.h; sourceTree = "<group>"; };
+		72049CFD19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSymbolMiniWindowView.m; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1081,6 +1084,8 @@
 				EE1FA3C9135E576800CC57FB /* GlobalConstants.h */,
 				EE9BD26013B6297600DD30BE /* MagnifierView.h */,
 				EE9BD26113B6297600DD30BE /* MagnifierView.m */,
+				72049CFC19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.h */,
+				72049CFD19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -2329,6 +2334,7 @@
 				728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */,
 				EE9898CA1330101100CBA780 /* WithFiguresView.m in Sources */,
 				EE9898CF1330102700CBA780 /* InfoBarViewBottom.m in Sources */,
+				72049CFE19D072EB00B8AE76 /* PlayerSymbolMiniWindowView.m in Sources */,
 				EE9898D01330102700CBA780 /* QuestionBarViewTop.m in Sources */,
 				728747B519B9B3A900BADE3B /* FMResultSet.m in Sources */,
 				EE9898D31330104200CBA780 /* UISwitch-extended.m in Sources */,

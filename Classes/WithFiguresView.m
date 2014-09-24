@@ -14,7 +14,7 @@
 #import "Question.h"
 #import "NSArray(dataConversion).h"
 #import "GlobalConstants.h"
-#import "MagnifierView.h"
+#import "PlayerSymbolMiniWindowView.h"
 
 
 @implementation WithFiguresView
@@ -76,14 +76,6 @@
     testRect.origin.x += (centerPoint.x - ([screen applicationFrame].size.width/2));
     testRect.origin.y += (centerPoint.y - ([screen applicationFrame].size.height/2));
     
-    
-	//1800 4500
-    //german width 3780
-    
-    //world width 4444
-    //world height 3040
-
-    
     CGFloat mapWidth =(4444 * 0.25)*tiledMapViewZoomScale;
 	if (testRect.origin.x >  mapWidth - 320)
 	{
@@ -143,7 +135,7 @@
 				//set up lastNeededRow and firstneededrow .. column  osv. så det ikke gjøres unødvendig tegning
 				//maxrow og maxcol må settes i forhold til hvilken prosent scale man er i
 				
-				int minCol = tilesMapViewBounds.origin.x/256 - 0.5; //round down 
+				int minCol = tilesMapViewBounds.origin.x/256 - 0.5; //round down
 				int minRow = tilesMapViewBounds.origin.y/256 - 0.5;
 				
 				float colvar2 = (tilesMapViewBounds.origin.x/scaledTileWidth) ;
@@ -288,19 +280,38 @@
 					[self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
 
                     if ([players count] < 2) {
+                        CGPoint gamePoint = [[players objectAtIndex:0] GetGamePoint];
                         playersymbolOutsideBoundsOfDevice = [self PlayerSymbolInsideBounds: gamePoint resultMapBounds:tilesMapViewBounds];
-                        //_? TODO
+                        
                         if (playersymbolOutsideBoundsOfDevice) {
                             //draw miniwindow with playersymbol location
-
-                            MagnifierView *testloop = [[MagnifierView alloc] initWithFrame:self.bounds];
-                            testloop.viewref = self;
-                            [testloop setAlpha:1];
-                            [self  addSubview:testloop];
-                            [testloop setNeedsDisplay];
+                            
+                            if (playerSymbolMiniWindowView == nil) {
+                                playerSymbolMiniWindowView = [[PlayerSymbolMiniWindowView alloc] initWithFrame:self.bounds] ;
+                                [self  addSubview:playerSymbolMiniWindowView];
+                            }
+                            
+                            playerSymbolMiniWindowView.gamePoint =  [[players objectAtIndex:0] GetGamePoint];
+                            
+                            MpLocation *loc = [[question GetLocation] retain];
+                            CGPoint nearestPoint = [loc GetNearestPoint:[[players objectAtIndex:0] GetGamePoint]];
+                            [loc release];
+                            playerSymbolMiniWindowView.placePoint  = CGPointMake(nearestPoint.x * 0.25,nearestPoint.y * 0.25);
+                            
+                            playerSymbolMiniWindowView.viewref = self;
+                            [playerSymbolMiniWindowView setAlpha:1];
+                            
+                            [playerSymbolMiniWindowView setNeedsDisplay];
+                        }
+                        
+                    }
+                    else
+                    {
+                        if(playerSymbolMiniWindowView != nil)
+                        {
+                            [playerSymbolMiniWindowView setAlpha:0];
                         }
                     }
-                    
                     
 					[playerSymbolString release];
 				}
@@ -308,7 +319,6 @@
 			
 			// like Processing popMatrix
 			CGContextRestoreGState(context);
-			
 			
 			[players release];
 			[loc release];
