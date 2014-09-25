@@ -23,9 +23,9 @@
 	UILabel *answerLabel;
 	BOOL m_shouldDrawResult;
 	BOOL m_shouldUpdateGameData;
-    PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
+    //PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
 }
-
+@property(nonatomic, retain) PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
 @property (nonatomic, assign) id <WithFiguresViewDelegate> delegate;
 -(void)setGameRef:(Game*) game;
 -(CGImageRef) CreateScaledCGImageFromCGImage:(CGImageRef) image  andScale:(float) scale;

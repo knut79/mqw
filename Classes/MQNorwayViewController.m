@@ -889,6 +889,8 @@
     [m_animTextView removeFromSuperview];
     m_animTextView = nil;
     
+    [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
+    
 	if ([m_gameRef GetGameType] == lastStanding) {
         
 
@@ -981,13 +983,15 @@
 		[m_animTextView setDelegate:self];
 		[[self view] addSubview:m_animTextView];
 	}
+    
+    
 
     
 	if ([m_gameRef IsMultiplayer] == NO) {
 
 		Player *currentPlayer = [[m_gameRef GetPlayer] retain];
         
-        //add question for challenge 
+        //add question for challenge
         ChallengeQuestionItem* newQuestion = [[[ChallengeQuestionItem alloc] init] autorelease];
         newQuestion.qid = [[m_gameRef GetQuestion] GetID];
         newQuestion.kmLeft = [currentPlayer GetKmLeft];   //[currentPlayer GetLastDistanceFromDestination ];
@@ -1113,11 +1117,12 @@
 			
 		}
 	}
-	
+	[[self view] addSubview:resultBoardView.playerSymbolMiniWindowView];
 	[answerBarTop SetResult:m_gameRef];
 	
 	[infoBarBottom FadeIn];
 	[self.view bringSubviewToFront:m_animTextView];
+    [self.view bringSubviewToFront:resultBoardView.playerSymbolMiniWindowView];
 	[self.view bringSubviewToFront:answerBarTop];
     
 

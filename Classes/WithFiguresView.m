@@ -279,6 +279,11 @@
 					//NSLog(@"playersymbol %@ x:%d y:%d",playerSymbolString,gamePoint.x,gamePoint.y);
 					[self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
 
+                    
+                    if(_playerSymbolMiniWindowView != nil)
+                    {
+                        [_playerSymbolMiniWindowView setAlpha:0];
+                    }
                     if ([players count] < 2) {
                         CGPoint gamePoint = [[players objectAtIndex:0] GetGamePoint];
                         playersymbolOutsideBoundsOfDevice = [self PlayerSymbolInsideBounds: gamePoint resultMapBounds:tilesMapViewBounds];
@@ -286,32 +291,27 @@
                         if (playersymbolOutsideBoundsOfDevice) {
                             //draw miniwindow with playersymbol location
                             
-                            if (playerSymbolMiniWindowView == nil) {
-                                playerSymbolMiniWindowView = [[PlayerSymbolMiniWindowView alloc] initWithFrame:self.bounds] ;
-                                [self  addSubview:playerSymbolMiniWindowView];
+                            if (_playerSymbolMiniWindowView == nil) {
+                                _playerSymbolMiniWindowView = [[PlayerSymbolMiniWindowView alloc] initWithFrame:self.bounds] ;
+                                //[self  addSubview:_playerSymbolMiniWindowView];
                             }
                             
-                            playerSymbolMiniWindowView.gamePoint =  [[players objectAtIndex:0] GetGamePoint];
+                            _playerSymbolMiniWindowView.gamePoint =  [[players objectAtIndex:0] GetGamePoint];
                             
                             MpLocation *loc = [[question GetLocation] retain];
                             CGPoint nearestPoint = [loc GetNearestPoint:[[players objectAtIndex:0] GetGamePoint]];
                             [loc release];
-                            playerSymbolMiniWindowView.placePoint  = CGPointMake(nearestPoint.x * 0.25,nearestPoint.y * 0.25);
+                            _playerSymbolMiniWindowView.placePoint  = CGPointMake(nearestPoint.x * 0.25,nearestPoint.y * 0.25);
                             
-                            playerSymbolMiniWindowView.viewref = self;
-                            [playerSymbolMiniWindowView setAlpha:1];
+                            _playerSymbolMiniWindowView.viewref = self;
+                            [_playerSymbolMiniWindowView setAlpha:1];
                             
-                            [playerSymbolMiniWindowView setNeedsDisplay];
+                            [_playerSymbolMiniWindowView setNeedsDisplay];
                         }
                         
                     }
-                    else
-                    {
-                        if(playerSymbolMiniWindowView != nil)
-                        {
-                            [playerSymbolMiniWindowView setAlpha:0];
-                        }
-                    }
+
+
                     
 					[playerSymbolString release];
 				}
