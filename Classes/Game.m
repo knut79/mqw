@@ -641,7 +641,7 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 		NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
 		[f setNumberStyle:NSNumberFormatterDecimalStyle];
 		
-		NSNumber * numerOfTimesAnswered;
+		int numerOfTimesAnswered = 0;
 
 		//read out times question answered
 		FMResultSet *results = [[SqliteHelper Instance] executeQuery:@"SELECT sumAnswers FROM location WHERE locationID = ?;",[tempLocation GetID]];
@@ -650,7 +650,7 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 		}
         [results close];
 		
-		NSNumber * averageDistanceFromTarget;
+		int averageDistanceFromTarget;
 		//read out average distance 
 		results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance FROM location WHERE locationID = ?;", [tempLocation GetID]];
 		while([results next]) {
@@ -658,15 +658,15 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 		}
         [results close];
 
-        NSLog(@"%i",[numerOfTimesAnswered intValue]);
+        NSLog(@"%i",numerOfTimesAnswered);
 		//calculate new average distance
 		NSInteger newAvgDistance = 0;
-		if ([numerOfTimesAnswered intValue] == 0) {
+		if (numerOfTimesAnswered == 0) {
 			newAvgDistance = distanceBetweenPoints;
 		}
 		else {
-			if ([averageDistanceFromTarget intValue] >= 0) {
-				newAvgDistance = ( ([averageDistanceFromTarget intValue] * [numerOfTimesAnswered intValue])+ distanceBetweenPoints )/([numerOfTimesAnswered intValue] + 1);
+			if (averageDistanceFromTarget >= 0) {
+				newAvgDistance = ( (averageDistanceFromTarget * numerOfTimesAnswered)+ distanceBetweenPoints )/(numerOfTimesAnswered + 1);
 				//newAvgDistance = ((distanceBetweenPoints + [averageDistanceFromTarget intValue]) / (1 + [numerOfTimesAnswered intValue]));
 			}
 		}
@@ -677,7 +677,7 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 		//update quest with new values for "times question answered" and "average distance"
 		[[SqliteHelper Instance] executeUpdate:@"UPDATE location SET avgDistance= ? , sumAnswers = ? WHERE locationID = ?;",
 		 [NSNumber numberWithFloat:newAvgDistance],
-		 [NSNumber numberWithInt:([numerOfTimesAnswered intValue] + 1)],
+		 [NSNumber numberWithInt:(numerOfTimesAnswered+ 1)],
 		 [tempLocation GetID]];
 		
 		

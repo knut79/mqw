@@ -839,6 +839,8 @@
                    /* NSLog(@"why :: %i value for lineID %i",[resultsLine intForColumn:@"coordinates"],[resultsLine intForColumn:@"lineID"]);*/
                     //dictionaryLine = [resultsLine objectAtIndex:0];
 					[multipleLinesArray addObject:[self StringOfCoordinatesToArray:[resultsLine stringForColumn:@"coordinates"]]];
+                    
+                    [resultsLine close];
                 }
                 [resultsLineCount close];
                 /*
@@ -850,8 +852,7 @@
 					[multipleLinesArray addObject:[self StringOfCoordinatesToArray:[resultsLine stringForColumn:@"coordinates"]]];
                 }
                  */
-                //_? hmm
-                [resultsLine close];
+               
                 
 			}
 		}
