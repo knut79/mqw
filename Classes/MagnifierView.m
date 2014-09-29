@@ -141,12 +141,11 @@
 //}
 
 - (void)drawRect:(CGRect)rect {
-	
+
+	//_? #device . use device screen values
 	if (isPositionedLeft == YES) {
 		if (touchPoint.x < 100 && touchPoint.y < 170 ) {
-			//[super initWithFrame:CGRectMake(230, 90, 80, 80)])
 			self.center = CGPointMake(270, 90);
-			//loopLocation = CGPointMake(270, 130);
 			isPositionedLeft = NO;
 			clockViewRef.center = CGPointMake(297.5, 150);
 		}
@@ -154,7 +153,6 @@
 	else {
 		if (touchPoint.x > 220 && touchPoint.y < 170 ) {
 			self.center = CGPointMake(50, 90);
-			//loopLocation = CGPointMake(50, 130);
 			isPositionedLeft = YES;
 			clockViewRef.center = CGPointMake(22.5, 150);
 		}
@@ -165,16 +163,13 @@
     // and rendering that view directly into this view,
     // rather than the previous method of copying an image.
     CGContextRef context = UIGraphicsGetCurrentContext();
-	
+    
     CGContextTranslateCTM(context,1*(self.frame.size.width*0.5),1*(self.frame.size.height*0.5));
     CGContextScaleCTM(context, 1.5, 1.5);
-	
-
-	
     CGContextTranslateCTM(context,-1*(touchPoint.x+viewref.bounds.origin.x),-1*(touchPoint.y+viewref.bounds.origin.y));
-    
 
 	[self.viewref.layer renderInContext:context];
+
 
 //	CGContextSetRGBStrokeColor(context, 1.0, 0, 0, 1);
 //	CGContextMoveToPoint(context, 0, 0);
