@@ -341,6 +341,44 @@
 		7204A3C019DD7EDD00B8AE76 /* NewGuineaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B619DD7EDD00B8AE76 /* NewGuineaFlag.png */; };
 		7204A3C119DD7EDD00B8AE76 /* NewZealandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B719DD7EDD00B8AE76 /* NewZealandFlag.png */; };
 		7204A3C219DD7EDD00B8AE76 /* PhilippinesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B819DD7EDD00B8AE76 /* PhilippinesFlag.png */; };
+		7204A3C419DDC5B900B8AE76 /* UsaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3C319DDC5B900B8AE76 /* UsaFlag.png */; };
+		7204A3EA19DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3C519DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png */; };
+		7204A3EB19DDFE4500B8AE76 /* ArgentinaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3C619DDFE4500B8AE76 /* ArgentinaFlag.png */; };
+		7204A3EC19DDFE4500B8AE76 /* BahamasFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3C719DDFE4500B8AE76 /* BahamasFlag.png */; };
+		7204A3ED19DDFE4500B8AE76 /* BarbadosFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3C819DDFE4500B8AE76 /* BarbadosFlag.png */; };
+		7204A3EE19DDFE4500B8AE76 /* BelizeFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3C919DDFE4500B8AE76 /* BelizeFlag.png */; };
+		7204A3EF19DDFE4500B8AE76 /* BoliviaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CA19DDFE4500B8AE76 /* BoliviaFlag.png */; };
+		7204A3F019DDFE4500B8AE76 /* BrazilFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CB19DDFE4500B8AE76 /* BrazilFlag.png */; };
+		7204A3F119DDFE4500B8AE76 /* CanadaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CC19DDFE4500B8AE76 /* CanadaFlag.png */; };
+		7204A3F219DDFE4500B8AE76 /* ChileFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CD19DDFE4500B8AE76 /* ChileFlag.png */; };
+		7204A3F319DDFE4500B8AE76 /* ColombiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CE19DDFE4500B8AE76 /* ColombiaFlag.png */; };
+		7204A3F419DDFE4500B8AE76 /* CostaRicaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CF19DDFE4500B8AE76 /* CostaRicaFlag.png */; };
+		7204A3F519DDFE4500B8AE76 /* CubaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D019DDFE4500B8AE76 /* CubaFlag.png */; };
+		7204A3F619DDFE4500B8AE76 /* DominicaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D119DDFE4500B8AE76 /* DominicaFlag.png */; };
+		7204A3F719DDFE4500B8AE76 /* dominicanRepublicFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D219DDFE4500B8AE76 /* dominicanRepublicFlag.png */; };
+		7204A3F819DDFE4500B8AE76 /* EcuadorFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D319DDFE4500B8AE76 /* EcuadorFlag.png */; };
+		7204A3F919DDFE4500B8AE76 /* ElSalvadorFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D419DDFE4500B8AE76 /* ElSalvadorFlag.png */; };
+		7204A3FA19DDFE4500B8AE76 /* FrenchGuianaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D519DDFE4500B8AE76 /* FrenchGuianaFlag.png */; };
+		7204A3FB19DDFE4500B8AE76 /* GrenadaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D619DDFE4500B8AE76 /* GrenadaFlag.png */; };
+		7204A3FC19DDFE4500B8AE76 /* GuyanaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D719DDFE4500B8AE76 /* GuyanaFlag.png */; };
+		7204A3FD19DDFE4500B8AE76 /* HaitiFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D819DDFE4500B8AE76 /* HaitiFlag.png */; };
+		7204A3FE19DDFE4500B8AE76 /* HondurasFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D919DDFE4500B8AE76 /* HondurasFlag.png */; };
+		7204A3FF19DDFE4500B8AE76 /* JamaicaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3DA19DDFE4500B8AE76 /* JamaicaFlag.png */; };
+		7204A40019DDFE4500B8AE76 /* MexicoFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3DB19DDFE4500B8AE76 /* MexicoFlag.png */; };
+		7204A40119DDFE4500B8AE76 /* NicaraguaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3DC19DDFE4500B8AE76 /* NicaraguaFlag.png */; };
+		7204A40219DDFE4500B8AE76 /* PanamaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3DD19DDFE4500B8AE76 /* PanamaFlag.png */; };
+		7204A40319DDFE4500B8AE76 /* ParaguayFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3DE19DDFE4500B8AE76 /* ParaguayFlag.png */; };
+		7204A40419DDFE4500B8AE76 /* PeruFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3DF19DDFE4500B8AE76 /* PeruFlag.png */; };
+		7204A40519DDFE4500B8AE76 /* PuertoRicoFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E019DDFE4500B8AE76 /* PuertoRicoFlag.png */; };
+		7204A40619DDFE4500B8AE76 /* SaintKittsAndNevisFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E119DDFE4500B8AE76 /* SaintKittsAndNevisFlag.png */; };
+		7204A40719DDFE4500B8AE76 /* SaintLuciaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E219DDFE4500B8AE76 /* SaintLuciaFlag.png */; };
+		7204A40819DDFE4500B8AE76 /* SaintVincentAndTheGrenadinesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E319DDFE4500B8AE76 /* SaintVincentAndTheGrenadinesFlag.png */; };
+		7204A40919DDFE4500B8AE76 /* SurinameFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E419DDFE4500B8AE76 /* SurinameFlag.png */; };
+		7204A40A19DDFE4500B8AE76 /* TaiwanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E519DDFE4500B8AE76 /* TaiwanFlag.png */; };
+		7204A40B19DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E619DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png */; };
+		7204A40C19DDFE4500B8AE76 /* UruguayFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E719DDFE4500B8AE76 /* UruguayFlag.png */; };
+		7204A40D19DDFE4500B8AE76 /* VenezuelaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E819DDFE4500B8AE76 /* VenezuelaFlag.png */; };
+		7204A40E19DDFE4500B8AE76 /* VietnamFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E919DDFE4500B8AE76 /* VietnamFlag.png */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -777,6 +815,44 @@
 		7204A3B619DD7EDD00B8AE76 /* NewGuineaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewGuineaFlag.png; path = resources/graphics/pictureQuestions/NewGuineaFlag.png; sourceTree = "<group>"; };
 		7204A3B719DD7EDD00B8AE76 /* NewZealandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewZealandFlag.png; path = resources/graphics/pictureQuestions/NewZealandFlag.png; sourceTree = "<group>"; };
 		7204A3B819DD7EDD00B8AE76 /* PhilippinesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhilippinesFlag.png; path = resources/graphics/pictureQuestions/PhilippinesFlag.png; sourceTree = "<group>"; };
+		7204A3C319DDC5B900B8AE76 /* UsaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UsaFlag.png; path = resources/graphics/pictureQuestions/UsaFlag.png; sourceTree = "<group>"; };
+		7204A3C519DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AntiguaAndBarbudaFlag.png; path = resources/graphics/pictureQuestions/AntiguaAndBarbudaFlag.png; sourceTree = "<group>"; };
+		7204A3C619DDFE4500B8AE76 /* ArgentinaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArgentinaFlag.png; path = resources/graphics/pictureQuestions/ArgentinaFlag.png; sourceTree = "<group>"; };
+		7204A3C719DDFE4500B8AE76 /* BahamasFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BahamasFlag.png; path = resources/graphics/pictureQuestions/BahamasFlag.png; sourceTree = "<group>"; };
+		7204A3C819DDFE4500B8AE76 /* BarbadosFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarbadosFlag.png; path = resources/graphics/pictureQuestions/BarbadosFlag.png; sourceTree = "<group>"; };
+		7204A3C919DDFE4500B8AE76 /* BelizeFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BelizeFlag.png; path = resources/graphics/pictureQuestions/BelizeFlag.png; sourceTree = "<group>"; };
+		7204A3CA19DDFE4500B8AE76 /* BoliviaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BoliviaFlag.png; path = resources/graphics/pictureQuestions/BoliviaFlag.png; sourceTree = "<group>"; };
+		7204A3CB19DDFE4500B8AE76 /* BrazilFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BrazilFlag.png; path = resources/graphics/pictureQuestions/BrazilFlag.png; sourceTree = "<group>"; };
+		7204A3CC19DDFE4500B8AE76 /* CanadaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CanadaFlag.png; path = resources/graphics/pictureQuestions/CanadaFlag.png; sourceTree = "<group>"; };
+		7204A3CD19DDFE4500B8AE76 /* ChileFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ChileFlag.png; path = resources/graphics/pictureQuestions/ChileFlag.png; sourceTree = "<group>"; };
+		7204A3CE19DDFE4500B8AE76 /* ColombiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ColombiaFlag.png; path = resources/graphics/pictureQuestions/ColombiaFlag.png; sourceTree = "<group>"; };
+		7204A3CF19DDFE4500B8AE76 /* CostaRicaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CostaRicaFlag.png; path = resources/graphics/pictureQuestions/CostaRicaFlag.png; sourceTree = "<group>"; };
+		7204A3D019DDFE4500B8AE76 /* CubaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CubaFlag.png; path = resources/graphics/pictureQuestions/CubaFlag.png; sourceTree = "<group>"; };
+		7204A3D119DDFE4500B8AE76 /* DominicaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DominicaFlag.png; path = resources/graphics/pictureQuestions/DominicaFlag.png; sourceTree = "<group>"; };
+		7204A3D219DDFE4500B8AE76 /* dominicanRepublicFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dominicanRepublicFlag.png; path = resources/graphics/pictureQuestions/dominicanRepublicFlag.png; sourceTree = "<group>"; };
+		7204A3D319DDFE4500B8AE76 /* EcuadorFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EcuadorFlag.png; path = resources/graphics/pictureQuestions/EcuadorFlag.png; sourceTree = "<group>"; };
+		7204A3D419DDFE4500B8AE76 /* ElSalvadorFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ElSalvadorFlag.png; path = resources/graphics/pictureQuestions/ElSalvadorFlag.png; sourceTree = "<group>"; };
+		7204A3D519DDFE4500B8AE76 /* FrenchGuianaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FrenchGuianaFlag.png; path = resources/graphics/pictureQuestions/FrenchGuianaFlag.png; sourceTree = "<group>"; };
+		7204A3D619DDFE4500B8AE76 /* GrenadaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GrenadaFlag.png; path = resources/graphics/pictureQuestions/GrenadaFlag.png; sourceTree = "<group>"; };
+		7204A3D719DDFE4500B8AE76 /* GuyanaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GuyanaFlag.png; path = resources/graphics/pictureQuestions/GuyanaFlag.png; sourceTree = "<group>"; };
+		7204A3D819DDFE4500B8AE76 /* HaitiFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HaitiFlag.png; path = resources/graphics/pictureQuestions/HaitiFlag.png; sourceTree = "<group>"; };
+		7204A3D919DDFE4500B8AE76 /* HondurasFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HondurasFlag.png; path = resources/graphics/pictureQuestions/HondurasFlag.png; sourceTree = "<group>"; };
+		7204A3DA19DDFE4500B8AE76 /* JamaicaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JamaicaFlag.png; path = resources/graphics/pictureQuestions/JamaicaFlag.png; sourceTree = "<group>"; };
+		7204A3DB19DDFE4500B8AE76 /* MexicoFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MexicoFlag.png; path = resources/graphics/pictureQuestions/MexicoFlag.png; sourceTree = "<group>"; };
+		7204A3DC19DDFE4500B8AE76 /* NicaraguaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NicaraguaFlag.png; path = resources/graphics/pictureQuestions/NicaraguaFlag.png; sourceTree = "<group>"; };
+		7204A3DD19DDFE4500B8AE76 /* PanamaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PanamaFlag.png; path = resources/graphics/pictureQuestions/PanamaFlag.png; sourceTree = "<group>"; };
+		7204A3DE19DDFE4500B8AE76 /* ParaguayFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ParaguayFlag.png; path = resources/graphics/pictureQuestions/ParaguayFlag.png; sourceTree = "<group>"; };
+		7204A3DF19DDFE4500B8AE76 /* PeruFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PeruFlag.png; path = resources/graphics/pictureQuestions/PeruFlag.png; sourceTree = "<group>"; };
+		7204A3E019DDFE4500B8AE76 /* PuertoRicoFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PuertoRicoFlag.png; path = resources/graphics/pictureQuestions/PuertoRicoFlag.png; sourceTree = "<group>"; };
+		7204A3E119DDFE4500B8AE76 /* SaintKittsAndNevisFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SaintKittsAndNevisFlag.png; path = resources/graphics/pictureQuestions/SaintKittsAndNevisFlag.png; sourceTree = "<group>"; };
+		7204A3E219DDFE4500B8AE76 /* SaintLuciaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SaintLuciaFlag.png; path = resources/graphics/pictureQuestions/SaintLuciaFlag.png; sourceTree = "<group>"; };
+		7204A3E319DDFE4500B8AE76 /* SaintVincentAndTheGrenadinesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SaintVincentAndTheGrenadinesFlag.png; path = resources/graphics/pictureQuestions/SaintVincentAndTheGrenadinesFlag.png; sourceTree = "<group>"; };
+		7204A3E419DDFE4500B8AE76 /* SurinameFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SurinameFlag.png; path = resources/graphics/pictureQuestions/SurinameFlag.png; sourceTree = "<group>"; };
+		7204A3E519DDFE4500B8AE76 /* TaiwanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TaiwanFlag.png; path = resources/graphics/pictureQuestions/TaiwanFlag.png; sourceTree = "<group>"; };
+		7204A3E619DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TrinidadAndTobagoFlag.png; path = resources/graphics/pictureQuestions/TrinidadAndTobagoFlag.png; sourceTree = "<group>"; };
+		7204A3E719DDFE4500B8AE76 /* UruguayFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UruguayFlag.png; path = resources/graphics/pictureQuestions/UruguayFlag.png; sourceTree = "<group>"; };
+		7204A3E819DDFE4500B8AE76 /* VenezuelaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VenezuelaFlag.png; path = resources/graphics/pictureQuestions/VenezuelaFlag.png; sourceTree = "<group>"; };
+		7204A3E919DDFE4500B8AE76 /* VietnamFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VietnamFlag.png; path = resources/graphics/pictureQuestions/VietnamFlag.png; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1498,6 +1574,44 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				7204A3C519DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png */,
+				7204A3C619DDFE4500B8AE76 /* ArgentinaFlag.png */,
+				7204A3C719DDFE4500B8AE76 /* BahamasFlag.png */,
+				7204A3C819DDFE4500B8AE76 /* BarbadosFlag.png */,
+				7204A3C919DDFE4500B8AE76 /* BelizeFlag.png */,
+				7204A3CA19DDFE4500B8AE76 /* BoliviaFlag.png */,
+				7204A3CB19DDFE4500B8AE76 /* BrazilFlag.png */,
+				7204A3CC19DDFE4500B8AE76 /* CanadaFlag.png */,
+				7204A3CD19DDFE4500B8AE76 /* ChileFlag.png */,
+				7204A3CE19DDFE4500B8AE76 /* ColombiaFlag.png */,
+				7204A3CF19DDFE4500B8AE76 /* CostaRicaFlag.png */,
+				7204A3D019DDFE4500B8AE76 /* CubaFlag.png */,
+				7204A3D119DDFE4500B8AE76 /* DominicaFlag.png */,
+				7204A3D219DDFE4500B8AE76 /* dominicanRepublicFlag.png */,
+				7204A3D319DDFE4500B8AE76 /* EcuadorFlag.png */,
+				7204A3D419DDFE4500B8AE76 /* ElSalvadorFlag.png */,
+				7204A3D519DDFE4500B8AE76 /* FrenchGuianaFlag.png */,
+				7204A3D619DDFE4500B8AE76 /* GrenadaFlag.png */,
+				7204A3D719DDFE4500B8AE76 /* GuyanaFlag.png */,
+				7204A3D819DDFE4500B8AE76 /* HaitiFlag.png */,
+				7204A3D919DDFE4500B8AE76 /* HondurasFlag.png */,
+				7204A3DA19DDFE4500B8AE76 /* JamaicaFlag.png */,
+				7204A3DB19DDFE4500B8AE76 /* MexicoFlag.png */,
+				7204A3DC19DDFE4500B8AE76 /* NicaraguaFlag.png */,
+				7204A3DD19DDFE4500B8AE76 /* PanamaFlag.png */,
+				7204A3DE19DDFE4500B8AE76 /* ParaguayFlag.png */,
+				7204A3DF19DDFE4500B8AE76 /* PeruFlag.png */,
+				7204A3E019DDFE4500B8AE76 /* PuertoRicoFlag.png */,
+				7204A3E119DDFE4500B8AE76 /* SaintKittsAndNevisFlag.png */,
+				7204A3E219DDFE4500B8AE76 /* SaintLuciaFlag.png */,
+				7204A3E319DDFE4500B8AE76 /* SaintVincentAndTheGrenadinesFlag.png */,
+				7204A3E419DDFE4500B8AE76 /* SurinameFlag.png */,
+				7204A3E519DDFE4500B8AE76 /* TaiwanFlag.png */,
+				7204A3E619DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png */,
+				7204A3E719DDFE4500B8AE76 /* UruguayFlag.png */,
+				7204A3E819DDFE4500B8AE76 /* VenezuelaFlag.png */,
+				7204A3E919DDFE4500B8AE76 /* VietnamFlag.png */,
+				7204A3C319DDC5B900B8AE76 /* UsaFlag.png */,
 				7204A3AF19DD7EDD00B8AE76 /* AustraliaFlag.png */,
 				7204A3B019DD7EDD00B8AE76 /* BruneiFlag.png */,
 				7204A3B119DD7EDD00B8AE76 /* CambodiaFlag.png */,
@@ -1801,6 +1915,7 @@
 				7204A28919D976D600B8AE76 /* world_100_5_0.jpg in Resources */,
 				7204A37C19D9799200B8AE76 /* loop.png in Resources */,
 				7204A27D19D976D600B8AE76 /* world_100_4_0.jpg in Resources */,
+				7204A40C19DDFE4500B8AE76 /* UruguayFlag.png in Resources */,
 				7204A25719D976D600B8AE76 /* world_100_0_10.jpg in Resources */,
 				7204A2C819D976D600B8AE76 /* world_100_10_3.jpg in Resources */,
 				7204A17719D976B300B8AE76 /* world_50_4_2.jpg in Resources */,
@@ -1813,7 +1928,9 @@
 				7204A18919D976B300B8AE76 /* world_50_7_2.jpg in Resources */,
 				7204A2D019D976D600B8AE76 /* world_100_10_11.jpg in Resources */,
 				7204A2D319D976D600B8AE76 /* world_100_11_2.jpg in Resources */,
+				7204A40B19DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png in Resources */,
 				7204A34919D9798300B8AE76 /* DragToMoveInstr.png in Resources */,
+				7204A40119DDFE4500B8AE76 /* NicaraguaFlag.png in Resources */,
 				7204A2B419D976D600B8AE76 /* world_100_8_7.jpg in Resources */,
 				7204A28F19D976D600B8AE76 /* world_100_5_6.jpg in Resources */,
 				7204A25C19D976D600B8AE76 /* world_100_1_3.jpg in Resources */,
@@ -1830,6 +1947,7 @@
 				7204A2D919D976D600B8AE76 /* world_100_11_8.jpg in Resources */,
 				7204A37F19D9799200B8AE76 /* RoundResults.png in Resources */,
 				7204A29A19D976D600B8AE76 /* world_100_6_5.jpg in Resources */,
+				7204A3EB19DDFE4500B8AE76 /* ArgentinaFlag.png in Resources */,
 				7204A37119D9799200B8AE76 /* ArrowRed.png in Resources */,
 				7204A2D519D976D600B8AE76 /* world_100_11_4.jpg in Resources */,
 				7204A17819D976B300B8AE76 /* world_50_4_3.jpg in Resources */,
@@ -1839,6 +1957,7 @@
 				7204A11319D9767700B8AE76 /* 50MaskLand.png in Resources */,
 				7204A38719D9799200B8AE76 /* Vinneren.png in Resources */,
 				7204A27819D976D600B8AE76 /* world_100_3_7.jpg in Resources */,
+				7204A40519DDFE4500B8AE76 /* PuertoRicoFlag.png in Resources */,
 				7204A2B019D976D600B8AE76 /* world_100_8_3.jpg in Resources */,
 				7204A2FD19D976D600B8AE76 /* world_100_14_8.jpg in Resources */,
 				7204A39219D979E700B8AE76 /* armsOfCoat.txt in Resources */,
@@ -1853,6 +1972,7 @@
 				7204A12219D9769A00B8AE76 /* world_25_0_1.jpg in Resources */,
 				7204A27919D976D600B8AE76 /* world_100_3_8.jpg in Resources */,
 				7204A2A619D976D600B8AE76 /* world_100_7_5.jpg in Resources */,
+				7204A3C419DDC5B900B8AE76 /* UsaFlag.png in Resources */,
 				7204A2B819D976D600B8AE76 /* world_100_8_11.jpg in Resources */,
 				7204A17219D976B300B8AE76 /* world_50_3_3.jpg in Resources */,
 				7204A2CD19D976D600B8AE76 /* world_100_10_8.jpg in Resources */,
@@ -1868,25 +1988,33 @@
 				7204A2CC19D976D600B8AE76 /* world_100_10_7.jpg in Resources */,
 				7204A3BA19DD7EDD00B8AE76 /* BruneiFlag.png in Resources */,
 				7204A3AE19D9867400B8AE76 /* test.txt in Resources */,
+				7204A3ED19DDFE4500B8AE76 /* BarbadosFlag.png in Resources */,
 				7204A26219D976D600B8AE76 /* world_100_1_9.jpg in Resources */,
 				7204A16D19D976B300B8AE76 /* world_50_2_4.jpg in Resources */,
 				7204A25B19D976D600B8AE76 /* world_100_1_2.jpg in Resources */,
 				7204A29E19D976D600B8AE76 /* world_100_6_9.jpg in Resources */,
 				7204A25E19D976D600B8AE76 /* world_100_1_5.jpg in Resources */,
+				7204A3EA19DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png in Resources */,
 				7204A12319D9769A00B8AE76 /* world_25_0_2.jpg in Resources */,
 				7204A17B19D976B300B8AE76 /* world_50_5_0.jpg in Resources */,
 				7204A18219D976B300B8AE76 /* world_50_6_1.jpg in Resources */,
+				7204A3FD19DDFE4500B8AE76 /* HaitiFlag.png in Resources */,
+				7204A3F219DDFE4500B8AE76 /* ChileFlag.png in Resources */,
 				7204A30519D976D600B8AE76 /* world_100_15_4.jpg in Resources */,
 				7204A12819D9769A00B8AE76 /* world_25_2_1.jpg in Resources */,
+				7204A3F019DDFE4500B8AE76 /* BrazilFlag.png in Resources */,
 				7204A28719D976D600B8AE76 /* world_100_4_10.jpg in Resources */,
 				7204A26119D976D600B8AE76 /* world_100_1_8.jpg in Resources */,
 				7204A31219D978F000B8AE76 /* hintBtn.png in Resources */,
 				7204A36F19D9799200B8AE76 /* ArrowGreen.png in Resources */,
+				7204A3F119DDFE4500B8AE76 /* CanadaFlag.png in Resources */,
+				7204A40619DDFE4500B8AE76 /* SaintKittsAndNevisFlag.png in Resources */,
 				7204A26019D976D600B8AE76 /* world_100_1_7.jpg in Resources */,
 				7204A17019D976B300B8AE76 /* world_50_3_1.jpg in Resources */,
 				7204A2EC19D976D600B8AE76 /* world_100_13_3.jpg in Resources */,
 				7204A28119D976D600B8AE76 /* world_100_4_4.jpg in Resources */,
 				7204A3A619D979FD00B8AE76 /* HighscoreHard.plist in Resources */,
+				7204A40219DDFE4500B8AE76 /* PanamaFlag.png in Resources */,
 				7204A26819D976D600B8AE76 /* world_100_2_3.jpg in Resources */,
 				7204A25419D976D600B8AE76 /* world_100_0_7.jpg in Resources */,
 				7204A28419D976D600B8AE76 /* world_100_4_7.jpg in Resources */,
@@ -1894,6 +2022,7 @@
 				7204A2FE19D976D600B8AE76 /* world_100_14_9.jpg in Resources */,
 				7204A2E019D976D600B8AE76 /* world_100_12_3.jpg in Resources */,
 				7204A28B19D976D600B8AE76 /* world_100_5_2.jpg in Resources */,
+				7204A40419DDFE4500B8AE76 /* PeruFlag.png in Resources */,
 				7204A16919D976B300B8AE76 /* world_50_2_0.jpg in Resources */,
 				7204A12B19D9769A00B8AE76 /* world_25_3_1.jpg in Resources */,
 				7204A28E19D976D600B8AE76 /* world_100_5_5.jpg in Resources */,
@@ -1919,8 +2048,10 @@
 				7204A36C19D9799200B8AE76 /* icon.jpg in Resources */,
 				7204A25A19D976D600B8AE76 /* world_100_1_1.jpg in Resources */,
 				7204A18519D976B300B8AE76 /* world_50_6_4.jpg in Resources */,
+				7204A40019DDFE4500B8AE76 /* MexicoFlag.png in Resources */,
 				7204A38619D9799200B8AE76 /* trophy.png in Resources */,
 				7204A2A719D976D600B8AE76 /* world_100_7_6.jpg in Resources */,
+				7204A3EF19DDFE4500B8AE76 /* BoliviaFlag.png in Resources */,
 				7204A2E219D976D600B8AE76 /* world_100_12_5.jpg in Resources */,
 				7204A37719D9799200B8AE76 /* directions.png in Resources */,
 				7204A2F419D976D600B8AE76 /* world_100_13_11.jpg in Resources */,
@@ -1937,7 +2068,10 @@
 				7204A29819D976D600B8AE76 /* world_100_6_3.jpg in Resources */,
 				7204A17519D976B300B8AE76 /* world_50_4_0.jpg in Resources */,
 				7204A38519D9799200B8AE76 /* TheWinner.png in Resources */,
+				7204A3EC19DDFE4500B8AE76 /* BahamasFlag.png in Resources */,
 				7204A2E519D976D600B8AE76 /* world_100_12_8.jpg in Resources */,
+				7204A3FC19DDFE4500B8AE76 /* GuyanaFlag.png in Resources */,
+				7204A3F719DDFE4500B8AE76 /* dominicanRepublicFlag.png in Resources */,
 				7204A25619D976D600B8AE76 /* world_100_0_9.jpg in Resources */,
 				7204A2C919D976D600B8AE76 /* world_100_10_4.jpg in Resources */,
 				7204A2C319D976D600B8AE76 /* world_100_9_10.jpg in Resources */,
@@ -1968,6 +2102,7 @@
 				7204A3A319D979FD00B8AE76 /* InfoEng.html in Resources */,
 				7204A28219D976D600B8AE76 /* world_100_4_5.jpg in Resources */,
 				7204A26919D976D600B8AE76 /* world_100_2_4.jpg in Resources */,
+				7204A3F819DDFE4500B8AE76 /* EcuadorFlag.png in Resources */,
 				7204A2B119D976D600B8AE76 /* world_100_8_4.jpg in Resources */,
 				7204A2F519D976D600B8AE76 /* world_100_14_0.jpg in Resources */,
 				7204A34E19D9798300B8AE76 /* ZoomOutInstr.png in Resources */,
@@ -1982,6 +2117,8 @@
 				7204A2FF19D976D600B8AE76 /* world_100_14_10.jpg in Resources */,
 				7204A2DA19D976D600B8AE76 /* world_100_11_9.jpg in Resources */,
 				7204A27019D976D600B8AE76 /* world_100_2_11.jpg in Resources */,
+				7204A3F319DDFE4500B8AE76 /* ColombiaFlag.png in Resources */,
+				7204A3F619DDFE4500B8AE76 /* DominicaFlag.png in Resources */,
 				7204A28D19D976D600B8AE76 /* world_100_5_4.jpg in Resources */,
 				7204A2AC19D976D600B8AE76 /* world_100_7_11.jpg in Resources */,
 				7204A3A419D979FD00B8AE76 /* InfoNor.html in Resources */,
@@ -1992,6 +2129,7 @@
 				7204A12619D9769A00B8AE76 /* world_25_1_2.jpg in Resources */,
 				7204A2EE19D976D600B8AE76 /* world_100_13_5.jpg in Resources */,
 				7204A2BD19D976D600B8AE76 /* world_100_9_4.jpg in Resources */,
+				7204A3F419DDFE4500B8AE76 /* CostaRicaFlag.png in Resources */,
 				7204A28319D976D600B8AE76 /* world_100_4_6.jpg in Resources */,
 				7204A27B19D976D600B8AE76 /* world_100_3_10.jpg in Resources */,
 				7204A29F19D976D600B8AE76 /* world_100_6_10.jpg in Resources */,
@@ -2006,6 +2144,7 @@
 				7204A2D719D976D600B8AE76 /* world_100_11_6.jpg in Resources */,
 				7204A24F19D976D600B8AE76 /* world_100_0_2.jpg in Resources */,
 				7204A12919D9769A00B8AE76 /* world_25_2_2.jpg in Resources */,
+				7204A40319DDFE4500B8AE76 /* ParaguayFlag.png in Resources */,
 				7204A36E19D9799200B8AE76 /* ArrowBlue.png in Resources */,
 				7204A27C19D976D600B8AE76 /* world_100_3_11.jpg in Resources */,
 				7204A39A19D979E700B8AE76 /* states.txt in Resources */,
@@ -2018,6 +2157,7 @@
 				7204A3AC19D97A8500B8AE76 /* MQNorway-Info.plist in Resources */,
 				7204A12119D9769A00B8AE76 /* world_25_0_0.jpg in Resources */,
 				7204A18819D976B300B8AE76 /* world_50_7_1.jpg in Resources */,
+				7204A40719DDFE4500B8AE76 /* SaintLuciaFlag.png in Resources */,
 				7204A2DC19D976D600B8AE76 /* world_100_11_11.jpg in Resources */,
 				7204A26A19D976D600B8AE76 /* world_100_2_5.jpg in Resources */,
 				7204A26E19D976D600B8AE76 /* world_100_2_9.jpg in Resources */,
@@ -2026,11 +2166,13 @@
 				7204A38819D9799200B8AE76 /* watchhand.png in Resources */,
 				7204A3B919DD7EDD00B8AE76 /* AustraliaFlag.png in Resources */,
 				7204A29919D976D600B8AE76 /* world_100_6_4.jpg in Resources */,
+				7204A3F919DDFE4500B8AE76 /* ElSalvadorFlag.png in Resources */,
 				7204A17A19D976B300B8AE76 /* world_50_4_5.jpg in Resources */,
 				7204A28C19D976D600B8AE76 /* world_100_5_3.jpg in Resources */,
 				7204A2F319D976D600B8AE76 /* world_100_13_10.jpg in Resources */,
 				7204A2BB19D976D600B8AE76 /* world_100_9_2.jpg in Resources */,
 				7204A2D419D976D600B8AE76 /* world_100_11_3.jpg in Resources */,
+				7204A40D19DDFE4500B8AE76 /* VenezuelaFlag.png in Resources */,
 				7204A37019D9799200B8AE76 /* ArrowPurple.png in Resources */,
 				7204A37D19D9799200B8AE76 /* loopmask.png in Resources */,
 				7204A2E319D976D600B8AE76 /* world_100_12_6.jpg in Resources */,
@@ -2040,13 +2182,16 @@
 				7204A2B519D976D600B8AE76 /* world_100_8_8.jpg in Resources */,
 				7204A29319D976D600B8AE76 /* world_100_5_10.jpg in Resources */,
 				7204A2C119D976D600B8AE76 /* world_100_9_8.jpg in Resources */,
+				7204A3FA19DDFE4500B8AE76 /* FrenchGuianaFlag.png in Resources */,
 				7204A29C19D976D600B8AE76 /* world_100_6_7.jpg in Resources */,
 				7204A2AB19D976D600B8AE76 /* world_100_7_10.jpg in Resources */,
 				7204A2E819D976D600B8AE76 /* world_100_12_11.jpg in Resources */,
 				7204A2C419D976D600B8AE76 /* world_100_9_11.jpg in Resources */,
 				7204A2A419D976D600B8AE76 /* world_100_7_3.jpg in Resources */,
 				7204A31419D978F000B8AE76 /* pauseBtn_org.png in Resources */,
+				7204A3EE19DDFE4500B8AE76 /* BelizeFlag.png in Resources */,
 				7204A2DB19D976D600B8AE76 /* world_100_11_10.jpg in Resources */,
+				7204A3FB19DDFE4500B8AE76 /* GrenadaFlag.png in Resources */,
 				7204A2C019D976D600B8AE76 /* world_100_9_7.jpg in Resources */,
 				7204A29219D976D600B8AE76 /* world_100_5_9.jpg in Resources */,
 				7204A2C719D976D600B8AE76 /* world_100_10_2.jpg in Resources */,
@@ -2074,7 +2219,9 @@
 				7204A17E19D976B300B8AE76 /* world_50_5_3.jpg in Resources */,
 				7204A18019D976B300B8AE76 /* world_50_5_5.jpg in Resources */,
 				7204A15D19D976B300B8AE76 /* world_50_0_0.jpg in Resources */,
+				7204A3F519DDFE4500B8AE76 /* CubaFlag.png in Resources */,
 				7204A36D19D9799200B8AE76 /* trophy.jpg in Resources */,
+				7204A3FF19DDFE4500B8AE76 /* JamaicaFlag.png in Resources */,
 				EE8731B914CAE1300010A76C /* ChallengeViewController.xib in Resources */,
 				7204A2C619D976D600B8AE76 /* world_100_10_1.jpg in Resources */,
 				7204A29019D976D600B8AE76 /* world_100_5_7.jpg in Resources */,
@@ -2085,6 +2232,7 @@
 				7204A2D219D976D600B8AE76 /* world_100_11_1.jpg in Resources */,
 				7204A3BB19DD7EDD00B8AE76 /* CambodiaFlag.png in Resources */,
 				7204A11019D9765A00B8AE76 /* testPlace.txt in Resources */,
+				7204A3FE19DDFE4500B8AE76 /* HondurasFlag.png in Resources */,
 				7204A2AA19D976D600B8AE76 /* world_100_7_9.jpg in Resources */,
 				7204A2B219D976D600B8AE76 /* world_100_8_5.jpg in Resources */,
 				7204A12A19D9769A00B8AE76 /* world_25_3_0.jpg in Resources */,
@@ -2095,8 +2243,10 @@
 				7204A16019D976B300B8AE76 /* world_50_0_3.jpg in Resources */,
 				7204A26C19D976D600B8AE76 /* world_100_2_7.jpg in Resources */,
 				EED5544714E882EB0070F3F2 /* TakeChallenge.xib in Resources */,
+				7204A40E19DDFE4500B8AE76 /* VietnamFlag.png in Resources */,
 				7204A37E19D9799200B8AE76 /* MiniLogo.png in Resources */,
 				7204A2BA19D976D600B8AE76 /* world_100_9_1.jpg in Resources */,
+				7204A40A19DDFE4500B8AE76 /* TaiwanFlag.png in Resources */,
 				7204A25319D976D600B8AE76 /* world_100_0_6.jpg in Resources */,
 				7204A37919D9799200B8AE76 /* icon_old.png in Resources */,
 				7204A2FA19D976D600B8AE76 /* world_100_14_5.jpg in Resources */,
@@ -2105,12 +2255,14 @@
 				7204A25119D976D600B8AE76 /* world_100_0_4.jpg in Resources */,
 				7204A17119D976B300B8AE76 /* world_50_3_2.jpg in Resources */,
 				EED5544D14E8844C0070F3F2 /* PlayerStats.xib in Resources */,
+				7204A40919DDFE4500B8AE76 /* SurinameFlag.png in Resources */,
 				7204A12C19D9769A00B8AE76 /* world_25_3_2.jpg in Resources */,
 				7204A2BC19D976D600B8AE76 /* world_100_9_3.jpg in Resources */,
 				7204A2DD19D976D600B8AE76 /* world_100_12_0.jpg in Resources */,
 				7204A2BF19D976D600B8AE76 /* world_100_9_6.jpg in Resources */,
 				7204A2CE19D976D600B8AE76 /* world_100_10_9.jpg in Resources */,
 				7204A2F919D976D600B8AE76 /* world_100_14_4.jpg in Resources */,
+				7204A40819DDFE4500B8AE76 /* SaintVincentAndTheGrenadinesFlag.png in Resources */,
 				BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */,
 				7204A18B19D976B300B8AE76 /* world_50_7_4.jpg in Resources */,
 				7204A37319D9799200B8AE76 /* BarLineDown.png in Resources */,

@@ -975,11 +975,23 @@
 	}
 }
 
+-(void) resultBoardAnimationDone
+{
+	[resultBoardView setTransform:CGAffineTransformIdentity];
+}
 
 //round is finished
 - (void)finishedDrawingResultMap
 {
-	
+    //TEST
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:2.5];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDidStopSelector:@selector(resultBoardAnimationDone)];
+	[resultBoardView setTransform:CGAffineTransformMakeScale(2, 2)];
+	[UIView commitAnimations];
+    //END TEST
+    
 	[m_gameRef SetPlayerPositionsByScore];
    
 	if (m_animTextView == nil) {
@@ -987,8 +999,6 @@
 		[m_animTextView setDelegate:self];
 		[[self view] addSubview:m_animTextView];
 	}
-    
-    
 
     
 	if ([m_gameRef IsMultiplayer] == NO) {

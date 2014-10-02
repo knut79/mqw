@@ -455,7 +455,7 @@
 	
 	UIImage *testUIMaskImage = [UIImage imageWithContentsOfFile:maskFileName];
 	CGImageRef maskRef = testUIMaskImage.CGImage;
-	
+    
 	float val1 = tiledMapViewResolutionPercentage;
 	float val2 = tiledMapViewZoomScale;
     
@@ -470,10 +470,19 @@
 							 CGImageGetBytesPerRow(maskRef),
 							 CGImageGetDataProvider(maskRef), NULL, false);
     
+
+    
 	CGContextClipToMask(context, t_testRect, mask);
 	
 	CGContextSetRGBFillColor(context, 0, 200, 0, 0.5);
-	
+    
+    //test filling with image
+    /*NSString* flagFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"usaFlag.png"];
+    UIImage *flagImage = [UIImage imageWithContentsOfFile:flagFileName];
+	CGImageRef flagRef = flagImage.CGImage;
+    CGContextDrawImage(context, self.bounds, flagRef);*/
+
+    
 	[self SetRegionsPaths:loc andContextRef:context];
 	
 	CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 0.75);
