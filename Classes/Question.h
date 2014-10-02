@@ -50,6 +50,6 @@
 -(NSString*) GetID;
 -(BOOL) IsStandardQuestion;
 -(UIImage*) GetPicture;
--(NSString*) GetHintString;
+-(NSArray*) GetHintArray;
 
 @end

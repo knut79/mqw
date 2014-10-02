@@ -76,7 +76,7 @@
     testRect.origin.x += (centerPoint.x - ([screen applicationFrame].size.width/2));
     testRect.origin.y += (centerPoint.y - ([screen applicationFrame].size.height/2));
     
-    CGFloat mapWidth =(4444 * 0.25)*tiledMapViewZoomScale;
+    CGFloat mapWidth =(constMapWidth * 0.25)*tiledMapViewZoomScale;
 	if (testRect.origin.x >  mapWidth - 320)
 	{
 		testRect.origin.x = mapWidth - 320;
@@ -85,7 +85,7 @@
 	{
 		testRect.origin.x = 0;
 	}
-    CGFloat mapHeight = (3040 * 0.25)*tiledMapViewZoomScale;
+    CGFloat mapHeight = (constMapHeight * 0.25)*tiledMapViewZoomScale;
     if (testRect.origin.y > (mapHeight - 480))
 	{
 		testRect.origin.y = mapHeight - 480;
@@ -367,7 +367,7 @@
 	
         //_? only for world map
         CGPoint realMapGamePointManipulate1 = realMapGamePoint;
-        realMapGamePointManipulate1.x = realMapGamePointManipulate1.x + 4444;
+        realMapGamePointManipulate1.x = realMapGamePointManipulate1.x + constMapWidth;
         
         NSInteger distanceBetweenPointsTry1 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate1 andPoint2:nearestPoint];
         if (distanceBetweenPoints > distanceBetweenPointsTry1) {
@@ -376,7 +376,7 @@
             scaledGamePoint.x = scaledGamePoint.x * tiledMapViewZoomScale;
         }
         CGPoint realMapGamePointManipulate2 = realMapGamePoint;
-        realMapGamePointManipulate2.x = realMapGamePointManipulate2.x - 4444;
+        realMapGamePointManipulate2.x = realMapGamePointManipulate2.x - constMapWidth;
         NSInteger distanceBetweenPointsTry2 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate2 andPoint2:nearestPoint];
         if (distanceBetweenPoints > distanceBetweenPointsTry2) {
             distanceBetweenPoints = distanceBetweenPointsTry2;
@@ -458,12 +458,13 @@
 	
 	float val1 = tiledMapViewResolutionPercentage;
 	float val2 = tiledMapViewZoomScale;
-    float testWidth = 4444 * (val1/100);
-	float testHeight = 3040 * (val1/100);
+    
+    float testWidth = constMapWidth * (val1/100);
+	float testHeight = constMapHeight * (val1/100);
 
 	CGRect t_testRect = CGRectMake(0, 0, testWidth * val2, testHeight * val2);
 
-    mask = CGImageMaskCreate( 4444 /2,3040 / 2,
+    mask = CGImageMaskCreate( constMapWidth /2,constMapHeight / 2,
 							 CGImageGetBitsPerComponent(maskRef),
 							 CGImageGetBitsPerPixel(maskRef),
 							 CGImageGetBytesPerRow(maskRef),
@@ -681,14 +682,14 @@
             
             //_? only for world map
             CGPoint realMapGamePointManipulate1 = realMapGamePoint;
-            realMapGamePointManipulate1.x = realMapGamePointManipulate1.x + 4444;
+            realMapGamePointManipulate1.x = realMapGamePointManipulate1.x + constMapWidth;
             NSInteger distanceBetweenPointsTry1 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate1 andPoint2:placeGamePoint];
             if (distanceBetweenPoints > distanceBetweenPointsTry1) {
                 distanceBetweenPoints = distanceBetweenPointsTry1;
                 realMapGamePoint.x = realMapGamePointManipulate1.x;
             }
             CGPoint realMapGamePointManipulate2 = realMapGamePoint;
-            realMapGamePointManipulate2.x = realMapGamePointManipulate2.x - 4444;
+            realMapGamePointManipulate2.x = realMapGamePointManipulate2.x - constMapWidth;
             NSInteger distanceBetweenPointsTry2 = [CoordinateHelper GetDistanceInKm:realMapGamePointManipulate2 andPoint2:placeGamePoint];
             if (distanceBetweenPoints > distanceBetweenPointsTry2) {
                 distanceBetweenPoints = distanceBetweenPointsTry2;

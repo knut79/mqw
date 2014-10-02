@@ -278,28 +278,6 @@
 		7204A31419D978F000B8AE76 /* pauseBtn_org.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A30F19D978F000B8AE76 /* pauseBtn_org.png */; };
 		7204A31519D978F000B8AE76 /* pauseBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31019D978F000B8AE76 /* pauseBtn.png */; };
 		7204A31619D978F000B8AE76 /* quitBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31119D978F000B8AE76 /* quitBtn.png */; };
-		7204A32D19D9791600B8AE76 /* bergenBrygge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31719D9791600B8AE76 /* bergenBrygge.jpg */; };
-		7204A32E19D9791600B8AE76 /* nDomen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31819D9791600B8AE76 /* nDomen.jpg */; };
-		7204A32F19D9791600B8AE76 /* vikingskipet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31919D9791600B8AE76 /* vikingskipet.jpg */; };
-		7204A33019D9791600B8AE76 /* akershus.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31A19D9791600B8AE76 /* akershus.png */; };
-		7204A33119D9791600B8AE76 /* austAgder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31B19D9791600B8AE76 /* austAgder.png */; };
-		7204A33219D9791600B8AE76 /* buskerud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31C19D9791600B8AE76 /* buskerud.png */; };
-		7204A33319D9791600B8AE76 /* finnmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31D19D9791600B8AE76 /* finnmark.png */; };
-		7204A33419D9791600B8AE76 /* hedmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31E19D9791600B8AE76 /* hedmark.png */; };
-		7204A33519D9791600B8AE76 /* hordaland.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A31F19D9791600B8AE76 /* hordaland.png */; };
-		7204A33619D9791600B8AE76 /* moreOgRomsdal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32019D9791600B8AE76 /* moreOgRomsdal.png */; };
-		7204A33719D9791600B8AE76 /* nordland.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32119D9791600B8AE76 /* nordland.png */; };
-		7204A33819D9791600B8AE76 /* nordTrondelag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32219D9791600B8AE76 /* nordTrondelag.png */; };
-		7204A33919D9791600B8AE76 /* oppland.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32319D9791600B8AE76 /* oppland.png */; };
-		7204A33A19D9791600B8AE76 /* oslo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32419D9791600B8AE76 /* oslo.png */; };
-		7204A33B19D9791600B8AE76 /* ostfold.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32519D9791600B8AE76 /* ostfold.png */; };
-		7204A33C19D9791600B8AE76 /* rogaland.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32619D9791600B8AE76 /* rogaland.png */; };
-		7204A33D19D9791600B8AE76 /* sognOgFjordane.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32719D9791600B8AE76 /* sognOgFjordane.png */; };
-		7204A33E19D9791600B8AE76 /* sorTrondelag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32819D9791600B8AE76 /* sorTrondelag.png */; };
-		7204A33F19D9791600B8AE76 /* telemark.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32919D9791600B8AE76 /* telemark.png */; };
-		7204A34019D9791600B8AE76 /* troms.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32A19D9791600B8AE76 /* troms.png */; };
-		7204A34119D9791600B8AE76 /* vestAgder.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32B19D9791600B8AE76 /* vestAgder.png */; };
-		7204A34219D9791600B8AE76 /* vestfold.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A32C19D9791600B8AE76 /* vestfold.png */; };
 		7204A34919D9798300B8AE76 /* DragToMoveInstr.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A34319D9798300B8AE76 /* DragToMoveInstr.png */; };
 		7204A34A19D9798300B8AE76 /* InstructEng.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A34419D9798300B8AE76 /* InstructEng.png */; };
 		7204A34B19D9798300B8AE76 /* InstructNor.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A34519D9798300B8AE76 /* InstructNor.png */; };
@@ -352,6 +330,17 @@
 		7204A3A819D979FD00B8AE76 /* LanguageData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3A019D979FD00B8AE76 /* LanguageData.plist */; };
 		7204A3A919D979FD00B8AE76 /* LocalData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3A119D979FD00B8AE76 /* LocalData.plist */; };
 		7204A3AC19D97A8500B8AE76 /* MQNorway-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3AB19D97A8500B8AE76 /* MQNorway-Info.plist */; };
+		7204A3AE19D9867400B8AE76 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3AD19D9867400B8AE76 /* test.txt */; };
+		7204A3B919DD7EDD00B8AE76 /* AustraliaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3AF19DD7EDD00B8AE76 /* AustraliaFlag.png */; };
+		7204A3BA19DD7EDD00B8AE76 /* BruneiFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B019DD7EDD00B8AE76 /* BruneiFlag.png */; };
+		7204A3BB19DD7EDD00B8AE76 /* CambodiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B119DD7EDD00B8AE76 /* CambodiaFlag.png */; };
+		7204A3BC19DD7EDD00B8AE76 /* EastTimorFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B219DD7EDD00B8AE76 /* EastTimorFlag.png */; };
+		7204A3BD19DD7EDD00B8AE76 /* IndonesiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B319DD7EDD00B8AE76 /* IndonesiaFlag.png */; };
+		7204A3BE19DD7EDD00B8AE76 /* LaosFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B419DD7EDD00B8AE76 /* LaosFlag.png */; };
+		7204A3BF19DD7EDD00B8AE76 /* MalaysiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B519DD7EDD00B8AE76 /* MalaysiaFlag.png */; };
+		7204A3C019DD7EDD00B8AE76 /* NewGuineaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B619DD7EDD00B8AE76 /* NewGuineaFlag.png */; };
+		7204A3C119DD7EDD00B8AE76 /* NewZealandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B719DD7EDD00B8AE76 /* NewZealandFlag.png */; };
+		7204A3C219DD7EDD00B8AE76 /* PhilippinesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3B819DD7EDD00B8AE76 /* PhilippinesFlag.png */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -725,28 +714,6 @@
 		7204A30F19D978F000B8AE76 /* pauseBtn_org.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pauseBtn_org.png; path = resources/graphics/GameElements/buttons/pauseBtn_org.png; sourceTree = "<group>"; };
 		7204A31019D978F000B8AE76 /* pauseBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pauseBtn.png; path = resources/graphics/GameElements/buttons/pauseBtn.png; sourceTree = "<group>"; };
 		7204A31119D978F000B8AE76 /* quitBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quitBtn.png; path = resources/graphics/GameElements/buttons/quitBtn.png; sourceTree = "<group>"; };
-		7204A31719D9791600B8AE76 /* bergenBrygge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bergenBrygge.jpg; path = resources/graphics/pictureQuestions/bergenBrygge.jpg; sourceTree = "<group>"; };
-		7204A31819D9791600B8AE76 /* nDomen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nDomen.jpg; path = resources/graphics/pictureQuestions/nDomen.jpg; sourceTree = "<group>"; };
-		7204A31919D9791600B8AE76 /* vikingskipet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = vikingskipet.jpg; path = resources/graphics/pictureQuestions/vikingskipet.jpg; sourceTree = "<group>"; };
-		7204A31A19D9791600B8AE76 /* akershus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = akershus.png; path = resources/graphics/pictureQuestions/akershus.png; sourceTree = "<group>"; };
-		7204A31B19D9791600B8AE76 /* austAgder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = austAgder.png; path = resources/graphics/pictureQuestions/austAgder.png; sourceTree = "<group>"; };
-		7204A31C19D9791600B8AE76 /* buskerud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buskerud.png; path = resources/graphics/pictureQuestions/buskerud.png; sourceTree = "<group>"; };
-		7204A31D19D9791600B8AE76 /* finnmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = finnmark.png; path = resources/graphics/pictureQuestions/finnmark.png; sourceTree = "<group>"; };
-		7204A31E19D9791600B8AE76 /* hedmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hedmark.png; path = resources/graphics/pictureQuestions/hedmark.png; sourceTree = "<group>"; };
-		7204A31F19D9791600B8AE76 /* hordaland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hordaland.png; path = resources/graphics/pictureQuestions/hordaland.png; sourceTree = "<group>"; };
-		7204A32019D9791600B8AE76 /* moreOgRomsdal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moreOgRomsdal.png; path = resources/graphics/pictureQuestions/moreOgRomsdal.png; sourceTree = "<group>"; };
-		7204A32119D9791600B8AE76 /* nordland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nordland.png; path = resources/graphics/pictureQuestions/nordland.png; sourceTree = "<group>"; };
-		7204A32219D9791600B8AE76 /* nordTrondelag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nordTrondelag.png; path = resources/graphics/pictureQuestions/nordTrondelag.png; sourceTree = "<group>"; };
-		7204A32319D9791600B8AE76 /* oppland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oppland.png; path = resources/graphics/pictureQuestions/oppland.png; sourceTree = "<group>"; };
-		7204A32419D9791600B8AE76 /* oslo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oslo.png; path = resources/graphics/pictureQuestions/oslo.png; sourceTree = "<group>"; };
-		7204A32519D9791600B8AE76 /* ostfold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ostfold.png; path = resources/graphics/pictureQuestions/ostfold.png; sourceTree = "<group>"; };
-		7204A32619D9791600B8AE76 /* rogaland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rogaland.png; path = resources/graphics/pictureQuestions/rogaland.png; sourceTree = "<group>"; };
-		7204A32719D9791600B8AE76 /* sognOgFjordane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sognOgFjordane.png; path = resources/graphics/pictureQuestions/sognOgFjordane.png; sourceTree = "<group>"; };
-		7204A32819D9791600B8AE76 /* sorTrondelag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sorTrondelag.png; path = resources/graphics/pictureQuestions/sorTrondelag.png; sourceTree = "<group>"; };
-		7204A32919D9791600B8AE76 /* telemark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = telemark.png; path = resources/graphics/pictureQuestions/telemark.png; sourceTree = "<group>"; };
-		7204A32A19D9791600B8AE76 /* troms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = troms.png; path = resources/graphics/pictureQuestions/troms.png; sourceTree = "<group>"; };
-		7204A32B19D9791600B8AE76 /* vestAgder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vestAgder.png; path = resources/graphics/pictureQuestions/vestAgder.png; sourceTree = "<group>"; };
-		7204A32C19D9791600B8AE76 /* vestfold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vestfold.png; path = resources/graphics/pictureQuestions/vestfold.png; sourceTree = "<group>"; };
 		7204A34319D9798300B8AE76 /* DragToMoveInstr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DragToMoveInstr.png; path = resources/graphics/GameElements/instructions/DragToMoveInstr.png; sourceTree = "<group>"; };
 		7204A34419D9798300B8AE76 /* InstructEng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InstructEng.png; path = resources/graphics/GameElements/instructions/InstructEng.png; sourceTree = "<group>"; };
 		7204A34519D9798300B8AE76 /* InstructNor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InstructNor.png; path = resources/graphics/GameElements/instructions/InstructNor.png; sourceTree = "<group>"; };
@@ -799,6 +766,17 @@
 		7204A3A019D979FD00B8AE76 /* LanguageData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LanguageData.plist; path = resources/LanguageData.plist; sourceTree = "<group>"; };
 		7204A3A119D979FD00B8AE76 /* LocalData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = LocalData.plist; path = resources/LocalData.plist; sourceTree = "<group>"; };
 		7204A3AB19D97A8500B8AE76 /* MQNorway-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MQNorway-Info.plist"; sourceTree = "<group>"; };
+		7204A3AD19D9867400B8AE76 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test.txt; path = resources/test/test.txt; sourceTree = "<group>"; };
+		7204A3AF19DD7EDD00B8AE76 /* AustraliaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AustraliaFlag.png; path = resources/graphics/pictureQuestions/AustraliaFlag.png; sourceTree = "<group>"; };
+		7204A3B019DD7EDD00B8AE76 /* BruneiFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BruneiFlag.png; path = resources/graphics/pictureQuestions/BruneiFlag.png; sourceTree = "<group>"; };
+		7204A3B119DD7EDD00B8AE76 /* CambodiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CambodiaFlag.png; path = resources/graphics/pictureQuestions/CambodiaFlag.png; sourceTree = "<group>"; };
+		7204A3B219DD7EDD00B8AE76 /* EastTimorFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EastTimorFlag.png; path = resources/graphics/pictureQuestions/EastTimorFlag.png; sourceTree = "<group>"; };
+		7204A3B319DD7EDD00B8AE76 /* IndonesiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IndonesiaFlag.png; path = resources/graphics/pictureQuestions/IndonesiaFlag.png; sourceTree = "<group>"; };
+		7204A3B419DD7EDD00B8AE76 /* LaosFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaosFlag.png; path = resources/graphics/pictureQuestions/LaosFlag.png; sourceTree = "<group>"; };
+		7204A3B519DD7EDD00B8AE76 /* MalaysiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MalaysiaFlag.png; path = resources/graphics/pictureQuestions/MalaysiaFlag.png; sourceTree = "<group>"; };
+		7204A3B619DD7EDD00B8AE76 /* NewGuineaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewGuineaFlag.png; path = resources/graphics/pictureQuestions/NewGuineaFlag.png; sourceTree = "<group>"; };
+		7204A3B719DD7EDD00B8AE76 /* NewZealandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NewZealandFlag.png; path = resources/graphics/pictureQuestions/NewZealandFlag.png; sourceTree = "<group>"; };
+		7204A3B819DD7EDD00B8AE76 /* PhilippinesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhilippinesFlag.png; path = resources/graphics/pictureQuestions/PhilippinesFlag.png; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1078,6 +1056,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7204A3AD19D9867400B8AE76 /* test.txt */,
 				7204A3AB19D97A8500B8AE76 /* MQNorway-Info.plist */,
 				7204A39B19D979FD00B8AE76 /* InfoEng.html */,
 				7204A39C19D979FD00B8AE76 /* InfoNor.html */,
@@ -1519,28 +1498,16 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
-				7204A31719D9791600B8AE76 /* bergenBrygge.jpg */,
-				7204A31819D9791600B8AE76 /* nDomen.jpg */,
-				7204A31919D9791600B8AE76 /* vikingskipet.jpg */,
-				7204A31A19D9791600B8AE76 /* akershus.png */,
-				7204A31B19D9791600B8AE76 /* austAgder.png */,
-				7204A31C19D9791600B8AE76 /* buskerud.png */,
-				7204A31D19D9791600B8AE76 /* finnmark.png */,
-				7204A31E19D9791600B8AE76 /* hedmark.png */,
-				7204A31F19D9791600B8AE76 /* hordaland.png */,
-				7204A32019D9791600B8AE76 /* moreOgRomsdal.png */,
-				7204A32119D9791600B8AE76 /* nordland.png */,
-				7204A32219D9791600B8AE76 /* nordTrondelag.png */,
-				7204A32319D9791600B8AE76 /* oppland.png */,
-				7204A32419D9791600B8AE76 /* oslo.png */,
-				7204A32519D9791600B8AE76 /* ostfold.png */,
-				7204A32619D9791600B8AE76 /* rogaland.png */,
-				7204A32719D9791600B8AE76 /* sognOgFjordane.png */,
-				7204A32819D9791600B8AE76 /* sorTrondelag.png */,
-				7204A32919D9791600B8AE76 /* telemark.png */,
-				7204A32A19D9791600B8AE76 /* troms.png */,
-				7204A32B19D9791600B8AE76 /* vestAgder.png */,
-				7204A32C19D9791600B8AE76 /* vestfold.png */,
+				7204A3AF19DD7EDD00B8AE76 /* AustraliaFlag.png */,
+				7204A3B019DD7EDD00B8AE76 /* BruneiFlag.png */,
+				7204A3B119DD7EDD00B8AE76 /* CambodiaFlag.png */,
+				7204A3B219DD7EDD00B8AE76 /* EastTimorFlag.png */,
+				7204A3B319DD7EDD00B8AE76 /* IndonesiaFlag.png */,
+				7204A3B419DD7EDD00B8AE76 /* LaosFlag.png */,
+				7204A3B519DD7EDD00B8AE76 /* MalaysiaFlag.png */,
+				7204A3B619DD7EDD00B8AE76 /* NewGuineaFlag.png */,
+				7204A3B719DD7EDD00B8AE76 /* NewZealandFlag.png */,
+				7204A3B819DD7EDD00B8AE76 /* PhilippinesFlag.png */,
 			);
 			name = aoc;
 			sourceTree = "<group>";
@@ -1825,8 +1792,8 @@
 				7204A28619D976D600B8AE76 /* world_100_4_9.jpg in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				7204A26B19D976D600B8AE76 /* world_100_2_6.jpg in Resources */,
-				7204A34119D9791600B8AE76 /* vestAgder.png in Resources */,
 				7204A24D19D976D600B8AE76 /* world_100_0_0.jpg in Resources */,
+				7204A3BC19DD7EDD00B8AE76 /* EastTimorFlag.png in Resources */,
 				7204A2D819D976D600B8AE76 /* world_100_11_7.jpg in Resources */,
 				7204A39519D979E700B8AE76 /* islands.txt in Resources */,
 				7204A25F19D976D600B8AE76 /* world_100_1_6.jpg in Resources */,
@@ -1835,7 +1802,6 @@
 				7204A37C19D9799200B8AE76 /* loop.png in Resources */,
 				7204A27D19D976D600B8AE76 /* world_100_4_0.jpg in Resources */,
 				7204A25719D976D600B8AE76 /* world_100_0_10.jpg in Resources */,
-				7204A32E19D9791600B8AE76 /* nDomen.jpg in Resources */,
 				7204A2C819D976D600B8AE76 /* world_100_10_3.jpg in Resources */,
 				7204A17719D976B300B8AE76 /* world_50_4_2.jpg in Resources */,
 				2899E5220DE3E06400AC0155 /* MQNorwayViewController.xib in Resources */,
@@ -1877,6 +1843,7 @@
 				7204A2FD19D976D600B8AE76 /* world_100_14_8.jpg in Resources */,
 				7204A39219D979E700B8AE76 /* armsOfCoat.txt in Resources */,
 				7204A27419D976D600B8AE76 /* world_100_3_3.jpg in Resources */,
+				7204A3BE19DD7EDD00B8AE76 /* LaosFlag.png in Resources */,
 				7204A16C19D976B300B8AE76 /* world_50_2_3.jpg in Resources */,
 				7204A26719D976D600B8AE76 /* world_100_2_2.jpg in Resources */,
 				7204A18419D976B300B8AE76 /* world_50_6_3.jpg in Resources */,
@@ -1889,6 +1856,7 @@
 				7204A2B819D976D600B8AE76 /* world_100_8_11.jpg in Resources */,
 				7204A17219D976B300B8AE76 /* world_50_3_3.jpg in Resources */,
 				7204A2CD19D976D600B8AE76 /* world_100_10_8.jpg in Resources */,
+				7204A3C119DD7EDD00B8AE76 /* NewZealandFlag.png in Resources */,
 				7204A34B19D9798300B8AE76 /* InstructNor.png in Resources */,
 				7204A18C19D976B300B8AE76 /* world_50_7_5.jpg in Resources */,
 				7204A29119D976D600B8AE76 /* world_100_5_8.jpg in Resources */,
@@ -1898,10 +1866,10 @@
 				7204A24E19D976D600B8AE76 /* world_100_0_1.jpg in Resources */,
 				7204A16B19D976B300B8AE76 /* world_50_2_2.jpg in Resources */,
 				7204A2CC19D976D600B8AE76 /* world_100_10_7.jpg in Resources */,
+				7204A3BA19DD7EDD00B8AE76 /* BruneiFlag.png in Resources */,
+				7204A3AE19D9867400B8AE76 /* test.txt in Resources */,
 				7204A26219D976D600B8AE76 /* world_100_1_9.jpg in Resources */,
 				7204A16D19D976B300B8AE76 /* world_50_2_4.jpg in Resources */,
-				7204A33419D9791600B8AE76 /* hedmark.png in Resources */,
-				7204A33A19D9791600B8AE76 /* oslo.png in Resources */,
 				7204A25B19D976D600B8AE76 /* world_100_1_2.jpg in Resources */,
 				7204A29E19D976D600B8AE76 /* world_100_6_9.jpg in Resources */,
 				7204A25E19D976D600B8AE76 /* world_100_1_5.jpg in Resources */,
@@ -1932,19 +1900,18 @@
 				7204A2EB19D976D600B8AE76 /* world_100_13_2.jpg in Resources */,
 				7204A27719D976D600B8AE76 /* world_100_3_6.jpg in Resources */,
 				7204A29D19D976D600B8AE76 /* world_100_6_8.jpg in Resources */,
+				7204A3BF19DD7EDD00B8AE76 /* MalaysiaFlag.png in Resources */,
 				7204A2E719D976D600B8AE76 /* world_100_12_10.jpg in Resources */,
 				7204A2A919D976D600B8AE76 /* world_100_7_8.jpg in Resources */,
+				7204A3C019DD7EDD00B8AE76 /* NewGuineaFlag.png in Resources */,
 				7204A38119D9799200B8AE76 /* tapImage.png in Resources */,
 				7204A26D19D976D600B8AE76 /* world_100_2_8.jpg in Resources */,
 				7204A2DE19D976D600B8AE76 /* world_100_12_1.jpg in Resources */,
 				7204A27519D976D600B8AE76 /* world_100_3_4.jpg in Resources */,
 				7204A2F819D976D600B8AE76 /* world_100_14_3.jpg in Resources */,
 				7204A30B19D976D600B8AE76 /* world_100_15_10.jpg in Resources */,
-				7204A33019D9791600B8AE76 /* akershus.png in Resources */,
-				7204A33619D9791600B8AE76 /* moreOgRomsdal.png in Resources */,
 				7204A2ED19D976D600B8AE76 /* world_100_13_4.jpg in Resources */,
 				7204A16319D976B300B8AE76 /* world_50_1_0.jpg in Resources */,
-				7204A32D19D9791600B8AE76 /* bergenBrygge.jpg in Resources */,
 				7204A34A19D9798300B8AE76 /* InstructEng.png in Resources */,
 				7204A18719D976B300B8AE76 /* world_50_7_0.jpg in Resources */,
 				7204A26519D976D600B8AE76 /* world_100_2_0.jpg in Resources */,
@@ -1953,28 +1920,24 @@
 				7204A25A19D976D600B8AE76 /* world_100_1_1.jpg in Resources */,
 				7204A18519D976B300B8AE76 /* world_50_6_4.jpg in Resources */,
 				7204A38619D9799200B8AE76 /* trophy.png in Resources */,
-				7204A33F19D9791600B8AE76 /* telemark.png in Resources */,
 				7204A2A719D976D600B8AE76 /* world_100_7_6.jpg in Resources */,
 				7204A2E219D976D600B8AE76 /* world_100_12_5.jpg in Resources */,
 				7204A37719D9799200B8AE76 /* directions.png in Resources */,
 				7204A2F419D976D600B8AE76 /* world_100_13_11.jpg in Resources */,
-				7204A33919D9791600B8AE76 /* oppland.png in Resources */,
 				7204A39419D979E700B8AE76 /* fjords.txt in Resources */,
-				7204A34219D9791600B8AE76 /* vestfold.png in Resources */,
 				7204A30A19D976D600B8AE76 /* world_100_15_9.jpg in Resources */,
 				7204A2B719D976D600B8AE76 /* world_100_8_10.jpg in Resources */,
 				7204A37219D9799200B8AE76 /* BarLine.png in Resources */,
 				7204A31619D978F000B8AE76 /* quitBtn.png in Resources */,
+				7204A3BD19DD7EDD00B8AE76 /* IndonesiaFlag.png in Resources */,
 				7204A2CF19D976D600B8AE76 /* world_100_10_10.jpg in Resources */,
 				7204A39319D979E700B8AE76 /* cities.txt in Resources */,
 				7204A27619D976D600B8AE76 /* world_100_3_5.jpg in Resources */,
 				7204A31319D978F000B8AE76 /* passBtn.png in Resources */,
 				7204A29819D976D600B8AE76 /* world_100_6_3.jpg in Resources */,
 				7204A17519D976B300B8AE76 /* world_50_4_0.jpg in Resources */,
-				7204A33B19D9791600B8AE76 /* ostfold.png in Resources */,
 				7204A38519D9799200B8AE76 /* TheWinner.png in Resources */,
 				7204A2E519D976D600B8AE76 /* world_100_12_8.jpg in Resources */,
-				7204A33C19D9791600B8AE76 /* rogaland.png in Resources */,
 				7204A25619D976D600B8AE76 /* world_100_0_9.jpg in Resources */,
 				7204A2C919D976D600B8AE76 /* world_100_10_4.jpg in Resources */,
 				7204A2C319D976D600B8AE76 /* world_100_9_10.jpg in Resources */,
@@ -2004,7 +1967,6 @@
 				7204A2E619D976D600B8AE76 /* world_100_12_9.jpg in Resources */,
 				7204A3A319D979FD00B8AE76 /* InfoEng.html in Resources */,
 				7204A28219D976D600B8AE76 /* world_100_4_5.jpg in Resources */,
-				7204A33219D9791600B8AE76 /* buskerud.png in Resources */,
 				7204A26919D976D600B8AE76 /* world_100_2_4.jpg in Resources */,
 				7204A2B119D976D600B8AE76 /* world_100_8_4.jpg in Resources */,
 				7204A2F519D976D600B8AE76 /* world_100_14_0.jpg in Resources */,
@@ -2012,7 +1974,6 @@
 				7204A11419D9767700B8AE76 /* 50MaskWater.png in Resources */,
 				7204A2AD19D976D600B8AE76 /* world_100_8_0.jpg in Resources */,
 				7204A29719D976D600B8AE76 /* world_100_6_2.jpg in Resources */,
-				7204A33E19D9791600B8AE76 /* sorTrondelag.png in Resources */,
 				7204A25219D976D600B8AE76 /* world_100_0_5.jpg in Resources */,
 				7204A17619D976B300B8AE76 /* world_50_4_1.jpg in Resources */,
 				7204A30119D976D600B8AE76 /* world_100_15_0.jpg in Resources */,
@@ -2021,7 +1982,6 @@
 				7204A2FF19D976D600B8AE76 /* world_100_14_10.jpg in Resources */,
 				7204A2DA19D976D600B8AE76 /* world_100_11_9.jpg in Resources */,
 				7204A27019D976D600B8AE76 /* world_100_2_11.jpg in Resources */,
-				7204A33819D9791600B8AE76 /* nordTrondelag.png in Resources */,
 				7204A28D19D976D600B8AE76 /* world_100_5_4.jpg in Resources */,
 				7204A2AC19D976D600B8AE76 /* world_100_7_11.jpg in Resources */,
 				7204A3A419D979FD00B8AE76 /* InfoNor.html in Resources */,
@@ -2064,6 +2024,7 @@
 				7204A39819D979E700B8AE76 /* places.txt in Resources */,
 				7204A3A519D979FD00B8AE76 /* HighscoreEasy.plist in Resources */,
 				7204A38819D9799200B8AE76 /* watchhand.png in Resources */,
+				7204A3B919DD7EDD00B8AE76 /* AustraliaFlag.png in Resources */,
 				7204A29919D976D600B8AE76 /* world_100_6_4.jpg in Resources */,
 				7204A17A19D976B300B8AE76 /* world_50_4_5.jpg in Resources */,
 				7204A28C19D976D600B8AE76 /* world_100_5_3.jpg in Resources */,
@@ -2071,11 +2032,9 @@
 				7204A2BB19D976D600B8AE76 /* world_100_9_2.jpg in Resources */,
 				7204A2D419D976D600B8AE76 /* world_100_11_3.jpg in Resources */,
 				7204A37019D9799200B8AE76 /* ArrowPurple.png in Resources */,
-				7204A33519D9791600B8AE76 /* hordaland.png in Resources */,
 				7204A37D19D9799200B8AE76 /* loopmask.png in Resources */,
 				7204A2E319D976D600B8AE76 /* world_100_12_6.jpg in Resources */,
 				7204A30C19D976D600B8AE76 /* world_100_15_11.jpg in Resources */,
-				7204A34019D9791600B8AE76 /* troms.png in Resources */,
 				7204A18119D976B300B8AE76 /* world_50_6_0.jpg in Resources */,
 				7204A18319D976B300B8AE76 /* world_50_6_2.jpg in Resources */,
 				7204A2B519D976D600B8AE76 /* world_100_8_8.jpg in Resources */,
@@ -2101,6 +2060,7 @@
 				7204A26F19D976D600B8AE76 /* world_100_2_10.jpg in Resources */,
 				7204A2CB19D976D600B8AE76 /* world_100_10_6.jpg in Resources */,
 				7204A2B619D976D600B8AE76 /* world_100_8_9.jpg in Resources */,
+				7204A3C219DD7EDD00B8AE76 /* PhilippinesFlag.png in Resources */,
 				7204A2A019D976D600B8AE76 /* world_100_6_11.jpg in Resources */,
 				7204A17319D976B300B8AE76 /* world_50_3_4.jpg in Resources */,
 				7204A27F19D976D600B8AE76 /* world_100_4_2.jpg in Resources */,
@@ -2117,13 +2077,13 @@
 				7204A36D19D9799200B8AE76 /* trophy.jpg in Resources */,
 				EE8731B914CAE1300010A76C /* ChallengeViewController.xib in Resources */,
 				7204A2C619D976D600B8AE76 /* world_100_10_1.jpg in Resources */,
-				7204A33119D9791600B8AE76 /* austAgder.png in Resources */,
 				7204A29019D976D600B8AE76 /* world_100_5_7.jpg in Resources */,
 				7204A2A219D976D600B8AE76 /* world_100_7_1.jpg in Resources */,
 				7204A2C219D976D600B8AE76 /* world_100_9_9.jpg in Resources */,
 				7204A30919D976D600B8AE76 /* world_100_15_8.jpg in Resources */,
 				7204A2BE19D976D600B8AE76 /* world_100_9_5.jpg in Resources */,
 				7204A2D219D976D600B8AE76 /* world_100_11_1.jpg in Resources */,
+				7204A3BB19DD7EDD00B8AE76 /* CambodiaFlag.png in Resources */,
 				7204A11019D9765A00B8AE76 /* testPlace.txt in Resources */,
 				7204A2AA19D976D600B8AE76 /* world_100_7_9.jpg in Resources */,
 				7204A2B219D976D600B8AE76 /* world_100_8_5.jpg in Resources */,
@@ -2135,8 +2095,6 @@
 				7204A16019D976B300B8AE76 /* world_50_0_3.jpg in Resources */,
 				7204A26C19D976D600B8AE76 /* world_100_2_7.jpg in Resources */,
 				EED5544714E882EB0070F3F2 /* TakeChallenge.xib in Resources */,
-				7204A33D19D9791600B8AE76 /* sognOgFjordane.png in Resources */,
-				7204A33319D9791600B8AE76 /* finnmark.png in Resources */,
 				7204A37E19D9799200B8AE76 /* MiniLogo.png in Resources */,
 				7204A2BA19D976D600B8AE76 /* world_100_9_1.jpg in Resources */,
 				7204A25319D976D600B8AE76 /* world_100_0_6.jpg in Resources */,
@@ -2150,14 +2108,12 @@
 				7204A12C19D9769A00B8AE76 /* world_25_3_2.jpg in Resources */,
 				7204A2BC19D976D600B8AE76 /* world_100_9_3.jpg in Resources */,
 				7204A2DD19D976D600B8AE76 /* world_100_12_0.jpg in Resources */,
-				7204A33719D9791600B8AE76 /* nordland.png in Resources */,
 				7204A2BF19D976D600B8AE76 /* world_100_9_6.jpg in Resources */,
 				7204A2CE19D976D600B8AE76 /* world_100_10_9.jpg in Resources */,
 				7204A2F919D976D600B8AE76 /* world_100_14_4.jpg in Resources */,
 				BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */,
 				7204A18B19D976B300B8AE76 /* world_50_7_4.jpg in Resources */,
 				7204A37319D9799200B8AE76 /* BarLineDown.png in Resources */,
-				7204A32F19D9791600B8AE76 /* vikingskipet.jpg in Resources */,
 				7204A2CA19D976D600B8AE76 /* world_100_10_5.jpg in Resources */,
 				7204A12719D9769A00B8AE76 /* world_25_2_0.jpg in Resources */,
 				7204A25919D976D600B8AE76 /* world_100_1_0.jpg in Resources */,

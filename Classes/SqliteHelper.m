@@ -27,8 +27,9 @@
             //NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"SQLiteTest.db"]
             
             // delete the old db.
-            //NSFileManager *fileManager = [NSFileManager defaultManager];
-            //[fileManager removeItemAtPath:dbPath error:nil];
+            //Comment out these lines if you want to keep old values 
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            [fileManager removeItemAtPath:dbPath error:nil];
             
             Instance = [[FMDatabase databaseWithPath:dbPath] retain];
             

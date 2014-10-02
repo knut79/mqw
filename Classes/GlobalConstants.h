@@ -12,6 +12,10 @@
 
 #define mask_water @"50MaskWater.png"
 
+#define constMapHeight 2944
+#define constMapWidth 4096
+
+
 #define constInfobarBottomHeight 40
 
 #define measurementFactor_200 0.51f

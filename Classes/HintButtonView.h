@@ -15,10 +15,11 @@
 	UIAlertView *hitBox;
 	UILabel* timesLeftLabel;
 	NSInteger timesLeft;
+    NSArray* m_hints;
 }
 @property (nonatomic, assign) id <HintButtonViewDelegate> delegate;
 -(void) SetTimesLeft:(NSInteger) value;
--(void) SetHint:(NSString*) hint;
+-(void) SetHint:(NSArray*) hints;
 @end
 
 @protocol HintButtonViewDelegate <NSObject>

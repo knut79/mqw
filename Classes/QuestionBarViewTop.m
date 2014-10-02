@@ -79,7 +79,7 @@
 			m_lineImageView.center = CGPointMake([self frame].size.width/2, [self frame].size.height - 15);
 			[m_imageView setFrame:CGRectMake(5, 5, 30.0, 30.0)];
 			
-			m_tapToEnlarge.text = [NSString stringWithFormat:@"--%@--",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap image to resize"]];
+			m_tapToEnlarge.text = [NSString stringWithFormat:@" %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap image to resize"]];
 			[m_tapToEnlarge setAlpha:1];
 			
 			m_label.textAlignment = NSTextAlignmentLeft;
@@ -121,6 +121,9 @@
 		m_tapToEnlarge.text = [NSString stringWithFormat:@"--%@--",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap to resize image"]];
 
 		m_image = [currentQuestion GetPicture];
+
+        //int orgImageWidth = m_image.size.width;
+        //int decreaseWidth = orgImageWidth
 		[m_imageView setFrame:CGRectMake(5, 5, 30.0, 30.0)];
 		[m_imageView setImage:m_image];
 		questionLabelWidth =280;

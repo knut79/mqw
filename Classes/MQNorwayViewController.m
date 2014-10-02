@@ -418,7 +418,8 @@
         }
         
         Player *player = [[m_gameRef GetPlayer] retain];
-        if([player GetHintsLeft] > 0)
+        int hintsLeft = [player GetHintsLeft];
+        if(hintsLeft > 0)
         {
             if (hintButton == nil) {
                 hintButton = [[HintButtonView alloc] init];
@@ -426,8 +427,8 @@
                 [[self view] addSubview:hintButton];
             }
             
-            [hintButton SetTimesLeft:[player GetHintsLeft]];
-            [hintButton SetHint:[[m_gameRef GetQuestion] GetHintString]];
+            [hintButton SetTimesLeft:hintsLeft];
+            [hintButton SetHint:[[m_gameRef GetQuestion] GetHintArray]];
         }
 		
         if([player GetPassesLeft] > 0)
@@ -458,7 +459,10 @@
             //[clockView setDelegate:self];
             [[self view] addSubview:clockView];
         }
+        
+
         [clockView StartClock];
+        
     }
 
 }
@@ -1265,7 +1269,7 @@
 	[answerBarTop setAlpha:0];
 	
 	//[self setZoomScale:CGSizeMake(1800, 4500)];
-    [self setZoomScale:CGSizeMake(4444, 3040)];
+    [self setZoomScale:CGSizeMake(constMapWidth, constMapHeight)];
 }
 
 -(void) RemoveGameBoardAndBars
@@ -1386,6 +1390,7 @@
 	[infoBarBottom SetGameRef:m_gameRef];
 	
 	//set first question
+    //_? #bug bug here
 	[questionBarTop SetQuestion:currentPlayerName gameRef:m_gameRef];
 	
 	[self FadeOutGameElements];
@@ -1414,18 +1419,6 @@
             
 			[self StartPlayer];
 		}
-
-		
-//		if(firstTimeInstructionsView == nil)
-//		{
-//			firstTimeInstructionsView = [[FirstTimeInstructionsView alloc] initWithFrame:[[self view] bounds]];
-//			[firstTimeInstructionsView setAlpha:0];
-//			[[self view] addSubview:firstTimeInstructionsView];
-//		}
-//		//show instructions
-//		[firstTimeInstructionsView SetPlayer:currentPlayerName];
-//		[[self view] bringSubviewToFront:firstTimeInstructionsView];
-//		[firstTimeInstructionsView FadeIn];
 
 		[m_gameRef SetGameState:inGame];
 	}

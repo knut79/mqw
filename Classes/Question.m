@@ -119,22 +119,29 @@
 	}
 }
 
--(NSString*) GetHintString
+-(NSArray*) GetHintArray
 {
+    return m_hintArray;
+    /*
+    int indexHint = 0;
+    if (hintsLeft == 0) {
+        indexHint = 1;
+    }
 	switch ([[GlobalSettingsHelper Instance] GetLanguage]) {
 		case english:
-			return [m_hintArray objectAtIndex:0];
+			return [m_hintArray objectAtIndex:indexHint];
 			break;
 		case norwegian:
 		case spanish:
 		case french:
 		case german:
-			return [m_hintArray objectAtIndex:1];
+			return [m_hintArray objectAtIndex:indexHint];
 			break;
 		default:
 			return @"No hint: Wrong language";
 			break;
 	}
+    */
 }
 
 -(BOOL) IsStandardQuestion

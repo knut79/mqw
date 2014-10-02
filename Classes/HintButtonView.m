@@ -54,9 +54,10 @@
     timesLeftLabel.text = [NSString stringWithFormat:@"%d",value];
 }
 
--(void) SetHint:(NSString*) hint
+-(void) SetHint:(NSArray*) hints
 {
-	hitBox.message = hint;
+    m_hints = hints;
+	hitBox.message = [m_hints objectAtIndex:0];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -81,7 +82,9 @@
 
 - (void)alertView : (UIAlertView *)alertView clickedButtonAtIndex : (NSInteger)buttonIndex
 {
-	//[hitBox dealloc];	
+	//[hitBox dealloc];
+    //set next hint
+    hitBox.message = [m_hints objectAtIndex:1];
 
 	timesLeft--;
 	timesLeftLabel.text = [NSString stringWithFormat:@"%d",timesLeft];
@@ -89,6 +92,10 @@
 		[self setAlpha:0];
 	}
 	
+    
+    
+    
+    
 	if ([delegate respondsToSelector:@selector(UseHint)])
 		[delegate UseHint];
 	

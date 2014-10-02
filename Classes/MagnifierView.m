@@ -35,7 +35,7 @@
 		playerSymbolOverlay.center = CGPointMake(40, 40);
 		playerSymbolOverlay.image = [UIImage imageNamed:@"ArrowRed.png"];
 		[self addSubview:playerSymbolOverlay];
-		
+		isPositionedLeft = YES;
 		 
 	}
 	return self;
@@ -68,77 +68,6 @@
 	}
 }
 
-
-//- (void)drawRectOLD:(CGRect)rect {
-//
-//	if(cachedImage == nil){
-//		//NSLog(@"check width!!  %f",self.viewref.bounds.size.width);
-//
-//		UIImage *testImage = [UIImage imageNamed:@"testB.png"] ;
-//		
-//		CGImageRef imageRef = CGImageCreateWithImageInRect([testImage CGImage], CGRectMake(viewref.bounds.origin.x, viewref.bounds.origin.y, 320, 480));
-//		// or use the UIImage wherever you like
-//		cachedImage = [[UIImage imageWithCGImage:imageRef] retain]; 
-//		CGImageRelease(imageRef);
-//		
-//		
-//	}
-//	CGImageRef imageRef = [cachedImage CGImage];
-//	//CGImageRef imageRef = CGImageCreateWithImageInRect([[UIImage imageNamed:@"testB.png"] CGImage], CGRectMake(touchPoint.x, touchPoint.y, 80, 80));
-//	CGImageRef maskRef = [[UIImage imageNamed:@"loopmask.png"] CGImage];
-//	CGImageRef overlay = [[UIImage imageNamed:@"loop.png"] CGImage];
-//	CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskRef), 
-//										CGImageGetHeight(maskRef),
-//										CGImageGetBitsPerComponent(maskRef), 
-//										CGImageGetBitsPerPixel(maskRef),
-//                                        CGImageGetBytesPerRow(maskRef), 
-//										CGImageGetDataProvider(maskRef), 
-//										NULL, 
-//										true);
-//	//Create Mask
-//	if (isPositionedLeft == YES) {
-//		if (touchPoint.x < 100 && touchPoint.y < 170 ) {
-//			loopLocation = CGPointMake(270, 130);
-//			isPositionedLeft = NO;
-//		}
-//	}
-//	else {
-//		if (touchPoint.x > 220 && touchPoint.y < 170 ) {
-//			loopLocation = CGPointMake(50, 130);
-//			isPositionedLeft = YES;
-//		}
-//	}
-//
-//	//CGImageRef subImage = CGImageCreateWithImageInRect(imageRef, CGRectMake((touchPoint.x + viewref.bounds.origin.x)-18, (touchPoint.y + viewref.bounds.origin.y)-18, 36, 36));
-//	CGImageRef subImage = CGImageCreateWithImageInRect(imageRef, CGRectMake(touchPoint.x-18, touchPoint.y-18, 36, 36));
-//	
-//	
-//	CGImageRef xMaskedImage = CGImageCreateWithMask(subImage, mask);
-//	
-//	// Draw the image
-//	// Retrieve the graphics context
-//	CGContextRef context = UIGraphicsGetCurrentContext();
-//	CGAffineTransform xform = CGAffineTransformMake(
-//													1.0,  0.0,
-//													0.0, -1.0,
-//													0.0,  0.0);
-//
-//	CGContextConcatCTM(context, xform);
-//
-//	CGRect area = CGRectMake((float)loopLocation.x-42, -loopLocation.y, 85, 85);
-//	CGRect area2 = CGRectMake(loopLocation.x-40, -loopLocation.y+2, 80, 80);
-//
-//	
-//	CGContextDrawImage(context, area2, xMaskedImage);
-//	CGContextDrawImage(context, area, overlay);
-//	
-//	CGImageRelease(mask);
-//	CGImageRelease(subImage);
-//	CGImageRelease(xMaskedImage);
-//	
-////	[cachedImage release];
-////	cachedImage = nil;
-//}
 
 - (void)drawRect:(CGRect)rect {
 
@@ -180,6 +109,10 @@
 
 }
 
+-(bool) IsPositionedLeft
+{
+    return isPositionedLeft == YES ? true:false;
+}
 -(void) releaseCachedImage
 {
 	[cachedImage release];

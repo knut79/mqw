@@ -120,7 +120,7 @@
     float xValueForLastCols = 0;
     //first cols may be dirty if outofboundsbottom becomes true
     for (int row = 0; row <= 2; row++) {
-        int col = 4;
+        int col = 3;
             
             UIImage *imageFirstTwoCols = [[UIImage alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"world_25_%d_%d.jpg", col, row]]];
             float imageWidth =imageFirstTwoCols.size.width/devideFactor;
@@ -135,7 +135,7 @@
     outOfBoundsOffset = outOfBoundsBottom ? -40 : outOfBoundsOffset;
     xValueForLastCols = xValueForLastCols - colIncFactor;
     for (int row = 0; row <= 2; row++) {
-        int col = 3;
+        int col = 2;
         
         UIImage *imageFirstTwoCols = [[UIImage alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"world_25_%d_%d.jpg", col, row]]];
         float imageWidth =imageFirstTwoCols.size.width/devideFactor;
@@ -149,7 +149,7 @@
     float xValueForRepeatOfFirstColumn = 0;
     for (int row = 0; row <= 2; row++) {
         mapWidth = 0;
-        for (int col = 0; col <= 4; col++) {
+        for (int col = 0; col <= 3; col++) {
         
             
     UIImage *image = [[UIImage alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"world_25_%d_%d.jpg", col, row]]];
@@ -224,11 +224,13 @@
     ySelfPosition = placeYToDrawAgainst < 40 ? (480 -90) : 90;
     self.center = CGPointMake(xSelfPosition, ySelfPosition);
     
-    playerSymbolOverlay = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    if (playerSymbolOverlay == nil) {
+        playerSymbolOverlay = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+        playerSymbolOverlay.image = [UIImage imageNamed:@"ArrowRed.png"];
+        [self addSubview:playerSymbolOverlay];
+    }
     playerSymbolOverlay.center = playerSymbolLocation;
-    playerSymbolOverlay.image = [UIImage imageNamed:@"ArrowRed.png"];
-    [self addSubview:playerSymbolOverlay];
-    
+    [self bringSubviewToFront:playerSymbolOverlay];
 
 }
 

@@ -9,6 +9,7 @@
 #import "MpRegion.h"
 #import "CoordinateHelper.h"
 #import "NSArray(dataConversion).h"
+#import "GlobalConstants.h"
 
 
 @implementation MpRegion
@@ -239,10 +240,10 @@
     //_? outer forloop only for worldmap
     for (int tries = 0; tries < 3; tries++) {
         if (tries == 1) {
-            sourcePoint.x = sourcePoint.x + 4444;
+            sourcePoint.x = sourcePoint.x + constMapWidth;
         }
         else if(tries == 2){
-            sourcePoint.x = sourcePoint.x - (4444*2);
+            sourcePoint.x = sourcePoint.x - (constMapWidth*2);
         }
     
     

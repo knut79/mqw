@@ -27,6 +27,7 @@
 @property(assign) CGPoint loopLocation;
 @property(assign) CGPoint lastPosition;
 
+-(bool) IsPositionedLeft;
 -(void) setPlacement;
 -(void) releaseCachedImage;
 -(void) setPlayerSymbol:(NSString*) playerSymbol;
