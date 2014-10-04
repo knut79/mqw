@@ -9,6 +9,7 @@
 #import "Answer.h"
 #import "Game.h"
 #import "PlayerSymbolMiniWindowView.h"
+#import "SectionFiguresView.h"
 
 
 @protocol WithFiguresViewDelegate;
@@ -23,9 +24,18 @@
 	UILabel *answerLabel;
 	BOOL m_shouldDrawResult;
 	BOOL m_shouldUpdateGameData;
-    //PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
+    
+    int minX;
+    int maxX;
+    int minY;
+    int maxY;
+    CGRect boundsOfRegion;
+
 }
+@property(nonatomic) CGRect boundsOfRegion;
+@property(nonatomic) CGRect tilesMapViewBounds;
 @property(nonatomic, retain) PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
+@property(nonatomic, retain) SectionFiguresView *sectionFiguresView;
 @property (nonatomic, assign) id <WithFiguresViewDelegate> delegate;
 -(void)setGameRef:(Game*) game;
 -(CGImageRef) CreateScaledCGImageFromCGImage:(CGImageRef) image  andScale:(float) scale;
@@ -40,7 +50,7 @@
 -(void) SetRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) StrokeUpRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) StrokeUpExludedRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
-
+-(void) ResetRegionBoundValues;
 -(void) drawResult_UpdateGameData:(BOOL) updateGameData;
 @end
 

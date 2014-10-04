@@ -51,18 +51,6 @@
     return self;
 }
 
-//-(void) StartClock
-//{
-//
-//	[UIView beginAnimations:@"fade" context:nil];
-//	[UIView setAnimationDuration:15];
-//	[self setBackgroundColor: [UIColor redColor]];
-//	[UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-//	timer = [NSTimer scheduledTimerWithTimeInterval: 0.01 target: self selector:@selector(hadleTimer:) userInfo: nil repeats: YES];
-//
-//	[UIView commitAnimations];	
-//}
-
 -(void) StartClock
 {
     m_clockRunning = TRUE;
@@ -108,17 +96,18 @@
 		timesTimeLabel.text = @"0";
 		[self FadeOut];
 	}
-	red += 0.005;
+	//red += 0.005;
 	green -= 0.005;
 	
+        /*
 	if (red > 1.0) {
 		red = 1.0;
-	}
+	}*/
 	if (green < 0.1) {
 		green = 0.1;
 	}
 
-	[self setBackgroundColor: [UIColor colorWithRed:red green:green blue:0.0 alpha:0.5]];
+	[self setBackgroundColor: [UIColor colorWithRed:0.0 green:green blue:0.0 alpha:0.5]];
 	
 	CGAffineTransform transform=CGAffineTransformMakeRotation(angle);
 	watchHandView.transform = transform;

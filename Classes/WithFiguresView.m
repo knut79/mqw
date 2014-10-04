@@ -19,7 +19,7 @@
 
 @implementation WithFiguresView
 
-@synthesize delegate;
+@synthesize delegate, tilesMapViewBounds,boundsOfRegion;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -34,8 +34,21 @@
 		tiledMapViewZoomScale = 0.7111111;
 		tiledMapViewResolutionPercentage = (float)25;
 		tiledMapViewTileWidth = 256;
+        
+        [self ResetRegionBoundValues];
+        
+        _sectionFiguresView = [[SectionFiguresView alloc] initWithFrame:frame];
+        [self addSubview:_sectionFiguresView];
     }
     return self;
+}
+
+-(void) ResetRegionBoundValues
+{
+    minX = 9999;
+    maxX = -9999;
+    minY = 9999;
+    maxY = -9999;
 }
 
 
@@ -481,16 +494,19 @@
     UIImage *flagImage = [UIImage imageWithContentsOfFile:flagFileName];
 	CGImageRef flagRef = flagImage.CGImage;
     CGContextDrawImage(context, self.bounds, flagRef);*/
-
     
 	[self SetRegionsPaths:loc andContextRef:context];
-	
 	CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 0.75);
 	[self StrokeUpRegions:loc andContextRef:context];
-	
 	[self StrokeUpExludedRegions:loc andContextRef:context];
-	
 	CGContextRestoreGState(context);
+    
+    boundsOfRegion = CGRectMake(minX, minY, maxX - minX, maxY-minY);
+    boundsOfRegion = CGRectOffset(boundsOfRegion, -tilesMapViewBounds.origin.x,-tilesMapViewBounds.origin.y);
+    
+    self.sectionFiguresView.viewref = self;
+    self.sectionFiguresView.location = loc;
+    [self.sectionFiguresView setNeedsDisplay];
 }
 
 -(void) SetRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context 
@@ -520,6 +536,10 @@
 			{
 				CGContextAddLineToPoint( context, tempPoint.x,tempPoint.y);
 			}
+            minX = minX > tempPoint.x ? tempPoint.x : minX;
+            minY = minY > tempPoint.y ? tempPoint.y : minY;
+            maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
+            maxY = maxY < tempPoint.y ? tempPoint.y : maxY;
 			
 		}
 		
@@ -593,6 +613,10 @@
 			{
 				CGContextAddLineToPoint( context, tempPoint.x,tempPoint.y);
 			}
+            minX = minX > tempPoint.x ? tempPoint.x : minX;
+            minY = minY > tempPoint.y ? tempPoint.y : minY;
+            maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
+            maxY = maxY < tempPoint.y ? tempPoint.y : maxY;
 		}
 		CGContextStrokePath(context);
 	}
@@ -623,6 +647,10 @@
 				{
 					CGContextAddLineToPoint( context, tempPoint.x,tempPoint.y);
 				}
+                minX = minX > tempPoint.x ? tempPoint.x : minX;
+                minY = minY > tempPoint.y ? tempPoint.y : minY;
+                maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
+                maxY = maxY < tempPoint.y ? tempPoint.y : maxY;
 			}
 			CGContextStrokePath(context);
 		}

@@ -379,6 +379,13 @@
 		7204A40C19DDFE4500B8AE76 /* UruguayFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E719DDFE4500B8AE76 /* UruguayFlag.png */; };
 		7204A40D19DDFE4500B8AE76 /* VenezuelaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E819DDFE4500B8AE76 /* VenezuelaFlag.png */; };
 		7204A40E19DDFE4500B8AE76 /* VietnamFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3E919DDFE4500B8AE76 /* VietnamFlag.png */; };
+		7204A41119DE2B4F00B8AE76 /* SectionFiguresView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7204A41019DE2B4F00B8AE76 /* SectionFiguresView.m */; };
+		7204A41A19E00B1F00B8AE76 /* statesEastAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41319E00B1F00B8AE76 /* statesEastAsia.txt */; };
+		7204A41B19E00B1F00B8AE76 /* statesEurope.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41419E00B1F00B8AE76 /* statesEurope.txt */; };
+		7204A41C19E00B1F00B8AE76 /* statesMiddleEast.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41519E00B1F00B8AE76 /* statesMiddleEast.txt */; };
+		7204A41D19E00B1F00B8AE76 /* statesNorthAmerica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41619E00B1F00B8AE76 /* statesNorthAmerica.txt */; };
+		7204A41E19E00B1F00B8AE76 /* statesOceania.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41719E00B1F00B8AE76 /* statesOceania.txt */; };
+		7204A41F19E00B1F00B8AE76 /* statesSouthAmerica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41819E00B1F00B8AE76 /* statesSouthAmerica.txt */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -853,6 +860,14 @@
 		7204A3E719DDFE4500B8AE76 /* UruguayFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UruguayFlag.png; path = resources/graphics/pictureQuestions/UruguayFlag.png; sourceTree = "<group>"; };
 		7204A3E819DDFE4500B8AE76 /* VenezuelaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VenezuelaFlag.png; path = resources/graphics/pictureQuestions/VenezuelaFlag.png; sourceTree = "<group>"; };
 		7204A3E919DDFE4500B8AE76 /* VietnamFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VietnamFlag.png; path = resources/graphics/pictureQuestions/VietnamFlag.png; sourceTree = "<group>"; };
+		7204A40F19DE2B4F00B8AE76 /* SectionFiguresView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionFiguresView.h; sourceTree = "<group>"; };
+		7204A41019DE2B4F00B8AE76 /* SectionFiguresView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionFiguresView.m; sourceTree = "<group>"; };
+		7204A41319E00B1F00B8AE76 /* statesEastAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesEastAsia.txt; path = resources/tekst/statesEastAsia.txt; sourceTree = "<group>"; };
+		7204A41419E00B1F00B8AE76 /* statesEurope.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesEurope.txt; path = resources/tekst/statesEurope.txt; sourceTree = "<group>"; };
+		7204A41519E00B1F00B8AE76 /* statesMiddleEast.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesMiddleEast.txt; path = resources/tekst/statesMiddleEast.txt; sourceTree = "<group>"; };
+		7204A41619E00B1F00B8AE76 /* statesNorthAmerica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesNorthAmerica.txt; path = resources/tekst/statesNorthAmerica.txt; sourceTree = "<group>"; };
+		7204A41719E00B1F00B8AE76 /* statesOceania.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesOceania.txt; path = resources/tekst/statesOceania.txt; sourceTree = "<group>"; };
+		7204A41819E00B1F00B8AE76 /* statesSouthAmerica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesSouthAmerica.txt; path = resources/tekst/statesSouthAmerica.txt; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1132,6 +1147,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7204A41319E00B1F00B8AE76 /* statesEastAsia.txt */,
+				7204A41419E00B1F00B8AE76 /* statesEurope.txt */,
+				7204A41519E00B1F00B8AE76 /* statesMiddleEast.txt */,
+				7204A41619E00B1F00B8AE76 /* statesNorthAmerica.txt */,
+				7204A41719E00B1F00B8AE76 /* statesOceania.txt */,
+				7204A41819E00B1F00B8AE76 /* statesSouthAmerica.txt */,
 				7204A3AD19D9867400B8AE76 /* test.txt */,
 				7204A3AB19D97A8500B8AE76 /* MQNorway-Info.plist */,
 				7204A39B19D979FD00B8AE76 /* InfoEng.html */,
@@ -1792,6 +1813,8 @@
 				EE9898C413300FF500CBA780 /* TouchImageView.m */,
 				EE9898C81330101100CBA780 /* WithFiguresView.h */,
 				EE9898C91330101100CBA780 /* WithFiguresView.m */,
+				7204A40F19DE2B4F00B8AE76 /* SectionFiguresView.h */,
+				7204A41019DE2B4F00B8AE76 /* SectionFiguresView.m */,
 			);
 			name = GameBoard;
 			sourceTree = "<group>";
@@ -1909,6 +1932,7 @@
 				7204A24D19D976D600B8AE76 /* world_100_0_0.jpg in Resources */,
 				7204A3BC19DD7EDD00B8AE76 /* EastTimorFlag.png in Resources */,
 				7204A2D819D976D600B8AE76 /* world_100_11_7.jpg in Resources */,
+				7204A41C19E00B1F00B8AE76 /* statesMiddleEast.txt in Resources */,
 				7204A39519D979E700B8AE76 /* islands.txt in Resources */,
 				7204A25F19D976D600B8AE76 /* world_100_1_6.jpg in Resources */,
 				7204A10F19D9765A00B8AE76 /* testExtraQuestions.txt in Resources */,
@@ -1994,6 +2018,7 @@
 				7204A25B19D976D600B8AE76 /* world_100_1_2.jpg in Resources */,
 				7204A29E19D976D600B8AE76 /* world_100_6_9.jpg in Resources */,
 				7204A25E19D976D600B8AE76 /* world_100_1_5.jpg in Resources */,
+				7204A41B19E00B1F00B8AE76 /* statesEurope.txt in Resources */,
 				7204A3EA19DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png in Resources */,
 				7204A12319D9769A00B8AE76 /* world_25_0_2.jpg in Resources */,
 				7204A17B19D976B300B8AE76 /* world_50_5_0.jpg in Resources */,
@@ -2173,6 +2198,7 @@
 				7204A2BB19D976D600B8AE76 /* world_100_9_2.jpg in Resources */,
 				7204A2D419D976D600B8AE76 /* world_100_11_3.jpg in Resources */,
 				7204A40D19DDFE4500B8AE76 /* VenezuelaFlag.png in Resources */,
+				7204A41E19E00B1F00B8AE76 /* statesOceania.txt in Resources */,
 				7204A37019D9799200B8AE76 /* ArrowPurple.png in Resources */,
 				7204A37D19D9799200B8AE76 /* loopmask.png in Resources */,
 				7204A2E319D976D600B8AE76 /* world_100_12_6.jpg in Resources */,
@@ -2194,6 +2220,7 @@
 				7204A3FB19DDFE4500B8AE76 /* GrenadaFlag.png in Resources */,
 				7204A2C019D976D600B8AE76 /* world_100_9_7.jpg in Resources */,
 				7204A29219D976D600B8AE76 /* world_100_5_9.jpg in Resources */,
+				7204A41D19E00B1F00B8AE76 /* statesNorthAmerica.txt in Resources */,
 				7204A2C719D976D600B8AE76 /* world_100_10_2.jpg in Resources */,
 				7204A2EA19D976D600B8AE76 /* world_100_13_1.jpg in Resources */,
 				7204A34D19D9798300B8AE76 /* ZoomInInstr.png in Resources */,
@@ -2205,6 +2232,7 @@
 				7204A26F19D976D600B8AE76 /* world_100_2_10.jpg in Resources */,
 				7204A2CB19D976D600B8AE76 /* world_100_10_6.jpg in Resources */,
 				7204A2B619D976D600B8AE76 /* world_100_8_9.jpg in Resources */,
+				7204A41F19E00B1F00B8AE76 /* statesSouthAmerica.txt in Resources */,
 				7204A3C219DD7EDD00B8AE76 /* PhilippinesFlag.png in Resources */,
 				7204A2A019D976D600B8AE76 /* world_100_6_11.jpg in Resources */,
 				7204A17319D976B300B8AE76 /* world_50_3_4.jpg in Resources */,
@@ -2259,6 +2287,7 @@
 				7204A12C19D9769A00B8AE76 /* world_25_3_2.jpg in Resources */,
 				7204A2BC19D976D600B8AE76 /* world_100_9_3.jpg in Resources */,
 				7204A2DD19D976D600B8AE76 /* world_100_12_0.jpg in Resources */,
+				7204A41A19E00B1F00B8AE76 /* statesEastAsia.txt in Resources */,
 				7204A2BF19D976D600B8AE76 /* world_100_9_6.jpg in Resources */,
 				7204A2CE19D976D600B8AE76 /* world_100_10_9.jpg in Resources */,
 				7204A2F919D976D600B8AE76 /* world_100_14_4.jpg in Resources */,
@@ -2285,6 +2314,7 @@
 				1D3623260D0F684500981E51 /* MQNorwayAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* MQNorwayViewController.m in Sources */,
 				EE85A4D412ECC059004A06F2 /* DirectionsTouchImageView.m in Sources */,
+				7204A41119DE2B4F00B8AE76 /* SectionFiguresView.m in Sources */,
 				EE85A50A12ECC351004A06F2 /* DirectionsTouchImageView_Private.m in Sources */,
 				EE85A55612ECDD4C004A06F2 /* RoundEndedView.m in Sources */,
 				EE85A55912ECDD61004A06F2 /* GameEndedView.m in Sources */,

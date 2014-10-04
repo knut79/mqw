@@ -738,82 +738,66 @@
 
 -(void) hideQuestionBar
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	questionBarTop.center = CGPointMake(questionBarTop.center.x,  - questionBarTop.frame.size.height/2);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) showQuestionBar
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	questionBarTop.center = CGPointMake(questionBarTop.center.x, questionBarTop.frame.size.height/2);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) hideQuitButton
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	quitButton.center = CGPointMake(-quitButton.frame.size.width/2, quitButton.center.y);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) showQuitButton
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	quitButton.center = CGPointMake(20, quitButton.center.y);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) hideHintButton
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	hintButton.center = CGPointMake(-hintButton.frame.size.width/2, hintButton.center.y);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) showHintButton
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	hintButton.center = CGPointMake(20, hintButton.center.y);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) hidePassButton
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	passButton.center = CGPointMake(-passButton.frame.size.width/2, passButton.center.y);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 -(void) showPassButton
 {
-	UIScreen *screen = [[UIScreen mainScreen] retain];
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:0.3];
 	passButton.center = CGPointMake(20, passButton.center.y);
 	[UIView commitAnimations];	
-	[screen release];
 }
 
 #pragma mark RoundEndedViewDelegate
@@ -893,6 +877,11 @@
     [m_animTextView removeFromSuperview];
     m_animTextView = nil;
     
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    [resultBoardView ResetRegionBoundValues];
+    [resultBoardView.sectionFiguresView setTransform:CGAffineTransformIdentity];
+    resultBoardView.sectionFiguresView.center = CGPointMake(([screen applicationFrame].size.width/2), ([screen applicationFrame].size.height/2));
+    [screen release];
     [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
     
 	if ([m_gameRef GetGameType] == lastStanding) {
@@ -975,21 +964,38 @@
 	}
 }
 
--(void) resultBoardAnimationDone
-{
-	[resultBoardView setTransform:CGAffineTransformIdentity];
-}
 
 //round is finished
 - (void)finishedDrawingResultMap
 {
     //TEST
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:2.5];
-	[UIView setAnimationDelegate:self];
-	[UIView setAnimationDidStopSelector:@selector(resultBoardAnimationDone)];
-	[resultBoardView setTransform:CGAffineTransformMakeScale(2, 2)];
-	[UIView commitAnimations];
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    CGRect regionBoundsRect = resultBoardView.boundsOfRegion;
+    if (regionBoundsRect.size.width > 0 && regionBoundsRect.size.height > 0) {
+        CGPoint regionBoundsPoint = CGPointMake(regionBoundsRect.origin.x + (regionBoundsRect.size.width/2), regionBoundsRect.origin.y + (regionBoundsRect.size.height/2));
+        float scaleFactor = ([screen applicationFrame].size.width * 0.5)/regionBoundsRect.size.width;
+        /*
+         float scaleFactor = 2.0;
+         if (testRect.size.width > [screen applicationFrame].size.width) {
+         scaleFactor = 0.5;
+         }*/
+        
+        
+        int xOffset = ([screen applicationFrame].size.width/2) - regionBoundsPoint.x;
+        int yOffset =([screen applicationFrame].size.height/2) - regionBoundsPoint.y;
+        xOffset = xOffset * scaleFactor;
+        yOffset = yOffset * scaleFactor;
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:1.5];
+        [UIView setAnimationDelegate:self];
+        
+        resultBoardView.sectionFiguresView.center = CGPointMake(resultBoardView.sectionFiguresView.center.x + xOffset, resultBoardView.sectionFiguresView.center.y + yOffset);
+        //[resultBoardView.sectionFiguresView setAlpha:1];
+        [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(scaleFactor, scaleFactor)];
+        [UIView commitAnimations];
+        [screen release];
+    }
+    
     //END TEST
     
 	[m_gameRef SetPlayerPositionsByScore];
