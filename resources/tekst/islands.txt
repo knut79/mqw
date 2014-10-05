@@ -1,11 +1,15 @@
 1187;1699
 1187;1698
 1186;1698
-inf;Island;British Virgin islands;10;hard;Area: 489 km2. Location: Nordland county, vesterålen municipality#Areal: 489 km2. Lokasjon: Nordland fylke. Vesterålen kommune#spn#fra#ger
+inf;Island;British Virgin islands;10;hard;British overseas territory. Largest city: Road Town##spn#fra#ger;America#Caribbean
+1183;1710
+1183;1711
+1182;1711
+inf;Island;Virgin islands;10;hard;Overseas territory of the United Kingdom comprising Tortola, Virgin Gorda, Jost Van Dyke and Anegada.##spn#fra#ger;America#Caribbean
 995;1690
 995;1691
 994;1691
-inf;Island;Cayman islands;10;hard;Area: 489 km2. Location: Nordland county, vesterålen municipality#Areal: 489 km2. Lokasjon: Nordland fylke. Vesterålen kommune#spn#fra#ger
+inf;Island;Cayman islands;10;hard;British Overseas Territory. A major world offshore financial centrespn##fra#ger;America#Caribbean
 1222;2605
 1224;2610
 1228;2613
@@ -32,7 +36,7 @@ inf;Island;Cayman islands;10;hard;Area: 489 km2. Location: Nordland county, vest
 1226;2596
 1226;2601
 1220;2603
-inf;Island;Falcland islands;10;hard;Area: 489 km2. Location: Nordland county, vesterålen municipality#Areal: 489 km2. Lokasjon: Nordland fylke. Vesterålen kommune#spn#fra#ger
+inf;Island;Falkland islands;10;hard;Claimed by as a British Overseas Territory after the Falkland war in 1984##spn#fra#ger;South America#Atlantic Ocean
 1217;1728
 1217;1732
 1221;1731
@@ -41,14 +45,14 @@ inf;Island;Falcland islands;10;hard;Area: 489 km2. Location: Nordland county, ve
 1221;1725
 1219;1725
 1218;1727
-inf;Island;Guadelupe;10;hard;Area: 489 km2. Location: Nordland county, vesterålen municipality#Areal: 489 km2. Lokasjon: Nordland fylke. Vesterålen kommune#spn#fra#ger
+inf;Island;Guadelupe;10;hard;Overseas department of France. Largest city: Fort-de-France#spn#fra#ger;America#Caribbean
 1224;1746
 1225;1748
 1227;1748
 1227;1747
 1225;1744
 1223;1744
-inf;Island;Martinique;10;hard;Area: 489 km2. Location: Nordland county, vesterålen municipality#Areal: 489 km2. Lokasjon: Nordland fylke. Vesterålen kommune#spn#fra#ger
+inf;Island;Martinique;10;hard;Overseas department of France.##spn#fra#ger;America#Caribbean
 eof
 
 eg for island and peninsula

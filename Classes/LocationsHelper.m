@@ -1120,36 +1120,6 @@
 		}
 	}
 	
-//	NSMutableArray *sortedQuestons = [[NSMutableArray alloc] init];
-//	//NSArray *results = [[SqliteHelper Instance] executeQuery:@"SELECT locationID,avgDistance,locationNameEng FROM location WHERE sumAnswers = 0"
-////		"ORDER BY ? ASC",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"locationNameEng"]];
-//	NSArray *results = [[SqliteHelper Instance] executeQuery:@"SELECT locationID,avgDistance,locationNameEng FROM location WHERE sumAnswers < 1"];
-//						//"ORDER BY ? ASC",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"locationName"]];
-//	for (NSDictionary *dictionary in results) 
-//	{
-//		for (Question *qst in collectedQuestons) {
-//			if ([[[qst GetLocation] GetID] isEqualToString:[dictionary objectForKey:@"locationID"]] ) {
-//				[sortedQuestons addObject:qst];
-//			}
-//		}
-//	}
-	
-//	//[SortAcendAvgDistance:collectedQuestons];
-//	results = [[SqliteHelper Instance] executeQuery:@"SELECT locationID,avgDistance,locationNameEng FROM location WHERE sumAnswers > 0 " 
-//						"ORDER BY avgDistance DESC"];//DESC
-//	//, ? ASC",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"locationNameEng"]];
-//	for (NSDictionary *dictionary in results) 
-//	{
-//		for (Question *qst in collectedQuestons) {
-//			if ([[[qst GetLocation] GetID] isEqualToString:[dictionary objectForKey:@"locationID"]] ) {
-//				[sortedQuestons addObject:qst];
-//			}
-//		}
-//	}
-
-	
-//	return [sortedQuestons autorelease];
-	
 	return [collectedQuestons autorelease];
 }
 

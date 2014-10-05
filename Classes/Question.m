@@ -56,7 +56,10 @@
 			}
 			else
 			{
-				m_picture = [[UIImage imageNamed:picture] retain]; 
+				m_picture = [[UIImage imageNamed:picture] retain];
+                if (m_picture == nil) {
+                    NSLog(@"Could not find picture %@",picture);
+                }
 				m_usePicture = YES;
 			}
 		}

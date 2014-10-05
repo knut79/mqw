@@ -386,6 +386,7 @@
 		7204A41D19E00B1F00B8AE76 /* statesNorthAmerica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41619E00B1F00B8AE76 /* statesNorthAmerica.txt */; };
 		7204A41E19E00B1F00B8AE76 /* statesOceania.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41719E00B1F00B8AE76 /* statesOceania.txt */; };
 		7204A41F19E00B1F00B8AE76 /* statesSouthAmerica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A41819E00B1F00B8AE76 /* statesSouthAmerica.txt */; };
+		7204A42119E05C7100B8AE76 /* GuatemalaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A42019E05C7100B8AE76 /* GuatemalaFlag.png */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -868,6 +869,7 @@
 		7204A41619E00B1F00B8AE76 /* statesNorthAmerica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesNorthAmerica.txt; path = resources/tekst/statesNorthAmerica.txt; sourceTree = "<group>"; };
 		7204A41719E00B1F00B8AE76 /* statesOceania.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesOceania.txt; path = resources/tekst/statesOceania.txt; sourceTree = "<group>"; };
 		7204A41819E00B1F00B8AE76 /* statesSouthAmerica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesSouthAmerica.txt; path = resources/tekst/statesSouthAmerica.txt; sourceTree = "<group>"; };
+		7204A42019E05C7100B8AE76 /* GuatemalaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GuatemalaFlag.png; path = resources/graphics/pictureQuestions/GuatemalaFlag.png; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1595,6 +1597,7 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				7204A42019E05C7100B8AE76 /* GuatemalaFlag.png */,
 				7204A3C519DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png */,
 				7204A3C619DDFE4500B8AE76 /* ArgentinaFlag.png */,
 				7204A3C719DDFE4500B8AE76 /* BahamasFlag.png */,
@@ -2108,6 +2111,7 @@
 				7204A37519D9799200B8AE76 /* clouds.png in Resources */,
 				7204A16119D976B300B8AE76 /* world_50_0_4.jpg in Resources */,
 				7204A25019D976D600B8AE76 /* world_100_0_3.jpg in Resources */,
+				7204A42119E05C7100B8AE76 /* GuatemalaFlag.png in Resources */,
 				7204A34C19D9798300B8AE76 /* TapToMoveInstr.png in Resources */,
 				7204A26419D976D600B8AE76 /* world_100_1_11.jpg in Resources */,
 				7204A12419D9769A00B8AE76 /* world_25_1_0.jpg in Resources */,

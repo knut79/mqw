@@ -26,7 +26,7 @@
 946;1787
 944;1787;sl
 qst;coaCostaRica##medium#CostaRicaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Costa Rica;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Costa Rica;10;easy;One of the most stable, prosperous, and progressive nations in Latin. Capital: San José##spn#fra#ger;America#Caribbean Sea to the east
 1035;1686
 1045;1684
 1054;1682
@@ -76,14 +76,14 @@ inf;State;Costa Rica;10;easy;World's.....##spn#fra#ger;South America#Capital: Ca
 1041;1675
 1034;1684
 qst;coaCuba##medium#CubaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Cuba;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Cuba;10;easy;Cuba remained a colony of Spain until the Spanish–American War of 1898. Capital: Havana##spn#fra#ger;America#Caribbean
 1219;1737
 1219;1738
 1220;1739
 1222;1736
 1219;1735
 qst;coaDominica##medium#DominicaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Dominica;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Dominica;10;easy;Has been nicknamed the Nature Isle of the Caribbean. Capital: Roseau##spn#fra#ger;America#Caribbean
 1103;1703
 1106;1710
 1109;1707
@@ -111,7 +111,7 @@ inf;State;Dominica;10;easy;World's.....##spn#fra#ger;South America#Capital: Canb
 1100;1701
 1102;1702
 qst;coaDominicanRepublic##medium#DominicanRepublicFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Dominican Republic;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Dominican Republic;10;easy;The second largest Caribbean nation. Capital: Santo Domingo##spn#fra#ger;America#Caribbean
 1006;1952
 1011;1947
 1006;1946
@@ -160,7 +160,7 @@ inf;State;Dominican Republic;10;easy;World's.....##spn#fra#ger;South America#Cap
 1008;1962
 1006;1954;sl
 qst;coaEcuador##medium#EcuadorFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Ecuador;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra;;Galapagos
+inf;State;Ecuador;10;easy;Officially the Republic of Ecuador. Capital: Quito##spn#fra#ger;South America#Pacific Ocean to the west;;Galapagos
 880;1913
 883;1918
 887;1916
@@ -187,7 +187,7 @@ inf;State;Ecuador;10;easy;World's.....##spn#fra#ger;South America#Capital: Canbe
 876;1920
 877;1917
 878;1913
-inf;Island;Galapagos;10;hard;Area: 489 km2. Location: Nordland county, vesterålen municipality#Areal: 489 km2. Lokasjon: Nordland fylke. Vesterålen kommune#spn#fra#ger
+inf;Island;Galapagos;10;hard;Part of Ecuador. Famed for a vast number of endemic species##spn#fra#ger;South America#Pacific Ocean
 894;1756
 900;1759
 906;1761
@@ -203,7 +203,7 @@ inf;Island;Galapagos;10;hard;Area: 489 km2. Location: Nordland county, vesterål
 898;1753
 895;1755;sl
 qst;coaElSalvador##medium#ElSalvadorFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;El Salvador;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;El Salvador;10;easy;The smallest and the most densely populated country in Central America. Capital: San salvador##spn#fra#ger;America#Latin America
 1305;1848
 1311;1850
 1315;1851
@@ -226,7 +226,7 @@ inf;State;El Salvador;10;easy;World's.....##spn#fra#ger;South America#Capital: C
 1305;1852
 1305;1847;sl
 qst;coaFrenchGuiana##medium#FrenchGuianaFlag.png#What county/department is represented by this flag?##spn#fra#ger##
-inf;State;Colombia;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Colombia;10;easy;Is an overseas department and region of France. Capital: Cayenne##spn#fra#ger;South America#Brazil to the east and south, and Suriname to the west.
 1214;1778
 1217;1777
 1218;1774
@@ -234,7 +234,7 @@ inf;State;Colombia;10;easy;World's.....##spn#fra#ger;South America#Capital: Canb
 1215;1772
 1214;1775
 qst;coaGrenada##medium#GrenadaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Grenada;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Grenada;10;easy;Consisting of the island of Grenada and six smaller islands. Capital: St. George's##spn#fra#ger;America#Caribbean
 885;1708;st
 904;1708
 904;1731
@@ -261,7 +261,7 @@ inf;State;Grenada;10;easy;World's.....##spn#fra#ger;South America#Capital: Canbe
 883;1716
 884;1708
 qst;coaGuatemala##medium#GuatemalaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Guatemala;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Guatemala;10;easy;Officially the Republic of Guatemala. Capital: Guatemala City##spn#fra#ger;South America# Mexico to the north and west, the Pacific Ocean to the southwest
 1230;1814
 1238;1816
 1247;1822
@@ -311,7 +311,7 @@ inf;State;Guatemala;10;easy;World's.....##spn#fra#ger;South America#Capital: Can
 1227;1823
 1228;1814;sl
 qst;coaGuyana##medium#GuyanaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Guyana;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Guyana;10;easy;Guyana was originally colonised by the Netherlands. Later, it became a British colony. Officially became a republic in 1970. Capital: Georgetown##spn#fra#ger;America#Caribbean
 1072;1699
 1073;1702
 1078;1705
@@ -341,7 +341,7 @@ inf;State;Guyana;10;easy;World's.....##spn#fra#ger;South America#Capital: Canber
 1075;1698
 1074;1699
 qst;coaHaiti##medium#HaitiFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Haiti;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Haiti;10;easy;The third largest Caribbean nation. Capital: Port-au-Prince##spn#fra#ger;South America#Caribbean
 916;1732
 920;1731
 925;1732
@@ -375,7 +375,7 @@ inf;State;Haiti;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberr
 904;1743
 916;1733;sl
 qst;coaHonduras##medium#HondurasFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Honduras;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Honduras;10;easy;Became independent in 1821. Capital: Tegucigalpa##spn#fra#ger;Latin America#Caribbean
 1041;1699
 1046;1700
 1052;1702
@@ -389,7 +389,7 @@ inf;State;Honduras;10;easy;World's.....##spn#fra#ger;South America#Capital: Canb
 1033;1698
 1040;1699
 qst;coaJamaica##medium#JamaicaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Jamaica;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Jamaica;10;easy;Independence from the United Kingdom in 1962. Capital: Kingston##spn#fra#ger;America#Caribbean
 573;1567
 575;1570
 574;1572
@@ -593,7 +593,7 @@ inf;UnDefRegion;WestIslandMexicoNU;10;notUsed;eng#nor#spn#fra#ger
 596;1522
 584;1523;sl
 qst;coaMexico##medium#MexicoFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Mexico;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra;;WestIslandMexicoNU
+inf;State;Mexico;10;easy;The 13th largest independent nation in the world. Capital: Mexico City##spn#fra#ger;America#Bordered on the north by the United States;;WestIslandMexicoNU
 924;1765
 922;1766
 923;1769
@@ -628,7 +628,7 @@ inf;State;Mexico;10;easy;World's.....##spn#fra#ger;South America#Capital: Canber
 931;1764
 924;1765;sl
 qst;coaNicaragua##medium#NicaraguaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Nicaragua;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Nicaragua;10;easy;Achieved its independence from Spain in 1821. Capital: Managua##spn#fra#ger;America#Bordering Honduras to the north and Costa Rica to the south
 976;1820
 984;1819
 989;1823
@@ -668,7 +668,7 @@ inf;State;Nicaragua;10;easy;World's.....##spn#fra#ger;South America#Capital: Can
 977;1814
 975;1820;sl
 qst;coaPanama##medium#PanamaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Panama;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Panama;10;easy;Panama Canal to be built by the U.S. Army Corps of Engineers between 1904 and 1914. Capital: Panama City##spn#fra#ger;America#Bordered by Costa Rica to the west, Colombia to the southeast
 1207;2174;st
 1213;2181
 1213;2184
@@ -724,7 +724,7 @@ inf;State;Panama;10;easy;World's.....##spn#fra#ger;South America#Capital: Canber
 1211;2162
 1207;2172
 qst;coaParaguay##medium#ParaguayFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Paraguay;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Paraguay;10;easy;Independence from Spain in 1811. Capital: Asunción##spn#fra#ger;South America#Bordered by Argentina to the south and southwest
 1006;1953
 996;1959
 995;1963
@@ -829,7 +829,7 @@ inf;State;Paraguay;10;easy;World's.....##spn#fra#ger;South America#Capital: Canb
 1007;1959
 1007;1953;sl
 qst;coaPeru##medium#PeruFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Peru;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Peru;10;easy;Officially the Republic of Peru. Capital: Lima##spn#fra#ger;America#Western South America
 1154;1700
 1154;1707
 1159;1706
@@ -840,13 +840,229 @@ inf;State;Peru;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
 1164;1699
 1159;1698
 1155;1700
-qst;coaPuertoRico##medium#PuertoRicoFlagFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Puerto Rico;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+qst;coaPuertoRico##medium#PuertoRicoFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Puerto Rico;10;easy;Officially the Commonwealth of Puerto Rico. Originally populated for centuries by the aboriginal people known as Taíno. Capital: San Juan##spn#fra#ger;America#Northeastern Caribbean
 1205;1714
 1205;1715
 1205;1715
 qst;coaSaintKittsAndNevis##medium#SaintKittsAndNevisFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Nicaragua;10;easy;World's.....##spn#fra#ger;South America#Capital: Canberra
+inf;State;Saint Kitts and Nevis;10;easy;The smallest sovereign state in the America. Capital: Basseterre##spn#fra#ger;America#Caribbean
+1223;1752
+1224;1755
+1225;1755
+1227;1752
+qst;coaSaintLucia##medium#SaintLuciaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Saint Lucia;10;easy;Independent 1979. Capital: Castries##spn#fra#ger;America#Caribbean
+1221;1761
+1221;1764
+1220;1770
+1222;1765
+1224;1762
+1222;1761
+qst;coaVincentAndTheGrenadines##medium#SaintVincentAndTheGrenadinesFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Saint Vincent and the Grenadines;10;easy;Capital: Kingstown##spn#fra#ger;America#Caribbean
+1269;1845
+1270;1845
+1288;1846
+1300;1845
+1305;1848;st
+1305;1852
+1300;1857
+1301;1867
+1306;1874
+1302;1880
+1302;1885
+1299;1888
+1291;1885
+1289;1888
+1282;1888
+1283;1893
+1275;1893
+1269;1882
+1269;1878
+1267;1876
+1260;1869
+1260;1865
+1262;1858
+1270;1856
+1268;1853
+1269;1846;sl
+qst;coaSuriname##medium#SurinameFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Suriname;10;easy;The only independent entity in the Americas where Dutch is spoken by a majority of the population. Capital: Paramaribo##spn#fra#ger;America#To the west and Brazil to the south
+1217;1792
+1219;1796
+1217;1797
+1215;1799
+1218;1800
+1223;1799
+1224;1796
+1224;1794
+1225;1791
+1222;1790
+1219;1791
+qst;coaTrinidadAndTobago##medium#TrinidadAndTobagoFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Trinidad and Tobago;10;easy;Obtained independence in 1962 Capital: Port of Spain##spn#fra#ger;America#Caribbean
+1312;2323
+1308;2326
+1308;2332
+1304;2334
+1298;2338
+1296;2339
+1291;2339
+1282;2338
+1279;2340
+1275;2337
+1272;2333
+1272;2332
+1262;2332
+1257;2328;st
+1254;2316
+1259;2312
+1258;2306
+1258;2297
+1260;2295
+1262;2285
+1262;2278
+1265;2276
+1268;2277
+1273;2275
+1280;2282
+1283;2284
+1284;2288
+1288;2285
+1290;2288
+1299;2293
+1300;2296
+1307;2300
+1309;2304
+1316;2309
+1311;2314
+1311;2321;sl
+qst;coaUruguay##medium#UruguayFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Uruguay;10;easy;Uruguay is ranked first in Latin America in democracy, peace, lack of corruption, quality of living. Capital: Montevideo##spn#fra#ger;South America#Argentina to its west and Brazil to its north and east
+1109;1779
+1102;1782
+1104;1790
+1104;1795
+1099;1803
+1104;1809
+1107;1810
+1109;1807
+1110;1803
+1108;1798
+1105;1793
+1106;1790
+1111;1788
+1116;1786
+1121;1784
+1119;1777
+1121;1774
+1123;1768
+1125;1770
+1126;1775
+1132;1772
+1143;1773
+1149;1776
+1162;1777
+1167;1777
+1162;1790
+1168;1793
+1174;1798
+1175;1788
+1179;1794
+1184;1796
+1186;1792
+1185;1787
+1189;1786
+1192;1785
+1195;1788
+1198;1792
+1210;1790
+1213;1791
+1206;1794
+1208;1797
+1211;1800
+1217;1802
+1223;1805
+1226;1807
+1230;1813
+1227;1821
+1230;1828
+1227;1837
+1222;1841
+1224;1848
+1226;1852
+1231;1858
+1228;1861
+1224;1863
+1219;1865
+1215;1867
+1211;1868
+1209;1867
+1206;1869
+1206;1875
+1202;1873
+1200;1869
+1198;1869
+1196;1870
+1193;1870
+1189;1867
+1186;1868
+1182;1866
+1186;1873
+1189;1876
+1189;1881
+1191;1885
+1192;1887
+1198;1888
+1198;1890
+1194;1892
+1191;1893
+1190;1897
+1187;1899
+1184;1899
+1179;1901
+1178;1904
+1174;1907
+1174;1904
+1171;1903
+1168;1906
+1164;1905
+1159;1901
+1156;1890
+1152;1886
+1150;1883
+1146;1884
+1154;1877
+1152;1872
+1150;1874
+1147;1863
+1148;1856
+1152;1848
+1152;1844
+1146;1844
+1136;1845
+1128;1845
+1122;1835
+1117;1835
+1108;1835
+1100;1835
+1098;1831
+1095;1831
+1095;1826
+1095;1818
+1093;1814
+1091;1812
+1090;1810
+1084;1811
+1090;1802
+1090;1795
+1094;1787
+1098;1786
+1103;1779
+1108;1778
+qst;coaVenezuela##medium#VenezuelaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Venezuela;10;easy;Independent in 1830. Capital: Caracas##spn#fra#ger;South America#Northern coast of South America
 eof
 
 

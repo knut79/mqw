@@ -1083,7 +1083,7 @@
 411;1179
 406;1177
 qst;coaCanada##medium#CanadaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Canada;10;easy;World's.....##spn#fra#ger;America#Capital: Canberra
+inf;State;Canada;10;easy;World's second-largest country. Capital: Ottawa. Largest city: Toronto.##spn#fra#ger;America#World's second-largest country
 94;1660
 96;1661
 99;1659
@@ -1116,7 +1116,8 @@ inf;State;Canada;10;easy;World's.....##spn#fra#ger;America#Capital: Canberra
 107;1654
 102;1654
 96;1658
-inf;Island;Hawaii;10;easy;Berlin state covers an area of 891 km2.\n3.4 million people.\nGermanys capital and largest city.#nor#spn#fra#ger
+inf;Island;Hawaii;10;easy;The 50th and most recent U.S. state
+Largest city: Honolulu#nor#spn#fra#ger;America#Pacific
 419;1168
 416;1166
 411;1164
@@ -1454,7 +1455,7 @@ inf;Island;Hawaii;10;easy;Berlin state covers an area of 891 km2.\n3.4 million p
 435;1167
 426;1169
 421;1170;sl
-inf;State;Alaska;10;easy;Berlin state covers an area of 891 km2.\n3.4 million people.\nGermanys capital and largest city.#nor#spn#fra#ger
+inf;State;Alaska;10;easy;The United States purchased Alaska from Russia on March 30, 1867, for $7.2 million#nor#spn#fra#ger;America#Northern most U.S. state
 499;1282
 501;1290
 505;1298
