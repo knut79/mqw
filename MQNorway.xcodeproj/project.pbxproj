@@ -409,7 +409,6 @@
 		7204A46919E3487200B8AE76 /* GhanaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43519E3487100B8AE76 /* GhanaFlag.png */; };
 		7204A46A19E3487200B8AE76 /* Guinea-BissauFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43619E3487100B8AE76 /* Guinea-BissauFlag.png */; };
 		7204A46B19E3487200B8AE76 /* GuineaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43719E3487100B8AE76 /* GuineaFlag.png */; };
-		7204A46C19E3487200B8AE76 /* IvoryCoast.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43819E3487100B8AE76 /* IvoryCoast.png */; };
 		7204A46D19E3487200B8AE76 /* KenyaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43919E3487100B8AE76 /* KenyaFlag.png */; };
 		7204A46E19E3487200B8AE76 /* LesothoFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43A19E3487100B8AE76 /* LesothoFlag.png */; };
 		7204A46F19E3487200B8AE76 /* LiberiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A43B19E3487100B8AE76 /* LiberiaFlag.png */; };
@@ -440,6 +439,7 @@
 		7204A48819E3487200B8AE76 /* ZambiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A45419E3487200B8AE76 /* ZambiaFlag.png */; };
 		7204A48919E3487200B8AE76 /* ZimbabweFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A45519E3487200B8AE76 /* ZimbabweFlag.png */; };
 		7204A48B19E34D4500B8AE76 /* statesAfrica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A48A19E34D4500B8AE76 /* statesAfrica.txt */; };
+		7204A48D19E35B6A00B8AE76 /* IvoryCoastFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A48C19E35B6A00B8AE76 /* IvoryCoastFlag.png */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -945,7 +945,6 @@
 		7204A43519E3487100B8AE76 /* GhanaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GhanaFlag.png; path = resources/graphics/pictureQuestions/GhanaFlag.png; sourceTree = "<group>"; };
 		7204A43619E3487100B8AE76 /* Guinea-BissauFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Guinea-BissauFlag.png"; path = "resources/graphics/pictureQuestions/Guinea-BissauFlag.png"; sourceTree = "<group>"; };
 		7204A43719E3487100B8AE76 /* GuineaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GuineaFlag.png; path = resources/graphics/pictureQuestions/GuineaFlag.png; sourceTree = "<group>"; };
-		7204A43819E3487100B8AE76 /* IvoryCoast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IvoryCoast.png; path = resources/graphics/pictureQuestions/IvoryCoast.png; sourceTree = "<group>"; };
 		7204A43919E3487100B8AE76 /* KenyaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KenyaFlag.png; path = resources/graphics/pictureQuestions/KenyaFlag.png; sourceTree = "<group>"; };
 		7204A43A19E3487100B8AE76 /* LesothoFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LesothoFlag.png; path = resources/graphics/pictureQuestions/LesothoFlag.png; sourceTree = "<group>"; };
 		7204A43B19E3487100B8AE76 /* LiberiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LiberiaFlag.png; path = resources/graphics/pictureQuestions/LiberiaFlag.png; sourceTree = "<group>"; };
@@ -976,6 +975,7 @@
 		7204A45419E3487200B8AE76 /* ZambiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZambiaFlag.png; path = resources/graphics/pictureQuestions/ZambiaFlag.png; sourceTree = "<group>"; };
 		7204A45519E3487200B8AE76 /* ZimbabweFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZimbabweFlag.png; path = resources/graphics/pictureQuestions/ZimbabweFlag.png; sourceTree = "<group>"; };
 		7204A48A19E34D4500B8AE76 /* statesAfrica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAfrica.txt; path = resources/tekst/statesAfrica.txt; sourceTree = "<group>"; };
+		7204A48C19E35B6A00B8AE76 /* IvoryCoastFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IvoryCoastFlag.png; path = resources/graphics/pictureQuestions/IvoryCoastFlag.png; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1704,6 +1704,7 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				7204A48C19E35B6A00B8AE76 /* IvoryCoastFlag.png */,
 				7204A42219E3487100B8AE76 /* AlgeriaFlag.png */,
 				7204A42319E3487100B8AE76 /* AngolaFlag.png */,
 				7204A42419E3487100B8AE76 /* BeninFlag.png */,
@@ -1726,7 +1727,6 @@
 				7204A43519E3487100B8AE76 /* GhanaFlag.png */,
 				7204A43619E3487100B8AE76 /* Guinea-BissauFlag.png */,
 				7204A43719E3487100B8AE76 /* GuineaFlag.png */,
-				7204A43819E3487100B8AE76 /* IvoryCoast.png */,
 				7204A43919E3487100B8AE76 /* KenyaFlag.png */,
 				7204A43A19E3487100B8AE76 /* LesothoFlag.png */,
 				7204A43B19E3487100B8AE76 /* LiberiaFlag.png */,
@@ -2258,7 +2258,6 @@
 				7204A2E219D976D600B8AE76 /* world_100_12_5.jpg in Resources */,
 				7204A37719D9799200B8AE76 /* directions.png in Resources */,
 				7204A2F419D976D600B8AE76 /* world_100_13_11.jpg in Resources */,
-				7204A46C19E3487200B8AE76 /* IvoryCoast.png in Resources */,
 				7204A39419D979E700B8AE76 /* fjords.txt in Resources */,
 				7204A30A19D976D600B8AE76 /* world_100_15_9.jpg in Resources */,
 				7204A47619E3487200B8AE76 /* MoroccoFlag.png in Resources */,
@@ -2299,6 +2298,7 @@
 				7204A34C19D9798300B8AE76 /* TapToMoveInstr.png in Resources */,
 				7204A47C19E3487200B8AE76 /* SaoTomeAndPrincipeFlag.png in Resources */,
 				7204A47919E3487200B8AE76 /* NigerFlag.png in Resources */,
+				7204A48D19E35B6A00B8AE76 /* IvoryCoastFlag.png in Resources */,
 				7204A26419D976D600B8AE76 /* world_100_1_11.jpg in Resources */,
 				7204A12419D9769A00B8AE76 /* world_25_1_0.jpg in Resources */,
 				7204A27A19D976D600B8AE76 /* world_100_3_9.jpg in Resources */,
