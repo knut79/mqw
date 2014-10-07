@@ -573,7 +573,8 @@
     // The resolution is stored as a power of 2, so -1 means 50%, -2 means 25%, and 0 means 100%.
     // We've named the tiles things like BlackLagoon_50_0_2.png, where the 50 represents 50% resolution.
     resolutionPercentage = 100 * pow(2, resolution);
-	[tile setImage:[UIImage imageNamed:[NSString stringWithFormat:@"world_%d_%d_%d.jpg", resolutionPercentage, column, row]]];
+    UIImage* image = [UIImage imageNamed:[NSString stringWithFormat:@"world_%d_%d_%d.jpg", resolutionPercentage, column, row]];
+	[tile setImage:image];
 
     return tile;
 }

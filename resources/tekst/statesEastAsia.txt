@@ -512,8 +512,7 @@ inf;UnDefRegion;EastIslandMalaysiaNU;10;notUsed;eng#nor#spn#fra#ger
 3080;1847
 3079;1841;sl
 qst;coaMalaysia##medium#MalaysiaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Malaysia;10;easy;The constitution declares Islam the state religion while protecting freedom of religion.
-Capital: Kuala Lumpur##spn#fra#ger;Oceania#Two similarly sized regions;;EastIslandMalaysiaNU
+inf;State;Malaysia;10;easy;The constitution declares Islam the state religion while protecting freedom of religion. Capital: Kuala Lumpur##spn#fra#ger;Oceania#Two similarly sized regions;;EastIslandMalaysiaNU
 3117;1751;st
 3127;1755
 3126;1749

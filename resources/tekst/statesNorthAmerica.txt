@@ -1116,8 +1116,7 @@ inf;State;Canada;10;easy;World's second-largest country. Capital: Ottawa. Larges
 107;1654
 102;1654
 96;1658
-inf;Island;Hawaii;10;easy;The 50th and most recent U.S. state
-Largest city: Honolulu#nor#spn#fra#ger;America#Pacific
+inf;Island;Hawaii;10;easy;The 50th and most recent U.S. state. Largest city: Honolulu#nor#spn#fra#ger;America#Pacific
 419;1168
 416;1166
 411;1164

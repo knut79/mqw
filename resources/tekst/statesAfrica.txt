@@ -402,7 +402,7 @@ inf;State;Botswana;10;easy;Botswana is flat, with up to 70 percent of its territ
 1858;1791
 1857;1795
 qst;coaBurkinaFaso##medium#BurkinaFasoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Burkina Faso;10;Independence from France in 1960. Capital: Ouagadougou##spn#fra#ger;Africa#Mali to the north, Niger to the east, Benin to the southeast
+inf;State;Burkina Faso;10;easy;Independence from France in 1960. Capital: Ouagadougou##spn#fra#ger;Africa#Mali to the north, Niger to the east, Benin to the southeast
 2250;1947;st
 2252;1950
 2253;1953
@@ -1493,7 +1493,7 @@ inf;State;Ghana;10;easy;Ghana has been a significant petroleum and natural gas p
 1741;1772
 1735;1772
 1729;1773;sl
-qst;coaGuineaBissau##medium#Guinea-bissauFlag.png#What county is represented by this flag##spn#fra#ger##
+qst;coaGuineaBissau##medium#Guinea-BissauFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;guinea-bissau;10;easy;Guinea-Bissau was once part of the kingdom of Gabu, as well as part of the Mali Empire. Capital: Bissau##spn#fra#ger;Africa#Africa#West Africa
 1748;1791
 1751;1792

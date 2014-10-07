@@ -1043,8 +1043,7 @@ inf;State;Chile;10;easy;Officially the Republic of Chile. Capital: Santiago##spn
 1035;1826
 1033;1832;sl
 qst;coaColombia##medium#ColombiaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Colombia;10;easy;Officially the Republic of Colombia. Capital: Bogotá
-##spn#fra#ger;America#Northwest of South America
+inf;State;Colombia;10;easy;Officially the Republic of Colombia. Capital: Bogotá##spn#fra#ger;America#Northwest of South America
 942;1789
 945;1793
 942;1799

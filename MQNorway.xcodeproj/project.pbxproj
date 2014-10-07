@@ -355,7 +355,6 @@
 		7204A3F419DDFE4500B8AE76 /* CostaRicaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3CF19DDFE4500B8AE76 /* CostaRicaFlag.png */; };
 		7204A3F519DDFE4500B8AE76 /* CubaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D019DDFE4500B8AE76 /* CubaFlag.png */; };
 		7204A3F619DDFE4500B8AE76 /* DominicaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D119DDFE4500B8AE76 /* DominicaFlag.png */; };
-		7204A3F719DDFE4500B8AE76 /* dominicanRepublicFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D219DDFE4500B8AE76 /* dominicanRepublicFlag.png */; };
 		7204A3F819DDFE4500B8AE76 /* EcuadorFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D319DDFE4500B8AE76 /* EcuadorFlag.png */; };
 		7204A3F919DDFE4500B8AE76 /* ElSalvadorFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D419DDFE4500B8AE76 /* ElSalvadorFlag.png */; };
 		7204A3FA19DDFE4500B8AE76 /* FrenchGuianaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A3D519DDFE4500B8AE76 /* FrenchGuianaFlag.png */; };
@@ -440,6 +439,19 @@
 		7204A48919E3487200B8AE76 /* ZimbabweFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A45519E3487200B8AE76 /* ZimbabweFlag.png */; };
 		7204A48B19E34D4500B8AE76 /* statesAfrica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A48A19E34D4500B8AE76 /* statesAfrica.txt */; };
 		7204A48D19E35B6A00B8AE76 /* IvoryCoastFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A48C19E35B6A00B8AE76 /* IvoryCoastFlag.png */; };
+		7204A49A19E40CF600B8AE76 /* BahrainFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A48E19E40CF600B8AE76 /* BahrainFlag.png */; };
+		7204A49B19E40CF600B8AE76 /* IranFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A48F19E40CF600B8AE76 /* IranFlag.png */; };
+		7204A49C19E40CF600B8AE76 /* IraqFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49019E40CF600B8AE76 /* IraqFlag.png */; };
+		7204A49D19E40CF600B8AE76 /* IsraelFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49119E40CF600B8AE76 /* IsraelFlag.png */; };
+		7204A49E19E40CF600B8AE76 /* JordanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49219E40CF600B8AE76 /* JordanFlag.png */; };
+		7204A49F19E40CF600B8AE76 /* KuwaitFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49319E40CF600B8AE76 /* KuwaitFlag.png */; };
+		7204A4A019E40CF600B8AE76 /* OmanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49419E40CF600B8AE76 /* OmanFlag.png */; };
+		7204A4A119E40CF600B8AE76 /* QatarFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49519E40CF600B8AE76 /* QatarFlag.png */; };
+		7204A4A219E40CF600B8AE76 /* SaudiArabiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49619E40CF600B8AE76 /* SaudiArabiaFlag.png */; };
+		7204A4A319E40CF600B8AE76 /* SyriaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49719E40CF600B8AE76 /* SyriaFlag.png */; };
+		7204A4A419E40CF600B8AE76 /* UnitedArabEmiratesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49819E40CF600B8AE76 /* UnitedArabEmiratesFlag.png */; };
+		7204A4A519E40CF600B8AE76 /* YemenFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49919E40CF600B8AE76 /* YemenFlag.png */; };
+		7204A4A719E4358700B8AE76 /* DominicanRepublicFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -890,7 +902,6 @@
 		7204A3CF19DDFE4500B8AE76 /* CostaRicaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CostaRicaFlag.png; path = resources/graphics/pictureQuestions/CostaRicaFlag.png; sourceTree = "<group>"; };
 		7204A3D019DDFE4500B8AE76 /* CubaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CubaFlag.png; path = resources/graphics/pictureQuestions/CubaFlag.png; sourceTree = "<group>"; };
 		7204A3D119DDFE4500B8AE76 /* DominicaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DominicaFlag.png; path = resources/graphics/pictureQuestions/DominicaFlag.png; sourceTree = "<group>"; };
-		7204A3D219DDFE4500B8AE76 /* dominicanRepublicFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dominicanRepublicFlag.png; path = resources/graphics/pictureQuestions/dominicanRepublicFlag.png; sourceTree = "<group>"; };
 		7204A3D319DDFE4500B8AE76 /* EcuadorFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EcuadorFlag.png; path = resources/graphics/pictureQuestions/EcuadorFlag.png; sourceTree = "<group>"; };
 		7204A3D419DDFE4500B8AE76 /* ElSalvadorFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ElSalvadorFlag.png; path = resources/graphics/pictureQuestions/ElSalvadorFlag.png; sourceTree = "<group>"; };
 		7204A3D519DDFE4500B8AE76 /* FrenchGuianaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FrenchGuianaFlag.png; path = resources/graphics/pictureQuestions/FrenchGuianaFlag.png; sourceTree = "<group>"; };
@@ -976,6 +987,19 @@
 		7204A45519E3487200B8AE76 /* ZimbabweFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZimbabweFlag.png; path = resources/graphics/pictureQuestions/ZimbabweFlag.png; sourceTree = "<group>"; };
 		7204A48A19E34D4500B8AE76 /* statesAfrica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAfrica.txt; path = resources/tekst/statesAfrica.txt; sourceTree = "<group>"; };
 		7204A48C19E35B6A00B8AE76 /* IvoryCoastFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IvoryCoastFlag.png; path = resources/graphics/pictureQuestions/IvoryCoastFlag.png; sourceTree = "<group>"; };
+		7204A48E19E40CF600B8AE76 /* BahrainFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BahrainFlag.png; path = resources/graphics/pictureQuestions/BahrainFlag.png; sourceTree = "<group>"; };
+		7204A48F19E40CF600B8AE76 /* IranFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IranFlag.png; path = resources/graphics/pictureQuestions/IranFlag.png; sourceTree = "<group>"; };
+		7204A49019E40CF600B8AE76 /* IraqFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IraqFlag.png; path = resources/graphics/pictureQuestions/IraqFlag.png; sourceTree = "<group>"; };
+		7204A49119E40CF600B8AE76 /* IsraelFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IsraelFlag.png; path = resources/graphics/pictureQuestions/IsraelFlag.png; sourceTree = "<group>"; };
+		7204A49219E40CF600B8AE76 /* JordanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JordanFlag.png; path = resources/graphics/pictureQuestions/JordanFlag.png; sourceTree = "<group>"; };
+		7204A49319E40CF600B8AE76 /* KuwaitFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KuwaitFlag.png; path = resources/graphics/pictureQuestions/KuwaitFlag.png; sourceTree = "<group>"; };
+		7204A49419E40CF600B8AE76 /* OmanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OmanFlag.png; path = resources/graphics/pictureQuestions/OmanFlag.png; sourceTree = "<group>"; };
+		7204A49519E40CF600B8AE76 /* QatarFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QatarFlag.png; path = resources/graphics/pictureQuestions/QatarFlag.png; sourceTree = "<group>"; };
+		7204A49619E40CF600B8AE76 /* SaudiArabiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SaudiArabiaFlag.png; path = resources/graphics/pictureQuestions/SaudiArabiaFlag.png; sourceTree = "<group>"; };
+		7204A49719E40CF600B8AE76 /* SyriaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SyriaFlag.png; path = resources/graphics/pictureQuestions/SyriaFlag.png; sourceTree = "<group>"; };
+		7204A49819E40CF600B8AE76 /* UnitedArabEmiratesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UnitedArabEmiratesFlag.png; path = resources/graphics/pictureQuestions/UnitedArabEmiratesFlag.png; sourceTree = "<group>"; };
+		7204A49919E40CF600B8AE76 /* YemenFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YemenFlag.png; path = resources/graphics/pictureQuestions/YemenFlag.png; sourceTree = "<group>"; };
+		7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DominicanRepublicFlag.png; path = resources/graphics/pictureQuestions/DominicanRepublicFlag.png; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1704,6 +1728,19 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */,
+				7204A48E19E40CF600B8AE76 /* BahrainFlag.png */,
+				7204A48F19E40CF600B8AE76 /* IranFlag.png */,
+				7204A49019E40CF600B8AE76 /* IraqFlag.png */,
+				7204A49119E40CF600B8AE76 /* IsraelFlag.png */,
+				7204A49219E40CF600B8AE76 /* JordanFlag.png */,
+				7204A49319E40CF600B8AE76 /* KuwaitFlag.png */,
+				7204A49419E40CF600B8AE76 /* OmanFlag.png */,
+				7204A49519E40CF600B8AE76 /* QatarFlag.png */,
+				7204A49619E40CF600B8AE76 /* SaudiArabiaFlag.png */,
+				7204A49719E40CF600B8AE76 /* SyriaFlag.png */,
+				7204A49819E40CF600B8AE76 /* UnitedArabEmiratesFlag.png */,
+				7204A49919E40CF600B8AE76 /* YemenFlag.png */,
 				7204A48C19E35B6A00B8AE76 /* IvoryCoastFlag.png */,
 				7204A42219E3487100B8AE76 /* AlgeriaFlag.png */,
 				7204A42319E3487100B8AE76 /* AngolaFlag.png */,
@@ -1770,7 +1807,6 @@
 				7204A3CF19DDFE4500B8AE76 /* CostaRicaFlag.png */,
 				7204A3D019DDFE4500B8AE76 /* CubaFlag.png */,
 				7204A3D119DDFE4500B8AE76 /* DominicaFlag.png */,
-				7204A3D219DDFE4500B8AE76 /* dominicanRepublicFlag.png */,
 				7204A3D319DDFE4500B8AE76 /* EcuadorFlag.png */,
 				7204A3D419DDFE4500B8AE76 /* ElSalvadorFlag.png */,
 				7204A3D519DDFE4500B8AE76 /* FrenchGuianaFlag.png */,
@@ -2102,6 +2138,7 @@
 				7204A28919D976D600B8AE76 /* world_100_5_0.jpg in Resources */,
 				7204A37C19D9799200B8AE76 /* loop.png in Resources */,
 				7204A27D19D976D600B8AE76 /* world_100_4_0.jpg in Resources */,
+				7204A49F19E40CF600B8AE76 /* KuwaitFlag.png in Resources */,
 				7204A40C19DDFE4500B8AE76 /* UruguayFlag.png in Resources */,
 				7204A25719D976D600B8AE76 /* world_100_0_10.jpg in Resources */,
 				7204A2C819D976D600B8AE76 /* world_100_10_3.jpg in Resources */,
@@ -2123,6 +2160,7 @@
 				7204A2B419D976D600B8AE76 /* world_100_8_7.jpg in Resources */,
 				7204A28F19D976D600B8AE76 /* world_100_5_6.jpg in Resources */,
 				7204A25C19D976D600B8AE76 /* world_100_1_3.jpg in Resources */,
+				7204A4A719E4358700B8AE76 /* DominicanRepublicFlag.png in Resources */,
 				7204A3A819D979FD00B8AE76 /* LanguageData.plist in Resources */,
 				7204A37B19D9799200B8AE76 /* line.png in Resources */,
 				7204A2E919D976D600B8AE76 /* world_100_13_0.jpg in Resources */,
@@ -2135,6 +2173,7 @@
 				7204A18619D976B300B8AE76 /* world_50_6_5.jpg in Resources */,
 				7204A3A919D979FD00B8AE76 /* LocalData.plist in Resources */,
 				7204A2D919D976D600B8AE76 /* world_100_11_8.jpg in Resources */,
+				7204A49D19E40CF600B8AE76 /* IsraelFlag.png in Resources */,
 				7204A37F19D9799200B8AE76 /* RoundResults.png in Resources */,
 				7204A29A19D976D600B8AE76 /* world_100_6_5.jpg in Resources */,
 				7204A3EB19DDFE4500B8AE76 /* ArgentinaFlag.png in Resources */,
@@ -2204,6 +2243,7 @@
 				7204A12819D9769A00B8AE76 /* world_25_2_1.jpg in Resources */,
 				7204A3F019DDFE4500B8AE76 /* BrazilFlag.png in Resources */,
 				7204A28719D976D600B8AE76 /* world_100_4_10.jpg in Resources */,
+				7204A4A019E40CF600B8AE76 /* OmanFlag.png in Resources */,
 				7204A26119D976D600B8AE76 /* world_100_1_8.jpg in Resources */,
 				7204A31219D978F000B8AE76 /* hintBtn.png in Resources */,
 				7204A36F19D9799200B8AE76 /* ArrowGreen.png in Resources */,
@@ -2277,7 +2317,6 @@
 				7204A3FC19DDFE4500B8AE76 /* GuyanaFlag.png in Resources */,
 				7204A48219E3487200B8AE76 /* SudanFlag.png in Resources */,
 				7204A47F19E3487200B8AE76 /* SomaliaFlag.png in Resources */,
-				7204A3F719DDFE4500B8AE76 /* dominicanRepublicFlag.png in Resources */,
 				7204A45C19E3487200B8AE76 /* CameroonFlag.png in Resources */,
 				7204A25619D976D600B8AE76 /* world_100_0_9.jpg in Resources */,
 				7204A45919E3487200B8AE76 /* BotswanaFlag.png in Resources */,
@@ -2373,6 +2412,7 @@
 				7204A27C19D976D600B8AE76 /* world_100_3_11.jpg in Resources */,
 				7204A39A19D979E700B8AE76 /* states.txt in Resources */,
 				7204A2A819D976D600B8AE76 /* world_100_7_7.jpg in Resources */,
+				7204A4A319E40CF600B8AE76 /* SyriaFlag.png in Resources */,
 				7204A2D619D976D600B8AE76 /* world_100_11_5.jpg in Resources */,
 				7204A2FB19D976D600B8AE76 /* world_100_14_6.jpg in Resources */,
 				7204A37819D9799200B8AE76 /* GameOver.png in Resources */,
@@ -2412,6 +2452,7 @@
 				7204A2C119D976D600B8AE76 /* world_100_9_8.jpg in Resources */,
 				7204A3FA19DDFE4500B8AE76 /* FrenchGuianaFlag.png in Resources */,
 				7204A29C19D976D600B8AE76 /* world_100_6_7.jpg in Resources */,
+				7204A49C19E40CF600B8AE76 /* IraqFlag.png in Resources */,
 				7204A2AB19D976D600B8AE76 /* world_100_7_10.jpg in Resources */,
 				7204A2E819D976D600B8AE76 /* world_100_12_11.jpg in Resources */,
 				7204A2C419D976D600B8AE76 /* world_100_9_11.jpg in Resources */,
@@ -2429,15 +2470,19 @@
 				7204A34D19D9798300B8AE76 /* ZoomInInstr.png in Resources */,
 				7204A30719D976D600B8AE76 /* world_100_15_6.jpg in Resources */,
 				7204A38219D9799200B8AE76 /* tapImage2.png in Resources */,
+				7204A4A219E40CF600B8AE76 /* SaudiArabiaFlag.png in Resources */,
 				7204A17D19D976B300B8AE76 /* world_50_5_2.jpg in Resources */,
 				7204A28019D976D600B8AE76 /* world_100_4_3.jpg in Resources */,
 				7204A46319E3487200B8AE76 /* EgyptFlag.png in Resources */,
+				7204A49A19E40CF600B8AE76 /* BahrainFlag.png in Resources */,
 				7204A27E19D976D600B8AE76 /* world_100_4_1.jpg in Resources */,
 				7204A26F19D976D600B8AE76 /* world_100_2_10.jpg in Resources */,
 				7204A2CB19D976D600B8AE76 /* world_100_10_6.jpg in Resources */,
+				7204A4A519E40CF600B8AE76 /* YemenFlag.png in Resources */,
 				7204A2B619D976D600B8AE76 /* world_100_8_9.jpg in Resources */,
 				7204A41F19E00B1F00B8AE76 /* statesSouthAmerica.txt in Resources */,
 				7204A3C219DD7EDD00B8AE76 /* PhilippinesFlag.png in Resources */,
+				7204A4A119E40CF600B8AE76 /* QatarFlag.png in Resources */,
 				7204A2A019D976D600B8AE76 /* world_100_6_11.jpg in Resources */,
 				7204A17319D976B300B8AE76 /* world_50_3_4.jpg in Resources */,
 				7204A27F19D976D600B8AE76 /* world_100_4_2.jpg in Resources */,
@@ -2457,6 +2502,7 @@
 				7204A47E19E3487200B8AE76 /* SierraLeoneFlag.png in Resources */,
 				7204A36D19D9799200B8AE76 /* trophy.jpg in Resources */,
 				7204A3FF19DDFE4500B8AE76 /* JamaicaFlag.png in Resources */,
+				7204A49E19E40CF600B8AE76 /* JordanFlag.png in Resources */,
 				EE8731B914CAE1300010A76C /* ChallengeViewController.xib in Resources */,
 				7204A2C619D976D600B8AE76 /* world_100_10_1.jpg in Resources */,
 				7204A29019D976D600B8AE76 /* world_100_5_7.jpg in Resources */,
@@ -2472,6 +2518,8 @@
 				7204A48619E3487200B8AE76 /* TunisiaFlag.png in Resources */,
 				7204A3FE19DDFE4500B8AE76 /* HondurasFlag.png in Resources */,
 				7204A2AA19D976D600B8AE76 /* world_100_7_9.jpg in Resources */,
+				7204A49B19E40CF600B8AE76 /* IranFlag.png in Resources */,
+				7204A4A419E40CF600B8AE76 /* UnitedArabEmiratesFlag.png in Resources */,
 				7204A2B219D976D600B8AE76 /* world_100_8_5.jpg in Resources */,
 				7204A12A19D9769A00B8AE76 /* world_25_3_0.jpg in Resources */,
 				7204A46619E3487200B8AE76 /* EthiopiaFlag.png in Resources */,
