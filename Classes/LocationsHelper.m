@@ -114,19 +114,12 @@
                 FMResultSet *resultsCoordinates = [[SqliteHelper Instance] executeQuery:@"SELECT count(*) AS count FROM location WHERE locationID =?;",refToLocation];
 				[resultsCoordinates next];
                 if([resultsCoordinates intForColumn:@"count"] == 0){
-					NSLog(@"Could not find reference %@ for question %@",refToLocation,questionID);
-					break;
+                    [NSException raise:@"Invalid question reference" format:@"Could not find reference %@ for question %@",refToLocation,questionID];
 				}
                 NSLog(@"reference %@ for question %@",refToLocation,questionID);
                 
                 [resultsCoordinates close];
 
-                /*
-                 hint1 = [additionalQuestionComponentsArray objectAtIndex:9];
-                 if ([hint1 isEqualToString:@""]) {
-                 hint1 = [[resultsCoordinates objectAtIndex:0] objectForKey:@"locationtype"];
-                 }
-                 */
 				hint1 = [additionalQuestionComponentsArray objectAtIndex:9];
 				if ([hint1 isEqualToString:@""]) {
 					hint1 = @"fix this";//[[resultsCoordinates objectAtIndex:0] objectForKey:@"locationtype"];
@@ -150,11 +143,9 @@
 				 [additionalQuestionComponentsArray objectAtIndex:7],
 				 [additionalQuestionComponentsArray objectAtIndex:8]];
 				
-				
-				
 			}
 			else {
-				NSLog(@"Could not insert values into question table for %@. %d values, should be 11",questionID,additionalQuestionComponentsArray.count);
+                [NSException raise:@"Invalid values" format:@"Could not insert values into question table for %@. %d values, should be 11", questionID,additionalQuestionComponentsArray.count];
 			}
             
 		}
@@ -392,7 +383,7 @@
 					 [additionalInfoComponentsArray objectAtIndex:4]];
 				}
 				else {
-					NSLog(@"Could not insert values into additionalInfo table for %@. %d values, should be 5",[placeNameDictionary objectForKey:@"english"],additionalInfoComponentsArray.count);
+                    [NSException raise:@"Invalid values" format:@"Could not insert values into additionalInfo table for %@. %d values, should be 5", [placeNameDictionary objectForKey:@"english"],additionalInfoComponentsArray.count];
 					
 				}
 				[additionalInfoComponentsArray dealloc];
@@ -506,7 +497,7 @@
                         
 					}
 					else {
-						NSLog(@"Could not insert values into question table for %@. %d values, should be 10",[placeNameDictionary objectForKey:@"english"],additionalQuestionComponentsArray.count);
+                        [NSException raise:@"Invalid values" format:@"Could not insert values into question table for %@. %d values, should be 10", [placeNameDictionary objectForKey:@"english"],additionalQuestionComponentsArray.count];
 					}
 				}
 
@@ -561,7 +552,7 @@
 					 [additionalInfoComponentsArray objectAtIndex:4]];
 				}
 				else {
-					NSLog(@"Could not insert values into additionalInfo table for %@. %d values, should be 5",[placeNameDictionary objectForKey:@"english"],additionalInfoComponentsArray.count);
+                    [NSException raise:@"Invalid values" format:@"Could not insert values into additionalInfo table for %@. %d values, should be 5", [placeNameDictionary objectForKey:@"english"],additionalInfoComponentsArray.count];
 				}
 				[additionalInfoComponentsArray dealloc];
 				
@@ -656,12 +647,9 @@
 						 [additionalQuestionComponentsArray objectAtIndex:6],
 						 [additionalQuestionComponentsArray objectAtIndex:7],
 						 [additionalQuestionComponentsArray objectAtIndex:8]];
-						
-						
-						
 					}
 					else {
-						NSLog(@"Could not insert values into question table for %@. %d values, should be 11",[placeNameDictionary objectForKey:@"english"],additionalQuestionComponentsArray.count);
+                        [NSException raise:@"Invalid values" format:@"Could not insert values into question table for %@. %d values, should be 11", [placeNameDictionary objectForKey:@"english"],additionalQuestionComponentsArray.count];
 					}
                     
 				}

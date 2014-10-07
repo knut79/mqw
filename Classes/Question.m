@@ -58,7 +58,7 @@
 			{
 				m_picture = [[UIImage imageNamed:picture] retain];
                 if (m_picture == nil) {
-                    NSLog(@"Could not find picture %@",picture);
+                    [NSException raise:@"Invalid picture reference" format:@"Could not find picture %@", picture];
                 }
 				m_usePicture = YES;
 			}
