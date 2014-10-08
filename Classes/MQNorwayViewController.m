@@ -574,6 +574,7 @@
     // We've named the tiles things like BlackLagoon_50_0_2.png, where the 50 represents 50% resolution.
     resolutionPercentage = 100 * pow(2, resolution);
     UIImage* image = [UIImage imageNamed:[NSString stringWithFormat:@"world_%d_%d_%d.jpg", resolutionPercentage, column, row]];
+
 	[tile setImage:image];
 
     return tile;
@@ -1235,7 +1236,8 @@
     playingBoardView = [[TiledScrollView alloc] initWithFrame:[[self view] bounds]];
     [playingBoardView setDataSource:self];
     [[playingBoardView tileContainerView] setDelegate:self];
-    [playingBoardView setTileSize:CGSizeMake(TILESIZE, TILESIZE)];
+    [playingBoardView setTileSize:CGSizeMake(256, 256)];
+    //[playingBoardView setTileSize:CGSizeMake(TILESIZE, TILESIZE)];
     [playingBoardView setBackgroundColor:[UIColor blackColor]];
     [playingBoardView setBouncesZoom:YES];
     [playingBoardView setMaximumResolution:0];

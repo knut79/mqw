@@ -1,11 +1,9 @@
 @class TapDetectingView;
 
 @protocol TiledScrollViewDataSource;
-//@protocol TiledScrollViewDelegate;
 
 @interface TiledScrollView : UIScrollView <UIScrollViewDelegate> {
     id <TiledScrollViewDataSource>  dataSource;
-//	id <TiledScrollViewDelegate> delegate;
 	
     CGSize                          tileSize;
     NSMutableSet                    *reusableTiles;    
@@ -20,7 +18,7 @@
 	
    
     // we use the following ivars to keep track of which rows and columns are visible
-	int _firstVisibleRow, _firstVisibleColumn, _lastVisibleRow, _lastVisibleColumn;
+	long _firstVisibleRow, _firstVisibleColumn, _lastVisibleRow, _lastVisibleColumn;
 }
 
 @property (nonatomic, assign) id <TiledScrollViewDataSource> dataSource;
@@ -29,10 +27,10 @@
 @property (nonatomic, readonly) TapDetectingView *tileContainerView;
 @property (nonatomic, assign) int minimumResolution;
 @property (nonatomic, assign) int maximumResolution;
-@property (nonatomic, assign) int firstVisibleRow;
-@property (nonatomic, readonly) int firstVisibleColumn;
-@property (nonatomic, readonly) int lastVisibleRow;
-@property (nonatomic, readonly) int lastVisibleColumn;
+@property (nonatomic, assign) long firstVisibleRow;
+@property (nonatomic, readonly) long firstVisibleColumn;
+@property (nonatomic, readonly) long lastVisibleRow;
+@property (nonatomic, readonly) long lastVisibleColumn;
 
 - (UIView *)dequeueReusableTile;  // Used by the delegate to acquire an already allocated tile, in lieu of allocating a new one.
 - (void)reloadData;

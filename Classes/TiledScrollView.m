@@ -22,6 +22,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
+        
         // we will recycle tiles by removing them from the view and storing them here
         reusableTiles = [[NSMutableSet alloc] init];
         
@@ -30,9 +31,9 @@
         tileContainerView = [[TapDetectingView alloc] initWithFrame:CGRectZero];
         [tileContainerView setBackgroundColor:[UIColor blueColor]];
         [self addSubview:tileContainerView];
-		
 	
-        [self setTileSize:CGSizeMake(DEFAULT_TILE_SIZE, DEFAULT_TILE_SIZE)];
+        //[self setTileSize:CGSizeMake(DEFAULT_TILE_SIZE, DEFAULT_TILE_SIZE)];
+        [self setTileSize:CGSizeMake(100.0, 100.0)];
 
         // no rows or columns are visible at first; note this by making the firsts very high and the lasts very low
         _firstVisibleRow = _firstVisibleColumn = NSIntegerMax;
@@ -122,8 +123,9 @@
 	
 	[super layoutSubviews];
     
-    CGRect visibleBounds = [self bounds];
+    CGRect visibleBounds =  self.bounds;
 
+    //visibleBounds = CGRectMake(0, 0, visibleBounds.size.width, visibleBounds.size.height);
     // first recycle all tiles that are no longer visible
     for (UIView *tile in [tileContainerView subviews]) {
         
@@ -137,8 +139,7 @@
             [tile removeFromSuperview];
         }
     }
-    
-    NSLog(@"temp check tilesizewidth %f and zoomscale %f",[self tileSize].width,[self zoomScale]);
+
     // calculate which rows and columns are visible by doing a bunch of math.
     float scaledTileWidth  = [self tileSize].width  * [self zoomScale];
     float scaledTileHeight = [self tileSize].height * [self zoomScale];
@@ -152,12 +153,12 @@
     // iterate through needed rows and columns, adding any tiles that are missing
     for (int row = firstNeededRow; row <= lastNeededRow; row++) {
         for (int col = firstNeededCol; col <= lastNeededCol; col++) {
-			
 
             BOOL tileIsMissing = (_firstVisibleRow > row || _firstVisibleColumn > col ||
                                   _lastVisibleRow  < row || _lastVisibleColumn  < col);
             
             if (tileIsMissing) {
+                NSLog(@"loading tile %i %i ,%i",resolution,row,col);
                 UIView *tile = [dataSource tiledScrollView:self tileForRow:row column:col resolution:resolution];
                          
                 // set the tile's frame so we insert it at the correct position
@@ -176,9 +177,7 @@
     _firstVisibleRow = firstNeededRow; _firstVisibleColumn = firstNeededCol;
     _lastVisibleRow  = lastNeededRow;  _lastVisibleColumn  = lastNeededCol;
 
-	
-
-	
+     
 	float xValue = .0f;
 	if(visibleBounds.origin.x > xOffset)
 		xValue = (xValue +(visibleBounds.origin.x - xOffset));
@@ -192,44 +191,11 @@
 	else if(visibleBounds.origin.y < yOffset)
 		yValue = (yValue - (yOffset - visibleBounds.origin.y));
 	
-	
-	//find how much bigger or smaller the whole view gets
-//	float scaleFactor = 0;
-//	if (scaleOffset > ([self zoomScale] * 3780)) {
-//		scaleFactor = scaleFactor - (scaleOffset - ([self zoomScale] * 3780));
-//	}
-//	else if (scaleOffset < ([self zoomScale] * 3780)){
-//		scaleFactor = scaleFactor + (([self zoomScale] * 3780) - scaleOffset);
-//	}
-//	
-//	yValue = yValue - (scaleFactor/2);
-//	xValue = xValue - (scaleFactor/2);
-	
-//	float scaleFactor = 1;
-//	if (scaleOffset > [self zoomScale]) {
-//		scaleFactor = scaleFactor - (scaleOffset - [self zoomScale]);
-//	}
-//	else if (scaleOffset < [self zoomScale]){
-//		scaleFactor = scaleFactor + ([self zoomScale] - scaleOffset);
-//	}
-//	
-//	yValue = yValue +(yValue * scaleFactor);
-//	xValue = xValue +(xValue * scaleFactor);
+
 
 	float zoomOffset = 0.0f;
 	//check if we are zooming
 	if (scaleOffset != [self zoomScale]) {
-		//we are zooming , find x and y offsets at zooming
-//		zoomYOffset = (scaleOffset - [self zoomScale]);
-//		NSLog(@"zoomYOffset %f",zoomYOffset);
-		//yValue = (yValue * (scaleOffset - [self zoomScale]));
-//		xValue = (xValue * (scaleOffset - [self zoomScale]));
-		if (resolution != resolutionOffset) {
-//			float zoomFactor = pow(2, delta * -1); 
-//			resolutionOffset = resolution;
-		}
-//		yValue = (yValue * ([self zoomScale] - scaleOffset));
-//		xValue = (xValue * ([self zoomScale] - scaleOffset));
 		zoomOffset = [self zoomScale] - scaleOffset;
 	}
 
@@ -237,48 +203,10 @@
 	xOffset = visibleBounds.origin.x;
 	yOffset = visibleBounds.origin.y;
     
-    
-    
-//	//scaleOffset = [self zoomScale] * 3780;
 	scaleOffset = [self zoomScale];
 	resolutionOffset = resolution;
 	
-	//NSLog(@"scaleFactor %f scaleOffset %f",scaleFactor , scaleOffset);
-	
-	
-//	if ([delegate respondsToSelector:@selector(positionPlayerSymbol)])
-//		[delegate positionPlayerSymbol];
-//	NSLog(@"vvvv %f ",zoomOffset);
-	
-	
 	[tileContainerView positionPlayerSymbolPassThrough:CGPointMake(xValue, yValue) zoomOffsetScale:zoomOffset];
-	
-//	CGRect  teeet = [touchImageView frame];
-//	CGPoint gamePoint = CGPointMake(teeet.origin.x + 25, teeet.origin.y + 25);
-//	
-//	//convert to reel map point
-//	CGRect imgScrollViewBounds = [imageScrollView bounds];
-//	CGPoint realMapGamePoint = CGPointMake(gamePoint.x + imgScrollViewBounds.origin.x, gamePoint.y + imgScrollViewBounds.origin.y); 
-//	//scale to tile 
-//	float imgScrollViewZoomScale = [imageScrollView zoomScale];
-//	realMapGamePoint.x = realMapGamePoint.x /imgScrollViewZoomScale ;
-//	realMapGamePoint.y = realMapGamePoint.y /imgScrollViewZoomScale ;
-//	//scale to map
-//	float resolutionFactor = (float)resolutionPercentage/100;
-//	realMapGamePoint.x = (float)realMapGamePoint.x/ resolutionFactor; 
-//	realMapGamePoint.y = realMapGamePoint.y/ resolutionFactor;
-//	//end convert reel map point
-//	Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-//	[currentPlayer SetGamePoint:realMapGamePoint];
-	
-	/////////////////////
-//	CGPoint scaledGamePoint;
-//	scaledGamePoint.x = realMapGamePoint.x * (tiledMapViewResolutionPercentage/100);
-//	scaledGamePoint.y = realMapGamePoint.y * (tiledMapViewResolutionPercentage/100);
-//	//scale to tile
-//	scaledGamePoint.x = scaledGamePoint.x * tiledMapViewZoomScale;
-//	scaledGamePoint.y = scaledGamePoint.y * tiledMapViewZoomScale;
-
 }
 
 
@@ -383,23 +311,23 @@
     return tileContainerView;
 }
 
-- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
     if (scrollView == self) {
         
 		
 		
         // the following two lines are a bug workaround that will no longer be needed after OS 3.0.
-//        [super setZoomScale:scale+0.01 animated:NO];
-//        [super setZoomScale:scale animated:NO];
+        //[super setZoomScale:scale+0.01 animated:NO];
+        //[super setZoomScale:scale animated:NO];
         
         // after a zoom, check to see if we should change the resolution of our tiles
         [self updateResolution];
 		
 		
 		//test on USA
-		if (resolution == -2 && scale < .36) {
+		/*if (resolution == -2 && scale < .36) {
 			NSLog(@"zooming");
-		}
+		}*/
     }
 }
 
@@ -408,7 +336,7 @@
 
 // the scrollViewDidEndZooming: delegate method is only called after an *animated* zoom. We also need to update our 
 // resolution for non-animated zooms. So we also override the new setZoomScale:animated: method on UIScrollView
-- (void)setZoomScale:(float)scale animated:(BOOL)animated {
+- (void)setZoomScale:(CGFloat)scale animated:(BOOL)animated {
 	
 	//NSLog(@"scaleFactor %f scaleOffset %f",scaleFactor , scaleOffset);
 	//NSLog(@"zooming %f",scale);
