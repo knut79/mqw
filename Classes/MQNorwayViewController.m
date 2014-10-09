@@ -18,6 +18,7 @@
 #import "GlobalConstants.h"
 #import "MagnifierView.h"
 
+
 #define ZOOM_VIEW_TAG 100
 #define ZOOM_STEP 1.5
 
@@ -50,13 +51,18 @@
 
 - (void)loadView {
 	[super loadView];
-	
     
     //only done once 
     
-    if ([[GlobalHelper Instance] getStartFlag] == 0) 
+    createPlayerVC = [[CreatePlayerVC alloc] initWithNibName:@"CreatePlayerVC" bundle:NULL];
+    [createPlayerVC.view setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [createPlayerVC.view setAlpha:0];
+    [createPlayerVC setDelegate:self];
+    [self.view addSubview:createPlayerVC.view];
+    
+    /*
+    if ([[GlobalHelper Instance] getStartFlag] == 0)
     {
-        
         if ([[[GlobalHelper Instance] ReadPlayerID] isEqualToString:@"empty"]) {
             createPlayerVC = [[CreatePlayerVC alloc] initWithNibName:@"CreatePlayerVC" bundle:NULL];
             [createPlayerVC.view setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -71,6 +77,7 @@
     {
         [self FirstLoad];
     }
+     */
 }
 
 //createPlayerVC delegate
@@ -102,12 +109,17 @@
 		[[GlobalSettingsHelper Instance] SetLanguage:english];
 	}
 	
+    
+    
+    [[GlobalSettingsHelper Instance] SetPlayerID: [GlobalHelper Instance].ReadPlayerID];
+    [[GlobalSettingsHelper Instance] SetPlayerName: [GlobalHelper Instance].ReadPlayerName];
+    /*
     FMResultSet *resultsGlobalID = [[SqliteHelper Instance] executeQuery:@"SELECT playerID FROM globalID"];
     [resultsGlobalID next];
     if ([resultsGlobalID hasAnotherRow]) {
 		[[GlobalSettingsHelper Instance] SetPlayerID:[resultsGlobalID stringForColumn:@"playerID"]];	}
 	else {
-		[[GlobalSettingsHelper Instance] SetPlayerID:@"tempID"];}
+		[[GlobalSettingsHelper Instance] SetPlayerID:@"tempID"];}*/
     
 	[[GlobalSettingsHelper Instance] SetDistanceMeasurement:km];
 	[[GlobalSettingsHelper Instance] SetDocumentsDirectory];

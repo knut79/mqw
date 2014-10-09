@@ -19,6 +19,7 @@
 -(int) getStartFlag;
 
 -(NSString*) ReadPlayerID;
+-(NSString*) ReadPlayerName;
 -(BOOL) readFlagForAddFree;
 
 -(int) getBadgeNumber;

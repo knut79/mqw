@@ -186,7 +186,7 @@
 //		playerOneTextField.placeholder = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"enter name"];
 //	}
     
-    playerOneTextField.text = [[GlobalSettingsHelper Instance] GetPlayerID];
+    playerOneTextField.text = [[GlobalSettingsHelper Instance] GetPlayerName];
 	playerOneTextField.userInteractionEnabled = NO;
     
 	playerOneTextField.borderStyle = UITextBorderStyleRoundedRect;
@@ -862,7 +862,7 @@
             //text box one can not be edited
             playerOneTextField.userInteractionEnabled = NO;
             [playerOneTextField setAlpha:0.5];
-            playerOneTextField.text = [[GlobalSettingsHelper Instance] GetPlayerID];
+            playerOneTextField.text = [[GlobalSettingsHelper Instance] GetPlayerName];
 			infoOrGlobalIDLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"ID"],[[GlobalSettingsHelper Instance] GetPlayerID]];
             
 			fadeInTrainingmodeSwitch = YES;

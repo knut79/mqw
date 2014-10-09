@@ -9,46 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "GlobalHelper.h"
 #import <QuartzCore/QuartzCore.h>
+#import <FacebookSDK/FacebookSDK.h>
 @protocol CreatePlayerVCDelegate;
-@interface CreatePlayerVC : UIViewController<NSXMLParserDelegate,UITextFieldDelegate,UIAlertViewDelegate>
+@interface CreatePlayerVC : UIViewController<NSXMLParserDelegate,UITextFieldDelegate,UIAlertViewDelegate,FBLoginViewDelegate>
 {
-    
-	UIAlertView *alertNotUnique;
-	NSMutableData *webData;
-	NSMutableString *soapResults;
-	NSXMLParser *xmlParser;
-	
-	BOOL recordUniqueID;
-	BOOL recordProposal;
-    BOOL recordEmail;
-	BOOL noConnection;
-    
-    BOOL itsAProposal;
-    BOOL uniqueEmail;
-    BOOL readyToCreate;
-    
-    BOOL alreadyViewUp;
-
-    
-    NSString *collectedID;
     id <CreatePlayerVCDelegate> delegate;
 }
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-@property (strong, nonatomic) IBOutlet UILabel *errorPlayerIDLabel;
-@property (strong, nonatomic) IBOutlet UILabel *errorEmailLabel;
-@property (strong, nonatomic) IBOutlet UITextField *playerIDTextfield;
-@property (strong, nonatomic) IBOutlet UITextField *emailTextfield;
-@property (strong, nonatomic) IBOutlet UIButton *createPlayerButton;
-@property (strong, nonatomic) IBOutlet UIView *emailMessageViewLabel;
-- (IBAction)createPlayerIDButtonPushed:(id)sender;
-- (BOOL) validateEmail: (NSString *) candidate;
-- (BOOL) validateName: (NSString *) candidate;
--(void) WritePlayerID:(NSString*) playerID;
--(void) startLocationManager;
--(void) tryCreatePlayer;
--(void) askForLocation;
-- (void) emailEnterViewUp;
-- (void) emailEndViewDown;
+@property (strong, nonatomic) IBOutlet FBLoginView *loginView;
+@property (retain, nonatomic) IBOutlet UILabel *nameLabel;
+@property (retain, nonatomic) IBOutlet UILabel *statusLabel;
+@property (retain, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
+
+-(void) WritePlayerID:(NSString*) playerID andName:(NSString*) firstname;
+
 @property (nonatomic, assign) id <CreatePlayerVCDelegate> delegate;
 @end
 

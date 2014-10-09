@@ -69,14 +69,36 @@
     //load from savedStock example int value
     
     NSString* value = [tempDictionary objectForKey:@"playerID"];
+
+    NSLog(@"value is %@",value);
+
+    return value;
+}
+
+-(NSString*) ReadPlayerName
+{
     
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *pathPlist = [documentsDirectory stringByAppendingPathComponent:@"LocalData.plist"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:pathPlist])
+    {
+        NSString *boundle = [[NSBundle mainBundle] pathForResource:@"LocalData" ofType:@"plist"];
+        [fileManager removeItemAtPath:pathPlist error:&error];
+        [fileManager copyItemAtPath:boundle toPath:pathPlist error:&error];
+    }
+    
+    NSMutableDictionary *tempDictionary = [[NSMutableDictionary alloc] initWithContentsOfFile: pathPlist];
+    
+    //load from savedStock example int value
+    
+    NSString* value = [tempDictionary objectForKey:@"playerFirstname"];
     
     NSLog(@"value is %@",value);
     
-    
-    
     return value;
-    
 }
 
 -(int) getBadgeNumber

@@ -452,6 +452,7 @@
 		7204A4A419E40CF600B8AE76 /* UnitedArabEmiratesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49819E40CF600B8AE76 /* UnitedArabEmiratesFlag.png */; };
 		7204A4A519E40CF600B8AE76 /* YemenFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49919E40CF600B8AE76 /* YemenFlag.png */; };
 		7204A4A719E4358700B8AE76 /* DominicanRepublicFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */; };
+		724026B219E55E5E005E3582 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724026B119E55E5E005E3582 /* FacebookSDK.framework */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -1000,6 +1001,7 @@
 		7204A49819E40CF600B8AE76 /* UnitedArabEmiratesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UnitedArabEmiratesFlag.png; path = resources/graphics/pictureQuestions/UnitedArabEmiratesFlag.png; sourceTree = "<group>"; };
 		7204A49919E40CF600B8AE76 /* YemenFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YemenFlag.png; path = resources/graphics/pictureQuestions/YemenFlag.png; sourceTree = "<group>"; };
 		7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DominicanRepublicFlag.png; path = resources/graphics/pictureQuestions/DominicanRepublicFlag.png; sourceTree = "<group>"; };
+		724026B119E55E5E005E3582 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1189,6 +1191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */,
+				724026B219E55E5E005E3582 /* FacebookSDK.framework in Frameworks */,
 				EEBF748A148597B40002F9E8 /* iAd.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -1316,6 +1319,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				724026B119E55E5E005E3582 /* FacebookSDK.framework */,
 				728747A319B9B2D000BADE3B /* libsqlite3.dylib */,
 				EEA138EC147C2EC1007F47BC /* AddressBookUI.framework */,
 				EEA138EA147C2EB7007F47BC /* AddressBook.framework */,
@@ -2673,6 +2677,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/knut/Documents/FacebookSDK,
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2689,6 +2697,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/knut/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MQNorway_Prefix.pch;
 				GENERATE_PROFILING_CODE = NO;

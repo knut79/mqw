@@ -107,6 +107,16 @@
     m_playerID = [playerID retain];
 }
 
+-(NSString*) GetPlayerName
+{
+    return m_playerName;
+}
+
+-(void) SetPlayerName:(NSString*) playerName
+{
+    m_playerName = [playerName retain];
+}
+
 -(NSString*) GetStringByLanguage:(NSString*)str
 {
 	

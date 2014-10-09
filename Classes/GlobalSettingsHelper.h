@@ -20,6 +20,7 @@
 	NSArray* m_languageList;
 	NSInteger m_languageListIndex;
     NSString* m_playerID;
+    NSString* m_playerName;
 }
 
 +(GlobalSettingsHelper*) Instance;
@@ -31,12 +32,14 @@
 -(DistanceMeasurement) GetDistanceMeasurement;
 -(NSString*) GetDistanceMeasurementString;
 -(NSString*) GetPlayerID;
+-(NSString*) GetPlayerName;
 -(NSInteger) ConvertToRightDistance:(NSInteger) kmDistance;
 -(NSString*) GetStringByLanguage:(NSString*)str;
 -(void) SetLanguage:(Language) lang;
 -(void) SetDistanceMeasurement:(DistanceMeasurement) dist;
 -(void) SetDocumentsDirectory;
 -(void) SetPlayerID:(NSString*) playerID;
+-(void) SetPlayerName:(NSString*) playerName;
 -(NSString*) uuid;
 
 @end
