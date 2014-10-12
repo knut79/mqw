@@ -235,15 +235,7 @@
 }
 
 
--(void) releaseCachedImage
-{
-	[cachedImage release];
-	cachedImage = nil;
-}
-
-
 - (void)dealloc {
-	[cachedImage release];
 	[viewref release];
     [super dealloc];
 }

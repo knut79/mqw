@@ -12,15 +12,6 @@
 @synthesize viewref, touchPoint, loopLocation, isPositionedLeft, lastPosition;
 
 - (id)initWithFrame:(CGRect)frame {
-//    if (self = [super initWithFrame:frame]) {
-//        // Initialization code
-//		self.backgroundColor = [UIColor clearColor];
-//		
-//		loopLocation = CGPointMake(50, 130);
-//		isPositionedLeft = YES;
-//    }
-//    return self;
-	
 	
 	if (self = [super initWithFrame:CGRectMake(0, 0, 80, 80)]) {
 		// make the circle-shape outline with a nice border.
@@ -95,6 +86,8 @@
     
     CGContextTranslateCTM(context,1*(self.frame.size.width*0.5),1*(self.frame.size.height*0.5));
     CGContextScaleCTM(context, 1.5, 1.5);
+    NSLog(@"touchPoint x %f  viewref bounds x %f",touchPoint.x,viewref.bounds.origin.x);
+    NSLog(@"touchPoint y %f  viewref bounds y %f",touchPoint.y,viewref.bounds.origin.y);
     CGContextTranslateCTM(context,-1*(touchPoint.x+viewref.bounds.origin.x),-1*(touchPoint.y+viewref.bounds.origin.y));
 
 	[self.viewref.layer renderInContext:context];
@@ -113,15 +106,9 @@
 {
     return isPositionedLeft == YES ? true:false;
 }
--(void) releaseCachedImage
-{
-	[cachedImage release];
-	cachedImage = nil;
-}
 
 
 - (void)dealloc {
-	[cachedImage release];
 	[viewref release];
     [super dealloc];
 }

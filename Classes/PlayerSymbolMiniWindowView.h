@@ -30,6 +30,5 @@ UIImageView *playerSymbolOverlay;
 @property(assign) CGPoint lastPosition;
 
 -(void) setPlacement;
--(void) releaseCachedImage;
 
 @end

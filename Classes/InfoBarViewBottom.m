@@ -185,22 +185,22 @@
 	
 	NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
 	[f setNumberStyle:NSNumberFormatterDecimalStyle];
-	NSNumber * averageDistanceFromTarget;
+	int averageDistanceFromTarget;
 	//read out average distance 
 	FMResultSet *results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance FROM location WHERE locationID = ?;", [[[m_gameRef GetQuestion] GetLocation] GetID]];
 	while([results next]) {
         NSLog(@"int - %i",[results intForColumn:@"avgDistance"]);
         NSLog(@"string - %@",[results stringForColumn:@"avgDistance"]);
         
-        averageDistanceFromTarget = [NSNumber numberWithInt:[results intForColumn:@"avgDistance"]];
+        averageDistanceFromTarget = [results intForColumn:@"avgDistance"];
 	}
-	m_training_oldAvg = [averageDistanceFromTarget intValue];
-	[m_gameRef Training_AddOldResult:[[[m_gameRef GetQuestion] GetLocation] GetName] avgValue:[averageDistanceFromTarget intValue]];
+	m_training_oldAvg = averageDistanceFromTarget;
+	[m_gameRef Training_AddOldResult:[[[m_gameRef GetQuestion] GetLocation] GetName] avgValue:averageDistanceFromTarget];
 	
-	if ([averageDistanceFromTarget intValue] < 0)
+	if (averageDistanceFromTarget < 0)
 		m_trainingLabel2.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"No average"]];
 	else
-		m_trainingLabel2.text = [NSString stringWithFormat:@"%d %@",[averageDistanceFromTarget intValue],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"km"]];
+		m_trainingLabel2.text = [NSString stringWithFormat:@"%d %@",averageDistanceFromTarget,[[GlobalSettingsHelper Instance] GetStringByLanguage:@"km"]];
 	
 	[results close];
 
@@ -213,7 +213,7 @@
 	m_trainingLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"New average distance"];
 	NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
 	[f setNumberStyle:NSNumberFormatterDecimalStyle];
-	NSNumber * averageDistanceFromTarget;
+	int averageDistanceFromTarget;
 	//read out average distance 
 	FMResultSet *results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance FROM location WHERE locationID = ?;", [[[m_gameRef GetQuestion] GetLocation] GetID]];
 	while([results next]) {
@@ -222,7 +222,7 @@
 	}
     [results close];
 	//new avg is higher, Too bad
-	int diffAvgValue = [averageDistanceFromTarget intValue] - m_training_oldAvg;
+	int diffAvgValue = averageDistanceFromTarget - m_training_oldAvg;
 	if (diffAvgValue> 0){
 		m_diffAvg.text = [NSString stringWithFormat:@"(+%d km)",diffAvgValue];
 		m_diffAvg.textColor = [UIColor redColor];
@@ -235,9 +235,9 @@
 		m_trainingLabel2.textColor = [UIColor greenColor];
 	}
 
-	[m_gameRef Training_AddNewResult:[[[m_gameRef GetQuestion] GetLocation] GetName] avgValue:[averageDistanceFromTarget intValue]];
+	[m_gameRef Training_AddNewResult:[[[m_gameRef GetQuestion] GetLocation] GetName] avgValue:averageDistanceFromTarget];
 	
-	m_trainingLabel2.text = [NSString stringWithFormat:@"%d %@",[averageDistanceFromTarget intValue],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"km"]];
+	m_trainingLabel2.text = [NSString stringWithFormat:@"%d %@",averageDistanceFromTarget,[[GlobalSettingsHelper Instance] GetStringByLanguage:@"km"]];
 	[f release];
 	
 	[m_diffAvg setAlpha:1];

@@ -28,13 +28,14 @@
 
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		
-		self.backgroundColor = [UIColor clearColor];
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		self.opaque = YES;
-		
+		/*
 		m_skyView = [[SkyView alloc] initWithFrame:frame];
 		[m_skyView setAlpha:0.9];
 		[self addSubview:m_skyView];
-		
+		*/
 		headerLabel = [[UILabel alloc] init];
 		[headerLabel setFrame:CGRectMake(80, 0, 250, 40)];
 		headerLabel.textAlignment = NSTextAlignmentCenter;
@@ -95,7 +96,7 @@
 	miniLabel.textColor = [UIColor redColor];
 	[miniLabel setFont:[UIFont boldSystemFontOfSize:12.0f]];
 	miniLabel.transform = CGAffineTransformMakeRotation( M_PI/4 );
-	miniLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"];
+	miniLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
 	[self addSubview:miniLabel];
 	
 	
@@ -112,7 +113,7 @@
 	difficultyLabel.layer.shadowRadius = 1.5;
 	//difficultyLabel.shadowColor = [UIColor blackColor];
 	//difficultyLabel.shadowOffset = CGSizeMake(1,1);
-	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
+	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
 	[self addSubview:difficultyLabel];
 	
 	slideDifficultyPicker = [[UISlider alloc] init];
@@ -152,16 +153,20 @@
 	[buttonStart addTarget:self action:@selector(startGame:) forControlEvents:UIControlEventTouchDown];
 	[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
 	buttonStart.frame = CGRectMake(60 + playersXOffset, 160 + playersYOffset, 150.0, 40.0);
-	//buttonStart.center = CGPointMake([screen applicationFrame].size.width/2, 170 + playersYOffset);
+    buttonStart.layer.borderWidth=1.0f;
+    [buttonStart setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonStart.layer.borderColor=[[UIColor whiteColor] CGColor];
 	buttonStart.center = CGPointMake([screen applicationFrame].size.width/2, 265 + playersYOffset);
     m_loadingLabel.center = buttonStart.center;
 	[self addSubview:buttonStart];
 	
 	
-	
 	buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[buttonBack addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchDown];
 	[buttonBack setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Back"] forState:UIControlStateNormal];
+    buttonBack.layer.borderWidth=1.0f;
+    [buttonBack setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonBack.layer.borderColor=[[UIColor whiteColor] CGColor];
 	buttonBack.frame = CGRectMake(60 + playersXOffset, 160 + playersYOffset, 150.0, 40.0);
 	//buttonBack.center = CGPointMake([screen applicationFrame].size.width/2, 240 + playersYOffset);
 	buttonBack.center = CGPointMake([screen applicationFrame].size.width/2, 320 + playersYOffset);
@@ -176,25 +181,13 @@
 	playerOneTextField.delegate = self;
     [playerOneTextField setAlpha:0.5];
     
-//	NSArray *resultsPlayers = [[SqliteHelper Instance] executeQuery:@"SELECT * FROM player"];
-//	if (resultsPlayers.count > 0) {
-//		NSDictionary *resultsLanguageDictionary = [resultsPlayers objectAtIndex:0];
-//		playerOneTextField.placeholder = [[GlobalSettingsHelper Instance] GetStringByLanguage:[resultsLanguageDictionary objectForKey:@"name"]];
-//		playerOneTextField.text = playerOneTextField.placeholder;
-//	}
-//	else {
-//		playerOneTextField.placeholder = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"enter name"];
-//	}
     
     playerOneTextField.text = [[GlobalSettingsHelper Instance] GetPlayerName];
 	playerOneTextField.userInteractionEnabled = NO;
     
 	playerOneTextField.borderStyle = UITextBorderStyleRoundedRect;
 	playerOneTextField.textAlignment = NSTextAlignmentCenter;
-//	playerOneTextField.backgroundColor = [UIColor redColor];
 	playerOneTextField.textColor = [UIColor redColor];
-//	[playerOneTextField setValue:[UIColor redColor] 
-//					  forKeyPath:@"_placeholderLabel.textColor"];
     playerOneTextField.layer.cornerRadius=8.0f;
     playerOneTextField.layer.masksToBounds=YES;
     playerOneTextField.layer.borderColor=[[UIColor redColor]CGColor];
@@ -205,6 +198,9 @@
 	buttonAddPlayer = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[buttonAddPlayer addTarget:self action:@selector(addPlayer:) forControlEvents:UIControlEventTouchDown];
 	[buttonAddPlayer setTitle:@"+" forState:UIControlStateNormal];
+    buttonAddPlayer.layer.borderWidth=1.0f;
+    [buttonAddPlayer setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonAddPlayer.layer.borderColor=[[UIColor whiteColor] CGColor];
 	buttonAddPlayer.frame = CGRectMake(180.0 + playersXOffset, 100 + playersYOffset, 30, 30);
 	buttonAddPlayer.center = CGPointMake(([screen applicationFrame].size.width/2) + 100, 130 + playersYOffset);
 	[self addSubview:buttonAddPlayer];
@@ -258,37 +254,9 @@
 	
 	[self setAlpha:0];
 	
-//	[buttonStart setAlpha:0];
-//	
-//	
-//	m_activityIndicator = [[UIActivityIndicatorView alloc] init];
-//	m_activityIndicator.frame  = CGRectMake(0,0,60,60);
-//	m_activityIndicator.center = buttonStart.center;
-//	m_activityIndicator.hidesWhenStopped  = YES;
-//	[self addSubview:m_activityIndicator];	
-//	[m_activityIndicator startAnimating];
-//	[self bringSubviewToFront:m_activityIndicator];
-//	
-//	m_loadingLabel = [[UILabel alloc] init];
-//	[m_loadingLabel setFrame:CGRectMake(0, 0, 250, 40)];
-//	m_loadingLabel.backgroundColor = [UIColor clearColor]; 
-//	m_loadingLabel.textColor = [UIColor redColor];
-//	[m_loadingLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
-//	m_loadingLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
-//	m_loadingLabel.layer.shadowOpacity = 1.0;
-//	m_loadingLabel.center = buttonStart.center;
-//	m_loadingLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Loading game objects"];
-//	m_loadingLabel.textAlignment = NSTextAlignmentCenter;		
-//	[self addSubview:m_loadingLabel];
-	
 	[screen release];
 }
 
-
-- (void) drawPlaceholderInRect:(CGRect)rect {
-    [[UIColor blueColor] setFill];
-    [[self placeholder] drawInRect:rect withFont:[UIFont systemFontOfSize:16]];
-}
 
 - (IBAction)flipMode:(id)sender {
 	
@@ -353,7 +321,7 @@
 			value = [[[GlobalSettingsHelper Instance] GetStringByLanguage:@"normal"] retain];
 		}
 	}
-	miniLabel.text = [NSString stringWithFormat:@"%@", value]; 
+	miniLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],value];
     difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"], value]; 
 	[value release];	
 }
@@ -421,7 +389,7 @@
 		playerFourTextField.text = [NSString stringWithFormat:@"%@ 4",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player"]];
 	}
 	[buttonBack setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Back"] forState:UIControlStateNormal];
-	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
+	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Label"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
 	[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
 	headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start Game"];
 }
@@ -627,6 +595,9 @@
 				buttonRemovePlayer = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 				[buttonRemovePlayer addTarget:self action:@selector(removePlayer:) forControlEvents:UIControlEventTouchDown];
 				[buttonRemovePlayer setTitle:@"-" forState:UIControlStateNormal];
+                buttonRemovePlayer.layer.borderWidth=1.0f;
+                [buttonRemovePlayer setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                buttonRemovePlayer.layer.borderColor=[[UIColor whiteColor] CGColor];
 				buttonRemovePlayer.frame = CGRectMake(180.0 + playersXOffset, 100 + playersYOffset, 30, 30);
 				buttonRemovePlayer.center = CGPointMake(([screen applicationFrame].size.width/2) + 100, 130 + playersYOffset);
 				[buttonRemovePlayer setAlpha:0];
@@ -695,10 +666,7 @@
 				playerThreeTextField.placeholder = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"enter name"];
 				playerThreeTextField.textAlignment = NSTextAlignmentCenter;
 				playerThreeTextField.borderStyle = UITextBorderStyleRoundedRect;
-//				playerThreeTextField.backgroundColor = [UIColor blueColor];
 				playerThreeTextField.textColor = [UIColor blueColor];
-//				[playerThreeTextField setValue:[UIColor blueColor] 
-//									forKeyPath:@"_placeholderLabel.textColor"];
                 playerThreeTextField.layer.cornerRadius=8.0f;
                 playerThreeTextField.layer.masksToBounds=YES;
                 playerThreeTextField.layer.borderColor=[[UIColor blueColor]CGColor];
@@ -763,6 +731,7 @@
 			startGameAndBackBtnShouldChangeSize = YES;
 			newFrameForButtonStart = CGRectMake(buttonStart.frame.origin.x  + 70.0f + 6.0f, buttonStart.frame.origin.y + 40.0f, buttonStart.frame.size.width - 30, buttonStart.frame.size.height);
 			newFrameForButtonBack = CGRectMake(buttonBack.frame.origin.x - 70.0f + 16.0f, buttonBack.frame.origin.y - 15.0f, buttonBack.frame.size.width - 30, buttonBack.frame.size.height);
+
 			if ([playerThreeTextField.text length] == 0) {
 				playerThreeTextField.text = [NSString stringWithFormat:@"%@ 3",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player"]];
 			}

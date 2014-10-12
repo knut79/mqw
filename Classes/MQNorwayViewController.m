@@ -713,21 +713,10 @@
 	[UIView setAnimationDelegate:self];
 	//[touchImageView setTransform:CGAffineTransformIdentity];
 	[loop setAlpha:0];
-	//[UIView SetAnimationCurve:
-	[UIView setAnimationDidStopSelector:@selector(releaseLoop)];
-	[UIView commitAnimations];	
-	//	[loop removeFromSuperview];
-	//	[loop release];
-	//	loop = nil;	
+	[UIView commitAnimations];
 }
 
--(void) releaseLoop
-{
-	[loop releaseCachedImage];
-	//	[loop removeFromSuperview];
-	//	[loop release];
-	//	loop = nil;	
-}
+
 
 
 -(void) hideInfoBar
@@ -1229,6 +1218,7 @@
 #pragma mark GameEndedViewDelegate
 -(void) GameOver
 {
+    [self cleanUpGameElements];
     //clean up GamesEndedView
     [m_gameEndedView removeFromSuperview];
     m_gameEndedView = nil;
@@ -1589,17 +1579,35 @@
 #pragma mark QuitButtonViewDelegate
 -(void) QuitGame
 {
-
-    [clockView removeFromSuperview];
-    clockView = nil;
-    [quitButton removeFromSuperview];
-    quitButton = nil;
-    [passButton removeFromSuperview];
-    passButton = nil;
-    [hintButton removeFromSuperview];
-    hintButton = nil;
+    [self cleanUpGameElements];
     
 	[self DisplayMainMenu];
+}
+
+-(void) cleanUpGameElements
+{
+    [loop removeFromSuperview];
+    [loop dealloc];
+    loop = nil;
+    [clockView stop];
+    [clockView removeFromSuperview];    
+    [clockView dealloc];
+    clockView = nil;
+    [quitButton removeFromSuperview];
+    [quitButton dealloc];
+    quitButton = nil;
+    [passButton removeFromSuperview];
+    [passButton dealloc];
+    passButton = nil;
+    [hintButton removeFromSuperview];
+    [hintButton dealloc];
+    hintButton = nil;
+    [resultBoardView.playerSymbolMiniWindowView dealloc];
+    //resultBoardView.playerSymbolMiniWindowView = nil;
+    [resultBoardView removeFromSuperview];
+    [resultBoardView dealloc];
+    resultBoardView = nil;
+    
 }
 
 -(void) GiveUp

@@ -107,7 +107,6 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 -(void) SaveGameData;
 -(void) LoadGameAndResume;
 -(void) positionPlayerSymbol:(CGPoint)thePoint zoomOffsetScale:(float) zoomOffsetScale;
--(void) releaseLoop;
 -(void) SetPlayerButtons;
 -(void) SetPlayerClock;
 -(void) AnimateAndGiveTimePoints;

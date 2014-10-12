@@ -22,8 +22,8 @@
 		
         [self setAlpha:0];
         
-		self.backgroundColor = [UIColor clearColor];
-		self.opaque = YES;
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		
@@ -41,9 +41,11 @@
 		[copyrightLabel release];
 		
 		
+        /*
 		m_skyView = [[SkyView alloc] initWithFrame:frame];
 		[m_skyView setAlpha:0.5];
 		[self addSubview:m_skyView];
+        */
 		
 		//UIImage *miniLogoImage = [UIImage imageNamed:@"miniLogoMainMenu.png"];
 		NSLog(@"minilogo is:%@",mini_logo_image);
@@ -57,6 +59,9 @@
 		buttonStartMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonStartMenu addTarget:self action:@selector(startGameMenu:) forControlEvents:UIControlEventTouchDown];
 		[buttonStartMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
+        buttonStartMenu.layer.borderWidth=1.0f;
+        [buttonStartMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonStartMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
 		buttonStartMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
 		buttonStartMenu.center = CGPointMake([screen applicationFrame].size.width/2,160);
 		[self addSubview:buttonStartMenu];
@@ -64,6 +69,9 @@
         buttonChallengesMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonChallengesMenu addTarget:self action:@selector(takeChallengeGameMenu:) forControlEvents:UIControlEventTouchDown];
 		[buttonChallengesMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Challenges"] forState:UIControlStateNormal];
+        buttonChallengesMenu.layer.borderWidth=1.0f;
+        [buttonChallengesMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonChallengesMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
 		buttonChallengesMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
 		buttonChallengesMenu.center = CGPointMake([screen applicationFrame].size.width/2,220);
 		[self addSubview:buttonChallengesMenu];
@@ -71,6 +79,9 @@
 		buttonSettingsMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonSettingsMenu addTarget:self action:@selector(gameSettingsMenu:) forControlEvents:UIControlEventTouchDown];
 		[buttonSettingsMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Settings"] forState:UIControlStateNormal];
+        buttonSettingsMenu.layer.borderWidth=1.0f;
+        [buttonSettingsMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonSettingsMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
 		buttonSettingsMenu.frame = CGRectMake(0, 0, 120.0, 40.0);
 		buttonSettingsMenu.center = CGPointMake([screen applicationFrame].size.width/2,300);
 //		[buttonSettingsMenu setAlpha:0];
@@ -79,6 +90,9 @@
 		buttonOtherInfoMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonOtherInfoMenu addTarget:self action:@selector(otherInfoMenu:) forControlEvents:UIControlEventTouchDown];
 		[buttonOtherInfoMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Status"] forState:UIControlStateNormal];
+        buttonOtherInfoMenu.layer.borderWidth=1.0f;
+        [buttonOtherInfoMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonOtherInfoMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
 		buttonOtherInfoMenu.frame = CGRectMake(0, 0, 120.0, 40.0);
 		buttonOtherInfoMenu.center = CGPointMake([screen applicationFrame].size.width/2,360);
 //		[buttonOtherInfoMenu setAlpha:0];

@@ -13,7 +13,6 @@
 @interface MagnifierView : UIView {
 	UIView *viewref;
 	CGPoint touchPoint;
-	UIImage *cachedImage;
 	CGPoint loopLocation;
 	BOOL isPositionedLeft;
 	CGPoint lastPosition;
@@ -29,7 +28,6 @@
 
 -(bool) IsPositionedLeft;
 -(void) setPlacement;
--(void) releaseCachedImage;
 -(void) setPlayerSymbol:(NSString*) playerSymbol;
 -(void) setClocViewRef:(ClockView*) cvRef;
 @end
