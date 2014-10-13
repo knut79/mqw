@@ -868,7 +868,9 @@
     
     if(clockView != nil)
     {
+        [clockView stop];
         [clockView removeFromSuperview];
+        [clockView dealloc];
         clockView = nil;
     }
     if(timePointsLabel != nil)
@@ -996,9 +998,9 @@
         //[resultBoardView.sectionFiguresView setAlpha:1];
         [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(scaleFactor, scaleFactor)];
         [UIView commitAnimations];
-        [screen release];
+        
     }
-    
+    [screen release];
     //END TEST
     
 	[m_gameRef SetPlayerPositionsByScore];
@@ -1478,7 +1480,7 @@
 			gameFinished = YES;
 		}
 		[players release];
-		[singlePlayer release];	
+		//[singlePlayer release];
 	}
 	else {
 		if ([m_gameRef GetGameType] == mostPoints) {
