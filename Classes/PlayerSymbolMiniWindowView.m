@@ -49,7 +49,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	
-	CGPoint currentPoint = [[touches anyObject] locationInView:self.superview];
+	//CGPoint currentPoint = [[touches anyObject] locationInView:self.superview];
 	
 }
 
@@ -129,6 +129,7 @@
             CGRect imageRect = CGRectMake(xValueForLastCols,(row*rowIncFactor) - yOffset - outOfBoundsOffset, imageWidth, imageHeight);
             mapHeight += imageHeight;
             [imageFirstTwoCols drawInRect:imageRect];
+            [imageFirstTwoCols release];
     }
     
     bool outOfBoundsBottom = yOffset + 80 > mapHeight ? true:false;
@@ -143,6 +144,7 @@
         CGRect imageRect = CGRectMake(xValueForLastCols,(row*rowIncFactor) - yOffset - outOfBoundsOffset, imageWidth, imageHeight);
         
         [imageFirstTwoCols drawInRect:imageRect];
+        [imageFirstTwoCols release];
     }
     
     
@@ -152,13 +154,14 @@
         for (int col = 0; col <= 3; col++) {
         
             
-    UIImage *image = [[UIImage alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"world_25_%d_%d.jpg", col, row]]];
+            UIImage *image = [[UIImage alloc] initWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"world_25_%d_%d.jpg", col, row]]];
             float imageWidth =image.size.width/devideFactor;
             float imageHeight = image.size.height/devideFactor;
             CGRect imageRect = CGRectMake((col *colIncFactor) - xOffset ,(row*rowIncFactor) - yOffset - outOfBoundsOffset, imageWidth, imageHeight);
             mapWidth += imageWidth;
             xValueForRepeatOfFirstColumn =imageRect.origin.x + imageRect.size.width;
             [image drawInRect:imageRect];
+            [image release];
             
         }
         
@@ -172,6 +175,7 @@
         float imageHeight = imageLastCol.size.height/devideFactor;
         CGRect imageRect = CGRectMake(xValueForRepeatOfFirstColumn ,(row*rowIncFactor) - yOffset - outOfBoundsOffset, imageWidth, imageHeight);
         [imageLastCol drawInRect:imageRect];
+        [imageLastCol release];
 
         
     }
