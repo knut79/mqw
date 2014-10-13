@@ -115,7 +115,7 @@
 2018;1462;sl
 qst;coaLibya##medium#LibyaFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Libya;10;easy;Tenth-largest country in the world, and the largest in Africa and in the Mediterranean. Capital: Algiers##spn#fra#ger;Africa#East by Libya
-058;1980
+2058;1980
 2058;1976;st
 2056;1972
 2058;1969;sl
