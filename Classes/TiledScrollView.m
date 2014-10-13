@@ -158,7 +158,7 @@
                                   _lastVisibleRow  < row || _lastVisibleColumn  < col);
             
             if (tileIsMissing) {
-                NSLog(@"loading tile %i %i ,%i",resolution,row,col);
+
                 UIView *tile = [dataSource tiledScrollView:self tileForRow:row column:col resolution:resolution];
                          
                 // set the tile's frame so we insert it at the correct position
@@ -218,8 +218,7 @@
 /*****************************************************************************************/
 - (void)updateResolution {
     
-	NSLog(@"upd res");
-	
+
     // delta will store the number of steps we should change our resolution by. If we've fallen below
     // a 25% zoom scale, for example, we should lower our resolution by 2 steps so delta will equal -2.
     // (Provided that lowering our resolution 2 steps stays within the limit imposed by minimumResolution.)

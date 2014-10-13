@@ -86,8 +86,6 @@
     
     CGContextTranslateCTM(context,1*(self.frame.size.width*0.5),1*(self.frame.size.height*0.5));
     CGContextScaleCTM(context, 1.5, 1.5);
-    NSLog(@"touchPoint x %f  viewref bounds x %f",touchPoint.x,viewref.bounds.origin.x);
-    NSLog(@"touchPoint y %f  viewref bounds y %f",touchPoint.y,viewref.bounds.origin.y);
     CGContextTranslateCTM(context,-1*(touchPoint.x+viewref.bounds.origin.x),-1*(touchPoint.y+viewref.bounds.origin.y));
 
 	[self.viewref.layer renderInContext:context];
