@@ -241,6 +241,7 @@
 									BarWidth:[[resultsPlayers stringForColumn:@"barWidth"] integerValue]];
 			//Question *quest = [[[Question alloc] initWithLocation:tempLocation andID:[dictionaryPlayer objectForKey:@"questionID"]];
 			[players addObject:tempPlayer];
+            [tempPlayer release];
 			playerNumber++;
 		}
 		[resultsPlayers close];
@@ -887,7 +888,14 @@
     [resultBoardView.sectionFiguresView setTransform:CGAffineTransformIdentity];
     resultBoardView.sectionFiguresView.center = CGPointMake(([screen applicationFrame].size.width/2), ([screen applicationFrame].size.height/2));
     [screen release];
-    [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
+    /*
+    if (resultBoardView.playerSymbolMiniWindowView != nil) {
+        [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
+        [resultBoardView.playerSymbolMiniWindowView dealloc];
+        resultBoardView.playerSymbolMiniWindowView = nil;        
+    }*/
+
+    
     
 	if ([m_gameRef GetGameType] == lastStanding) {
         
@@ -974,18 +982,12 @@
 - (void)finishedDrawingResultMap
 {
     //TEST
+    
     UIScreen *screen = [[UIScreen mainScreen] retain];
     CGRect regionBoundsRect = resultBoardView.boundsOfRegion;
     if (regionBoundsRect.size.width > 0 && regionBoundsRect.size.height > 0) {
         CGPoint regionBoundsPoint = CGPointMake(regionBoundsRect.origin.x + (regionBoundsRect.size.width/2), regionBoundsRect.origin.y + (regionBoundsRect.size.height/2));
         float scaleFactor = ([screen applicationFrame].size.width * 0.5)/regionBoundsRect.size.width;
-        /*
-         float scaleFactor = 2.0;
-         if (testRect.size.width > [screen applicationFrame].size.width) {
-         scaleFactor = 0.5;
-         }*/
-        
-        
         int xOffset = ([screen applicationFrame].size.width/2) - regionBoundsPoint.x;
         int yOffset =([screen applicationFrame].size.height/2) - regionBoundsPoint.y;
         xOffset = xOffset * scaleFactor;
@@ -1001,6 +1003,7 @@
         
     }
     [screen release];
+    
     //END TEST
     
 	[m_gameRef SetPlayerPositionsByScore];
