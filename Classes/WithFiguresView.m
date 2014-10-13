@@ -155,22 +155,22 @@
 				float colVar3 = (320.0/scaledTileWidth);
 				int maxCol = (int)(colvar2 + colVar3 + 0.5);
 				
-				float rowVar2 = (tilesMapViewBounds.origin.y/scaledTileWidth) ;
-				float rowVar3 = (480.0/scaledTileWidth);
+				float rowVar2 = (tilesMapViewBounds.origin.y/scaledTileHeight) ;
+				float rowVar3 = (480.0/scaledTileHeight);
 				//float rowVar1 = (mapSize.height/256);
 				int maxRow = (int)(rowVar2 + rowVar3  + 0.5);
 
 				//dont draw the map upside down
 				CGContextScaleCTM(context, 1.0, -1.0);
-				int tileStandardHeight = 0;
-				int tileStandardWidth = 0;
+				long tileStandardHeight = 0;
+				long tileStandardWidth = 0;
 				NSString *imageName;
 				NSString* imageFileName;
 				CGDataProviderRef provider;
 				CGImageRef image;
 				float scaledTileWidthDynamic;
 				float scaledTileHeightDynamic;
-				int currentScaledWidth,currentScaledHeight,endOfColValue; 
+				long currentScaledWidth,currentScaledHeight,endOfColValue;
 
 				for (int row = minRow; row <= maxRow; row++) {
 					for (int col = minCol; col <= maxCol; col++) {
@@ -178,10 +178,16 @@
 						imageName = [NSString stringWithFormat:@"world_%d_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
 						imageFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageName] ;
 						provider = CGDataProviderCreateWithFilename([imageFileName UTF8String]);
-						//image = CGImageCreateWithPNGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
-						image = CGImageCreateWithJPEGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
-						image = [self CreateScaledCGImageFromCGImage:image andScale:tiledMapViewZoomScale];
 						
+						image = CGImageCreateWithJPEGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
+						if (image == nil) {
+                            continue;
+                        }
+                        image = [self CreateScaledCGImageFromCGImage:image andScale:tiledMapViewZoomScale];
+						if (image == nil) {
+                            int a = 1;
+                            a++;
+                        }
 
 						currentScaledWidth = CGImageGetWidth(image); 
 						currentScaledHeight = CGImageGetHeight(image) ;
@@ -410,7 +416,7 @@
 		
 		UIColor *uicolor = [playerColor retain];
 		CGColorRef color = [uicolor CGColor];
-		int numComponents = CGColorGetNumberOfComponents(color);
+		long numComponents = CGColorGetNumberOfComponents(color);
 		if (numComponents == 4)
 		{
 			const CGFloat *components = CGColorGetComponents(color);
@@ -486,7 +492,8 @@
 
     
 	CGContextClipToMask(context, t_testRect, mask);
-	
+	CGImageRelease(mask);
+    
 	CGContextSetRGBFillColor(context, 0, 200, 0, 0.5);
     
     //test filling with image
@@ -752,7 +759,7 @@
 			
 			UIColor *uicolor = [playerColor retain];
 			CGColorRef color = [uicolor CGColor];
-			int numComponents = CGColorGetNumberOfComponents(color);
+			long numComponents = CGColorGetNumberOfComponents(color);
 			if (numComponents == 4)
 			{
 				const CGFloat *components = CGColorGetComponents(color);
@@ -800,6 +807,7 @@
 	NSString *playerSymbolFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:playerSymbol];
 	CGDataProviderRef provider = CGDataProviderCreateWithFilename([playerSymbolFileName UTF8String]);
 	CGImageRef playerSymbolRef = CGImageCreateWithPNGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
+    CGDataProviderRelease(provider);
 	CGContextDrawImage (context,CGRectMake(devicePoint.x - 15, devicePoint.y - 15, 30, 30),playerSymbolRef);
 	CGImageRelease(playerSymbolRef);
 }
@@ -893,7 +901,7 @@
 	CGColorSpaceRef colorspace = CGImageGetColorSpace(image); 
 	context = CGBitmapContextCreate (bitmapData,width,height,8,bitmapBytesPerRow, 
 									 colorspace,kCGImageAlphaNoneSkipFirst); 
-	CGColorSpaceRelease(colorspace); 
+	//CGColorSpaceRelease(colorspace);
 	
 	if (context == NULL) 
 		// error creating context 
@@ -906,8 +914,11 @@
 	
 	
 	CGImageRef imgRef = CGBitmapContextCreateImage(context); 
-	CGContextRelease(context); 
-	free(bitmapData); 
+	
+    CGContextRelease(context);
+    
+	free(bitmapData);
+    
 	
 	return imgRef; 
 }
