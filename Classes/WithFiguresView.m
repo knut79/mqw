@@ -929,7 +929,10 @@
 }
 
 - (void)dealloc {
-    //[_sectionFiguresView dealloc];
+    [_sectionFiguresView removeFromSuperview];
+    [_playerSymbolMiniWindowView removeFromSuperview];
+    [_sectionFiguresView dealloc];
+    [_playerSymbolMiniWindowView dealloc];
     [super dealloc];
 }
 

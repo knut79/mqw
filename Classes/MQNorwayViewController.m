@@ -1607,7 +1607,7 @@
     [hintButton removeFromSuperview];
     [hintButton dealloc];
     hintButton = nil;
-    [resultBoardView.playerSymbolMiniWindowView dealloc];
+    //[resultBoardView.playerSymbolMiniWindowView dealloc];
     //resultBoardView.playerSymbolMiniWindowView = nil;
     [resultBoardView removeFromSuperview];
     [resultBoardView dealloc];

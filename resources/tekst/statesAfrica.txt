@@ -3671,4 +3671,12 @@ inf;State;Comoros;10;easy;The third-smallest African nation by area. Capital: Mo
 2545;1964
 qst;coaSeychelles##medium#SeychellesFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Seyshelles;10;easy;With a population of 90,024, has the smallest population of any African state (numbers from 2014). Capital: Victoria##spn#fra#ger;Africa#East of mainland Southeast Africa
+2431;2061
+2431;2063
+2432;2065
+2434;2064
+2436;2061
+2434;2059
+2432;2059
+inf;UnDefRegion;Mayotte;10;easy;An overseas department and region of France. Its biggest city and prefecture is Mamoudzou.##spn#fra#ger;Africa#Northern Mozambique Channel
 eof

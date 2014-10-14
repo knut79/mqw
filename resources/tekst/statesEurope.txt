@@ -1,0 +1,20 @@
+2303;1490
+2301;1492
+2298;1494
+2296;1494
+2296;1496
+2293;1496
+2291;1494
+2288;1495
+2287;1492
+2286;1489
+2287;1486
+2290;1486;st
+2293;1487
+2296;1487
+2300;1487
+2301;1489
+2302;1489;sl
+qst;coaCyprus##medium#CyprusFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Cyprus;10;easy;The international community considers the northern part of the island as territory of the Republic of Cyprus illegally occupied by Turkish forces Capital: Nicosia##spn#fra#ger;Europe#Island country in the Eastern Mediterranean Sea
+eof

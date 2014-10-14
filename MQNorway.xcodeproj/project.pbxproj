@@ -483,7 +483,6 @@
 		729FC43119ECA16B00B082E5 /* NiueFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40B19ECA16A00B082E5 /* NiueFlag.png */; };
 		729FC43219ECA16B00B082E5 /* NorthKoreaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40C19ECA16A00B082E5 /* NorthKoreaFlag.png */; };
 		729FC43319ECA16B00B082E5 /* PakistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40D19ECA16B00B082E5 /* PakistanFlag.png */; };
-		729FC43419ECA16B00B082E5 /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40E19ECA16B00B082E5 /* Russia.png */; };
 		729FC43519ECA16B00B082E5 /* SamoaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40F19ECA16B00B082E5 /* SamoaFlag.png */; };
 		729FC43619ECA16B00B082E5 /* SeychellesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41019ECA16B00B082E5 /* SeychellesFlag.png */; };
 		729FC43719ECA16B00B082E5 /* SolomonIslandsFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41119ECA16B00B082E5 /* SolomonIslandsFlag.png */; };
@@ -497,6 +496,8 @@
 		729FC43F19ECA16B00B082E5 /* TuvaluFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41919ECA16B00B082E5 /* TuvaluFlag.png */; };
 		729FC44019ECA16B00B082E5 /* UzbekistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41A19ECA16B00B082E5 /* UzbekistanFlag.png */; };
 		729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */; };
+		729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44219ED372F00B082E5 /* statesAsia.txt */; };
+		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1076,7 +1077,6 @@
 		729FC40B19ECA16A00B082E5 /* NiueFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NiueFlag.png; path = resources/graphics/pictureQuestions/NiueFlag.png; sourceTree = "<group>"; };
 		729FC40C19ECA16A00B082E5 /* NorthKoreaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorthKoreaFlag.png; path = resources/graphics/pictureQuestions/NorthKoreaFlag.png; sourceTree = "<group>"; };
 		729FC40D19ECA16B00B082E5 /* PakistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PakistanFlag.png; path = resources/graphics/pictureQuestions/PakistanFlag.png; sourceTree = "<group>"; };
-		729FC40E19ECA16B00B082E5 /* Russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Russia.png; path = resources/graphics/pictureQuestions/Russia.png; sourceTree = "<group>"; };
 		729FC40F19ECA16B00B082E5 /* SamoaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SamoaFlag.png; path = resources/graphics/pictureQuestions/SamoaFlag.png; sourceTree = "<group>"; };
 		729FC41019ECA16B00B082E5 /* SeychellesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SeychellesFlag.png; path = resources/graphics/pictureQuestions/SeychellesFlag.png; sourceTree = "<group>"; };
 		729FC41119ECA16B00B082E5 /* SolomonIslandsFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SolomonIslandsFlag.png; path = resources/graphics/pictureQuestions/SolomonIslandsFlag.png; sourceTree = "<group>"; };
@@ -1090,6 +1090,8 @@
 		729FC41919ECA16B00B082E5 /* TuvaluFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TuvaluFlag.png; path = resources/graphics/pictureQuestions/TuvaluFlag.png; sourceTree = "<group>"; };
 		729FC41A19ECA16B00B082E5 /* UzbekistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UzbekistanFlag.png; path = resources/graphics/pictureQuestions/UzbekistanFlag.png; sourceTree = "<group>"; };
 		729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanuatuFlag.png; path = resources/graphics/pictureQuestions/VanuatuFlag.png; sourceTree = "<group>"; };
+		729FC44219ED372F00B082E5 /* statesAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAsia.txt; path = resources/tekst/statesAsia.txt; sourceTree = "<group>"; };
+		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1358,6 +1360,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				729FC44219ED372F00B082E5 /* statesAsia.txt */,
 				7204A48A19E34D4500B8AE76 /* statesAfrica.txt */,
 				7204A41319E00B1F00B8AE76 /* statesEastAsia.txt */,
 				7204A41419E00B1F00B8AE76 /* statesEurope.txt */,
@@ -1808,6 +1811,7 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				729FC44419ED6AF800B082E5 /* RussiaFlag.png */,
 				729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */,
 				729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */,
 				729FC3F819ECA16A00B082E5 /* BangladeshFlag.png */,
@@ -1832,7 +1836,6 @@
 				729FC40B19ECA16A00B082E5 /* NiueFlag.png */,
 				729FC40C19ECA16A00B082E5 /* NorthKoreaFlag.png */,
 				729FC40D19ECA16B00B082E5 /* PakistanFlag.png */,
-				729FC40E19ECA16B00B082E5 /* Russia.png */,
 				729FC40F19ECA16B00B082E5 /* SamoaFlag.png */,
 				729FC41019ECA16B00B082E5 /* SeychellesFlag.png */,
 				729FC41119ECA16B00B082E5 /* SolomonIslandsFlag.png */,
@@ -2387,6 +2390,7 @@
 				7204A25419D976D600B8AE76 /* world_100_0_7.jpg in Resources */,
 				7204A28419D976D600B8AE76 /* world_100_4_7.jpg in Resources */,
 				7204A31519D978F000B8AE76 /* pauseBtn.png in Resources */,
+				729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */,
 				7204A2FE19D976D600B8AE76 /* world_100_14_9.jpg in Resources */,
 				7204A2E019D976D600B8AE76 /* world_100_12_3.jpg in Resources */,
 				7204A28B19D976D600B8AE76 /* world_100_5_2.jpg in Resources */,
@@ -2395,6 +2399,7 @@
 				7204A16919D976B300B8AE76 /* world_50_2_0.jpg in Resources */,
 				729FC43E19ECA16B00B082E5 /* TurkmenistanFlag.png in Resources */,
 				7204A12B19D9769A00B8AE76 /* world_25_3_1.jpg in Resources */,
+				729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */,
 				7204A28E19D976D600B8AE76 /* world_100_5_5.jpg in Resources */,
 				7204A2EB19D976D600B8AE76 /* world_100_13_2.jpg in Resources */,
 				729FC43919ECA16B00B082E5 /* SriLankaFlag.png in Resources */,
@@ -2501,7 +2506,6 @@
 				7204A29719D976D600B8AE76 /* world_100_6_2.jpg in Resources */,
 				7204A47819E3487200B8AE76 /* NamibiaFlag.png in Resources */,
 				7204A25219D976D600B8AE76 /* world_100_0_5.jpg in Resources */,
-				729FC43419ECA16B00B082E5 /* Russia.png in Resources */,
 				7204A17619D976B300B8AE76 /* world_50_4_1.jpg in Resources */,
 				7204A30119D976D600B8AE76 /* world_100_15_0.jpg in Resources */,
 				7204A16E19D976B300B8AE76 /* world_50_2_5.jpg in Resources */,
