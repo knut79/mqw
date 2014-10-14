@@ -42,12 +42,12 @@
 -(NSInteger) DrawLineToPlace:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor andPlayerSymbol:(NSString*) playerSymbol;
 -(NSInteger) DrawLineToRegion:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor
 			  andPlayerSymbol:(NSString*) playerSymbol;
--(void) DrawPlace:(MpLocation*) loc andContextRef:(CGContextRef) context;
--(void) DrawRegion:(MpLocation*) loc andContextRef:(CGContextRef) context ;
+-(void) DrawPlace:(MpLocation*) loc;
+-(void) DrawRegion:(MpLocation*) loc;
 -(void) DrawPlayerSymbol:(NSString*) playerSymbol andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint;
 -(bool) PlayerSymbolInsideBounds:(CGPoint) realMapGamePoint resultMapBounds:(CGRect) resultMapBounds;
--(void) SetExludedRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context; 
--(void) SetRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context ;
+-(void) SetExludedRegionsPaths:(MpLocation*) loc; 
+-(void) SetRegionsPaths:(MpLocation*) loc;
 -(void) StrokeUpRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) StrokeUpExludedRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) ResetRegionBoundValues;

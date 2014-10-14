@@ -277,11 +277,11 @@
 			
 			if ([loc isKindOfClass:[MpPlace class]] == YES) 
 			{
-				[self DrawPlace:loc andContextRef:context];
+				[self DrawPlace:loc];
 			}
 			else if([loc isKindOfClass:[MpRegion class]] == YES)
 			{
-				[self DrawRegion:loc andContextRef:context ];
+				[self DrawRegion:loc];
 			}
 			
 			
@@ -455,9 +455,9 @@
 	return distanceBetweenPoints;
 }
 
--(void) DrawRegion:(MpLocation*) loc andContextRef:(CGContextRef) context 
+-(void) DrawRegion:(MpLocation*) loc
 {
-	
+	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextSaveGState(context);
 	
 	CGImageRef mask;
@@ -496,7 +496,7 @@
     
 	CGContextSetRGBFillColor(context, 0, 200, 0, 0.5);
     
-	[self SetRegionsPaths:loc andContextRef:context];
+	[self SetRegionsPaths:loc];
 	CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 0.75);
 	//[self StrokeUpRegions:loc andContextRef:context];
 	//[self StrokeUpExludedRegions:loc andContextRef:context];
@@ -510,8 +510,9 @@
     [self.sectionFiguresView setNeedsDisplay];
 }
 
--(void) SetRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context 
+-(void) SetRegionsPaths:(MpLocation*) loc
 {
+    CGContextRef context = UIGraphicsGetCurrentContext();
 	NSMutableArray *coordinatesArrayInArray = [(MpRegion*)loc GetCoordinates];
     BOOL mainRegion = YES;
 	for (NSArray * coordinatesArray in coordinatesArrayInArray) 
@@ -552,15 +553,16 @@
 		
 		CGContextClosePath(context);
 		
-		[self SetExludedRegionsPaths:loc andContextRef:context];
+		[self SetExludedRegionsPaths:loc];
 		
 		CGContextEOFillPath(context);
 	}
 }
 
 
--(void) SetExludedRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context 
+-(void) SetExludedRegionsPaths:(MpLocation*) loc
 {
+    CGContextRef context = UIGraphicsGetCurrentContext();
 	NSArray *excludedRegionsArray = [(MpRegion*)loc GetExcludedRegions];
 	for (NSArray * excludedRegionArray in excludedRegionsArray) {
 		BOOL startPathSat = NO;
@@ -831,8 +833,9 @@
     return outsideBounds;
 }
 
--(void) DrawPlace:(MpLocation*) loc andContextRef:(CGContextRef) context
+-(void) DrawPlace:(MpLocation*) loc
 {
+    CGContextRef context = UIGraphicsGetCurrentContext();
 	NSMutableArray *vCoordinate = [(MpPlace*)loc GetCoordinates];
 	NSValue *tempval = [vCoordinate objectAtIndex:0];
 	CGPoint placePoint = [tempval CGPointValue];
