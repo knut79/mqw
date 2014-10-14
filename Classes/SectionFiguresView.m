@@ -62,7 +62,7 @@
     
     
 	CGContextClipToMask(context, t_testRect, mask);
-    
+    CGImageRelease(mask);
 
     CGContextSetLineWidth(context,0);
     CGContextSetRGBFillColor(context, 0,0, 100, 0.5);

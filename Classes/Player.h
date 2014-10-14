@@ -72,7 +72,7 @@
 -(void) IncreasQuestionsPassed:(Question*) question;
 //-(void) IncreaseRoundScoreBy:(NSInteger) value;
 -(void) IncreaseScoreBy:(NSInteger) value;
--(NSInteger) GetQuestionsPassed;
+-(long) GetQuestionsPassed;
 -(NSInteger) GetLastRoundScore;
 -(void) SetPositionByScore:(NSInteger) position;
 

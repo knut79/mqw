@@ -498,8 +498,8 @@
     
 	[self SetRegionsPaths:loc andContextRef:context];
 	CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 0.75);
-	[self StrokeUpRegions:loc andContextRef:context];
-	[self StrokeUpExludedRegions:loc andContextRef:context];
+	//[self StrokeUpRegions:loc andContextRef:context];
+	//[self StrokeUpExludedRegions:loc andContextRef:context];
 	CGContextRestoreGState(context);
     
     boundsOfRegion = CGRectMake(minX, minY, maxX - minX, maxY-minY);
@@ -513,9 +513,11 @@
 -(void) SetRegionsPaths:(MpLocation*) loc andContextRef:(CGContextRef) context 
 {
 	NSMutableArray *coordinatesArrayInArray = [(MpRegion*)loc GetCoordinates];
+    BOOL mainRegion = YES;
 	for (NSArray * coordinatesArray in coordinatesArrayInArray) 
 	{
 		BOOL startPathSat = NO;
+        
 		CGContextBeginPath(context); 
 		for (NSValue *tempValue in coordinatesArray) 
 		{
@@ -537,12 +539,16 @@
 			{
 				CGContextAddLineToPoint( context, tempPoint.x,tempPoint.y);
 			}
-            minX = minX > tempPoint.x ? tempPoint.x : minX;
-            minY = minY > tempPoint.y ? tempPoint.y : minY;
-            maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
-            maxY = maxY < tempPoint.y ? tempPoint.y : maxY;
+            if (mainRegion == YES) {
+                minX = minX > tempPoint.x ? tempPoint.x : minX;
+                minY = minY > tempPoint.y ? tempPoint.y : minY;
+                maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
+                maxY = maxY < tempPoint.y ? tempPoint.y : maxY;
+            }
+            
 			
 		}
+        mainRegion = NO;
 		
 		CGContextClosePath(context);
 		
@@ -614,6 +620,7 @@
 			{
 				CGContextAddLineToPoint( context, tempPoint.x,tempPoint.y);
 			}
+            
             minX = minX > tempPoint.x ? tempPoint.x : minX;
             minY = minY > tempPoint.y ? tempPoint.y : minY;
             maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
@@ -648,10 +655,11 @@
 				{
 					CGContextAddLineToPoint( context, tempPoint.x,tempPoint.y);
 				}
+                /*
                 minX = minX > tempPoint.x ? tempPoint.x : minX;
                 minY = minY > tempPoint.y ? tempPoint.y : minY;
                 maxX = maxX < tempPoint.x ? tempPoint.x : maxX;
-                maxY = maxY < tempPoint.y ? tempPoint.y : maxY;
+                maxY = maxY < tempPoint.y ? tempPoint.y : maxY;*/
 			}
 			CGContextStrokePath(context);
 		}
@@ -918,6 +926,7 @@
 }
 
 - (void)dealloc {
+    //[_sectionFiguresView dealloc];
     [super dealloc];
 }
 

@@ -459,6 +459,44 @@
 		728747B319B9B3A900BADE3B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747AB19B9B3A900BADE3B /* FMDatabasePool.m */; };
 		728747B419B9B3A900BADE3B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747AD19B9B3A900BADE3B /* FMDatabaseQueue.m */; };
 		728747B519B9B3A900BADE3B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747B019B9B3A900BADE3B /* FMResultSet.m */; };
+		729FC41C19ECA16B00B082E5 /* AfghanistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */; };
+		729FC41D19ECA16B00B082E5 /* AzerbaijanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */; };
+		729FC41E19ECA16B00B082E5 /* BangladeshFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F819ECA16A00B082E5 /* BangladeshFlag.png */; };
+		729FC41F19ECA16B00B082E5 /* BhutanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F919ECA16A00B082E5 /* BhutanFlag.png */; };
+		729FC42019ECA16B00B082E5 /* ChinaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3FA19ECA16A00B082E5 /* ChinaFlag.png */; };
+		729FC42119ECA16B00B082E5 /* ComorosFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3FB19ECA16A00B082E5 /* ComorosFlag.png */; };
+		729FC42219ECA16B00B082E5 /* CyprusFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3FC19ECA16A00B082E5 /* CyprusFlag.png */; };
+		729FC42319ECA16B00B082E5 /* FederatedStatesOfMicronesiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3FD19ECA16A00B082E5 /* FederatedStatesOfMicronesiaFlag.png */; };
+		729FC42419ECA16B00B082E5 /* FijiFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3FE19ECA16A00B082E5 /* FijiFlag.png */; };
+		729FC42519ECA16B00B082E5 /* GeorgiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3FF19ECA16A00B082E5 /* GeorgiaFlag.png */; };
+		729FC42619ECA16B00B082E5 /* IndiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40019ECA16A00B082E5 /* IndiaFlag.png */; };
+		729FC42719ECA16B00B082E5 /* JapanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40119ECA16A00B082E5 /* JapanFlag.png */; };
+		729FC42819ECA16B00B082E5 /* KazakhstanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40219ECA16A00B082E5 /* KazakhstanFlag.png */; };
+		729FC42919ECA16B00B082E5 /* KiribatiFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40319ECA16A00B082E5 /* KiribatiFlag.png */; };
+		729FC42A19ECA16B00B082E5 /* KyrgyzstanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40419ECA16A00B082E5 /* KyrgyzstanFlag.png */; };
+		729FC42B19ECA16B00B082E5 /* MaldivesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40519ECA16A00B082E5 /* MaldivesFlag.png */; };
+		729FC42C19ECA16B00B082E5 /* MarshallIslandsFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40619ECA16A00B082E5 /* MarshallIslandsFlag.png */; };
+		729FC42D19ECA16B00B082E5 /* MongoliaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40719ECA16A00B082E5 /* MongoliaFlag.png */; };
+		729FC42E19ECA16B00B082E5 /* MyanmarFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40819ECA16A00B082E5 /* MyanmarFlag.png */; };
+		729FC42F19ECA16B00B082E5 /* NauruFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40919ECA16A00B082E5 /* NauruFlag.png */; };
+		729FC43019ECA16B00B082E5 /* NepalFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40A19ECA16A00B082E5 /* NepalFlag.png */; };
+		729FC43119ECA16B00B082E5 /* NiueFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40B19ECA16A00B082E5 /* NiueFlag.png */; };
+		729FC43219ECA16B00B082E5 /* NorthKoreaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40C19ECA16A00B082E5 /* NorthKoreaFlag.png */; };
+		729FC43319ECA16B00B082E5 /* PakistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40D19ECA16B00B082E5 /* PakistanFlag.png */; };
+		729FC43419ECA16B00B082E5 /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40E19ECA16B00B082E5 /* Russia.png */; };
+		729FC43519ECA16B00B082E5 /* SamoaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC40F19ECA16B00B082E5 /* SamoaFlag.png */; };
+		729FC43619ECA16B00B082E5 /* SeychellesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41019ECA16B00B082E5 /* SeychellesFlag.png */; };
+		729FC43719ECA16B00B082E5 /* SolomonIslandsFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41119ECA16B00B082E5 /* SolomonIslandsFlag.png */; };
+		729FC43819ECA16B00B082E5 /* SouthKoreaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41219ECA16B00B082E5 /* SouthKoreaFlag.png */; };
+		729FC43919ECA16B00B082E5 /* SriLankaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41319ECA16B00B082E5 /* SriLankaFlag.png */; };
+		729FC43A19ECA16B00B082E5 /* TajikistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41419ECA16B00B082E5 /* TajikistanFlag.png */; };
+		729FC43B19ECA16B00B082E5 /* ThailandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41519ECA16B00B082E5 /* ThailandFlag.png */; };
+		729FC43C19ECA16B00B082E5 /* TongaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41619ECA16B00B082E5 /* TongaFlag.png */; };
+		729FC43D19ECA16B00B082E5 /* TurkeyFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41719ECA16B00B082E5 /* TurkeyFlag.png */; };
+		729FC43E19ECA16B00B082E5 /* TurkmenistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41819ECA16B00B082E5 /* TurkmenistanFlag.png */; };
+		729FC43F19ECA16B00B082E5 /* TuvaluFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41919ECA16B00B082E5 /* TuvaluFlag.png */; };
+		729FC44019ECA16B00B082E5 /* UzbekistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41A19ECA16B00B082E5 /* UzbekistanFlag.png */; };
+		729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1014,6 +1052,44 @@
 		728747AE19B9B3A900BADE3B /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		728747AF19B9B3A900BADE3B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		728747B019B9B3A900BADE3B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AfghanistanFlag.png; path = resources/graphics/pictureQuestions/AfghanistanFlag.png; sourceTree = "<group>"; };
+		729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AzerbaijanFlag.png; path = resources/graphics/pictureQuestions/AzerbaijanFlag.png; sourceTree = "<group>"; };
+		729FC3F819ECA16A00B082E5 /* BangladeshFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BangladeshFlag.png; path = resources/graphics/pictureQuestions/BangladeshFlag.png; sourceTree = "<group>"; };
+		729FC3F919ECA16A00B082E5 /* BhutanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BhutanFlag.png; path = resources/graphics/pictureQuestions/BhutanFlag.png; sourceTree = "<group>"; };
+		729FC3FA19ECA16A00B082E5 /* ChinaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ChinaFlag.png; path = resources/graphics/pictureQuestions/ChinaFlag.png; sourceTree = "<group>"; };
+		729FC3FB19ECA16A00B082E5 /* ComorosFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ComorosFlag.png; path = resources/graphics/pictureQuestions/ComorosFlag.png; sourceTree = "<group>"; };
+		729FC3FC19ECA16A00B082E5 /* CyprusFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CyprusFlag.png; path = resources/graphics/pictureQuestions/CyprusFlag.png; sourceTree = "<group>"; };
+		729FC3FD19ECA16A00B082E5 /* FederatedStatesOfMicronesiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FederatedStatesOfMicronesiaFlag.png; path = resources/graphics/pictureQuestions/FederatedStatesOfMicronesiaFlag.png; sourceTree = "<group>"; };
+		729FC3FE19ECA16A00B082E5 /* FijiFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FijiFlag.png; path = resources/graphics/pictureQuestions/FijiFlag.png; sourceTree = "<group>"; };
+		729FC3FF19ECA16A00B082E5 /* GeorgiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GeorgiaFlag.png; path = resources/graphics/pictureQuestions/GeorgiaFlag.png; sourceTree = "<group>"; };
+		729FC40019ECA16A00B082E5 /* IndiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IndiaFlag.png; path = resources/graphics/pictureQuestions/IndiaFlag.png; sourceTree = "<group>"; };
+		729FC40119ECA16A00B082E5 /* JapanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = JapanFlag.png; path = resources/graphics/pictureQuestions/JapanFlag.png; sourceTree = "<group>"; };
+		729FC40219ECA16A00B082E5 /* KazakhstanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KazakhstanFlag.png; path = resources/graphics/pictureQuestions/KazakhstanFlag.png; sourceTree = "<group>"; };
+		729FC40319ECA16A00B082E5 /* KiribatiFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KiribatiFlag.png; path = resources/graphics/pictureQuestions/KiribatiFlag.png; sourceTree = "<group>"; };
+		729FC40419ECA16A00B082E5 /* KyrgyzstanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KyrgyzstanFlag.png; path = resources/graphics/pictureQuestions/KyrgyzstanFlag.png; sourceTree = "<group>"; };
+		729FC40519ECA16A00B082E5 /* MaldivesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MaldivesFlag.png; path = resources/graphics/pictureQuestions/MaldivesFlag.png; sourceTree = "<group>"; };
+		729FC40619ECA16A00B082E5 /* MarshallIslandsFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MarshallIslandsFlag.png; path = resources/graphics/pictureQuestions/MarshallIslandsFlag.png; sourceTree = "<group>"; };
+		729FC40719ECA16A00B082E5 /* MongoliaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MongoliaFlag.png; path = resources/graphics/pictureQuestions/MongoliaFlag.png; sourceTree = "<group>"; };
+		729FC40819ECA16A00B082E5 /* MyanmarFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyanmarFlag.png; path = resources/graphics/pictureQuestions/MyanmarFlag.png; sourceTree = "<group>"; };
+		729FC40919ECA16A00B082E5 /* NauruFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NauruFlag.png; path = resources/graphics/pictureQuestions/NauruFlag.png; sourceTree = "<group>"; };
+		729FC40A19ECA16A00B082E5 /* NepalFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NepalFlag.png; path = resources/graphics/pictureQuestions/NepalFlag.png; sourceTree = "<group>"; };
+		729FC40B19ECA16A00B082E5 /* NiueFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NiueFlag.png; path = resources/graphics/pictureQuestions/NiueFlag.png; sourceTree = "<group>"; };
+		729FC40C19ECA16A00B082E5 /* NorthKoreaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorthKoreaFlag.png; path = resources/graphics/pictureQuestions/NorthKoreaFlag.png; sourceTree = "<group>"; };
+		729FC40D19ECA16B00B082E5 /* PakistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PakistanFlag.png; path = resources/graphics/pictureQuestions/PakistanFlag.png; sourceTree = "<group>"; };
+		729FC40E19ECA16B00B082E5 /* Russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Russia.png; path = resources/graphics/pictureQuestions/Russia.png; sourceTree = "<group>"; };
+		729FC40F19ECA16B00B082E5 /* SamoaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SamoaFlag.png; path = resources/graphics/pictureQuestions/SamoaFlag.png; sourceTree = "<group>"; };
+		729FC41019ECA16B00B082E5 /* SeychellesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SeychellesFlag.png; path = resources/graphics/pictureQuestions/SeychellesFlag.png; sourceTree = "<group>"; };
+		729FC41119ECA16B00B082E5 /* SolomonIslandsFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SolomonIslandsFlag.png; path = resources/graphics/pictureQuestions/SolomonIslandsFlag.png; sourceTree = "<group>"; };
+		729FC41219ECA16B00B082E5 /* SouthKoreaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SouthKoreaFlag.png; path = resources/graphics/pictureQuestions/SouthKoreaFlag.png; sourceTree = "<group>"; };
+		729FC41319ECA16B00B082E5 /* SriLankaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SriLankaFlag.png; path = resources/graphics/pictureQuestions/SriLankaFlag.png; sourceTree = "<group>"; };
+		729FC41419ECA16B00B082E5 /* TajikistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TajikistanFlag.png; path = resources/graphics/pictureQuestions/TajikistanFlag.png; sourceTree = "<group>"; };
+		729FC41519ECA16B00B082E5 /* ThailandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThailandFlag.png; path = resources/graphics/pictureQuestions/ThailandFlag.png; sourceTree = "<group>"; };
+		729FC41619ECA16B00B082E5 /* TongaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TongaFlag.png; path = resources/graphics/pictureQuestions/TongaFlag.png; sourceTree = "<group>"; };
+		729FC41719ECA16B00B082E5 /* TurkeyFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TurkeyFlag.png; path = resources/graphics/pictureQuestions/TurkeyFlag.png; sourceTree = "<group>"; };
+		729FC41819ECA16B00B082E5 /* TurkmenistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TurkmenistanFlag.png; path = resources/graphics/pictureQuestions/TurkmenistanFlag.png; sourceTree = "<group>"; };
+		729FC41919ECA16B00B082E5 /* TuvaluFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TuvaluFlag.png; path = resources/graphics/pictureQuestions/TuvaluFlag.png; sourceTree = "<group>"; };
+		729FC41A19ECA16B00B082E5 /* UzbekistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UzbekistanFlag.png; path = resources/graphics/pictureQuestions/UzbekistanFlag.png; sourceTree = "<group>"; };
+		729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanuatuFlag.png; path = resources/graphics/pictureQuestions/VanuatuFlag.png; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1732,6 +1808,44 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */,
+				729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */,
+				729FC3F819ECA16A00B082E5 /* BangladeshFlag.png */,
+				729FC3F919ECA16A00B082E5 /* BhutanFlag.png */,
+				729FC3FA19ECA16A00B082E5 /* ChinaFlag.png */,
+				729FC3FB19ECA16A00B082E5 /* ComorosFlag.png */,
+				729FC3FC19ECA16A00B082E5 /* CyprusFlag.png */,
+				729FC3FD19ECA16A00B082E5 /* FederatedStatesOfMicronesiaFlag.png */,
+				729FC3FE19ECA16A00B082E5 /* FijiFlag.png */,
+				729FC3FF19ECA16A00B082E5 /* GeorgiaFlag.png */,
+				729FC40019ECA16A00B082E5 /* IndiaFlag.png */,
+				729FC40119ECA16A00B082E5 /* JapanFlag.png */,
+				729FC40219ECA16A00B082E5 /* KazakhstanFlag.png */,
+				729FC40319ECA16A00B082E5 /* KiribatiFlag.png */,
+				729FC40419ECA16A00B082E5 /* KyrgyzstanFlag.png */,
+				729FC40519ECA16A00B082E5 /* MaldivesFlag.png */,
+				729FC40619ECA16A00B082E5 /* MarshallIslandsFlag.png */,
+				729FC40719ECA16A00B082E5 /* MongoliaFlag.png */,
+				729FC40819ECA16A00B082E5 /* MyanmarFlag.png */,
+				729FC40919ECA16A00B082E5 /* NauruFlag.png */,
+				729FC40A19ECA16A00B082E5 /* NepalFlag.png */,
+				729FC40B19ECA16A00B082E5 /* NiueFlag.png */,
+				729FC40C19ECA16A00B082E5 /* NorthKoreaFlag.png */,
+				729FC40D19ECA16B00B082E5 /* PakistanFlag.png */,
+				729FC40E19ECA16B00B082E5 /* Russia.png */,
+				729FC40F19ECA16B00B082E5 /* SamoaFlag.png */,
+				729FC41019ECA16B00B082E5 /* SeychellesFlag.png */,
+				729FC41119ECA16B00B082E5 /* SolomonIslandsFlag.png */,
+				729FC41219ECA16B00B082E5 /* SouthKoreaFlag.png */,
+				729FC41319ECA16B00B082E5 /* SriLankaFlag.png */,
+				729FC41419ECA16B00B082E5 /* TajikistanFlag.png */,
+				729FC41519ECA16B00B082E5 /* ThailandFlag.png */,
+				729FC41619ECA16B00B082E5 /* TongaFlag.png */,
+				729FC41719ECA16B00B082E5 /* TurkeyFlag.png */,
+				729FC41819ECA16B00B082E5 /* TurkmenistanFlag.png */,
+				729FC41919ECA16B00B082E5 /* TuvaluFlag.png */,
+				729FC41A19ECA16B00B082E5 /* UzbekistanFlag.png */,
+				729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */,
 				7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */,
 				7204A48E19E40CF600B8AE76 /* BahrainFlag.png */,
 				7204A48F19E40CF600B8AE76 /* IranFlag.png */,
@@ -2137,12 +2251,14 @@
 				7204A2D819D976D600B8AE76 /* world_100_11_7.jpg in Resources */,
 				7204A41C19E00B1F00B8AE76 /* statesMiddleEast.txt in Resources */,
 				7204A39519D979E700B8AE76 /* islands.txt in Resources */,
+				729FC42A19ECA16B00B082E5 /* KyrgyzstanFlag.png in Resources */,
 				7204A25F19D976D600B8AE76 /* world_100_1_6.jpg in Resources */,
 				7204A10F19D9765A00B8AE76 /* testExtraQuestions.txt in Resources */,
 				7204A28919D976D600B8AE76 /* world_100_5_0.jpg in Resources */,
 				7204A37C19D9799200B8AE76 /* loop.png in Resources */,
 				7204A27D19D976D600B8AE76 /* world_100_4_0.jpg in Resources */,
 				7204A49F19E40CF600B8AE76 /* KuwaitFlag.png in Resources */,
+				729FC43019ECA16B00B082E5 /* NepalFlag.png in Resources */,
 				7204A40C19DDFE4500B8AE76 /* UruguayFlag.png in Resources */,
 				7204A25719D976D600B8AE76 /* world_100_0_10.jpg in Resources */,
 				7204A2C819D976D600B8AE76 /* world_100_10_3.jpg in Resources */,
@@ -2167,6 +2283,7 @@
 				7204A4A719E4358700B8AE76 /* DominicanRepublicFlag.png in Resources */,
 				7204A3A819D979FD00B8AE76 /* LanguageData.plist in Resources */,
 				7204A37B19D9799200B8AE76 /* line.png in Resources */,
+				729FC44019ECA16B00B082E5 /* UzbekistanFlag.png in Resources */,
 				7204A2E919D976D600B8AE76 /* world_100_13_0.jpg in Resources */,
 				7204A2F219D976D600B8AE76 /* world_100_13_9.jpg in Resources */,
 				7204A3A719D979FD00B8AE76 /* HighscoreMedium.plist in Resources */,
@@ -2182,9 +2299,11 @@
 				7204A29A19D976D600B8AE76 /* world_100_6_5.jpg in Resources */,
 				7204A3EB19DDFE4500B8AE76 /* ArgentinaFlag.png in Resources */,
 				7204A37119D9799200B8AE76 /* ArrowRed.png in Resources */,
+				729FC43819ECA16B00B082E5 /* SouthKoreaFlag.png in Resources */,
 				7204A45619E3487200B8AE76 /* AlgeriaFlag.png in Resources */,
 				7204A2D519D976D600B8AE76 /* world_100_11_4.jpg in Resources */,
 				7204A17819D976B300B8AE76 /* world_50_4_3.jpg in Resources */,
+				729FC42319ECA16B00B082E5 /* FederatedStatesOfMicronesiaFlag.png in Resources */,
 				7204A30019D976D600B8AE76 /* world_100_14_11.jpg in Resources */,
 				7204A45819E3487200B8AE76 /* BeninFlag.png in Resources */,
 				7204A16519D976B300B8AE76 /* world_50_1_2.jpg in Resources */,
@@ -2203,10 +2322,12 @@
 				7204A16C19D976B300B8AE76 /* world_50_2_3.jpg in Resources */,
 				7204A26719D976D600B8AE76 /* world_100_2_2.jpg in Resources */,
 				7204A18419D976B300B8AE76 /* world_50_6_3.jpg in Resources */,
+				729FC43A19ECA16B00B082E5 /* TajikistanFlag.png in Resources */,
 				7204A37419D9799200B8AE76 /* BarLineUp.png in Resources */,
 				7204A16219D976B300B8AE76 /* world_50_0_5.jpg in Resources */,
 				7204A26619D976D600B8AE76 /* world_100_2_1.jpg in Resources */,
 				7204A12219D9769A00B8AE76 /* world_25_0_1.jpg in Resources */,
+				729FC41E19ECA16B00B082E5 /* BangladeshFlag.png in Resources */,
 				7204A27919D976D600B8AE76 /* world_100_3_8.jpg in Resources */,
 				7204A46819E3487200B8AE76 /* GambiaFlag.png in Resources */,
 				7204A2A619D976D600B8AE76 /* world_100_7_5.jpg in Resources */,
@@ -2238,6 +2359,7 @@
 				7204A25E19D976D600B8AE76 /* world_100_1_5.jpg in Resources */,
 				7204A41B19E00B1F00B8AE76 /* statesEurope.txt in Resources */,
 				7204A3EA19DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png in Resources */,
+				729FC42819ECA16B00B082E5 /* KazakhstanFlag.png in Resources */,
 				7204A12319D9769A00B8AE76 /* world_25_0_2.jpg in Resources */,
 				7204A17B19D976B300B8AE76 /* world_50_5_0.jpg in Resources */,
 				7204A18219D976B300B8AE76 /* world_50_6_1.jpg in Resources */,
@@ -2271,9 +2393,11 @@
 				7204A40419DDFE4500B8AE76 /* PeruFlag.png in Resources */,
 				7204A47719E3487200B8AE76 /* MozambiqueFlag.png in Resources */,
 				7204A16919D976B300B8AE76 /* world_50_2_0.jpg in Resources */,
+				729FC43E19ECA16B00B082E5 /* TurkmenistanFlag.png in Resources */,
 				7204A12B19D9769A00B8AE76 /* world_25_3_1.jpg in Resources */,
 				7204A28E19D976D600B8AE76 /* world_100_5_5.jpg in Resources */,
 				7204A2EB19D976D600B8AE76 /* world_100_13_2.jpg in Resources */,
+				729FC43919ECA16B00B082E5 /* SriLankaFlag.png in Resources */,
 				7204A27719D976D600B8AE76 /* world_100_3_6.jpg in Resources */,
 				7204A29D19D976D600B8AE76 /* world_100_6_8.jpg in Resources */,
 				7204A3BF19DD7EDD00B8AE76 /* MalaysiaFlag.png in Resources */,
@@ -2313,6 +2437,7 @@
 				7204A39319D979E700B8AE76 /* cities.txt in Resources */,
 				7204A27619D976D600B8AE76 /* world_100_3_5.jpg in Resources */,
 				7204A31319D978F000B8AE76 /* passBtn.png in Resources */,
+				729FC43F19ECA16B00B082E5 /* TuvaluFlag.png in Resources */,
 				7204A29819D976D600B8AE76 /* world_100_6_3.jpg in Resources */,
 				7204A17519D976B300B8AE76 /* world_50_4_0.jpg in Resources */,
 				7204A38519D9799200B8AE76 /* TheWinner.png in Resources */,
@@ -2323,12 +2448,15 @@
 				7204A47F19E3487200B8AE76 /* SomaliaFlag.png in Resources */,
 				7204A45C19E3487200B8AE76 /* CameroonFlag.png in Resources */,
 				7204A25619D976D600B8AE76 /* world_100_0_9.jpg in Resources */,
+				729FC42419ECA16B00B082E5 /* FijiFlag.png in Resources */,
 				7204A45919E3487200B8AE76 /* BotswanaFlag.png in Resources */,
 				7204A2C919D976D600B8AE76 /* world_100_10_4.jpg in Resources */,
 				7204A2C319D976D600B8AE76 /* world_100_9_10.jpg in Resources */,
 				7204A2B319D976D600B8AE76 /* world_100_8_6.jpg in Resources */,
 				7204A47A19E3487200B8AE76 /* NigeriaFlag.png in Resources */,
+				729FC43319ECA16B00B082E5 /* PakistanFlag.png in Resources */,
 				7204A39619D979E700B8AE76 /* lakes.txt in Resources */,
+				729FC41C19ECA16B00B082E5 /* AfghanistanFlag.png in Resources */,
 				7204A12519D9769A00B8AE76 /* world_25_1_1.jpg in Resources */,
 				7204A30419D976D600B8AE76 /* world_100_15_3.jpg in Resources */,
 				7204A27119D976D600B8AE76 /* world_100_3_0.jpg in Resources */,
@@ -2351,12 +2479,14 @@
 				7204A29619D976D600B8AE76 /* world_100_6_1.jpg in Resources */,
 				7204A2FC19D976D600B8AE76 /* world_100_14_7.jpg in Resources */,
 				7204A10E19D9765A00B8AE76 /* testArea.txt in Resources */,
+				729FC42D19ECA16B00B082E5 /* MongoliaFlag.png in Resources */,
 				7204A16419D976B300B8AE76 /* world_50_1_1.jpg in Resources */,
 				7204A2AE19D976D600B8AE76 /* world_100_8_1.jpg in Resources */,
 				7204A16619D976B300B8AE76 /* world_50_1_3.jpg in Resources */,
 				7204A2B919D976D600B8AE76 /* world_100_9_0.jpg in Resources */,
 				7204A27319D976D600B8AE76 /* world_100_3_2.jpg in Resources */,
 				7204A2E619D976D600B8AE76 /* world_100_12_9.jpg in Resources */,
+				729FC43D19ECA16B00B082E5 /* TurkeyFlag.png in Resources */,
 				7204A3A319D979FD00B8AE76 /* InfoEng.html in Resources */,
 				7204A28219D976D600B8AE76 /* world_100_4_5.jpg in Resources */,
 				7204A46E19E3487200B8AE76 /* LesothoFlag.png in Resources */,
@@ -2371,6 +2501,7 @@
 				7204A29719D976D600B8AE76 /* world_100_6_2.jpg in Resources */,
 				7204A47819E3487200B8AE76 /* NamibiaFlag.png in Resources */,
 				7204A25219D976D600B8AE76 /* world_100_0_5.jpg in Resources */,
+				729FC43419ECA16B00B082E5 /* Russia.png in Resources */,
 				7204A17619D976B300B8AE76 /* world_50_4_1.jpg in Resources */,
 				7204A30119D976D600B8AE76 /* world_100_15_0.jpg in Resources */,
 				7204A16E19D976B300B8AE76 /* world_50_2_5.jpg in Resources */,
@@ -2378,21 +2509,26 @@
 				7204A46519E3487200B8AE76 /* EritreaFlag.png in Resources */,
 				7204A2FF19D976D600B8AE76 /* world_100_14_10.jpg in Resources */,
 				7204A46F19E3487200B8AE76 /* LiberiaFlag.png in Resources */,
+				729FC43719ECA16B00B082E5 /* SolomonIslandsFlag.png in Resources */,
 				7204A2DA19D976D600B8AE76 /* world_100_11_9.jpg in Resources */,
 				7204A27019D976D600B8AE76 /* world_100_2_11.jpg in Resources */,
 				7204A3F319DDFE4500B8AE76 /* ColombiaFlag.png in Resources */,
 				7204A3F619DDFE4500B8AE76 /* DominicaFlag.png in Resources */,
 				7204A46B19E3487200B8AE76 /* GuineaFlag.png in Resources */,
 				7204A47519E3487200B8AE76 /* MauritiusFlag.png in Resources */,
+				729FC43119ECA16B00B082E5 /* NiueFlag.png in Resources */,
 				7204A46A19E3487200B8AE76 /* Guinea-BissauFlag.png in Resources */,
 				7204A28D19D976D600B8AE76 /* world_100_5_4.jpg in Resources */,
 				7204A2AC19D976D600B8AE76 /* world_100_7_11.jpg in Resources */,
+				729FC41F19ECA16B00B082E5 /* BhutanFlag.png in Resources */,
+				729FC42C19ECA16B00B082E5 /* MarshallIslandsFlag.png in Resources */,
 				7204A3A419D979FD00B8AE76 /* InfoNor.html in Resources */,
 				7204A45F19E3487200B8AE76 /* ChadFlag.png in Resources */,
 				7204A15E19D976B300B8AE76 /* world_50_0_1.jpg in Resources */,
 				7204A38319D9799200B8AE76 /* tapImageNor.png in Resources */,
 				7204A2E119D976D600B8AE76 /* world_100_12_4.jpg in Resources */,
 				7204A26319D976D600B8AE76 /* world_100_1_10.jpg in Resources */,
+				729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */,
 				7204A12619D9769A00B8AE76 /* world_25_1_2.jpg in Resources */,
 				7204A2EE19D976D600B8AE76 /* world_100_13_5.jpg in Resources */,
 				7204A2BD19D976D600B8AE76 /* world_100_9_4.jpg in Resources */,
@@ -2417,6 +2553,7 @@
 				7204A39A19D979E700B8AE76 /* states.txt in Resources */,
 				7204A2A819D976D600B8AE76 /* world_100_7_7.jpg in Resources */,
 				7204A4A319E40CF600B8AE76 /* SyriaFlag.png in Resources */,
+				729FC43B19ECA16B00B082E5 /* ThailandFlag.png in Resources */,
 				7204A2D619D976D600B8AE76 /* world_100_11_5.jpg in Resources */,
 				7204A2FB19D976D600B8AE76 /* world_100_14_6.jpg in Resources */,
 				7204A37819D9799200B8AE76 /* GameOver.png in Resources */,
@@ -2428,6 +2565,8 @@
 				7204A40719DDFE4500B8AE76 /* SaintLuciaFlag.png in Resources */,
 				7204A2DC19D976D600B8AE76 /* world_100_11_11.jpg in Resources */,
 				7204A26A19D976D600B8AE76 /* world_100_2_5.jpg in Resources */,
+				729FC43519ECA16B00B082E5 /* SamoaFlag.png in Resources */,
+				729FC42919ECA16B00B082E5 /* KiribatiFlag.png in Resources */,
 				7204A26E19D976D600B8AE76 /* world_100_2_9.jpg in Resources */,
 				7204A47B19E3487200B8AE76 /* RwandaFlag.png in Resources */,
 				7204A39819D979E700B8AE76 /* places.txt in Resources */,
@@ -2435,6 +2574,7 @@
 				7204A38819D9799200B8AE76 /* watchhand.png in Resources */,
 				7204A3B919DD7EDD00B8AE76 /* AustraliaFlag.png in Resources */,
 				7204A29919D976D600B8AE76 /* world_100_6_4.jpg in Resources */,
+				729FC42719ECA16B00B082E5 /* JapanFlag.png in Resources */,
 				7204A3F919DDFE4500B8AE76 /* ElSalvadorFlag.png in Resources */,
 				7204A17A19D976B300B8AE76 /* world_50_4_5.jpg in Resources */,
 				7204A28C19D976D600B8AE76 /* world_100_5_3.jpg in Resources */,
@@ -2479,6 +2619,7 @@
 				7204A28019D976D600B8AE76 /* world_100_4_3.jpg in Resources */,
 				7204A46319E3487200B8AE76 /* EgyptFlag.png in Resources */,
 				7204A49A19E40CF600B8AE76 /* BahrainFlag.png in Resources */,
+				729FC42019ECA16B00B082E5 /* ChinaFlag.png in Resources */,
 				7204A27E19D976D600B8AE76 /* world_100_4_1.jpg in Resources */,
 				7204A26F19D976D600B8AE76 /* world_100_2_10.jpg in Resources */,
 				7204A2CB19D976D600B8AE76 /* world_100_10_6.jpg in Resources */,
@@ -2498,6 +2639,7 @@
 				7204A2AF19D976D600B8AE76 /* world_100_8_2.jpg in Resources */,
 				7204A30219D976D600B8AE76 /* world_100_15_1.jpg in Resources */,
 				7204A17919D976B300B8AE76 /* world_50_4_4.jpg in Resources */,
+				729FC42B19ECA16B00B082E5 /* MaldivesFlag.png in Resources */,
 				7204A17E19D976B300B8AE76 /* world_50_5_3.jpg in Resources */,
 				7204A18019D976B300B8AE76 /* world_50_5_5.jpg in Resources */,
 				7204A45E19E3487200B8AE76 /* CentralAfricanRepublicFlag.png in Resources */,
@@ -2506,13 +2648,18 @@
 				7204A47E19E3487200B8AE76 /* SierraLeoneFlag.png in Resources */,
 				7204A36D19D9799200B8AE76 /* trophy.jpg in Resources */,
 				7204A3FF19DDFE4500B8AE76 /* JamaicaFlag.png in Resources */,
+				729FC43C19ECA16B00B082E5 /* TongaFlag.png in Resources */,
+				729FC42E19ECA16B00B082E5 /* MyanmarFlag.png in Resources */,
 				7204A49E19E40CF600B8AE76 /* JordanFlag.png in Resources */,
+				729FC42F19ECA16B00B082E5 /* NauruFlag.png in Resources */,
 				EE8731B914CAE1300010A76C /* ChallengeViewController.xib in Resources */,
 				7204A2C619D976D600B8AE76 /* world_100_10_1.jpg in Resources */,
 				7204A29019D976D600B8AE76 /* world_100_5_7.jpg in Resources */,
 				7204A2A219D976D600B8AE76 /* world_100_7_1.jpg in Resources */,
+				729FC42219ECA16B00B082E5 /* CyprusFlag.png in Resources */,
 				7204A46019E3487200B8AE76 /* CongoFlag.png in Resources */,
 				7204A2C219D976D600B8AE76 /* world_100_9_9.jpg in Resources */,
+				729FC42519ECA16B00B082E5 /* GeorgiaFlag.png in Resources */,
 				7204A30919D976D600B8AE76 /* world_100_15_8.jpg in Resources */,
 				7204A2BE19D976D600B8AE76 /* world_100_9_5.jpg in Resources */,
 				7204A2D219D976D600B8AE76 /* world_100_11_1.jpg in Resources */,
@@ -2523,6 +2670,7 @@
 				7204A3FE19DDFE4500B8AE76 /* HondurasFlag.png in Resources */,
 				7204A2AA19D976D600B8AE76 /* world_100_7_9.jpg in Resources */,
 				7204A49B19E40CF600B8AE76 /* IranFlag.png in Resources */,
+				729FC41D19ECA16B00B082E5 /* AzerbaijanFlag.png in Resources */,
 				7204A4A419E40CF600B8AE76 /* UnitedArabEmiratesFlag.png in Resources */,
 				7204A2B219D976D600B8AE76 /* world_100_8_5.jpg in Resources */,
 				7204A12A19D9769A00B8AE76 /* world_25_3_0.jpg in Resources */,
@@ -2534,7 +2682,9 @@
 				7204A16019D976B300B8AE76 /* world_50_0_3.jpg in Resources */,
 				7204A26C19D976D600B8AE76 /* world_100_2_7.jpg in Resources */,
 				EED5544714E882EB0070F3F2 /* TakeChallenge.xib in Resources */,
+				729FC42619ECA16B00B082E5 /* IndiaFlag.png in Resources */,
 				7204A45D19E3487200B8AE76 /* CapeVerdeFlag.png in Resources */,
+				729FC42119ECA16B00B082E5 /* ComorosFlag.png in Resources */,
 				7204A40E19DDFE4500B8AE76 /* VietnamFlag.png in Resources */,
 				7204A37E19D9799200B8AE76 /* MiniLogo.png in Resources */,
 				7204A2BA19D976D600B8AE76 /* world_100_9_1.jpg in Resources */,
@@ -2544,6 +2694,7 @@
 				7204A2FA19D976D600B8AE76 /* world_100_14_5.jpg in Resources */,
 				7204A29419D976D600B8AE76 /* world_100_5_11.jpg in Resources */,
 				7204A37619D9799200B8AE76 /* Default.png in Resources */,
+				729FC43219ECA16B00B082E5 /* NorthKoreaFlag.png in Resources */,
 				7204A25119D976D600B8AE76 /* world_100_0_4.jpg in Resources */,
 				7204A17119D976B300B8AE76 /* world_50_3_2.jpg in Resources */,
 				EED5544D14E8844C0070F3F2 /* PlayerStats.xib in Resources */,
@@ -2563,6 +2714,7 @@
 				7204A37319D9799200B8AE76 /* BarLineDown.png in Resources */,
 				7204A2CA19D976D600B8AE76 /* world_100_10_5.jpg in Resources */,
 				7204A12719D9769A00B8AE76 /* world_25_2_0.jpg in Resources */,
+				729FC43619ECA16B00B082E5 /* SeychellesFlag.png in Resources */,
 				7204A48419E3487200B8AE76 /* TanzaniaFlag.png in Resources */,
 				7204A25919D976D600B8AE76 /* world_100_1_0.jpg in Resources */,
 				7204A17C19D976B300B8AE76 /* world_50_5_1.jpg in Resources */,

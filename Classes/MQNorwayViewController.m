@@ -888,12 +888,12 @@
     [resultBoardView.sectionFiguresView setTransform:CGAffineTransformIdentity];
     resultBoardView.sectionFiguresView.center = CGPointMake(([screen applicationFrame].size.width/2), ([screen applicationFrame].size.height/2));
     [screen release];
-    /*
+    
     if (resultBoardView.playerSymbolMiniWindowView != nil) {
         [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
         [resultBoardView.playerSymbolMiniWindowView dealloc];
         resultBoardView.playerSymbolMiniWindowView = nil;        
-    }*/
+    }
 
     
     

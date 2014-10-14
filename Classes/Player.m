@@ -277,7 +277,7 @@
 	return m_lastRoundScore;
 }
 
--(NSInteger) GetQuestionsPassed
+-(long) GetQuestionsPassed
 {
 	return (m_easyQuestionsPassed + m_mediumQuestionsPassed + m_hardQuestionsPassed);
 }
