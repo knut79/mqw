@@ -453,6 +453,52 @@
 		7204A4A519E40CF600B8AE76 /* YemenFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A49919E40CF600B8AE76 /* YemenFlag.png */; };
 		7204A4A719E4358700B8AE76 /* DominicanRepublicFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */; };
 		724026B219E55E5E005E3582 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724026B119E55E5E005E3582 /* FacebookSDK.framework */; };
+		727ED13E19F95841000707AA /* AlbaniaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11019F95841000707AA /* AlbaniaFlag.png */; };
+		727ED13F19F95841000707AA /* AustriaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11119F95841000707AA /* AustriaFlag.png */; };
+		727ED14019F95841000707AA /* BelarusFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11219F95841000707AA /* BelarusFlag.png */; };
+		727ED14119F95841000707AA /* BelgiumFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11319F95841000707AA /* BelgiumFlag.png */; };
+		727ED14219F95841000707AA /* BosniaAndHerzegovinaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11419F95841000707AA /* BosniaAndHerzegovinaFlag.png */; };
+		727ED14319F95841000707AA /* BulgariaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11519F95841000707AA /* BulgariaFlag.png */; };
+		727ED14419F95841000707AA /* CroatiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11619F95841000707AA /* CroatiaFlag.png */; };
+		727ED14519F95841000707AA /* CzechRepublicFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11719F95841000707AA /* CzechRepublicFlag.png */; };
+		727ED14619F95841000707AA /* DenmarkFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11819F95841000707AA /* DenmarkFlag.png */; };
+		727ED14719F95841000707AA /* EnglandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11919F95841000707AA /* EnglandFlag.png */; };
+		727ED14819F95841000707AA /* EstoniaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11A19F95841000707AA /* EstoniaFlag.png */; };
+		727ED14919F95841000707AA /* FaroeIslandsFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11B19F95841000707AA /* FaroeIslandsFlag.png */; };
+		727ED14A19F95841000707AA /* FinlandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11C19F95841000707AA /* FinlandFlag.png */; };
+		727ED14B19F95841000707AA /* FranceFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11D19F95841000707AA /* FranceFlag.png */; };
+		727ED14C19F95841000707AA /* GermanyFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11E19F95841000707AA /* GermanyFlag.png */; };
+		727ED14D19F95841000707AA /* GreeceFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED11F19F95841000707AA /* GreeceFlag.png */; };
+		727ED14E19F95841000707AA /* GreenlandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12019F95841000707AA /* GreenlandFlag.png */; };
+		727ED14F19F95841000707AA /* HungaryFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12119F95841000707AA /* HungaryFlag.png */; };
+		727ED15019F95841000707AA /* IcelandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12219F95841000707AA /* IcelandFlag.png */; };
+		727ED15119F95841000707AA /* IrelandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12319F95841000707AA /* IrelandFlag.png */; };
+		727ED15219F95841000707AA /* IsleOfManFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12419F95841000707AA /* IsleOfManFlag.png */; };
+		727ED15319F95841000707AA /* ItalyFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12519F95841000707AA /* ItalyFlag.png */; };
+		727ED15419F95841000707AA /* KosovoFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12619F95841000707AA /* KosovoFlag.png */; };
+		727ED15519F95841000707AA /* LatviaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12719F95841000707AA /* LatviaFlag.png */; };
+		727ED15619F95841000707AA /* LiechtensteinFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12819F95841000707AA /* LiechtensteinFlag.png */; };
+		727ED15719F95841000707AA /* LithuaniaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12919F95841000707AA /* LithuaniaFlag.png */; };
+		727ED15819F95841000707AA /* LuxembourgFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12A19F95841000707AA /* LuxembourgFlag.png */; };
+		727ED15919F95841000707AA /* MacedoniaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12B19F95841000707AA /* MacedoniaFlag.png */; };
+		727ED15A19F95841000707AA /* MaltaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12C19F95841000707AA /* MaltaFlag.png */; };
+		727ED15B19F95841000707AA /* MoldovaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12D19F95841000707AA /* MoldovaFlag.png */; };
+		727ED15C19F95841000707AA /* MonacoFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12E19F95841000707AA /* MonacoFlag.png */; };
+		727ED15D19F95841000707AA /* NetherlandsFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED12F19F95841000707AA /* NetherlandsFlag.png */; };
+		727ED15E19F95841000707AA /* NorthernIreland.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13019F95841000707AA /* NorthernIreland.png */; };
+		727ED15F19F95841000707AA /* NorwayFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13119F95841000707AA /* NorwayFlag.png */; };
+		727ED16019F95841000707AA /* PolandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13219F95841000707AA /* PolandFlag.png */; };
+		727ED16119F95841000707AA /* RomaniaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13319F95841000707AA /* RomaniaFlag.png */; };
+		727ED16219F95841000707AA /* ScotlandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13419F95841000707AA /* ScotlandFlag.png */; };
+		727ED16319F95841000707AA /* SerbiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13519F95841000707AA /* SerbiaFlag.png */; };
+		727ED16419F95841000707AA /* SlovakiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13619F95841000707AA /* SlovakiaFlag.png */; };
+		727ED16519F95841000707AA /* SloveniaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13719F95841000707AA /* SloveniaFlag.png */; };
+		727ED16619F95841000707AA /* SpainFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13819F95841000707AA /* SpainFlag.png */; };
+		727ED16719F95841000707AA /* SwedenFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13919F95841000707AA /* SwedenFlag.png */; };
+		727ED16819F95841000707AA /* SwitzerlandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13A19F95841000707AA /* SwitzerlandFlag.png */; };
+		727ED16919F95841000707AA /* UkraineFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13B19F95841000707AA /* UkraineFlag.png */; };
+		727ED16A19F95841000707AA /* UnitedKingdomFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13C19F95841000707AA /* UnitedKingdomFlag.png */; };
+		727ED16B19F95841000707AA /* WalesFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED13D19F95841000707AA /* WalesFlag.png */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -1041,6 +1087,52 @@
 		7204A49919E40CF600B8AE76 /* YemenFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YemenFlag.png; path = resources/graphics/pictureQuestions/YemenFlag.png; sourceTree = "<group>"; };
 		7204A4A619E4358700B8AE76 /* DominicanRepublicFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DominicanRepublicFlag.png; path = resources/graphics/pictureQuestions/DominicanRepublicFlag.png; sourceTree = "<group>"; };
 		724026B119E55E5E005E3582 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		727ED11019F95841000707AA /* AlbaniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AlbaniaFlag.png; path = resources/graphics/pictureQuestions/AlbaniaFlag.png; sourceTree = "<group>"; };
+		727ED11119F95841000707AA /* AustriaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AustriaFlag.png; path = resources/graphics/pictureQuestions/AustriaFlag.png; sourceTree = "<group>"; };
+		727ED11219F95841000707AA /* BelarusFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BelarusFlag.png; path = resources/graphics/pictureQuestions/BelarusFlag.png; sourceTree = "<group>"; };
+		727ED11319F95841000707AA /* BelgiumFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BelgiumFlag.png; path = resources/graphics/pictureQuestions/BelgiumFlag.png; sourceTree = "<group>"; };
+		727ED11419F95841000707AA /* BosniaAndHerzegovinaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BosniaAndHerzegovinaFlag.png; path = resources/graphics/pictureQuestions/BosniaAndHerzegovinaFlag.png; sourceTree = "<group>"; };
+		727ED11519F95841000707AA /* BulgariaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BulgariaFlag.png; path = resources/graphics/pictureQuestions/BulgariaFlag.png; sourceTree = "<group>"; };
+		727ED11619F95841000707AA /* CroatiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CroatiaFlag.png; path = resources/graphics/pictureQuestions/CroatiaFlag.png; sourceTree = "<group>"; };
+		727ED11719F95841000707AA /* CzechRepublicFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CzechRepublicFlag.png; path = resources/graphics/pictureQuestions/CzechRepublicFlag.png; sourceTree = "<group>"; };
+		727ED11819F95841000707AA /* DenmarkFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DenmarkFlag.png; path = resources/graphics/pictureQuestions/DenmarkFlag.png; sourceTree = "<group>"; };
+		727ED11919F95841000707AA /* EnglandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EnglandFlag.png; path = resources/graphics/pictureQuestions/EnglandFlag.png; sourceTree = "<group>"; };
+		727ED11A19F95841000707AA /* EstoniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EstoniaFlag.png; path = resources/graphics/pictureQuestions/EstoniaFlag.png; sourceTree = "<group>"; };
+		727ED11B19F95841000707AA /* FaroeIslandsFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FaroeIslandsFlag.png; path = resources/graphics/pictureQuestions/FaroeIslandsFlag.png; sourceTree = "<group>"; };
+		727ED11C19F95841000707AA /* FinlandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FinlandFlag.png; path = resources/graphics/pictureQuestions/FinlandFlag.png; sourceTree = "<group>"; };
+		727ED11D19F95841000707AA /* FranceFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FranceFlag.png; path = resources/graphics/pictureQuestions/FranceFlag.png; sourceTree = "<group>"; };
+		727ED11E19F95841000707AA /* GermanyFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GermanyFlag.png; path = resources/graphics/pictureQuestions/GermanyFlag.png; sourceTree = "<group>"; };
+		727ED11F19F95841000707AA /* GreeceFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreeceFlag.png; path = resources/graphics/pictureQuestions/GreeceFlag.png; sourceTree = "<group>"; };
+		727ED12019F95841000707AA /* GreenlandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenlandFlag.png; path = resources/graphics/pictureQuestions/GreenlandFlag.png; sourceTree = "<group>"; };
+		727ED12119F95841000707AA /* HungaryFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HungaryFlag.png; path = resources/graphics/pictureQuestions/HungaryFlag.png; sourceTree = "<group>"; };
+		727ED12219F95841000707AA /* IcelandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IcelandFlag.png; path = resources/graphics/pictureQuestions/IcelandFlag.png; sourceTree = "<group>"; };
+		727ED12319F95841000707AA /* IrelandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IrelandFlag.png; path = resources/graphics/pictureQuestions/IrelandFlag.png; sourceTree = "<group>"; };
+		727ED12419F95841000707AA /* IsleOfManFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IsleOfManFlag.png; path = resources/graphics/pictureQuestions/IsleOfManFlag.png; sourceTree = "<group>"; };
+		727ED12519F95841000707AA /* ItalyFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ItalyFlag.png; path = resources/graphics/pictureQuestions/ItalyFlag.png; sourceTree = "<group>"; };
+		727ED12619F95841000707AA /* KosovoFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = KosovoFlag.png; path = resources/graphics/pictureQuestions/KosovoFlag.png; sourceTree = "<group>"; };
+		727ED12719F95841000707AA /* LatviaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LatviaFlag.png; path = resources/graphics/pictureQuestions/LatviaFlag.png; sourceTree = "<group>"; };
+		727ED12819F95841000707AA /* LiechtensteinFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LiechtensteinFlag.png; path = resources/graphics/pictureQuestions/LiechtensteinFlag.png; sourceTree = "<group>"; };
+		727ED12919F95841000707AA /* LithuaniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LithuaniaFlag.png; path = resources/graphics/pictureQuestions/LithuaniaFlag.png; sourceTree = "<group>"; };
+		727ED12A19F95841000707AA /* LuxembourgFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LuxembourgFlag.png; path = resources/graphics/pictureQuestions/LuxembourgFlag.png; sourceTree = "<group>"; };
+		727ED12B19F95841000707AA /* MacedoniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacedoniaFlag.png; path = resources/graphics/pictureQuestions/MacedoniaFlag.png; sourceTree = "<group>"; };
+		727ED12C19F95841000707AA /* MaltaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MaltaFlag.png; path = resources/graphics/pictureQuestions/MaltaFlag.png; sourceTree = "<group>"; };
+		727ED12D19F95841000707AA /* MoldovaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MoldovaFlag.png; path = resources/graphics/pictureQuestions/MoldovaFlag.png; sourceTree = "<group>"; };
+		727ED12E19F95841000707AA /* MonacoFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MonacoFlag.png; path = resources/graphics/pictureQuestions/MonacoFlag.png; sourceTree = "<group>"; };
+		727ED12F19F95841000707AA /* NetherlandsFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NetherlandsFlag.png; path = resources/graphics/pictureQuestions/NetherlandsFlag.png; sourceTree = "<group>"; };
+		727ED13019F95841000707AA /* NorthernIreland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorthernIreland.png; path = resources/graphics/pictureQuestions/NorthernIreland.png; sourceTree = "<group>"; };
+		727ED13119F95841000707AA /* NorwayFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorwayFlag.png; path = resources/graphics/pictureQuestions/NorwayFlag.png; sourceTree = "<group>"; };
+		727ED13219F95841000707AA /* PolandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PolandFlag.png; path = resources/graphics/pictureQuestions/PolandFlag.png; sourceTree = "<group>"; };
+		727ED13319F95841000707AA /* RomaniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RomaniaFlag.png; path = resources/graphics/pictureQuestions/RomaniaFlag.png; sourceTree = "<group>"; };
+		727ED13419F95841000707AA /* ScotlandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScotlandFlag.png; path = resources/graphics/pictureQuestions/ScotlandFlag.png; sourceTree = "<group>"; };
+		727ED13519F95841000707AA /* SerbiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SerbiaFlag.png; path = resources/graphics/pictureQuestions/SerbiaFlag.png; sourceTree = "<group>"; };
+		727ED13619F95841000707AA /* SlovakiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SlovakiaFlag.png; path = resources/graphics/pictureQuestions/SlovakiaFlag.png; sourceTree = "<group>"; };
+		727ED13719F95841000707AA /* SloveniaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SloveniaFlag.png; path = resources/graphics/pictureQuestions/SloveniaFlag.png; sourceTree = "<group>"; };
+		727ED13819F95841000707AA /* SpainFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SpainFlag.png; path = resources/graphics/pictureQuestions/SpainFlag.png; sourceTree = "<group>"; };
+		727ED13919F95841000707AA /* SwedenFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwedenFlag.png; path = resources/graphics/pictureQuestions/SwedenFlag.png; sourceTree = "<group>"; };
+		727ED13A19F95841000707AA /* SwitzerlandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SwitzerlandFlag.png; path = resources/graphics/pictureQuestions/SwitzerlandFlag.png; sourceTree = "<group>"; };
+		727ED13B19F95841000707AA /* UkraineFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UkraineFlag.png; path = resources/graphics/pictureQuestions/UkraineFlag.png; sourceTree = "<group>"; };
+		727ED13C19F95841000707AA /* UnitedKingdomFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UnitedKingdomFlag.png; path = resources/graphics/pictureQuestions/UnitedKingdomFlag.png; sourceTree = "<group>"; };
+		727ED13D19F95841000707AA /* WalesFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WalesFlag.png; path = resources/graphics/pictureQuestions/WalesFlag.png; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1811,6 +1903,52 @@
 		EE989925133012CB00CBA780 /* aoc */ = {
 			isa = PBXGroup;
 			children = (
+				727ED11019F95841000707AA /* AlbaniaFlag.png */,
+				727ED11119F95841000707AA /* AustriaFlag.png */,
+				727ED11219F95841000707AA /* BelarusFlag.png */,
+				727ED11319F95841000707AA /* BelgiumFlag.png */,
+				727ED11419F95841000707AA /* BosniaAndHerzegovinaFlag.png */,
+				727ED11519F95841000707AA /* BulgariaFlag.png */,
+				727ED11619F95841000707AA /* CroatiaFlag.png */,
+				727ED11719F95841000707AA /* CzechRepublicFlag.png */,
+				727ED11819F95841000707AA /* DenmarkFlag.png */,
+				727ED11919F95841000707AA /* EnglandFlag.png */,
+				727ED11A19F95841000707AA /* EstoniaFlag.png */,
+				727ED11B19F95841000707AA /* FaroeIslandsFlag.png */,
+				727ED11C19F95841000707AA /* FinlandFlag.png */,
+				727ED11D19F95841000707AA /* FranceFlag.png */,
+				727ED11E19F95841000707AA /* GermanyFlag.png */,
+				727ED11F19F95841000707AA /* GreeceFlag.png */,
+				727ED12019F95841000707AA /* GreenlandFlag.png */,
+				727ED12119F95841000707AA /* HungaryFlag.png */,
+				727ED12219F95841000707AA /* IcelandFlag.png */,
+				727ED12319F95841000707AA /* IrelandFlag.png */,
+				727ED12419F95841000707AA /* IsleOfManFlag.png */,
+				727ED12519F95841000707AA /* ItalyFlag.png */,
+				727ED12619F95841000707AA /* KosovoFlag.png */,
+				727ED12719F95841000707AA /* LatviaFlag.png */,
+				727ED12819F95841000707AA /* LiechtensteinFlag.png */,
+				727ED12919F95841000707AA /* LithuaniaFlag.png */,
+				727ED12A19F95841000707AA /* LuxembourgFlag.png */,
+				727ED12B19F95841000707AA /* MacedoniaFlag.png */,
+				727ED12C19F95841000707AA /* MaltaFlag.png */,
+				727ED12D19F95841000707AA /* MoldovaFlag.png */,
+				727ED12E19F95841000707AA /* MonacoFlag.png */,
+				727ED12F19F95841000707AA /* NetherlandsFlag.png */,
+				727ED13019F95841000707AA /* NorthernIreland.png */,
+				727ED13119F95841000707AA /* NorwayFlag.png */,
+				727ED13219F95841000707AA /* PolandFlag.png */,
+				727ED13319F95841000707AA /* RomaniaFlag.png */,
+				727ED13419F95841000707AA /* ScotlandFlag.png */,
+				727ED13519F95841000707AA /* SerbiaFlag.png */,
+				727ED13619F95841000707AA /* SlovakiaFlag.png */,
+				727ED13719F95841000707AA /* SloveniaFlag.png */,
+				727ED13819F95841000707AA /* SpainFlag.png */,
+				727ED13919F95841000707AA /* SwedenFlag.png */,
+				727ED13A19F95841000707AA /* SwitzerlandFlag.png */,
+				727ED13B19F95841000707AA /* UkraineFlag.png */,
+				727ED13C19F95841000707AA /* UnitedKingdomFlag.png */,
+				727ED13D19F95841000707AA /* WalesFlag.png */,
 				729FC44419ED6AF800B082E5 /* RussiaFlag.png */,
 				729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */,
 				729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */,
@@ -2245,6 +2383,7 @@
 			files = (
 				7204A16819D976B300B8AE76 /* world_50_1_5.jpg in Resources */,
 				7204A2D119D976D600B8AE76 /* world_100_11_0.jpg in Resources */,
+				727ED14219F95841000707AA /* BosniaAndHerzegovinaFlag.png in Resources */,
 				7204A28619D976D600B8AE76 /* world_100_4_9.jpg in Resources */,
 				7204A48119E3487200B8AE76 /* SouthSudanFlag.png in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
@@ -2254,12 +2393,14 @@
 				7204A2D819D976D600B8AE76 /* world_100_11_7.jpg in Resources */,
 				7204A41C19E00B1F00B8AE76 /* statesMiddleEast.txt in Resources */,
 				7204A39519D979E700B8AE76 /* islands.txt in Resources */,
+				727ED15B19F95841000707AA /* MoldovaFlag.png in Resources */,
 				729FC42A19ECA16B00B082E5 /* KyrgyzstanFlag.png in Resources */,
 				7204A25F19D976D600B8AE76 /* world_100_1_6.jpg in Resources */,
 				7204A10F19D9765A00B8AE76 /* testExtraQuestions.txt in Resources */,
 				7204A28919D976D600B8AE76 /* world_100_5_0.jpg in Resources */,
 				7204A37C19D9799200B8AE76 /* loop.png in Resources */,
 				7204A27D19D976D600B8AE76 /* world_100_4_0.jpg in Resources */,
+				727ED16619F95841000707AA /* SpainFlag.png in Resources */,
 				7204A49F19E40CF600B8AE76 /* KuwaitFlag.png in Resources */,
 				729FC43019ECA16B00B082E5 /* NepalFlag.png in Resources */,
 				7204A40C19DDFE4500B8AE76 /* UruguayFlag.png in Resources */,
@@ -2270,6 +2411,7 @@
 				7204A2DF19D976D600B8AE76 /* world_100_12_2.jpg in Resources */,
 				7204A45A19E3487200B8AE76 /* BurkinaFasoFlag.png in Resources */,
 				7204A2E419D976D600B8AE76 /* world_100_12_7.jpg in Resources */,
+				727ED15319F95841000707AA /* ItalyFlag.png in Resources */,
 				7204A39919D979E700B8AE76 /* QuestionDocumentation.txt in Resources */,
 				7204A2A519D976D600B8AE76 /* world_100_7_4.jpg in Resources */,
 				7204A2A119D976D600B8AE76 /* world_100_7_0.jpg in Resources */,
@@ -2278,7 +2420,9 @@
 				7204A2D319D976D600B8AE76 /* world_100_11_2.jpg in Resources */,
 				7204A40B19DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png in Resources */,
 				7204A45719E3487200B8AE76 /* AngolaFlag.png in Resources */,
+				727ED15019F95841000707AA /* IcelandFlag.png in Resources */,
 				7204A34919D9798300B8AE76 /* DragToMoveInstr.png in Resources */,
+				727ED15619F95841000707AA /* LiechtensteinFlag.png in Resources */,
 				7204A40119DDFE4500B8AE76 /* NicaraguaFlag.png in Resources */,
 				7204A2B419D976D600B8AE76 /* world_100_8_7.jpg in Resources */,
 				7204A28F19D976D600B8AE76 /* world_100_5_6.jpg in Resources */,
@@ -2293,10 +2437,12 @@
 				7204A30819D976D600B8AE76 /* world_100_15_7.jpg in Resources */,
 				7204A46119E3487200B8AE76 /* DemocraticRepublicOfTheCongoFlag.png in Resources */,
 				7204A30619D976D600B8AE76 /* world_100_15_5.jpg in Resources */,
+				727ED15F19F95841000707AA /* NorwayFlag.png in Resources */,
 				7204A38019D9799200B8AE76 /* RundensResultat.png in Resources */,
 				7204A18619D976B300B8AE76 /* world_50_6_5.jpg in Resources */,
 				7204A3A919D979FD00B8AE76 /* LocalData.plist in Resources */,
 				7204A2D919D976D600B8AE76 /* world_100_11_8.jpg in Resources */,
+				727ED15E19F95841000707AA /* NorthernIreland.png in Resources */,
 				7204A49D19E40CF600B8AE76 /* IsraelFlag.png in Resources */,
 				7204A37F19D9799200B8AE76 /* RoundResults.png in Resources */,
 				7204A29A19D976D600B8AE76 /* world_100_6_5.jpg in Resources */,
@@ -2306,6 +2452,7 @@
 				7204A45619E3487200B8AE76 /* AlgeriaFlag.png in Resources */,
 				7204A2D519D976D600B8AE76 /* world_100_11_4.jpg in Resources */,
 				7204A17819D976B300B8AE76 /* world_50_4_3.jpg in Resources */,
+				727ED16819F95841000707AA /* SwitzerlandFlag.png in Resources */,
 				729FC42319ECA16B00B082E5 /* FederatedStatesOfMicronesiaFlag.png in Resources */,
 				7204A30019D976D600B8AE76 /* world_100_14_11.jpg in Resources */,
 				7204A45819E3487200B8AE76 /* BeninFlag.png in Resources */,
@@ -2313,6 +2460,7 @@
 				7204A29B19D976D600B8AE76 /* world_100_6_6.jpg in Resources */,
 				7204A11319D9767700B8AE76 /* 50MaskLand.png in Resources */,
 				7204A38719D9799200B8AE76 /* Vinneren.png in Resources */,
+				727ED13F19F95841000707AA /* AustriaFlag.png in Resources */,
 				7204A48319E3487200B8AE76 /* SwazilandFlag.png in Resources */,
 				7204A27819D976D600B8AE76 /* world_100_3_7.jpg in Resources */,
 				7204A40519DDFE4500B8AE76 /* PuertoRicoFlag.png in Resources */,
@@ -2325,6 +2473,8 @@
 				7204A16C19D976B300B8AE76 /* world_50_2_3.jpg in Resources */,
 				7204A26719D976D600B8AE76 /* world_100_2_2.jpg in Resources */,
 				7204A18419D976B300B8AE76 /* world_50_6_3.jpg in Resources */,
+				727ED15C19F95841000707AA /* MonacoFlag.png in Resources */,
+				727ED16219F95841000707AA /* ScotlandFlag.png in Resources */,
 				729FC43A19ECA16B00B082E5 /* TajikistanFlag.png in Resources */,
 				7204A37419D9799200B8AE76 /* BarLineUp.png in Resources */,
 				7204A16219D976B300B8AE76 /* world_50_0_5.jpg in Resources */,
@@ -2338,6 +2488,7 @@
 				7204A2B819D976D600B8AE76 /* world_100_8_11.jpg in Resources */,
 				7204A17219D976B300B8AE76 /* world_50_3_3.jpg in Resources */,
 				7204A2CD19D976D600B8AE76 /* world_100_10_8.jpg in Resources */,
+				727ED14719F95841000707AA /* EnglandFlag.png in Resources */,
 				7204A3C119DD7EDD00B8AE76 /* NewZealandFlag.png in Resources */,
 				7204A34B19D9798300B8AE76 /* InstructNor.png in Resources */,
 				7204A18C19D976B300B8AE76 /* world_50_7_5.jpg in Resources */,
@@ -2353,10 +2504,12 @@
 				7204A3ED19DDFE4500B8AE76 /* BarbadosFlag.png in Resources */,
 				7204A48919E3487200B8AE76 /* ZimbabweFlag.png in Resources */,
 				7204A26219D976D600B8AE76 /* world_100_1_9.jpg in Resources */,
+				727ED15D19F95841000707AA /* NetherlandsFlag.png in Resources */,
 				7204A16D19D976B300B8AE76 /* world_50_2_4.jpg in Resources */,
 				7204A25B19D976D600B8AE76 /* world_100_1_2.jpg in Resources */,
 				7204A29E19D976D600B8AE76 /* world_100_6_9.jpg in Resources */,
 				7204A46D19E3487200B8AE76 /* KenyaFlag.png in Resources */,
+				727ED15119F95841000707AA /* IrelandFlag.png in Resources */,
 				7204A48819E3487200B8AE76 /* ZambiaFlag.png in Resources */,
 				7204A47219E3487200B8AE76 /* MalawiFlag.png in Resources */,
 				7204A25E19D976D600B8AE76 /* world_100_1_5.jpg in Resources */,
@@ -2367,6 +2520,7 @@
 				7204A17B19D976B300B8AE76 /* world_50_5_0.jpg in Resources */,
 				7204A18219D976B300B8AE76 /* world_50_6_1.jpg in Resources */,
 				7204A3FD19DDFE4500B8AE76 /* HaitiFlag.png in Resources */,
+				727ED14C19F95841000707AA /* GermanyFlag.png in Resources */,
 				7204A3F219DDFE4500B8AE76 /* ChileFlag.png in Resources */,
 				7204A30519D976D600B8AE76 /* world_100_15_4.jpg in Resources */,
 				7204A12819D9769A00B8AE76 /* world_25_2_1.jpg in Resources */,
@@ -2383,6 +2537,7 @@
 				7204A17019D976B300B8AE76 /* world_50_3_1.jpg in Resources */,
 				7204A2EC19D976D600B8AE76 /* world_100_13_3.jpg in Resources */,
 				7204A28119D976D600B8AE76 /* world_100_4_4.jpg in Resources */,
+				727ED15219F95841000707AA /* IsleOfManFlag.png in Resources */,
 				7204A3A619D979FD00B8AE76 /* HighscoreHard.plist in Resources */,
 				7204A40219DDFE4500B8AE76 /* PanamaFlag.png in Resources */,
 				7204A46219E3487200B8AE76 /* DjiboutiFlag.png in Resources */,
@@ -2405,11 +2560,13 @@
 				729FC43919ECA16B00B082E5 /* SriLankaFlag.png in Resources */,
 				7204A27719D976D600B8AE76 /* world_100_3_6.jpg in Resources */,
 				7204A29D19D976D600B8AE76 /* world_100_6_8.jpg in Resources */,
+				727ED16719F95841000707AA /* SwedenFlag.png in Resources */,
 				7204A3BF19DD7EDD00B8AE76 /* MalaysiaFlag.png in Resources */,
 				7204A2E719D976D600B8AE76 /* world_100_12_10.jpg in Resources */,
 				7204A2A919D976D600B8AE76 /* world_100_7_8.jpg in Resources */,
 				7204A3C019DD7EDD00B8AE76 /* NewGuineaFlag.png in Resources */,
 				7204A38119D9799200B8AE76 /* tapImage.png in Resources */,
+				727ED15519F95841000707AA /* LatviaFlag.png in Resources */,
 				7204A26D19D976D600B8AE76 /* world_100_2_8.jpg in Resources */,
 				7204A2DE19D976D600B8AE76 /* world_100_12_1.jpg in Resources */,
 				7204A27519D976D600B8AE76 /* world_100_3_4.jpg in Resources */,
@@ -2447,6 +2604,7 @@
 				7204A17519D976B300B8AE76 /* world_50_4_0.jpg in Resources */,
 				7204A38519D9799200B8AE76 /* TheWinner.png in Resources */,
 				7204A3EC19DDFE4500B8AE76 /* BahamasFlag.png in Resources */,
+				727ED14319F95841000707AA /* BulgariaFlag.png in Resources */,
 				7204A2E519D976D600B8AE76 /* world_100_12_8.jpg in Resources */,
 				7204A3FC19DDFE4500B8AE76 /* GuyanaFlag.png in Resources */,
 				7204A48219E3487200B8AE76 /* SudanFlag.png in Resources */,
@@ -2473,6 +2631,7 @@
 				7204A45B19E3487200B8AE76 /* BurundiFlag.png in Resources */,
 				7204A34C19D9798300B8AE76 /* TapToMoveInstr.png in Resources */,
 				7204A47C19E3487200B8AE76 /* SaoTomeAndPrincipeFlag.png in Resources */,
+				727ED14A19F95841000707AA /* FinlandFlag.png in Resources */,
 				7204A47919E3487200B8AE76 /* NigerFlag.png in Resources */,
 				7204A48D19E35B6A00B8AE76 /* IvoryCoastFlag.png in Resources */,
 				7204A26419D976D600B8AE76 /* world_100_1_11.jpg in Resources */,
@@ -2488,6 +2647,7 @@
 				7204A16419D976B300B8AE76 /* world_50_1_1.jpg in Resources */,
 				7204A2AE19D976D600B8AE76 /* world_100_8_1.jpg in Resources */,
 				7204A16619D976B300B8AE76 /* world_50_1_3.jpg in Resources */,
+				727ED14619F95841000707AA /* DenmarkFlag.png in Resources */,
 				7204A2B919D976D600B8AE76 /* world_100_9_0.jpg in Resources */,
 				7204A27319D976D600B8AE76 /* world_100_3_2.jpg in Resources */,
 				7204A2E619D976D600B8AE76 /* world_100_12_9.jpg in Resources */,
@@ -2496,14 +2656,17 @@
 				7204A28219D976D600B8AE76 /* world_100_4_5.jpg in Resources */,
 				7204A46E19E3487200B8AE76 /* LesothoFlag.png in Resources */,
 				7204A26919D976D600B8AE76 /* world_100_2_4.jpg in Resources */,
+				727ED16119F95841000707AA /* RomaniaFlag.png in Resources */,
 				7204A3F819DDFE4500B8AE76 /* EcuadorFlag.png in Resources */,
 				7204A2B119D976D600B8AE76 /* world_100_8_4.jpg in Resources */,
 				7204A2F519D976D600B8AE76 /* world_100_14_0.jpg in Resources */,
+				727ED15819F95841000707AA /* LuxembourgFlag.png in Resources */,
 				7204A34E19D9798300B8AE76 /* ZoomOutInstr.png in Resources */,
 				7204A11419D9767700B8AE76 /* 50MaskWater.png in Resources */,
 				7204A48719E3487200B8AE76 /* UgandaFlag.png in Resources */,
 				7204A2AD19D976D600B8AE76 /* world_100_8_0.jpg in Resources */,
 				7204A29719D976D600B8AE76 /* world_100_6_2.jpg in Resources */,
+				727ED14019F95841000707AA /* BelarusFlag.png in Resources */,
 				7204A47819E3487200B8AE76 /* NamibiaFlag.png in Resources */,
 				7204A25219D976D600B8AE76 /* world_100_0_5.jpg in Resources */,
 				7204A17619D976B300B8AE76 /* world_50_4_1.jpg in Resources */,
@@ -2524,18 +2687,21 @@
 				7204A46A19E3487200B8AE76 /* Guinea-BissauFlag.png in Resources */,
 				7204A28D19D976D600B8AE76 /* world_100_5_4.jpg in Resources */,
 				7204A2AC19D976D600B8AE76 /* world_100_7_11.jpg in Resources */,
+				727ED16B19F95841000707AA /* WalesFlag.png in Resources */,
 				729FC41F19ECA16B00B082E5 /* BhutanFlag.png in Resources */,
 				729FC42C19ECA16B00B082E5 /* MarshallIslandsFlag.png in Resources */,
 				7204A3A419D979FD00B8AE76 /* InfoNor.html in Resources */,
 				7204A45F19E3487200B8AE76 /* ChadFlag.png in Resources */,
 				7204A15E19D976B300B8AE76 /* world_50_0_1.jpg in Resources */,
 				7204A38319D9799200B8AE76 /* tapImageNor.png in Resources */,
+				727ED14F19F95841000707AA /* HungaryFlag.png in Resources */,
 				7204A2E119D976D600B8AE76 /* world_100_12_4.jpg in Resources */,
 				7204A26319D976D600B8AE76 /* world_100_1_10.jpg in Resources */,
 				729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */,
 				7204A12619D9769A00B8AE76 /* world_25_1_2.jpg in Resources */,
 				7204A2EE19D976D600B8AE76 /* world_100_13_5.jpg in Resources */,
 				7204A2BD19D976D600B8AE76 /* world_100_9_4.jpg in Resources */,
+				727ED15A19F95841000707AA /* MaltaFlag.png in Resources */,
 				7204A3F419DDFE4500B8AE76 /* CostaRicaFlag.png in Resources */,
 				7204A28319D976D600B8AE76 /* world_100_4_6.jpg in Resources */,
 				7204A27B19D976D600B8AE76 /* world_100_3_10.jpg in Resources */,
@@ -2577,6 +2743,7 @@
 				7204A3A519D979FD00B8AE76 /* HighscoreEasy.plist in Resources */,
 				7204A38819D9799200B8AE76 /* watchhand.png in Resources */,
 				7204A3B919DD7EDD00B8AE76 /* AustraliaFlag.png in Resources */,
+				727ED13E19F95841000707AA /* AlbaniaFlag.png in Resources */,
 				7204A29919D976D600B8AE76 /* world_100_6_4.jpg in Resources */,
 				729FC42719ECA16B00B082E5 /* JapanFlag.png in Resources */,
 				7204A3F919DDFE4500B8AE76 /* ElSalvadorFlag.png in Resources */,
@@ -2593,6 +2760,7 @@
 				7204A2E319D976D600B8AE76 /* world_100_12_6.jpg in Resources */,
 				7204A30C19D976D600B8AE76 /* world_100_15_11.jpg in Resources */,
 				7204A47D19E3487200B8AE76 /* SenegalFlag.png in Resources */,
+				727ED16419F95841000707AA /* SlovakiaFlag.png in Resources */,
 				7204A18119D976B300B8AE76 /* world_50_6_0.jpg in Resources */,
 				7204A18319D976B300B8AE76 /* world_50_6_2.jpg in Resources */,
 				7204A2B519D976D600B8AE76 /* world_100_8_8.jpg in Resources */,
@@ -2612,9 +2780,11 @@
 				7204A2C019D976D600B8AE76 /* world_100_9_7.jpg in Resources */,
 				7204A29219D976D600B8AE76 /* world_100_5_9.jpg in Resources */,
 				7204A48B19E34D4500B8AE76 /* statesAfrica.txt in Resources */,
+				727ED14E19F95841000707AA /* GreenlandFlag.png in Resources */,
 				7204A41D19E00B1F00B8AE76 /* statesNorthAmerica.txt in Resources */,
 				7204A2C719D976D600B8AE76 /* world_100_10_2.jpg in Resources */,
 				7204A2EA19D976D600B8AE76 /* world_100_13_1.jpg in Resources */,
+				727ED14819F95841000707AA /* EstoniaFlag.png in Resources */,
 				7204A34D19D9798300B8AE76 /* ZoomInInstr.png in Resources */,
 				7204A30719D976D600B8AE76 /* world_100_15_6.jpg in Resources */,
 				7204A38219D9799200B8AE76 /* tapImage2.png in Resources */,
@@ -2645,16 +2815,20 @@
 				7204A17919D976B300B8AE76 /* world_50_4_4.jpg in Resources */,
 				729FC42B19ECA16B00B082E5 /* MaldivesFlag.png in Resources */,
 				7204A17E19D976B300B8AE76 /* world_50_5_3.jpg in Resources */,
+				727ED14419F95841000707AA /* CroatiaFlag.png in Resources */,
 				7204A18019D976B300B8AE76 /* world_50_5_5.jpg in Resources */,
+				727ED16319F95841000707AA /* SerbiaFlag.png in Resources */,
 				7204A45E19E3487200B8AE76 /* CentralAfricanRepublicFlag.png in Resources */,
 				7204A15D19D976B300B8AE76 /* world_50_0_0.jpg in Resources */,
 				7204A3F519DDFE4500B8AE76 /* CubaFlag.png in Resources */,
+				727ED14919F95841000707AA /* FaroeIslandsFlag.png in Resources */,
 				7204A47E19E3487200B8AE76 /* SierraLeoneFlag.png in Resources */,
 				7204A36D19D9799200B8AE76 /* trophy.jpg in Resources */,
 				7204A3FF19DDFE4500B8AE76 /* JamaicaFlag.png in Resources */,
 				729FC43C19ECA16B00B082E5 /* TongaFlag.png in Resources */,
 				729FC42E19ECA16B00B082E5 /* MyanmarFlag.png in Resources */,
 				7204A49E19E40CF600B8AE76 /* JordanFlag.png in Resources */,
+				727ED14119F95841000707AA /* BelgiumFlag.png in Resources */,
 				729FC42F19ECA16B00B082E5 /* NauruFlag.png in Resources */,
 				EE8731B914CAE1300010A76C /* ChallengeViewController.xib in Resources */,
 				7204A2C619D976D600B8AE76 /* world_100_10_1.jpg in Resources */,
@@ -2674,6 +2848,7 @@
 				7204A3FE19DDFE4500B8AE76 /* HondurasFlag.png in Resources */,
 				7204A2AA19D976D600B8AE76 /* world_100_7_9.jpg in Resources */,
 				7204A49B19E40CF600B8AE76 /* IranFlag.png in Resources */,
+				727ED16A19F95841000707AA /* UnitedKingdomFlag.png in Resources */,
 				729FC41D19ECA16B00B082E5 /* AzerbaijanFlag.png in Resources */,
 				7204A4A419E40CF600B8AE76 /* UnitedArabEmiratesFlag.png in Resources */,
 				7204A2B219D976D600B8AE76 /* world_100_8_5.jpg in Resources */,
@@ -2683,6 +2858,7 @@
 				7204A16A19D976B300B8AE76 /* world_50_2_1.jpg in Resources */,
 				EE3713C214CB6133002EC3C0 /* AddExPlrViewCtrl.xib in Resources */,
 				7204A2F619D976D600B8AE76 /* world_100_14_1.jpg in Resources */,
+				727ED14519F95841000707AA /* CzechRepublicFlag.png in Resources */,
 				7204A16019D976B300B8AE76 /* world_50_0_3.jpg in Resources */,
 				7204A26C19D976D600B8AE76 /* world_100_2_7.jpg in Resources */,
 				EED5544714E882EB0070F3F2 /* TakeChallenge.xib in Resources */,
@@ -2691,6 +2867,7 @@
 				729FC42119ECA16B00B082E5 /* ComorosFlag.png in Resources */,
 				7204A40E19DDFE4500B8AE76 /* VietnamFlag.png in Resources */,
 				7204A37E19D9799200B8AE76 /* MiniLogo.png in Resources */,
+				727ED15419F95841000707AA /* KosovoFlag.png in Resources */,
 				7204A2BA19D976D600B8AE76 /* world_100_9_1.jpg in Resources */,
 				7204A40A19DDFE4500B8AE76 /* TaiwanFlag.png in Resources */,
 				7204A25319D976D600B8AE76 /* world_100_0_6.jpg in Resources */,
@@ -2702,11 +2879,15 @@
 				7204A25119D976D600B8AE76 /* world_100_0_4.jpg in Resources */,
 				7204A17119D976B300B8AE76 /* world_50_3_2.jpg in Resources */,
 				EED5544D14E8844C0070F3F2 /* PlayerStats.xib in Resources */,
+				727ED16019F95841000707AA /* PolandFlag.png in Resources */,
 				7204A40919DDFE4500B8AE76 /* SurinameFlag.png in Resources */,
 				7204A48019E3487200B8AE76 /* SouthAfricaFlag.png in Resources */,
 				7204A12C19D9769A00B8AE76 /* world_25_3_2.jpg in Resources */,
 				7204A2BC19D976D600B8AE76 /* world_100_9_3.jpg in Resources */,
+				727ED16919F95841000707AA /* UkraineFlag.png in Resources */,
+				727ED14D19F95841000707AA /* GreeceFlag.png in Resources */,
 				7204A2DD19D976D600B8AE76 /* world_100_12_0.jpg in Resources */,
+				727ED15919F95841000707AA /* MacedoniaFlag.png in Resources */,
 				7204A41A19E00B1F00B8AE76 /* statesEastAsia.txt in Resources */,
 				7204A2BF19D976D600B8AE76 /* world_100_9_6.jpg in Resources */,
 				7204A2CE19D976D600B8AE76 /* world_100_10_9.jpg in Resources */,
@@ -2722,6 +2903,9 @@
 				7204A48419E3487200B8AE76 /* TanzaniaFlag.png in Resources */,
 				7204A25919D976D600B8AE76 /* world_100_1_0.jpg in Resources */,
 				7204A17C19D976B300B8AE76 /* world_50_5_1.jpg in Resources */,
+				727ED14B19F95841000707AA /* FranceFlag.png in Resources */,
+				727ED15719F95841000707AA /* LithuaniaFlag.png in Resources */,
+				727ED16519F95841000707AA /* SloveniaFlag.png in Resources */,
 				7204A30319D976D600B8AE76 /* world_100_15_2.jpg in Resources */,
 				7204A47119E3487200B8AE76 /* MadagascarFlag.png in Resources */,
 			);
