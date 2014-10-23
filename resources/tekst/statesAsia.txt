@@ -5715,7 +5715,7 @@ inf;UnDefRegion;RussiaIslandWestNU;10;notUsed;eng#nor#spn#fra#ger
 3627;1320
 3618;1329
 qst;coaRussia##medium#RussiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Russia;10;easy;Russia is the largest country in the world, covering more than one-eighth of the Earth's inhabited land area. Capital: Moscow##spn#fra#ger;Asia#Europe and Asia;;RussiaIslandFarEastNU#RussiaIslandEastNU#RussiaIslandNorthNU#RussiaIslandWestNU
+inf;State;Russia;10;easy;Russia is the largest country in the world, covering more than one-eighth of the Earth's inhabited land area. Capital: Moscow##spn#fra#ger;Asia#Europe and Asia;;RussiaIslandFarEastNU#RussiaIslandEastNU#RussiaIslandNorthNU#RussiaIslandWestNU#Kaliningrad
 3698;1990
 3694;1993
 3690;1994
