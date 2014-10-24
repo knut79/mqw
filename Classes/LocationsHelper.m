@@ -341,7 +341,7 @@
 				else if ([dataObj1 isEqualToString:@"Lake"]){
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"from %@s waterfront",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"fra %@s vannkant",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
-					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Where is the lake %@ located",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
+					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Where is %@ located",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
 					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Hvor ligger innsjøen %@",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
 					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Wo ist der See gelegen %@",[placeNameDictionary objectForKey:@"german"]] forKey:@"german"];
 					
