@@ -1639,7 +1639,7 @@ inf;UnDefRegion;WestIslandMexicoNU;10;notUsed;eng#nor#spn#fra#ger
 596;1522
 584;1523;sl
 qst;coaMexico##medium#MexicoFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Mexico;10;easy;The 13th largest independent nation in the world. Capital: Mexico City##spn#fra#ger;America#Bordered on the north by the United States;;WestIslandMexicoNU
+inf;State;Mexico;10;easy;The 13th largest independent nation in the world. Capital: Mexico City##spn#fra#ger;America#Bordered on the north by the United States;;WestIslandMexicoNU#Islas Revillagigedo
 924;1765
 922;1766
 923;1769
