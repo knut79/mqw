@@ -12,7 +12,7 @@
 #import "City.h"
 #import "State.h"
 #import "Lake.h"
-#import "Fjord.h"
+#import "UnDefWaterRegion.h"
 #import "Island.h"
 #import "Peninsula.h"
 #import "Mountain.h"

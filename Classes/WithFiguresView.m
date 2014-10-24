@@ -463,7 +463,7 @@
 	CGImageRef mask;
 	NSString *maskFileName;
 
-	if ([loc isKindOfClass:[Lake class]] || [loc isKindOfClass:[Fjord class]])
+	if ([loc isKindOfClass:[Lake class]] || [loc isKindOfClass:[UnDefWaterRegion class]])
 	{
 		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_water] ;
 	}

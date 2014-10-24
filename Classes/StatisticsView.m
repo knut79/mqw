@@ -306,12 +306,12 @@
 		}
         [results close];
 		
-		results = [[SqliteHelper Instance] executeQuery:@"SELECT locationNameEng,locationNameNor,locationNameSpn,locationNameFra,locationNameGer ,avgDistance , sumAnswers FROM location WHERE locationtype = 'Fjord'" 
+		results = [[SqliteHelper Instance] executeQuery:@"SELECT locationNameEng,locationNameNor,locationNameSpn,locationNameFra,locationNameGer ,avgDistance , sumAnswers FROM location WHERE locationtype = 'UnDefWaterRegion'"
 				   " AND sumAnswers > 0 " 
 				   "ORDER BY avgDistance DESC, ? ASC",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"locationNameEng"]];
 		if ([results hasAnotherRow]== YES)
 		{	
-			[pageToLoad appendString:[NSString stringWithFormat:@"<tr BGCOLOR='#FFFFFF'><th COLSPAN=3>%@</th></tr>",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Fjords"]]];
+			[pageToLoad appendString:[NSString stringWithFormat:@"<tr BGCOLOR='#FFFFFF'><th COLSPAN=3>%@</th></tr>",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Water Regions"]]];
 
 			do
 			{

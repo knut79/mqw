@@ -39,7 +39,16 @@
     CGContextSaveGState(context);
 	
 	CGImageRef mask;
-	NSString *maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_land];
+    NSString *maskFileName;
+    
+	if ([location isKindOfClass:[Lake class]] || [location isKindOfClass:[UnDefWaterRegion class]])
+	{
+		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_water] ;
+	}
+	else
+	{
+		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_land] ;
+	}
     
 	
 	UIImage *testUIMaskImage = [UIImage imageWithContentsOfFile:maskFileName];

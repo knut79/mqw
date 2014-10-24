@@ -59,7 +59,6 @@ typedef enum
 	islandType,
 	peninsulaType,
 	stateType,
-	fjordType,
 	cityType,
 	mountainType
 }LocationType;

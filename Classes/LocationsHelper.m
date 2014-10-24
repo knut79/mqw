@@ -317,7 +317,7 @@
 				defaultHint2 = defaultHint;
 			}
 			
-			if ([dataObj1 isEqualToString:@"State"] || [dataObj1 isEqualToString:@"County"] || [dataObj1 isEqualToString:@"Lake"] || [dataObj1 isEqualToString:@"Fjord"] || [dataObj1 isEqualToString:@"Island"] || 
+			if ([dataObj1 isEqualToString:@"State"] || [dataObj1 isEqualToString:@"County"] || [dataObj1 isEqualToString:@"Lake"] || [dataObj1 isEqualToString:@"UnDefWaterRegion"] || [dataObj1 isEqualToString:@"Island"] || 
 				[dataObj1 isEqualToString:@"Peninsula"] || [dataObj1 isEqualToString:@"UnDefRegion"]) {
 				
 				
@@ -346,12 +346,12 @@
 					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Wo ist der See gelegen %@",[placeNameDictionary objectForKey:@"german"]] forKey:@"german"];
 					
 				}
-				else if ([dataObj1 isEqualToString:@"Fjord"]){
+				else if ([dataObj1 isEqualToString:@"UnDefWaterRegion"]){
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"from %@s waterfront",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"fra %@s vannkant",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
-					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Where is the fjord %@ located",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
+					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Where is  %@ located",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
 					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Hvor ligger %@",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
-					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Wo ist der Fjord gelegen %@",[placeNameDictionary objectForKey:@"german"]] forKey:@"german"];
+					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Wo ist %@ gelegen",[placeNameDictionary objectForKey:@"german"]] forKey:@"german"];
 				}
 				else{
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"from %@",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
@@ -934,8 +934,8 @@
 													andExcludedRegions:nil]; 
 							
 		}
-		else if ([[resultsLocation stringForColumn:@"locationtype"] isEqualToString:@"Fjord"]){
-			tempLocation = [[Fjord alloc] initWithName:[resultsLocation stringForColumn:@"locationNames"] andID:[resultsLocation stringForColumn:@"locationID"] andCounty:@"" andState:@"" 
+		else if ([[resultsLocation stringForColumn:@"locationtype"] isEqualToString:@"UnDefWaterRegion"]){
+			tempLocation = [[UnDefWaterRegion alloc] initWithName:[resultsLocation stringForColumn:@"locationNames"] andID:[resultsLocation stringForColumn:@"locationID"] andCounty:@"" andState:@"" 
 											andPolygons:arrayOfArrayOfRegions
 										andLinesToDraw:multipleLinesArray 
 									 andAdditionalInfo:[NSString stringWithFormat:@"%@#%@#%@#%@#%@",

@@ -321,7 +321,7 @@
 		7204A39719D979E700B8AE76 /* pictureQuestions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A38E19D979E700B8AE76 /* pictureQuestions.txt */; };
 		7204A39819D979E700B8AE76 /* places.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A38F19D979E700B8AE76 /* places.txt */; };
 		7204A39919D979E700B8AE76 /* QuestionDocumentation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A39019D979E700B8AE76 /* QuestionDocumentation.txt */; };
-		7204A39A19D979E700B8AE76 /* states.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A39119D979E700B8AE76 /* states.txt */; };
+		7204A39A19D979E700B8AE76 /* waterRegions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7204A39119D979E700B8AE76 /* waterRegions.txt */; };
 		7204A3A319D979FD00B8AE76 /* InfoEng.html in Resources */ = {isa = PBXBuildFile; fileRef = 7204A39B19D979FD00B8AE76 /* InfoEng.html */; };
 		7204A3A419D979FD00B8AE76 /* InfoNor.html in Resources */ = {isa = PBXBuildFile; fileRef = 7204A39C19D979FD00B8AE76 /* InfoNor.html */; };
 		7204A3A519D979FD00B8AE76 /* HighscoreEasy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7204A39D19D979FD00B8AE76 /* HighscoreEasy.plist */; };
@@ -501,6 +501,7 @@
 		727ED16E19F9BF46000707AA /* MontenegroFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED16C19F9BF46000707AA /* MontenegroFlag.png */; };
 		727ED16F19F9BF46000707AA /* PortugalFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED16D19F9BF46000707AA /* PortugalFlag.png */; };
 		727ED17119F9C02F000707AA /* NorthernIrelandFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 727ED17019F9C02F000707AA /* NorthernIrelandFlag.png */; };
+		727ED17619FA8497000707AA /* UnDefWaterRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 727ED17519FA812D000707AA /* UnDefWaterRegion.m */; };
 		728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 728747A319B9B2D000BADE3B /* libsqlite3.dylib */; };
 		728747B119B9B3A900BADE3B /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A719B9B3A900BADE3B /* FMDatabase.m */; };
 		728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747A919B9B3A900BADE3B /* FMDatabaseAdditions.m */; };
@@ -579,7 +580,6 @@
 		EE98987B13300EBE00CBA780 /* GlobalSettingsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98987A13300EBE00CBA780 /* GlobalSettingsHelper.m */; };
 		EE98987E13300EC500CBA780 /* Highscore.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98987D13300EC500CBA780 /* Highscore.m */; };
 		EE98988413300EEB00CBA780 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98988313300EEB00CBA780 /* Location.m */; };
-		EE98989413300F0F00CBA780 /* Fjord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98988713300F0F00CBA780 /* Fjord.m */; };
 		EE98989513300F0F00CBA780 /* Island.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98988913300F0F00CBA780 /* Island.m */; };
 		EE98989613300F0F00CBA780 /* Lake.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98988B13300F0F00CBA780 /* Lake.m */; };
 		EE98989713300F0F00CBA780 /* MpRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98988D13300F0F00CBA780 /* MpRegion.m */; };
@@ -956,7 +956,7 @@
 		7204A38E19D979E700B8AE76 /* pictureQuestions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pictureQuestions.txt; path = resources/tekst/pictureQuestions.txt; sourceTree = "<group>"; };
 		7204A38F19D979E700B8AE76 /* places.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = places.txt; path = resources/tekst/places.txt; sourceTree = "<group>"; };
 		7204A39019D979E700B8AE76 /* QuestionDocumentation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = QuestionDocumentation.txt; path = resources/tekst/QuestionDocumentation.txt; sourceTree = "<group>"; };
-		7204A39119D979E700B8AE76 /* states.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = states.txt; path = resources/tekst/states.txt; sourceTree = "<group>"; };
+		7204A39119D979E700B8AE76 /* waterRegions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = waterRegions.txt; path = resources/tekst/waterRegions.txt; sourceTree = "<group>"; };
 		7204A39B19D979FD00B8AE76 /* InfoEng.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = InfoEng.html; path = resources/InfoEng.html; sourceTree = "<group>"; };
 		7204A39C19D979FD00B8AE76 /* InfoNor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = InfoNor.html; path = resources/InfoNor.html; sourceTree = "<group>"; };
 		7204A39D19D979FD00B8AE76 /* HighscoreEasy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HighscoreEasy.plist; path = resources/HighscoreEasy.plist; sourceTree = "<group>"; };
@@ -1137,6 +1137,8 @@
 		727ED16C19F9BF46000707AA /* MontenegroFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MontenegroFlag.png; path = resources/graphics/pictureQuestions/MontenegroFlag.png; sourceTree = "<group>"; };
 		727ED16D19F9BF46000707AA /* PortugalFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PortugalFlag.png; path = resources/graphics/pictureQuestions/PortugalFlag.png; sourceTree = "<group>"; };
 		727ED17019F9C02F000707AA /* NorthernIrelandFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NorthernIrelandFlag.png; path = resources/graphics/pictureQuestions/NorthernIrelandFlag.png; sourceTree = "<group>"; };
+		727ED17419FA812D000707AA /* UnDefWaterRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnDefWaterRegion.h; sourceTree = "<group>"; };
+		727ED17519FA812D000707AA /* UnDefWaterRegion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnDefWaterRegion.m; sourceTree = "<group>"; };
 		728747A319B9B2D000BADE3B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		728747A619B9B3A900BADE3B /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		728747A719B9B3A900BADE3B /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -1254,8 +1256,6 @@
 		EE98987D13300EC500CBA780 /* Highscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Highscore.m; sourceTree = "<group>"; };
 		EE98988213300EEB00CBA780 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		EE98988313300EEB00CBA780 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		EE98988613300F0F00CBA780 /* Fjord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fjord.h; sourceTree = "<group>"; };
-		EE98988713300F0F00CBA780 /* Fjord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fjord.m; sourceTree = "<group>"; };
 		EE98988813300F0F00CBA780 /* Island.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Island.h; sourceTree = "<group>"; };
 		EE98988913300F0F00CBA780 /* Island.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Island.m; sourceTree = "<group>"; };
 		EE98988A13300F0F00CBA780 /* Lake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lake.h; sourceTree = "<group>"; };
@@ -1481,7 +1481,7 @@
 				7204A38E19D979E700B8AE76 /* pictureQuestions.txt */,
 				7204A38F19D979E700B8AE76 /* places.txt */,
 				7204A39019D979E700B8AE76 /* QuestionDocumentation.txt */,
-				7204A39119D979E700B8AE76 /* states.txt */,
+				7204A39119D979E700B8AE76 /* waterRegions.txt */,
 				728747A519B9B3A900BADE3B /* fmdb */,
 				EE3B5EDB13329F5400E6E77A /* TEST */,
 				EE9898F51330125000CBA780 /* graphics */,
@@ -2205,8 +2205,6 @@
 		EEA40FD512B9836B006B3A10 /* Region */ = {
 			isa = PBXGroup;
 			children = (
-				EE98988613300F0F00CBA780 /* Fjord.h */,
-				EE98988713300F0F00CBA780 /* Fjord.m */,
 				EE98988813300F0F00CBA780 /* Island.h */,
 				EE98988913300F0F00CBA780 /* Island.m */,
 				EE98988A13300F0F00CBA780 /* Lake.h */,
@@ -2221,6 +2219,8 @@
 				EE98989313300F0F00CBA780 /* UnDefRegion.m */,
 				EEE7A4A3136B01CB0077033B /* County.h */,
 				EEE7A4A4136B01CB0077033B /* County.m */,
+				727ED17419FA812D000707AA /* UnDefWaterRegion.h */,
+				727ED17519FA812D000707AA /* UnDefWaterRegion.m */,
 			);
 			name = Region;
 			sourceTree = "<group>";
@@ -2728,7 +2728,7 @@
 				7204A40319DDFE4500B8AE76 /* ParaguayFlag.png in Resources */,
 				7204A36E19D9799200B8AE76 /* ArrowBlue.png in Resources */,
 				7204A27C19D976D600B8AE76 /* world_100_3_11.jpg in Resources */,
-				7204A39A19D979E700B8AE76 /* states.txt in Resources */,
+				7204A39A19D979E700B8AE76 /* waterRegions.txt in Resources */,
 				7204A2A819D976D600B8AE76 /* world_100_7_7.jpg in Resources */,
 				7204A4A319E40CF600B8AE76 /* SyriaFlag.png in Resources */,
 				729FC43B19ECA16B00B082E5 /* ThailandFlag.png in Resources */,
@@ -2926,6 +2926,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				727ED17619FA8497000707AA /* UnDefWaterRegion.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MQNorwayAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* MQNorwayViewController.m in Sources */,
@@ -2945,7 +2946,6 @@
 				EE98987B13300EBE00CBA780 /* GlobalSettingsHelper.m in Sources */,
 				EE98987E13300EC500CBA780 /* Highscore.m in Sources */,
 				EE98988413300EEB00CBA780 /* Location.m in Sources */,
-				EE98989413300F0F00CBA780 /* Fjord.m in Sources */,
 				EE98989513300F0F00CBA780 /* Island.m in Sources */,
 				EE98989613300F0F00CBA780 /* Lake.m in Sources */,
 				EE98989713300F0F00CBA780 /* MpRegion.m in Sources */,
