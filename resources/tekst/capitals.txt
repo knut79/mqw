@@ -77,11 +77,3 @@ inf;City#Where is the capital;Vatican City;10;medium;Enclave within the city of 
 1043;1433
 inf;City#Where is the capital;Washington DC;10;easy;Formally the District of Columbia and commonly referred to as Washington, "the District", or simply D.C., is the capital of the United States. #nor#spn#fra#ger;America#USA
 eof
-
-qst;coaAb##medium#AbFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Abb;10;easy;bla bla##spn#fra#ger;Asia#blabla
-
-qst;coaAb##medium#AbFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Abb;10;easy;bla bla##spn#fra#ger;Asia#blabla
-
-eof

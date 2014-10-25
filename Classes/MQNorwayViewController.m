@@ -867,6 +867,7 @@
 //start next round
 - (void)finishedShowingResultMap{		
     
+    
     if(clockView != nil)
     {
         [clockView stop];

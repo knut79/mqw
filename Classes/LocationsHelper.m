@@ -309,6 +309,11 @@
 			
 			
 			NSString *dataObj1 = [data objectAtIndex:1];
+            NSString *overridingQuestion = nil;
+            if ([dataObj1 componentsSeparatedByString:@"#"].count > 1) {
+                overridingQuestion = [[dataObj1 componentsSeparatedByString:@"#"] objectAtIndex:1];
+                dataObj1 = [[dataObj1 componentsSeparatedByString:@"#"] objectAtIndex:0];
+            }
 			
 			if ([defaultHint isEqualToString:@""]) {
 				defaultHint = dataObj1;
@@ -523,8 +528,15 @@
 				if ([dataObj1 isEqualToString:@"City"]) {
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"from %@",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
 					[defaultAnswerDictionary setValue:[NSString stringWithFormat:@"fra %@",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
-					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Where is the city %@ located",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
-					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Hvor ligger byen %@",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
+                    if (overridingQuestion != nil) {
+                        [defaultQuestionDictionary setValue:[NSString stringWithFormat:@"%@ %@",overridingQuestion,[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
+                    }
+                    else
+                    {
+                        [defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Where is the city %@ located",[placeNameDictionary objectForKey:@"english"]] forKey:@"english"];
+					}
+                        
+                    [defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Hvor ligger byen %@",[placeNameDictionary objectForKey:@"norwegian"]] forKey:@"norwegian"];
 					[defaultQuestionDictionary setValue:[NSString stringWithFormat:@"Wo ist die Stadt %@",[placeNameDictionary objectForKey:@"german"]] forKey:@"german"];
 					
 				}

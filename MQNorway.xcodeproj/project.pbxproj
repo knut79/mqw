@@ -547,6 +547,7 @@
 		729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */; };
 		729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44219ED372F00B082E5 /* statesAsia.txt */; };
 		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
+		72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5719FB1E61000E30CF /* capitals.txt */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1190,6 +1191,7 @@
 		729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanuatuFlag.png; path = resources/graphics/pictureQuestions/VanuatuFlag.png; sourceTree = "<group>"; };
 		729FC44219ED372F00B082E5 /* statesAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAsia.txt; path = resources/tekst/statesAsia.txt; sourceTree = "<group>"; };
 		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
+		72CB8A5719FB1E61000E30CF /* capitals.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitals.txt; path = resources/tekst/capitals.txt; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1456,6 +1458,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				72CB8A5719FB1E61000E30CF /* capitals.txt */,
 				729FC44219ED372F00B082E5 /* statesAsia.txt */,
 				7204A48A19E34D4500B8AE76 /* statesAfrica.txt */,
 				7204A41319E00B1F00B8AE76 /* statesEastAsia.txt */,
@@ -2478,6 +2481,7 @@
 				7204A16C19D976B300B8AE76 /* world_50_2_3.jpg in Resources */,
 				7204A26719D976D600B8AE76 /* world_100_2_2.jpg in Resources */,
 				7204A18419D976B300B8AE76 /* world_50_6_3.jpg in Resources */,
+				72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */,
 				727ED15C19F95841000707AA /* MonacoFlag.png in Resources */,
 				727ED16219F95841000707AA /* ScotlandFlag.png in Resources */,
 				729FC43A19ECA16B00B082E5 /* TajikistanFlag.png in Resources */,
