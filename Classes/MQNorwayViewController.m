@@ -655,23 +655,7 @@
 	[UIView setAnimationDuration:0.3];
 	//[touchImageView setTransform:CGAffineTransformIdentity];
 	[loop setAlpha:1];
-	
-	
-	//[loop setPlacement];
-	
-	//	if (loop.isPositionedLeft == YES) {
-	//		if (loop.touchPoint.x < 100 && loop.touchPoint.y < 170 ) {
-	//			loop.center = CGPointMake(loop.center.x + 220 , loop.center.y);
-	//			//loop.isPositionedLeft = NO;
-	//		}
-	//	}
-	//	else {
-	//		if (loop.touchPoint.x > 220 && loop.touchPoint.y < 170 ) {
-	//			//loop.loopLocation = CGPointMake(50, 130);
-	//			loop.center = CGPointMake(loop.center.x - 220 , loop.center.y);
-	//			loop.isPositionedLeft = YES;
-	//		}
-	//	}
+
 	[UIView commitAnimations];	
 	
 	
@@ -680,32 +664,9 @@
 	
 	//start in new thread
 	[loop setNeedsDisplay];
-	
-	//[NSThread detachNewThreadSelector:@selector(startTheBackgroundJob) toTarget:self withObject:nil];
+
 }
 
-//- (void)startTheBackgroundJob {  
-//	
-//    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];  
-//    // wait for 3 seconds before starting the thread, you don't have to do that. This is just an example how to stop the NSThread for some time  
-//    //[NSThread sleepForTimeInterval:3];  
-//    [self performSelectorOnMainThread:@selector(makeMyProgressBarMoving) withObject:nil waitUntilDone:NO];  
-//    [pool release];  
-//	
-//} 
-//
-//- (void)makeMyProgressBarMoving {  
-//	
-//	[loop setNeedsDisplay];
-//	
-//} 
-
-//-(void) updateLoopeAnimationDone
-//{
-//	loop.center = loop.lastPosition;
-//	loop.touchPoint = touchImageView.center;//[touch locationInView:self];
-//	[loop setNeedsDisplay];
-//}
 
 -(void) closeLoope
 {
@@ -814,7 +775,7 @@
 		[infoBarBottom setNeedsDisplay];
 	}
 	
-	[self StartNextRound];
+	[self AnimateQuestion];
 }
 #pragma mark StartPlayerViewDelegate
 - (void)StartPlayer
@@ -832,6 +793,7 @@
     [self SetPlayerButtons];
     [self SetPlayerClock];
 	[questionBarTop SetQuestion:[[m_gameRef GetPlayer] GetName] gameRef:m_gameRef];
+    
 	[self FadeInGameElements];
 	
 	
@@ -866,7 +828,6 @@
 
 //start next round
 - (void)finishedShowingResultMap{		
-    
     
     if(clockView != nil)
     {
@@ -974,7 +935,7 @@
 	}
 	else
 	{
-		[self StartNextRound];
+		[self AnimateQuestion];
 	}
 }
 
@@ -1419,6 +1380,8 @@
 	//set first question
     //_? #bug bug here
 	[questionBarTop SetQuestion:currentPlayerName gameRef:m_gameRef];
+    
+    //[questionBarTop AnimateQuestion];
 	
 	[self FadeOutGameElements];
 	
@@ -1460,22 +1423,30 @@
 	[firstPlayer release];
 }
 
-
+-(void) AnimateQuestion
+{
+    
+    [m_gameRef SetNextQuestion];
+    Player *currentPlayer = [[m_gameRef GetPlayer] retain];
+    NSString *playerName = [[currentPlayer GetName] retain];
+    [questionBarTop SetQuestion:playerName gameRef:m_gameRef];
+    [currentPlayer release];
+    [playerName release];
+    
+    [questionBarTop AnimateQuestion];
+}
 
 -(void) StartNextRound
 {
 	Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     [currentPlayer SetCurrentKmTimeBonus:0];
 	NSString *playerName = [[currentPlayer GetName] retain];
-	[questionBarTop setAlpha:0];
-	
+
 	BOOL gameFinished = NO;
 	
-	if ([m_gameRef SetNextQuestion] == NO) 
+	if ([m_gameRef IsMoreQuestionsForTraining] == NO)
 		gameFinished = YES;
-	else
-		[questionBarTop SetQuestion:playerName gameRef:m_gameRef];
-	
+
 	
 	if ([m_gameRef IsMultiplayer] == NO) {
 		NSMutableArray *players = [[m_gameRef GetPlayers] retain];
@@ -1574,12 +1545,6 @@
 	
 	[self performTransition];
 	
-//    if (clockView == nil) {
-//        clockView = [[ClockView alloc] init];
-//        //[clockView setDelegate:self];
-//        [[self view] addSubview:clockView];
-//    }
-//	[clockView StartClock];
 }
 
 #pragma mark QuitButtonViewDelegate

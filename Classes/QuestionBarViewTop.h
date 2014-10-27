@@ -28,6 +28,10 @@
 -(void) SetQuestion:(NSString *) currentPlayerName gameRef:(Game*) gameRef;
 -(void) FadeIn;
 -(void) FadeOut;
+-(void) PreAnimation;
+-(void) SetForAnimation;
+-(void) AnimateQuestion;
+-(void) AnimateQuestionDone;
 @end
 
 @protocol QuestionBarViewTopDelegate <NSObject>
@@ -35,4 +39,5 @@
 @optional
 - (void)HideGameIcons;
 -(void)ShowGameIcons;
+-(void)StartNextRound;
 @end

@@ -23,8 +23,8 @@
 	self.backgroundColor = [[UIColor alloc] initWithRed:200 green:200 blue:200 alpha:0.5];
 	m_imageView = [[UIImageView alloc] initWithFrame:CGRectMake(280, 0, 30.0, 30.0)];
 	m_label = [[UILabel alloc]init];
-	m_touchEnabled = NO;
-	m_label.backgroundColor = [UIColor clearColor]; 
+    m_touchEnabled = NO;
+	m_label.backgroundColor = [UIColor clearColor];
 	
     
 	m_tapToEnlarge = [[UILabel alloc] initWithFrame:CGRectMake(40, 25, [screen applicationFrame].size.width - 40, 15)];
@@ -118,6 +118,53 @@
 	
 }
 
+-(void) AnimateQuestion
+{
+    [self PreAnimation];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1.5];
+    [UIView setAnimationDelay:0.9];
+    [UIView setAnimationDelegate:self];
+	[self SetForAnimation];
+    [UIView setAnimationDidStopSelector:@selector(AnimateQuestionDone)];
+	[UIView commitAnimations];
+}
+
+-(void) PreAnimation
+{
+    m_label.backgroundColor = [[UIColor alloc] initWithRed:200 green:200 blue:200 alpha:0.5];
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    [m_label setFrame:CGRectMake(0, 0, [screen applicationFrame].size.width, 40)];
+    [self setAlpha:1];
+    self.backgroundColor = [UIColor clearColor];
+    [self setFrame:CGRectMake(0, 0, [screen applicationFrame].size.width, [screen applicationFrame].size.height)];
+    [m_label setCenter:self.center];
+    [screen release];
+}
+
+-(void) SetForAnimation
+{
+
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    self.backgroundColor = [UIColor clearColor];
+    [self setFrame:CGRectMake(0,0, [screen applicationFrame].size.width, 50)];
+    m_label.center =CGPointMake([screen applicationFrame].size.width/2, 20);
+    [m_label setFont:[UIFont systemFontOfSize:12.0f]];
+    [screen release];
+}
+
+-(void) AnimateQuestionDone
+{
+    m_label.backgroundColor = [UIColor clearColor];
+    m_label.transform = CGAffineTransformIdentity;
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    [m_label setFrame:CGRectMake(40, 2, [screen applicationFrame].size.width - 40, 20)];
+    [screen release];
+    self.backgroundColor = [[UIColor alloc] initWithRed:200 green:200 blue:200 alpha:0.5];
+    if ([delegate respondsToSelector:@selector(StartNextRound)])
+        [delegate StartNextRound];
+}
+
 
 -(void) SetQuestion:(NSString *) currentPlayerName gameRef:(Game*) gameRef
 {
@@ -156,9 +203,6 @@
         }
         
         [m_imageView setFrame:CGRectMake(5, 5, newWidth, newHeight)];
-        
-        
-		[m_imageView setFrame:CGRectMake(5, 5, newWidth, newHeight)];
 		[m_imageView setImage:m_image];
 		questionLabelWidth =280;
 	}
@@ -180,6 +224,7 @@
 	NSString *questionString = [[currentQuestion GetQuestionString] retain];
 	if ([gameRef IsMultiplayer] == NO ) {
 		m_label.text = [NSString stringWithFormat:@"%@?",questionString];
+        
 	}
 	else {
 		m_label.text = [NSString stringWithFormat:@"%@ : %@?",currentPlayerName, questionString];

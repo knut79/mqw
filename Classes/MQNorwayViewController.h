@@ -62,7 +62,6 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 	int resolutionPercentage;
 	
 	Game *m_gameRef;
-	UILabel *questionLabel;
 	
 	QuestionBarViewTop *questionBarTop;
 	AnswerBarViewTop *answerBarTop;

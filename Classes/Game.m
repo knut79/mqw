@@ -135,16 +135,27 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	return returnQuestion;
 }
 
-
--(BOOL) SetNextQuestion
+-(BOOL) IsMoreQuestionsForTraining
 {
-	BOOL moreQuestions = YES;
+    BOOL moreQuestionsForTraining = YES;
+    if (m_training == YES) {
+        if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training] count])
+        {
+            moreQuestionsForTraining = NO;
+        }
+    }
+    return moreQuestionsForTraining;
+}
+
+-(void) SetNextQuestion
+{
 	
 	NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training];
 
 	m_currentQuestionIndex ++;
 	
 	if (m_training == NO) {
+        //reset currentQuestionIndex if all questions for a difficulty level is used
 		if (m_currentQuestionIndex >= [questionsOnType count]) {
 			if (m_difficulty == easy) {
 				m_difficulty = medium;
@@ -169,13 +180,10 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 		if (m_currentQuestionIndex >= [questionsOnType count])
 		{
 			[[LocationsHelper Instance] CategorizeQuestionsForTraining];
-			moreQuestions = NO;
 			//do this for next game
 			m_currentQuestionIndex = 0;
 		}
 	}
-
-	return moreQuestions;
 }
 
 -(Highscore*) GetHighscore
