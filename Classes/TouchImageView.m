@@ -196,31 +196,6 @@
 			[delegate showPassButton];
 	}	
 
-	
-//	CGPoint currentPoint = [[touches anyObject] locationInView:self.superview];
-//	UIScreen *screen = [[UIScreen mainScreen] retain];
-//	if ([screen applicationFrame].size.width > 320 )
-//	{
-//		
-//	}
-//	else {
-//		//for old iphone
-//		if (currentPoint.x < 7) {
-//			currentPoint.x = 7;
-//		}
-//		if (currentPoint.x > 318) {
-//			currentPoint.x = 318;
-//		}
-//		if (currentPoint.y < 43) {
-//			currentPoint.y = 43;
-//		}
-//		if (currentPoint.y > 436) {
-//			currentPoint.y = 436;
-//		}
-//	}
-//	[screen release];
-//	[self animateView:self toPosition: currentPoint];
-	
 	if ([delegate respondsToSelector:@selector(closeLoope)])
 		[delegate closeLoope];
 	

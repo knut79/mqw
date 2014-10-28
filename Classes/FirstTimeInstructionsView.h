@@ -34,5 +34,5 @@
 @protocol FirstTimeInstructionsDelegate <NSObject>
 
 @optional
-- (void)StartNewGame;
+- (void)PrepareNewGame;
 @end

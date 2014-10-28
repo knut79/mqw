@@ -208,8 +208,8 @@
 
 -(void) FinishedFadingOut
 {
-	if ([delegate respondsToSelector:@selector(StartNewGame)])
-		[delegate StartNewGame];
+	if ([delegate respondsToSelector:@selector(PrepareNewGame)])
+		[delegate PrepareNewGame];
 }
 
 /*

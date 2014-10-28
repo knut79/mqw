@@ -143,38 +143,9 @@
 	}
     [mainMenuView FadeIn];
 	
-	//_? add to germanyMQ view controller (remember also to remove from startnewgame method)
-    
-    //    UIImage *directionsImage = [[UIImage imageNamed:@"directions.png"] retain];
-    //    CGRect directionsImageRect = CGRectMake(0.0,0.0, 50, 50);
-    //	directionsTouchView = [[[DirectionsTouchImageView alloc] initWithFrame:directionsImageRect] retain];
-    //	directionsTouchView.image = directionsImage;
-    //	[self.view addSubview:directionsTouchView];
-    //	directionsTouchView.center = CGPointMake([screen applicationFrame].size.width - 25, [screen applicationFrame].size.height - 44 - 25);
-    //	[directionsImage release];
-    //    
-    //	
-    //	
-    //	
-    //	infoBarBottom = [[InfoBarViewBottom alloc]initWithFrame:CGRectMake(0,440, 320, 40)];
-    //	[infoBarBottom setDelegate:self];
-    //	[[self view] addSubview:infoBarBottom];
-    //	
-    //	//set first question
-    //	questionBarTop = [[QuestionBarViewTop alloc] initWithFrame:CGRectMake(0,0, 320, 40)];
-    //	[questionBarTop setDelegate:self];
-    //	[self.view addSubview:questionBarTop];
-    //	[questionBarTop setAlpha:0];
-    //	
-    //	answerBarTop = [[AnswerBarViewTop alloc] initWithFrame:CGRectMake(0,0, 320, 50)];
-    //	[self.view addSubview:answerBarTop];
-    //	[answerBarTop setAlpha:0];
-    //	
-    //	[self setZoomScale:CGSizeMake(1800, 4500)];
     
     [screen release];
-    
-	//end new _2.0
+
 }
 
 
@@ -775,7 +746,7 @@
 		[infoBarBottom setNeedsDisplay];
 	}
 	
-	[self AnimateQuestion];
+	[self AnimateQuestion:NO];
 }
 #pragma mark StartPlayerViewDelegate
 - (void)StartPlayer
@@ -801,6 +772,9 @@
 	Player *player = [[m_gameRef GetPlayer] retain];
 	[player StartTimer];
 	[player release];
+    
+    //[self AnimateQuestion];
+    //[self finishedShowingResultMap];
 }
 
 #pragma mark QuestionBarViewTopDelegate
@@ -935,7 +909,7 @@
 	}
 	else
 	{
-		[self AnimateQuestion];
+		[self AnimateQuestion:NO];
 	}
 }
 
@@ -1318,7 +1292,7 @@
 	
     //if first time , startNEwGame will be called through firstTimeInstructions
 	if (firstTime == NO) {
-		[self StartNewGame];
+		[self PrepareNewGame];
 	}
 	
 	[currentPlayerName release];
@@ -1326,7 +1300,7 @@
 }
 
 //Begin game
-- (void)StartNewGame
+-(void) PrepareNewGame
 {
     if (firstTimeInstructionsView != nil) {
         [firstTimeInstructionsView removeFromSuperview];
@@ -1336,7 +1310,7 @@
 	[m_gameRef ResetPlayerData];
 	
 	[self ZoomOutMap];
-
+    
 	//m_gameRef = gameRef;
 	
 	if ([m_gameRef IsTrainingMode] == NO) {
@@ -1345,30 +1319,13 @@
 	else {
 		[[LocationsHelper Instance] OrderQuestionsForTraining:[m_gameRef GetGameDifficulty]];
 	}
-
+    
 	
 	[resultBoardView setGameRef:m_gameRef];
 	
-    NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-    for (Player *player in players) 
-    {
-        [player SetCurrentKmTimeBonus:0];
-    }
-    [players release];
-	//Next player
-	Player *firstPlayer = [[m_gameRef GetPlayer] retain];
-    //[firstPlayer SetCurrentKmTimeBonus:0];
-	NSString *currentPlayerName = [[firstPlayer GetName] retain];
-	//new 2.0
-	[firstPlayer StartTimer];
-	
 
-	
-	NSString *playerSymbol = [[firstPlayer GetPlayerSymbol] retain];
-	UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
-	touchImageView.image = image;
-	[playerSymbol release];
-	[image release];	
+    [self PreparFirstPlayer];
+    
 	
     [[self view] bringSubviewToFront:touchImageView];
 	[[self view] bringSubviewToFront:infoBarBottom];
@@ -1376,14 +1333,44 @@
 	[[self view] bringSubviewToFront:answerBarTop];
 	
 	[infoBarBottom SetGameRef:m_gameRef];
+    
+    [self StartNewGame];
+}
+
+-(void) PreparFirstPlayer
+{
+    NSMutableArray *players = [[m_gameRef GetPlayers] retain];
+    for (Player *player in players)
+    {
+        [player SetCurrentKmTimeBonus:0];
+    }
+    [players release];
+	//Next player
+	Player *firstPlayer = [[m_gameRef GetPlayer] retain];
 	
+	NSString *playerSymbol = [[firstPlayer GetPlayerSymbol] retain];
+	UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
+	touchImageView.image = image;
+	[playerSymbol release];
+	[image release];
+}
+
+- (void)StartNewGame
+{
+
+    [self FadeOutGameElements];
+    
+    [self AnimateQuestion:YES];
+    /*
+    Player *firstPlayer = [[m_gameRef GetPlayer] retain];
+    //[firstPlayer SetCurrentKmTimeBonus:0];
+	NSString *currentPlayerName = [[firstPlayer GetName] retain];
+	//new 2.0
+	[firstPlayer StartTimer];
 	//set first question
     //_? #bug bug here
 	[questionBarTop SetQuestion:currentPlayerName gameRef:m_gameRef];
-    
-    //[questionBarTop AnimateQuestion];
-	
-	[self FadeOutGameElements];
+    //[self AnimateQuestion:YES];
 	
 	if ([m_gameRef IsTrainingMode] == NO) {
 		
@@ -1417,23 +1404,74 @@
 		[infoBarBottom SetTrainingText];
 		[self StartPlayer];
 	}
+	
+	[currentPlayerName release];
+	[firstPlayer release];
+    */
+}
 
+-(void) AnimateFirstQuestionDone
+{
+    Player *firstPlayer = [[m_gameRef GetPlayer] retain];
+    //[firstPlayer SetCurrentKmTimeBonus:0];
+	NSString *currentPlayerName = [[firstPlayer GetName] retain];
+	//new 2.0
+	[firstPlayer StartTimer];
+	//set first question
+    //_? #bug bug here
+	//[questionBarTop SetQuestion:currentPlayerName gameRef:m_gameRef];
+    //[self AnimateQuestion:YES];
+	
+	if ([m_gameRef IsTrainingMode] == NO) {
+		
+		
+		if ([m_gameRef IsMultiplayer] == YES) {
+			if(m_startPlayerView == nil)
+			{
+				m_startPlayerView = [[StartPlayerView alloc] initWithFrame:[[self view] bounds]];
+				[m_startPlayerView setDelegate:self];
+				[[self view] addSubview:m_startPlayerView];
+			}
+			[m_startPlayerView SetPlayerRef:firstPlayer gameRef:m_gameRef];
+			[[self view] bringSubviewToFront:m_startPlayerView];
+			[m_startPlayerView FadeIn];
+		}
+		else {
+            //single player game
+            
+            //set up challenge
+            m_gameRef.challenge.creator = [[GlobalSettingsHelper Instance] GetPlayerID];
+            m_gameRef.challenge.kmToUse = const_startKmDistance;
+            m_gameRef.challenge.difficulty = [m_gameRef GetGameDifficulty];
+            
+			[self StartPlayer];
+		}
+        
+		[m_gameRef SetGameState:inGame];
+	}
+	else {
+		[m_gameRef ResetTrainingValues];
+		[infoBarBottom SetTrainingText];
+		[self StartPlayer];
+	}
+    
+    
 	
 	[currentPlayerName release];
 	[firstPlayer release];
 }
 
--(void) AnimateQuestion
+-(void) AnimateQuestion:(BOOL) firstQuestion
 {
-    
-    [m_gameRef SetNextQuestion];
+    if(firstQuestion == NO)
+        [m_gameRef SetNextQuestion];
     Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     NSString *playerName = [[currentPlayer GetName] retain];
     [questionBarTop SetQuestion:playerName gameRef:m_gameRef];
     [currentPlayer release];
     [playerName release];
     
-    [questionBarTop AnimateQuestion];
+    [questionBarTop AnimateQuestion:firstQuestion];
 }
 
 -(void) StartNextRound
@@ -1508,8 +1546,6 @@
 		else {
 			[infoBarBottom SetTrainingText];
 			[self StartPlayer];
-			//			[questionBarTop SetQuestion:[[m_gameRef GetPlayer] GetName] gameRef:m_gameRef];
-			//			[self FadeInGameElements];
 		}
 	}
 	else {

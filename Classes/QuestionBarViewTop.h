@@ -30,8 +30,9 @@
 -(void) FadeOut;
 -(void) PreAnimation;
 -(void) SetForAnimation;
--(void) AnimateQuestion;
+-(void) AnimateQuestion:(BOOL) firstQuestion;
 -(void) AnimateQuestionDone;
+-(void) AnimateFirstQuestionDone;
 @end
 
 @protocol QuestionBarViewTopDelegate <NSObject>
@@ -40,4 +41,5 @@
 - (void)HideGameIcons;
 -(void)ShowGameIcons;
 -(void)StartNextRound;
+-(void) AnimateFirstQuestionDone;
 @end

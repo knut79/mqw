@@ -118,7 +118,7 @@
 	
 }
 
--(void) AnimateQuestion
+-(void) AnimateQuestion:(BOOL) firstQuestion
 {
     [self PreAnimation];
     [UIView beginAnimations:nil context:NULL];
@@ -126,7 +126,14 @@
     [UIView setAnimationDelay:0.9];
     [UIView setAnimationDelegate:self];
 	[self SetForAnimation];
-    [UIView setAnimationDidStopSelector:@selector(AnimateQuestionDone)];
+    if (firstQuestion == NO) {
+        [UIView setAnimationDidStopSelector:@selector(AnimateQuestionDone)];
+    }
+    else
+    {
+        [UIView setAnimationDidStopSelector:@selector(AnimateFirstQuestionDone)];
+    }
+    
 	[UIView commitAnimations];
 }
 
@@ -155,14 +162,26 @@
 
 -(void) AnimateQuestionDone
 {
+    [self SetValuesAtAnimateDone];
+    if ([delegate respondsToSelector:@selector(StartNextRound)])
+        [delegate StartNextRound];
+}
+
+-(void) AnimateFirstQuestionDone
+{
+    [self SetValuesAtAnimateDone];
+    if ([delegate respondsToSelector:@selector(AnimateFirstQuestionDone)])
+        [delegate AnimateFirstQuestionDone];
+}
+
+-(void) SetValuesAtAnimateDone
+{
     m_label.backgroundColor = [UIColor clearColor];
     m_label.transform = CGAffineTransformIdentity;
     UIScreen *screen = [[UIScreen mainScreen] retain];
     [m_label setFrame:CGRectMake(40, 2, [screen applicationFrame].size.width - 40, 20)];
     [screen release];
     self.backgroundColor = [[UIColor alloc] initWithRed:200 green:200 blue:200 alpha:0.5];
-    if ([delegate respondsToSelector:@selector(StartNextRound)])
-        [delegate StartNextRound];
 }
 
 
