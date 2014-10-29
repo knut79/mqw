@@ -1462,15 +1462,22 @@
 
 -(void) AnimateQuestion:(BOOL) firstQuestion
 {
-    if(firstQuestion == NO)
-        [m_gameRef SetNextQuestion];
+
     Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     NSString *playerName = [[currentPlayer GetName] retain];
-    [questionBarTop SetQuestion:playerName gameRef:m_gameRef];
+    if ([currentPlayer GetKmLeft] <= 0) {
+        [self StartNextRound];
+    }
+    else
+    {
+        if(firstQuestion == NO)
+            [m_gameRef SetNextQuestion];
+        [questionBarTop SetQuestion:playerName gameRef:m_gameRef];
+        [questionBarTop AnimateQuestion:firstQuestion];
+    }
+   
     [currentPlayer release];
     [playerName release];
-    
-    [questionBarTop AnimateQuestion:firstQuestion];
 }
 
 -(void) StartNextRound
