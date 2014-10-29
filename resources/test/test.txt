@@ -29,7 +29,7 @@ inf;City#Where is the capital;Kingstown;10;medium;The capital, chief port, and m
 1143;2104
 inf;City#Where is the capital;La Paz;10;medium;It is, de facto, the world's highest administrative capital. While the official capital of Bolivia (and its seat of justice) is Sucre. #nor#spn#fra#ger;America#Bolivia
 1043;2052
-inf;City#Where is the capital;Lima;10;medium;The capital and the largest city of Peru.#nor#spn#fra#ger;America#Peru
+inf;City#Where is the capital;Lima;10;easy;The capital and the largest city of Peru.#nor#spn#fra#ger;America#Peru
 938;1775
 inf;City#Where is the capital;Managua;10;medium;The capital city of Nicaragua#nor#spn#fra#ger;America#Latin America
 791;1688

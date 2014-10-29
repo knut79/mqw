@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "EnumDefs.h"
-#define const_startKmDistance 500
-#define const_timeBonusKm 20
+#define const_startKmDistance 10500
+#define const_timeBonusKm 500
 #define const_mostPointsGameNumberOfQuestions 2
 
 @interface GlobalSettingsHelper : NSObject {

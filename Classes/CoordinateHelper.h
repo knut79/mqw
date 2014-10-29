@@ -14,7 +14,9 @@
 }
 +(float) GetDistance:(CGPoint) point1 andPoint2:(CGPoint) point2;
 +(NSInteger) GetDistanceInKm:(CGPoint) point1 andPoint2:(CGPoint) point2;
-+(float) GetDistanceInPixel:(NSInteger) kmDistance;
++(float) ConvertToLat:(float) point;
++(float) ConvertToLong:(float) point;
++(CGPoint) ConvertPointToLatLong:(CGPoint) point;
 @end
 
 

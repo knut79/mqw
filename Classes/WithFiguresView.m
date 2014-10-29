@@ -248,8 +248,6 @@
 						distanceBetweenPoints = [self DrawLineToRegion:loc andContextRef:context andGamePoint:gamePoint  andLineColor:playerColor andPlayerSymbol:playerSymbolString];
 					}
 					
-					//[m_gameRef UpdateAvgDistanceForQuest:distanceBetweenPoints];
-					
 					[player SetLastDistanceFromDestination:distanceBetweenPoints];
 					
 					[player SetPetTalk:distanceBetweenPoints];

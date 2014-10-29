@@ -278,11 +278,8 @@
 	int playerIndex = 0;
 	for (Player *pTemp in [m_gameRef GetPlayers] ) 
 	{
-		//Player* pTemp = [[[m_gameRef GetPlayers] objectAtIndex:0] retain];
 		//gamepoint must be measured to drawFiguresViews representation. 25% of value, possibly x and y offsets and zoom factor at 25%
-	
-		
-		
+
 		int endX, endY;
 		switch ([m_gameRef GetPlayers].count) {
 			case 2:
@@ -391,7 +388,7 @@
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
 	if (m_finishedAnimating == NO) {
-		m_finishedAnimating == YES;
+		m_finishedAnimating = YES;
 		m_drawUpdatedScore = YES;
 		for (int i = 0; i < 4; i++) {
 			((UILabel*)[m_labelPool objectAtIndex:i]).hidden = YES;
@@ -464,7 +461,7 @@
 		if ([player IsOut] == NO ) {
 			
 			int kmLeft = [player GetKmLeft];
-			int goingForKmLeft = [player GetLastKmLeft] - (2 * m_timerNumerator);
+			int goingForKmLeft = [player GetLastKmLeft] - (20 * m_timerNumerator);
             int kmTimeBonus = [player GetCurrentKmTimeBonus];
 			
 			if (goingForKmLeft < kmLeft ) {
@@ -481,15 +478,15 @@
 				[player SetOut:YES];
 			}
 
-			int barWidth = (float)goingForKmLeft * (m_barWidthStart/500.0);
+			int barWidth = (float)goingForKmLeft * (m_barWidthStart/const_startKmDistance);
             float timeBonusBarFactor = (float)[player GetKmLeft] + (float)kmTimeBonus;
             if (timeBonusBarFactor <= 0.0f) 
                 timeBonusBarFactor = 0.0f;
-            else if(timeBonusBarFactor > 500.0f)
-                timeBonusBarFactor = 500.0f;
+            else if(timeBonusBarFactor > const_startKmDistance)
+                timeBonusBarFactor = const_startKmDistance;
             
             
-            int barWidthTimeBonus = timeBonusBarFactor * (m_barWidthStart/500.0);
+            int barWidthTimeBonus = timeBonusBarFactor * (m_barWidthStart/const_startKmDistance);
 
 
 
@@ -526,7 +523,7 @@
 			
 			int kmLeft = [player GetKmLeft];
             
-			int barWidth = (float)kmLeft * (m_barWidthStart/500.0);
+			int barWidth = (float)kmLeft * (m_barWidthStart/const_startKmDistance);
 
 			//text for info bar
 			[player SetKmLeft_ForInfoBar:kmLeft];
@@ -602,16 +599,6 @@
 						break;
 				}
 				
-                
-//                NSInteger playersLeft = 0;
-//                for (Player *player in players)  {
-//                    if([player HasGivenUp] == NO)
-//                        playersLeft++;
-//                    else
-//                        [player ResetScore];
-//                }
-//                [m_gameRef SetPlayersLeft:playersLeft];
-                
                 
 				[players release];
 			}
@@ -770,14 +757,14 @@
     CGContextFillRect(context, CGRectMake(barX ,barY * -1, timeBonusBarWidth, barHeight));
 	
     CGContextSetRGBFillColor(context, red, green, blue, alpha); 
-	CGContextFillRect(context, CGRectMake(barX ,barY * -1, barWidth, barHeight));
+    CGContextFillRect(context, CGRectMake(barX ,barY * -1, barWidth, barHeight));
 	const char *text = [theString UTF8String];
 	CGContextSelectFont(context, "Helvetica", 10.0, kCGEncodingMacRoman);
 
 	if (uicolor == [UIColor blueColor] ) {
 		CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
 	}
-	//didnt find a way to get and signs on mac with a windows keyboard :)
+
 	if (uicolor == [UIColor purpleColor]) {
 		CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
 	}

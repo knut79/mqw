@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/MQNorwayViewController.m"
-            timestampString = "436123894.712947"
+            filePath = "Classes/InfoBarViewBottom.m"
+            timestampString = "436287133.73978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1415"
-            endingLineNumber = "1415"
-            landmarkName = "-AnimateFirstQuestionDone"
+            startingLineNumber = "738"
+            endingLineNumber = "738"
+            landmarkName = "-drawBarAndText:barWidth:andText:textX:textY:barX:barY:barHeight:barColor:timeBonusBarWidth:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/QuestionBarViewTop.m"
-            timestampString = "436123914.241433"
+            filePath = "Classes/InfoBarViewBottom.m"
+            timestampString = "436288592.08399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "-AnimateQuestion:"
+            startingLineNumber = "816"
+            endingLineNumber = "816"
+            landmarkName = "-drawForOnePlayer:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,45 +41,93 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/QuestionBarViewTop.m"
-            timestampString = "436123916.056472"
+            filePath = "Classes/Player.m"
+            timestampString = "436287927.127689"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-AnimateQuestion:"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
+            landmarkName = "-GetBarWidth"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/Game.m"
-            timestampString = "436201335.467631"
+            filePath = "Classes/Player.m"
+            timestampString = "436287928.831165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "-SetNextQuestion"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
+            landmarkName = "-SetBarWidth:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/TouchImageView.m"
-            timestampString = "436201716.867612"
+            filePath = "Classes/InfoBarViewBottom.m"
+            timestampString = "436288592.08399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-touchesBegan:withEvent:"
+            startingLineNumber = "896"
+            endingLineNumber = "896"
+            landmarkName = "-drawForThreePlayers:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/InfoBarViewBottom.m"
+            timestampString = "436288155.421561"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "652"
+            endingLineNumber = "652"
+            landmarkName = "-drawScoreForPlayer:player:textX:textY:fontSize:scoreYOffset:barRect:drawUpdatedScore:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/InfoBarViewBottom.m"
+            timestampString = "436288185.054781"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "757"
+            endingLineNumber = "757"
+            landmarkName = "-drawBarAndText:barWidth:andText:textX:textY:barX:barY:barHeight:barColor:timeBonusBarWidth:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/InfoBarViewBottom.m"
+            timestampString = "436288588.450093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "760"
+            endingLineNumber = "760"
+            landmarkName = "-drawBarAndText:barWidth:andText:textX:textY:barX:barY:barHeight:barColor:timeBonusBarWidth:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

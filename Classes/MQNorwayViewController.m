@@ -465,7 +465,7 @@
         timePointsLabel.shadowColor = [UIColor whiteColor];
         timePointsLabel.shadowOffset = CGSizeMake(-1,-2);
         timePointsLabel.text = [NSString stringWithFormat:@"%d x %d %@ %@",[clockView GetMultiplier],
-                                [[GlobalSettingsHelper Instance] ConvertToRightDistance:20],
+                                [[GlobalSettingsHelper Instance] ConvertToRightDistance:const_timeBonusKm],
                                 [[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
                                 [[GlobalSettingsHelper Instance] GetStringByLanguage:@"timebonus"]];
         [[self view] addSubview:timePointsLabel];
@@ -1206,14 +1206,13 @@
 	[directionsImage release];*/
     
 	[screen release];
+
     
-//    if (touchImageView == nil) {
-		touchImageView = [[[TouchImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 50, 50)] retain];
-		touchImageView.center = CGPointMake(160.0, 230.0);
-		//[touchImageView setMapView:imageScrollView];
-		[touchImageView setDelegate:self];
-		[self.view addSubview:touchImageView];
-//	}
+    touchImageView = [[[TouchImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 50, 50)] retain];
+    touchImageView.center = CGPointMake(160.0, 230.0);
+	[touchImageView setDelegate:self];
+	[self.view addSubview:touchImageView];
+
 
 	infoBarBottom = [[InfoBarViewBottom alloc]initWithFrame:CGRectMake(0,0, 320, constInfobarBottomHeight)];
     infoBarBottom.center = CGPointMake(infoBarBottom.center.x, [screen applicationFrame].size.height - infoBarBottom.frame.size.height/2);
