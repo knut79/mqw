@@ -548,6 +548,7 @@
 		729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44219ED372F00B082E5 /* statesAsia.txt */; };
 		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
 		72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5719FB1E61000E30CF /* capitals.txt */; };
+		72CB8A5A1A0167E7000E30CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A591A0167E7000E30CF /* Default-568h@2x.png */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1192,6 +1193,7 @@
 		729FC44219ED372F00B082E5 /* statesAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAsia.txt; path = resources/tekst/statesAsia.txt; sourceTree = "<group>"; };
 		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
 		72CB8A5719FB1E61000E30CF /* capitals.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitals.txt; path = resources/tekst/capitals.txt; sourceTree = "<group>"; };
+		72CB8A591A0167E7000E30CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/graphics/GameElements/Default-568h@2x.png"; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1861,6 +1863,7 @@
 		EE9898F51330125000CBA780 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				72CB8A591A0167E7000E30CF /* Default-568h@2x.png */,
 				7204A34F19D9799100B8AE76 /* icon.jpg */,
 				7204A35019D9799100B8AE76 /* trophy.jpg */,
 				7204A35119D9799100B8AE76 /* ArrowBlue.png */,
@@ -2788,6 +2791,7 @@
 				7204A31419D978F000B8AE76 /* pauseBtn_org.png in Resources */,
 				7204A3EE19DDFE4500B8AE76 /* BelizeFlag.png in Resources */,
 				7204A2DB19D976D600B8AE76 /* world_100_11_10.jpg in Resources */,
+				72CB8A5A1A0167E7000E30CF /* Default-568h@2x.png in Resources */,
 				7204A3FB19DDFE4500B8AE76 /* GrenadaFlag.png in Resources */,
 				7204A2C019D976D600B8AE76 /* world_100_9_7.jpg in Resources */,
 				7204A29219D976D600B8AE76 /* world_100_5_9.jpg in Resources */,

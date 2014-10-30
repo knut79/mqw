@@ -18,8 +18,9 @@
 	id <QuestionBarViewTopDelegate> delegate;
 	UIImageView *m_imageView;
 	UILabel *m_label;
-	UILabel *m_tapToEnlarge;
+	//UILabel *m_tapToEnlarge;
 	BOOL m_touchEnabled;
+    BOOL m_usingPicture;
 	UIImageView *m_lineImageView;
 	UIImage *m_image;
 	

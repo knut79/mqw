@@ -27,11 +27,18 @@
 		tiledMapViewZoomScale = 1;
 		tiledMapViewResolutionPercentage = 25;
 		
-		answerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 440, 320, 40)];
+        UIScreen *screen = [[UIScreen mainScreen] retain];
+		answerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, [screen applicationFrame].size.height -40, [screen applicationFrame].size.width, 40)];
+        [screen release];
 		answerLabel.hidden = YES;
 		[self addSubview:answerLabel];
 
-		tiledMapViewZoomScale = 0.7111111;
+        //TODO : set these values based on how big the resulting area is
+		/*
+        tiledMapViewZoomScale = 0.7111111;
+		tiledMapViewResolutionPercentage = (float)25;
+         */
+        tiledMapViewZoomScale = 1;
 		tiledMapViewResolutionPercentage = (float)25;
 		tiledMapViewTileWidth = 256;
         
@@ -90,18 +97,18 @@
     testRect.origin.y += (centerPoint.y - ([screen applicationFrame].size.height/2));
     
     CGFloat mapWidth =(constMapWidth * 0.25)*tiledMapViewZoomScale;
-	if (testRect.origin.x >  mapWidth - 320)
+	if (testRect.origin.x >  mapWidth - [screen applicationFrame].size.width)
 	{
-		testRect.origin.x = mapWidth - 320;
+		testRect.origin.x = mapWidth - [screen applicationFrame].size.width;
 	}
 	else if(testRect.origin.x < 0)
 	{
 		testRect.origin.x = 0;
 	}
     CGFloat mapHeight = (constMapHeight * 0.25)*tiledMapViewZoomScale;
-    if (testRect.origin.y > (mapHeight - 480))
+    if (testRect.origin.y > (mapHeight - [screen applicationFrame].size.height))
 	{
-		testRect.origin.y = mapHeight - 480;
+		testRect.origin.y = mapHeight - [screen applicationFrame].size.height;
 	}
 	else if(testRect.origin.y < 0)
 	{
@@ -151,12 +158,14 @@
 				int minCol = tilesMapViewBounds.origin.x/256 - 0.5; //round down
 				int minRow = tilesMapViewBounds.origin.y/256 - 0.5;
 				
+                UIScreen *screen = [[UIScreen mainScreen] retain];
 				float colvar2 = (tilesMapViewBounds.origin.x/scaledTileWidth) ;
-				float colVar3 = (320.0/scaledTileWidth);
+				float colVar3 = ([screen applicationFrame].size.width/scaledTileWidth);
 				int maxCol = (int)(colvar2 + colVar3 + 0.5);
 				
 				float rowVar2 = (tilesMapViewBounds.origin.y/scaledTileHeight) ;
-				float rowVar3 = (480.0/scaledTileHeight);
+				float rowVar3 = ([screen applicationFrame].size.height/scaledTileHeight);
+                [screen release];
 				//float rowVar1 = (mapSize.height/256);
 				int maxRow = (int)(rowVar2 + rowVar3  + 0.5);
 
@@ -927,10 +936,10 @@
 }
 
 - (void)dealloc {
-    [_sectionFiguresView removeFromSuperview];
-    [_playerSymbolMiniWindowView removeFromSuperview];
-    [_sectionFiguresView dealloc];
-    [_playerSymbolMiniWindowView dealloc];
+    //[_sectionFiguresView removeFromSuperview];
+    //[_playerSymbolMiniWindowView removeFromSuperview];
+    //[_sectionFiguresView dealloc];
+    //[_playerSymbolMiniWindowView dealloc];
     [super dealloc];
 }
 

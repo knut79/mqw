@@ -21,7 +21,7 @@
     }
 
     tiledMapViewZoomScale = 25.0;
-    tiledMapViewResolutionPercentage =0.7111111;
+    tiledMapViewResolutionPercentage =1;
     return self;
 }
 

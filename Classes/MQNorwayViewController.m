@@ -1360,53 +1360,7 @@
     [self FadeOutGameElements];
     
     [self AnimateQuestion:YES];
-    /*
-    Player *firstPlayer = [[m_gameRef GetPlayer] retain];
-    //[firstPlayer SetCurrentKmTimeBonus:0];
-	NSString *currentPlayerName = [[firstPlayer GetName] retain];
-	//new 2.0
-	[firstPlayer StartTimer];
-	//set first question
-    //_? #bug bug here
-	[questionBarTop SetQuestion:currentPlayerName gameRef:m_gameRef];
-    //[self AnimateQuestion:YES];
-	
-	if ([m_gameRef IsTrainingMode] == NO) {
-		
-		
-		if ([m_gameRef IsMultiplayer] == YES) {
-			if(m_startPlayerView == nil)
-			{
-				m_startPlayerView = [[StartPlayerView alloc] initWithFrame:[[self view] bounds]];
-				[m_startPlayerView setDelegate:self];
-				[[self view] addSubview:m_startPlayerView];
-			}
-			[m_startPlayerView SetPlayerRef:firstPlayer gameRef:m_gameRef];
-			[[self view] bringSubviewToFront:m_startPlayerView];
-			[m_startPlayerView FadeIn];
-		}
-		else {
-            //single player game
-            
-            //set up challenge
-            m_gameRef.challenge.creator = [[GlobalSettingsHelper Instance] GetPlayerID];
-            m_gameRef.challenge.kmToUse = const_startKmDistance;
-            m_gameRef.challenge.difficulty = [m_gameRef GetGameDifficulty];
-            
-			[self StartPlayer];
-		}
 
-		[m_gameRef SetGameState:inGame];
-	}
-	else {
-		[m_gameRef ResetTrainingValues];
-		[infoBarBottom SetTrainingText];
-		[self StartPlayer];
-	}
-	
-	[currentPlayerName release];
-	[firstPlayer release];
-    */
 }
 
 -(void) AnimateFirstQuestionDone
@@ -1416,10 +1370,7 @@
 	NSString *currentPlayerName = [[firstPlayer GetName] retain];
 	//new 2.0
 	[firstPlayer StartTimer];
-	//set first question
-    //_? #bug bug here
-	//[questionBarTop SetQuestion:currentPlayerName gameRef:m_gameRef];
-    //[self AnimateQuestion:YES];
+
 	
 	if ([m_gameRef IsTrainingMode] == NO) {
 		

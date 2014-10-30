@@ -1,81 +1,296 @@
-1264;2211
-inf;City#Where is the capital;Asuncion;10;medium;The capital and largest city of Paraguay.#nor#spn#fra#ger;America#Paraguay
-1205;1714
-inf;City#Where is the capital;Basseterre;10;medium;The capital of the Federation of Saint Kitts and Nevis in the West Indies#nor#spn#fra#ger;America#Caribbean
-909;1714
-inf;City#Where is the capital;Belmopan;10;medium;The capital city of Belize. Its population in 2010 was 13,931#nor#spn#fra#ger;America#Caribbean
-1076;1861
-inf;City#Where is the capital;Bogota;10;medium;Is the Capital of Colombia with 6,778,691 inhabitants as of 2005#nor#spn#fra#ger;America#Colombia
-1374;2096
-inf;City#Where is the capital;Brasilia;10;medium;The federal capital of Brazil and the seat of government of the Federal District. The city is located along the Brazilian Highlands in the country's Central-West region. It was founded on April 21, 1960, to serve as the new national capital.#nor#spn#fra#ger;America#Brazil
-1241;1763
-inf;City#Where is the capital;Bridgetown;10;medium;The capital and largest city of the nation of Barbados.#nor#spn#fra#ger;America#Caribbean
-1255;2334
-inf;City#Where is the capital;Buenos Aires;10;medium;The capital and largest city of Argentina, and the second-largest metropolitan area in South America, after Greater São Paulo.#nor#spn#fra#ger;America#Argentina
-1158;1793
-inf;City#Where is the capital;Caracas;10;medium;Is the capital, the center of the Greater Caracas Area, and the largest city of Venezuela.#nor#spn#fra#ger;America#Venezuela
-1226;1753
-inf;City#Where is the capital;Castries;10;medium;The capital and largest city of Saint Lucia#nor#spn#fra#ger;America#Caribbean
-1257;1836
-inf;City#Where is the capital;Georgetown;10;medium;The capital of Guyana. Nicknamed Garden City of the Caribbean.#nor#spn#fra#ger;America#Caribbean
-890;1745
-inf;City#Where is the capital;Guatemala city;10;medium;The capital and largest city of the Republic of Guatemala, and the most populous in Central America.#nor#spn#fra#ger;America#Latin America
-982;1643
-inf;City#Where is the capital;Havana;10;medium;The capital city, province, major port, and leading commercial centre of Cuba.#nor#spn#fra#ger;America#Caribbean
-1046;1706
-inf;City#Where is the capital;Kingston;10;medium;The capital and largest city of Jamaica.#nor#spn#fra#ger;America#Caribbean
-1223;1762
-inf;City#Where is the capital;Kingstown;10;medium;The capital, chief port, and main commercial centre of Saint Vincent and the Grenadines.#nor#spn#fra#ger;America#Caribbean
-1143;2104
-inf;City#Where is the capital;La Paz;10;medium;It is, de facto, the world's highest administrative capital. While the official capital of Bolivia (and its seat of justice) is Sucre. #nor#spn#fra#ger;America#Bolivia
-1043;2052
-inf;City#Where is the capital;Lima;10;easy;The capital and the largest city of Peru.#nor#spn#fra#ger;America#Peru
-938;1775
-inf;City#Where is the capital;Managua;10;medium;The capital city of Nicaragua#nor#spn#fra#ger;America#Latin America
-791;1688
-inf;City#Where is the capital;Mexico City;10;medium;Capital of Mexico. The 2009 estimated population for the city proper was around 8.84 million people.#nor#spn#fra#ger;America#Central Mexico
-1280;2338
-inf;City#Where is the capital;Montevideo;10;medium;The capital and largest city of Uruguay.#nor#spn#fra#ger;America#Uruguay
-1040;1620
-inf;City#Where is the capital;Nassau;10;medium;The capital, largest city, and commercial centre of the Commonwealth of the Bahamas.#nor#spn#fra#ger;America#Caribbean
-1058;1332
-inf;City#Where is the capital;Ottawa;10;medium;The capital of Canada. It stands on the south bank of the Ottawa River in the eastern portion of Southern Ontario. Fourth-largest city in Canada.#nor#spn#fra#ger;America#Canada
-1015;1811
-inf;City#Where is the capital;Panama City;10;medium;The capital and largest city of the Republic of Panama#nor#spn#fra#ger;America#Latin America
-1292;1847
-inf;City#Where is the capital;Paramaribo;10;medium;The capital and largest city of Suriname#nor#spn#fra#ger;America#Suriname
-1220;1791
-inf;City#Where is the capital;Port of Spain;10;medium;The capital of the Republic of Trinidad and Tobago#nor#spn#fra#ger;America#Caribbean
-1096;1699
-inf;City#Where is the capital;Port-au-prince;10;medium;The capital and largest city of the Caribbean country of Haiti.#nor#spn#fra#ger;America#Caribbean
-1024;1915
-inf;City#Where is the capital;Quito;10;medium;The capital city of Ecuador, and at an elevation of 9,350 feet (2,800 meters above sea level), it is the highest official capital city in the world.#nor#spn#fra#ger;America#Ecuador
-1221;1738
-inf;City#Where is the capital;Roseau;10;medium;The capital and largest city of Dominica.#nor#spn#fra#ger;America#Caribbean
-963;1801
-inf;City#Where is the capital#Where is the capital;San Jose;10;medium;Is the capital of Costa Rica#nor#spn#fra#ger;America#Caribbean
-1170;1701
-inf;City#Where is the capital;San Juan;10;medium;Is the capital in the Commonwealth of Puerto Rico#nor#spn#fra#ger;America#Caribbean
-2062;1357
-2062;1358
-2061;1358
-inf;State;San Marino;10;medium;Is an enclaved microstate surrounded by Italy, situated on the Italian Peninsula on the north-eastern side of the Apennine Mountains. Its size is just over 61 km2 with an estimated population of over 30,000.#nor#spn#fra#ger;Europe#Italia
-906;1757
-inf;City#Where is the capital;Santiago;10;medium;The capital and largest city of Chile.#nor#spn#fra#ger;America#Chile
-1126;1700
-inf;City#Where is the capital;Santo Domingo;10;medium;Known officially as Santo Domingo de Guzmán, is the capital and largest city in the Dominican Republic and is the largest city in the Caribbean region by population.#nor#spn#fra#ger;America#Caribbean
-1217;1775
-inf;City#Where is the capital;Saint Georges;10;medium;Is the capital of Grenada. The city is surrounded by a hillside of an old volcano crater and is on a horseshoe-shaped harbor.#nor#spn#fra#ger;America#Caribbean
-1216;1716
-inf;City#Where is the capital;Saint Johns;10;medium;The capital and largest city of Antigua and Barbuda, a country located in the West Indies in the Caribbean Sea.#nor#spn#fra#ger;America#Caribbean
-1177;2134
-inf;City#Where is the capital;Sucre;10;medium;The constitutional capital of Bolivia.#nor#spn#fra#ger;America#Bolivia
-926;1753
-inf;City#Where is the capital;Tegucigalpa;10;medium;The capital of Honduras and seat of government of the Republic#nor#spn#fra#ger;America#Honduras
-2062;1388
-inf;City#Where is the capital;Vatican City;10;medium;Enclave within the city of Rome, with an area of approximately 44 hectares, and a population of 842, is the smallest internationally recognized independent state in the world by both area and population.#nor#spn#fra#ger;America#Caribbean
-1043;1433
-inf;City#Where is the capital;Washington DC;10;easy;Formally the District of Columbia and commonly referred to as Washington, "the District", or simply D.C., is the capital of the United States. #nor#spn#fra#ger;America#USA
+2194;912
+2193;913
+2191;913
+2189;916
+2186;915
+2184;914
+2181;916
+2179;917
+2178;919
+2178;921
+2177;923
+2175;926
+2170;927
+2169;929
+2167;929
+2165;934
+2163;936
+2164;942
+2168;945
+2167;949
+2164;953
+2161;955
+2159;959
+2158;963
+2158;970
+2156;971
+2154;969
+2153;966
+2149;970
+2147;970
+2146;973
+2146;976
+2142;977
+2139;978
+2137;980
+2136;982
+2134;981
+2134;985
+2133;986
+2131;988
+2127;991
+2127;996
+2122;999
+2123;1003
+2123;1005
+2120;1007
+2119;1010
+2119;1014
+2120;1017
+2120;1019
+2118;1020
+2117;1023
+2117;1027
+2117;1033
+2119;1036
+2118;1038
+2122;1039
+2123;1041
+2126;1041
+2127;1043
+2132;1043
+2132;1048
+2134;1048
+2135;1051
+2135;1055
+2139;1056
+2139;1060
+2138;1064
+2136;1066
+2138;1070
+2137;1074
+2133;1079
+2131;1079
+2129;1082
+2126;1083
+2123;1084
+2120;1086
+2119;1088
+2116;1090
+2115;1095
+2113;1100
+2125;1107
+2131;1101
+2133;1099
+2136;1100
+2138;1094
+2136;1093
+2138;1090
+2141;1091
+2142;1093
+2140;1094
+2139;1095
+2138;1099
+2140;1100
+2142;1102
+2140;1104
+2137;1107
+2135;1109
+2136;1112
+2136;1114
+2135;1115
+2134;1115
+2134;1116
+2133;1117
+2131;1119
+2130;1119
+2129;1122
+2128;1124
+2126;1125
+2123;1123
+2126;1122
+2125;1116
+2125;1111
+2124;1108
+2112;1100
+2112;1103
+2111;1107
+2110;1108
+2110;1112
+2109;1115
+2112;1113
+2115;1115
+2114;1119
+2113;1123
+2112;1125
+2111;1129
+2110;1133
+2108;1136
+2108;1139
+2106;1140
+2104;1136
+2103;1138
+2101;1141
+2100;1143
+2097;1142
+2093;1141
+2088;1141
+2090;1145
+2089;1146
+2088;1146
+2085;1143
+2083;1146
+2084;1150
+2084;1153
+2082;1155
+2079;1156
+2078;1155
+2076;1155
+2075;1157
+2072;1158
+2070;1158
+2068;1156
+2066;1154
+2065;1150
+2066;1148
+2065;1146
+2064;1143
+2061;1138
+2060;1136
+2062;1135
+2063;1136
+2061;1133
+2063;1132
+2064;1130
+2062;1127
+2060;1124
+2058;1123
+2054;1114
+2050;1105
+2048;1098
+2046;1092
+2045;1085
+2042;1079
+2046;1077
+2049;1076
+2050;1081
+2051;1081
+2052;1081
+2053;1078
+2054;1074
+2054;1072
+2053;1065
+2055;1062
+2054;1060
+2057;1059
+2059;1057
+2061;1055
+2063;1052
+2063;1047
+2062;1042
+2060;1037
+2059;1033
+2061;1032
+2064;1031
+2065;1027
+2066;1024
+2065;1022
+2063;1020
+2061;1020
+2058;1016
+2060;1003
+2059;1001
+2059;1000
+2059;998
+2057;995
+2058;992
+2058;990
+2056;988
+2058;986
+2059;984
+2057;981
+2056;978
+2057;974
+2058;972
+2058;969
+2063;960
+2066;958
+2071;956
+2073;957
+2076;959
+2078;959
+2079;957
+2081;954
+2079;951
+2080;948
+2079;946
+2076;944
+2075;943
+2077;940
+2079;936
+2081;933
+2083;930
+2083;928
+2083;926
+2085;924
+2085;920
+2085;915
+2086;911
+2086;909
+2085;901
+2086;901
+2090;901
+2096;897
+2094;891
+2106;875
+2107;873
+2105;868
+2103;864
+2103;861
+2107;860
+2111;847
+2117;843
+2123;848
+2126;841
+2126;831
+2127;829
+2130;829
+2147;836
+2150;833
+2149;831
+2147;829
+2151;823
+2151;819
+2148;815
+2153;814
+2157;817
+2157;820
+2170;832
+2179;835
+2183;839
+2183;843
+2184;843
+2186;842
+2189;848
+2189;849
+2187;852
+2188;858
+2186;862
+2190;864
+2190;867
+2188;870
+2188;873
+2193;881
+2192;883
+2191;884
+2191;889
+2190;891
+2189;894
+2191;899
+2193;903
+2194;910
+qst;coaSweden##medium#SwedenFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Sweden;10;easy;Sweden maintains a Nordic social welfare system that provides universal health care and tertiary education for its citizens. It has the world's eighth-highest per capita income. Capital: Stockholm##spn#fra#ger;Europe#Northern Europe
 eof
 
 qst;coaAb##medium#AbFlag.png#What county is represented by this flag##spn#fra#ger##
