@@ -71,9 +71,9 @@
 	CGPoint currentPoint = [[touches anyObject] locationInView:self.superview];
 
 	self.center = currentPoint;
-	
+	UIScreen *screen = [[UIScreen mainScreen] retain];
 
-	if (currentPoint.y > 400) {
+	if (currentPoint.y > ([screen applicationFrame].size.height - 80)) {
 		if (infoBarHidden == NO) {
 			infoBarHidden = YES;
 			if ([delegate respondsToSelector:@selector(hideInfoBar)])
@@ -88,6 +88,7 @@
 		}
 	}
 	
+    [screen release];
 	
 	if (currentPoint.y < 80) {
 		if (questionBarHidden == NO) {
@@ -229,10 +230,19 @@
 		touchTimer = nil;
 	}
 	
-	firstCallDone = YES;
 	
-	if ([delegate respondsToSelector:@selector(updateLoope)])
-		[delegate updateLoope];
+	if (firstCallDone == NO) {
+        if ([delegate respondsToSelector:@selector(fadeInLoop)])
+            [delegate fadeInLoop];
+    }
+    else
+    {
+        if ([delegate respondsToSelector:@selector(updateLoope)])
+            [delegate updateLoope];
+    }
+
+    firstCallDone = YES;
+    
 }
 
 // Scales up a view slightly which makes the piece slightly larger, as if it is being picked up by the user.

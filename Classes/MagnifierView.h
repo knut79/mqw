@@ -28,6 +28,7 @@
 
 -(bool) IsPositionedLeft;
 -(void) setPlacement;
+-(void) positionLeft;
 -(void) setPlayerSymbol:(NSString*) playerSymbol;
 -(void) setClocViewRef:(ClockView*) cvRef;
 @end

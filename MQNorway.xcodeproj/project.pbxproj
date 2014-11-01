@@ -549,6 +549,258 @@
 		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
 		72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5719FB1E61000E30CF /* capitals.txt */; };
 		72CB8A5A1A0167E7000E30CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A591A0167E7000E30CF /* Default-568h@2x.png */; };
+		72CB8B1E1A043FA6000E30CF /* world_100_border_0_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */; };
+		72CB8B1F1A043FA6000E30CF /* world_100_border_0_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5F1A043FA5000E30CF /* world_100_border_0_1.jpg */; };
+		72CB8B201A043FA6000E30CF /* world_100_border_0_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A601A043FA5000E30CF /* world_100_border_0_2.jpg */; };
+		72CB8B211A043FA6000E30CF /* world_100_border_0_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A611A043FA5000E30CF /* world_100_border_0_3.jpg */; };
+		72CB8B221A043FA6000E30CF /* world_100_border_0_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A621A043FA5000E30CF /* world_100_border_0_4.jpg */; };
+		72CB8B231A043FA6000E30CF /* world_100_border_0_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A631A043FA5000E30CF /* world_100_border_0_5.jpg */; };
+		72CB8B241A043FA6000E30CF /* world_100_border_0_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A641A043FA5000E30CF /* world_100_border_0_6.jpg */; };
+		72CB8B251A043FA6000E30CF /* world_100_border_0_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A651A043FA5000E30CF /* world_100_border_0_7.jpg */; };
+		72CB8B261A043FA6000E30CF /* world_100_border_0_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A661A043FA5000E30CF /* world_100_border_0_8.jpg */; };
+		72CB8B271A043FA6000E30CF /* world_100_border_0_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A671A043FA5000E30CF /* world_100_border_0_9.jpg */; };
+		72CB8B281A043FA6000E30CF /* world_100_border_0_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A681A043FA5000E30CF /* world_100_border_0_10.jpg */; };
+		72CB8B291A043FA6000E30CF /* world_100_border_0_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A691A043FA5000E30CF /* world_100_border_0_11.jpg */; };
+		72CB8B2A1A043FA6000E30CF /* world_100_border_1_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A6A1A043FA5000E30CF /* world_100_border_1_0.jpg */; };
+		72CB8B2B1A043FA6000E30CF /* world_100_border_1_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A6B1A043FA5000E30CF /* world_100_border_1_1.jpg */; };
+		72CB8B2C1A043FA6000E30CF /* world_100_border_1_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A6C1A043FA5000E30CF /* world_100_border_1_2.jpg */; };
+		72CB8B2D1A043FA6000E30CF /* world_100_border_1_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A6D1A043FA5000E30CF /* world_100_border_1_3.jpg */; };
+		72CB8B2E1A043FA6000E30CF /* world_100_border_1_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A6E1A043FA5000E30CF /* world_100_border_1_4.jpg */; };
+		72CB8B2F1A043FA6000E30CF /* world_100_border_1_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A6F1A043FA5000E30CF /* world_100_border_1_5.jpg */; };
+		72CB8B301A043FA6000E30CF /* world_100_border_1_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A701A043FA5000E30CF /* world_100_border_1_6.jpg */; };
+		72CB8B311A043FA6000E30CF /* world_100_border_1_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A711A043FA5000E30CF /* world_100_border_1_7.jpg */; };
+		72CB8B321A043FA6000E30CF /* world_100_border_1_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A721A043FA5000E30CF /* world_100_border_1_8.jpg */; };
+		72CB8B331A043FA6000E30CF /* world_100_border_1_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A731A043FA5000E30CF /* world_100_border_1_9.jpg */; };
+		72CB8B341A043FA6000E30CF /* world_100_border_1_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A741A043FA5000E30CF /* world_100_border_1_10.jpg */; };
+		72CB8B351A043FA6000E30CF /* world_100_border_1_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A751A043FA5000E30CF /* world_100_border_1_11.jpg */; };
+		72CB8B361A043FA6000E30CF /* world_100_border_2_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A761A043FA5000E30CF /* world_100_border_2_0.jpg */; };
+		72CB8B371A043FA6000E30CF /* world_100_border_2_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A771A043FA5000E30CF /* world_100_border_2_1.jpg */; };
+		72CB8B381A043FA6000E30CF /* world_100_border_2_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A781A043FA5000E30CF /* world_100_border_2_2.jpg */; };
+		72CB8B391A043FA6000E30CF /* world_100_border_2_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A791A043FA5000E30CF /* world_100_border_2_3.jpg */; };
+		72CB8B3A1A043FA6000E30CF /* world_100_border_2_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A7A1A043FA5000E30CF /* world_100_border_2_4.jpg */; };
+		72CB8B3B1A043FA6000E30CF /* world_100_border_2_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A7B1A043FA5000E30CF /* world_100_border_2_5.jpg */; };
+		72CB8B3C1A043FA6000E30CF /* world_100_border_2_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A7C1A043FA5000E30CF /* world_100_border_2_6.jpg */; };
+		72CB8B3D1A043FA6000E30CF /* world_100_border_2_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A7D1A043FA5000E30CF /* world_100_border_2_7.jpg */; };
+		72CB8B3E1A043FA6000E30CF /* world_100_border_2_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A7E1A043FA5000E30CF /* world_100_border_2_8.jpg */; };
+		72CB8B3F1A043FA6000E30CF /* world_100_border_2_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A7F1A043FA5000E30CF /* world_100_border_2_9.jpg */; };
+		72CB8B401A043FA6000E30CF /* world_100_border_2_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A801A043FA5000E30CF /* world_100_border_2_10.jpg */; };
+		72CB8B411A043FA6000E30CF /* world_100_border_2_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A811A043FA5000E30CF /* world_100_border_2_11.jpg */; };
+		72CB8B421A043FA6000E30CF /* world_100_border_3_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A821A043FA5000E30CF /* world_100_border_3_0.jpg */; };
+		72CB8B431A043FA6000E30CF /* world_100_border_3_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A831A043FA5000E30CF /* world_100_border_3_1.jpg */; };
+		72CB8B441A043FA6000E30CF /* world_100_border_3_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A841A043FA5000E30CF /* world_100_border_3_2.jpg */; };
+		72CB8B451A043FA6000E30CF /* world_100_border_3_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A851A043FA5000E30CF /* world_100_border_3_3.jpg */; };
+		72CB8B461A043FA6000E30CF /* world_100_border_3_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A861A043FA5000E30CF /* world_100_border_3_4.jpg */; };
+		72CB8B471A043FA6000E30CF /* world_100_border_3_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A871A043FA5000E30CF /* world_100_border_3_5.jpg */; };
+		72CB8B481A043FA6000E30CF /* world_100_border_3_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A881A043FA5000E30CF /* world_100_border_3_6.jpg */; };
+		72CB8B491A043FA6000E30CF /* world_100_border_3_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A891A043FA5000E30CF /* world_100_border_3_7.jpg */; };
+		72CB8B4A1A043FA6000E30CF /* world_100_border_3_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A8A1A043FA5000E30CF /* world_100_border_3_8.jpg */; };
+		72CB8B4B1A043FA6000E30CF /* world_100_border_3_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A8B1A043FA5000E30CF /* world_100_border_3_9.jpg */; };
+		72CB8B4C1A043FA6000E30CF /* world_100_border_3_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A8C1A043FA5000E30CF /* world_100_border_3_10.jpg */; };
+		72CB8B4D1A043FA6000E30CF /* world_100_border_3_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A8D1A043FA5000E30CF /* world_100_border_3_11.jpg */; };
+		72CB8B4E1A043FA6000E30CF /* world_100_border_4_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A8E1A043FA5000E30CF /* world_100_border_4_0.jpg */; };
+		72CB8B4F1A043FA6000E30CF /* world_100_border_4_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A8F1A043FA5000E30CF /* world_100_border_4_1.jpg */; };
+		72CB8B501A043FA6000E30CF /* world_100_border_4_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A901A043FA5000E30CF /* world_100_border_4_2.jpg */; };
+		72CB8B511A043FA6000E30CF /* world_100_border_4_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A911A043FA5000E30CF /* world_100_border_4_3.jpg */; };
+		72CB8B521A043FA6000E30CF /* world_100_border_4_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A921A043FA5000E30CF /* world_100_border_4_4.jpg */; };
+		72CB8B531A043FA6000E30CF /* world_100_border_4_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A931A043FA5000E30CF /* world_100_border_4_5.jpg */; };
+		72CB8B541A043FA6000E30CF /* world_100_border_4_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A941A043FA5000E30CF /* world_100_border_4_6.jpg */; };
+		72CB8B551A043FA6000E30CF /* world_100_border_4_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A951A043FA5000E30CF /* world_100_border_4_7.jpg */; };
+		72CB8B561A043FA6000E30CF /* world_100_border_4_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A961A043FA5000E30CF /* world_100_border_4_8.jpg */; };
+		72CB8B571A043FA6000E30CF /* world_100_border_4_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A971A043FA5000E30CF /* world_100_border_4_9.jpg */; };
+		72CB8B581A043FA6000E30CF /* world_100_border_4_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A981A043FA5000E30CF /* world_100_border_4_10.jpg */; };
+		72CB8B591A043FA6000E30CF /* world_100_border_4_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A991A043FA5000E30CF /* world_100_border_4_11.jpg */; };
+		72CB8B5A1A043FA6000E30CF /* world_100_border_5_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A9A1A043FA5000E30CF /* world_100_border_5_0.jpg */; };
+		72CB8B5B1A043FA6000E30CF /* world_100_border_5_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A9B1A043FA5000E30CF /* world_100_border_5_1.jpg */; };
+		72CB8B5C1A043FA6000E30CF /* world_100_border_5_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A9C1A043FA5000E30CF /* world_100_border_5_2.jpg */; };
+		72CB8B5D1A043FA6000E30CF /* world_100_border_5_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A9D1A043FA5000E30CF /* world_100_border_5_3.jpg */; };
+		72CB8B5E1A043FA6000E30CF /* world_100_border_5_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A9E1A043FA5000E30CF /* world_100_border_5_4.jpg */; };
+		72CB8B5F1A043FA6000E30CF /* world_100_border_5_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A9F1A043FA5000E30CF /* world_100_border_5_5.jpg */; };
+		72CB8B601A043FA6000E30CF /* world_100_border_5_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA01A043FA5000E30CF /* world_100_border_5_6.jpg */; };
+		72CB8B611A043FA6000E30CF /* world_100_border_5_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA11A043FA5000E30CF /* world_100_border_5_7.jpg */; };
+		72CB8B621A043FA6000E30CF /* world_100_border_5_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA21A043FA5000E30CF /* world_100_border_5_8.jpg */; };
+		72CB8B631A043FA6000E30CF /* world_100_border_5_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA31A043FA5000E30CF /* world_100_border_5_9.jpg */; };
+		72CB8B641A043FA6000E30CF /* world_100_border_5_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA41A043FA5000E30CF /* world_100_border_5_10.jpg */; };
+		72CB8B651A043FA6000E30CF /* world_100_border_5_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA51A043FA5000E30CF /* world_100_border_5_11.jpg */; };
+		72CB8B661A043FA6000E30CF /* world_100_border_6_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA61A043FA5000E30CF /* world_100_border_6_0.jpg */; };
+		72CB8B671A043FA6000E30CF /* world_100_border_6_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA71A043FA5000E30CF /* world_100_border_6_1.jpg */; };
+		72CB8B681A043FA6000E30CF /* world_100_border_6_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA81A043FA5000E30CF /* world_100_border_6_2.jpg */; };
+		72CB8B691A043FA6000E30CF /* world_100_border_6_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AA91A043FA5000E30CF /* world_100_border_6_3.jpg */; };
+		72CB8B6A1A043FA6000E30CF /* world_100_border_6_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AAA1A043FA5000E30CF /* world_100_border_6_4.jpg */; };
+		72CB8B6B1A043FA6000E30CF /* world_100_border_6_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AAB1A043FA5000E30CF /* world_100_border_6_5.jpg */; };
+		72CB8B6C1A043FA6000E30CF /* world_100_border_6_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AAC1A043FA5000E30CF /* world_100_border_6_6.jpg */; };
+		72CB8B6D1A043FA6000E30CF /* world_100_border_6_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AAD1A043FA5000E30CF /* world_100_border_6_7.jpg */; };
+		72CB8B6E1A043FA6000E30CF /* world_100_border_6_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AAE1A043FA5000E30CF /* world_100_border_6_8.jpg */; };
+		72CB8B6F1A043FA6000E30CF /* world_100_border_6_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AAF1A043FA5000E30CF /* world_100_border_6_9.jpg */; };
+		72CB8B701A043FA6000E30CF /* world_100_border_6_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB01A043FA5000E30CF /* world_100_border_6_10.jpg */; };
+		72CB8B711A043FA6000E30CF /* world_100_border_6_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB11A043FA5000E30CF /* world_100_border_6_11.jpg */; };
+		72CB8B721A043FA6000E30CF /* world_100_border_7_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB21A043FA5000E30CF /* world_100_border_7_0.jpg */; };
+		72CB8B731A043FA6000E30CF /* world_100_border_7_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB31A043FA5000E30CF /* world_100_border_7_1.jpg */; };
+		72CB8B741A043FA6000E30CF /* world_100_border_7_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB41A043FA5000E30CF /* world_100_border_7_2.jpg */; };
+		72CB8B751A043FA6000E30CF /* world_100_border_7_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB51A043FA5000E30CF /* world_100_border_7_3.jpg */; };
+		72CB8B761A043FA6000E30CF /* world_100_border_7_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB61A043FA5000E30CF /* world_100_border_7_4.jpg */; };
+		72CB8B771A043FA6000E30CF /* world_100_border_7_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB71A043FA5000E30CF /* world_100_border_7_5.jpg */; };
+		72CB8B781A043FA6000E30CF /* world_100_border_7_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB81A043FA5000E30CF /* world_100_border_7_6.jpg */; };
+		72CB8B791A043FA6000E30CF /* world_100_border_7_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AB91A043FA5000E30CF /* world_100_border_7_7.jpg */; };
+		72CB8B7A1A043FA6000E30CF /* world_100_border_7_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ABA1A043FA5000E30CF /* world_100_border_7_8.jpg */; };
+		72CB8B7B1A043FA6000E30CF /* world_100_border_7_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ABB1A043FA5000E30CF /* world_100_border_7_9.jpg */; };
+		72CB8B7C1A043FA6000E30CF /* world_100_border_7_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ABC1A043FA5000E30CF /* world_100_border_7_10.jpg */; };
+		72CB8B7D1A043FA6000E30CF /* world_100_border_7_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ABD1A043FA5000E30CF /* world_100_border_7_11.jpg */; };
+		72CB8B7E1A043FA6000E30CF /* world_100_border_8_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ABE1A043FA5000E30CF /* world_100_border_8_0.jpg */; };
+		72CB8B7F1A043FA6000E30CF /* world_100_border_8_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ABF1A043FA5000E30CF /* world_100_border_8_1.jpg */; };
+		72CB8B801A043FA6000E30CF /* world_100_border_8_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC01A043FA5000E30CF /* world_100_border_8_2.jpg */; };
+		72CB8B811A043FA6000E30CF /* world_100_border_8_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC11A043FA5000E30CF /* world_100_border_8_3.jpg */; };
+		72CB8B821A043FA6000E30CF /* world_100_border_8_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC21A043FA5000E30CF /* world_100_border_8_4.jpg */; };
+		72CB8B831A043FA6000E30CF /* world_100_border_8_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC31A043FA5000E30CF /* world_100_border_8_5.jpg */; };
+		72CB8B841A043FA6000E30CF /* world_100_border_8_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC41A043FA5000E30CF /* world_100_border_8_6.jpg */; };
+		72CB8B851A043FA6000E30CF /* world_100_border_8_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC51A043FA5000E30CF /* world_100_border_8_7.jpg */; };
+		72CB8B861A043FA6000E30CF /* world_100_border_8_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC61A043FA5000E30CF /* world_100_border_8_8.jpg */; };
+		72CB8B871A043FA6000E30CF /* world_100_border_8_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC71A043FA5000E30CF /* world_100_border_8_9.jpg */; };
+		72CB8B881A043FA6000E30CF /* world_100_border_8_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC81A043FA5000E30CF /* world_100_border_8_10.jpg */; };
+		72CB8B891A043FA6000E30CF /* world_100_border_8_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AC91A043FA5000E30CF /* world_100_border_8_11.jpg */; };
+		72CB8B8A1A043FA6000E30CF /* world_100_border_9_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ACA1A043FA5000E30CF /* world_100_border_9_0.jpg */; };
+		72CB8B8B1A043FA6000E30CF /* world_100_border_9_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ACB1A043FA5000E30CF /* world_100_border_9_1.jpg */; };
+		72CB8B8C1A043FA6000E30CF /* world_100_border_9_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ACC1A043FA6000E30CF /* world_100_border_9_2.jpg */; };
+		72CB8B8D1A043FA6000E30CF /* world_100_border_9_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ACD1A043FA6000E30CF /* world_100_border_9_3.jpg */; };
+		72CB8B8E1A043FA6000E30CF /* world_100_border_9_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ACE1A043FA6000E30CF /* world_100_border_9_4.jpg */; };
+		72CB8B8F1A043FA6000E30CF /* world_100_border_9_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ACF1A043FA6000E30CF /* world_100_border_9_5.jpg */; };
+		72CB8B901A043FA6000E30CF /* world_100_border_9_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD01A043FA6000E30CF /* world_100_border_9_6.jpg */; };
+		72CB8B911A043FA6000E30CF /* world_100_border_9_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD11A043FA6000E30CF /* world_100_border_9_7.jpg */; };
+		72CB8B921A043FA6000E30CF /* world_100_border_9_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD21A043FA6000E30CF /* world_100_border_9_8.jpg */; };
+		72CB8B931A043FA6000E30CF /* world_100_border_9_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD31A043FA6000E30CF /* world_100_border_9_9.jpg */; };
+		72CB8B941A043FA6000E30CF /* world_100_border_9_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD41A043FA6000E30CF /* world_100_border_9_10.jpg */; };
+		72CB8B951A043FA6000E30CF /* world_100_border_9_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD51A043FA6000E30CF /* world_100_border_9_11.jpg */; };
+		72CB8B961A043FA6000E30CF /* world_100_border_10_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD61A043FA6000E30CF /* world_100_border_10_0.jpg */; };
+		72CB8B971A043FA6000E30CF /* world_100_border_10_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD71A043FA6000E30CF /* world_100_border_10_1.jpg */; };
+		72CB8B981A043FA6000E30CF /* world_100_border_10_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD81A043FA6000E30CF /* world_100_border_10_2.jpg */; };
+		72CB8B991A043FA6000E30CF /* world_100_border_10_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AD91A043FA6000E30CF /* world_100_border_10_3.jpg */; };
+		72CB8B9A1A043FA6000E30CF /* world_100_border_10_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ADA1A043FA6000E30CF /* world_100_border_10_4.jpg */; };
+		72CB8B9B1A043FA6000E30CF /* world_100_border_10_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ADB1A043FA6000E30CF /* world_100_border_10_5.jpg */; };
+		72CB8B9C1A043FA6000E30CF /* world_100_border_10_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ADC1A043FA6000E30CF /* world_100_border_10_6.jpg */; };
+		72CB8B9D1A043FA6000E30CF /* world_100_border_10_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ADD1A043FA6000E30CF /* world_100_border_10_7.jpg */; };
+		72CB8B9E1A043FA6000E30CF /* world_100_border_10_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ADE1A043FA6000E30CF /* world_100_border_10_8.jpg */; };
+		72CB8B9F1A043FA6000E30CF /* world_100_border_10_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8ADF1A043FA6000E30CF /* world_100_border_10_9.jpg */; };
+		72CB8BA01A043FA6000E30CF /* world_100_border_10_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE01A043FA6000E30CF /* world_100_border_10_10.jpg */; };
+		72CB8BA11A043FA6000E30CF /* world_100_border_10_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE11A043FA6000E30CF /* world_100_border_10_11.jpg */; };
+		72CB8BA21A043FA6000E30CF /* world_100_border_11_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE21A043FA6000E30CF /* world_100_border_11_0.jpg */; };
+		72CB8BA31A043FA6000E30CF /* world_100_border_11_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE31A043FA6000E30CF /* world_100_border_11_1.jpg */; };
+		72CB8BA41A043FA6000E30CF /* world_100_border_11_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE41A043FA6000E30CF /* world_100_border_11_2.jpg */; };
+		72CB8BA51A043FA6000E30CF /* world_100_border_11_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE51A043FA6000E30CF /* world_100_border_11_3.jpg */; };
+		72CB8BA61A043FA6000E30CF /* world_100_border_11_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE61A043FA6000E30CF /* world_100_border_11_4.jpg */; };
+		72CB8BA71A043FA6000E30CF /* world_100_border_11_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE71A043FA6000E30CF /* world_100_border_11_5.jpg */; };
+		72CB8BA81A043FA6000E30CF /* world_100_border_11_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE81A043FA6000E30CF /* world_100_border_11_6.jpg */; };
+		72CB8BA91A043FA6000E30CF /* world_100_border_11_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AE91A043FA6000E30CF /* world_100_border_11_7.jpg */; };
+		72CB8BAA1A043FA6000E30CF /* world_100_border_11_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AEA1A043FA6000E30CF /* world_100_border_11_8.jpg */; };
+		72CB8BAB1A043FA6000E30CF /* world_100_border_11_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AEB1A043FA6000E30CF /* world_100_border_11_9.jpg */; };
+		72CB8BAC1A043FA6000E30CF /* world_100_border_11_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AEC1A043FA6000E30CF /* world_100_border_11_10.jpg */; };
+		72CB8BAD1A043FA6000E30CF /* world_100_border_11_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AED1A043FA6000E30CF /* world_100_border_11_11.jpg */; };
+		72CB8BAE1A043FA6000E30CF /* world_100_border_12_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AEE1A043FA6000E30CF /* world_100_border_12_0.jpg */; };
+		72CB8BAF1A043FA6000E30CF /* world_100_border_12_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AEF1A043FA6000E30CF /* world_100_border_12_1.jpg */; };
+		72CB8BB01A043FA6000E30CF /* world_100_border_12_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF01A043FA6000E30CF /* world_100_border_12_2.jpg */; };
+		72CB8BB11A043FA6000E30CF /* world_100_border_12_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF11A043FA6000E30CF /* world_100_border_12_3.jpg */; };
+		72CB8BB21A043FA6000E30CF /* world_100_border_12_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF21A043FA6000E30CF /* world_100_border_12_4.jpg */; };
+		72CB8BB31A043FA6000E30CF /* world_100_border_12_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF31A043FA6000E30CF /* world_100_border_12_5.jpg */; };
+		72CB8BB41A043FA6000E30CF /* world_100_border_12_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF41A043FA6000E30CF /* world_100_border_12_6.jpg */; };
+		72CB8BB51A043FA6000E30CF /* world_100_border_12_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF51A043FA6000E30CF /* world_100_border_12_7.jpg */; };
+		72CB8BB61A043FA6000E30CF /* world_100_border_12_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF61A043FA6000E30CF /* world_100_border_12_8.jpg */; };
+		72CB8BB71A043FA6000E30CF /* world_100_border_12_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF71A043FA6000E30CF /* world_100_border_12_9.jpg */; };
+		72CB8BB81A043FA6000E30CF /* world_100_border_12_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF81A043FA6000E30CF /* world_100_border_12_10.jpg */; };
+		72CB8BB91A043FA6000E30CF /* world_100_border_12_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AF91A043FA6000E30CF /* world_100_border_12_11.jpg */; };
+		72CB8BBA1A043FA6000E30CF /* world_100_border_13_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AFA1A043FA6000E30CF /* world_100_border_13_0.jpg */; };
+		72CB8BBB1A043FA6000E30CF /* world_100_border_13_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AFB1A043FA6000E30CF /* world_100_border_13_1.jpg */; };
+		72CB8BBC1A043FA6000E30CF /* world_100_border_13_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AFC1A043FA6000E30CF /* world_100_border_13_2.jpg */; };
+		72CB8BBD1A043FA6000E30CF /* world_100_border_13_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AFD1A043FA6000E30CF /* world_100_border_13_3.jpg */; };
+		72CB8BBE1A043FA6000E30CF /* world_100_border_13_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AFE1A043FA6000E30CF /* world_100_border_13_4.jpg */; };
+		72CB8BBF1A043FA6000E30CF /* world_100_border_13_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8AFF1A043FA6000E30CF /* world_100_border_13_5.jpg */; };
+		72CB8BC01A043FA6000E30CF /* world_100_border_13_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B001A043FA6000E30CF /* world_100_border_13_6.jpg */; };
+		72CB8BC11A043FA6000E30CF /* world_100_border_13_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B011A043FA6000E30CF /* world_100_border_13_7.jpg */; };
+		72CB8BC21A043FA6000E30CF /* world_100_border_13_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B021A043FA6000E30CF /* world_100_border_13_8.jpg */; };
+		72CB8BC31A043FA6000E30CF /* world_100_border_13_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B031A043FA6000E30CF /* world_100_border_13_9.jpg */; };
+		72CB8BC41A043FA6000E30CF /* world_100_border_13_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B041A043FA6000E30CF /* world_100_border_13_10.jpg */; };
+		72CB8BC51A043FA6000E30CF /* world_100_border_13_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B051A043FA6000E30CF /* world_100_border_13_11.jpg */; };
+		72CB8BC61A043FA6000E30CF /* world_100_border_14_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B061A043FA6000E30CF /* world_100_border_14_0.jpg */; };
+		72CB8BC71A043FA6000E30CF /* world_100_border_14_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B071A043FA6000E30CF /* world_100_border_14_1.jpg */; };
+		72CB8BC81A043FA6000E30CF /* world_100_border_14_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B081A043FA6000E30CF /* world_100_border_14_2.jpg */; };
+		72CB8BC91A043FA6000E30CF /* world_100_border_14_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B091A043FA6000E30CF /* world_100_border_14_3.jpg */; };
+		72CB8BCA1A043FA6000E30CF /* world_100_border_14_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B0A1A043FA6000E30CF /* world_100_border_14_4.jpg */; };
+		72CB8BCB1A043FA6000E30CF /* world_100_border_14_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B0B1A043FA6000E30CF /* world_100_border_14_5.jpg */; };
+		72CB8BCC1A043FA6000E30CF /* world_100_border_14_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B0C1A043FA6000E30CF /* world_100_border_14_6.jpg */; };
+		72CB8BCD1A043FA6000E30CF /* world_100_border_14_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B0D1A043FA6000E30CF /* world_100_border_14_7.jpg */; };
+		72CB8BCE1A043FA6000E30CF /* world_100_border_14_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B0E1A043FA6000E30CF /* world_100_border_14_8.jpg */; };
+		72CB8BCF1A043FA6000E30CF /* world_100_border_14_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B0F1A043FA6000E30CF /* world_100_border_14_9.jpg */; };
+		72CB8BD01A043FA6000E30CF /* world_100_border_14_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B101A043FA6000E30CF /* world_100_border_14_10.jpg */; };
+		72CB8BD11A043FA6000E30CF /* world_100_border_14_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B111A043FA6000E30CF /* world_100_border_14_11.jpg */; };
+		72CB8BD21A043FA6000E30CF /* world_100_border_15_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B121A043FA6000E30CF /* world_100_border_15_0.jpg */; };
+		72CB8BD31A043FA6000E30CF /* world_100_border_15_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B131A043FA6000E30CF /* world_100_border_15_1.jpg */; };
+		72CB8BD41A043FA6000E30CF /* world_100_border_15_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B141A043FA6000E30CF /* world_100_border_15_2.jpg */; };
+		72CB8BD51A043FA6000E30CF /* world_100_border_15_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B151A043FA6000E30CF /* world_100_border_15_3.jpg */; };
+		72CB8BD61A043FA6000E30CF /* world_100_border_15_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B161A043FA6000E30CF /* world_100_border_15_4.jpg */; };
+		72CB8BD71A043FA6000E30CF /* world_100_border_15_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B171A043FA6000E30CF /* world_100_border_15_5.jpg */; };
+		72CB8BD81A043FA6000E30CF /* world_100_border_15_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B181A043FA6000E30CF /* world_100_border_15_6.jpg */; };
+		72CB8BD91A043FA6000E30CF /* world_100_border_15_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B191A043FA6000E30CF /* world_100_border_15_7.jpg */; };
+		72CB8BDA1A043FA6000E30CF /* world_100_border_15_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B1A1A043FA6000E30CF /* world_100_border_15_8.jpg */; };
+		72CB8BDB1A043FA6000E30CF /* world_100_border_15_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B1B1A043FA6000E30CF /* world_100_border_15_9.jpg */; };
+		72CB8BDC1A043FA6000E30CF /* world_100_border_15_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B1C1A043FA6000E30CF /* world_100_border_15_10.jpg */; };
+		72CB8BDD1A043FA6000E30CF /* world_100_border_15_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8B1D1A043FA6000E30CF /* world_100_border_15_11.jpg */; };
+		72CB8C861A045097000E30CF /* world_50_border_0_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C561A045097000E30CF /* world_50_border_0_0.jpg */; };
+		72CB8C871A045097000E30CF /* world_50_border_0_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C571A045097000E30CF /* world_50_border_0_1.jpg */; };
+		72CB8C881A045097000E30CF /* world_50_border_0_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C581A045097000E30CF /* world_50_border_0_2.jpg */; };
+		72CB8C891A045097000E30CF /* world_50_border_0_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C591A045097000E30CF /* world_50_border_0_3.jpg */; };
+		72CB8C8A1A045097000E30CF /* world_50_border_0_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C5A1A045097000E30CF /* world_50_border_0_4.jpg */; };
+		72CB8C8B1A045097000E30CF /* world_50_border_0_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C5B1A045097000E30CF /* world_50_border_0_5.jpg */; };
+		72CB8C8C1A045097000E30CF /* world_50_border_1_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C5C1A045097000E30CF /* world_50_border_1_0.jpg */; };
+		72CB8C8D1A045097000E30CF /* world_50_border_1_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C5D1A045097000E30CF /* world_50_border_1_1.jpg */; };
+		72CB8C8E1A045097000E30CF /* world_50_border_1_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C5E1A045097000E30CF /* world_50_border_1_2.jpg */; };
+		72CB8C8F1A045097000E30CF /* world_50_border_1_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C5F1A045097000E30CF /* world_50_border_1_3.jpg */; };
+		72CB8C901A045097000E30CF /* world_50_border_1_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C601A045097000E30CF /* world_50_border_1_4.jpg */; };
+		72CB8C911A045097000E30CF /* world_50_border_1_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C611A045097000E30CF /* world_50_border_1_5.jpg */; };
+		72CB8C921A045097000E30CF /* world_50_border_2_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C621A045097000E30CF /* world_50_border_2_0.jpg */; };
+		72CB8C931A045097000E30CF /* world_50_border_2_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C631A045097000E30CF /* world_50_border_2_1.jpg */; };
+		72CB8C941A045097000E30CF /* world_50_border_2_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C641A045097000E30CF /* world_50_border_2_2.jpg */; };
+		72CB8C951A045097000E30CF /* world_50_border_2_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C651A045097000E30CF /* world_50_border_2_3.jpg */; };
+		72CB8C961A045097000E30CF /* world_50_border_2_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C661A045097000E30CF /* world_50_border_2_4.jpg */; };
+		72CB8C971A045097000E30CF /* world_50_border_2_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C671A045097000E30CF /* world_50_border_2_5.jpg */; };
+		72CB8C981A045097000E30CF /* world_50_border_3_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C681A045097000E30CF /* world_50_border_3_0.jpg */; };
+		72CB8C991A045097000E30CF /* world_50_border_3_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C691A045097000E30CF /* world_50_border_3_1.jpg */; };
+		72CB8C9A1A045097000E30CF /* world_50_border_3_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C6A1A045097000E30CF /* world_50_border_3_2.jpg */; };
+		72CB8C9B1A045097000E30CF /* world_50_border_3_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C6B1A045097000E30CF /* world_50_border_3_3.jpg */; };
+		72CB8C9C1A045097000E30CF /* world_50_border_3_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C6C1A045097000E30CF /* world_50_border_3_4.jpg */; };
+		72CB8C9D1A045097000E30CF /* world_50_border_3_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C6D1A045097000E30CF /* world_50_border_3_5.jpg */; };
+		72CB8C9E1A045097000E30CF /* world_50_border_4_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C6E1A045097000E30CF /* world_50_border_4_0.jpg */; };
+		72CB8C9F1A045097000E30CF /* world_50_border_4_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C6F1A045097000E30CF /* world_50_border_4_1.jpg */; };
+		72CB8CA01A045097000E30CF /* world_50_border_4_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C701A045097000E30CF /* world_50_border_4_2.jpg */; };
+		72CB8CA11A045097000E30CF /* world_50_border_4_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C711A045097000E30CF /* world_50_border_4_3.jpg */; };
+		72CB8CA21A045097000E30CF /* world_50_border_4_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C721A045097000E30CF /* world_50_border_4_4.jpg */; };
+		72CB8CA31A045097000E30CF /* world_50_border_4_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C731A045097000E30CF /* world_50_border_4_5.jpg */; };
+		72CB8CA41A045097000E30CF /* world_50_border_5_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C741A045097000E30CF /* world_50_border_5_0.jpg */; };
+		72CB8CA51A045097000E30CF /* world_50_border_5_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C751A045097000E30CF /* world_50_border_5_1.jpg */; };
+		72CB8CA61A045097000E30CF /* world_50_border_5_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C761A045097000E30CF /* world_50_border_5_2.jpg */; };
+		72CB8CA71A045097000E30CF /* world_50_border_5_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C771A045097000E30CF /* world_50_border_5_3.jpg */; };
+		72CB8CA81A045097000E30CF /* world_50_border_5_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C781A045097000E30CF /* world_50_border_5_4.jpg */; };
+		72CB8CA91A045097000E30CF /* world_50_border_5_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C791A045097000E30CF /* world_50_border_5_5.jpg */; };
+		72CB8CAA1A045097000E30CF /* world_50_border_6_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C7A1A045097000E30CF /* world_50_border_6_0.jpg */; };
+		72CB8CAB1A045097000E30CF /* world_50_border_6_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C7B1A045097000E30CF /* world_50_border_6_1.jpg */; };
+		72CB8CAC1A045097000E30CF /* world_50_border_6_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C7C1A045097000E30CF /* world_50_border_6_2.jpg */; };
+		72CB8CAD1A045097000E30CF /* world_50_border_6_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C7D1A045097000E30CF /* world_50_border_6_3.jpg */; };
+		72CB8CAE1A045097000E30CF /* world_50_border_6_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C7E1A045097000E30CF /* world_50_border_6_4.jpg */; };
+		72CB8CAF1A045097000E30CF /* world_50_border_6_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C7F1A045097000E30CF /* world_50_border_6_5.jpg */; };
+		72CB8CB01A045097000E30CF /* world_50_border_7_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C801A045097000E30CF /* world_50_border_7_0.jpg */; };
+		72CB8CB11A045097000E30CF /* world_50_border_7_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C811A045097000E30CF /* world_50_border_7_1.jpg */; };
+		72CB8CB21A045097000E30CF /* world_50_border_7_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C821A045097000E30CF /* world_50_border_7_2.jpg */; };
+		72CB8CB31A045097000E30CF /* world_50_border_7_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C831A045097000E30CF /* world_50_border_7_3.jpg */; };
+		72CB8CB41A045097000E30CF /* world_50_border_7_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C841A045097000E30CF /* world_50_border_7_4.jpg */; };
+		72CB8CB51A045097000E30CF /* world_50_border_7_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8C851A045097000E30CF /* world_50_border_7_5.jpg */; };
+		72CB8CC21A0450B1000E30CF /* world_25_border_0_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CB61A0450B1000E30CF /* world_25_border_0_0.jpg */; };
+		72CB8CC31A0450B1000E30CF /* world_25_border_0_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CB71A0450B1000E30CF /* world_25_border_0_1.jpg */; };
+		72CB8CC41A0450B1000E30CF /* world_25_border_0_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CB81A0450B1000E30CF /* world_25_border_0_2.jpg */; };
+		72CB8CC51A0450B1000E30CF /* world_25_border_1_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CB91A0450B1000E30CF /* world_25_border_1_0.jpg */; };
+		72CB8CC61A0450B1000E30CF /* world_25_border_1_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBA1A0450B1000E30CF /* world_25_border_1_1.jpg */; };
+		72CB8CC71A0450B1000E30CF /* world_25_border_1_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBB1A0450B1000E30CF /* world_25_border_1_2.jpg */; };
+		72CB8CC81A0450B1000E30CF /* world_25_border_2_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBC1A0450B1000E30CF /* world_25_border_2_0.jpg */; };
+		72CB8CC91A0450B1000E30CF /* world_25_border_2_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBD1A0450B1000E30CF /* world_25_border_2_1.jpg */; };
+		72CB8CCA1A0450B1000E30CF /* world_25_border_2_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBE1A0450B1000E30CF /* world_25_border_2_2.jpg */; };
+		72CB8CCB1A0450B1000E30CF /* world_25_border_3_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBF1A0450B1000E30CF /* world_25_border_3_0.jpg */; };
+		72CB8CCC1A0450B1000E30CF /* world_25_border_3_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CC01A0450B1000E30CF /* world_25_border_3_1.jpg */; };
+		72CB8CCD1A0450B1000E30CF /* world_25_border_3_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CC11A0450B1000E30CF /* world_25_border_3_2.jpg */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1194,6 +1446,258 @@
 		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
 		72CB8A5719FB1E61000E30CF /* capitals.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitals.txt; path = resources/tekst/capitals.txt; sourceTree = "<group>"; };
 		72CB8A591A0167E7000E30CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/graphics/GameElements/Default-568h@2x.png"; sourceTree = "<group>"; };
+		72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_0.jpg; path = resources/graphics/map/withborder100/world_100_border_0_0.jpg; sourceTree = "<group>"; };
+		72CB8A5F1A043FA5000E30CF /* world_100_border_0_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_1.jpg; path = resources/graphics/map/withborder100/world_100_border_0_1.jpg; sourceTree = "<group>"; };
+		72CB8A601A043FA5000E30CF /* world_100_border_0_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_2.jpg; path = resources/graphics/map/withborder100/world_100_border_0_2.jpg; sourceTree = "<group>"; };
+		72CB8A611A043FA5000E30CF /* world_100_border_0_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_3.jpg; path = resources/graphics/map/withborder100/world_100_border_0_3.jpg; sourceTree = "<group>"; };
+		72CB8A621A043FA5000E30CF /* world_100_border_0_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_4.jpg; path = resources/graphics/map/withborder100/world_100_border_0_4.jpg; sourceTree = "<group>"; };
+		72CB8A631A043FA5000E30CF /* world_100_border_0_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_5.jpg; path = resources/graphics/map/withborder100/world_100_border_0_5.jpg; sourceTree = "<group>"; };
+		72CB8A641A043FA5000E30CF /* world_100_border_0_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_6.jpg; path = resources/graphics/map/withborder100/world_100_border_0_6.jpg; sourceTree = "<group>"; };
+		72CB8A651A043FA5000E30CF /* world_100_border_0_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_7.jpg; path = resources/graphics/map/withborder100/world_100_border_0_7.jpg; sourceTree = "<group>"; };
+		72CB8A661A043FA5000E30CF /* world_100_border_0_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_8.jpg; path = resources/graphics/map/withborder100/world_100_border_0_8.jpg; sourceTree = "<group>"; };
+		72CB8A671A043FA5000E30CF /* world_100_border_0_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_9.jpg; path = resources/graphics/map/withborder100/world_100_border_0_9.jpg; sourceTree = "<group>"; };
+		72CB8A681A043FA5000E30CF /* world_100_border_0_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_10.jpg; path = resources/graphics/map/withborder100/world_100_border_0_10.jpg; sourceTree = "<group>"; };
+		72CB8A691A043FA5000E30CF /* world_100_border_0_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_11.jpg; path = resources/graphics/map/withborder100/world_100_border_0_11.jpg; sourceTree = "<group>"; };
+		72CB8A6A1A043FA5000E30CF /* world_100_border_1_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_0.jpg; path = resources/graphics/map/withborder100/world_100_border_1_0.jpg; sourceTree = "<group>"; };
+		72CB8A6B1A043FA5000E30CF /* world_100_border_1_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_1.jpg; path = resources/graphics/map/withborder100/world_100_border_1_1.jpg; sourceTree = "<group>"; };
+		72CB8A6C1A043FA5000E30CF /* world_100_border_1_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_2.jpg; path = resources/graphics/map/withborder100/world_100_border_1_2.jpg; sourceTree = "<group>"; };
+		72CB8A6D1A043FA5000E30CF /* world_100_border_1_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_3.jpg; path = resources/graphics/map/withborder100/world_100_border_1_3.jpg; sourceTree = "<group>"; };
+		72CB8A6E1A043FA5000E30CF /* world_100_border_1_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_4.jpg; path = resources/graphics/map/withborder100/world_100_border_1_4.jpg; sourceTree = "<group>"; };
+		72CB8A6F1A043FA5000E30CF /* world_100_border_1_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_5.jpg; path = resources/graphics/map/withborder100/world_100_border_1_5.jpg; sourceTree = "<group>"; };
+		72CB8A701A043FA5000E30CF /* world_100_border_1_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_6.jpg; path = resources/graphics/map/withborder100/world_100_border_1_6.jpg; sourceTree = "<group>"; };
+		72CB8A711A043FA5000E30CF /* world_100_border_1_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_7.jpg; path = resources/graphics/map/withborder100/world_100_border_1_7.jpg; sourceTree = "<group>"; };
+		72CB8A721A043FA5000E30CF /* world_100_border_1_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_8.jpg; path = resources/graphics/map/withborder100/world_100_border_1_8.jpg; sourceTree = "<group>"; };
+		72CB8A731A043FA5000E30CF /* world_100_border_1_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_9.jpg; path = resources/graphics/map/withborder100/world_100_border_1_9.jpg; sourceTree = "<group>"; };
+		72CB8A741A043FA5000E30CF /* world_100_border_1_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_10.jpg; path = resources/graphics/map/withborder100/world_100_border_1_10.jpg; sourceTree = "<group>"; };
+		72CB8A751A043FA5000E30CF /* world_100_border_1_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_1_11.jpg; path = resources/graphics/map/withborder100/world_100_border_1_11.jpg; sourceTree = "<group>"; };
+		72CB8A761A043FA5000E30CF /* world_100_border_2_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_0.jpg; path = resources/graphics/map/withborder100/world_100_border_2_0.jpg; sourceTree = "<group>"; };
+		72CB8A771A043FA5000E30CF /* world_100_border_2_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_1.jpg; path = resources/graphics/map/withborder100/world_100_border_2_1.jpg; sourceTree = "<group>"; };
+		72CB8A781A043FA5000E30CF /* world_100_border_2_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_2.jpg; path = resources/graphics/map/withborder100/world_100_border_2_2.jpg; sourceTree = "<group>"; };
+		72CB8A791A043FA5000E30CF /* world_100_border_2_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_3.jpg; path = resources/graphics/map/withborder100/world_100_border_2_3.jpg; sourceTree = "<group>"; };
+		72CB8A7A1A043FA5000E30CF /* world_100_border_2_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_4.jpg; path = resources/graphics/map/withborder100/world_100_border_2_4.jpg; sourceTree = "<group>"; };
+		72CB8A7B1A043FA5000E30CF /* world_100_border_2_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_5.jpg; path = resources/graphics/map/withborder100/world_100_border_2_5.jpg; sourceTree = "<group>"; };
+		72CB8A7C1A043FA5000E30CF /* world_100_border_2_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_6.jpg; path = resources/graphics/map/withborder100/world_100_border_2_6.jpg; sourceTree = "<group>"; };
+		72CB8A7D1A043FA5000E30CF /* world_100_border_2_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_7.jpg; path = resources/graphics/map/withborder100/world_100_border_2_7.jpg; sourceTree = "<group>"; };
+		72CB8A7E1A043FA5000E30CF /* world_100_border_2_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_8.jpg; path = resources/graphics/map/withborder100/world_100_border_2_8.jpg; sourceTree = "<group>"; };
+		72CB8A7F1A043FA5000E30CF /* world_100_border_2_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_9.jpg; path = resources/graphics/map/withborder100/world_100_border_2_9.jpg; sourceTree = "<group>"; };
+		72CB8A801A043FA5000E30CF /* world_100_border_2_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_10.jpg; path = resources/graphics/map/withborder100/world_100_border_2_10.jpg; sourceTree = "<group>"; };
+		72CB8A811A043FA5000E30CF /* world_100_border_2_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_2_11.jpg; path = resources/graphics/map/withborder100/world_100_border_2_11.jpg; sourceTree = "<group>"; };
+		72CB8A821A043FA5000E30CF /* world_100_border_3_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_0.jpg; path = resources/graphics/map/withborder100/world_100_border_3_0.jpg; sourceTree = "<group>"; };
+		72CB8A831A043FA5000E30CF /* world_100_border_3_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_1.jpg; path = resources/graphics/map/withborder100/world_100_border_3_1.jpg; sourceTree = "<group>"; };
+		72CB8A841A043FA5000E30CF /* world_100_border_3_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_2.jpg; path = resources/graphics/map/withborder100/world_100_border_3_2.jpg; sourceTree = "<group>"; };
+		72CB8A851A043FA5000E30CF /* world_100_border_3_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_3.jpg; path = resources/graphics/map/withborder100/world_100_border_3_3.jpg; sourceTree = "<group>"; };
+		72CB8A861A043FA5000E30CF /* world_100_border_3_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_4.jpg; path = resources/graphics/map/withborder100/world_100_border_3_4.jpg; sourceTree = "<group>"; };
+		72CB8A871A043FA5000E30CF /* world_100_border_3_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_5.jpg; path = resources/graphics/map/withborder100/world_100_border_3_5.jpg; sourceTree = "<group>"; };
+		72CB8A881A043FA5000E30CF /* world_100_border_3_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_6.jpg; path = resources/graphics/map/withborder100/world_100_border_3_6.jpg; sourceTree = "<group>"; };
+		72CB8A891A043FA5000E30CF /* world_100_border_3_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_7.jpg; path = resources/graphics/map/withborder100/world_100_border_3_7.jpg; sourceTree = "<group>"; };
+		72CB8A8A1A043FA5000E30CF /* world_100_border_3_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_8.jpg; path = resources/graphics/map/withborder100/world_100_border_3_8.jpg; sourceTree = "<group>"; };
+		72CB8A8B1A043FA5000E30CF /* world_100_border_3_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_9.jpg; path = resources/graphics/map/withborder100/world_100_border_3_9.jpg; sourceTree = "<group>"; };
+		72CB8A8C1A043FA5000E30CF /* world_100_border_3_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_10.jpg; path = resources/graphics/map/withborder100/world_100_border_3_10.jpg; sourceTree = "<group>"; };
+		72CB8A8D1A043FA5000E30CF /* world_100_border_3_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_3_11.jpg; path = resources/graphics/map/withborder100/world_100_border_3_11.jpg; sourceTree = "<group>"; };
+		72CB8A8E1A043FA5000E30CF /* world_100_border_4_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_0.jpg; path = resources/graphics/map/withborder100/world_100_border_4_0.jpg; sourceTree = "<group>"; };
+		72CB8A8F1A043FA5000E30CF /* world_100_border_4_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_1.jpg; path = resources/graphics/map/withborder100/world_100_border_4_1.jpg; sourceTree = "<group>"; };
+		72CB8A901A043FA5000E30CF /* world_100_border_4_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_2.jpg; path = resources/graphics/map/withborder100/world_100_border_4_2.jpg; sourceTree = "<group>"; };
+		72CB8A911A043FA5000E30CF /* world_100_border_4_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_3.jpg; path = resources/graphics/map/withborder100/world_100_border_4_3.jpg; sourceTree = "<group>"; };
+		72CB8A921A043FA5000E30CF /* world_100_border_4_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_4.jpg; path = resources/graphics/map/withborder100/world_100_border_4_4.jpg; sourceTree = "<group>"; };
+		72CB8A931A043FA5000E30CF /* world_100_border_4_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_5.jpg; path = resources/graphics/map/withborder100/world_100_border_4_5.jpg; sourceTree = "<group>"; };
+		72CB8A941A043FA5000E30CF /* world_100_border_4_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_6.jpg; path = resources/graphics/map/withborder100/world_100_border_4_6.jpg; sourceTree = "<group>"; };
+		72CB8A951A043FA5000E30CF /* world_100_border_4_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_7.jpg; path = resources/graphics/map/withborder100/world_100_border_4_7.jpg; sourceTree = "<group>"; };
+		72CB8A961A043FA5000E30CF /* world_100_border_4_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_8.jpg; path = resources/graphics/map/withborder100/world_100_border_4_8.jpg; sourceTree = "<group>"; };
+		72CB8A971A043FA5000E30CF /* world_100_border_4_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_9.jpg; path = resources/graphics/map/withborder100/world_100_border_4_9.jpg; sourceTree = "<group>"; };
+		72CB8A981A043FA5000E30CF /* world_100_border_4_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_10.jpg; path = resources/graphics/map/withborder100/world_100_border_4_10.jpg; sourceTree = "<group>"; };
+		72CB8A991A043FA5000E30CF /* world_100_border_4_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_4_11.jpg; path = resources/graphics/map/withborder100/world_100_border_4_11.jpg; sourceTree = "<group>"; };
+		72CB8A9A1A043FA5000E30CF /* world_100_border_5_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_0.jpg; path = resources/graphics/map/withborder100/world_100_border_5_0.jpg; sourceTree = "<group>"; };
+		72CB8A9B1A043FA5000E30CF /* world_100_border_5_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_1.jpg; path = resources/graphics/map/withborder100/world_100_border_5_1.jpg; sourceTree = "<group>"; };
+		72CB8A9C1A043FA5000E30CF /* world_100_border_5_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_2.jpg; path = resources/graphics/map/withborder100/world_100_border_5_2.jpg; sourceTree = "<group>"; };
+		72CB8A9D1A043FA5000E30CF /* world_100_border_5_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_3.jpg; path = resources/graphics/map/withborder100/world_100_border_5_3.jpg; sourceTree = "<group>"; };
+		72CB8A9E1A043FA5000E30CF /* world_100_border_5_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_4.jpg; path = resources/graphics/map/withborder100/world_100_border_5_4.jpg; sourceTree = "<group>"; };
+		72CB8A9F1A043FA5000E30CF /* world_100_border_5_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_5.jpg; path = resources/graphics/map/withborder100/world_100_border_5_5.jpg; sourceTree = "<group>"; };
+		72CB8AA01A043FA5000E30CF /* world_100_border_5_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_6.jpg; path = resources/graphics/map/withborder100/world_100_border_5_6.jpg; sourceTree = "<group>"; };
+		72CB8AA11A043FA5000E30CF /* world_100_border_5_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_7.jpg; path = resources/graphics/map/withborder100/world_100_border_5_7.jpg; sourceTree = "<group>"; };
+		72CB8AA21A043FA5000E30CF /* world_100_border_5_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_8.jpg; path = resources/graphics/map/withborder100/world_100_border_5_8.jpg; sourceTree = "<group>"; };
+		72CB8AA31A043FA5000E30CF /* world_100_border_5_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_9.jpg; path = resources/graphics/map/withborder100/world_100_border_5_9.jpg; sourceTree = "<group>"; };
+		72CB8AA41A043FA5000E30CF /* world_100_border_5_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_10.jpg; path = resources/graphics/map/withborder100/world_100_border_5_10.jpg; sourceTree = "<group>"; };
+		72CB8AA51A043FA5000E30CF /* world_100_border_5_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_5_11.jpg; path = resources/graphics/map/withborder100/world_100_border_5_11.jpg; sourceTree = "<group>"; };
+		72CB8AA61A043FA5000E30CF /* world_100_border_6_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_0.jpg; path = resources/graphics/map/withborder100/world_100_border_6_0.jpg; sourceTree = "<group>"; };
+		72CB8AA71A043FA5000E30CF /* world_100_border_6_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_1.jpg; path = resources/graphics/map/withborder100/world_100_border_6_1.jpg; sourceTree = "<group>"; };
+		72CB8AA81A043FA5000E30CF /* world_100_border_6_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_2.jpg; path = resources/graphics/map/withborder100/world_100_border_6_2.jpg; sourceTree = "<group>"; };
+		72CB8AA91A043FA5000E30CF /* world_100_border_6_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_3.jpg; path = resources/graphics/map/withborder100/world_100_border_6_3.jpg; sourceTree = "<group>"; };
+		72CB8AAA1A043FA5000E30CF /* world_100_border_6_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_4.jpg; path = resources/graphics/map/withborder100/world_100_border_6_4.jpg; sourceTree = "<group>"; };
+		72CB8AAB1A043FA5000E30CF /* world_100_border_6_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_5.jpg; path = resources/graphics/map/withborder100/world_100_border_6_5.jpg; sourceTree = "<group>"; };
+		72CB8AAC1A043FA5000E30CF /* world_100_border_6_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_6.jpg; path = resources/graphics/map/withborder100/world_100_border_6_6.jpg; sourceTree = "<group>"; };
+		72CB8AAD1A043FA5000E30CF /* world_100_border_6_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_7.jpg; path = resources/graphics/map/withborder100/world_100_border_6_7.jpg; sourceTree = "<group>"; };
+		72CB8AAE1A043FA5000E30CF /* world_100_border_6_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_8.jpg; path = resources/graphics/map/withborder100/world_100_border_6_8.jpg; sourceTree = "<group>"; };
+		72CB8AAF1A043FA5000E30CF /* world_100_border_6_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_9.jpg; path = resources/graphics/map/withborder100/world_100_border_6_9.jpg; sourceTree = "<group>"; };
+		72CB8AB01A043FA5000E30CF /* world_100_border_6_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_10.jpg; path = resources/graphics/map/withborder100/world_100_border_6_10.jpg; sourceTree = "<group>"; };
+		72CB8AB11A043FA5000E30CF /* world_100_border_6_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_6_11.jpg; path = resources/graphics/map/withborder100/world_100_border_6_11.jpg; sourceTree = "<group>"; };
+		72CB8AB21A043FA5000E30CF /* world_100_border_7_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_0.jpg; path = resources/graphics/map/withborder100/world_100_border_7_0.jpg; sourceTree = "<group>"; };
+		72CB8AB31A043FA5000E30CF /* world_100_border_7_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_1.jpg; path = resources/graphics/map/withborder100/world_100_border_7_1.jpg; sourceTree = "<group>"; };
+		72CB8AB41A043FA5000E30CF /* world_100_border_7_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_2.jpg; path = resources/graphics/map/withborder100/world_100_border_7_2.jpg; sourceTree = "<group>"; };
+		72CB8AB51A043FA5000E30CF /* world_100_border_7_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_3.jpg; path = resources/graphics/map/withborder100/world_100_border_7_3.jpg; sourceTree = "<group>"; };
+		72CB8AB61A043FA5000E30CF /* world_100_border_7_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_4.jpg; path = resources/graphics/map/withborder100/world_100_border_7_4.jpg; sourceTree = "<group>"; };
+		72CB8AB71A043FA5000E30CF /* world_100_border_7_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_5.jpg; path = resources/graphics/map/withborder100/world_100_border_7_5.jpg; sourceTree = "<group>"; };
+		72CB8AB81A043FA5000E30CF /* world_100_border_7_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_6.jpg; path = resources/graphics/map/withborder100/world_100_border_7_6.jpg; sourceTree = "<group>"; };
+		72CB8AB91A043FA5000E30CF /* world_100_border_7_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_7.jpg; path = resources/graphics/map/withborder100/world_100_border_7_7.jpg; sourceTree = "<group>"; };
+		72CB8ABA1A043FA5000E30CF /* world_100_border_7_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_8.jpg; path = resources/graphics/map/withborder100/world_100_border_7_8.jpg; sourceTree = "<group>"; };
+		72CB8ABB1A043FA5000E30CF /* world_100_border_7_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_9.jpg; path = resources/graphics/map/withborder100/world_100_border_7_9.jpg; sourceTree = "<group>"; };
+		72CB8ABC1A043FA5000E30CF /* world_100_border_7_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_10.jpg; path = resources/graphics/map/withborder100/world_100_border_7_10.jpg; sourceTree = "<group>"; };
+		72CB8ABD1A043FA5000E30CF /* world_100_border_7_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_7_11.jpg; path = resources/graphics/map/withborder100/world_100_border_7_11.jpg; sourceTree = "<group>"; };
+		72CB8ABE1A043FA5000E30CF /* world_100_border_8_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_0.jpg; path = resources/graphics/map/withborder100/world_100_border_8_0.jpg; sourceTree = "<group>"; };
+		72CB8ABF1A043FA5000E30CF /* world_100_border_8_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_1.jpg; path = resources/graphics/map/withborder100/world_100_border_8_1.jpg; sourceTree = "<group>"; };
+		72CB8AC01A043FA5000E30CF /* world_100_border_8_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_2.jpg; path = resources/graphics/map/withborder100/world_100_border_8_2.jpg; sourceTree = "<group>"; };
+		72CB8AC11A043FA5000E30CF /* world_100_border_8_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_3.jpg; path = resources/graphics/map/withborder100/world_100_border_8_3.jpg; sourceTree = "<group>"; };
+		72CB8AC21A043FA5000E30CF /* world_100_border_8_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_4.jpg; path = resources/graphics/map/withborder100/world_100_border_8_4.jpg; sourceTree = "<group>"; };
+		72CB8AC31A043FA5000E30CF /* world_100_border_8_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_5.jpg; path = resources/graphics/map/withborder100/world_100_border_8_5.jpg; sourceTree = "<group>"; };
+		72CB8AC41A043FA5000E30CF /* world_100_border_8_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_6.jpg; path = resources/graphics/map/withborder100/world_100_border_8_6.jpg; sourceTree = "<group>"; };
+		72CB8AC51A043FA5000E30CF /* world_100_border_8_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_7.jpg; path = resources/graphics/map/withborder100/world_100_border_8_7.jpg; sourceTree = "<group>"; };
+		72CB8AC61A043FA5000E30CF /* world_100_border_8_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_8.jpg; path = resources/graphics/map/withborder100/world_100_border_8_8.jpg; sourceTree = "<group>"; };
+		72CB8AC71A043FA5000E30CF /* world_100_border_8_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_9.jpg; path = resources/graphics/map/withborder100/world_100_border_8_9.jpg; sourceTree = "<group>"; };
+		72CB8AC81A043FA5000E30CF /* world_100_border_8_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_10.jpg; path = resources/graphics/map/withborder100/world_100_border_8_10.jpg; sourceTree = "<group>"; };
+		72CB8AC91A043FA5000E30CF /* world_100_border_8_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_8_11.jpg; path = resources/graphics/map/withborder100/world_100_border_8_11.jpg; sourceTree = "<group>"; };
+		72CB8ACA1A043FA5000E30CF /* world_100_border_9_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_0.jpg; path = resources/graphics/map/withborder100/world_100_border_9_0.jpg; sourceTree = "<group>"; };
+		72CB8ACB1A043FA5000E30CF /* world_100_border_9_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_1.jpg; path = resources/graphics/map/withborder100/world_100_border_9_1.jpg; sourceTree = "<group>"; };
+		72CB8ACC1A043FA6000E30CF /* world_100_border_9_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_2.jpg; path = resources/graphics/map/withborder100/world_100_border_9_2.jpg; sourceTree = "<group>"; };
+		72CB8ACD1A043FA6000E30CF /* world_100_border_9_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_3.jpg; path = resources/graphics/map/withborder100/world_100_border_9_3.jpg; sourceTree = "<group>"; };
+		72CB8ACE1A043FA6000E30CF /* world_100_border_9_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_4.jpg; path = resources/graphics/map/withborder100/world_100_border_9_4.jpg; sourceTree = "<group>"; };
+		72CB8ACF1A043FA6000E30CF /* world_100_border_9_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_5.jpg; path = resources/graphics/map/withborder100/world_100_border_9_5.jpg; sourceTree = "<group>"; };
+		72CB8AD01A043FA6000E30CF /* world_100_border_9_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_6.jpg; path = resources/graphics/map/withborder100/world_100_border_9_6.jpg; sourceTree = "<group>"; };
+		72CB8AD11A043FA6000E30CF /* world_100_border_9_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_7.jpg; path = resources/graphics/map/withborder100/world_100_border_9_7.jpg; sourceTree = "<group>"; };
+		72CB8AD21A043FA6000E30CF /* world_100_border_9_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_8.jpg; path = resources/graphics/map/withborder100/world_100_border_9_8.jpg; sourceTree = "<group>"; };
+		72CB8AD31A043FA6000E30CF /* world_100_border_9_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_9.jpg; path = resources/graphics/map/withborder100/world_100_border_9_9.jpg; sourceTree = "<group>"; };
+		72CB8AD41A043FA6000E30CF /* world_100_border_9_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_10.jpg; path = resources/graphics/map/withborder100/world_100_border_9_10.jpg; sourceTree = "<group>"; };
+		72CB8AD51A043FA6000E30CF /* world_100_border_9_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_9_11.jpg; path = resources/graphics/map/withborder100/world_100_border_9_11.jpg; sourceTree = "<group>"; };
+		72CB8AD61A043FA6000E30CF /* world_100_border_10_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_0.jpg; path = resources/graphics/map/withborder100/world_100_border_10_0.jpg; sourceTree = "<group>"; };
+		72CB8AD71A043FA6000E30CF /* world_100_border_10_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_1.jpg; path = resources/graphics/map/withborder100/world_100_border_10_1.jpg; sourceTree = "<group>"; };
+		72CB8AD81A043FA6000E30CF /* world_100_border_10_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_2.jpg; path = resources/graphics/map/withborder100/world_100_border_10_2.jpg; sourceTree = "<group>"; };
+		72CB8AD91A043FA6000E30CF /* world_100_border_10_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_3.jpg; path = resources/graphics/map/withborder100/world_100_border_10_3.jpg; sourceTree = "<group>"; };
+		72CB8ADA1A043FA6000E30CF /* world_100_border_10_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_4.jpg; path = resources/graphics/map/withborder100/world_100_border_10_4.jpg; sourceTree = "<group>"; };
+		72CB8ADB1A043FA6000E30CF /* world_100_border_10_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_5.jpg; path = resources/graphics/map/withborder100/world_100_border_10_5.jpg; sourceTree = "<group>"; };
+		72CB8ADC1A043FA6000E30CF /* world_100_border_10_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_6.jpg; path = resources/graphics/map/withborder100/world_100_border_10_6.jpg; sourceTree = "<group>"; };
+		72CB8ADD1A043FA6000E30CF /* world_100_border_10_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_7.jpg; path = resources/graphics/map/withborder100/world_100_border_10_7.jpg; sourceTree = "<group>"; };
+		72CB8ADE1A043FA6000E30CF /* world_100_border_10_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_8.jpg; path = resources/graphics/map/withborder100/world_100_border_10_8.jpg; sourceTree = "<group>"; };
+		72CB8ADF1A043FA6000E30CF /* world_100_border_10_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_9.jpg; path = resources/graphics/map/withborder100/world_100_border_10_9.jpg; sourceTree = "<group>"; };
+		72CB8AE01A043FA6000E30CF /* world_100_border_10_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_10.jpg; path = resources/graphics/map/withborder100/world_100_border_10_10.jpg; sourceTree = "<group>"; };
+		72CB8AE11A043FA6000E30CF /* world_100_border_10_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_10_11.jpg; path = resources/graphics/map/withborder100/world_100_border_10_11.jpg; sourceTree = "<group>"; };
+		72CB8AE21A043FA6000E30CF /* world_100_border_11_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_0.jpg; path = resources/graphics/map/withborder100/world_100_border_11_0.jpg; sourceTree = "<group>"; };
+		72CB8AE31A043FA6000E30CF /* world_100_border_11_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_1.jpg; path = resources/graphics/map/withborder100/world_100_border_11_1.jpg; sourceTree = "<group>"; };
+		72CB8AE41A043FA6000E30CF /* world_100_border_11_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_2.jpg; path = resources/graphics/map/withborder100/world_100_border_11_2.jpg; sourceTree = "<group>"; };
+		72CB8AE51A043FA6000E30CF /* world_100_border_11_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_3.jpg; path = resources/graphics/map/withborder100/world_100_border_11_3.jpg; sourceTree = "<group>"; };
+		72CB8AE61A043FA6000E30CF /* world_100_border_11_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_4.jpg; path = resources/graphics/map/withborder100/world_100_border_11_4.jpg; sourceTree = "<group>"; };
+		72CB8AE71A043FA6000E30CF /* world_100_border_11_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_5.jpg; path = resources/graphics/map/withborder100/world_100_border_11_5.jpg; sourceTree = "<group>"; };
+		72CB8AE81A043FA6000E30CF /* world_100_border_11_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_6.jpg; path = resources/graphics/map/withborder100/world_100_border_11_6.jpg; sourceTree = "<group>"; };
+		72CB8AE91A043FA6000E30CF /* world_100_border_11_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_7.jpg; path = resources/graphics/map/withborder100/world_100_border_11_7.jpg; sourceTree = "<group>"; };
+		72CB8AEA1A043FA6000E30CF /* world_100_border_11_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_8.jpg; path = resources/graphics/map/withborder100/world_100_border_11_8.jpg; sourceTree = "<group>"; };
+		72CB8AEB1A043FA6000E30CF /* world_100_border_11_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_9.jpg; path = resources/graphics/map/withborder100/world_100_border_11_9.jpg; sourceTree = "<group>"; };
+		72CB8AEC1A043FA6000E30CF /* world_100_border_11_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_10.jpg; path = resources/graphics/map/withborder100/world_100_border_11_10.jpg; sourceTree = "<group>"; };
+		72CB8AED1A043FA6000E30CF /* world_100_border_11_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_11_11.jpg; path = resources/graphics/map/withborder100/world_100_border_11_11.jpg; sourceTree = "<group>"; };
+		72CB8AEE1A043FA6000E30CF /* world_100_border_12_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_0.jpg; path = resources/graphics/map/withborder100/world_100_border_12_0.jpg; sourceTree = "<group>"; };
+		72CB8AEF1A043FA6000E30CF /* world_100_border_12_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_1.jpg; path = resources/graphics/map/withborder100/world_100_border_12_1.jpg; sourceTree = "<group>"; };
+		72CB8AF01A043FA6000E30CF /* world_100_border_12_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_2.jpg; path = resources/graphics/map/withborder100/world_100_border_12_2.jpg; sourceTree = "<group>"; };
+		72CB8AF11A043FA6000E30CF /* world_100_border_12_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_3.jpg; path = resources/graphics/map/withborder100/world_100_border_12_3.jpg; sourceTree = "<group>"; };
+		72CB8AF21A043FA6000E30CF /* world_100_border_12_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_4.jpg; path = resources/graphics/map/withborder100/world_100_border_12_4.jpg; sourceTree = "<group>"; };
+		72CB8AF31A043FA6000E30CF /* world_100_border_12_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_5.jpg; path = resources/graphics/map/withborder100/world_100_border_12_5.jpg; sourceTree = "<group>"; };
+		72CB8AF41A043FA6000E30CF /* world_100_border_12_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_6.jpg; path = resources/graphics/map/withborder100/world_100_border_12_6.jpg; sourceTree = "<group>"; };
+		72CB8AF51A043FA6000E30CF /* world_100_border_12_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_7.jpg; path = resources/graphics/map/withborder100/world_100_border_12_7.jpg; sourceTree = "<group>"; };
+		72CB8AF61A043FA6000E30CF /* world_100_border_12_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_8.jpg; path = resources/graphics/map/withborder100/world_100_border_12_8.jpg; sourceTree = "<group>"; };
+		72CB8AF71A043FA6000E30CF /* world_100_border_12_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_9.jpg; path = resources/graphics/map/withborder100/world_100_border_12_9.jpg; sourceTree = "<group>"; };
+		72CB8AF81A043FA6000E30CF /* world_100_border_12_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_10.jpg; path = resources/graphics/map/withborder100/world_100_border_12_10.jpg; sourceTree = "<group>"; };
+		72CB8AF91A043FA6000E30CF /* world_100_border_12_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_12_11.jpg; path = resources/graphics/map/withborder100/world_100_border_12_11.jpg; sourceTree = "<group>"; };
+		72CB8AFA1A043FA6000E30CF /* world_100_border_13_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_0.jpg; path = resources/graphics/map/withborder100/world_100_border_13_0.jpg; sourceTree = "<group>"; };
+		72CB8AFB1A043FA6000E30CF /* world_100_border_13_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_1.jpg; path = resources/graphics/map/withborder100/world_100_border_13_1.jpg; sourceTree = "<group>"; };
+		72CB8AFC1A043FA6000E30CF /* world_100_border_13_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_2.jpg; path = resources/graphics/map/withborder100/world_100_border_13_2.jpg; sourceTree = "<group>"; };
+		72CB8AFD1A043FA6000E30CF /* world_100_border_13_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_3.jpg; path = resources/graphics/map/withborder100/world_100_border_13_3.jpg; sourceTree = "<group>"; };
+		72CB8AFE1A043FA6000E30CF /* world_100_border_13_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_4.jpg; path = resources/graphics/map/withborder100/world_100_border_13_4.jpg; sourceTree = "<group>"; };
+		72CB8AFF1A043FA6000E30CF /* world_100_border_13_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_5.jpg; path = resources/graphics/map/withborder100/world_100_border_13_5.jpg; sourceTree = "<group>"; };
+		72CB8B001A043FA6000E30CF /* world_100_border_13_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_6.jpg; path = resources/graphics/map/withborder100/world_100_border_13_6.jpg; sourceTree = "<group>"; };
+		72CB8B011A043FA6000E30CF /* world_100_border_13_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_7.jpg; path = resources/graphics/map/withborder100/world_100_border_13_7.jpg; sourceTree = "<group>"; };
+		72CB8B021A043FA6000E30CF /* world_100_border_13_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_8.jpg; path = resources/graphics/map/withborder100/world_100_border_13_8.jpg; sourceTree = "<group>"; };
+		72CB8B031A043FA6000E30CF /* world_100_border_13_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_9.jpg; path = resources/graphics/map/withborder100/world_100_border_13_9.jpg; sourceTree = "<group>"; };
+		72CB8B041A043FA6000E30CF /* world_100_border_13_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_10.jpg; path = resources/graphics/map/withborder100/world_100_border_13_10.jpg; sourceTree = "<group>"; };
+		72CB8B051A043FA6000E30CF /* world_100_border_13_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_13_11.jpg; path = resources/graphics/map/withborder100/world_100_border_13_11.jpg; sourceTree = "<group>"; };
+		72CB8B061A043FA6000E30CF /* world_100_border_14_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_0.jpg; path = resources/graphics/map/withborder100/world_100_border_14_0.jpg; sourceTree = "<group>"; };
+		72CB8B071A043FA6000E30CF /* world_100_border_14_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_1.jpg; path = resources/graphics/map/withborder100/world_100_border_14_1.jpg; sourceTree = "<group>"; };
+		72CB8B081A043FA6000E30CF /* world_100_border_14_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_2.jpg; path = resources/graphics/map/withborder100/world_100_border_14_2.jpg; sourceTree = "<group>"; };
+		72CB8B091A043FA6000E30CF /* world_100_border_14_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_3.jpg; path = resources/graphics/map/withborder100/world_100_border_14_3.jpg; sourceTree = "<group>"; };
+		72CB8B0A1A043FA6000E30CF /* world_100_border_14_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_4.jpg; path = resources/graphics/map/withborder100/world_100_border_14_4.jpg; sourceTree = "<group>"; };
+		72CB8B0B1A043FA6000E30CF /* world_100_border_14_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_5.jpg; path = resources/graphics/map/withborder100/world_100_border_14_5.jpg; sourceTree = "<group>"; };
+		72CB8B0C1A043FA6000E30CF /* world_100_border_14_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_6.jpg; path = resources/graphics/map/withborder100/world_100_border_14_6.jpg; sourceTree = "<group>"; };
+		72CB8B0D1A043FA6000E30CF /* world_100_border_14_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_7.jpg; path = resources/graphics/map/withborder100/world_100_border_14_7.jpg; sourceTree = "<group>"; };
+		72CB8B0E1A043FA6000E30CF /* world_100_border_14_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_8.jpg; path = resources/graphics/map/withborder100/world_100_border_14_8.jpg; sourceTree = "<group>"; };
+		72CB8B0F1A043FA6000E30CF /* world_100_border_14_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_9.jpg; path = resources/graphics/map/withborder100/world_100_border_14_9.jpg; sourceTree = "<group>"; };
+		72CB8B101A043FA6000E30CF /* world_100_border_14_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_10.jpg; path = resources/graphics/map/withborder100/world_100_border_14_10.jpg; sourceTree = "<group>"; };
+		72CB8B111A043FA6000E30CF /* world_100_border_14_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_14_11.jpg; path = resources/graphics/map/withborder100/world_100_border_14_11.jpg; sourceTree = "<group>"; };
+		72CB8B121A043FA6000E30CF /* world_100_border_15_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_0.jpg; path = resources/graphics/map/withborder100/world_100_border_15_0.jpg; sourceTree = "<group>"; };
+		72CB8B131A043FA6000E30CF /* world_100_border_15_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_1.jpg; path = resources/graphics/map/withborder100/world_100_border_15_1.jpg; sourceTree = "<group>"; };
+		72CB8B141A043FA6000E30CF /* world_100_border_15_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_2.jpg; path = resources/graphics/map/withborder100/world_100_border_15_2.jpg; sourceTree = "<group>"; };
+		72CB8B151A043FA6000E30CF /* world_100_border_15_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_3.jpg; path = resources/graphics/map/withborder100/world_100_border_15_3.jpg; sourceTree = "<group>"; };
+		72CB8B161A043FA6000E30CF /* world_100_border_15_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_4.jpg; path = resources/graphics/map/withborder100/world_100_border_15_4.jpg; sourceTree = "<group>"; };
+		72CB8B171A043FA6000E30CF /* world_100_border_15_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_5.jpg; path = resources/graphics/map/withborder100/world_100_border_15_5.jpg; sourceTree = "<group>"; };
+		72CB8B181A043FA6000E30CF /* world_100_border_15_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_6.jpg; path = resources/graphics/map/withborder100/world_100_border_15_6.jpg; sourceTree = "<group>"; };
+		72CB8B191A043FA6000E30CF /* world_100_border_15_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_7.jpg; path = resources/graphics/map/withborder100/world_100_border_15_7.jpg; sourceTree = "<group>"; };
+		72CB8B1A1A043FA6000E30CF /* world_100_border_15_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_8.jpg; path = resources/graphics/map/withborder100/world_100_border_15_8.jpg; sourceTree = "<group>"; };
+		72CB8B1B1A043FA6000E30CF /* world_100_border_15_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_9.jpg; path = resources/graphics/map/withborder100/world_100_border_15_9.jpg; sourceTree = "<group>"; };
+		72CB8B1C1A043FA6000E30CF /* world_100_border_15_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_10.jpg; path = resources/graphics/map/withborder100/world_100_border_15_10.jpg; sourceTree = "<group>"; };
+		72CB8B1D1A043FA6000E30CF /* world_100_border_15_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_15_11.jpg; path = resources/graphics/map/withborder100/world_100_border_15_11.jpg; sourceTree = "<group>"; };
+		72CB8C561A045097000E30CF /* world_50_border_0_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_0_0.jpg; path = resources/graphics/map/withborder50/world_50_border_0_0.jpg; sourceTree = "<group>"; };
+		72CB8C571A045097000E30CF /* world_50_border_0_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_0_1.jpg; path = resources/graphics/map/withborder50/world_50_border_0_1.jpg; sourceTree = "<group>"; };
+		72CB8C581A045097000E30CF /* world_50_border_0_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_0_2.jpg; path = resources/graphics/map/withborder50/world_50_border_0_2.jpg; sourceTree = "<group>"; };
+		72CB8C591A045097000E30CF /* world_50_border_0_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_0_3.jpg; path = resources/graphics/map/withborder50/world_50_border_0_3.jpg; sourceTree = "<group>"; };
+		72CB8C5A1A045097000E30CF /* world_50_border_0_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_0_4.jpg; path = resources/graphics/map/withborder50/world_50_border_0_4.jpg; sourceTree = "<group>"; };
+		72CB8C5B1A045097000E30CF /* world_50_border_0_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_0_5.jpg; path = resources/graphics/map/withborder50/world_50_border_0_5.jpg; sourceTree = "<group>"; };
+		72CB8C5C1A045097000E30CF /* world_50_border_1_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_1_0.jpg; path = resources/graphics/map/withborder50/world_50_border_1_0.jpg; sourceTree = "<group>"; };
+		72CB8C5D1A045097000E30CF /* world_50_border_1_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_1_1.jpg; path = resources/graphics/map/withborder50/world_50_border_1_1.jpg; sourceTree = "<group>"; };
+		72CB8C5E1A045097000E30CF /* world_50_border_1_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_1_2.jpg; path = resources/graphics/map/withborder50/world_50_border_1_2.jpg; sourceTree = "<group>"; };
+		72CB8C5F1A045097000E30CF /* world_50_border_1_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_1_3.jpg; path = resources/graphics/map/withborder50/world_50_border_1_3.jpg; sourceTree = "<group>"; };
+		72CB8C601A045097000E30CF /* world_50_border_1_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_1_4.jpg; path = resources/graphics/map/withborder50/world_50_border_1_4.jpg; sourceTree = "<group>"; };
+		72CB8C611A045097000E30CF /* world_50_border_1_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_1_5.jpg; path = resources/graphics/map/withborder50/world_50_border_1_5.jpg; sourceTree = "<group>"; };
+		72CB8C621A045097000E30CF /* world_50_border_2_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_2_0.jpg; path = resources/graphics/map/withborder50/world_50_border_2_0.jpg; sourceTree = "<group>"; };
+		72CB8C631A045097000E30CF /* world_50_border_2_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_2_1.jpg; path = resources/graphics/map/withborder50/world_50_border_2_1.jpg; sourceTree = "<group>"; };
+		72CB8C641A045097000E30CF /* world_50_border_2_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_2_2.jpg; path = resources/graphics/map/withborder50/world_50_border_2_2.jpg; sourceTree = "<group>"; };
+		72CB8C651A045097000E30CF /* world_50_border_2_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_2_3.jpg; path = resources/graphics/map/withborder50/world_50_border_2_3.jpg; sourceTree = "<group>"; };
+		72CB8C661A045097000E30CF /* world_50_border_2_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_2_4.jpg; path = resources/graphics/map/withborder50/world_50_border_2_4.jpg; sourceTree = "<group>"; };
+		72CB8C671A045097000E30CF /* world_50_border_2_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_2_5.jpg; path = resources/graphics/map/withborder50/world_50_border_2_5.jpg; sourceTree = "<group>"; };
+		72CB8C681A045097000E30CF /* world_50_border_3_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_3_0.jpg; path = resources/graphics/map/withborder50/world_50_border_3_0.jpg; sourceTree = "<group>"; };
+		72CB8C691A045097000E30CF /* world_50_border_3_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_3_1.jpg; path = resources/graphics/map/withborder50/world_50_border_3_1.jpg; sourceTree = "<group>"; };
+		72CB8C6A1A045097000E30CF /* world_50_border_3_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_3_2.jpg; path = resources/graphics/map/withborder50/world_50_border_3_2.jpg; sourceTree = "<group>"; };
+		72CB8C6B1A045097000E30CF /* world_50_border_3_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_3_3.jpg; path = resources/graphics/map/withborder50/world_50_border_3_3.jpg; sourceTree = "<group>"; };
+		72CB8C6C1A045097000E30CF /* world_50_border_3_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_3_4.jpg; path = resources/graphics/map/withborder50/world_50_border_3_4.jpg; sourceTree = "<group>"; };
+		72CB8C6D1A045097000E30CF /* world_50_border_3_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_3_5.jpg; path = resources/graphics/map/withborder50/world_50_border_3_5.jpg; sourceTree = "<group>"; };
+		72CB8C6E1A045097000E30CF /* world_50_border_4_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_4_0.jpg; path = resources/graphics/map/withborder50/world_50_border_4_0.jpg; sourceTree = "<group>"; };
+		72CB8C6F1A045097000E30CF /* world_50_border_4_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_4_1.jpg; path = resources/graphics/map/withborder50/world_50_border_4_1.jpg; sourceTree = "<group>"; };
+		72CB8C701A045097000E30CF /* world_50_border_4_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_4_2.jpg; path = resources/graphics/map/withborder50/world_50_border_4_2.jpg; sourceTree = "<group>"; };
+		72CB8C711A045097000E30CF /* world_50_border_4_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_4_3.jpg; path = resources/graphics/map/withborder50/world_50_border_4_3.jpg; sourceTree = "<group>"; };
+		72CB8C721A045097000E30CF /* world_50_border_4_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_4_4.jpg; path = resources/graphics/map/withborder50/world_50_border_4_4.jpg; sourceTree = "<group>"; };
+		72CB8C731A045097000E30CF /* world_50_border_4_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_4_5.jpg; path = resources/graphics/map/withborder50/world_50_border_4_5.jpg; sourceTree = "<group>"; };
+		72CB8C741A045097000E30CF /* world_50_border_5_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_5_0.jpg; path = resources/graphics/map/withborder50/world_50_border_5_0.jpg; sourceTree = "<group>"; };
+		72CB8C751A045097000E30CF /* world_50_border_5_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_5_1.jpg; path = resources/graphics/map/withborder50/world_50_border_5_1.jpg; sourceTree = "<group>"; };
+		72CB8C761A045097000E30CF /* world_50_border_5_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_5_2.jpg; path = resources/graphics/map/withborder50/world_50_border_5_2.jpg; sourceTree = "<group>"; };
+		72CB8C771A045097000E30CF /* world_50_border_5_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_5_3.jpg; path = resources/graphics/map/withborder50/world_50_border_5_3.jpg; sourceTree = "<group>"; };
+		72CB8C781A045097000E30CF /* world_50_border_5_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_5_4.jpg; path = resources/graphics/map/withborder50/world_50_border_5_4.jpg; sourceTree = "<group>"; };
+		72CB8C791A045097000E30CF /* world_50_border_5_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_5_5.jpg; path = resources/graphics/map/withborder50/world_50_border_5_5.jpg; sourceTree = "<group>"; };
+		72CB8C7A1A045097000E30CF /* world_50_border_6_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_6_0.jpg; path = resources/graphics/map/withborder50/world_50_border_6_0.jpg; sourceTree = "<group>"; };
+		72CB8C7B1A045097000E30CF /* world_50_border_6_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_6_1.jpg; path = resources/graphics/map/withborder50/world_50_border_6_1.jpg; sourceTree = "<group>"; };
+		72CB8C7C1A045097000E30CF /* world_50_border_6_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_6_2.jpg; path = resources/graphics/map/withborder50/world_50_border_6_2.jpg; sourceTree = "<group>"; };
+		72CB8C7D1A045097000E30CF /* world_50_border_6_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_6_3.jpg; path = resources/graphics/map/withborder50/world_50_border_6_3.jpg; sourceTree = "<group>"; };
+		72CB8C7E1A045097000E30CF /* world_50_border_6_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_6_4.jpg; path = resources/graphics/map/withborder50/world_50_border_6_4.jpg; sourceTree = "<group>"; };
+		72CB8C7F1A045097000E30CF /* world_50_border_6_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_6_5.jpg; path = resources/graphics/map/withborder50/world_50_border_6_5.jpg; sourceTree = "<group>"; };
+		72CB8C801A045097000E30CF /* world_50_border_7_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_7_0.jpg; path = resources/graphics/map/withborder50/world_50_border_7_0.jpg; sourceTree = "<group>"; };
+		72CB8C811A045097000E30CF /* world_50_border_7_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_7_1.jpg; path = resources/graphics/map/withborder50/world_50_border_7_1.jpg; sourceTree = "<group>"; };
+		72CB8C821A045097000E30CF /* world_50_border_7_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_7_2.jpg; path = resources/graphics/map/withborder50/world_50_border_7_2.jpg; sourceTree = "<group>"; };
+		72CB8C831A045097000E30CF /* world_50_border_7_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_7_3.jpg; path = resources/graphics/map/withborder50/world_50_border_7_3.jpg; sourceTree = "<group>"; };
+		72CB8C841A045097000E30CF /* world_50_border_7_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_7_4.jpg; path = resources/graphics/map/withborder50/world_50_border_7_4.jpg; sourceTree = "<group>"; };
+		72CB8C851A045097000E30CF /* world_50_border_7_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_50_border_7_5.jpg; path = resources/graphics/map/withborder50/world_50_border_7_5.jpg; sourceTree = "<group>"; };
+		72CB8CB61A0450B1000E30CF /* world_25_border_0_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_0_0.jpg; path = resources/graphics/map/withborder25/world_25_border_0_0.jpg; sourceTree = "<group>"; };
+		72CB8CB71A0450B1000E30CF /* world_25_border_0_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_0_1.jpg; path = resources/graphics/map/withborder25/world_25_border_0_1.jpg; sourceTree = "<group>"; };
+		72CB8CB81A0450B1000E30CF /* world_25_border_0_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_0_2.jpg; path = resources/graphics/map/withborder25/world_25_border_0_2.jpg; sourceTree = "<group>"; };
+		72CB8CB91A0450B1000E30CF /* world_25_border_1_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_1_0.jpg; path = resources/graphics/map/withborder25/world_25_border_1_0.jpg; sourceTree = "<group>"; };
+		72CB8CBA1A0450B1000E30CF /* world_25_border_1_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_1_1.jpg; path = resources/graphics/map/withborder25/world_25_border_1_1.jpg; sourceTree = "<group>"; };
+		72CB8CBB1A0450B1000E30CF /* world_25_border_1_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_1_2.jpg; path = resources/graphics/map/withborder25/world_25_border_1_2.jpg; sourceTree = "<group>"; };
+		72CB8CBC1A0450B1000E30CF /* world_25_border_2_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_2_0.jpg; path = resources/graphics/map/withborder25/world_25_border_2_0.jpg; sourceTree = "<group>"; };
+		72CB8CBD1A0450B1000E30CF /* world_25_border_2_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_2_1.jpg; path = resources/graphics/map/withborder25/world_25_border_2_1.jpg; sourceTree = "<group>"; };
+		72CB8CBE1A0450B1000E30CF /* world_25_border_2_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_2_2.jpg; path = resources/graphics/map/withborder25/world_25_border_2_2.jpg; sourceTree = "<group>"; };
+		72CB8CBF1A0450B1000E30CF /* world_25_border_3_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_3_0.jpg; path = resources/graphics/map/withborder25/world_25_border_3_0.jpg; sourceTree = "<group>"; };
+		72CB8CC01A0450B1000E30CF /* world_25_border_3_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_3_1.jpg; path = resources/graphics/map/withborder25/world_25_border_3_1.jpg; sourceTree = "<group>"; };
+		72CB8CC11A0450B1000E30CF /* world_25_border_3_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_3_2.jpg; path = resources/graphics/map/withborder25/world_25_border_3_2.jpg; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1807,6 +2311,279 @@
 			path = ../tiles/tiles100;
 			sourceTree = "<group>";
 		};
+		72CB8A5B1A043F49000E30CF /* tilesborder25 */ = {
+			isa = PBXGroup;
+			children = (
+				72CB8CB61A0450B1000E30CF /* world_25_border_0_0.jpg */,
+				72CB8CB71A0450B1000E30CF /* world_25_border_0_1.jpg */,
+				72CB8CB81A0450B1000E30CF /* world_25_border_0_2.jpg */,
+				72CB8CB91A0450B1000E30CF /* world_25_border_1_0.jpg */,
+				72CB8CBA1A0450B1000E30CF /* world_25_border_1_1.jpg */,
+				72CB8CBB1A0450B1000E30CF /* world_25_border_1_2.jpg */,
+				72CB8CBC1A0450B1000E30CF /* world_25_border_2_0.jpg */,
+				72CB8CBD1A0450B1000E30CF /* world_25_border_2_1.jpg */,
+				72CB8CBE1A0450B1000E30CF /* world_25_border_2_2.jpg */,
+				72CB8CBF1A0450B1000E30CF /* world_25_border_3_0.jpg */,
+				72CB8CC01A0450B1000E30CF /* world_25_border_3_1.jpg */,
+				72CB8CC11A0450B1000E30CF /* world_25_border_3_2.jpg */,
+			);
+			name = tilesborder25;
+			sourceTree = "<group>";
+		};
+		72CB8A5C1A043F67000E30CF /* tilesborder50 */ = {
+			isa = PBXGroup;
+			children = (
+				72CB8C561A045097000E30CF /* world_50_border_0_0.jpg */,
+				72CB8C571A045097000E30CF /* world_50_border_0_1.jpg */,
+				72CB8C581A045097000E30CF /* world_50_border_0_2.jpg */,
+				72CB8C591A045097000E30CF /* world_50_border_0_3.jpg */,
+				72CB8C5A1A045097000E30CF /* world_50_border_0_4.jpg */,
+				72CB8C5B1A045097000E30CF /* world_50_border_0_5.jpg */,
+				72CB8C5C1A045097000E30CF /* world_50_border_1_0.jpg */,
+				72CB8C5D1A045097000E30CF /* world_50_border_1_1.jpg */,
+				72CB8C5E1A045097000E30CF /* world_50_border_1_2.jpg */,
+				72CB8C5F1A045097000E30CF /* world_50_border_1_3.jpg */,
+				72CB8C601A045097000E30CF /* world_50_border_1_4.jpg */,
+				72CB8C611A045097000E30CF /* world_50_border_1_5.jpg */,
+				72CB8C621A045097000E30CF /* world_50_border_2_0.jpg */,
+				72CB8C631A045097000E30CF /* world_50_border_2_1.jpg */,
+				72CB8C641A045097000E30CF /* world_50_border_2_2.jpg */,
+				72CB8C651A045097000E30CF /* world_50_border_2_3.jpg */,
+				72CB8C661A045097000E30CF /* world_50_border_2_4.jpg */,
+				72CB8C671A045097000E30CF /* world_50_border_2_5.jpg */,
+				72CB8C681A045097000E30CF /* world_50_border_3_0.jpg */,
+				72CB8C691A045097000E30CF /* world_50_border_3_1.jpg */,
+				72CB8C6A1A045097000E30CF /* world_50_border_3_2.jpg */,
+				72CB8C6B1A045097000E30CF /* world_50_border_3_3.jpg */,
+				72CB8C6C1A045097000E30CF /* world_50_border_3_4.jpg */,
+				72CB8C6D1A045097000E30CF /* world_50_border_3_5.jpg */,
+				72CB8C6E1A045097000E30CF /* world_50_border_4_0.jpg */,
+				72CB8C6F1A045097000E30CF /* world_50_border_4_1.jpg */,
+				72CB8C701A045097000E30CF /* world_50_border_4_2.jpg */,
+				72CB8C711A045097000E30CF /* world_50_border_4_3.jpg */,
+				72CB8C721A045097000E30CF /* world_50_border_4_4.jpg */,
+				72CB8C731A045097000E30CF /* world_50_border_4_5.jpg */,
+				72CB8C741A045097000E30CF /* world_50_border_5_0.jpg */,
+				72CB8C751A045097000E30CF /* world_50_border_5_1.jpg */,
+				72CB8C761A045097000E30CF /* world_50_border_5_2.jpg */,
+				72CB8C771A045097000E30CF /* world_50_border_5_3.jpg */,
+				72CB8C781A045097000E30CF /* world_50_border_5_4.jpg */,
+				72CB8C791A045097000E30CF /* world_50_border_5_5.jpg */,
+				72CB8C7A1A045097000E30CF /* world_50_border_6_0.jpg */,
+				72CB8C7B1A045097000E30CF /* world_50_border_6_1.jpg */,
+				72CB8C7C1A045097000E30CF /* world_50_border_6_2.jpg */,
+				72CB8C7D1A045097000E30CF /* world_50_border_6_3.jpg */,
+				72CB8C7E1A045097000E30CF /* world_50_border_6_4.jpg */,
+				72CB8C7F1A045097000E30CF /* world_50_border_6_5.jpg */,
+				72CB8C801A045097000E30CF /* world_50_border_7_0.jpg */,
+				72CB8C811A045097000E30CF /* world_50_border_7_1.jpg */,
+				72CB8C821A045097000E30CF /* world_50_border_7_2.jpg */,
+				72CB8C831A045097000E30CF /* world_50_border_7_3.jpg */,
+				72CB8C841A045097000E30CF /* world_50_border_7_4.jpg */,
+				72CB8C851A045097000E30CF /* world_50_border_7_5.jpg */,
+			);
+			name = tilesborder50;
+			sourceTree = "<group>";
+		};
+		72CB8A5D1A043F74000E30CF /* tilesborder100 */ = {
+			isa = PBXGroup;
+			children = (
+				72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */,
+				72CB8A5F1A043FA5000E30CF /* world_100_border_0_1.jpg */,
+				72CB8A601A043FA5000E30CF /* world_100_border_0_2.jpg */,
+				72CB8A611A043FA5000E30CF /* world_100_border_0_3.jpg */,
+				72CB8A621A043FA5000E30CF /* world_100_border_0_4.jpg */,
+				72CB8A631A043FA5000E30CF /* world_100_border_0_5.jpg */,
+				72CB8A641A043FA5000E30CF /* world_100_border_0_6.jpg */,
+				72CB8A651A043FA5000E30CF /* world_100_border_0_7.jpg */,
+				72CB8A661A043FA5000E30CF /* world_100_border_0_8.jpg */,
+				72CB8A671A043FA5000E30CF /* world_100_border_0_9.jpg */,
+				72CB8A681A043FA5000E30CF /* world_100_border_0_10.jpg */,
+				72CB8A691A043FA5000E30CF /* world_100_border_0_11.jpg */,
+				72CB8A6A1A043FA5000E30CF /* world_100_border_1_0.jpg */,
+				72CB8A6B1A043FA5000E30CF /* world_100_border_1_1.jpg */,
+				72CB8A6C1A043FA5000E30CF /* world_100_border_1_2.jpg */,
+				72CB8A6D1A043FA5000E30CF /* world_100_border_1_3.jpg */,
+				72CB8A6E1A043FA5000E30CF /* world_100_border_1_4.jpg */,
+				72CB8A6F1A043FA5000E30CF /* world_100_border_1_5.jpg */,
+				72CB8A701A043FA5000E30CF /* world_100_border_1_6.jpg */,
+				72CB8A711A043FA5000E30CF /* world_100_border_1_7.jpg */,
+				72CB8A721A043FA5000E30CF /* world_100_border_1_8.jpg */,
+				72CB8A731A043FA5000E30CF /* world_100_border_1_9.jpg */,
+				72CB8A741A043FA5000E30CF /* world_100_border_1_10.jpg */,
+				72CB8A751A043FA5000E30CF /* world_100_border_1_11.jpg */,
+				72CB8A761A043FA5000E30CF /* world_100_border_2_0.jpg */,
+				72CB8A771A043FA5000E30CF /* world_100_border_2_1.jpg */,
+				72CB8A781A043FA5000E30CF /* world_100_border_2_2.jpg */,
+				72CB8A791A043FA5000E30CF /* world_100_border_2_3.jpg */,
+				72CB8A7A1A043FA5000E30CF /* world_100_border_2_4.jpg */,
+				72CB8A7B1A043FA5000E30CF /* world_100_border_2_5.jpg */,
+				72CB8A7C1A043FA5000E30CF /* world_100_border_2_6.jpg */,
+				72CB8A7D1A043FA5000E30CF /* world_100_border_2_7.jpg */,
+				72CB8A7E1A043FA5000E30CF /* world_100_border_2_8.jpg */,
+				72CB8A7F1A043FA5000E30CF /* world_100_border_2_9.jpg */,
+				72CB8A801A043FA5000E30CF /* world_100_border_2_10.jpg */,
+				72CB8A811A043FA5000E30CF /* world_100_border_2_11.jpg */,
+				72CB8A821A043FA5000E30CF /* world_100_border_3_0.jpg */,
+				72CB8A831A043FA5000E30CF /* world_100_border_3_1.jpg */,
+				72CB8A841A043FA5000E30CF /* world_100_border_3_2.jpg */,
+				72CB8A851A043FA5000E30CF /* world_100_border_3_3.jpg */,
+				72CB8A861A043FA5000E30CF /* world_100_border_3_4.jpg */,
+				72CB8A871A043FA5000E30CF /* world_100_border_3_5.jpg */,
+				72CB8A881A043FA5000E30CF /* world_100_border_3_6.jpg */,
+				72CB8A891A043FA5000E30CF /* world_100_border_3_7.jpg */,
+				72CB8A8A1A043FA5000E30CF /* world_100_border_3_8.jpg */,
+				72CB8A8B1A043FA5000E30CF /* world_100_border_3_9.jpg */,
+				72CB8A8C1A043FA5000E30CF /* world_100_border_3_10.jpg */,
+				72CB8A8D1A043FA5000E30CF /* world_100_border_3_11.jpg */,
+				72CB8A8E1A043FA5000E30CF /* world_100_border_4_0.jpg */,
+				72CB8A8F1A043FA5000E30CF /* world_100_border_4_1.jpg */,
+				72CB8A901A043FA5000E30CF /* world_100_border_4_2.jpg */,
+				72CB8A911A043FA5000E30CF /* world_100_border_4_3.jpg */,
+				72CB8A921A043FA5000E30CF /* world_100_border_4_4.jpg */,
+				72CB8A931A043FA5000E30CF /* world_100_border_4_5.jpg */,
+				72CB8A941A043FA5000E30CF /* world_100_border_4_6.jpg */,
+				72CB8A951A043FA5000E30CF /* world_100_border_4_7.jpg */,
+				72CB8A961A043FA5000E30CF /* world_100_border_4_8.jpg */,
+				72CB8A971A043FA5000E30CF /* world_100_border_4_9.jpg */,
+				72CB8A981A043FA5000E30CF /* world_100_border_4_10.jpg */,
+				72CB8A991A043FA5000E30CF /* world_100_border_4_11.jpg */,
+				72CB8A9A1A043FA5000E30CF /* world_100_border_5_0.jpg */,
+				72CB8A9B1A043FA5000E30CF /* world_100_border_5_1.jpg */,
+				72CB8A9C1A043FA5000E30CF /* world_100_border_5_2.jpg */,
+				72CB8A9D1A043FA5000E30CF /* world_100_border_5_3.jpg */,
+				72CB8A9E1A043FA5000E30CF /* world_100_border_5_4.jpg */,
+				72CB8A9F1A043FA5000E30CF /* world_100_border_5_5.jpg */,
+				72CB8AA01A043FA5000E30CF /* world_100_border_5_6.jpg */,
+				72CB8AA11A043FA5000E30CF /* world_100_border_5_7.jpg */,
+				72CB8AA21A043FA5000E30CF /* world_100_border_5_8.jpg */,
+				72CB8AA31A043FA5000E30CF /* world_100_border_5_9.jpg */,
+				72CB8AA41A043FA5000E30CF /* world_100_border_5_10.jpg */,
+				72CB8AA51A043FA5000E30CF /* world_100_border_5_11.jpg */,
+				72CB8AA61A043FA5000E30CF /* world_100_border_6_0.jpg */,
+				72CB8AA71A043FA5000E30CF /* world_100_border_6_1.jpg */,
+				72CB8AA81A043FA5000E30CF /* world_100_border_6_2.jpg */,
+				72CB8AA91A043FA5000E30CF /* world_100_border_6_3.jpg */,
+				72CB8AAA1A043FA5000E30CF /* world_100_border_6_4.jpg */,
+				72CB8AAB1A043FA5000E30CF /* world_100_border_6_5.jpg */,
+				72CB8AAC1A043FA5000E30CF /* world_100_border_6_6.jpg */,
+				72CB8AAD1A043FA5000E30CF /* world_100_border_6_7.jpg */,
+				72CB8AAE1A043FA5000E30CF /* world_100_border_6_8.jpg */,
+				72CB8AAF1A043FA5000E30CF /* world_100_border_6_9.jpg */,
+				72CB8AB01A043FA5000E30CF /* world_100_border_6_10.jpg */,
+				72CB8AB11A043FA5000E30CF /* world_100_border_6_11.jpg */,
+				72CB8AB21A043FA5000E30CF /* world_100_border_7_0.jpg */,
+				72CB8AB31A043FA5000E30CF /* world_100_border_7_1.jpg */,
+				72CB8AB41A043FA5000E30CF /* world_100_border_7_2.jpg */,
+				72CB8AB51A043FA5000E30CF /* world_100_border_7_3.jpg */,
+				72CB8AB61A043FA5000E30CF /* world_100_border_7_4.jpg */,
+				72CB8AB71A043FA5000E30CF /* world_100_border_7_5.jpg */,
+				72CB8AB81A043FA5000E30CF /* world_100_border_7_6.jpg */,
+				72CB8AB91A043FA5000E30CF /* world_100_border_7_7.jpg */,
+				72CB8ABA1A043FA5000E30CF /* world_100_border_7_8.jpg */,
+				72CB8ABB1A043FA5000E30CF /* world_100_border_7_9.jpg */,
+				72CB8ABC1A043FA5000E30CF /* world_100_border_7_10.jpg */,
+				72CB8ABD1A043FA5000E30CF /* world_100_border_7_11.jpg */,
+				72CB8ABE1A043FA5000E30CF /* world_100_border_8_0.jpg */,
+				72CB8ABF1A043FA5000E30CF /* world_100_border_8_1.jpg */,
+				72CB8AC01A043FA5000E30CF /* world_100_border_8_2.jpg */,
+				72CB8AC11A043FA5000E30CF /* world_100_border_8_3.jpg */,
+				72CB8AC21A043FA5000E30CF /* world_100_border_8_4.jpg */,
+				72CB8AC31A043FA5000E30CF /* world_100_border_8_5.jpg */,
+				72CB8AC41A043FA5000E30CF /* world_100_border_8_6.jpg */,
+				72CB8AC51A043FA5000E30CF /* world_100_border_8_7.jpg */,
+				72CB8AC61A043FA5000E30CF /* world_100_border_8_8.jpg */,
+				72CB8AC71A043FA5000E30CF /* world_100_border_8_9.jpg */,
+				72CB8AC81A043FA5000E30CF /* world_100_border_8_10.jpg */,
+				72CB8AC91A043FA5000E30CF /* world_100_border_8_11.jpg */,
+				72CB8ACA1A043FA5000E30CF /* world_100_border_9_0.jpg */,
+				72CB8ACB1A043FA5000E30CF /* world_100_border_9_1.jpg */,
+				72CB8ACC1A043FA6000E30CF /* world_100_border_9_2.jpg */,
+				72CB8ACD1A043FA6000E30CF /* world_100_border_9_3.jpg */,
+				72CB8ACE1A043FA6000E30CF /* world_100_border_9_4.jpg */,
+				72CB8ACF1A043FA6000E30CF /* world_100_border_9_5.jpg */,
+				72CB8AD01A043FA6000E30CF /* world_100_border_9_6.jpg */,
+				72CB8AD11A043FA6000E30CF /* world_100_border_9_7.jpg */,
+				72CB8AD21A043FA6000E30CF /* world_100_border_9_8.jpg */,
+				72CB8AD31A043FA6000E30CF /* world_100_border_9_9.jpg */,
+				72CB8AD41A043FA6000E30CF /* world_100_border_9_10.jpg */,
+				72CB8AD51A043FA6000E30CF /* world_100_border_9_11.jpg */,
+				72CB8AD61A043FA6000E30CF /* world_100_border_10_0.jpg */,
+				72CB8AD71A043FA6000E30CF /* world_100_border_10_1.jpg */,
+				72CB8AD81A043FA6000E30CF /* world_100_border_10_2.jpg */,
+				72CB8AD91A043FA6000E30CF /* world_100_border_10_3.jpg */,
+				72CB8ADA1A043FA6000E30CF /* world_100_border_10_4.jpg */,
+				72CB8ADB1A043FA6000E30CF /* world_100_border_10_5.jpg */,
+				72CB8ADC1A043FA6000E30CF /* world_100_border_10_6.jpg */,
+				72CB8ADD1A043FA6000E30CF /* world_100_border_10_7.jpg */,
+				72CB8ADE1A043FA6000E30CF /* world_100_border_10_8.jpg */,
+				72CB8ADF1A043FA6000E30CF /* world_100_border_10_9.jpg */,
+				72CB8AE01A043FA6000E30CF /* world_100_border_10_10.jpg */,
+				72CB8AE11A043FA6000E30CF /* world_100_border_10_11.jpg */,
+				72CB8AE21A043FA6000E30CF /* world_100_border_11_0.jpg */,
+				72CB8AE31A043FA6000E30CF /* world_100_border_11_1.jpg */,
+				72CB8AE41A043FA6000E30CF /* world_100_border_11_2.jpg */,
+				72CB8AE51A043FA6000E30CF /* world_100_border_11_3.jpg */,
+				72CB8AE61A043FA6000E30CF /* world_100_border_11_4.jpg */,
+				72CB8AE71A043FA6000E30CF /* world_100_border_11_5.jpg */,
+				72CB8AE81A043FA6000E30CF /* world_100_border_11_6.jpg */,
+				72CB8AE91A043FA6000E30CF /* world_100_border_11_7.jpg */,
+				72CB8AEA1A043FA6000E30CF /* world_100_border_11_8.jpg */,
+				72CB8AEB1A043FA6000E30CF /* world_100_border_11_9.jpg */,
+				72CB8AEC1A043FA6000E30CF /* world_100_border_11_10.jpg */,
+				72CB8AED1A043FA6000E30CF /* world_100_border_11_11.jpg */,
+				72CB8AEE1A043FA6000E30CF /* world_100_border_12_0.jpg */,
+				72CB8AEF1A043FA6000E30CF /* world_100_border_12_1.jpg */,
+				72CB8AF01A043FA6000E30CF /* world_100_border_12_2.jpg */,
+				72CB8AF11A043FA6000E30CF /* world_100_border_12_3.jpg */,
+				72CB8AF21A043FA6000E30CF /* world_100_border_12_4.jpg */,
+				72CB8AF31A043FA6000E30CF /* world_100_border_12_5.jpg */,
+				72CB8AF41A043FA6000E30CF /* world_100_border_12_6.jpg */,
+				72CB8AF51A043FA6000E30CF /* world_100_border_12_7.jpg */,
+				72CB8AF61A043FA6000E30CF /* world_100_border_12_8.jpg */,
+				72CB8AF71A043FA6000E30CF /* world_100_border_12_9.jpg */,
+				72CB8AF81A043FA6000E30CF /* world_100_border_12_10.jpg */,
+				72CB8AF91A043FA6000E30CF /* world_100_border_12_11.jpg */,
+				72CB8AFA1A043FA6000E30CF /* world_100_border_13_0.jpg */,
+				72CB8AFB1A043FA6000E30CF /* world_100_border_13_1.jpg */,
+				72CB8AFC1A043FA6000E30CF /* world_100_border_13_2.jpg */,
+				72CB8AFD1A043FA6000E30CF /* world_100_border_13_3.jpg */,
+				72CB8AFE1A043FA6000E30CF /* world_100_border_13_4.jpg */,
+				72CB8AFF1A043FA6000E30CF /* world_100_border_13_5.jpg */,
+				72CB8B001A043FA6000E30CF /* world_100_border_13_6.jpg */,
+				72CB8B011A043FA6000E30CF /* world_100_border_13_7.jpg */,
+				72CB8B021A043FA6000E30CF /* world_100_border_13_8.jpg */,
+				72CB8B031A043FA6000E30CF /* world_100_border_13_9.jpg */,
+				72CB8B041A043FA6000E30CF /* world_100_border_13_10.jpg */,
+				72CB8B051A043FA6000E30CF /* world_100_border_13_11.jpg */,
+				72CB8B061A043FA6000E30CF /* world_100_border_14_0.jpg */,
+				72CB8B071A043FA6000E30CF /* world_100_border_14_1.jpg */,
+				72CB8B081A043FA6000E30CF /* world_100_border_14_2.jpg */,
+				72CB8B091A043FA6000E30CF /* world_100_border_14_3.jpg */,
+				72CB8B0A1A043FA6000E30CF /* world_100_border_14_4.jpg */,
+				72CB8B0B1A043FA6000E30CF /* world_100_border_14_5.jpg */,
+				72CB8B0C1A043FA6000E30CF /* world_100_border_14_6.jpg */,
+				72CB8B0D1A043FA6000E30CF /* world_100_border_14_7.jpg */,
+				72CB8B0E1A043FA6000E30CF /* world_100_border_14_8.jpg */,
+				72CB8B0F1A043FA6000E30CF /* world_100_border_14_9.jpg */,
+				72CB8B101A043FA6000E30CF /* world_100_border_14_10.jpg */,
+				72CB8B111A043FA6000E30CF /* world_100_border_14_11.jpg */,
+				72CB8B121A043FA6000E30CF /* world_100_border_15_0.jpg */,
+				72CB8B131A043FA6000E30CF /* world_100_border_15_1.jpg */,
+				72CB8B141A043FA6000E30CF /* world_100_border_15_2.jpg */,
+				72CB8B151A043FA6000E30CF /* world_100_border_15_3.jpg */,
+				72CB8B161A043FA6000E30CF /* world_100_border_15_4.jpg */,
+				72CB8B171A043FA6000E30CF /* world_100_border_15_5.jpg */,
+				72CB8B181A043FA6000E30CF /* world_100_border_15_6.jpg */,
+				72CB8B191A043FA6000E30CF /* world_100_border_15_7.jpg */,
+				72CB8B1A1A043FA6000E30CF /* world_100_border_15_8.jpg */,
+				72CB8B1B1A043FA6000E30CF /* world_100_border_15_9.jpg */,
+				72CB8B1C1A043FA6000E30CF /* world_100_border_15_10.jpg */,
+				72CB8B1D1A043FA6000E30CF /* world_100_border_15_11.jpg */,
+			);
+			name = tilesborder100;
+			sourceTree = "<group>";
+		};
 		BE6499D1156982BD00692E08 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1863,6 +2640,9 @@
 		EE9898F51330125000CBA780 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				72CB8A5D1A043F74000E30CF /* tilesborder100 */,
+				72CB8A5C1A043F67000E30CF /* tilesborder50 */,
+				72CB8A5B1A043F49000E30CF /* tilesborder25 */,
 				72CB8A591A0167E7000E30CF /* Default-568h@2x.png */,
 				7204A34F19D9799100B8AE76 /* icon.jpg */,
 				7204A35019D9799100B8AE76 /* trophy.jpg */,
@@ -2394,20 +3174,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				7204A16819D976B300B8AE76 /* world_50_1_5.jpg in Resources */,
+				72CB8CC41A0450B1000E30CF /* world_25_border_0_2.jpg in Resources */,
 				7204A2D119D976D600B8AE76 /* world_100_11_0.jpg in Resources */,
+				72CB8B1E1A043FA6000E30CF /* world_100_border_0_0.jpg in Resources */,
+				72CB8C9B1A045097000E30CF /* world_50_border_3_3.jpg in Resources */,
+				72CB8CB51A045097000E30CF /* world_50_border_7_5.jpg in Resources */,
 				727ED14219F95841000707AA /* BosniaAndHerzegovinaFlag.png in Resources */,
 				7204A28619D976D600B8AE76 /* world_100_4_9.jpg in Resources */,
+				72CB8B8B1A043FA6000E30CF /* world_100_border_9_1.jpg in Resources */,
 				7204A48119E3487200B8AE76 /* SouthSudanFlag.png in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				7204A26B19D976D600B8AE76 /* world_100_2_6.jpg in Resources */,
+				72CB8B7F1A043FA6000E30CF /* world_100_border_8_1.jpg in Resources */,
+				72CB8B681A043FA6000E30CF /* world_100_border_6_2.jpg in Resources */,
 				7204A24D19D976D600B8AE76 /* world_100_0_0.jpg in Resources */,
 				7204A3BC19DD7EDD00B8AE76 /* EastTimorFlag.png in Resources */,
 				7204A2D819D976D600B8AE76 /* world_100_11_7.jpg in Resources */,
 				7204A41C19E00B1F00B8AE76 /* statesMiddleEast.txt in Resources */,
 				7204A39519D979E700B8AE76 /* islands.txt in Resources */,
 				727ED15B19F95841000707AA /* MoldovaFlag.png in Resources */,
+				72CB8B1F1A043FA6000E30CF /* world_100_border_0_1.jpg in Resources */,
 				729FC42A19ECA16B00B082E5 /* KyrgyzstanFlag.png in Resources */,
+				72CB8CA51A045097000E30CF /* world_50_border_5_1.jpg in Resources */,
 				7204A25F19D976D600B8AE76 /* world_100_1_6.jpg in Resources */,
+				72CB8CB41A045097000E30CF /* world_50_border_7_4.jpg in Resources */,
+				72CB8BD31A043FA6000E30CF /* world_100_border_15_1.jpg in Resources */,
 				7204A10F19D9765A00B8AE76 /* testExtraQuestions.txt in Resources */,
 				7204A28919D976D600B8AE76 /* world_100_5_0.jpg in Resources */,
 				7204A37C19D9799200B8AE76 /* loop.png in Resources */,
@@ -2420,146 +3211,228 @@
 				7204A2C819D976D600B8AE76 /* world_100_10_3.jpg in Resources */,
 				7204A17719D976B300B8AE76 /* world_50_4_2.jpg in Resources */,
 				2899E5220DE3E06400AC0155 /* MQNorwayViewController.xib in Resources */,
+				72CB8B451A043FA6000E30CF /* world_100_border_3_3.jpg in Resources */,
 				7204A2DF19D976D600B8AE76 /* world_100_12_2.jpg in Resources */,
 				7204A45A19E3487200B8AE76 /* BurkinaFasoFlag.png in Resources */,
 				7204A2E419D976D600B8AE76 /* world_100_12_7.jpg in Resources */,
+				72CB8B611A043FA6000E30CF /* world_100_border_5_7.jpg in Resources */,
+				72CB8B281A043FA6000E30CF /* world_100_border_0_10.jpg in Resources */,
 				727ED15319F95841000707AA /* ItalyFlag.png in Resources */,
 				7204A39919D979E700B8AE76 /* QuestionDocumentation.txt in Resources */,
 				7204A2A519D976D600B8AE76 /* world_100_7_4.jpg in Resources */,
 				7204A2A119D976D600B8AE76 /* world_100_7_0.jpg in Resources */,
 				7204A18919D976B300B8AE76 /* world_50_7_2.jpg in Resources */,
+				72CB8C8E1A045097000E30CF /* world_50_border_1_2.jpg in Resources */,
 				7204A2D019D976D600B8AE76 /* world_100_10_11.jpg in Resources */,
 				7204A2D319D976D600B8AE76 /* world_100_11_2.jpg in Resources */,
 				7204A40B19DDFE4500B8AE76 /* TrinidadAndTobagoFlag.png in Resources */,
 				7204A45719E3487200B8AE76 /* AngolaFlag.png in Resources */,
 				727ED15019F95841000707AA /* IcelandFlag.png in Resources */,
 				7204A34919D9798300B8AE76 /* DragToMoveInstr.png in Resources */,
+				72CB8BDD1A043FA6000E30CF /* world_100_border_15_11.jpg in Resources */,
+				72CB8BD21A043FA6000E30CF /* world_100_border_15_0.jpg in Resources */,
 				727ED15619F95841000707AA /* LiechtensteinFlag.png in Resources */,
 				7204A40119DDFE4500B8AE76 /* NicaraguaFlag.png in Resources */,
+				72CB8B9D1A043FA6000E30CF /* world_100_border_10_7.jpg in Resources */,
+				72CB8BD91A043FA6000E30CF /* world_100_border_15_7.jpg in Resources */,
 				7204A2B419D976D600B8AE76 /* world_100_8_7.jpg in Resources */,
+				72CB8B651A043FA6000E30CF /* world_100_border_5_11.jpg in Resources */,
 				7204A28F19D976D600B8AE76 /* world_100_5_6.jpg in Resources */,
+				72CB8B3E1A043FA6000E30CF /* world_100_border_2_8.jpg in Resources */,
 				7204A25C19D976D600B8AE76 /* world_100_1_3.jpg in Resources */,
+				72CB8C951A045097000E30CF /* world_50_border_2_3.jpg in Resources */,
+				72CB8B6D1A043FA6000E30CF /* world_100_border_6_7.jpg in Resources */,
+				72CB8BB91A043FA6000E30CF /* world_100_border_12_11.jpg in Resources */,
 				7204A4A719E4358700B8AE76 /* DominicanRepublicFlag.png in Resources */,
 				7204A3A819D979FD00B8AE76 /* LanguageData.plist in Resources */,
 				7204A37B19D9799200B8AE76 /* line.png in Resources */,
 				729FC44019ECA16B00B082E5 /* UzbekistanFlag.png in Resources */,
 				7204A2E919D976D600B8AE76 /* world_100_13_0.jpg in Resources */,
+				72CB8CB01A045097000E30CF /* world_50_border_7_0.jpg in Resources */,
+				72CB8BC31A043FA6000E30CF /* world_100_border_13_9.jpg in Resources */,
 				7204A2F219D976D600B8AE76 /* world_100_13_9.jpg in Resources */,
 				7204A3A719D979FD00B8AE76 /* HighscoreMedium.plist in Resources */,
 				7204A30819D976D600B8AE76 /* world_100_15_7.jpg in Resources */,
 				7204A46119E3487200B8AE76 /* DemocraticRepublicOfTheCongoFlag.png in Resources */,
 				7204A30619D976D600B8AE76 /* world_100_15_5.jpg in Resources */,
+				72CB8BD01A043FA6000E30CF /* world_100_border_14_10.jpg in Resources */,
 				727ED15F19F95841000707AA /* NorwayFlag.png in Resources */,
 				7204A38019D9799200B8AE76 /* RundensResultat.png in Resources */,
+				72CB8CC51A0450B1000E30CF /* world_25_border_1_0.jpg in Resources */,
+				72CB8BC81A043FA6000E30CF /* world_100_border_14_2.jpg in Resources */,
 				7204A18619D976B300B8AE76 /* world_50_6_5.jpg in Resources */,
+				72CB8B9C1A043FA6000E30CF /* world_100_border_10_6.jpg in Resources */,
+				72CB8B951A043FA6000E30CF /* world_100_border_9_11.jpg in Resources */,
+				72CB8B5B1A043FA6000E30CF /* world_100_border_5_1.jpg in Resources */,
 				7204A3A919D979FD00B8AE76 /* LocalData.plist in Resources */,
 				7204A2D919D976D600B8AE76 /* world_100_11_8.jpg in Resources */,
 				7204A49D19E40CF600B8AE76 /* IsraelFlag.png in Resources */,
+				72CB8B971A043FA6000E30CF /* world_100_border_10_1.jpg in Resources */,
+				72CB8BB51A043FA6000E30CF /* world_100_border_12_7.jpg in Resources */,
 				7204A37F19D9799200B8AE76 /* RoundResults.png in Resources */,
 				7204A29A19D976D600B8AE76 /* world_100_6_5.jpg in Resources */,
 				7204A3EB19DDFE4500B8AE76 /* ArgentinaFlag.png in Resources */,
+				72CB8B561A043FA6000E30CF /* world_100_border_4_8.jpg in Resources */,
 				7204A37119D9799200B8AE76 /* ArrowRed.png in Resources */,
 				729FC43819ECA16B00B082E5 /* SouthKoreaFlag.png in Resources */,
 				7204A45619E3487200B8AE76 /* AlgeriaFlag.png in Resources */,
 				7204A2D519D976D600B8AE76 /* world_100_11_4.jpg in Resources */,
+				72CB8B701A043FA6000E30CF /* world_100_border_6_10.jpg in Resources */,
 				7204A17819D976B300B8AE76 /* world_50_4_3.jpg in Resources */,
 				727ED16819F95841000707AA /* SwitzerlandFlag.png in Resources */,
+				72CB8B9B1A043FA6000E30CF /* world_100_border_10_5.jpg in Resources */,
 				729FC42319ECA16B00B082E5 /* FederatedStatesOfMicronesiaFlag.png in Resources */,
 				7204A30019D976D600B8AE76 /* world_100_14_11.jpg in Resources */,
 				7204A45819E3487200B8AE76 /* BeninFlag.png in Resources */,
+				72CB8BB61A043FA6000E30CF /* world_100_border_12_8.jpg in Resources */,
+				72CB8B551A043FA6000E30CF /* world_100_border_4_7.jpg in Resources */,
 				7204A16519D976B300B8AE76 /* world_50_1_2.jpg in Resources */,
+				72CB8CC91A0450B1000E30CF /* world_25_border_2_1.jpg in Resources */,
 				7204A29B19D976D600B8AE76 /* world_100_6_6.jpg in Resources */,
 				7204A11319D9767700B8AE76 /* 50MaskLand.png in Resources */,
+				72CB8CAF1A045097000E30CF /* world_50_border_6_5.jpg in Resources */,
 				7204A38719D9799200B8AE76 /* Vinneren.png in Resources */,
+				72CB8B471A043FA6000E30CF /* world_100_border_3_5.jpg in Resources */,
 				727ED13F19F95841000707AA /* AustriaFlag.png in Resources */,
 				7204A48319E3487200B8AE76 /* SwazilandFlag.png in Resources */,
 				7204A27819D976D600B8AE76 /* world_100_3_7.jpg in Resources */,
+				72CB8CB21A045097000E30CF /* world_50_border_7_2.jpg in Resources */,
 				7204A40519DDFE4500B8AE76 /* PuertoRicoFlag.png in Resources */,
+				72CB8B5E1A043FA6000E30CF /* world_100_border_5_4.jpg in Resources */,
 				7204A2B019D976D600B8AE76 /* world_100_8_3.jpg in Resources */,
 				7204A2FD19D976D600B8AE76 /* world_100_14_8.jpg in Resources */,
 				7204A39219D979E700B8AE76 /* armsOfCoat.txt in Resources */,
+				72CB8B5D1A043FA6000E30CF /* world_100_border_5_3.jpg in Resources */,
+				72CB8B711A043FA6000E30CF /* world_100_border_6_11.jpg in Resources */,
 				7204A47319E3487200B8AE76 /* MaliFlag.png in Resources */,
+				72CB8B491A043FA6000E30CF /* world_100_border_3_7.jpg in Resources */,
 				7204A27419D976D600B8AE76 /* world_100_3_3.jpg in Resources */,
 				7204A3BE19DD7EDD00B8AE76 /* LaosFlag.png in Resources */,
+				72CB8C8D1A045097000E30CF /* world_50_border_1_1.jpg in Resources */,
 				7204A16C19D976B300B8AE76 /* world_50_2_3.jpg in Resources */,
+				72CB8BC01A043FA6000E30CF /* world_100_border_13_6.jpg in Resources */,
 				7204A26719D976D600B8AE76 /* world_100_2_2.jpg in Resources */,
 				7204A18419D976B300B8AE76 /* world_50_6_3.jpg in Resources */,
 				72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */,
 				727ED15C19F95841000707AA /* MonacoFlag.png in Resources */,
 				727ED16219F95841000707AA /* ScotlandFlag.png in Resources */,
+				72CB8C931A045097000E30CF /* world_50_border_2_1.jpg in Resources */,
+				72CB8B4A1A043FA6000E30CF /* world_100_border_3_8.jpg in Resources */,
 				729FC43A19ECA16B00B082E5 /* TajikistanFlag.png in Resources */,
 				7204A37419D9799200B8AE76 /* BarLineUp.png in Resources */,
+				72CB8B201A043FA6000E30CF /* world_100_border_0_2.jpg in Resources */,
+				72CB8B4F1A043FA6000E30CF /* world_100_border_4_1.jpg in Resources */,
+				72CB8B811A043FA6000E30CF /* world_100_border_8_3.jpg in Resources */,
+				72CB8C871A045097000E30CF /* world_50_border_0_1.jpg in Resources */,
 				7204A16219D976B300B8AE76 /* world_50_0_5.jpg in Resources */,
+				72CB8B731A043FA6000E30CF /* world_100_border_7_1.jpg in Resources */,
 				7204A26619D976D600B8AE76 /* world_100_2_1.jpg in Resources */,
 				7204A12219D9769A00B8AE76 /* world_25_0_1.jpg in Resources */,
+				72CB8CCC1A0450B1000E30CF /* world_25_border_3_1.jpg in Resources */,
+				72CB8B2C1A043FA6000E30CF /* world_100_border_1_2.jpg in Resources */,
 				729FC41E19ECA16B00B082E5 /* BangladeshFlag.png in Resources */,
+				72CB8CB11A045097000E30CF /* world_50_border_7_1.jpg in Resources */,
 				7204A27919D976D600B8AE76 /* world_100_3_8.jpg in Resources */,
 				7204A46819E3487200B8AE76 /* GambiaFlag.png in Resources */,
 				7204A2A619D976D600B8AE76 /* world_100_7_5.jpg in Resources */,
 				7204A3C419DDC5B900B8AE76 /* UsaFlag.png in Resources */,
 				7204A2B819D976D600B8AE76 /* world_100_8_11.jpg in Resources */,
+				72CB8B601A043FA6000E30CF /* world_100_border_5_6.jpg in Resources */,
 				7204A17219D976B300B8AE76 /* world_50_3_3.jpg in Resources */,
 				7204A2CD19D976D600B8AE76 /* world_100_10_8.jpg in Resources */,
 				727ED14719F95841000707AA /* EnglandFlag.png in Resources */,
 				7204A3C119DD7EDD00B8AE76 /* NewZealandFlag.png in Resources */,
 				7204A34B19D9798300B8AE76 /* InstructNor.png in Resources */,
 				7204A18C19D976B300B8AE76 /* world_50_7_5.jpg in Resources */,
+				72CB8B2B1A043FA6000E30CF /* world_100_border_1_1.jpg in Resources */,
 				7204A29119D976D600B8AE76 /* world_100_5_8.jpg in Resources */,
 				7204A27219D976D600B8AE76 /* world_100_3_1.jpg in Resources */,
 				7204A17F19D976B300B8AE76 /* world_50_5_4.jpg in Resources */,
+				72CB8B361A043FA6000E30CF /* world_100_border_2_0.jpg in Resources */,
+				72CB8BD81A043FA6000E30CF /* world_100_border_15_6.jpg in Resources */,
 				7204A16F19D976B300B8AE76 /* world_50_3_0.jpg in Resources */,
 				7204A24E19D976D600B8AE76 /* world_100_0_1.jpg in Resources */,
+				72CB8CAB1A045097000E30CF /* world_50_border_6_1.jpg in Resources */,
+				72CB8B891A043FA6000E30CF /* world_100_border_8_11.jpg in Resources */,
 				7204A16B19D976B300B8AE76 /* world_50_2_2.jpg in Resources */,
 				7204A2CC19D976D600B8AE76 /* world_100_10_7.jpg in Resources */,
 				7204A3BA19DD7EDD00B8AE76 /* BruneiFlag.png in Resources */,
+				72CB8CCA1A0450B1000E30CF /* world_25_border_2_2.jpg in Resources */,
+				72CB8B241A043FA6000E30CF /* world_100_border_0_6.jpg in Resources */,
 				7204A3AE19D9867400B8AE76 /* test.txt in Resources */,
+				72CB8B431A043FA6000E30CF /* world_100_border_3_1.jpg in Resources */,
+				72CB8CAC1A045097000E30CF /* world_50_border_6_2.jpg in Resources */,
 				7204A3ED19DDFE4500B8AE76 /* BarbadosFlag.png in Resources */,
 				7204A48919E3487200B8AE76 /* ZimbabweFlag.png in Resources */,
 				7204A26219D976D600B8AE76 /* world_100_1_9.jpg in Resources */,
 				727ED15D19F95841000707AA /* NetherlandsFlag.png in Resources */,
 				7204A16D19D976B300B8AE76 /* world_50_2_4.jpg in Resources */,
+				72CB8B481A043FA6000E30CF /* world_100_border_3_6.jpg in Resources */,
 				7204A25B19D976D600B8AE76 /* world_100_1_2.jpg in Resources */,
 				7204A29E19D976D600B8AE76 /* world_100_6_9.jpg in Resources */,
 				7204A46D19E3487200B8AE76 /* KenyaFlag.png in Resources */,
+				72CB8CAE1A045097000E30CF /* world_50_border_6_4.jpg in Resources */,
 				727ED15119F95841000707AA /* IrelandFlag.png in Resources */,
 				7204A48819E3487200B8AE76 /* ZambiaFlag.png in Resources */,
 				7204A47219E3487200B8AE76 /* MalawiFlag.png in Resources */,
+				72CB8B8A1A043FA6000E30CF /* world_100_border_9_0.jpg in Resources */,
 				727ED16F19F9BF46000707AA /* PortugalFlag.png in Resources */,
+				72CB8BC11A043FA6000E30CF /* world_100_border_13_7.jpg in Resources */,
+				72CB8B4B1A043FA6000E30CF /* world_100_border_3_9.jpg in Resources */,
 				7204A25E19D976D600B8AE76 /* world_100_1_5.jpg in Resources */,
 				7204A41B19E00B1F00B8AE76 /* statesEurope.txt in Resources */,
 				7204A3EA19DDFE4500B8AE76 /* AntiguaAndBarbudaFlag.png in Resources */,
 				729FC42819ECA16B00B082E5 /* KazakhstanFlag.png in Resources */,
+				72CB8B291A043FA6000E30CF /* world_100_border_0_11.jpg in Resources */,
 				7204A12319D9769A00B8AE76 /* world_25_0_2.jpg in Resources */,
+				72CB8B6A1A043FA6000E30CF /* world_100_border_6_4.jpg in Resources */,
+				72CB8B7A1A043FA6000E30CF /* world_100_border_7_8.jpg in Resources */,
 				7204A17B19D976B300B8AE76 /* world_50_5_0.jpg in Resources */,
 				7204A18219D976B300B8AE76 /* world_50_6_1.jpg in Resources */,
 				7204A3FD19DDFE4500B8AE76 /* HaitiFlag.png in Resources */,
 				727ED14C19F95841000707AA /* GermanyFlag.png in Resources */,
+				72CB8B961A043FA6000E30CF /* world_100_border_10_0.jpg in Resources */,
+				72CB8CC31A0450B1000E30CF /* world_25_border_0_1.jpg in Resources */,
 				7204A3F219DDFE4500B8AE76 /* ChileFlag.png in Resources */,
+				72CB8BC71A043FA6000E30CF /* world_100_border_14_1.jpg in Resources */,
 				7204A30519D976D600B8AE76 /* world_100_15_4.jpg in Resources */,
+				72CB8BB11A043FA6000E30CF /* world_100_border_12_3.jpg in Resources */,
+				72CB8BAC1A043FA6000E30CF /* world_100_border_11_10.jpg in Resources */,
 				7204A12819D9769A00B8AE76 /* world_25_2_1.jpg in Resources */,
 				7204A3F019DDFE4500B8AE76 /* BrazilFlag.png in Resources */,
 				7204A28719D976D600B8AE76 /* world_100_4_10.jpg in Resources */,
 				7204A4A019E40CF600B8AE76 /* OmanFlag.png in Resources */,
 				7204A26119D976D600B8AE76 /* world_100_1_8.jpg in Resources */,
+				72CB8B401A043FA6000E30CF /* world_100_border_2_10.jpg in Resources */,
 				7204A31219D978F000B8AE76 /* hintBtn.png in Resources */,
+				72CB8CB31A045097000E30CF /* world_50_border_7_3.jpg in Resources */,
 				7204A36F19D9799200B8AE76 /* ArrowGreen.png in Resources */,
 				7204A3F119DDFE4500B8AE76 /* CanadaFlag.png in Resources */,
 				7204A40619DDFE4500B8AE76 /* SaintKittsAndNevisFlag.png in Resources */,
 				727ED17119F9C02F000707AA /* NorthernIrelandFlag.png in Resources */,
 				7204A46719E3487200B8AE76 /* GabonFlag.png in Resources */,
+				72CB8B311A043FA6000E30CF /* world_100_border_1_7.jpg in Resources */,
 				7204A26019D976D600B8AE76 /* world_100_1_7.jpg in Resources */,
+				72CB8CA81A045097000E30CF /* world_50_border_5_4.jpg in Resources */,
+				72CB8BB01A043FA6000E30CF /* world_100_border_12_2.jpg in Resources */,
 				7204A17019D976B300B8AE76 /* world_50_3_1.jpg in Resources */,
 				7204A2EC19D976D600B8AE76 /* world_100_13_3.jpg in Resources */,
 				7204A28119D976D600B8AE76 /* world_100_4_4.jpg in Resources */,
 				727ED15219F95841000707AA /* IsleOfManFlag.png in Resources */,
 				727ED16E19F9BF46000707AA /* MontenegroFlag.png in Resources */,
 				7204A3A619D979FD00B8AE76 /* HighscoreHard.plist in Resources */,
+				72CB8BCC1A043FA6000E30CF /* world_100_border_14_6.jpg in Resources */,
+				72CB8BC21A043FA6000E30CF /* world_100_border_13_8.jpg in Resources */,
 				7204A40219DDFE4500B8AE76 /* PanamaFlag.png in Resources */,
 				7204A46219E3487200B8AE76 /* DjiboutiFlag.png in Resources */,
+				72CB8BD11A043FA6000E30CF /* world_100_border_14_11.jpg in Resources */,
 				7204A26819D976D600B8AE76 /* world_100_2_3.jpg in Resources */,
 				7204A25419D976D600B8AE76 /* world_100_0_7.jpg in Resources */,
 				7204A28419D976D600B8AE76 /* world_100_4_7.jpg in Resources */,
+				72CB8B3A1A043FA6000E30CF /* world_100_border_2_4.jpg in Resources */,
 				7204A31519D978F000B8AE76 /* pauseBtn.png in Resources */,
+				72CB8BAD1A043FA6000E30CF /* world_100_border_11_11.jpg in Resources */,
+				72CB8B231A043FA6000E30CF /* world_100_border_0_5.jpg in Resources */,
 				729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */,
 				7204A2FE19D976D600B8AE76 /* world_100_14_9.jpg in Resources */,
 				7204A2E019D976D600B8AE76 /* world_100_12_3.jpg in Resources */,
@@ -2567,78 +3440,123 @@
 				7204A40419DDFE4500B8AE76 /* PeruFlag.png in Resources */,
 				7204A47719E3487200B8AE76 /* MozambiqueFlag.png in Resources */,
 				7204A16919D976B300B8AE76 /* world_50_2_0.jpg in Resources */,
+				72CB8B631A043FA6000E30CF /* world_100_border_5_9.jpg in Resources */,
 				729FC43E19ECA16B00B082E5 /* TurkmenistanFlag.png in Resources */,
+				72CB8B421A043FA6000E30CF /* world_100_border_3_0.jpg in Resources */,
+				72CB8C881A045097000E30CF /* world_50_border_0_2.jpg in Resources */,
+				72CB8B7E1A043FA6000E30CF /* world_100_border_8_0.jpg in Resources */,
 				7204A12B19D9769A00B8AE76 /* world_25_3_1.jpg in Resources */,
 				729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */,
+				72CB8B7B1A043FA6000E30CF /* world_100_border_7_9.jpg in Resources */,
 				7204A28E19D976D600B8AE76 /* world_100_5_5.jpg in Resources */,
 				7204A2EB19D976D600B8AE76 /* world_100_13_2.jpg in Resources */,
+				72CB8C9F1A045097000E30CF /* world_50_border_4_1.jpg in Resources */,
+				72CB8CA41A045097000E30CF /* world_50_border_5_0.jpg in Resources */,
 				729FC43919ECA16B00B082E5 /* SriLankaFlag.png in Resources */,
+				72CB8BAF1A043FA6000E30CF /* world_100_border_12_1.jpg in Resources */,
+				72CB8BAE1A043FA6000E30CF /* world_100_border_12_0.jpg in Resources */,
+				72CB8B801A043FA6000E30CF /* world_100_border_8_2.jpg in Resources */,
 				7204A27719D976D600B8AE76 /* world_100_3_6.jpg in Resources */,
+				72CB8B441A043FA6000E30CF /* world_100_border_3_2.jpg in Resources */,
 				7204A29D19D976D600B8AE76 /* world_100_6_8.jpg in Resources */,
 				727ED16719F95841000707AA /* SwedenFlag.png in Resources */,
 				7204A3BF19DD7EDD00B8AE76 /* MalaysiaFlag.png in Resources */,
 				7204A2E719D976D600B8AE76 /* world_100_12_10.jpg in Resources */,
+				72CB8B6C1A043FA6000E30CF /* world_100_border_6_6.jpg in Resources */,
 				7204A2A919D976D600B8AE76 /* world_100_7_8.jpg in Resources */,
 				7204A3C019DD7EDD00B8AE76 /* NewGuineaFlag.png in Resources */,
+				72CB8B6E1A043FA6000E30CF /* world_100_border_6_8.jpg in Resources */,
+				72CB8B9A1A043FA6000E30CF /* world_100_border_10_4.jpg in Resources */,
 				7204A38119D9799200B8AE76 /* tapImage.png in Resources */,
 				727ED15519F95841000707AA /* LatviaFlag.png in Resources */,
+				72CB8B841A043FA6000E30CF /* world_100_border_8_6.jpg in Resources */,
 				7204A26D19D976D600B8AE76 /* world_100_2_8.jpg in Resources */,
 				7204A2DE19D976D600B8AE76 /* world_100_12_1.jpg in Resources */,
+				72CB8BDB1A043FA6000E30CF /* world_100_border_15_9.jpg in Resources */,
+				72CB8CC61A0450B1000E30CF /* world_25_border_1_1.jpg in Resources */,
 				7204A27519D976D600B8AE76 /* world_100_3_4.jpg in Resources */,
+				72CB8B7C1A043FA6000E30CF /* world_100_border_7_10.jpg in Resources */,
 				7204A2F819D976D600B8AE76 /* world_100_14_3.jpg in Resources */,
+				72CB8B721A043FA6000E30CF /* world_100_border_7_0.jpg in Resources */,
 				7204A30B19D976D600B8AE76 /* world_100_15_10.jpg in Resources */,
 				7204A2ED19D976D600B8AE76 /* world_100_13_4.jpg in Resources */,
 				7204A16319D976B300B8AE76 /* world_50_1_0.jpg in Resources */,
+				72CB8BA91A043FA6000E30CF /* world_100_border_11_7.jpg in Resources */,
 				7204A34A19D9798300B8AE76 /* InstructEng.png in Resources */,
 				7204A18719D976B300B8AE76 /* world_50_7_0.jpg in Resources */,
+				72CB8BA51A043FA6000E30CF /* world_100_border_11_3.jpg in Resources */,
 				7204A26519D976D600B8AE76 /* world_100_2_0.jpg in Resources */,
 				7204A16719D976B300B8AE76 /* world_50_1_4.jpg in Resources */,
+				72CB8BBE1A043FA6000E30CF /* world_100_border_13_4.jpg in Resources */,
 				7204A36C19D9799200B8AE76 /* icon.jpg in Resources */,
+				72CB8C901A045097000E30CF /* world_50_border_1_4.jpg in Resources */,
 				7204A25A19D976D600B8AE76 /* world_100_1_1.jpg in Resources */,
+				72CB8CC21A0450B1000E30CF /* world_25_border_0_0.jpg in Resources */,
 				7204A18519D976B300B8AE76 /* world_50_6_4.jpg in Resources */,
 				7204A40019DDFE4500B8AE76 /* MexicoFlag.png in Resources */,
 				7204A38619D9799200B8AE76 /* trophy.png in Resources */,
+				72CB8CC81A0450B1000E30CF /* world_25_border_2_0.jpg in Resources */,
+				72CB8B6F1A043FA6000E30CF /* world_100_border_6_9.jpg in Resources */,
 				7204A2A719D976D600B8AE76 /* world_100_7_6.jpg in Resources */,
 				7204A3EF19DDFE4500B8AE76 /* BoliviaFlag.png in Resources */,
 				7204A2E219D976D600B8AE76 /* world_100_12_5.jpg in Resources */,
 				7204A37719D9799200B8AE76 /* directions.png in Resources */,
 				7204A2F419D976D600B8AE76 /* world_100_13_11.jpg in Resources */,
 				7204A39419D979E700B8AE76 /* fjords.txt in Resources */,
+				72CB8B941A043FA6000E30CF /* world_100_border_9_10.jpg in Resources */,
+				72CB8C961A045097000E30CF /* world_50_border_2_4.jpg in Resources */,
 				7204A30A19D976D600B8AE76 /* world_100_15_9.jpg in Resources */,
 				7204A47619E3487200B8AE76 /* MoroccoFlag.png in Resources */,
 				7204A2B719D976D600B8AE76 /* world_100_8_10.jpg in Resources */,
 				7204A37219D9799200B8AE76 /* BarLine.png in Resources */,
 				7204A31619D978F000B8AE76 /* quitBtn.png in Resources */,
 				7204A3BD19DD7EDD00B8AE76 /* IndonesiaFlag.png in Resources */,
+				72CB8B881A043FA6000E30CF /* world_100_border_8_10.jpg in Resources */,
 				7204A2CF19D976D600B8AE76 /* world_100_10_10.jpg in Resources */,
 				7204A39319D979E700B8AE76 /* cities.txt in Resources */,
 				7204A27619D976D600B8AE76 /* world_100_3_5.jpg in Resources */,
 				7204A31319D978F000B8AE76 /* passBtn.png in Resources */,
+				72CB8BBD1A043FA6000E30CF /* world_100_border_13_3.jpg in Resources */,
 				729FC43F19ECA16B00B082E5 /* TuvaluFlag.png in Resources */,
+				72CB8B931A043FA6000E30CF /* world_100_border_9_9.jpg in Resources */,
+				72CB8B911A043FA6000E30CF /* world_100_border_9_7.jpg in Resources */,
 				7204A29819D976D600B8AE76 /* world_100_6_3.jpg in Resources */,
 				7204A17519D976B300B8AE76 /* world_50_4_0.jpg in Resources */,
+				72CB8BB71A043FA6000E30CF /* world_100_border_12_9.jpg in Resources */,
 				7204A38519D9799200B8AE76 /* TheWinner.png in Resources */,
 				7204A3EC19DDFE4500B8AE76 /* BahamasFlag.png in Resources */,
 				727ED14319F95841000707AA /* BulgariaFlag.png in Resources */,
+				72CB8BA61A043FA6000E30CF /* world_100_border_11_4.jpg in Resources */,
+				72CB8BA11A043FA6000E30CF /* world_100_border_10_11.jpg in Resources */,
 				7204A2E519D976D600B8AE76 /* world_100_12_8.jpg in Resources */,
 				7204A3FC19DDFE4500B8AE76 /* GuyanaFlag.png in Resources */,
+				72CB8B531A043FA6000E30CF /* world_100_border_4_5.jpg in Resources */,
 				7204A48219E3487200B8AE76 /* SudanFlag.png in Resources */,
 				7204A47F19E3487200B8AE76 /* SomaliaFlag.png in Resources */,
 				7204A45C19E3487200B8AE76 /* CameroonFlag.png in Resources */,
 				7204A25619D976D600B8AE76 /* world_100_0_9.jpg in Resources */,
 				729FC42419ECA16B00B082E5 /* FijiFlag.png in Resources */,
 				7204A45919E3487200B8AE76 /* BotswanaFlag.png in Resources */,
+				72CB8B381A043FA6000E30CF /* world_100_border_2_2.jpg in Resources */,
 				7204A2C919D976D600B8AE76 /* world_100_10_4.jpg in Resources */,
 				7204A2C319D976D600B8AE76 /* world_100_9_10.jpg in Resources */,
+				72CB8B981A043FA6000E30CF /* world_100_border_10_2.jpg in Resources */,
 				7204A2B319D976D600B8AE76 /* world_100_8_6.jpg in Resources */,
 				7204A47A19E3487200B8AE76 /* NigeriaFlag.png in Resources */,
+				72CB8C891A045097000E30CF /* world_50_border_0_3.jpg in Resources */,
 				729FC43319ECA16B00B082E5 /* PakistanFlag.png in Resources */,
 				7204A39619D979E700B8AE76 /* lakes.txt in Resources */,
 				729FC41C19ECA16B00B082E5 /* AfghanistanFlag.png in Resources */,
 				7204A12519D9769A00B8AE76 /* world_25_1_1.jpg in Resources */,
+				72CB8B5A1A043FA6000E30CF /* world_100_border_5_0.jpg in Resources */,
 				7204A30419D976D600B8AE76 /* world_100_15_3.jpg in Resources */,
+				72CB8B7D1A043FA6000E30CF /* world_100_border_7_11.jpg in Resources */,
 				7204A27119D976D600B8AE76 /* world_100_3_0.jpg in Resources */,
+				72CB8B621A043FA6000E30CF /* world_100_border_5_8.jpg in Resources */,
+				72CB8BAB1A043FA6000E30CF /* world_100_border_11_9.jpg in Resources */,
 				7204A37519D9799200B8AE76 /* clouds.png in Resources */,
+				72CB8BCA1A043FA6000E30CF /* world_100_border_14_4.jpg in Resources */,
+				72CB8B301A043FA6000E30CF /* world_100_border_1_6.jpg in Resources */,
 				7204A48519E3487200B8AE76 /* TogoFlag.png in Resources */,
 				7204A16119D976B300B8AE76 /* world_50_0_4.jpg in Resources */,
 				7204A25019D976D600B8AE76 /* world_100_0_3.jpg in Resources */,
@@ -2646,12 +3564,16 @@
 				7204A45B19E3487200B8AE76 /* BurundiFlag.png in Resources */,
 				7204A34C19D9798300B8AE76 /* TapToMoveInstr.png in Resources */,
 				7204A47C19E3487200B8AE76 /* SaoTomeAndPrincipeFlag.png in Resources */,
+				72CB8B761A043FA6000E30CF /* world_100_border_7_4.jpg in Resources */,
 				727ED14A19F95841000707AA /* FinlandFlag.png in Resources */,
+				72CB8B661A043FA6000E30CF /* world_100_border_6_0.jpg in Resources */,
 				7204A47919E3487200B8AE76 /* NigerFlag.png in Resources */,
 				7204A48D19E35B6A00B8AE76 /* IvoryCoastFlag.png in Resources */,
 				7204A26419D976D600B8AE76 /* world_100_1_11.jpg in Resources */,
 				7204A12419D9769A00B8AE76 /* world_25_1_0.jpg in Resources */,
+				72CB8BC51A043FA6000E30CF /* world_100_border_13_11.jpg in Resources */,
 				7204A27A19D976D600B8AE76 /* world_100_3_9.jpg in Resources */,
+				72CB8B371A043FA6000E30CF /* world_100_border_2_1.jpg in Resources */,
 				7204A39719D979E700B8AE76 /* pictureQuestions.txt in Resources */,
 				7204A28819D976D600B8AE76 /* world_100_4_11.jpg in Resources */,
 				7204A2C519D976D600B8AE76 /* world_100_10_0.jpg in Resources */,
@@ -2660,14 +3582,17 @@
 				7204A10E19D9765A00B8AE76 /* testArea.txt in Resources */,
 				729FC42D19ECA16B00B082E5 /* MongoliaFlag.png in Resources */,
 				7204A16419D976B300B8AE76 /* world_50_1_1.jpg in Resources */,
+				72CB8B821A043FA6000E30CF /* world_100_border_8_4.jpg in Resources */,
 				7204A2AE19D976D600B8AE76 /* world_100_8_1.jpg in Resources */,
 				7204A16619D976B300B8AE76 /* world_50_1_3.jpg in Resources */,
 				727ED14619F95841000707AA /* DenmarkFlag.png in Resources */,
+				72CB8B671A043FA6000E30CF /* world_100_border_6_1.jpg in Resources */,
 				7204A2B919D976D600B8AE76 /* world_100_9_0.jpg in Resources */,
 				7204A27319D976D600B8AE76 /* world_100_3_2.jpg in Resources */,
 				7204A2E619D976D600B8AE76 /* world_100_12_9.jpg in Resources */,
 				729FC43D19ECA16B00B082E5 /* TurkeyFlag.png in Resources */,
 				7204A3A319D979FD00B8AE76 /* InfoEng.html in Resources */,
+				72CB8B641A043FA6000E30CF /* world_100_border_5_10.jpg in Resources */,
 				7204A28219D976D600B8AE76 /* world_100_4_5.jpg in Resources */,
 				7204A46E19E3487200B8AE76 /* LesothoFlag.png in Resources */,
 				7204A26919D976D600B8AE76 /* world_100_2_4.jpg in Resources */,
@@ -2681,9 +3606,13 @@
 				7204A48719E3487200B8AE76 /* UgandaFlag.png in Resources */,
 				7204A2AD19D976D600B8AE76 /* world_100_8_0.jpg in Resources */,
 				7204A29719D976D600B8AE76 /* world_100_6_2.jpg in Resources */,
+				72CB8B331A043FA6000E30CF /* world_100_border_1_9.jpg in Resources */,
 				727ED14019F95841000707AA /* BelarusFlag.png in Resources */,
+				72CB8BB31A043FA6000E30CF /* world_100_border_12_5.jpg in Resources */,
 				7204A47819E3487200B8AE76 /* NamibiaFlag.png in Resources */,
+				72CB8BCE1A043FA6000E30CF /* world_100_border_14_8.jpg in Resources */,
 				7204A25219D976D600B8AE76 /* world_100_0_5.jpg in Resources */,
+				72CB8B901A043FA6000E30CF /* world_100_border_9_6.jpg in Resources */,
 				7204A17619D976B300B8AE76 /* world_50_4_1.jpg in Resources */,
 				7204A30119D976D600B8AE76 /* world_100_15_0.jpg in Resources */,
 				7204A16E19D976B300B8AE76 /* world_50_2_5.jpg in Resources */,
@@ -2691,6 +3620,7 @@
 				7204A46519E3487200B8AE76 /* EritreaFlag.png in Resources */,
 				7204A2FF19D976D600B8AE76 /* world_100_14_10.jpg in Resources */,
 				7204A46F19E3487200B8AE76 /* LiberiaFlag.png in Resources */,
+				72CB8B871A043FA6000E30CF /* world_100_border_8_9.jpg in Resources */,
 				729FC43719ECA16B00B082E5 /* SolomonIslandsFlag.png in Resources */,
 				7204A2DA19D976D600B8AE76 /* world_100_11_9.jpg in Resources */,
 				7204A27019D976D600B8AE76 /* world_100_2_11.jpg in Resources */,
@@ -2702,6 +3632,7 @@
 				7204A46A19E3487200B8AE76 /* Guinea-BissauFlag.png in Resources */,
 				7204A28D19D976D600B8AE76 /* world_100_5_4.jpg in Resources */,
 				7204A2AC19D976D600B8AE76 /* world_100_7_11.jpg in Resources */,
+				72CB8B3F1A043FA6000E30CF /* world_100_border_2_9.jpg in Resources */,
 				727ED16B19F95841000707AA /* WalesFlag.png in Resources */,
 				729FC41F19ECA16B00B082E5 /* BhutanFlag.png in Resources */,
 				729FC42C19ECA16B00B082E5 /* MarshallIslandsFlag.png in Resources */,
@@ -2723,6 +3654,7 @@
 				7204A29F19D976D600B8AE76 /* world_100_6_10.jpg in Resources */,
 				7204A25819D976D600B8AE76 /* world_100_0_11.jpg in Resources */,
 				7204A2F719D976D600B8AE76 /* world_100_14_2.jpg in Resources */,
+				72CB8B991A043FA6000E30CF /* world_100_border_10_3.jpg in Resources */,
 				7204A2F119D976D600B8AE76 /* world_100_13_8.jpg in Resources */,
 				7204A2A319D976D600B8AE76 /* world_100_7_2.jpg in Resources */,
 				7204A18A19D976B300B8AE76 /* world_50_7_3.jpg in Resources */,
@@ -2730,28 +3662,49 @@
 				7204A29519D976D600B8AE76 /* world_100_6_0.jpg in Resources */,
 				7204A2EF19D976D600B8AE76 /* world_100_13_6.jpg in Resources */,
 				7204A2D719D976D600B8AE76 /* world_100_11_6.jpg in Resources */,
+				72CB8B861A043FA6000E30CF /* world_100_border_8_8.jpg in Resources */,
+				72CB8B2F1A043FA6000E30CF /* world_100_border_1_5.jpg in Resources */,
 				7204A24F19D976D600B8AE76 /* world_100_0_2.jpg in Resources */,
+				72CB8BDA1A043FA6000E30CF /* world_100_border_15_8.jpg in Resources */,
+				72CB8BB21A043FA6000E30CF /* world_100_border_12_4.jpg in Resources */,
 				7204A12919D9769A00B8AE76 /* world_25_2_2.jpg in Resources */,
 				7204A40319DDFE4500B8AE76 /* ParaguayFlag.png in Resources */,
 				7204A36E19D9799200B8AE76 /* ArrowBlue.png in Resources */,
+				72CB8B8F1A043FA6000E30CF /* world_100_border_9_5.jpg in Resources */,
+				72CB8C9A1A045097000E30CF /* world_50_border_3_2.jpg in Resources */,
+				72CB8CCD1A0450B1000E30CF /* world_25_border_3_2.jpg in Resources */,
+				72CB8B8C1A043FA6000E30CF /* world_100_border_9_2.jpg in Resources */,
+				72CB8BB81A043FA6000E30CF /* world_100_border_12_10.jpg in Resources */,
+				72CB8BC91A043FA6000E30CF /* world_100_border_14_3.jpg in Resources */,
 				7204A27C19D976D600B8AE76 /* world_100_3_11.jpg in Resources */,
 				7204A39A19D979E700B8AE76 /* waterRegions.txt in Resources */,
+				72CB8B921A043FA6000E30CF /* world_100_border_9_8.jpg in Resources */,
 				7204A2A819D976D600B8AE76 /* world_100_7_7.jpg in Resources */,
+				72CB8B751A043FA6000E30CF /* world_100_border_7_3.jpg in Resources */,
+				72CB8BA31A043FA6000E30CF /* world_100_border_11_1.jpg in Resources */,
 				7204A4A319E40CF600B8AE76 /* SyriaFlag.png in Resources */,
 				729FC43B19ECA16B00B082E5 /* ThailandFlag.png in Resources */,
+				72CB8B771A043FA6000E30CF /* world_100_border_7_5.jpg in Resources */,
 				7204A2D619D976D600B8AE76 /* world_100_11_5.jpg in Resources */,
 				7204A2FB19D976D600B8AE76 /* world_100_14_6.jpg in Resources */,
+				72CB8B411A043FA6000E30CF /* world_100_border_2_11.jpg in Resources */,
 				7204A37819D9799200B8AE76 /* GameOver.png in Resources */,
 				7204A15F19D976B300B8AE76 /* world_50_0_2.jpg in Resources */,
 				7204A38419D9799200B8AE76 /* tapImageNor2.png in Resources */,
+				72CB8B5C1A043FA6000E30CF /* world_100_border_5_2.jpg in Resources */,
+				72CB8BA41A043FA6000E30CF /* world_100_border_11_2.jpg in Resources */,
 				7204A3AC19D97A8500B8AE76 /* MQNorway-Info.plist in Resources */,
+				72CB8BA81A043FA6000E30CF /* world_100_border_11_6.jpg in Resources */,
+				72CB8C8B1A045097000E30CF /* world_50_border_0_5.jpg in Resources */,
 				7204A12119D9769A00B8AE76 /* world_25_0_0.jpg in Resources */,
+				72CB8B3C1A043FA6000E30CF /* world_100_border_2_6.jpg in Resources */,
 				7204A18819D976B300B8AE76 /* world_50_7_1.jpg in Resources */,
 				7204A40719DDFE4500B8AE76 /* SaintLuciaFlag.png in Resources */,
 				7204A2DC19D976D600B8AE76 /* world_100_11_11.jpg in Resources */,
 				7204A26A19D976D600B8AE76 /* world_100_2_5.jpg in Resources */,
 				729FC43519ECA16B00B082E5 /* SamoaFlag.png in Resources */,
 				729FC42919ECA16B00B082E5 /* KiribatiFlag.png in Resources */,
+				72CB8B831A043FA6000E30CF /* world_100_border_8_5.jpg in Resources */,
 				7204A26E19D976D600B8AE76 /* world_100_2_9.jpg in Resources */,
 				7204A47B19E3487200B8AE76 /* RwandaFlag.png in Resources */,
 				7204A39819D979E700B8AE76 /* places.txt in Resources */,
@@ -2761,16 +3714,25 @@
 				727ED13E19F95841000707AA /* AlbaniaFlag.png in Resources */,
 				7204A29919D976D600B8AE76 /* world_100_6_4.jpg in Resources */,
 				729FC42719ECA16B00B082E5 /* JapanFlag.png in Resources */,
+				72CB8BAA1A043FA6000E30CF /* world_100_border_11_8.jpg in Resources */,
 				7204A3F919DDFE4500B8AE76 /* ElSalvadorFlag.png in Resources */,
+				72CB8B261A043FA6000E30CF /* world_100_border_0_8.jpg in Resources */,
 				7204A17A19D976B300B8AE76 /* world_50_4_5.jpg in Resources */,
 				7204A28C19D976D600B8AE76 /* world_100_5_3.jpg in Resources */,
 				7204A2F319D976D600B8AE76 /* world_100_13_10.jpg in Resources */,
+				72CB8B3D1A043FA6000E30CF /* world_100_border_2_7.jpg in Resources */,
+				72CB8CA11A045097000E30CF /* world_50_border_4_3.jpg in Resources */,
 				7204A2BB19D976D600B8AE76 /* world_100_9_2.jpg in Resources */,
+				72CB8B541A043FA6000E30CF /* world_100_border_4_6.jpg in Resources */,
 				7204A2D419D976D600B8AE76 /* world_100_11_3.jpg in Resources */,
 				7204A40D19DDFE4500B8AE76 /* VenezuelaFlag.png in Resources */,
+				72CB8CCB1A0450B1000E30CF /* world_25_border_3_0.jpg in Resources */,
 				7204A41E19E00B1F00B8AE76 /* statesOceania.txt in Resources */,
+				72CB8C861A045097000E30CF /* world_50_border_0_0.jpg in Resources */,
 				7204A37019D9799200B8AE76 /* ArrowPurple.png in Resources */,
+				72CB8C9D1A045097000E30CF /* world_50_border_3_5.jpg in Resources */,
 				7204A47419E3487200B8AE76 /* MauritaniaFlag.png in Resources */,
+				72CB8BCD1A043FA6000E30CF /* world_100_border_14_7.jpg in Resources */,
 				7204A37D19D9799200B8AE76 /* loopmask.png in Resources */,
 				7204A2E319D976D600B8AE76 /* world_100_12_6.jpg in Resources */,
 				7204A30C19D976D600B8AE76 /* world_100_15_11.jpg in Resources */,
@@ -2780,25 +3742,40 @@
 				7204A18319D976B300B8AE76 /* world_50_6_2.jpg in Resources */,
 				7204A2B519D976D600B8AE76 /* world_100_8_8.jpg in Resources */,
 				7204A29319D976D600B8AE76 /* world_100_5_10.jpg in Resources */,
+				72CB8B851A043FA6000E30CF /* world_100_border_8_7.jpg in Resources */,
 				7204A2C119D976D600B8AE76 /* world_100_9_8.jpg in Resources */,
 				7204A3FA19DDFE4500B8AE76 /* FrenchGuianaFlag.png in Resources */,
+				72CB8BC61A043FA6000E30CF /* world_100_border_14_0.jpg in Resources */,
+				72CB8C8F1A045097000E30CF /* world_50_border_1_3.jpg in Resources */,
 				7204A29C19D976D600B8AE76 /* world_100_6_7.jpg in Resources */,
+				72CB8B501A043FA6000E30CF /* world_100_border_4_2.jpg in Resources */,
 				7204A49C19E40CF600B8AE76 /* IraqFlag.png in Resources */,
 				7204A2AB19D976D600B8AE76 /* world_100_7_10.jpg in Resources */,
+				72CB8B791A043FA6000E30CF /* world_100_border_7_7.jpg in Resources */,
+				72CB8BA21A043FA6000E30CF /* world_100_border_11_0.jpg in Resources */,
 				7204A2E819D976D600B8AE76 /* world_100_12_11.jpg in Resources */,
+				72CB8CC71A0450B1000E30CF /* world_25_border_1_2.jpg in Resources */,
 				7204A2C419D976D600B8AE76 /* world_100_9_11.jpg in Resources */,
 				7204A2A419D976D600B8AE76 /* world_100_7_3.jpg in Resources */,
+				72CB8B221A043FA6000E30CF /* world_100_border_0_4.jpg in Resources */,
 				7204A31419D978F000B8AE76 /* pauseBtn_org.png in Resources */,
+				72CB8B581A043FA6000E30CF /* world_100_border_4_10.jpg in Resources */,
 				7204A3EE19DDFE4500B8AE76 /* BelizeFlag.png in Resources */,
+				72CB8B351A043FA6000E30CF /* world_100_border_1_11.jpg in Resources */,
 				7204A2DB19D976D600B8AE76 /* world_100_11_10.jpg in Resources */,
+				72CB8CAD1A045097000E30CF /* world_50_border_6_3.jpg in Resources */,
 				72CB8A5A1A0167E7000E30CF /* Default-568h@2x.png in Resources */,
+				72CB8B691A043FA6000E30CF /* world_100_border_6_3.jpg in Resources */,
 				7204A3FB19DDFE4500B8AE76 /* GrenadaFlag.png in Resources */,
 				7204A2C019D976D600B8AE76 /* world_100_9_7.jpg in Resources */,
 				7204A29219D976D600B8AE76 /* world_100_5_9.jpg in Resources */,
+				72CB8CA61A045097000E30CF /* world_50_border_5_2.jpg in Resources */,
 				7204A48B19E34D4500B8AE76 /* statesAfrica.txt in Resources */,
+				72CB8B6B1A043FA6000E30CF /* world_100_border_6_5.jpg in Resources */,
 				727ED14E19F95841000707AA /* GreenlandFlag.png in Resources */,
 				7204A41D19E00B1F00B8AE76 /* statesNorthAmerica.txt in Resources */,
 				7204A2C719D976D600B8AE76 /* world_100_10_2.jpg in Resources */,
+				72CB8B4C1A043FA6000E30CF /* world_100_border_3_10.jpg in Resources */,
 				7204A2EA19D976D600B8AE76 /* world_100_13_1.jpg in Resources */,
 				727ED14819F95841000707AA /* EstoniaFlag.png in Resources */,
 				7204A34D19D9798300B8AE76 /* ZoomInInstr.png in Resources */,
@@ -2810,6 +3787,7 @@
 				7204A46319E3487200B8AE76 /* EgyptFlag.png in Resources */,
 				7204A49A19E40CF600B8AE76 /* BahrainFlag.png in Resources */,
 				729FC42019ECA16B00B082E5 /* ChinaFlag.png in Resources */,
+				72CB8BD41A043FA6000E30CF /* world_100_border_15_2.jpg in Resources */,
 				7204A27E19D976D600B8AE76 /* world_100_4_1.jpg in Resources */,
 				7204A26F19D976D600B8AE76 /* world_100_2_10.jpg in Resources */,
 				7204A2CB19D976D600B8AE76 /* world_100_10_6.jpg in Resources */,
@@ -2817,15 +3795,21 @@
 				7204A2B619D976D600B8AE76 /* world_100_8_9.jpg in Resources */,
 				7204A41F19E00B1F00B8AE76 /* statesSouthAmerica.txt in Resources */,
 				7204A3C219DD7EDD00B8AE76 /* PhilippinesFlag.png in Resources */,
+				72CB8C981A045097000E30CF /* world_50_border_3_0.jpg in Resources */,
+				72CB8BA01A043FA6000E30CF /* world_100_border_10_10.jpg in Resources */,
 				7204A4A119E40CF600B8AE76 /* QatarFlag.png in Resources */,
 				7204A2A019D976D600B8AE76 /* world_100_6_11.jpg in Resources */,
 				7204A17319D976B300B8AE76 /* world_50_3_4.jpg in Resources */,
 				7204A27F19D976D600B8AE76 /* world_100_4_2.jpg in Resources */,
+				72CB8CA91A045097000E30CF /* world_50_border_5_5.jpg in Resources */,
 				7204A46419E3487200B8AE76 /* EquatorialGuineaFlag.png in Resources */,
+				72CB8BBA1A043FA6000E30CF /* world_100_border_13_0.jpg in Resources */,
 				7204A28519D976D600B8AE76 /* world_100_4_8.jpg in Resources */,
 				7204A17419D976B300B8AE76 /* world_50_3_5.jpg in Resources */,
 				7204A25D19D976D600B8AE76 /* world_100_1_4.jpg in Resources */,
+				72CB8CAA1A045097000E30CF /* world_50_border_6_0.jpg in Resources */,
 				7204A28A19D976D600B8AE76 /* world_100_5_1.jpg in Resources */,
+				72CB8C9E1A045097000E30CF /* world_50_border_4_0.jpg in Resources */,
 				7204A2AF19D976D600B8AE76 /* world_100_8_2.jpg in Resources */,
 				7204A30219D976D600B8AE76 /* world_100_15_1.jpg in Resources */,
 				7204A17919D976B300B8AE76 /* world_50_4_4.jpg in Resources */,
@@ -2834,35 +3818,56 @@
 				727ED14419F95841000707AA /* CroatiaFlag.png in Resources */,
 				7204A18019D976B300B8AE76 /* world_50_5_5.jpg in Resources */,
 				727ED16319F95841000707AA /* SerbiaFlag.png in Resources */,
+				72CB8C8C1A045097000E30CF /* world_50_border_1_0.jpg in Resources */,
 				7204A45E19E3487200B8AE76 /* CentralAfricanRepublicFlag.png in Resources */,
+				72CB8BD61A043FA6000E30CF /* world_100_border_15_4.jpg in Resources */,
 				7204A15D19D976B300B8AE76 /* world_50_0_0.jpg in Resources */,
 				7204A3F519DDFE4500B8AE76 /* CubaFlag.png in Resources */,
 				727ED14919F95841000707AA /* FaroeIslandsFlag.png in Resources */,
+				72CB8B9F1A043FA6000E30CF /* world_100_border_10_9.jpg in Resources */,
+				72CB8BD51A043FA6000E30CF /* world_100_border_15_3.jpg in Resources */,
 				7204A47E19E3487200B8AE76 /* SierraLeoneFlag.png in Resources */,
+				72CB8BCF1A043FA6000E30CF /* world_100_border_14_9.jpg in Resources */,
 				7204A36D19D9799200B8AE76 /* trophy.jpg in Resources */,
+				72CB8C911A045097000E30CF /* world_50_border_1_5.jpg in Resources */,
 				7204A3FF19DDFE4500B8AE76 /* JamaicaFlag.png in Resources */,
 				729FC43C19ECA16B00B082E5 /* TongaFlag.png in Resources */,
 				729FC42E19ECA16B00B082E5 /* MyanmarFlag.png in Resources */,
 				7204A49E19E40CF600B8AE76 /* JordanFlag.png in Resources */,
 				727ED14119F95841000707AA /* BelgiumFlag.png in Resources */,
+				72CB8C921A045097000E30CF /* world_50_border_2_0.jpg in Resources */,
+				72CB8B271A043FA6000E30CF /* world_100_border_0_9.jpg in Resources */,
 				729FC42F19ECA16B00B082E5 /* NauruFlag.png in Resources */,
 				EE8731B914CAE1300010A76C /* ChallengeViewController.xib in Resources */,
 				7204A2C619D976D600B8AE76 /* world_100_10_1.jpg in Resources */,
+				72CB8B8E1A043FA6000E30CF /* world_100_border_9_4.jpg in Resources */,
+				72CB8B2E1A043FA6000E30CF /* world_100_border_1_4.jpg in Resources */,
 				7204A29019D976D600B8AE76 /* world_100_5_7.jpg in Resources */,
+				72CB8B781A043FA6000E30CF /* world_100_border_7_6.jpg in Resources */,
 				7204A2A219D976D600B8AE76 /* world_100_7_1.jpg in Resources */,
 				729FC42219ECA16B00B082E5 /* CyprusFlag.png in Resources */,
+				72CB8B521A043FA6000E30CF /* world_100_border_4_4.jpg in Resources */,
+				72CB8B591A043FA6000E30CF /* world_100_border_4_11.jpg in Resources */,
+				72CB8B251A043FA6000E30CF /* world_100_border_0_7.jpg in Resources */,
 				7204A46019E3487200B8AE76 /* CongoFlag.png in Resources */,
+				72CB8B4E1A043FA6000E30CF /* world_100_border_4_0.jpg in Resources */,
 				7204A2C219D976D600B8AE76 /* world_100_9_9.jpg in Resources */,
 				729FC42519ECA16B00B082E5 /* GeorgiaFlag.png in Resources */,
+				72CB8C8A1A045097000E30CF /* world_50_border_0_4.jpg in Resources */,
 				7204A30919D976D600B8AE76 /* world_100_15_8.jpg in Resources */,
 				7204A2BE19D976D600B8AE76 /* world_100_9_5.jpg in Resources */,
+				72CB8B3B1A043FA6000E30CF /* world_100_border_2_5.jpg in Resources */,
 				7204A2D219D976D600B8AE76 /* world_100_11_1.jpg in Resources */,
+				72CB8B2A1A043FA6000E30CF /* world_100_border_1_0.jpg in Resources */,
+				72CB8B511A043FA6000E30CF /* world_100_border_4_3.jpg in Resources */,
 				7204A3BB19DD7EDD00B8AE76 /* CambodiaFlag.png in Resources */,
 				7204A47019E3487200B8AE76 /* LibyaFlag.png in Resources */,
 				7204A11019D9765A00B8AE76 /* testPlace.txt in Resources */,
 				7204A48619E3487200B8AE76 /* TunisiaFlag.png in Resources */,
 				7204A3FE19DDFE4500B8AE76 /* HondurasFlag.png in Resources */,
 				7204A2AA19D976D600B8AE76 /* world_100_7_9.jpg in Resources */,
+				72CB8C991A045097000E30CF /* world_50_border_3_1.jpg in Resources */,
+				72CB8BA71A043FA6000E30CF /* world_100_border_11_5.jpg in Resources */,
 				7204A49B19E40CF600B8AE76 /* IranFlag.png in Resources */,
 				727ED16A19F95841000707AA /* UnitedKingdomFlag.png in Resources */,
 				729FC41D19ECA16B00B082E5 /* AzerbaijanFlag.png in Resources */,
@@ -2872,9 +3877,12 @@
 				7204A46619E3487200B8AE76 /* EthiopiaFlag.png in Resources */,
 				7204A25519D976D600B8AE76 /* world_100_0_8.jpg in Resources */,
 				7204A16A19D976B300B8AE76 /* world_50_2_1.jpg in Resources */,
+				72CB8BD71A043FA6000E30CF /* world_100_border_15_5.jpg in Resources */,
 				EE3713C214CB6133002EC3C0 /* AddExPlrViewCtrl.xib in Resources */,
+				72CB8BCB1A043FA6000E30CF /* world_100_border_14_5.jpg in Resources */,
 				7204A2F619D976D600B8AE76 /* world_100_14_1.jpg in Resources */,
 				727ED14519F95841000707AA /* CzechRepublicFlag.png in Resources */,
+				72CB8B341A043FA6000E30CF /* world_100_border_1_10.jpg in Resources */,
 				7204A16019D976B300B8AE76 /* world_50_0_3.jpg in Resources */,
 				7204A26C19D976D600B8AE76 /* world_100_2_7.jpg in Resources */,
 				EED5544714E882EB0070F3F2 /* TakeChallenge.xib in Resources */,
@@ -2889,15 +3897,26 @@
 				7204A25319D976D600B8AE76 /* world_100_0_6.jpg in Resources */,
 				7204A37919D9799200B8AE76 /* icon_old.png in Resources */,
 				7204A2FA19D976D600B8AE76 /* world_100_14_5.jpg in Resources */,
+				72CB8B571A043FA6000E30CF /* world_100_border_4_9.jpg in Resources */,
+				72CB8CA71A045097000E30CF /* world_50_border_5_3.jpg in Resources */,
+				72CB8C9C1A045097000E30CF /* world_50_border_3_4.jpg in Resources */,
 				7204A29419D976D600B8AE76 /* world_100_5_11.jpg in Resources */,
 				7204A37619D9799200B8AE76 /* Default.png in Resources */,
 				729FC43219ECA16B00B082E5 /* NorthKoreaFlag.png in Resources */,
+				72CB8B5F1A043FA6000E30CF /* world_100_border_5_5.jpg in Resources */,
+				72CB8BB41A043FA6000E30CF /* world_100_border_12_6.jpg in Resources */,
 				7204A25119D976D600B8AE76 /* world_100_0_4.jpg in Resources */,
 				7204A17119D976B300B8AE76 /* world_50_3_2.jpg in Resources */,
 				EED5544D14E8844C0070F3F2 /* PlayerStats.xib in Resources */,
 				727ED16019F95841000707AA /* PolandFlag.png in Resources */,
+				72CB8B741A043FA6000E30CF /* world_100_border_7_2.jpg in Resources */,
 				7204A40919DDFE4500B8AE76 /* SurinameFlag.png in Resources */,
 				7204A48019E3487200B8AE76 /* SouthAfricaFlag.png in Resources */,
+				72CB8CA31A045097000E30CF /* world_50_border_4_5.jpg in Resources */,
+				72CB8B461A043FA6000E30CF /* world_100_border_3_4.jpg in Resources */,
+				72CB8CA01A045097000E30CF /* world_50_border_4_2.jpg in Resources */,
+				72CB8B321A043FA6000E30CF /* world_100_border_1_8.jpg in Resources */,
+				72CB8B391A043FA6000E30CF /* world_100_border_2_3.jpg in Resources */,
 				7204A12C19D9769A00B8AE76 /* world_25_3_2.jpg in Resources */,
 				7204A2BC19D976D600B8AE76 /* world_100_9_3.jpg in Resources */,
 				727ED16919F95841000707AA /* UkraineFlag.png in Resources */,
@@ -2906,24 +3925,37 @@
 				727ED15919F95841000707AA /* MacedoniaFlag.png in Resources */,
 				7204A41A19E00B1F00B8AE76 /* statesEastAsia.txt in Resources */,
 				7204A2BF19D976D600B8AE76 /* world_100_9_6.jpg in Resources */,
+				72CB8BC41A043FA6000E30CF /* world_100_border_13_10.jpg in Resources */,
+				72CB8BBC1A043FA6000E30CF /* world_100_border_13_2.jpg in Resources */,
+				72CB8BBB1A043FA6000E30CF /* world_100_border_13_1.jpg in Resources */,
 				7204A2CE19D976D600B8AE76 /* world_100_10_9.jpg in Resources */,
+				72CB8CA21A045097000E30CF /* world_50_border_4_4.jpg in Resources */,
+				72CB8C941A045097000E30CF /* world_50_border_2_2.jpg in Resources */,
+				72CB8C971A045097000E30CF /* world_50_border_2_5.jpg in Resources */,
 				7204A46919E3487200B8AE76 /* GhanaFlag.png in Resources */,
 				7204A2F919D976D600B8AE76 /* world_100_14_4.jpg in Resources */,
+				72CB8B211A043FA6000E30CF /* world_100_border_0_3.jpg in Resources */,
 				7204A40819DDFE4500B8AE76 /* SaintVincentAndTheGrenadinesFlag.png in Resources */,
 				BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */,
 				7204A18B19D976B300B8AE76 /* world_50_7_4.jpg in Resources */,
 				7204A37319D9799200B8AE76 /* BarLineDown.png in Resources */,
+				72CB8BBF1A043FA6000E30CF /* world_100_border_13_5.jpg in Resources */,
 				7204A2CA19D976D600B8AE76 /* world_100_10_5.jpg in Resources */,
 				7204A12719D9769A00B8AE76 /* world_25_2_0.jpg in Resources */,
 				729FC43619ECA16B00B082E5 /* SeychellesFlag.png in Resources */,
+				72CB8B9E1A043FA6000E30CF /* world_100_border_10_8.jpg in Resources */,
 				7204A48419E3487200B8AE76 /* TanzaniaFlag.png in Resources */,
 				7204A25919D976D600B8AE76 /* world_100_1_0.jpg in Resources */,
 				7204A17C19D976B300B8AE76 /* world_50_5_1.jpg in Resources */,
+				72CB8B4D1A043FA6000E30CF /* world_100_border_3_11.jpg in Resources */,
+				72CB8B2D1A043FA6000E30CF /* world_100_border_1_3.jpg in Resources */,
 				727ED14B19F95841000707AA /* FranceFlag.png in Resources */,
+				72CB8B8D1A043FA6000E30CF /* world_100_border_9_3.jpg in Resources */,
 				727ED15719F95841000707AA /* LithuaniaFlag.png in Resources */,
 				727ED16519F95841000707AA /* SloveniaFlag.png in Resources */,
 				7204A30319D976D600B8AE76 /* world_100_15_2.jpg in Resources */,
 				7204A47119E3487200B8AE76 /* MadagascarFlag.png in Resources */,
+				72CB8BDC1A043FA6000E30CF /* world_100_border_15_10.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

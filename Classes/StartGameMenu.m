@@ -75,7 +75,7 @@
 	
 	m_players = [[NSMutableArray alloc] init];
 	
-
+/*
 	infoOrGlobalIDLabel = [[UILabel alloc] init];
 	[infoOrGlobalIDLabel setFrame:CGRectMake(80, 0, 250, 40)];
 	infoOrGlobalIDLabel.textAlignment = NSTextAlignmentCenter;
@@ -87,10 +87,10 @@
 	infoOrGlobalIDLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
 	infoOrGlobalIDLabel.layer.shadowOpacity = 1.0;
 	[self addSubview:infoOrGlobalIDLabel];
-	[infoOrGlobalIDLabel release];
+	[infoOrGlobalIDLabel release];*/
 	
 	miniLabel = [[UILabel alloc] init];
-	[miniLabel setFrame:CGRectMake(145, 18, 50, 30)];
+	[miniLabel setFrame:CGRectMake(145, 18, 70, 30)];
 	miniLabel.center = CGPointMake(([screen applicationFrame].size.width/2) + 10,35);
 	miniLabel.backgroundColor = [UIColor clearColor]; 
 	miniLabel.textColor = [UIColor redColor];
@@ -113,14 +113,14 @@
 	difficultyLabel.layer.shadowRadius = 1.5;
 	//difficultyLabel.shadowColor = [UIColor blackColor];
 	//difficultyLabel.shadowOffset = CGSizeMake(1,1);
-	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
+	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],@"1"];
 	[self addSubview:difficultyLabel];
 	
 	slideDifficultyPicker = [[UISlider alloc] init];
 	slideDifficultyPicker.frame  = CGRectMake(50 + sliderXOffset,60 + sliderYOffset,120,20);
 	slideDifficultyPicker.center = CGPointMake([screen applicationFrame].size.width/2, 120 + sliderYOffset);
 	slideDifficultyPicker.minimumValue = 1;
-	slideDifficultyPicker.maximumValue = 3;
+	slideDifficultyPicker.maximumValue = 6;
 	slideDifficultyPicker.value = 1;
 	[slideDifficultyPicker addTarget:self action:@selector(sliderDifficultyValueChanged:) forControlEvents:UIControlEventValueChanged];
 	[self addSubview:slideDifficultyPicker];		
@@ -128,25 +128,47 @@
 	numberOfPlayers = 1;
 	
 	
-	switchLabel = [[UILabel alloc] init];
-	[switchLabel setFrame:CGRectMake(0, 0, 200, 30)];
-	switchLabel.center = CGPointMake(([screen applicationFrame].size.width/2), 190 + playersYOffset - 15);
-	switchLabel.textAlignment = NSTextAlignmentCenter;
-	switchLabel.backgroundColor = [UIColor clearColor]; 
-	switchLabel.textColor = [UIColor whiteColor];
-	[switchLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
-	switchLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
-	switchLabel.layer.shadowOpacity = 1.0;
-	switchLabel.layer.shadowRadius = 1.5;
-	switchLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
-	[self addSubview:switchLabel];		
+	modeLabel = [[UILabel alloc] init];
+	[modeLabel setFrame:CGRectMake(0, 0, 200, 30)];
+	modeLabel.center = CGPointMake(([screen applicationFrame].size.width/2)-50, 190 + playersYOffset + 20);
+	modeLabel.textAlignment = NSTextAlignmentCenter;
+	modeLabel.backgroundColor = [UIColor clearColor];
+	modeLabel.textColor = [UIColor whiteColor];
+	[modeLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+	modeLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
+	modeLabel.layer.shadowOpacity = 1.0;
+	modeLabel.layer.shadowRadius = 1.5;
+	modeLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
+	[self addSubview:modeLabel];
 	
 	modeSwitch = [[UISwitch alloc] initWithFrame: CGRectZero];
 	[modeSwitch addTarget: self action: @selector(flipMode:) forControlEvents:UIControlEventValueChanged];
 	// Set the desired frame location of onoff here
 	modeSwitch.on = NO; 
-	modeSwitch.center = CGPointMake(([screen applicationFrame].size.width/2), 190 + playersYOffset + 15);
+	modeSwitch.center = CGPointMake(([screen applicationFrame].size.width/2) +50, 190 + playersYOffset + 20);
 	[self addSubview: modeSwitch];
+    
+    
+    
+	borderLabel = [[UILabel alloc] init];
+	[borderLabel setFrame:CGRectMake(0, 0, 200, 30)];
+	borderLabel.center = CGPointMake(([screen applicationFrame].size.width/2)-50, 190 + playersYOffset - 20);
+	borderLabel.textAlignment = NSTextAlignmentCenter;
+	borderLabel.backgroundColor = [UIColor clearColor];
+	borderLabel.textColor = [UIColor whiteColor];
+	[borderLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+	borderLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
+	borderLabel.layer.shadowOpacity = 1.0;
+	borderLabel.layer.shadowRadius = 1.5;
+	borderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Use borders:"];
+	[self addSubview:borderLabel];
+	
+	borderSwitch = [[UISwitch alloc] initWithFrame: CGRectZero];
+	//[borderSwitch addTarget: self action: @selector(flipMode:) forControlEvents:UIControlEventValueChanged];
+	// Set the desired frame location of onoff here
+	borderSwitch.on = NO;
+	borderSwitch.center = CGPointMake(([screen applicationFrame].size.width/2) +50, 190 + playersYOffset - 20);
+	[self addSubview: borderSwitch];
 	
 	
 	buttonStart = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -268,14 +290,14 @@
 	
 	if (modeSwitch.on) 
 	{
-		[infoOrGlobalIDLabel setAlpha:0];
+		//[infoOrGlobalIDLabel setAlpha:0];
 		[buttonAddPlayer setAlpha:0];
 		[miniLabel setAlpha:0];
 		[playerOneTextField setAlpha:0];
 		[UIView setAnimationDidStopSelector:@selector(doMoveOn)];
 		headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start training"];
 		[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start training"] forState:UIControlStateNormal];
-		switchLabel.center = CGPointMake(switchLabel.center.x, switchLabel.center.y - 40);
+		modeLabel.center = CGPointMake(modeLabel.center.x, modeLabel.center.y - 40);
 		modeSwitch.center = CGPointMake(modeSwitch.center.x, modeSwitch.center.y - 40);
 		buttonStart.center = CGPointMake(buttonStart.center.x, buttonStart.center.y - 30);
         m_loadingLabel.center = buttonStart.center;
@@ -283,13 +305,13 @@
 	}
 	else
 	{
-		[infoOrGlobalIDLabel setAlpha:1];
+		//[infoOrGlobalIDLabel setAlpha:1];
 		[buttonAddPlayer setAlpha:1];
 		[miniLabel setAlpha:1];
 		[playerOneTextField setAlpha:0.5];
 		headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start Game"];
 		[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
-		switchLabel.center = CGPointMake(switchLabel.center.x, switchLabel.center.y + 40);
+		modeLabel.center = CGPointMake(modeLabel.center.x, modeLabel.center.y + 40);
 		modeSwitch.center = CGPointMake(modeSwitch.center.x, modeSwitch.center.y + 40);
 		buttonStart.center = CGPointMake(buttonStart.center.x, buttonStart.center.y + 30);
         m_loadingLabel.center = buttonStart.center;
@@ -310,6 +332,7 @@
 
 -(void) UpdateSliderDifficultyValue
 {
+    /*
 	NSString *value = [[NSString alloc] initWithString:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
 	if ([slideDifficultyPicker value] >= 1.5) {
 		
@@ -320,10 +343,10 @@
 		else {
 			value = [[[GlobalSettingsHelper Instance] GetStringByLanguage:@"normal"] retain];
 		}
-	}
-	miniLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],value];
-    difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"], value]; 
-	[value release];	
+	}*/
+	miniLabel.text = [NSString stringWithFormat:@"%@: %i",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],(int)[slideDifficultyPicker value]];
+    difficultyLabel.text = [NSString stringWithFormat:@"%@: %i",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"],(int) [slideDifficultyPicker value]];
+	//[value release];
 }
 
 -(void) UpdateSliderGameTypeValue
@@ -331,7 +354,7 @@
 	NSString *value = [[NSString alloc] initWithString:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Last standing"]];
 	if ([slideGameTypePicker value] >= const_sliderGameTypeSwichValue) {
 		mostPointsGame_NumberOfQuestions = ([slideGameTypePicker value] * 3)- 4;
-		numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Number of questions"], mostPointsGame_NumberOfQuestions];  
+		numberOfQuestionsLabel.text = [NSString stringWithFormat:@"%@: %f",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Number of questions"], mostPointsGame_NumberOfQuestions];
 		if (UpdateSliderGameTypeValue_isMovedDown == NO) {
 			UpdateSliderGameTypeValue_isMovedDown = YES;
 			UpdateSliderGameTypeValue_isMovedUp = NO;
@@ -377,7 +400,7 @@
 	slideDifficultyPicker.value = 1;
 	[self UpdateSliderGameTypeValue];
 	[self UpdateSliderDifficultyValue];
-	switchLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
+	modeLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
 	//playerOneTextField.text = [NSString stringWithFormat:@"%@ 1",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player"]];
 	if (playerTwoTextField != nil) {
 		playerTwoTextField.text = [NSString stringWithFormat:@"%@ 2",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player"]];
@@ -520,6 +543,11 @@
 		[m_game SetTrainingMode:YES];
 	else
 		[m_game SetTrainingMode:NO];
+    
+    if (borderSwitch.on == YES)
+		[m_game SetMapBorder:YES];
+	else
+		[m_game SetMapBorder:NO];
 	
 
 	[m_game SetPlayers:m_players andDifficulty:vDifficulty andMultiplayers:multiplayer andGameType:gameType andNumberOfQuestions: mostPointsGame_NumberOfQuestions];
@@ -578,7 +606,7 @@
             [playerOneTextField setAlpha:1];
             playerOneTextField.text = [NSString stringWithFormat:@"%@ 1",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player"]];
             
-			infoOrGlobalIDLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Local pass and play"];
+			//infoOrGlobalIDLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Local pass and play"];
 			[slideGameTypePicker setAlpha:0];
 			[multiplayerModeLabel setAlpha:0];
 			[numberOfQuestionsLabel setAlpha:0];
@@ -782,7 +810,7 @@
 	[numberOfQuestionsLabel setAlpha:1];
 	
 	[modeSwitch setAlpha:0];
-	[switchLabel setAlpha:0];
+	[modeLabel setAlpha:0];
 	
 	if (fadeInTwo == YES) {
 		[playerTwoTextField setAlpha:1];
@@ -832,7 +860,7 @@
             playerOneTextField.userInteractionEnabled = NO;
             [playerOneTextField setAlpha:0.5];
             playerOneTextField.text = [[GlobalSettingsHelper Instance] GetPlayerName];
-			infoOrGlobalIDLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"ID"],[[GlobalSettingsHelper Instance] GetPlayerID]];
+			//infoOrGlobalIDLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"ID"],[[GlobalSettingsHelper Instance] GetPlayerID]];
             
 			fadeInTrainingmodeSwitch = YES;
 			
@@ -922,7 +950,7 @@
 	}
 	if (fadeInTrainingmodeSwitch == YES) {
 		[modeSwitch setAlpha:1];
-		[switchLabel setAlpha:1];
+		[modeLabel setAlpha:1];
 	}
 	
 

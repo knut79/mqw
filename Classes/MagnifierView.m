@@ -21,6 +21,7 @@
 		self.layer.masksToBounds = YES;
 		self.center = CGPointMake(50, 90);
 		isPositionedLeft = YES;
+        [self positionLeft];
 		
 		playerSymbolOverlay = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
 		playerSymbolOverlay.center = CGPointMake(40, 40);
@@ -42,6 +43,12 @@
 	playerSymbolOverlay.image = [UIImage imageNamed:playerSymbol];
 }
 
+-(void) positionLeft
+{
+    self.center = CGPointMake(50, 90);
+    loopLocation = CGPointMake(50, 130);
+    isPositionedLeft = YES;
+}
 
 -(void) setPlacement
 {

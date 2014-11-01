@@ -43,6 +43,7 @@
 	GameState m_gameState;
 	
 	BOOL m_training;
+    BOOL m_borders;
 	NSMutableDictionary *training_oldResultDictionary;
 	NSMutableDictionary *training_newResultDictionary;
 	NSMutableArray *training_placesArray;
@@ -92,7 +93,9 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions;
 -(void) SetGameState:(GameState) gs;
 
 -(void) SetTrainingMode:(BOOL) training;
+-(void) SetMapBorder:(BOOL) value;
 -(BOOL) IsTrainingMode;
+-(BOOL) UsingBorders;
 -(void) ResetTrainingValues;
 -(void) Training_AddOldResult:(NSString*) place avgValue:(NSInteger) value;
 -(void) Training_AddNewResult:(NSString*) place avgValue:(NSInteger) value;

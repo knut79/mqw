@@ -402,7 +402,7 @@
         }
         
         Player *player = [[m_gameRef GetPlayer] retain];
-        int hintsLeft = [player GetHintsLeft];
+        int hintsLeft = 2;//[player GetHintsLeft];
         if(hintsLeft > 0)
         {
             if (hintButton == nil) {
@@ -557,7 +557,15 @@
     // The resolution is stored as a power of 2, so -1 means 50%, -2 means 25%, and 0 means 100%.
     // We've named the tiles things like BlackLagoon_50_0_2.png, where the 50 represents 50% resolution.
     resolutionPercentage = 100 * pow(2, resolution);
-    UIImage* image = [UIImage imageNamed:[NSString stringWithFormat:@"world_%d_%d_%d.jpg", resolutionPercentage, column, row]];
+    NSString *imageName;
+    
+    if ([m_gameRef UsingBorders] ==YES) {
+        imageName = [NSString stringWithFormat:@"world_%d_border_%d_%d.jpg", resolutionPercentage, column, row];
+    }
+    else{
+        imageName = [NSString stringWithFormat:@"world_%d_%d_%d.jpg", resolutionPercentage, column, row];
+    }
+    UIImage* image = [UIImage imageNamed:imageName];
 
 	[tile setImage:image];
 
@@ -600,42 +608,45 @@
 }
 
 #pragma mark TouchImageViewDelegate
-
--(void)updateLoope
+-(void) fadeInLoop
 {
-	
-	if(loop == nil){
+    if(loop == nil){
 		loop = [[MagnifierView alloc] initWithFrame:[self view].bounds];
 		loop.viewref = playingBoardView;
 		[loop setAlpha:0];
+        [[self view] addSubview:loop];
 	}
     [loop setClocViewRef:clockView];
 	
 	//new _2.0
 	[loop setPlayerSymbol:[[m_gameRef GetPlayer] GetPlayerSymbol]];
-	
-	//CGPoint  tempLoopPosition = loop.center;
-	//loop.lastPosition = loop.center;
+    loop.center = touchImageView.center;
+	[loop setTransform:CGAffineTransformMakeScale(0.2, 0.2)];
+    
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationDidStopSelector:@selector(updateLoopeAnimationDone)];
-	
-	
-	[[self view] addSubview:loop];
-	
-	[UIView setAnimationDuration:0.3];
-	//[touchImageView setTransform:CGAffineTransformIdentity];
+    
+	[UIView setAnimationDuration:0.7];
 	[loop setAlpha:1];
-
-	[UIView commitAnimations];	
-	
-	
-	//	loop.center = tempLoopPosition;
-	loop.touchPoint = touchImageView.center;//[touch locationInView:self];
+    [loop setTransform:CGAffineTransformMakeScale(1, 1)];
+    [loop positionLeft];
+	[UIView commitAnimations];
+	loop.touchPoint = touchImageView.center;
 	
 	//start in new thread
 	[loop setNeedsDisplay];
+}
 
+
+-(void)updateLoope
+{
+    [loop setClocViewRef:clockView];
+	[loop setPlayerSymbol:[[m_gameRef GetPlayer] GetPlayerSymbol]];
+	[loop setAlpha:1];
+	loop.touchPoint = touchImageView.center;
+	//start in new thread
+	[loop setNeedsDisplay];
 }
 
 
@@ -648,8 +659,6 @@
 	[loop setAlpha:0];
 	[UIView commitAnimations];
 }
-
-
 
 
 -(void) hideInfoBar
@@ -1433,6 +1442,7 @@
 
 -(void) StartNextRound
 {
+    
 	Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     [currentPlayer SetCurrentKmTimeBonus:0];
 	NSString *playerName = [[currentPlayer GetName] retain];
@@ -1589,8 +1599,51 @@
     //subtract hint from player 
     Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     [currentPlayer HintUsed];
+    
+    
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    if (hintDeductLabel == nil) {
+        hintDeductLabel  = [[UILabel alloc] init];
+        [hintDeductLabel setFrame:CGRectMake(0, 0, 250, 20)];
+        
+        hintDeductLabel.backgroundColor = [UIColor clearColor];
+        hintDeductLabel.textColor = [UIColor redColor];
+        hintDeductLabel.textAlignment = NSTextAlignmentCenter;
+        hintDeductLabel.text = @"- 500 km";
+        [self.view addSubview:hintDeductLabel];
+    }
+    hintDeductLabel.center = CGPointMake([screen applicationFrame].size.width /2 , ([screen applicationFrame].size.height /2) -100 );//hintButton.center;//
+    [hintDeductLabel setAlpha:1];
+
+    [screen release];
+    //animate deduct kms from hint
+    [UIView beginAnimations:@"DeductHint" context:NULL];
+	[UIView setAnimationDuration:0.7];
+    [UIView setAnimationDelay:0.4];
+    [UIView setAnimationRepeatCount:3];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(deductHintDidStop:finished:context:)];
+
+    
+    hintDeductLabel.center = infoBarBottom.center;
+	[UIView commitAnimations];
+    
     [currentPlayer release];
 }
+
+- (void)deductHintDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
+{
+    [hintDeductLabel setAlpha:0];
+    [UIView beginAnimations:@"DeductHint2" context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    [UIView setAnimationDuration:1.0];
+    [UIView setAnimationDelay:1.0];
+    
+    
+    [UIView commitAnimations];
+}
+
 
 #pragma mark PassButtonViewDelegate
 -(void) PassQuestion

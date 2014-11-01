@@ -184,7 +184,13 @@
 				for (int row = minRow; row <= maxRow; row++) {
 					for (int col = minCol; col <= maxCol; col++) {
 
-						imageName = [NSString stringWithFormat:@"world_%d_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
+                        if ([m_gameRef UsingBorders]==YES) {
+                            imageName = [NSString stringWithFormat:@"world_%d_border_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
+                        }
+                        else{
+                            imageName = [NSString stringWithFormat:@"world_%d_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
+                        }
+						
 						imageFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageName] ;
 						provider = CGDataProviderCreateWithFilename([imageFileName UTF8String]);
 						

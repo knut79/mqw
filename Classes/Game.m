@@ -47,8 +47,6 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	m_mostPointsGame_NumberOfQuestions = numberOfQuestions;
 
 	//[[LocationsHelper Instance] ShuffleQuestions];
-
-	
 }
 
 -(void) SetTrainingMode:(BOOL) training
@@ -56,9 +54,19 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	m_training = training;
 }
 
+-(void) SetMapBorder:(BOOL) value
+{
+    m_borders = value;
+}
+
 -(BOOL) IsTrainingMode
 {
 	return m_training;
+}
+
+-(BOOL) UsingBorders
+{
+    return m_borders;
 }
 
 -(void) SetGameState_QuestionID:(NSString*) questionID Difficulty:(Difficulty) diff currentPlayerByName:(NSString*) playerName questionsPassed:(NSInteger) questionsPassed

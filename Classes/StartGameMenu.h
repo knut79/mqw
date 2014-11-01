@@ -27,7 +27,7 @@
 	IBOutlet UISlider *slideNumberOfQuestionsPicker;
 	UILabel *difficultyLabel;
 	UILabel *headerLabel;
-	UILabel *infoOrGlobalIDLabel;
+	//UILabel *infoOrGlobalIDLabel;
 	
 	UITextField *playerOneTextField;
 	UITextField *playerTwoTextField;
@@ -65,7 +65,10 @@
 	UILabel *miniLabel;
 	
 	UISwitch *modeSwitch;
-	UILabel *switchLabel;
+	UILabel *modeLabel;
+    
+    UISwitch *borderSwitch;
+	UILabel *borderLabel;
 	
 	BOOL m_finishedLoadingGameObjects;
 	NSTimer *m_timerCheckLoadingGameObjects;

@@ -86,6 +86,7 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 	QuitButtonView* quitButton;
 	HintButtonView* hintButton;
 	PassButtonView* passButton;
+    UILabel* hintDeductLabel;
     
     UILabel* timePointsLabel;
     

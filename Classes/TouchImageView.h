@@ -40,6 +40,7 @@
 //-(void)openLoope;
 -(void)closeLoope;
 -(void)updateLoope;
+-(void)fadeInLoop;
 -(void)hideInfoBar;
 -(void)showInfoBar;
 -(void)hideQuestionBar;
