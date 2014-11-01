@@ -9,7 +9,7 @@ inf;Island;Virgin islands;10;hard;Overseas territory of the United Kingdom compr
 995;1690
 995;1691
 994;1691
-inf;Island;Cayman islands;10;hard;British Overseas Territory. A major world offshore financial centrespn##fra#ger;America#Caribbean
+inf;Island;Cayman islands;10;hard;British Overseas Territory. A major world offshore financial centre##spn#fra#ger;America#Caribbean
 1222;2605
 1224;2610
 1228;2613
@@ -45,7 +45,7 @@ inf;Island;Falkland islands;10;hard;Claimed by as a British Overseas Territory a
 1221;1725
 1219;1725
 1218;1727
-inf;Island;Guadelupe;10;hard;Overseas department of France. Largest city: Fort-de-France#spn#fra#ger;America#Caribbean
+inf;Island;Guadelupe;10;hard;Overseas department of France. Largest city: Fort-de-France##spn#fra#ger;America#Caribbean
 1224;1746
 1225;1748
 1227;1748

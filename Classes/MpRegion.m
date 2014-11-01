@@ -56,10 +56,13 @@
 
 -(void) UpdatePolygon:(NSArray *) currentPolygon
 {
+    return;
+    /*
 	BOOL foundNewPoints = NO;
 	do {
 		foundNewPoints = [self InsertMidwayPoints:currentPolygon];
 	} while (foundNewPoints);
+     */
 }
 
 

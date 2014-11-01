@@ -102,6 +102,20 @@
 	return m_lastKmLeft;
 }
 
+-(void) DeductKmLeft:(NSInteger) val
+{
+    if (val > const_startKmDistance) {
+        m_lastKmLeft = m_kmLeft;
+        m_kmLeft = 0;
+    }
+    else
+    {
+        m_lastKmLeft = m_kmLeft;
+        m_kmLeft = [self GetKmLeft] - val;
+    }
+}
+
+
 -(void) SetKmLeft:(NSInteger) val
 {
     if (val > const_startKmDistance) {

@@ -252,7 +252,7 @@
 					CGPoint gamePoint = [player GetGamePoint];
 					UIColor *playerColor = [[player GetColor] retain];
 					NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
-					NSInteger currentKmLeft = [player GetKmLeft];
+					//NSInteger currentKmLeft = [player GetKmLeft];
 					
 					if ([loc isKindOfClass:[MpPlace class]] == YES) 
 					{
@@ -270,7 +270,7 @@
 					if (m_shouldUpdateGameData == YES) {
 						[m_gameRef UpdateAvgDistanceForQuest:distanceBetweenPoints];
 						if ([m_gameRef IsTrainingMode] == NO) {
-							[player SetKmLeft:(currentKmLeft - distanceBetweenPoints)];
+							[player DeductKmLeft:distanceBetweenPoints];
 						}
 						
 					}

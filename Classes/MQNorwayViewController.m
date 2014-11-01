@@ -457,7 +457,7 @@
     {
         UIScreen *screen = [[UIScreen mainScreen] retain];
         timePointsLabel = [[UILabel alloc] init];
-        [timePointsLabel setFrame:CGRectMake(0, 0, 250, 20)];
+        [timePointsLabel setFrame:CGRectMake(0, 0, 180, 20)];
         timePointsLabel.center = CGPointMake([screen applicationFrame].size.width /2 , ([screen applicationFrame].size.height /2) -100 );
         timePointsLabel.backgroundColor = [UIColor clearColor]; 
         [timePointsLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
@@ -476,15 +476,18 @@
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:2.5];
         [timePointsLabel setTransform:CGAffineTransformMakeScale(1.1f, 1.1f)];
+        /*
         CGFloat clockViewXTransform = (40.0f*2)-320.0f;
         if (clockView.self.center.x < (320/2) ) {
             clockViewXTransform = 40.f;
-        }
+        }*/
+        clockView.center = CGPointMake(timePointsLabel.center.x - (timePointsLabel.frame.size.width/2),timePointsLabel.center.y);
         CGAffineTransform clockScale = CGAffineTransformMakeScale(0.55f, 0.55f);
-        CGAffineTransform clockMove = CGAffineTransformMakeTranslation(clockViewXTransform, -20.0f);
+        //CGAffineTransform clockMove = CGAffineTransformMakeTranslation(clockViewXTransform, -20.0f);
         //[clockView setTransform:CGAffineTransformMakeScale(0.4f, 0.4f)];
         //[clockView setTransform:CGAffineTransformMakeTranslation(30.0f, 0.0f)];
-        [clockView setTransform:CGAffineTransformConcat(clockScale, clockMove)];
+        //[clockView setTransform:CGAffineTransformConcat(clockScale, clockMove)];
+        [clockView setTransform:clockScale];
 
         [UIView commitAnimations];
     }
@@ -627,7 +630,7 @@
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationDidStopSelector:@selector(updateLoopeAnimationDone)];
     
-	[UIView setAnimationDuration:0.7];
+	[UIView setAnimationDuration:0.6];
 	[loop setAlpha:1];
     [loop setTransform:CGAffineTransformMakeScale(1, 1)];
     [loop positionLeft];
@@ -834,10 +837,11 @@
     resultBoardView.sectionFiguresView.center = CGPointMake(([screen applicationFrame].size.width/2), ([screen applicationFrame].size.height/2));
     [screen release];
     
+    
     if (resultBoardView.playerSymbolMiniWindowView != nil) {
         [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
-        [resultBoardView.playerSymbolMiniWindowView dealloc];
-        resultBoardView.playerSymbolMiniWindowView = nil;        
+        //[resultBoardView.playerSymbolMiniWindowView dealloc];
+        //resultBoardView.playerSymbolMiniWindowView = nil;
     }
 
     
@@ -1612,6 +1616,7 @@
         hintDeductLabel.text = @"- 500 km";
         [self.view addSubview:hintDeductLabel];
     }
+    [hintDeductLabel setTransform:CGAffineTransformMakeScale(1.9, 1.9)];
     hintDeductLabel.center = CGPointMake([screen applicationFrame].size.width /2 , ([screen applicationFrame].size.height /2) -100 );//hintButton.center;//
     [hintDeductLabel setAlpha:1];
 
@@ -1620,13 +1625,15 @@
     [UIView beginAnimations:@"DeductHint" context:NULL];
 	[UIView setAnimationDuration:0.7];
     [UIView setAnimationDelay:0.4];
-    [UIView setAnimationRepeatCount:3];
+    //[UIView setAnimationRepeatCount:3];
+    //[UIView setAnimationRepeatAutoreverses:YES];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(deductHintDidStop:finished:context:)];
 
-    
+    [hintDeductLabel setTransform:CGAffineTransformMakeScale(1, 1)];
     hintDeductLabel.center = infoBarBottom.center;
+    [hintDeductLabel setAlpha:0];
 	[UIView commitAnimations];
     
     [currentPlayer release];
@@ -1634,14 +1641,18 @@
 
 - (void)deductHintDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
 {
-    [hintDeductLabel setAlpha:0];
+    Player *currentPlayer = [[m_gameRef GetPlayer] retain];
+    [currentPlayer DeductKmLeft:500];
+    [currentPlayer release];
+    
+    /*
     [UIView beginAnimations:@"DeductHint2" context:nil];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     [UIView setAnimationDuration:1.0];
     [UIView setAnimationDelay:1.0];
-    
-    
     [UIView commitAnimations];
+*/
+    [infoBarBottom UpdateBars];
 }
 
 

@@ -56,6 +56,7 @@
 -(NSInteger) GetKmLeft;
 -(UIColor*) GetColor;
 -(void) SetKmLeft:(NSInteger)val;
+-(void) DeductKmLeft:(NSInteger) val;
 -(void) SetKmLeft_ForInfoBar:(NSInteger) kmLeft;
 -(void) SetBarWidth:(NSInteger) width;
 -(NSInteger) GetBarWidth;
