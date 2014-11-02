@@ -22,7 +22,8 @@
 	float a = point2.x - point1.x;
 	float b = point2.y - point1.y;
 	
-	return sqrt(a * a + b * b);
+    float returnValue = sqrt(a * a + b * b);
+	return returnValue;
 }
 
 +(NSInteger) GetDistanceInKm:(CGPoint) point1 andPoint2:(CGPoint) point2

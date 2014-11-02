@@ -19,7 +19,7 @@
 {
 	self = [super initWithName:name andID:loactionID andCounty:county andState:state andAdditionalInfo:addInfo];
 	
-	m_maxLengthBetweenPoints = 5;
+	m_maxLengthBetweenPoints = 20;
 	
 	
 	m_polygons = [[polygons mutableCopy] retain];
@@ -56,13 +56,11 @@
 
 -(void) UpdatePolygon:(NSArray *) currentPolygon
 {
-    return;
-    /*
 	BOOL foundNewPoints = NO;
 	do {
 		foundNewPoints = [self InsertMidwayPoints:currentPolygon];
 	} while (foundNewPoints);
-     */
+     
 }
 
 
@@ -84,7 +82,7 @@
 		tempPoint1 = [tempNSValue1 CGPointValue];
 		tempNSValue2 = [currentPolygon objectAtIndex:(i+1) % [currentPolygon count]];
 		tempPoint2 = [tempNSValue2 CGPointValue];
-		if( [CoordinateHelper GetDistanceInKm:tempPoint1 andPoint2:tempPoint2] > m_maxLengthBetweenPoints)
+		if( [CoordinateHelper GetDistance:tempPoint1 andPoint2:tempPoint2] > m_maxLengthBetweenPoints)
 		{
 			newPointMiddlePoint.x = (tempPoint1.x + tempPoint2.x) / 2;
 			newPointMiddlePoint.y = (tempPoint1.y + tempPoint2.y) / 2;

@@ -345,14 +345,6 @@
         UIImageView *lineImageView = [m_linesArray objectAtIndex:i];
         tempPlayer = [[players objectAtIndex:i] retain];
         
-        //				DistanceMeasurement measurement = [[GlobalSettingsHelper Instance] GetDistance];
-        //				if (measurement == mile) {
-        //					measurementString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"miles"];
-        //				}
-        //				else {
-        //					measurementString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"kilometers"];
-        //				}
-        
         if([tempPlayer HasGivenUp] == YES)
         {
             playerDistanceLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player gave up"]];
