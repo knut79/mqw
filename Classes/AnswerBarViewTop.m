@@ -109,37 +109,19 @@
 	NSMutableString *addInfo = [[[questionRef GetLocation] GetAdditionalInfo] retain];
 	
 	//set text for single player game
-	//and multiplayergame , both last standing and most points
-	if ([gameRef IsMultiplayer] == YES) 
-	{
-		//m_resultLabel.adjustsFontSizeToFitWidth = YES;
-		m_label.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Target"],[questionRef GetName]];
-		
-	}
-	//single player
-	else 
-	{
-		NSInteger distanceFromDestination = [[gameRef GetPlayer] GetLastDistanceFromDestination];
-		
-		if (distanceFromDestination > 0) 
-		{
-//			DistanceMeasurement measurement = [[GlobalSettingsHelper Instance] GetDistance];
-//			if (measurement == mile) {
-//				m_label.text = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:distanceFromDestination],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"miles from destination"],[questionRef GetName]];
-//			}
-//			else
-//			{
-//				m_label.text = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:distanceFromDestination],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"km from destination"],[questionRef GetName]];
-//			}
-            
-            m_label.text = [NSString stringWithFormat:@"%d %@ %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:distanceFromDestination],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
-                [[GlobalSettingsHelper Instance] GetStringByLanguage:@"from destination"],[questionRef GetName]];
-		}
-		else 
-		{
-			m_label.text = [NSString stringWithFormat:@"%@ %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Correct location of"],[questionRef GetName]];
-		}
-	}
+
+    NSInteger distanceFromDestination = [[gameRef GetPlayer] GetLastDistanceFromDestination];
+    if (distanceFromDestination > 0) 
+    {
+
+        
+        m_label.text = [NSString stringWithFormat:@"%d %@ %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:distanceFromDestination],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
+            [[GlobalSettingsHelper Instance] GetStringByLanguage:@"from destination"],[questionRef GetName]];
+    }
+    else 
+    {
+        m_label.text = [NSString stringWithFormat:@"%@ %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Correct location of"],[questionRef GetName]];
+    }
 	
 	m_label.numberOfLines = 1;
 	m_label.adjustsFontSizeToFitWidth = YES;

@@ -236,31 +236,6 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
-    if ([m_gameRef IsMultiplayer] == YES) {
-        if(adBannerViewIsVisible == YES)
-        {
-            //_? what is this for
-            UIScreen *screen = [[UIScreen mainScreen] retain];
-            [UIView beginAnimations:@"showAdBar" context:nil];
-            CGPoint currentPoint = [[touches anyObject] locationInView:self.superview];
-            if (currentPoint.y < ([screen applicationFrame].size.height - 50) ) 
-            {
-                [self setUserInteractionEnabled:NO];
-                NSLog(@"tap on GameEnded view caught");
-                //start timer for player
-                [self FadeOut];
-            }
-            [screen release];
-        }
-        else
-        {
-            [self setUserInteractionEnabled:NO];
-            NSLog(@"tap on GameEnded view caught");
-            //start timer for player
-            [self FadeOut];
-        }
-    }
-
 }
 
 -(void) ResetLabels
@@ -284,163 +259,17 @@
 -(void)SetHeader:(Game*) gameRef
 {
     m_gameRef = gameRef;
-	//[self setUserInteractionEnabled:NO];
 	[self ResetLabels];
     UIScreen *screen = [[UIScreen mainScreen] retain];
-	
-	//NSMutableArray *players = [[gameRef GetSortedPlayersForGame] retain];
-	Player *tempPlayer;
-	NSString *measurementString = @"";
-	if ([gameRef IsMultiplayer] == YES) {
 
-        self.userInteractionEnabled = YES;
-		UIImage *headerImage = [[UIImage imageNamed:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"TheWinner.png"]] retain];
-		m_headerImageView.image = headerImage;
-		[headerImage release];
-		
-		if ([gameRef GetGameType] == lastStanding )  
-		{
-            [self setUpMultiplayerLastStandingGame:gameRef];
-		}
-		else //points game
-		{
-            [self setUpMultiplayerMostPointsGame:gameRef];
-		}
-		
-        m_tapWhenReadyLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap when ready"];
-        
+    [self setUpSinglePlayer:gameRef];
 
-	} //singleplayer game
-	else {
-        [self setUpSinglePlayer:gameRef];
-
-	}
-
-//	m_tapWhenReadyLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap when ready"];
-//	m_tapWhenReadyLabel.center = CGPointMake([screen applicationFrame].size.width/2, yOffset + 120);
-	
 	m_headerImageView.center = CGPointMake([screen applicationFrame].size.width/2,  50);
-	
-	
-	//[players release];
+
 	[screen release];
 	[self FadeIn];
 	
 	[self AnimateElementsIn:[[gameRef GetPlayers] count]];
-	//[self AnimateElementsIn:[[gameRef GetSortedPlayersForGame] count]];
-}
-
--(void) setUpMultiplayerLastStandingGame:(Game*) gameRef
-{
-    UIScreen *screen = [[UIScreen mainScreen] retain];
-	NSInteger yOffset = 40;
-	NSInteger yOffsetConstant = 70;
-    Player *tempPlayer;
-    NSString *measurementString = @"";
-    NSArray *players = [[gameRef GetSortedPlayersForGame_LastStanding] retain];
-    for (int i = 0; i < [players count]; i++) 
-    {
-        UILabel *playerNameLabel = [m_playerNameLabelsArray objectAtIndex:i];
-        UILabel *playerDistanceLabel = [m_playerDistanceLabelsArray objectAtIndex:i];
-        UIImageView *lineImageView = [m_linesArray objectAtIndex:i];
-        tempPlayer = [[players objectAtIndex:i] retain];
-        
-        if([tempPlayer HasGivenUp] == YES)
-        {
-            playerDistanceLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player gave up"]];
-            
-        }
-        else
-        {
-            if ([tempPlayer GetKmLeft] < 0) {
-                playerDistanceLabel.text = [NSString stringWithFormat:@"%@: %d %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Distance exceeded"] ,[[GlobalSettingsHelper Instance] ConvertToRightDistance:[tempPlayer GetKmLeft]] * -1,[[GlobalSettingsHelper Instance] GetDistanceMeasurementString]];
-            }
-            else
-                playerDistanceLabel.text = [NSString stringWithFormat:@"%@: %d %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Distance left"] ,[[GlobalSettingsHelper Instance] ConvertToRightDistance:[tempPlayer GetKmLeft]],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString]];
-            
-        }
-        
-        
-        //display the winner
-        if (i == 0) 
-        {
-            [playerNameLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-            playerNameLabel.center = CGPointMake([screen applicationFrame].size.width/2,  70 + yOffset);
-            [playerDistanceLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-        }
-        else 
-        {
-            playerNameLabel.center = CGPointMake([screen applicationFrame].size.width/2,  70 + yOffset);
-        }
-        
-        playerDistanceLabel.center = CGPointMake([screen applicationFrame].size.width/2,  90 + yOffset);
-        playerNameLabel.text = [NSString stringWithFormat:@"%@. %@: %d",[[tempPlayer GetName] retain],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"] ,[tempPlayer GetQuestionsPassed]];
-        lineImageView.center = CGPointMake([screen applicationFrame].size.width/2,  100 + yOffset);
-        
-        yOffset = yOffset + yOffsetConstant;
-        
-        [playerDistanceLabel setAlpha:0];
-        [playerNameLabel setAlpha:0];
-        [tempPlayer release];
-    }
-    m_tapWhenReadyLabel.center = CGPointMake([screen applicationFrame].size.width/2, yOffset + 120);
-    [players release];
-    [screen release];
-}
-
--(void) setUpMultiplayerMostPointsGame:(Game*) gameRef
-{
-    UIScreen *screen = [[UIScreen mainScreen] retain];
-	NSInteger yOffset = 40;
-	NSInteger yOffsetConstant = 70;
-    Player *tempPlayer;
-    NSString *measurementString = @"";
-    NSArray *players = [[gameRef GetSortedPlayersForGame] retain];
-    for (int i = 0; i < [players count]; i++) 
-    {
-        UILabel *playerNameLabel = [m_playerNameLabelsArray objectAtIndex:i];
-        UILabel *playerDistanceLabel = [m_playerDistanceLabelsArray objectAtIndex:i];
-        UIImageView *lineImageView = [m_linesArray objectAtIndex:i];
-        tempPlayer = [[players objectAtIndex:i] retain];
-        
-        
-        measurementString = [NSString stringWithFormat:@"%@: %d %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Combined distance to targets"] ,[[GlobalSettingsHelper Instance] ConvertToRightDistance:[tempPlayer GetTotalDistanceFromAllDestinations]],
-                             [[GlobalSettingsHelper Instance] GetDistanceMeasurementString]];
-        
-        //display the winner
-        if (i == 0) 
-        {
-            [playerNameLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-            [playerDistanceLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-        }
-        
-        playerNameLabel.center = CGPointMake([screen applicationFrame].size.width/2,  70 + yOffset);
-        playerDistanceLabel.center = CGPointMake([screen applicationFrame].size.width/2,  90 + yOffset);
-        if ([tempPlayer HasGivenUp]  == YES) {
-            playerNameLabel.text = [NSString stringWithFormat:@"%@ %@",[tempPlayer GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
-            playerDistanceLabel.text = [NSString stringWithFormat:@"-"];
-        }
-        else
-        {
-            playerNameLabel.text = [NSString stringWithFormat:@"%@. %@: %d. %@: %d",[tempPlayer GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],[tempPlayer GetScore],
-                                    [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Seconds used"],[tempPlayer GetSecondsUsed]];
-            playerDistanceLabel.text = [NSString stringWithFormat:@"%@",measurementString];
-        }
-        
-        
-        
-        lineImageView.center = CGPointMake([screen applicationFrame].size.width/2,  100 + yOffset);
-        
-        yOffset = yOffset + yOffsetConstant;
-        
-        [playerDistanceLabel setAlpha:0];
-        [playerNameLabel setAlpha:0];
-        //[self addSubview:playerNameLabel];
-        [tempPlayer release];
-    }
-    m_tapWhenReadyLabel.center = CGPointMake([screen applicationFrame].size.width/2, yOffset + 120);
-    [players release];
-    [screen release];
 }
 
 -(void) setUpSinglePlayer:(Game*) gameRef

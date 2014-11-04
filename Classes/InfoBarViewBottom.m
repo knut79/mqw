@@ -429,14 +429,10 @@
         
 		if (([player GetKmLeft] + [player GetCurrentKmTimeBonus]) > 0) {
 			playersLeftAfterAnimation ++;
-			if ([m_gameRef IsMultiplayer] == NO) {
-				//only singleplayer games wil give highscores
-				[player IncreasQuestionsPassedAndScore:currentQuestion];
-			}
-			else {
-				[player IncreasQuestionsPassed:currentQuestion];
-				[m_gameRef IncreasQuestionsPassed];
-			}
+
+            //only singleplayer games wil give highscores
+            [player IncreasQuestionsPassedAndScore:currentQuestion];
+
 		}
        
 	}
@@ -487,9 +483,6 @@
             
             
             int barWidthTimeBonus = timeBonusBarFactor * (m_barWidthStart/const_startKmDistance);
-
-
-
 
 			//text for info bar
 			[player SetKmLeft_ForInfoBar:goingForKmLeft];

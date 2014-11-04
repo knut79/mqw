@@ -24,13 +24,9 @@
 		UIImage *vImage = [UIImage imageNamed:@"quitBtn.png"];		
 		[backgroundImageView setImage:vImage];
 		[self addSubview:backgroundImageView];
-        
-        m_multiplayer = NO;
 		
 		alert = [[UIAlertView alloc] initWithTitle:@"Quit" 
 														message:@"Quit game?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
-		
-		
     }
     return self;
 }
@@ -42,22 +38,6 @@
 
 }
 
--(void) IsMultiplayer:(BOOL) value;
-{
-    if(value == YES)
-    {
-        m_multiplayer = YES;
-        alert.title = @"Looser";
-        alert.message = @"Give up?";
-    }
-    else
-    {
-        m_multiplayer = NO;
-        alert.title = @"Quit";
-        alert.message = @"Quit game?";
-    }
-
-}
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
@@ -77,27 +57,17 @@
 - (void)alertView : (UIAlertView *)alertView clickedButtonAtIndex : (NSInteger)buttonIndex
 {
 
-		if(buttonIndex == 0)
-		{
-			NSLog(@"no button was pressed\n");
-		}
-		else
-		{
-			NSLog(@"yes button was pressed\n");
-            if (m_multiplayer == NO) {
-            
-                if ([delegate respondsToSelector:@selector(QuitGame)])
-                    [delegate QuitGame];
-            }
-            else
-            {
-                if ([delegate respondsToSelector:@selector(GiveUp)])
-                    [delegate GiveUp];
-          
-            }
-            
-		}
+    if(buttonIndex == 0)
+    {
+        NSLog(@"no button was pressed\n");
+    }
+    else
+    {
+        NSLog(@"yes button was pressed\n");
 
+        if ([delegate respondsToSelector:@selector(QuitGame)])
+            [delegate QuitGame];
+    }
 }
 
 

@@ -59,8 +59,6 @@
 - (void)createAdBannerView;
 -(void) showAdBar;
 -(void) setUpSinglePlayer:(Game*) gameRef;
--(void) setUpMultiplayerLastStandingGame:(Game*) gameRef;
--(void) setUpMultiplayerMostPointsGame:(Game*) gameRef;
 @end
 
 @protocol GameEndedViewDelegate <NSObject>

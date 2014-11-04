@@ -129,115 +129,20 @@
 	m_playerNameLabel.text = [[m_playerRef GetName] retain];
 	m_secondsUsedLabel.text = [NSString stringWithFormat:@"%d %@",[m_playerRef GetSecondsUsed],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Seconds used"]];
 	
-	if ([gameRef IsMultiplayer] == YES) 
-	{
-		//Most points game
-		if ([gameRef GetGameType] == mostPoints) 
-		{
-			//total km/miles from destinations
-			NSInteger totalDistanceFromDestinations = [m_playerRef GetTotalDistanceFromAllDestinations];
-			//DistanceMeasurement measurement = [[GlobalSettingsHelper Instance] GetDistance];
-			m_dynamicLabel1.lineBreakMode = UILineBreakModeCharacterWrap;
-//			if (measurement == mile) {
-//				m_dynamicLabel1.text = [NSString stringWithFormat:@"%@ %@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Total"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"miles from destinations"],[[GlobalSettingsHelper Instance] ConvertToRightDistance:totalDistanceFromDestinations]];
-//			}
-//			else
-//			{
-//				m_dynamicLabel1.text = [NSString stringWithFormat:@"%@ %@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Total"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"km from destinations"],[[GlobalSettingsHelper Instance] ConvertToRightDistance:totalDistanceFromDestinations]];
-//			}
-            
-            m_dynamicLabel1.text = [NSString stringWithFormat:@"%@ %@ %@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Total"],
-                                    [[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
-                                    [[GlobalSettingsHelper Instance] GetStringByLanguage:@"from destinations"],
-                                    [[GlobalSettingsHelper Instance] ConvertToRightDistance:totalDistanceFromDestinations]];
-			
-			//score
-			m_dynamicLabel2.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],[m_playerRef GetScore]];
-			//position/place
-			switch ([m_playerRef GetPositionByScore]) {
-				case 1:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"1st"]];
-					break;
-				case 2:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"2nd"]];
-					break;
-				case 3:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"3rd"]];
-					break;
-				case 4:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"4th"]];
-					break;
-				default:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"No position given"]];
-					break;
-			}
-		}
-		//Last standing game
-		else   
-		{
-			//questions passed
-			m_dynamicLabel1.text = [NSString stringWithFormat:@"%d %@",[m_playerRef GetQuestionsPassed],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions passed"]];
-			//km/miles left
-			NSInteger kmLeft = [m_playerRef GetKmLeft];
-//			DistanceMeasurement measurement = [[GlobalSettingsHelper Instance] GetDistance];
-//			if (measurement == mile) {
-//				m_dynamicLabel2.text = [NSString stringWithFormat:@"%d %@", [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Miles left"]];
-//			}
-//			else
-//			{
-//				m_dynamicLabel2.text = [NSString stringWithFormat:@"%d %@", [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Kilometers left"]];
-//			}
-            
-            m_dynamicLabel2.text = [NSString stringWithFormat:@"%d %@ %@", 
-                                    [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],
-                                    [[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
-                                    [[GlobalSettingsHelper Instance] GetStringByLanguage:@"left"]];
-            
-			//position/place
-			switch ([m_playerRef GetPositionByScore]) {
-				case 1:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"1st"]];
-					break;
-				case 2:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"2nd"]];
-					break;
-				case 3:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"3rd"]];
-					break;
-				case 4:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"4th"]];
-					break;
-				default:
-					m_dynamicLabel3.text = [NSString stringWithFormat:@"%@: %@", [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"No position given"]];
-					break;
-			}
-		}
 
-		
-	}
-	//Single player game
-	else 
-	{
-		//questions passed
-		m_dynamicLabel1.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions passed"],[m_playerRef GetQuestionsPassed]];
-		//score
-		m_dynamicLabel2.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],[m_playerRef GetScore]];
-		//km/miles left
-		NSInteger kmLeft = [m_playerRef GetKmLeft];
-//		DistanceMeasurement measurement = [[GlobalSettingsHelper Instance] GetDistance];
-//		if (measurement == mile) {
-//			m_dynamicLabel3.text = [NSString stringWithFormat:@"%d %@", [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Miles left"]];
-//		}
-//		else
-//		{
-//			m_dynamicLabel3.text = [NSString stringWithFormat:@"%d %@", [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Kilometers left"]];
-//		}
-        
-        m_dynamicLabel3.text = [NSString stringWithFormat:@"%d %@ %@", 
-                                [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],
-                                [[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
-                                [[GlobalSettingsHelper Instance] GetStringByLanguage:@"left"]];
-	}
+    //questions passed
+    m_dynamicLabel1.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions passed"],[m_playerRef GetQuestionsPassed]];
+    //score
+    m_dynamicLabel2.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],[m_playerRef GetScore]];
+    //km/miles left
+    NSInteger kmLeft = [m_playerRef GetKmLeft];
+
+    
+    m_dynamicLabel3.text = [NSString stringWithFormat:@"%d %@ %@", 
+                            [[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],
+                            [[GlobalSettingsHelper Instance] GetDistanceMeasurementString],
+                            [[GlobalSettingsHelper Instance] GetStringByLanguage:@"left"]];
+
 	
 	m_tapWhenReadyLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap when ready"];
 	

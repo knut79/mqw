@@ -217,12 +217,8 @@
 		}
 		[resultsPlayers close];
 		
-		BOOL isMultiplayers = NO;
-		if (players.count > 1) {
-			isMultiplayers = YES;
-		}
 		
-		[m_gameRef SetPlayers:players andDifficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]] andMultiplayers:isMultiplayers
+		[m_gameRef SetPlayers:players andDifficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]]
 				  andGameType:[EnumHelper stringToGametype:[resultsSavestate stringForColumn:@"gameType"]] andNumberOfQuestions: [[resultsSavestate stringForColumn:@"numberOfQuestions"]integerValue] ];
 		
 		
@@ -361,22 +357,11 @@
     
     
     if ([m_gameRef IsTrainingMode] == NO) {
-        if ([m_gameRef IsMultiplayer] == NO) {
-            [clockView stop];
-            [self AnimateAndGiveTimePoints];
-            //in singleplayer, dont remove clock before message of timebonus is shown
-        }
-        else
-        {
-            [clockView stop];
-            //[self AnimateAndGiveTimePoints];
-            [self GiveTimePoints];
-            [clockView removeFromSuperview];
-            clockView = nil;
-        }
-    }
-          
 
+        [clockView stop];
+        [self AnimateAndGiveTimePoints];
+        //in singleplayer, dont remove clock before message of timebonus is shown
+    }
     
     [quitButton removeFromSuperview];
     quitButton = nil;
@@ -396,7 +381,6 @@
         
         if (quitButton == nil) {
             quitButton = [[QuitButtonView alloc] init];
-            [quitButton IsMultiplayer:[m_gameRef IsMultiplayer]];
             [quitButton setDelegate:self];
             [[self view] addSubview:quitButton];
         }
@@ -417,14 +401,13 @@
 		
         if([player GetPassesLeft] > 0)
         {
-            if ([m_gameRef IsMultiplayer] == NO) {
-                if (passButton == nil) {
-                    passButton = [[PassButtonView alloc] init];
-                    [passButton setDelegate:self];
-                    [[self view] addSubview:passButton];
-                }
-                [passButton SetTimesLeft:[player GetPassesLeft]];
+            if (passButton == nil) {
+                passButton = [[PassButtonView alloc] init];
+                [passButton setDelegate:self];
+                [[self view] addSubview:passButton];
             }
+            [passButton SetTimesLeft:[player GetPassesLeft]];
+
 
         }
         
@@ -880,20 +863,11 @@
 	
 	if (([[m_gameRef GetPlayer] IsOut] == YES) || ([[m_gameRef GetPlayer] HasGivenUp] == YES)) {
         
-        [m_gameRef SetNextPlayer];
+        //[m_gameRef SetNextPlayer];
 		
         
         Player *nextPlayer = [[m_gameRef GetPlayer] retain];
         [self SetGameElementsForPlayer:nextPlayer];
-		
-		if ([m_gameRef IsMultiplayer] == YES) 
-		{	
-			UIScreen *screen = [[UIScreen mainScreen] retain];
-			touchImageView.center = CGPointMake([screen applicationFrame].size.width/2, [screen applicationFrame].size.height/2);
-			[screen release];
-		}
-		
-		
 
 		NSString *playerName = [[nextPlayer GetName] retain];
 		
@@ -911,19 +885,8 @@
 
 	[answerBarTop FadeOut];
 	[self FadeOutGameElements];
-	if ([m_gameRef IsMultiplayer] == YES) 
-	{
-		if (m_roundEndedView == nil) {
-			m_roundEndedView = [[RoundEndedView alloc] initWithFrame:[[self view] bounds]];
-			[m_roundEndedView setDelegate:self];
-			[[self view] addSubview:m_roundEndedView];
-		}
-		[m_roundEndedView SetRoundResults:m_gameRef];
-	}
-	else
-	{
-		[self AnimateQuestion:NO];
-	}
+    [self AnimateQuestion:NO];
+
 }
 
 
@@ -963,35 +926,28 @@
 		[[self view] addSubview:m_animTextView];
 	}
 
+
+    Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     
-	if ([m_gameRef IsMultiplayer] == NO) {
+    //add question for challenge
+    ChallengeQuestionItem* newQuestion = [[[ChallengeQuestionItem alloc] init] autorelease];
+    newQuestion.qid = [[m_gameRef GetQuestion] GetID];
+    newQuestion.kmLeft = [currentPlayer GetKmLeft];   //[currentPlayer GetLastDistanceFromDestination ];
+    newQuestion.kmTimeBonus = [currentPlayer GetCurrentKmTimeBonus];
+    newQuestion.answered = 1;
+    NSLog(@"Question values %@ %d %d %d", newQuestion.qid,newQuestion.kmLeft,newQuestion.kmTimeBonus,newQuestion.answered);
+    [m_gameRef.challenge addQuestion:newQuestion];        
+    
+    
+    [questionBarTop FadeOut];
+    
+    
+    m_animTextView.hidden = NO;
+    [m_animTextView setText:[currentPlayer GetPepTalk]];
+    [m_animTextView startTextAnimation];
 
-		Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-        
-        //add question for challenge
-        ChallengeQuestionItem* newQuestion = [[[ChallengeQuestionItem alloc] init] autorelease];
-        newQuestion.qid = [[m_gameRef GetQuestion] GetID];
-        newQuestion.kmLeft = [currentPlayer GetKmLeft];   //[currentPlayer GetLastDistanceFromDestination ];
-        newQuestion.kmTimeBonus = [currentPlayer GetCurrentKmTimeBonus];
-        newQuestion.answered = 1;
-        NSLog(@"Question values %@ %d %d %d", newQuestion.qid,newQuestion.kmLeft,newQuestion.kmTimeBonus,newQuestion.answered);
-        [m_gameRef.challenge addQuestion:newQuestion];        
-        
-        
-		[questionBarTop FadeOut];
-		
-		
-		m_animTextView.hidden = NO;
-		[m_animTextView setText:[currentPlayer GetPepTalk]];
-		[m_animTextView startTextAnimation];
+    [currentPlayer release];
 
-		[currentPlayer release];
-		
-	}
-	else {
-		m_animTextView.hidden = NO;
-		[m_animTextView startTapMessage];
-	}
 	
 	
 	if ([m_gameRef IsTrainingMode] == YES) {
@@ -1386,29 +1342,14 @@
 
 	
 	if ([m_gameRef IsTrainingMode] == NO) {
-		
-		
-		if ([m_gameRef IsMultiplayer] == YES) {
-			if(m_startPlayerView == nil)
-			{
-				m_startPlayerView = [[StartPlayerView alloc] initWithFrame:[[self view] bounds]];
-				[m_startPlayerView setDelegate:self];
-				[[self view] addSubview:m_startPlayerView];
-			}
-			[m_startPlayerView SetPlayerRef:firstPlayer gameRef:m_gameRef];
-			[[self view] bringSubviewToFront:m_startPlayerView];
-			[m_startPlayerView FadeIn];
-		}
-		else {
-            //single player game
-            
-            //set up challenge
-            m_gameRef.challenge.creator = [[GlobalSettingsHelper Instance] GetPlayerID];
-            m_gameRef.challenge.kmToUse = const_startKmDistance;
-            m_gameRef.challenge.difficulty = [m_gameRef GetGameDifficulty];
-            
-			[self StartPlayer];
-		}
+
+        //set up challenge
+        m_gameRef.challenge.creator = [[GlobalSettingsHelper Instance] GetPlayerID];
+        m_gameRef.challenge.kmToUse = const_startKmDistance;
+        m_gameRef.challenge.difficulty = [m_gameRef GetGameDifficulty];
+        
+        [self StartPlayer];
+
         
 		[m_gameRef SetGameState:inGame];
 	}
@@ -1457,62 +1398,20 @@
 		gameFinished = YES;
 
 	
-	if ([m_gameRef IsMultiplayer] == NO) {
-		NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-		Player *singlePlayer = [players objectAtIndex:0];
-		if ([singlePlayer GetKmLeft] <= 0) {
-			gameFinished = YES;
-		}
-		[players release];
-		//[singlePlayer release];
-	}
-	else {
-		if ([m_gameRef GetGameType] == mostPoints) {
-            
-            if ([m_gameRef GetPlayersLeft] <= 1) 
-			{
-				gameFinished = YES;
-			}
-            else
-            {
-                if ([m_gameRef GetQuestionsPassed] >= [m_gameRef GetNumberOfQuestions]){
-                    BOOL OnePlayerAtTop = [m_gameRef IsOnePlayerAtTop];
-                    if(OnePlayerAtTop == YES) {
-                        gameFinished = YES;
-                    }
-                }
-            }
-		}
-		//Laststanding
-		else {
-			
-			if ([m_gameRef GetPlayersLeft] <= 1) 
-			{
-				gameFinished = YES;
-			}
-		}
-	}
-	
+
+    NSMutableArray *players = [[m_gameRef GetPlayers] retain];
+    Player *singlePlayer = [players objectAtIndex:0];
+    if ([singlePlayer GetKmLeft] <= 0) {
+        gameFinished = YES;
+    }
+    [players release];
+		
 	if (gameFinished == NO) {
 		if ([m_gameRef IsTrainingMode] == NO) {
 			[m_gameRef SetGameState:inGame];
-			//NEW _?
-			if ([m_gameRef IsMultiplayer] == YES) {
 
-				if(m_startPlayerView == nil)
-				{
-					m_startPlayerView = [[StartPlayerView alloc] initWithFrame:[[self view] bounds]];
-					[m_startPlayerView setDelegate:self];
-					[[self view] addSubview:m_startPlayerView];
-				}
-				[m_startPlayerView SetPlayerRef:currentPlayer gameRef:m_gameRef];
-				[[self view] bringSubviewToFront:m_startPlayerView];
-				[m_startPlayerView FadeIn];
+            [self StartPlayer];
 			
-			}
-			else {
-				[self StartPlayer];
-			}
 		}
 		else {
 			[infoBarBottom SetTrainingText];
@@ -1663,17 +1562,14 @@
     Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     [currentPlayer PassUsed];
     
-    //if singleplayer game add question to challenge
-    if([m_gameRef IsMultiplayer] == NO)
-    {
-        ChallengeQuestionItem* newQuestion = [[[ChallengeQuestionItem alloc] init] autorelease];
-        newQuestion.qid = [[m_gameRef GetQuestion] GetID];
-        newQuestion.kmLeft = [currentPlayer GetKmLeft]; 
-        newQuestion.kmTimeBonus = 0;
-        newQuestion.answered = 0;
-        NSLog(@"Question values %@ %d %d %d", newQuestion.qid,newQuestion.kmLeft,newQuestion.kmTimeBonus,newQuestion.answered);
-        [m_gameRef.challenge addQuestion:newQuestion];
-    }
+    ChallengeQuestionItem* newQuestion = [[[ChallengeQuestionItem alloc] init] autorelease];
+    newQuestion.qid = [[m_gameRef GetQuestion] GetID];
+    newQuestion.kmLeft = [currentPlayer GetKmLeft]; 
+    newQuestion.kmTimeBonus = 0;
+    newQuestion.answered = 0;
+    NSLog(@"Question values %@ %d %d %d", newQuestion.qid,newQuestion.kmLeft,newQuestion.kmTimeBonus,newQuestion.answered);
+    [m_gameRef.challenge addQuestion:newQuestion];
+
     [m_gameRef SetNextQuestion];
     [questionBarTop SetQuestion:[[m_gameRef GetPlayer] GetName] gameRef:m_gameRef];
     [currentPlayer release];
@@ -1729,12 +1625,13 @@
 		
 		
 		BOOL showingResult = NO;
-		if ([m_gameRef CurrentPlayerIsLast] == YES) 
-		{
+		
+        //if ([m_gameRef CurrentPlayerIsLast] == YES)
+
 			showingResult = YES;
 			
 			//make game point into real map coordinates
-			CGPoint realMapGamePoint;
+			//CGPoint realMapGamePoint;
 			realMapGamePoint = CGPointMake(gamePoint.x + [playingBoardView bounds].origin.x, gamePoint.y + [playingBoardView bounds].origin.y); 
 			//scale to tile 
 			realMapGamePoint.x = realMapGamePoint.x /[playingBoardView zoomScale] ;
@@ -1751,14 +1648,6 @@
 			if ([m_gameRef IsTrainingMode] == NO) {
 				[m_gameRef SetGameState:showResult];
 			}
-            //_TEST
-            /*
-			[self performTransition];
-			
-			[questionBarTop FadeOut];
-			[answerBarTop FadeIn];
-            [self FadeOutGameElements];*/
-            //_END TEST
             
 			[resultBoardView drawResult_UpdateGameData:YES];
             
@@ -1768,109 +1657,20 @@
 			[answerBarTop FadeIn];
             
             
-			
-		}
-		else {
-			
-			
-			CGPoint realMapGamePoint;
-			realMapGamePoint = CGPointMake(gamePoint.x + [playingBoardView bounds].origin.x, gamePoint.y + [playingBoardView bounds].origin.y); 
-			//scale to tile 
-			realMapGamePoint.x = realMapGamePoint.x /[playingBoardView zoomScale] ;
-			realMapGamePoint.y = realMapGamePoint.y /[playingBoardView zoomScale] ;					   
-			//scale to map
-			realMapGamePoint.x = realMapGamePoint.x/ ((float)resolutionPercentage/100); 
-			realMapGamePoint.y = realMapGamePoint.y/ ((float)resolutionPercentage/100);
-			
-			[currentPlayer SetGamePoint:realMapGamePoint]; 
-			
-			
-		}
 		
         //this is where we decide if the player should be played
         
-		[m_gameRef SetNextPlayer];
+		//[m_gameRef SetNextPlayer];
 		Player *nextPlayer = [[m_gameRef GetPlayer] retain];
         [nextPlayer SetCurrentTimeMultiplier:0];
         [self SetGameElementsForPlayer:nextPlayer];
 		
-		//		if ([m_gameRef IsTrainingMode] == NO) {
-		//set the next player
-		
-		//check if last player is same as current player
-		//showingResult = drawing map with results
-		if ([m_gameRef IsMultiplayer] == YES && showingResult == NO) {
-			if(m_startPlayerView == nil)
-			{
-				m_startPlayerView = [[StartPlayerView alloc] initWithFrame:[[self view] bounds]];
-				[m_startPlayerView setDelegate:self];
-				[[self view] addSubview:m_startPlayerView];
-			}
-			[m_startPlayerView SetPlayerRef:nextPlayer gameRef:m_gameRef];
-			[[self view] bringSubviewToFront:m_startPlayerView];
-			[m_startPlayerView FadeIn];
-			
-			if(firstTimeInstructionsView == nil)
-			{
-                //no delegate for this . A delegate would trigger the StartGame method
-				firstTimeInstructionsView = [[FirstTimeInstructionsView alloc] initWithFrame:[[self view] bounds]];
-				[firstTimeInstructionsView setAlpha:0];
-				[[self view] addSubview:firstTimeInstructionsView];
-			}
-			[firstTimeInstructionsView SetPlayer:[nextPlayer GetName]];
-			[[self view] bringSubviewToFront:firstTimeInstructionsView];
-			[firstTimeInstructionsView FadeIn];
-			
-		}
-		
-		if ([m_gameRef IsMultiplayer] == YES) 
-		{	
-			[self ZoomOutMap];
-			
-			CGPoint gamepoint = [nextPlayer GetGamePoint];
-			
-			CGPoint scaledGamePoint;
-			scaledGamePoint.x = gamepoint.x * 0.25;
-			scaledGamePoint.y = gamepoint.y * 0.25;
-			//scale to tile
-			scaledGamePoint.x = scaledGamePoint.x * playingBoardView.zoomScale;
-			scaledGamePoint.y = scaledGamePoint.y * playingBoardView.zoomScale;
-			
-			//when last gamepoint is over half of this move map to lower part 
-			if (scaledGamePoint.y > 390) {
-				CGRect oldBounds = [playingBoardView bounds];
-				oldBounds.origin.y = oldBounds.origin.y + 320;
-				[playingBoardView setBounds:oldBounds];
-				scaledGamePoint.y = scaledGamePoint.y - 320;
-			}
-			
-			//reajust point
-			if (scaledGamePoint.x < 7) {
-				scaledGamePoint.x = 7;
-			}
-			if (scaledGamePoint.x > 318) {
-				scaledGamePoint.x = 318;
-			}
-			if (scaledGamePoint.y < 43) {
-				scaledGamePoint.y = 43;
-			}
-			if (scaledGamePoint.y > 436) {
-				scaledGamePoint.y = 436;
-			}
-			
-			touchImageView.center = scaledGamePoint;
-			
-		}
-
 		
 		NSString *playerSymbol = [[nextPlayer GetPlayerSymbol] retain];
 		UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
 		touchImageView.image = image;
 		[image release];
 		[playerSymbol release];
-		
-		//_?[self FadeOutGameElements];
-		
 		[nextPlayer release];
         [currentPlayer release];
 	}
@@ -1899,12 +1699,13 @@
 		
 		
 		BOOL showingResult = NO;
-		if ([m_gameRef CurrentPlayerIsLast] == YES) 
-		{
+        
+		//if ([m_gameRef CurrentPlayerIsLast] == YES)
+
 			showingResult = YES;
 			
 			//make game point into real map coordinates
-			CGPoint realMapGamePoint;
+			//CGPoint realMapGamePoint;
             realMapGamePoint = CGPointMake(9999, 9999); 
 			
 			[currentPlayer SetGamePoint:realMapGamePoint];
@@ -1922,86 +1723,20 @@
 			[questionBarTop FadeOut];
 			[answerBarTop FadeIn];
 			
+            /*
 		}
 		else {
 
 			CGPoint realMapGamePoint;
             realMapGamePoint = CGPointMake(9999, 9999);
 			[currentPlayer SetGamePoint:realMapGamePoint]; 
-		}
+		}*/
 		
-		[m_gameRef SetNextPlayer];
+		//[m_gameRef SetNextPlayer];
 		Player *nextPlayer = [[m_gameRef GetPlayer] retain];
         [self SetGameElementsForPlayer:nextPlayer];
 		
-		//		if ([m_gameRef IsTrainingMode] == NO) {
-		//set the next player
-		
-		//check if last player is same as current player
-		//showingResult = drawing map with results
-		if ([m_gameRef IsMultiplayer] == YES && showingResult == NO) {
-			if(m_startPlayerView == nil)
-			{
-				m_startPlayerView = [[StartPlayerView alloc] initWithFrame:[[self view] bounds]];
-				[m_startPlayerView setDelegate:self];
-				[[self view] addSubview:m_startPlayerView];
-			}
-			[m_startPlayerView SetPlayerRef:nextPlayer gameRef:m_gameRef];
-			[[self view] bringSubviewToFront:m_startPlayerView];
-			[m_startPlayerView FadeIn];
-			
-			if(firstTimeInstructionsView == nil)
-			{
-				firstTimeInstructionsView = [[FirstTimeInstructionsView alloc] initWithFrame:[[self view] bounds]];
-				[firstTimeInstructionsView setAlpha:0];
-				[[self view] addSubview:firstTimeInstructionsView];
-			}
-			[firstTimeInstructionsView SetPlayer:[nextPlayer GetName]];
-			[[self view] bringSubviewToFront:firstTimeInstructionsView];
-			[firstTimeInstructionsView FadeIn];
-			
-		}
-		
-		if ([m_gameRef IsMultiplayer] == YES) 
-		{	
-			[self ZoomOutMap];
-			
-			CGPoint gamepoint = [nextPlayer GetGamePoint];
-			
-			CGPoint scaledGamePoint;
-			scaledGamePoint.x = gamepoint.x * 0.25;
-			scaledGamePoint.y = gamepoint.y * 0.25;
-			//scale to tile
-			scaledGamePoint.x = scaledGamePoint.x * playingBoardView.zoomScale;
-			scaledGamePoint.y = scaledGamePoint.y * playingBoardView.zoomScale;
-			
-			//when last gamepoint is over half of this move map to lower part 
-			if (scaledGamePoint.y > 390) {
-				CGRect oldBounds = [playingBoardView bounds];
-				oldBounds.origin.y = oldBounds.origin.y + 320;
-				[playingBoardView setBounds:oldBounds];
-				scaledGamePoint.y = scaledGamePoint.y - 320;
-			}
-			
-			//reajust point
-			if (scaledGamePoint.x < 7) {
-				scaledGamePoint.x = 7;
-			}
-			if (scaledGamePoint.x > 318) {
-				scaledGamePoint.x = 318;
-			}
-			if (scaledGamePoint.y < 43) {
-				scaledGamePoint.y = 43;
-			}
-			if (scaledGamePoint.y > 436) {
-				scaledGamePoint.y = 436;
-			}
-			
-			touchImageView.center = scaledGamePoint;
-			
-		}
 
-		
 		NSString *playerSymbol = [[nextPlayer GetPlayerSymbol] retain];
 		UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
 		touchImageView.image = image;

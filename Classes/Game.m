@@ -33,10 +33,9 @@
 	return self;
 }
 
--(void) SetPlayers:(NSMutableArray *) players andDifficulty:(Difficulty) difficulty andMultiplayers:(BOOL) multiplayers andGameType:(GameType) gameType
+-(void) SetPlayers:(NSMutableArray *) players andDifficulty:(Difficulty) difficulty andGameType:(GameType) gameType
 andNumberOfQuestions:(NSInteger) numberOfQuestions
 {
-	m_multiplayer = multiplayers;
 	m_players =  [players mutableCopy];
 	m_difficulty = difficulty;
 	m_initialDifficulty = difficulty;
@@ -220,56 +219,6 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	}
 	return [m_players objectAtIndex:0];
 }
-
--(void) SetNextPlayer
-{
-	BOOL allPlayersOut = YES;
-	for (int i = 0;i < [m_players count]; i++) 
-	{
-		if ([[m_players objectAtIndex:i] IsOut] == NO) {
-			allPlayersOut = NO;
-			break;
-		}
-	}
-	
-	if (allPlayersOut == YES) {
-		m_currentPlayerIndex = 0;
-	}
-	else {
-		[self GetNextPlayerIndex];	
-	}
-}
-
--(NSInteger) GetNextPlayerIndex
-{
-	m_currentPlayerIndex = (m_currentPlayerIndex + 1) % [m_players count];
-	if (([[m_players objectAtIndex:m_currentPlayerIndex] IsOut] == YES) || ([[m_players objectAtIndex:m_currentPlayerIndex]  HasGivenUp] == YES)) {
-		m_currentPlayerIndex = [self GetNextPlayerIndex];
-	}
-
-	return m_currentPlayerIndex;
-}
-
--(BOOL) IsMultiplayer
-{
-	return m_multiplayer;
-}
-
-
--(BOOL) CurrentPlayerIsLast
-{
-	BOOL isLastPlayer = YES;
-	if ((m_currentPlayerIndex + 1) < [m_players count]) 
-	{
-		for (int i = m_currentPlayerIndex +1; i < [m_players count]; i++) {
-			if (([[m_players objectAtIndex:i] IsOut] == NO) && ([[m_players objectAtIndex:i] HasGivenUp] == NO)) {
-				isLastPlayer = NO;
-			}
-		}
-	}
-	return isLastPlayer;
-}
-
 
 //Method writes a string to a text file
 -(void) writeToTextFile{
@@ -649,66 +598,66 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 
 -(void) UpdateAvgDistanceForQuest:(NSInteger) distanceBetweenPoints
 {
-	if (m_multiplayer == NO) {
-		Question *tempQuestion = [[self GetQuestion] retain];
-		MpLocation *tempLocation = [[tempQuestion GetLocation] retain];
-		
-		
-		NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-		[f setNumberStyle:NSNumberFormatterDecimalStyle];
-		
-		int numerOfTimesAnswered = 0;
 
-		//read out times question answered
-		FMResultSet *results = [[SqliteHelper Instance] executeQuery:@"SELECT sumAnswers FROM location WHERE locationID = ?;",[tempLocation GetID]];
-		while([results next]) {
-            numerOfTimesAnswered = [results intForColumn:@"sumAnswers"];
-		}
-        [results close];
-		
-		int averageDistanceFromTarget;
-		//read out average distance 
-		results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance FROM location WHERE locationID = ?;", [tempLocation GetID]];
-		while([results next]) {
-				averageDistanceFromTarget =[results intForColumn:@"avgDistance"];
-		}
-        [results close];
+    Question *tempQuestion = [[self GetQuestion] retain];
+    MpLocation *tempLocation = [[tempQuestion GetLocation] retain];
+    
+    
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    int numerOfTimesAnswered = 0;
 
-        NSLog(@"%i",numerOfTimesAnswered);
-		//calculate new average distance
-		NSInteger newAvgDistance = 0;
-		if (numerOfTimesAnswered == 0) {
-			newAvgDistance = distanceBetweenPoints;
-		}
-		else {
-			if (averageDistanceFromTarget >= 0) {
-				newAvgDistance = ( (averageDistanceFromTarget * numerOfTimesAnswered)+ distanceBetweenPoints )/(numerOfTimesAnswered + 1);
-				//newAvgDistance = ((distanceBetweenPoints + [averageDistanceFromTarget intValue]) / (1 + [numerOfTimesAnswered intValue]));
-			}
-		}
+    //read out times question answered
+    FMResultSet *results = [[SqliteHelper Instance] executeQuery:@"SELECT sumAnswers FROM location WHERE locationID = ?;",[tempLocation GetID]];
+    while([results next]) {
+        numerOfTimesAnswered = [results intForColumn:@"sumAnswers"];
+    }
+    [results close];
+    
+    int averageDistanceFromTarget;
+    //read out average distance 
+    results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance FROM location WHERE locationID = ?;", [tempLocation GetID]];
+    while([results next]) {
+            averageDistanceFromTarget =[results intForColumn:@"avgDistance"];
+    }
+    [results close];
+
+    NSLog(@"%i",numerOfTimesAnswered);
+    //calculate new average distance
+    NSInteger newAvgDistance = 0;
+    if (numerOfTimesAnswered == 0) {
+        newAvgDistance = distanceBetweenPoints;
+    }
+    else {
+        if (averageDistanceFromTarget >= 0) {
+            newAvgDistance = ( (averageDistanceFromTarget * numerOfTimesAnswered)+ distanceBetweenPoints )/(numerOfTimesAnswered + 1);
+            //newAvgDistance = ((distanceBetweenPoints + [averageDistanceFromTarget intValue]) / (1 + [numerOfTimesAnswered intValue]));
+        }
+    }
 
 
-		
+    
 
-		//update quest with new values for "times question answered" and "average distance"
-		[[SqliteHelper Instance] executeUpdate:@"UPDATE location SET avgDistance= ? , sumAnswers = ? WHERE locationID = ?;",
-		 [NSNumber numberWithFloat:newAvgDistance],
-		 [NSNumber numberWithInt:(numerOfTimesAnswered+ 1)],
-		 [tempLocation GetID]];
-		
-		
-		//read out average distance 
-		results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance , sumAnswers FROM location WHERE locationID = ?;", [tempLocation GetID]];
-		while ([results next]) {
-            NSLog(@"SQLite -> avgDistance: %@", [results stringForColumn:@"avgDistance"]);
-            NSLog(@"SQLite -> sumAnswers: %@", [results stringForColumn:@"sumAnswers"]);
-		}
-        [results close];
-		
-		[f release];
-		[tempLocation release];
-		[tempQuestion release];
-	}
+    //update quest with new values for "times question answered" and "average distance"
+    [[SqliteHelper Instance] executeUpdate:@"UPDATE location SET avgDistance= ? , sumAnswers = ? WHERE locationID = ?;",
+     [NSNumber numberWithFloat:newAvgDistance],
+     [NSNumber numberWithInt:(numerOfTimesAnswered+ 1)],
+     [tempLocation GetID]];
+    
+    
+    //read out average distance 
+    results = [[SqliteHelper Instance] executeQuery:@"SELECT avgDistance , sumAnswers FROM location WHERE locationID = ?;", [tempLocation GetID]];
+    while ([results next]) {
+        NSLog(@"SQLite -> avgDistance: %@", [results stringForColumn:@"avgDistance"]);
+        NSLog(@"SQLite -> sumAnswers: %@", [results stringForColumn:@"sumAnswers"]);
+    }
+    [results close];
+    
+    [f release];
+    [tempLocation release];
+    [tempQuestion release];
+
 }
 
 -(void) IncreasQuestionsPassed

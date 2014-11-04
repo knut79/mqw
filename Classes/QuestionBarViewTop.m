@@ -214,13 +214,10 @@
         m_image = [currentQuestion GetPicture];
     }
     NSString *questionString = [[currentQuestion GetQuestionString] retain];
-	if ([gameRef IsMultiplayer] == NO ) {
-		m_label.text = [NSString stringWithFormat:@"%@?",questionString];
+
+    m_label.text = [NSString stringWithFormat:@"%@?",questionString];
         
-	}
-	else {
-		m_label.text = [NSString stringWithFormat:@"%@ : %@?",currentPlayerName, questionString];
-	}
+
     
     [self SetLabelPositionsAndPicture];
 

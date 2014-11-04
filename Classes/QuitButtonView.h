@@ -13,10 +13,8 @@
 @interface QuitButtonView : UIView {
 	id <QuitButtonViewDelegate> delegate;
 	UIAlertView *alert;
-    BOOL m_multiplayer;
 }
 @property (nonatomic, assign) id <QuitButtonViewDelegate> delegate;
--(void) IsMultiplayer:(BOOL) value;
 
 @end
 

@@ -33,7 +33,6 @@
 	Difficulty m_initialDifficulty;
 	NSInteger m_currentQuestionIndex;
 	NSInteger m_currentPlayerIndex;
-	BOOL m_multiplayer;
 	Highscore *m_highscores;
 	GameType m_gameType;
 	NSInteger m_gameQuestionsPassed;
@@ -54,17 +53,14 @@
 }
 @property (nonatomic, assign) Challenge* challenge;
 
--(void) SetPlayers:(NSMutableArray *) players andDifficulty:(Difficulty) difficulty andMultiplayers:(BOOL) multiplayers andGameType:(GameType) gameType
+-(void) SetPlayers:(NSMutableArray *) players andDifficulty:(Difficulty) difficulty andGameType:(GameType) gameType
 andNumberOfQuestions:(NSInteger) numberOfQuestions;
 -(void) SetGameState_QuestionID:(NSString*) questionID Difficulty:(Difficulty) diff currentPlayerByName:(NSString*) playerName questionsPassed:(NSInteger) questionsPassed;
 -(Question*) GetQuestion;
 -(NSMutableArray*) GetPlayers;
--(BOOL) IsMultiplayer;
--(void) SetNextPlayer;
 -(NSInteger) GetNextPlayerIndex;
 -(Player*) GetPlayer;
 -(Player*) GetPlayerByName:(NSString*) name;
--(BOOL) CurrentPlayerIsLast;
 -(void) SetNextQuestion;
 -(BOOL) IsMoreQuestionsForTraining;
 -(void) ResetGameData;

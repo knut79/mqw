@@ -29,7 +29,6 @@
 }
 @property (nonatomic, assign) id <RoundEndedViewDelegate> delegate;
 
--(void)SetRoundResults:(Game*) gameRef;
 -(void) FadeIn;
 -(void) FadeOut;
 -(void) AnimateElementsIn:(NSInteger) numberOfPlayers;

@@ -30,18 +30,9 @@
 	//UILabel *infoOrGlobalIDLabel;
 	
 	UITextField *playerOneTextField;
-	UITextField *playerTwoTextField;
-	UITextField *playerThreeTextField;
-	UITextField *playerFourTextField;
 
-	UIButton *buttonAddPlayer;
-	UIButton *buttonRemovePlayer;
 	UIButton *buttonBack;
 	UIButton *buttonStart;
-	NSInteger numberOfPlayers; 
-	
-	IBOutlet UILabel *multiplayerModeLabel;  
-	IBOutlet UILabel *numberOfQuestionsLabel;
 	
 	Game *m_game;
 	id <StartGameMenuViewDelegate> delegate;
@@ -56,8 +47,6 @@
 	NSInteger switchXOffset;
 	NSInteger switchYOffset;
 	
-	BOOL UpdateSliderGameTypeValue_isMovedDown;
-	BOOL UpdateSliderGameTypeValue_isMovedUp;
 	
 	NSInteger mostPointsGame_NumberOfQuestions;
 	
