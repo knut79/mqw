@@ -28,14 +28,16 @@
 		
 		m_location = [loc retain];
 		
-		if ([diff isEqualToString:@"medium"]) 
-			m_difficulty = medium;					
-		else if([diff isEqualToString:@"hard"]) 
-			m_difficulty = hardDif;
-		else if([diff isEqualToString:@"veryhard"]) 
-			m_difficulty = veryhardDif;
+		if ([diff isEqualToString:@"level2"])
+			m_difficulty = level2;
+		else if([diff isEqualToString:@"level3"])
+			m_difficulty = level3;
+		else if([diff isEqualToString:@"level4"])
+			m_difficulty = level4;
+		else if([diff isEqualToString:@"level5"])
+			m_difficulty = level5;
 		else
-			m_difficulty = easy;
+			m_difficulty = level1;
 
 		NSMutableArray *questionComponentsArray = [[NSMutableArray alloc] init];
 		[questionComponentsArray setArray:[questionString componentsSeparatedByString:@"#"]];

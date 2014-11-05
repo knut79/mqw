@@ -21,7 +21,6 @@
 @synthesize m_game;
 @synthesize difPicker;
 @synthesize delegate;
-@synthesize numberOfPlayers;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) { 
@@ -73,8 +72,6 @@
 	switchXOffset = 0;
 	switchYOffset = 80;
 	
-	m_players = [[NSMutableArray alloc] init];
-	
 	
 	miniLabel = [[UILabel alloc] init];
 	[miniLabel setFrame:CGRectMake(145, 18, 70, 30)];
@@ -111,9 +108,6 @@
 	slideDifficultyPicker.value = 1;
 	[slideDifficultyPicker addTarget:self action:@selector(sliderDifficultyValueChanged:) forControlEvents:UIControlEventValueChanged];
 	[self addSubview:slideDifficultyPicker];		
-	
-	numberOfPlayers = 1;
-	
 	
 	modeLabel = [[UILabel alloc] init];
 	[modeLabel setFrame:CGRectMake(0, 0, 200, 30)];
@@ -214,8 +208,6 @@
 	[slideGameTypePicker addTarget:self action:@selector(sliderGameTypeValueChanged:) forControlEvents:UIControlEventValueChanged];
 	[slideGameTypePicker setAlpha:0];
 	[self addSubview:slideGameTypePicker];	
-	
-    mostPointsGame_NumberOfQuestions = 2;
 	
 	[self setAlpha:0];
 	
@@ -335,31 +327,26 @@
 
 -(void)startGame:(id)Sender
 {
-	if (numberOfPlayers > 0) {
-		NSString *playerOneString;
-		if ([playerOneTextField.text length] == 0) {
-			playerOneString = [NSString stringWithFormat:@"%@ 1",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Player"]];
-		}
-		else {
-			playerOneString = playerOneTextField.text;
-		}
 
-		Player *playerOne = [[Player alloc] initWithName:playerOneString andColor:playerOneTextField.textColor andPlayerSymbol:@"ArrowRed.png"];
-		[m_players addObject:playerOne];
-	}
+    m_player = [[Player alloc] initWithName:[[GlobalSettingsHelper Instance] GetPlayerName] andColor:playerOneTextField.textColor andPlayerSymbol:@"ArrowRed.png"];
 
-	Difficulty vDifficulty = easy;	
-	if ([slideDifficultyPicker value] >= 1.5) {
-		
-		if([slideDifficultyPicker value] >= 2.5)
+
+	Difficulty vDifficulty = level1;
+	if ([slideDifficultyPicker value] >= 1.0) {
+		vDifficulty = level2;
+		if([slideDifficultyPicker value] >= 2.0)
 		{
-			vDifficulty = hardDif;
-		}
-		else {
-			vDifficulty = medium;
+			vDifficulty = level3;
+            if([slideDifficultyPicker value] >= 3.0)
+            {
+                vDifficulty = level4;
+                if([slideDifficultyPicker value] >= 4.0)
+                {
+                    vDifficulty = level5;
+                }
+            }
 		}
 	}
-	GameType gameType = lastStanding;
 
 	if (m_game == nil) {
 		m_game = [[Game alloc] init] ;
@@ -376,8 +363,7 @@
 		[m_game SetMapBorder:NO];
 	
 
-	[m_game SetPlayers:m_players andDifficulty:vDifficulty andGameType:gameType andNumberOfQuestions: mostPointsGame_NumberOfQuestions];
-	[m_players removeAllObjects];
+	[m_game SetPlayer:m_player andDifficulty:vDifficulty];
 	
 	[self FadeOut];
 	[((StartGameMenu*)self.superview) FadeOut];

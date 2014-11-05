@@ -25,22 +25,15 @@
 
 @interface Game : NSObject {
 	
-
-	
-	NSMutableArray *m_players;
 	Player *m_nextTurn;
 	Difficulty m_difficulty;
 	Difficulty m_initialDifficulty;
 	NSInteger m_currentQuestionIndex;
-	NSInteger m_currentPlayerIndex;
 	Highscore *m_highscores;
-	GameType m_gameType;
 	NSInteger m_gameQuestionsPassed;
 	Question* m_currentQuestion;
-	NSInteger m_playersLeft;
-	NSInteger m_mostPointsGame_NumberOfQuestions;
 	GameState m_gameState;
-	
+	Player* m_player;
 	BOOL m_training;
     BOOL m_borders;
 	NSMutableDictionary *training_oldResultDictionary;
@@ -53,37 +46,27 @@
 }
 @property (nonatomic, assign) Challenge* challenge;
 
--(void) SetPlayers:(NSMutableArray *) players andDifficulty:(Difficulty) difficulty andGameType:(GameType) gameType
-andNumberOfQuestions:(NSInteger) numberOfQuestions;
+-(void) SetPlayer:(Player*) player andDifficulty:(Difficulty) difficulty;
 -(void) SetGameState_QuestionID:(NSString*) questionID Difficulty:(Difficulty) diff currentPlayerByName:(NSString*) playerName questionsPassed:(NSInteger) questionsPassed;
 -(Question*) GetQuestion;
--(NSMutableArray*) GetPlayers;
 -(NSInteger) GetNextPlayerIndex;
 -(Player*) GetPlayer;
--(Player*) GetPlayerByName:(NSString*) name;
 -(void) SetNextQuestion;
 -(BOOL) IsMoreQuestionsForTraining;
 -(void) ResetGameData;
 -(Difficulty) GetGameDifficulty;
--(GameType) GetGameType;
 -(void) ResetPlayerData;
 -(void) IncreasQuestionsPassed;
 -(NSInteger) GetQuestionsPassed;
--(void) SetPlayersLeft:(NSInteger) playersLeft;
 -(NSInteger) GetPlayersLeft;
 -(void) FirstPlaceSetScore:(NSInteger) score;
 -(void) SecondPlaceSetScore:(NSInteger) score;
 -(void) ThirdPlaceSetScore:(NSInteger) score;
 -(void) FourthPlaceSetScore:(NSInteger) score;
--(NSInteger) GetNumberOfQuestions;
 -(BOOL) IsOnePlayerAtTop;
--(void) SetPlayerPositionsByScore;
 -(NSInteger) GetCorrectAnswersAndSetScore:(NSInteger) score;
 -(Highscore*) GetHighscore;
--(NSArray *) GetSortedPlayersForBars;
--(NSArray *) GetSortedPlayersForGame;
--(NSArray *) GetSortedPlayersForGame_LastStanding;
--(NSArray *) GetSortedPlayersForRound;
+
 -(void) UpdateAvgDistanceForQuest:(NSInteger) distanceBetweenPoints;
 -(void) SaveGame;
 -(void) SetGameState:(GameState) gs;
@@ -98,8 +81,5 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions;
 -(NSArray*) Training_GetPlaces;
 -(NSDictionary*) Training_GetOldResults;
 -(NSDictionary*) Training_GetNewResults;
-
--(void) SetTimeBonusPoints;
--(void) IncreaseScoresWithRoundScores;
 
 @end

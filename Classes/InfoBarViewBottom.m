@@ -55,21 +55,14 @@
 	m_timerNumerator = 1;
 	
 	m_numberOfPlayersLeft = 0;
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
+	Player *player = [[m_gameRef GetPlayer] retain];
 	//Init the barwidth for each player
-	for (Player *player in players) 
-	{
-		if ([players count] > 2) {
-			[player SetBarWidth:100];
-			m_barWidthStart = 100.0;
-		}
-		else {
-			[player SetBarWidth:200];
-			m_barWidthStart = 200.0;
-		}
-		m_numberOfPlayersLeft++;
-	}
-	[players release];
+
+    
+    [player SetBarWidth:200];
+    m_barWidthStart = 200.0;
+	
+	[player release];
 	
 	[self setNeedsDisplay]; 
 }
@@ -87,26 +80,6 @@
 	
 	if ([delegate respondsToSelector:@selector(SetPositionDone)])
         [delegate SetPositionDone];
-}
-
--(void) ResetPlayersLeft
-{
-	m_numberOfPlayersLeft = 0;
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-	//Init the barwidth for each player
-	for (Player *player in players) 
-	{
-		if ([players count] > 2) {
-			[player SetBarWidth:100];
-			m_barWidthStart = 100.0;
-		}
-		else {
-			[player SetBarWidth:200];
-			m_barWidthStart = 200.0;
-		}
-		m_numberOfPlayersLeft++;
-	}
-	[players release];
 }
 
 
@@ -269,120 +242,64 @@
 
 -(void) UpdatePoints
 {
-	if ([m_gameRef GetGameType] == mostPoints) {
-		[m_gameRef IncreasQuestionsPassed];
-	}
-
 	m_finishedAnimating = NO;
 	UIScreen *screen = [[UIScreen mainScreen] retain];
 	int playerIndex = 0;
-	for (Player *pTemp in [m_gameRef GetPlayers] ) 
-	{
-		//gamepoint must be measured to drawFiguresViews representation. 25% of value, possibly x and y offsets and zoom factor at 25%
+    Player* pTemp = [[m_gameRef GetPlayer] retain];
 
-		int endX, endY;
-		switch ([m_gameRef GetPlayers].count) {
-			case 2:
-				if (playerIndex == 0) 
-					endX = 10 + 15;
-				else 
-					endX = 115 + 15;
+    //gamepoint must be measured to drawFiguresViews representation. 25% of value, possibly x and y offsets and zoom factor at 25%
+    int endX, endY;
+    endX = [screen applicationFrame].size.width/2;
+    endY = 10;
 
-				endY = 15-8;
-				break;
-			case 3:
-				if (playerIndex == 0) 
-					endX = 5 + 10;
-				else if (playerIndex == 1) 
-					endX = 77+ 10;
-				else
-					endX = 149+ 10;
-					
-				endY = 15-8;
-				break;
-			case 4:
-				if (playerIndex == 0) 
-				{
-					endX = 13+ 10;
-					endY = 8-8;
-				}
-				else if (playerIndex == 1)
-				{
-					endX = 13+ 10;
-					endY = 15-8;
-				}
-				else if (playerIndex == 2)
-				{
-					endX = 180+ 10;
-					endY = 8-8;
-				}
-				else
-				{
-					endX = 180 + 10;
-					endY = 15-8;
-				}
-				break;
-			default:
-				endX = [screen applicationFrame].size.width/2;
-				endY = 10;
-				break;
-		}
-		
-		
-		
-		// Determine the animation's path.
-		CGPoint startPoint = CGPointMake(([pTemp GetGamePoint].x *0.25f * 0.3695f), ([pTemp GetGamePoint].y *0.25f * 0.3695f)- [screen applicationFrame].size.height );
-		CGPoint curvePoint1 = CGPointMake(startPoint.x + 70, startPoint.y);
-		CGPoint endPoint = CGPointMake(endX, endY);
-		CGPoint curvePoint2 = CGPointMake(endPoint.x + 50, endPoint.y - 50);
+    // Determine the animation's path.
+    CGPoint startPoint = CGPointMake(([pTemp GetGamePoint].x *0.25f * 0.3695f), ([pTemp GetGamePoint].y *0.25f * 0.3695f)- [screen applicationFrame].size.height );
+    CGPoint curvePoint1 = CGPointMake(startPoint.x + 70, startPoint.y);
+    CGPoint endPoint = CGPointMake(endX, endY);
+    CGPoint curvePoint2 = CGPointMake(endPoint.x + 50, endPoint.y - 50);
 
-		
-		// Create the animation's path.
-		CGPathRef path = NULL;
-		CGMutablePathRef mutablepath = CGPathCreateMutable();
-		CGPathMoveToPoint(mutablepath, NULL, startPoint.x, startPoint.y);
-		CGPathAddCurveToPoint(mutablepath, NULL, curvePoint1.x, curvePoint1.y,
-							  curvePoint2.x, curvePoint2.y,
-							  endPoint.x, endPoint.y);
-		path = CGPathCreateCopy(mutablepath);
-		CGPathRelease(mutablepath);
+    
+    // Create the animation's path.
+    CGPathRef path = NULL;
+    CGMutablePathRef mutablepath = CGPathCreateMutable();
+    CGPathMoveToPoint(mutablepath, NULL, startPoint.x, startPoint.y);
+    CGPathAddCurveToPoint(mutablepath, NULL, curvePoint1.x, curvePoint1.y,
+                          curvePoint2.x, curvePoint2.y,
+                          endPoint.x, endPoint.y);
+    path = CGPathCreateCopy(mutablepath);
+    CGPathRelease(mutablepath);
 
-		//NSMutableArray* m_labelPool = [[NSMutableArray init] alloc];
-		if ([pTemp GetLastRoundScore] > 0) {
-			
-		
-			//UILabel *aLabel = [[UILabel alloc] init];
-			UILabel *aLabel = [m_labelPool objectAtIndex:playerIndex];
-			aLabel.hidden = NO;
-			[aLabel setFrame:CGRectMake(0, 0, 30, 20)];
-			aLabel.backgroundColor = [UIColor clearColor]; 
-			[aLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-			aLabel.textColor = [pTemp GetColor];// [UIColor whiteColor];
-			aLabel.textAlignment = NSTextAlignmentCenter;
-				aLabel.text = [NSString stringWithFormat:@"%d",[pTemp GetLastRoundScore]]; 
-			//[self addSubview:aLabel];
-			CALayer *iconViewLayer = aLabel.layer;
-			
-			CAKeyframeAnimation *animatedIconAnimation = [CAKeyframeAnimation animationWithKeyPath: @"position"];
-			animatedIconAnimation.duration = 1.8;
-			animatedIconAnimation.delegate = self;
-			animatedIconAnimation.path = path;
-			animatedIconAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-			[iconViewLayer addAnimation:animatedIconAnimation forKey:@"animateIcon"];
+    //NSMutableArray* m_labelPool = [[NSMutableArray init] alloc];
+    if ([pTemp GetLastRoundScore] > 0) {
+        
+    
+    //UILabel *aLabel = [[UILabel alloc] init];
+    UILabel *aLabel = [m_labelPool objectAtIndex:playerIndex];
+    aLabel.hidden = NO;
+    [aLabel setFrame:CGRectMake(0, 0, 30, 20)];
+    aLabel.backgroundColor = [UIColor clearColor]; 
+    [aLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
+    aLabel.textColor = [pTemp GetColor];// [UIColor whiteColor];
+    aLabel.textAlignment = NSTextAlignmentCenter;
+        aLabel.text = [NSString stringWithFormat:@"%d",[pTemp GetLastRoundScore]]; 
+    //[self addSubview:aLabel];
+    CALayer *iconViewLayer = aLabel.layer;
+    
+    CAKeyframeAnimation *animatedIconAnimation = [CAKeyframeAnimation animationWithKeyPath: @"position"];
+    animatedIconAnimation.duration = 1.8;
+    animatedIconAnimation.delegate = self;
+    animatedIconAnimation.path = path;
+    animatedIconAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    [iconViewLayer addAnimation:animatedIconAnimation forKey:@"animateIcon"];
 
-			
-			// Start the icon animation.
-			[iconViewLayer setPosition:CGPointMake(endPoint.x, endPoint.y)];
-			}
+    
+    // Start the icon animation.
+    [iconViewLayer setPosition:CGPointMake(endPoint.x, endPoint.y)];
+    }
 		
-		playerIndex++;
-		//[pTemp release];
-	}
+
 	[screen release];
-	
-	
-//	if ([delegate respondsToSelector:@selector(FinishedAnimating)])
-//		[delegate FinishedAnimating];
+	[pTemp release];
 }
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
@@ -418,26 +335,24 @@
 	m_numberOfPlayersLeft = 0;
 	int playersLeftAfterAnimation = 0;
 	Question *currentQuestion = [[m_gameRef GetQuestion] retain];
-	NSMutableArray *players = [[m_gameRef GetPlayers]retain];
+	Player *player = [[m_gameRef GetPlayer]retain];
 	//Init the barwidth for each player
 
-	for (Player *player in players) 
-	{
-		if ([player IsOut] == NO) {
-			m_numberOfPlayersLeft++;
-		}
-        
-		if (([player GetKmLeft] + [player GetCurrentKmTimeBonus]) > 0) {
-			playersLeftAfterAnimation ++;
 
-            //only singleplayer games wil give highscores
-            [player IncreasQuestionsPassedAndScore:currentQuestion];
+    if ([player IsOut] == NO) {
+        m_numberOfPlayersLeft++;
+    }
+    
+    if (([player GetKmLeft] + [player GetCurrentKmTimeBonus]) > 0) {
+        playersLeftAfterAnimation ++;
 
-		}
-       
-	}
+        //only singleplayer games wil give highscores
+        [player IncreasQuestionsPassedAndScore:currentQuestion];
+
+    }
+
 	[m_gameRef SetPlayersLeft:playersLeftAfterAnimation];
-	[players release];
+	[player release];
 	[currentQuestion release];
 	
 
@@ -449,11 +364,9 @@
 -(void) AnimateBars
 {
 
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
+	Player *player = [[m_gameRef GetPlayer] retain];
 	BOOL m_playerBarStillChanging = NO;
 
-	for (Player *player in players) 
-	{
 		if ([player IsOut] == NO ) {
 			
 			int kmLeft = [player GetKmLeft];
@@ -489,9 +402,8 @@
 			//new bar width
 			[player SetBarWidth:barWidth];
             [player SetTimeBonusBarWidth:barWidthTimeBonus];
-		}
 	}
-	[players release];
+	[player release];
 	m_timerNumerator++;
 
 	
@@ -508,24 +420,22 @@
 
 -(void) DrawBarsOnce
 {
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
+	Player *player = [[m_gameRef GetPlayer] retain];
     
-	for (Player *player in players) 
-	{
-		if ([player IsOut] == NO ) {
+    if ([player IsOut] == NO ) {
 			
-			int kmLeft = [player GetKmLeft];
-            
-			int barWidth = (float)kmLeft * (m_barWidthStart/const_startKmDistance);
+        int kmLeft = [player GetKmLeft];
+        
+        int barWidth = (float)kmLeft * (m_barWidthStart/const_startKmDistance);
 
-			//text for info bar
-			[player SetKmLeft_ForInfoBar:kmLeft];
-			//new bar width
-			[player SetBarWidth:barWidth];
+        //text for info bar
+        [player SetKmLeft_ForInfoBar:kmLeft];
+        //new bar width
+        [player SetBarWidth:barWidth];
 
-		}
+
 	}
-	[players release];
+	[player release];
 
 	[self setNeedsDisplay]; 
 }
@@ -552,170 +462,13 @@
 			CGContextSaveGState(context);
 			CGContextScaleCTM(context, 1.0, -1.0);	
 
-			if ([m_gameRef GetGameType] == lastStanding) 
-			{
-				
-				if (m_numberOfPlayersLeft == 1) {
-					[self drawForOnePlayer:context];
-				}
-				else if (m_numberOfPlayersLeft == 2)
-				{
-					[self drawForTwoPlayers:context];
-				}
-				else if(m_numberOfPlayersLeft == 3)
-				{
-					[self drawForThreePlayers:context];
-				}
-				else if(m_numberOfPlayersLeft == 4)
-				{
-					[self drawForFourPlayers:context];
-				}
-				else if(m_numberOfPlayersLeft > 4)
-				{
-					//log to many players
-				}	
-			}
-			else 
-			{
-				NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-				switch ([players count]) {
-					case 2:
-						[self drawScoreForTwoPlayers:context drawUpdatedScore:m_drawUpdatedScore];
-						break;
-					case 3:
-						[self drawScoreForThreePlayers:context drawUpdatedScore:m_drawUpdatedScore];
-						break;
-					case 4:
-						[self drawScoreForFourPlayers:context drawUpdatedScore:m_drawUpdatedScore];
-						break;
-					default:
-						break;
-				}
-				
-                
-				[players release];
-			}
-
+            [self drawForOnePlayer:context];
 			// like Processing popMatrix
 			CGContextRestoreGState(context);
 		}
 	}
 }
 
--(void) drawScoreForTwoPlayers:(CGContextRef) context drawUpdatedScore:(BOOL) drawUpdatedScore
-{	
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-	
-	[self drawScoreForPlayer:context player:[players objectAtIndex:0] textX:10 textY:15 - 8 fontSize:10 scoreYOffset:15 barRect:CGRectMake(10 ,35 * -1, 100, 30) drawUpdatedScore:drawUpdatedScore];
-	[self drawScoreForPlayer:context player:[players objectAtIndex:1] textX:115 textY:15 - 8 fontSize:10 scoreYOffset:15 barRect:CGRectMake(115 ,35 * -1, 100, 30) drawUpdatedScore:drawUpdatedScore];
-
-	[players release];
-}
-
--(void) drawScoreForThreePlayers:(CGContextRef) context drawUpdatedScore:(BOOL) drawUpdatedScore
-{	
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-	
-	[self drawScoreForPlayer:context player:[players objectAtIndex:0] textX:5 textY:15 -8 fontSize:10 scoreYOffset:15 barRect:CGRectMake(5 ,35 * -1, 68, 30) drawUpdatedScore:drawUpdatedScore];
-	[self drawScoreForPlayer:context player:[players objectAtIndex:1] textX:77 textY:15 -8 fontSize:10 scoreYOffset:15 barRect:CGRectMake(77 ,35 * -1, 68, 30) drawUpdatedScore:drawUpdatedScore];
-	[self drawScoreForPlayer:context player:[players objectAtIndex:2] textX:149 textY:15 -8 fontSize:10 scoreYOffset:15 barRect:CGRectMake(149 ,35 * -1, 68, 30) drawUpdatedScore:drawUpdatedScore];
-	
-	[players release];
-}
-
--(void) drawScoreForFourPlayers:(CGContextRef) context drawUpdatedScore:(BOOL) drawUpdatedScore
-{	
-	NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-	
-	[self drawScoreForPlayer:context player:[players objectAtIndex:0] textX:13 textY:8 -8 fontSize:8 scoreYOffset:8 barRect:CGRectMake(10 ,19 * -1, 100, 18) drawUpdatedScore:drawUpdatedScore];
-	[self drawScoreForPlayer:context player:[players objectAtIndex:1] textX:13 textY:29 -8 fontSize:8 scoreYOffset:8 barRect:CGRectMake(10 ,39 * -1, 100, 18) drawUpdatedScore:drawUpdatedScore];
-	[self drawScoreForPlayer:context player:[players objectAtIndex:2] textX:118 textY:8 -8 fontSize:8 scoreYOffset:8 barRect:CGRectMake(115 ,19 * -1, 100, 18) drawUpdatedScore:drawUpdatedScore];
-	[self drawScoreForPlayer:context player:[players objectAtIndex:3] textX:118 textY:29 -8 fontSize:8 scoreYOffset:8 barRect:CGRectMake(115 ,39 * -1, 100, 18) drawUpdatedScore:drawUpdatedScore];
-
-	
-	[players release];
-}
-
--(void) drawScoreForPlayer:(CGContextRef) context player:(Player*) player textX:(NSInteger) textX textY:(NSInteger) textY fontSize:(NSInteger) fontSize 
-			  scoreYOffset:(NSInteger) scoreYOffset barRect:(CGRect) barRect drawUpdatedScore:(BOOL) drawUpdatedScore
-{
-	//player One
-	CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
-	//CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-	CGContextFillRect(context, barRect);
-	
-	NSString *playerName = [[player GetName] retain];
-	UIColor * tempUIColor = [[player GetColor] retain];
-	CGColorRef color = [tempUIColor CGColor];
-	int numComponents = CGColorGetNumberOfComponents(color);
-	if (numComponents == 4)
-	{
-		const CGFloat *components = CGColorGetComponents(color);
-		CGFloat red = components[0];
-		CGFloat green = components[1];
-		CGFloat blue = components[2];
-		CGFloat alpha = components[3];
-		CGContextSetRGBFillColor(context, red, green, blue, alpha); 
-	}
-	else {
-		CGContextSetRGBFillColor(context, 200, 200, 200, 0.5);
-	}
-	
-	if (tempUIColor == [UIColor blueColor] ) {
-		CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
-	}
-	if (tempUIColor == [UIColor purpleColor]) {
-		CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0);
-	}
-	
-	[tempUIColor release];
-	
-	//const char *text = [playerName UTF8String];
-	//const char *text = [NSString stringWithUTF8String:playerName];
-	//CGContextSelectFont(context, "Helvetica", fontSize, kCGEncodingMacRoman);
-	
-
-	
-	CGContextSetTextDrawingMode(context, kCGTextFill);
-	
-	//CGContextShowTextAtPoint(context, textX,textY * -1, text, strlen(text));
-	CGContextScaleCTM(context, 1.0, -1.0);
-	//[playerName drawAtPoint:CGPointMake(textX,textY) withFont:[UIFont fontWithName:@"Helvetica" size:fontSize]];
-	[playerName drawAtPoint:CGPointMake(textX,textY) withFont:[UIFont boldSystemFontOfSize:fontSize]];
-	
-	NSString *tempString;
-    if([player HasGivenUp] == YES)
-    {
-        tempString = [[NSString stringWithFormat:@"%@",
-                       [[GlobalSettingsHelper Instance] GetStringByLanguage:@"given up"]] retain];
-    }
-    else
-    {
-        if (drawUpdatedScore == YES) {
-            tempString = [[NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"score"],[player GetScore] + [player GetLastRoundScore]] retain];
-        }
-        else {
-            tempString = [[NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"score"],[player GetScore]] retain];
-        }
-    }
-
-
-	
-	//const char *score = [tempString UTF8String];
-
-	//CGContextSelectFont(context, "Helvetica", fontSize, kCGEncodingMacRoman);
-	
-	CGContextSetTextDrawingMode(context, kCGTextFill);
-	
-	//CGContextShowTextAtPoint(context, textX,(textY+ scoreYOffset) * -1, score, strlen(score));
-	//[tempString drawAtPoint:CGPointMake(textX,(textY+ scoreYOffset)) withFont:[UIFont fontWithName:@"Helvetica" size:fontSize]];
-	[tempString drawAtPoint:CGPointMake(textX,(textY+ scoreYOffset)) withFont:[UIFont boldSystemFontOfSize:fontSize]];
-	
-	[tempString release];
-	CGContextScaleCTM(context, 1.0, -1.0);	
-	
-	
-}
 
 -(void) drawBarAndText:(CGContextRef) context barWidth:(NSInteger) barWidth andText:(NSString*) theString
 				 textX:(NSInteger) textX textY:(NSInteger) textY barX:(NSInteger) barX barY:(NSInteger) barY barHeight:(NSInteger) barHeight barColor:(UIColor*) barColor timeBonusBarWidth:(NSInteger) timeBonusBarWidth
@@ -786,6 +539,7 @@
 	CGContextStrokePath(context);
 	
 	
+    //_? GETPLAYER
 	NSArray *players = [[m_gameRef GetSortedPlayersForBars]retain];
 	//Init the barwidth for each player
 	NSInteger barWidth = 0;
@@ -813,167 +567,6 @@
 	
 	[players release];
 
-}
-
--(void) drawForTwoPlayers:(CGContextRef) context
-{
-	
-	NSInteger barWidth = 0;
-	NSInteger kmLeft = 0;
-	NSArray *players = [[m_gameRef GetSortedPlayersForBars]retain];
-	//Init the barwidth for each player
-	UIColor *barColor;
-//	NSString *distanceLabel = @"km";
-//	if ([[GlobalSettingsHelper Instance] GetDistance] == mile) {
-//		distanceLabel = @"miles";
-//	}
-	NSInteger yOffset = 0;
-	for (Player *player in players) 
-	{
-		CGContextSetFillColorWithColor(context,[UIColor blackColor].CGColor);
-		CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-		CGContextFillRect(context, CGRectMake(10 ,((21 + yOffset) * -1), 200, 9));
-		
-		CGContextMoveToPoint(context, 10, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 10,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextMoveToPoint(context, 10 + 105, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 10 + 105,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextMoveToPoint(context, 210, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 210,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextStrokePath(context);	
-		
-		barWidth = [player GetBarWidth];
-		kmLeft = [player GetKmLeft];
-		barColor = [[player GetColor] retain];
-        NSString *barText = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString], [player GetDistanceTimeBounusString]];
-        if([player HasGivenUp] == YES)
-        {
-            barWidth = 0;
-            barText = [NSString stringWithFormat:@"%@ %@",[player GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
-        }
-		[self drawBarAndText: context barWidth:barWidth andText:barText
-					   textX:10 textY:20 + yOffset barX:10 barY:10 + yOffset barHeight:5 barColor:barColor timeBonusBarWidth:[player GetTimeBonusBarWidth]];
-		yOffset += 17;
-		[barColor release];
-	}
-	[players release];
-}
-
-
--(void) drawForThreePlayers:(CGContextRef) context
-{
-	NSInteger barWidth = 0;
-	NSInteger kmLeft = 0;
-	NSArray *players = [[m_gameRef GetSortedPlayersForBars]retain];
-	//Init the barwidth for each player
-	UIColor *barColor;
-//	NSString *distanceLabel = @"km";
-//	if ([[GlobalSettingsHelper Instance] GetDistance] == mile) {
-//		distanceLabel = @"miles";
-//	}
-	NSInteger yOffset = 0;
-	NSInteger xOffset = 0;
-	NSInteger index = 1;
-	for (Player *player in players) 
-	{
-		if (index == 3) {
-			xOffset = 110;
-			yOffset = 0;
-		}
-		
-		CGContextSetFillColorWithColor(context,[UIColor blackColor].CGColor);
-		CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-		CGContextFillRect(context, CGRectMake(5 + xOffset ,((21 + yOffset) * -1), 100, 9));
-		
-		CGContextMoveToPoint(context, 5 + xOffset, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 5 + xOffset,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextMoveToPoint(context, 5 + 50 + xOffset, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 5 + 50 + xOffset,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextMoveToPoint(context, 105 + xOffset, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 105 + xOffset,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextStrokePath(context);	
-		
-		barWidth = [player GetBarWidth];
-		kmLeft = [player GetKmLeft];
-		barColor = [[player GetColor] retain];
-        NSString *barText = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString], [player GetDistanceTimeBounusString]];
-        if([player HasGivenUp] == YES)
-        {
-            barWidth = 0;
-            barText = [NSString stringWithFormat:@"%@ %@",[player GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
-        }
-		[self drawBarAndText: context barWidth:barWidth andText:barText
-					   textX:5 + xOffset textY:20 + yOffset barX:5 + xOffset barY:10 + yOffset barHeight:5 barColor:barColor timeBonusBarWidth:[player GetTimeBonusBarWidth]];
-		yOffset += 17;
-		[barColor release];
-		
-		index++;
-	}
-	[players release];
-
-}
-
--(void) drawForFourPlayers:(CGContextRef) context
-{
-	NSInteger barWidth = 0;
-	NSInteger kmLeft = 0;
-	NSArray *players = [[m_gameRef GetSortedPlayersForBars]retain];
-	//Init the barwidth for each player
-	UIColor *barColor;
-//	NSString *distanceLabel = @"km";
-//	if ([[GlobalSettingsHelper Instance] GetDistance] == mile) {
-//		distanceLabel = @"miles";
-//	}
-	NSInteger yOffset = 0;
-	NSInteger xOffset = 0;
-	NSInteger index = 1;
-	for (Player *player in players) 
-	{
-		if (index == 3) {
-			xOffset = 110;
-			yOffset = 0;
-		}
-		CGContextSetFillColorWithColor(context,[UIColor blackColor].CGColor);
-		CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-		CGContextFillRect(context, CGRectMake(5 + xOffset ,((21 + yOffset) * -1), 100, 9));
-		
-		CGContextMoveToPoint(context, 5 + xOffset, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 5 + xOffset,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextMoveToPoint(context, 5 + 50 + xOffset, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 5 + 50 + xOffset,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextMoveToPoint(context, 105 + xOffset, (21 + yOffset) * -1);
-		CGContextAddLineToPoint( context, 105 + xOffset,((21 + yOffset) * -1) + 15);
-		CGContextClosePath(context);
-		CGContextStrokePath(context);	
-		
-        
-		barWidth = [player GetBarWidth];
-		kmLeft = [player GetKmLeft];
-		barColor = [[player GetColor] retain];
-        NSString *barText = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString], [player GetDistanceTimeBounusString]];
-        if([player HasGivenUp] == YES)
-        {
-            barWidth = 0;
-            barText = [NSString stringWithFormat:@"%@ %@",[player GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
-        }
-        
-		[self drawBarAndText: context barWidth:barWidth andText:barText
-					   textX:5 + xOffset textY:20 + yOffset barX:5 + xOffset barY:10 + yOffset barHeight:5 barColor:barColor timeBonusBarWidth:[player GetTimeBonusBarWidth]];
-		yOffset += 17;
-		[barColor release];
-		
-		index++;
-
-	}
-	[players release];
 }
 
 

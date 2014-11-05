@@ -10,12 +10,13 @@
 
 typedef enum
 {
-	veryhardDif = 6,
-	hardDif = 1,
-	medium = 2,
-	easy = 3,
-	noDifficulty = 4,
-	notUsed = 5
+    level5 = 5,
+	level4 = 4,
+	level3 = 3,
+	level2 = 2,
+	level1 = 1,
+	noDifficulty = 6,
+	notUsed = 7
 }Difficulty;
 
 typedef enum
@@ -63,11 +64,6 @@ typedef enum
 	mountainType
 }LocationType;
 
-typedef enum
-{
-	lastStanding,
-	mostPoints
-}GameType;
 
 typedef enum
 {

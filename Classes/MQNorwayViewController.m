@@ -170,22 +170,11 @@
 		NSMutableArray *players = [[NSMutableArray alloc] init];
 		FMResultSet *resultsPlayers = [[SqliteHelper Instance] executeQuery:@"SELECT * FROM player"];
 		
-		NSInteger playerNumber = 1;
-		while ([resultsPlayers next])
-		{
+
+		[resultsPlayers next];
+		
 			
 			UIColor *tempColor = [UIColor redColor];
-			if (playerNumber == 2) {
-				tempColor = [UIColor greenColor];
-			}
-			else if(playerNumber == 3)
-			{
-				tempColor = [UIColor blueColor];
-			}
-			else if(playerNumber == 4)
-			{
-				tempColor = [UIColor whiteColor];
-			}
 			
 			Player *tempPlayer = [[Player alloc] initWithName:[resultsPlayers stringForColumn:@"name"] andColor:tempColor andPlayerSymbol:[resultsPlayers stringForColumn:@"symbol"]];
 			
@@ -202,8 +191,7 @@
 			
 			NSLog(@"WHAT VALUE : %@", [resultsPlayers stringForColumn:@"secondsUsed"]);
 			
-			[tempPlayer SetPlayerState_Score:[[resultsPlayers stringForColumn:@"score"] integerValue]
-							 QuestionsPassed:[[resultsPlayers stringForColumn:@"questionsPassed"] integerValue]
+			[tempPlayer SetPlayerState:[[resultsPlayers stringForColumn:@"questionsPassed"] integerValue]
 								   GamePoint:storedGamePoint
 									  KmLeft:[[resultsPlayers stringForColumn:@"distanceLeft"] integerValue]
 									TimeUsed:[[resultsPlayers stringForColumn:@"secondsUsed"] integerValue]
@@ -211,34 +199,30 @@
 										 Out:[[resultsPlayers stringForColumn:@"isOut"] boolValue]
 									BarWidth:[[resultsPlayers stringForColumn:@"barWidth"] integerValue]];
 			//Question *quest = [[[Question alloc] initWithLocation:tempLocation andID:[dictionaryPlayer objectForKey:@"questionID"]];
-			[players addObject:tempPlayer];
+
+            [m_gameRef SetPlayer:tempPlayer andDifficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]]];
             [tempPlayer release];
-			playerNumber++;
-		}
+
+		
 		[resultsPlayers close];
 		
 		
-		[m_gameRef SetPlayers:players andDifficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]]
-				  andGameType:[EnumHelper stringToGametype:[resultsSavestate stringForColumn:@"gameType"]] andNumberOfQuestions: [[resultsSavestate stringForColumn:@"numberOfQuestions"]integerValue] ];
 		
 		
 		
-		NSLog(@"loading game with question %@",[resultsSavestate stringForColumn:@"questionID"] ); //@"qs00_Munchen"
+		
+		NSLog(@"loading game with question %@",[resultsSavestate stringForColumn:@"questionID"] );
 		[m_gameRef SetGameState_QuestionID:[resultsSavestate stringForColumn:@"questionID"] Difficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]]
 					   currentPlayerByName:[resultsSavestate stringForColumn:@"playerRefTurn"] questionsPassed:[[resultsSavestate stringForColumn:@"gameQuestionsPassed"]integerValue]];
 		
 		Player *currentPlayer = [m_gameRef GetPlayerByName:[resultsSavestate stringForColumn:@"playerRefTurn"]];
-		//[m_gameRef SetNextQuestion];
-		
-		//imageScrollView.hidden = YES;
-		//current player shown with StartPlayerView
+
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		if ([[resultsSavestate stringForColumn:@"gameState"] isEqualToString:@"inGame"]) {
 			m_restoreGameState = NO;
 			
 			[currentPlayer StartTimer];
-			
-			//[withFiguresView setAlpha:1];
+
 			resultBoardView.hidden = YES;
 			playingBoardView.hidden = NO;
 			
@@ -255,7 +239,6 @@
 				playerIndex++;
 			}
 			
-			//_?12
 			directionsTouchView.center = CGPointMake([screen applicationFrame].size.width - 25, [screen applicationFrame].size.height - 44 - 25);
 			
 			UIImage *image = [[UIImage imageNamed:[currentPlayer GetPlayerSymbol]] retain];
@@ -737,10 +720,6 @@
     [m_roundEndedView removeFromSuperview];
     m_roundEndedView = nil;
 	
-	if ([m_gameRef GetGameType] == mostPoints) {
-		[infoBarBottom setNeedsDisplay];
-	}
-	
 	[self AnimateQuestion:NO];
 }
 #pragma mark StartPlayerViewDelegate
@@ -829,35 +808,31 @@
 
     
     
-	if ([m_gameRef GetGameType] == lastStanding) {
+
+    Player *player = [[m_gameRef GetPlayer] retain];
+
+    //add bonus to kmleft
+    [player SetKmLeft:[player GetKmLeft] + [player GetCurrentKmTimeBonus]];
+    //reset timebonus
+    [player SetCurrentKmTimeBonus:0];
+    [player SetCurrentTimeMultiplier:0];
+    [player SetTimeBonusBarWidth:0];
+    
+    if ([player IsOut] == NO ) {
+        int kmLeft = [player GetKmLeft];
+        
+        if (kmLeft <= 0) {
+            [player SetOut:YES];
+        }
+    }
+
+    [player release];
+    
+    //draw bars without showing timebonus
+    //____?? DRAW BARS WITHOUT TIMEBONUS
+    [infoBarBottom DrawBarsOnce];
         
 
-
-		NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-		for (Player *player in players) 
-		{
-            //add bonus to kmleft
-            [player SetKmLeft:[player GetKmLeft] + [player GetCurrentKmTimeBonus]];
-            //reset timebonus
-            [player SetCurrentKmTimeBonus:0];
-            [player SetCurrentTimeMultiplier:0];
-            [player SetTimeBonusBarWidth:0];
-            
-			if ([player IsOut] == NO ) {
-				int kmLeft = [player GetKmLeft];
-				
-				if (kmLeft <= 0) {
-					[player SetOut:YES];
-				}
-			}
-		}
-		[players release];
-        
-        //draw bars without showing timebonus
-        //____?? DRAW BARS WITHOUT TIMEBONUS
-        [infoBarBottom DrawBarsOnce];
-        
-	}
 
 	
 	
@@ -956,99 +931,16 @@
 	}
 	else 
 	{		
-		if ([m_gameRef GetGameType] == lastStanding )  {
-			if (m_restoreGameState)
-			{
-				m_restoreGameState = NO;
-				[infoBarBottom SetBars];
-			}
-			else
-			{	
-				
-				[infoBarBottom UpdateBars];
-			}
-		}
-		else {
+        if (m_restoreGameState)
+        {
+            m_restoreGameState = NO;
+            [infoBarBottom SetBars];
+        }
+        else
+        {	
+            [infoBarBottom UpdateBars];
+        }
 
-			//set points for players
-			NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-            
-            
-            //if player has given up , no points should be given
-            NSInteger playersLeft = 0;
-            for (Player *player in players)  {
-                if([player HasGivenUp] == NO)
-                    playersLeft++;
-                else{
-                    [player ResetScore];
-                    [player SetLastDistanceFromDestination:9999];
-                }
-            }
-            [m_gameRef SetPlayersLeft:playersLeft];
-            
-            
-            
-			NSInteger correctPlayers = 0;
-			switch ([players count]) {
-				case 2:
-					//check if both correct
-					if ([m_gameRef GetCorrectAnswersAndSetScore:10] == 0) {
-						[m_gameRef FirstPlaceSetScore:10];
-						[m_gameRef SecondPlaceSetScore:0];
-					}
-					
-					break;
-				case 3:
-					correctPlayers = [m_gameRef GetCorrectAnswersAndSetScore:20];
-					if (correctPlayers == 0) {
-						[m_gameRef FirstPlaceSetScore:20];
-						[m_gameRef SecondPlaceSetScore:10];
-						[m_gameRef ThirdPlaceSetScore:0];
-					}
-					else if(correctPlayers == 1) {
-						[m_gameRef SecondPlaceSetScore:10];
-						[m_gameRef ThirdPlaceSetScore:0];
-					}
-					else if(correctPlayers == 2) {
-						[m_gameRef ThirdPlaceSetScore:0];
-					}
-					
-					
-					break;
-				case 4:
-					correctPlayers = [m_gameRef GetCorrectAnswersAndSetScore:3];
-					if (correctPlayers == 0) {
-						[m_gameRef FirstPlaceSetScore:30];
-						[m_gameRef SecondPlaceSetScore:20];
-						[m_gameRef ThirdPlaceSetScore:10];
-						[m_gameRef FourthPlaceSetScore:0];
-					}
-					else if(correctPlayers == 1) {
-						[m_gameRef SecondPlaceSetScore:20];
-						[m_gameRef ThirdPlaceSetScore:10];
-						[m_gameRef FourthPlaceSetScore:0];
-					}
-					else if(correctPlayers == 2) {
-						[m_gameRef ThirdPlaceSetScore:10];
-						[m_gameRef FourthPlaceSetScore:0];
-					}
-					
-					break;
-				default:
-					break;
-			}
-			
-			
-            //[m_gameRef SetTimeBonusPoints];
-            //[m_gameRef IncreaseScoresWithRoundScores];
-            
-			
-			[infoBarBottom UpdatePoints];
-			
-			
-			[players release];
-			
-		}
 	}
 	[[self view] addSubview:resultBoardView.playerSymbolMiniWindowView];
 	[answerBarTop SetResult:m_gameRef];
@@ -1292,7 +1184,7 @@
 	[resultBoardView setGameRef:m_gameRef];
 	
 
-    [self PreparFirstPlayer];
+    [self PreparPlayer];
     
 	
     [[self view] bringSubviewToFront:touchImageView];
@@ -1305,18 +1197,12 @@
     [self StartNewGame];
 }
 
--(void) PreparFirstPlayer
+-(void) PreparPlayer
 {
-    NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-    for (Player *player in players)
-    {
-        [player SetCurrentKmTimeBonus:0];
-    }
-    [players release];
-	//Next player
-	Player *firstPlayer = [[m_gameRef GetPlayer] retain];
-	
-	NSString *playerSymbol = [[firstPlayer GetPlayerSymbol] retain];
+    Player *player = [[m_gameRef GetPlayer] retain];
+    [player SetCurrentKmTimeBonus:0];
+	NSString *playerSymbol = [[player GetPlayerSymbol] retain];
+    [player release];
 	UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
 	touchImageView.image = image;
 	[playerSymbol release];

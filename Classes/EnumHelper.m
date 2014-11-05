@@ -13,15 +13,18 @@
 
 +(Difficulty) stringToDifficulty:(NSString*) difficultyString
 {
-	Difficulty returnValue = easy;
-	if ([difficultyString isEqualToString:@"veryhardDif"]) {
-		returnValue = veryhardDif;
+	Difficulty returnValue = level1;
+	if ([difficultyString isEqualToString:@"level2"]) {
+		returnValue = level2;
 	}
-	else if ([difficultyString isEqualToString:@"hardDif"]) {
-		returnValue = hardDif;
+	else if ([difficultyString isEqualToString:@"level3"]) {
+		returnValue = level3;
 	}
-	else if ([difficultyString isEqualToString:@"medium"]) {
-		returnValue = medium;
+	else if ([difficultyString isEqualToString:@"level4"]) {
+		returnValue = level4;
+	}
+	else if ([difficultyString isEqualToString:@"level5"]) {
+		returnValue = level5;
 	}
 	
 	return returnValue;
@@ -29,15 +32,18 @@
 
 +(NSString*) difficultyToString:(Difficulty) diff
 {
-	NSString *returnValue = @"easy";
-	if (diff == veryhardDif) {
-		returnValue = @"veryhardDif";
+	NSString *returnValue = @"level1";
+	if (diff == level2) {
+		returnValue = @"level2";
 	}
-	else if (diff == hardDif) {
-		returnValue = @"hardDif";
+	else if (diff == level3) {
+		returnValue = @"level3";
 	}
-	else if (diff == medium) {
-		returnValue = @"medium";
+	else if (diff == level4) {
+		returnValue = @"level4";
+	}
+	else if (diff == level5) {
+		returnValue = @"level5";
 	}
 	
 	return returnValue;
@@ -45,15 +51,18 @@
 
 +(NSString*) difficultyToNiceString:(Difficulty) diff
 {
-	NSString *returnValue = @"easy";
-	if (diff == veryhardDif) {
-		returnValue = @"veryhard";
+	NSString *returnValue = @"level 1";
+	if (diff == level2) {
+		returnValue = @"level 2";
 	}
-	else if (diff == hardDif) {
-		returnValue = @"hard";
+	else if (diff == level3) {
+		returnValue = @"level 3";
 	}
-	else if (diff == medium) {
-		returnValue = @"medium";
+	else if (diff == level4) {
+		returnValue = @"level 4";
+	}
+	else if (diff == level5) {
+		returnValue = @"level 5";
 	}
 	
 	return returnValue;
@@ -97,24 +106,6 @@
 	return returnValue;
 }
 
-+(GameType) stringToGametype:(NSString*) gametypeString
-{
-	GameType returnValue = lastStanding;
-	if ([gametypeString isEqualToString:@"mostPoints"]) {
-		returnValue = mostPoints;
-	}
-	return returnValue;
-}
-
-+(NSString*) gametypeToString:(GameType) gametypeValue
-{
-	NSString *returnValue = @"lastStanding";
-	if (gametypeValue == mostPoints) {
-		returnValue = @"mostPoints";
-	}
-	
-	return returnValue;
-}
 
 +(GameState) stringToGamestate:(NSString*) gamestateString
 {

@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UISwitch-extended.h"
 #import "GlobalSettingsHelper.h"
+#import "EnumHelper.h"
 
 
 @implementation HighscoreLocalView
@@ -217,7 +218,7 @@
 		[self addSubview:buttonBack];
 		
 		[self ReadHighscoresIntoArrays];
-		m_showingLevel = hardDif;
+		m_showingLevel = level5;
 		[self ReadHighScoresAtDifficulty:m_showingLevel];
 		
 		[self setAlpha:0];
@@ -227,24 +228,40 @@
 
 -(void) levelUp
 {
-	if (m_showingLevel == easy) {
-		m_showingLevel = medium;
+	if (m_showingLevel == level1) {
+		m_showingLevel = level2;
 		[self changeLevel];
 	}
-	else  if(m_showingLevel == medium){
-		m_showingLevel = hardDif;
+	else  if(m_showingLevel == level2){
+		m_showingLevel = level3;
+		[self changeLevel];
+	}
+	else  if(m_showingLevel == level3){
+		m_showingLevel = level4;
+		[self changeLevel];
+	}
+	else  if(m_showingLevel == level4){
+		m_showingLevel = level5;
 		[self changeLevel];
 	}
 }
 
 -(void) levelDown
 {
-	if (m_showingLevel == hardDif) {
-		m_showingLevel = medium;
+	if (m_showingLevel == level5) {
+		m_showingLevel = level4;
 		[self changeLevel];
 	}
-	else if(m_showingLevel == medium){
-		m_showingLevel = easy;
+	else if(m_showingLevel == level4){
+		m_showingLevel = level3;
+		[self changeLevel];
+	}
+	else if(m_showingLevel == level3){
+		m_showingLevel = level2;
+		[self changeLevel];
+	}
+	else if(m_showingLevel == level2){
+		m_showingLevel = level1;
 		[self changeLevel];
 	}
 }
@@ -257,16 +274,19 @@
 	[UIView setAnimationDelegate:self];  
 	
 	switch (m_showingLevel) {
-		case easy:
+		case level1:
 			button_levelUp.center = CGPointMake(m_centerX, button_levelUp.frame.origin.y + (button_levelUp.frame.size.height/2) );
 			[button_levelDown setAlpha:0];
 			break;
-		case medium:
+		case level2:
+        case level3:
+        case level4:
 			button_levelUp.center = button_levelUpCenter;
 			[button_levelUp setAlpha:1];
 			button_levelDown.center = button_levelDownCenter;
 			[button_levelDown setAlpha:1];
 			break;
+        case level5:
 		default:
 			button_levelDown.center = CGPointMake(m_centerX, button_levelDown.frame.origin.y + (button_levelDown.frame.size.height/2) );
 			[button_levelUp setAlpha:0];
@@ -302,24 +322,9 @@
 
 -(void) finishedMovingLabelsIn
 {
-	[self ReadHighScoresAtDifficulty:m_showingLevel];	
-	switch (m_showingLevel) {
-		case easy:
-			subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"];
-			subheaderLabel.center = CGPointMake(m_centerX, subheaderLabel.frame.origin.y + (subheaderLabel.frame.size.height/2));
-			break;
-		case medium:
-			subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"medium"];
-			subheaderLabel.center = CGPointMake(m_centerX, subheaderLabel.frame.origin.y + (subheaderLabel.frame.size.height/2));
-			break;
-		case hardDif:
-		case veryhardDif:
-			subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"hard"];
-			subheaderLabel.center = CGPointMake(m_centerX, subheaderLabel.frame.origin.y + (subheaderLabel.frame.size.height/2));
-			break;
-		default:
-			break;
-	}
+	[self ReadHighScoresAtDifficulty:m_showingLevel];
+    subheaderLabel.text = [EnumHelper difficultyToNiceString:m_showingLevel];
+    subheaderLabel.center = CGPointMake(m_centerX, subheaderLabel.frame.origin.y + (subheaderLabel.frame.size.height/2));
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.4];
 	[subheaderLabel setAlpha:1];
@@ -358,18 +363,21 @@
 -(void) ReadHighScoresAtDifficulty:(Difficulty) difficulty
 {
 	NSArray *tempArray;
-	if (difficulty == medium){
-		tempArray = [mediumScoreArray retain];
-	}
-	else if(difficulty == hardDif){
-		tempArray = [hardScoreArray retain];
-	}
-	else if(difficulty == veryhardDif){
-		tempArray = [hardScoreArray retain];
-	}
-	else {
-		tempArray = [easyScoreArray retain];
-	}
+    switch (difficulty) {
+        case level1:
+        case level2:
+            tempArray = [easyScoreArray retain];
+            break;
+        case level3:
+        case level4:
+            tempArray = [mediumScoreArray retain];
+            break;
+        case level5:
+            tempArray = [hardScoreArray retain];
+            break;
+        default:
+            break;
+    }
 	
 	int index = 0;
 	for (NSDictionary *highscorePlayerData in tempArray) {

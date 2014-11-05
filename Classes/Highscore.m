@@ -51,18 +51,20 @@
 -(NSInteger) CheckIfNewHighScore:(Player*) player difficultyLevel:(Difficulty) diffLevel
 {
 	int placeOnTheList = 99;
-	int playerScore = [player GetScore];
+	int playerScore = 69;
 	int playerTime = [player GetSecondsUsed];
 	int indexFound = 99;
 	
 	NSMutableArray *tempHighscoreList;
 	NSString *tempPath;
 	switch (diffLevel) {
-		case easy:
+		case level1:
+        case level2:
 			tempHighscoreList = [m_highscoreListEasy retain]; 
 			tempPath = [pathEasy retain];
 			break;
-		case medium:
+		case level3:
+        case level4:
 			tempHighscoreList = [m_highscoreListMedium retain]; 
 			tempPath = [pathMedium retain];
 			break;
@@ -96,7 +98,7 @@
 		NSInteger mediumQ = [player GetMediumQuestionsPassed];
 		NSInteger hardQ = [player GetHardQuestionsPassed];
 		NSInteger time = [player GetSecondsUsed];
-		NSInteger points = [player GetScore];
+		NSInteger points = 69;
 		[newHighscorePlayerData setObject:name forKey:@"name"];
 		[name release];
 		[newHighscorePlayerData setObject:[NSNumber numberWithInt:easyQ] forKey:@"questions"];

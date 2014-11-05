@@ -22,9 +22,8 @@
 {
 	if (self = [super init]) {
 		
-		m_players = [[NSMutableArray alloc] init];
-		m_difficulty = easy;
-		m_initialDifficulty = easy;
+		m_difficulty = level1;
+		m_initialDifficulty = level1;
 		m_currentQuestionIndex = 0;
 		m_gameQuestionsPassed = 0;
 		m_gameState = outOfGame;
@@ -33,18 +32,14 @@
 	return self;
 }
 
--(void) SetPlayers:(NSMutableArray *) players andDifficulty:(Difficulty) difficulty andGameType:(GameType) gameType
-andNumberOfQuestions:(NSInteger) numberOfQuestions
+-(void) SetPlayer:(Player *) player andDifficulty:(Difficulty) difficulty
 {
-	m_players =  [players mutableCopy];
+    m_player = [player retain];
 	m_difficulty = difficulty;
 	m_initialDifficulty = difficulty;
 	m_currentQuestionIndex = 0;
 	m_highscores = [[Highscore alloc] init];
-	m_gameType = gameType;
 	m_gameQuestionsPassed = 0;
-	m_mostPointsGame_NumberOfQuestions = numberOfQuestions;
-
 	//[[LocationsHelper Instance] ShuffleQuestions];
 }
 
@@ -82,13 +77,7 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 			break;
 		}
 	}
-	
-	for (int playerIndex = 0; playerIndex< m_players.count;playerIndex++) {
-		if([[[m_players objectAtIndex:playerIndex] GetName] isEqualToString:playerName])
-		{
-			m_currentPlayerIndex = playerIndex;
-		}
-	}
+
 }
 
 -(void) SaveGame
@@ -97,20 +86,11 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	[[SqliteHelper Instance] executeUpdate:@"DELETE FROM player;"];
 	
 	[[SqliteHelper Instance] executeUpdate:@"INSERT INTO savestate VALUES (?, ?, ?, ?, ?, ?,?,?,?,?,?);",
-	 @"ID01",@"1",@"per",[EnumHelper gametypeToString:m_gameType],[[m_players objectAtIndex:m_currentPlayerIndex] GetName],
+	 @"ID01",@"1",@"per",@"no game type",[m_player GetName],
 	 [EnumHelper languageToString:[[GlobalSettingsHelper Instance] GetLanguage]],@"drawResult",[[self GetQuestion] GetID],
-	 [NSNumber numberWithInt: m_mostPointsGame_NumberOfQuestions], [EnumHelper gamestateToString:m_gameState],[NSNumber numberWithInt:m_gameQuestionsPassed]];	
+	 0, [EnumHelper gamestateToString:m_gameState],[NSNumber numberWithInt:m_gameQuestionsPassed]];
 
-//	for (Player *player in m_players) 
-	for (int i = 0;i< m_players.count; i++) {
-	
-		[[SqliteHelper Instance] executeUpdate:@"INSERT INTO player VALUES (?, ?, ?, ?, ?, ?,?,?,?,?,?);", 
-		 [[m_players objectAtIndex:i] GetName],[[m_players objectAtIndex:i] GetName],NSStringFromCGPoint([[m_players objectAtIndex:i] GetGamePoint]),
-		 [NSNumber numberWithInt:[[m_players objectAtIndex:i] GetSecondsUsed]],
-		 [NSNumber numberWithInt:[[m_players objectAtIndex:i] GetQuestionsPassed]], [NSNumber numberWithInt:[[m_players objectAtIndex:i] GetKmLeft]],[NSNumber numberWithInt:[[m_players objectAtIndex:i] GetScore]],
-		 [NSNumber numberWithInt:[[m_players objectAtIndex:i] GetTotalDistanceFromAllDestinations]],
-		 [NSNumber numberWithInt:[[m_players objectAtIndex:i] GetBarWidth]],[[m_players objectAtIndex:i] IsOut] ? @"YES" : @"NO",[[m_players objectAtIndex:i] GetPlayerSymbol]];
-	}
+
 }
 
 -(void) SetGameState:(GameState) gs
@@ -128,11 +108,6 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 -(Difficulty) GetGameDifficulty
 {
 	return m_initialDifficulty;
-}
-
--(GameType) GetGameType
-{
-	return m_gameType;
 }
 
 -(Question*) GetQuestion
@@ -164,21 +139,26 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	if (m_training == NO) {
         //reset currentQuestionIndex if all questions for a difficulty level is used
 		if (m_currentQuestionIndex >= [questionsOnType count]) {
-			if (m_difficulty == easy) {
-				m_difficulty = medium;
+			if (m_difficulty == level1) {
+				m_difficulty = level2;
 				m_currentQuestionIndex = 0;
 			}
-			else if (m_difficulty == medium) {
-				m_difficulty = hardDif;
+			else if (m_difficulty == level2) {
+				m_difficulty = level3;
 				m_currentQuestionIndex = 0;
 			}
-			else if (m_difficulty == hardDif) {
-				m_difficulty = veryhardDif;
+			else if (m_difficulty == level3) {
+				m_difficulty = level4;
 				m_currentQuestionIndex = 0;
 			}
-			else if (m_difficulty == veryhardDif) {
-				m_difficulty = easy;
+			else if (m_difficulty == level4) {
+				m_difficulty = level5;
 				m_currentQuestionIndex = 0;
+			}
+			else if (m_difficulty == level5) {
+				m_difficulty = level5;
+				m_currentQuestionIndex = 0;
+                [NSException raise:@"No more questions" format:@"No more questions. All questions on level5 used."];
 			}
 		}
 	}
@@ -201,24 +181,9 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 
 -(Player*) GetPlayer
 {
-	return [m_players objectAtIndex:m_currentPlayerIndex] ;//_? retain inside
+	return m_player ;//_? retain inside
 }
 
-
--(NSMutableArray*) GetPlayers
-{
-	return m_players;
-}
-
-
--(Player*) GetPlayerByName:(NSString*) name
-{
-	for (Player *player in m_players) {
-		if([[player GetName] isEqualToString:name])
-			return player;
-	}
-	return [m_players objectAtIndex:0];
-}
 
 //Method writes a string to a text file
 -(void) writeToTextFile{
@@ -260,341 +225,11 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 
 -(void) ResetPlayerData
 {
-	for (Player *player in m_players) {
-		[player ResetScore];
-		[player ResetGamePoint];
-		[player ResetPosition];
-	}
-	
+    [m_player ResetScore];
+    [m_player ResetGamePoint];
+    [m_player ResetPosition];
 }
 
--(Player*) GetBestScoredPlayer
-{
-	Player *topPlayer = [[m_players objectAtIndex:0] retain];
-	for (Player *player in m_players) {
-		if ([topPlayer GetScore] < [player GetScore]) {
-			[topPlayer release];
-			topPlayer = [player retain];
-		}
-	}
-	return topPlayer;
-}
-
--(void) SetPlayerPositionsByScore
-{
-	NSMutableArray *sortedPlayerArray = [[m_players mutableCopy]retain];
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetLastDistanceFromDestination]  >  [[sortedPlayerArray objectAtIndex:j] GetLastDistanceFromDestination])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}	
-	for (int i = 0; i<[sortedPlayerArray count]; i++) {
-		Player *player = [[sortedPlayerArray objectAtIndex:i] retain];
-		[player SetPositionByScore:(i + 1)];
-		[player release];
-	}
-}
-
-//finds out if one player has the unique right for the top spot , SCORE wise 
--(BOOL) IsOnePlayerAtTop
-{
-	BOOL onePlayerAtTop = YES;
-	NSMutableArray *sortedPlayerArray = [[m_players mutableCopy] retain];
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetScore]  <  [[sortedPlayerArray objectAtIndex:j] GetScore])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}	
-	
-	if([[sortedPlayerArray objectAtIndex:0] GetScore] == [[sortedPlayerArray objectAtIndex:1] GetScore])
-		onePlayerAtTop = NO;
-	
-	[sortedPlayerArray release];
-	
-	return onePlayerAtTop;
-}
-
--(NSInteger) GetCorrectAnswersAndSetScore:(NSInteger) score
-{
-	NSInteger numOfCorrectAnsweredPlayers = 0;
-	for(int i = 0; i < [m_players count]; i++ )
-	{
-		if([[m_players objectAtIndex:i] GetLastDistanceFromDestination] == 0)
-		{
-			numOfCorrectAnsweredPlayers++;
-			[[m_players objectAtIndex:i] IncreaseScoreBy:score +[[m_players objectAtIndex:i] GetCurrentTimeMultiplier]];
-		}
-	}
-	return numOfCorrectAnsweredPlayers;
-}
-
--(void) FirstPlaceSetScore:(NSInteger) score
-{
-	Player *topPlayer = [[m_players objectAtIndex:0] retain];
-	for (Player *player in m_players) {
-		if ([topPlayer GetLastDistanceFromDestination] > [player GetLastDistanceFromDestination]) {
-			[topPlayer release];
-			topPlayer = [player retain];
-		}
-	}
-	[topPlayer IncreaseScoreBy:score +[topPlayer GetCurrentTimeMultiplier]];
-	[topPlayer release];
-}	
-
--(void) SecondPlaceSetScore:(NSInteger) score
-{
-	NSMutableArray *sortedPlayerArray = [[m_players mutableCopy]retain];
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetLastDistanceFromDestination]  >  [[sortedPlayerArray objectAtIndex:j] GetLastDistanceFromDestination])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}	
-	
-	Player *secondBestPlayer = [[sortedPlayerArray objectAtIndex:1] retain];
-	[secondBestPlayer IncreaseScoreBy:score +[secondBestPlayer GetCurrentTimeMultiplier]];
-	[secondBestPlayer release];
-	[sortedPlayerArray release];
-}
-
--(void) ThirdPlaceSetScore:(NSInteger) score
-{
-	NSMutableArray *sortedPlayerArray = [[m_players mutableCopy] retain];
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetLastDistanceFromDestination]  >  [[sortedPlayerArray objectAtIndex:j] GetLastDistanceFromDestination])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}	
-	
-	Player *thirdBestPlayer = [[sortedPlayerArray objectAtIndex:2] retain];
-	[thirdBestPlayer IncreaseScoreBy:score +[thirdBestPlayer GetCurrentTimeMultiplier]];
-	[thirdBestPlayer release];
-	[sortedPlayerArray release];
-}
-
--(void) FourthPlaceSetScore:(NSInteger) score
-{
-	NSMutableArray *sortedPlayerArray = [[m_players mutableCopy] retain];
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetLastDistanceFromDestination]  >  [[sortedPlayerArray objectAtIndex:j] GetLastDistanceFromDestination])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}	
-	
-	Player *fourthBestPlayer = [[sortedPlayerArray objectAtIndex:3] retain];
-	[fourthBestPlayer IncreaseScoreBy:score +[fourthBestPlayer GetCurrentTimeMultiplier]];
-	[fourthBestPlayer release];
-	[sortedPlayerArray release];
-}
-
--(void) SetTimeBonusPoints
-{
-   	for (Player *player in m_players) {
-		[player IncreaseScoreBy:[player GetCurrentTimeMultiplier]];
-	}
-}
-
--(void) IncreaseScoresWithRoundScores 
-{
-    for (Player *player in m_players) {
-		[player IncreaseScoreWithRoundScore];
-	}
-}
-
-
--(NSArray *) GetSortedPlayersForRound
-{
-	NSMutableArray *sortedPlayerArray = [m_players mutableCopy];
-	
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetLastDistanceFromDestination]  >  [[sortedPlayerArray objectAtIndex:j] GetLastDistanceFromDestination])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}
-
-	return sortedPlayerArray;
-}
-
--(NSArray *) GetSortedPlayersForGame
-{
-	NSMutableArray *sortedPlayerArray = [m_players mutableCopy];
-
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetScore]  <  [[sortedPlayerArray objectAtIndex:j] GetScore])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}
-	return sortedPlayerArray;
-}
-
--(NSArray *) GetSortedPlayersForGame_LastStanding
-{
-	NSMutableArray *sortedPlayerArray = [m_players mutableCopy];
-	
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if( [[sortedPlayerArray objectAtIndex:(j-1)] GetQuestionsPassed]  <  [[sortedPlayerArray objectAtIndex:j] GetQuestionsPassed])
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-			else if([[sortedPlayerArray objectAtIndex:(j-1)] GetQuestionsPassed]  ==  [[sortedPlayerArray objectAtIndex:j] GetQuestionsPassed])
-			{
-				if([[sortedPlayerArray objectAtIndex:(j-1)] GetKmLeft]  <  [[sortedPlayerArray objectAtIndex:j] GetKmLeft])
-				{
-					temp = [sortedPlayerArray objectAtIndex:(j-1)];
-					[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-					[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-					swapped = YES;
-				}
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}
-	return sortedPlayerArray;
-}
-
-//made especially for drawing bars
--(NSArray *) GetSortedPlayersForBars
-{
-	NSMutableArray *sortedPlayerArray = [m_players mutableCopy];
-	
-	//bubblesort
-	Player *temp;
-	BOOL swapped;
-	for(int i = ([sortedPlayerArray count] - 1); i >= 0; i-- )
-	{
-		swapped = NO;
-		for(int j = 1; j <= i; j++ )
-		{
-			if(([[sortedPlayerArray objectAtIndex:(j-1)] IsOut] == YES) &&  ([[sortedPlayerArray objectAtIndex:j] IsOut] == NO))
-			{
-				temp = [sortedPlayerArray objectAtIndex:(j-1)];
-				[sortedPlayerArray replaceObjectAtIndex:(j-1) withObject:[sortedPlayerArray objectAtIndex:j]];
-				[sortedPlayerArray replaceObjectAtIndex:j withObject:temp];
-				swapped = YES;
-			}
-		}
-		if (swapped == NO) {
-			break;
-		}
-	}
-	return sortedPlayerArray;
-}
 
 -(void) UpdateAvgDistanceForQuest:(NSInteger) distanceBetweenPoints
 {
@@ -670,20 +305,6 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 	return m_gameQuestionsPassed;
 }
 
--(NSInteger) GetNumberOfQuestions
-{
-	return m_mostPointsGame_NumberOfQuestions;
-}
-
--(void) SetPlayersLeft:(NSInteger) playersLeft
-{
-	m_playersLeft = playersLeft;
-}
-
--(NSInteger) GetPlayersLeft
-{
-	return m_playersLeft;
-}
 
 -(void) ResetTrainingValues
 {
@@ -734,7 +355,7 @@ andNumberOfQuestions:(NSInteger) numberOfQuestions
 
 -(void)dealloc
 {
-	[m_players release];
+	[m_player release];
 	[super dealloc];
 }
 

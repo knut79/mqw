@@ -13,8 +13,6 @@
 +(NSString*) difficultyToString:(Difficulty) diff;
 +(NSString*) difficultyToNiceString:(Difficulty) diff;
 +(Difficulty) stringToDifficulty:(NSString*) difficultyString;
-+(NSString*) gametypeToString:(GameType) gametypeValue;
-+(GameType) stringToGametype:(NSString*) gametypeString;
 +(NSString*) languageToString:(Language) languageValue;
 +(Language) stringToLanguage:(NSString*) languageString;
 +(GameState) stringToGamestate:(NSString*) gamestateString;

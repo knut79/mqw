@@ -256,23 +256,26 @@
 			placeId = [placeIDandNameComponentsArray objectAtIndex:0];
 
 			
-			questDifficulty = easy; 
-			questDifficultyAsString = @"easy";
+			questDifficulty = level1;
+			questDifficultyAsString = @"level1";
 			
 			if (data.count > 3) {
 				kmTolerance = [[data objectAtIndex:3] integerValue];
 			}
 			
 			if (data.count > 4) {
-				if ([[data objectAtIndex:4] isEqualToString:@"medium"]) {
-					questDifficulty = medium;					
+				if ([[data objectAtIndex:4] isEqualToString:@"level2"]) {
+					questDifficulty = level2;
 				}
-				else if([[data objectAtIndex:4] isEqualToString:@"hard"]) {
-					questDifficulty = hardDif;
+				else if([[data objectAtIndex:4] isEqualToString:@"level3"]) {
+					questDifficulty = level3;
 				}
-				else if([[data objectAtIndex:4] isEqualToString:@"veryhard"]) {
-					questDifficulty = veryhardDif;
+				else if([[data objectAtIndex:4] isEqualToString:@"level4"]) {
+					questDifficulty = level4;
 				}
+             else if([[data objectAtIndex:4] isEqualToString:@"level5"]) {
+                 questDifficulty = level5;
+             }
 				else if([[data objectAtIndex:4] isEqualToString:@"notUsed"]){
 					questDifficulty = notUsed;
 				}
@@ -1072,17 +1075,20 @@
 	//categorize the questions
 	m_questionsByCategory = [[NSMutableDictionary alloc] initWithCapacity:4];
 	
-	NSMutableArray *veryhardArray = [self CollectQuestionsOnCategory:veryhardDif];
-	[m_questionsByCategory setObject:veryhardArray forKey:@"veryhardDif"];
+    NSMutableArray *level5Array = [self CollectQuestionsOnCategory:level5];
+	[m_questionsByCategory setObject:level5Array forKey:@"level5"];
+    
+	NSMutableArray *level4Array = [self CollectQuestionsOnCategory:level4];
+	[m_questionsByCategory setObject:level4Array forKey:@"level4"];
 	
-	NSMutableArray *hardArray = [self CollectQuestionsOnCategory:hardDif];
-	[m_questionsByCategory setObject:hardArray forKey:@"hardDif"];
+	NSMutableArray *level3Array = [self CollectQuestionsOnCategory:level3];
+	[m_questionsByCategory setObject:level3Array forKey:@"level3"];
 	
-	NSMutableArray *easyArray = [self CollectQuestionsOnCategory:easy];
-	[m_questionsByCategory setObject:easyArray  forKey:@"easy"];
+	NSMutableArray *level2Array = [self CollectQuestionsOnCategory:level2];
+	[m_questionsByCategory setObject:level2Array  forKey:@"level2"];
 	
-	NSMutableArray *mediumArray = [self CollectQuestionsOnCategory:medium];
-	[m_questionsByCategory setObject:mediumArray forKey:@"medium"];
+	NSMutableArray *level1Array = [self CollectQuestionsOnCategory:level1];
+	[m_questionsByCategory setObject:level1Array forKey:@"level1"];
 	
 	//[self ShuffleQuestions];
 	
@@ -1094,12 +1100,20 @@
 	if (m_trainingQuestionsByCategory == nil) 
 		m_trainingQuestionsByCategory = [[NSMutableDictionary alloc] initWithCapacity:3];	
 
-	NSMutableArray *trainingHardArray = [self CollectQuestionsOnCategoryForTraining:hardDif];
-	[m_trainingQuestionsByCategory setObject:trainingHardArray forKey:@"hardDif"];
-	NSMutableArray *trainingEasyArray = [self CollectQuestionsOnCategoryForTraining:easy];
-	[m_trainingQuestionsByCategory setObject:trainingEasyArray  forKey:@"easy"];
-	NSMutableArray *trainingMediumArray = [self CollectQuestionsOnCategoryForTraining:medium];
-	[m_trainingQuestionsByCategory setObject:trainingMediumArray forKey:@"medium"];	
+    NSMutableArray *level5Array = [self CollectQuestionsOnCategoryForTraining:level5];
+	[m_trainingQuestionsByCategory setObject:level5Array forKey:@"level5"];
+    
+	NSMutableArray *level4Array = [self CollectQuestionsOnCategoryForTraining:level4];
+	[m_trainingQuestionsByCategory setObject:level4Array forKey:@"level4"];
+	
+	NSMutableArray *level3Array = [self CollectQuestionsOnCategoryForTraining:level3];
+	[m_trainingQuestionsByCategory setObject:level3Array forKey:@"level3"];
+	
+	NSMutableArray *level2Array = [self CollectQuestionsOnCategoryForTraining:level2];
+	[m_trainingQuestionsByCategory setObject:level2Array  forKey:@"level2"];
+	
+	NSMutableArray *level1Array = [self CollectQuestionsOnCategoryForTraining:level1];
+	[m_trainingQuestionsByCategory setObject:level1Array forKey:@"level1"];
 }
 
 
@@ -1118,8 +1132,8 @@
 -(NSMutableArray*) CollectQuestionsOnCategoryForTraining:(Difficulty) category
 {
 	Difficulty secondCategory = category;
-	if (category == hardDif) {
-		secondCategory = veryhardDif;
+	if (category == level4) {
+		secondCategory = level5;
 	}
 	NSMutableArray *collectedQuestons = [[NSMutableArray alloc] init];
 	for (Question *quest in m_questionsList){
@@ -1266,17 +1280,20 @@
 	if(training == NO)
 	{
 		switch (difficulty) {
-			case veryhardDif:
-				qOnType = [m_questionsByCategory objectForKey:@"veryhardDif"];
+			case level1:
+				qOnType = [m_questionsByCategory objectForKey:@"level1"];
 				break;
-			case hardDif:
-				qOnType = [m_questionsByCategory objectForKey:@"hardDif"];
+			case level2:
+				qOnType = [m_questionsByCategory objectForKey:@"level2"];
 				break;
-			case easy:
-				qOnType = [m_questionsByCategory objectForKey:@"easy"];
+			case level3:
+				qOnType = [m_questionsByCategory objectForKey:@"level3"];
 				break;
-			case medium:
-				qOnType = [m_questionsByCategory objectForKey:@"medium"];
+			case level4:
+				qOnType = [m_questionsByCategory objectForKey:@"level4"];
+				break;
+            case level5:
+				qOnType = [m_questionsByCategory objectForKey:@"level5"];
 				break;
 			default:
 				break;
@@ -1285,15 +1302,20 @@
 	else 
 	{
 		switch (difficulty) {
-			case veryhardDif:
-			case hardDif:
-				qOnType = [m_trainingQuestionsByCategory objectForKey:@"hardDif"];
+            case level1:
+				qOnType = [m_trainingQuestionsByCategory objectForKey:@"level1"];
 				break;
-			case easy:
-				qOnType = [m_trainingQuestionsByCategory objectForKey:@"easy"];
+			case level2:
+				qOnType = [m_trainingQuestionsByCategory objectForKey:@"level2"];
 				break;
-			case medium:
-				qOnType = [m_trainingQuestionsByCategory objectForKey:@"medium"];
+			case level3:
+				qOnType = [m_trainingQuestionsByCategory objectForKey:@"level3"];
+				break;
+			case level4:
+				qOnType = [m_trainingQuestionsByCategory objectForKey:@"level4"];
+				break;
+            case level5:
+				qOnType = [m_trainingQuestionsByCategory objectForKey:@"level5"];
 				break;
 			default:
 				break;

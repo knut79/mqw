@@ -55,16 +55,10 @@
 -(void) UpdateBars;
 -(void) SetBars;
 -(void) ResetPlayersLeft;
--(void) drawScoreForTwoPlayers:(CGContextRef) context drawUpdatedScore:(BOOL) drawUpdatedScore;
--(void) drawScoreForThreePlayers:(CGContextRef) context drawUpdatedScore:(BOOL) drawUpdatedScore;
--(void) drawScoreForFourPlayers:(CGContextRef) context drawUpdatedScore:(BOOL) drawUpdatedScore;
--(void) drawScoreForPlayer:(CGContextRef) context player:(Player*) player textX:(NSInteger) textX textY:(NSInteger) textY fontSize:(NSInteger) fontSize scoreYOffset:(NSInteger) scoreYOffset barRect:(CGRect) barRect drawUpdatedScore:(BOOL) drawUpdatedScore;
 -(void) UpdatePoints;
 -(void) EnableSetPositionButton;
 -(void) drawForOnePlayer:(CGContextRef) context;
--(void) drawForTwoPlayers:(CGContextRef) context;
--(void) drawForThreePlayers:(CGContextRef) context;
--(void) drawForFourPlayers:(CGContextRef) context;
+
 -(void) FadeIn;
 -(void) FadeOut;
 -(void) SetTrainingText;

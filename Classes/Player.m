@@ -24,7 +24,6 @@
 		m_kmLeft = const_startKmDistance;
 		m_kmLeft_infoBar = const_startKmDistance;
 		//miles 31070
-		m_score = 0;
 		m_easyQuestionsPassed = 0;
 		m_mediumQuestionsPassed = 0;
 		m_hardQuestionsPassed = 0;
@@ -33,7 +32,6 @@
 		m_durration = 0;
 		m_out = NO;
 		m_pepTalk = [[NSString alloc] init];
-		m_lastRoundScore = 0;
 		m_position = 0;
 		m_totalDistanceFromAllDestinations = 0;
 		m_lastDistanceFromDestination = 0;
@@ -47,10 +45,9 @@
 	return self;
 }
 
--(void) SetPlayerState_Score:(NSInteger) score QuestionsPassed:(NSInteger) questionsPassed GamePoint:(CGPoint) gamePoint KmLeft:(NSInteger) kmLeft
+-(void) SetPlayerState:(NSInteger) questionsPassed GamePoint:(CGPoint) gamePoint KmLeft:(NSInteger) kmLeft
 					TimeUsed:(NSInteger) timeUsed TotalDistance:(NSInteger) totalDistance Out:(BOOL) isOut BarWidth:(NSInteger) barWidth 
 {
-	m_score = score;
 	m_easyQuestionsPassed = questionsPassed;
 	m_gamePoint = gamePoint;
 	m_kmLeft = kmLeft;
@@ -61,22 +58,6 @@
 	m_out = isOut;
 	m_barWidth = barWidth;
 }
-
-//-(NSDictionary*) GetPlayerState
-//{
-//
-//	NSMutableDictionary* playerStateDictionary = [[NSMutableDictionary alloc] init];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_score] forKey:@"score"];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_easyQuestionsPassed] forKey:@"questionsPassed"];
-//	[playerStateDictionary setValue:[NSValue valueWithCGPoint:m_gamePoint] forKey:@"gamePoint"];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_durration] forKey:@"timeUsed"];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_totalDistanceFromAllDestinations] forKey:@"kmleft"];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_kmLeft] forKey:@"totalDistance"];
-//	[playerStateDictionary setValue:[NSNumber numberWithBool:m_out] forKey:@"isOut"];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_barWidth] forKey:@"barWidth"];
-//	[playerStateDictionary setValue:[NSNumber numberWithInteger:m_playerSymbol] forKey:@"symbol"];	
-//	return playerStateDictionary;
-//}
 
 
 -(NSString*) GetName
@@ -167,11 +148,6 @@
 	return m_gamePoint;
 }
 
--(NSInteger) GetScore
-{
-	return m_score;
-}
-
 -(NSString*) GetPlayerSymbol
 {
 	return m_playerSymbol;
@@ -218,43 +194,18 @@
 	m_lastScale = scale;
 }
 
--(void) IncreasQuestionsPassedAndScore:(Question*) question
-{
-	Difficulty dif = [question GetDifficulty];
-	switch (dif) {
-		case easy:
-			m_score++;
-			m_easyQuestionsPassed++;
-			break;
-		case medium:
-			m_score += 2;
-			m_mediumQuestionsPassed++;
-			break;
-		case hardDif:
-		case veryhardDif:
-			m_score += 3;
-			m_hardQuestionsPassed++;
-			break;
-		default:
-			m_score += 3;
-			m_hardQuestionsPassed++;
-			break;
-	}
-}
 
 -(void) IncreasQuestionsPassed:(Question*) question
 {
 	Difficulty dif = [question GetDifficulty];
 	switch (dif) {
-		case easy:
+		case level1:
+        case level2:
 			m_easyQuestionsPassed++;
 			break;
-		case medium:
+        case level3:
+        case level4:
 			m_mediumQuestionsPassed++;
-			break;
-		case hardDif:
-		case veryhardDif:
-			m_hardQuestionsPassed++;
 			break;
 		default:
 			m_hardQuestionsPassed++;
@@ -263,33 +214,6 @@
 }
 
 
--(void) IncreaseScoreBy:(NSInteger) value
-{
-	m_lastRoundScore = value;
-	m_score = m_score + value;
-}
-
-//-(void) IncreaseRoundScoreBy:(NSInteger) value
-//{
-//	//m_lastRoundScore = value;
-//	m_score = m_score + value;
-//}
-//
-//-(void) IncreaseScoreWithRoundScore
-//{
-//    m_score = m_score + m_lastRoundScore;
-//    //m_lastRoundScore = 0;
-//}
-
-//-(void) SetLastRoundScore
-//{
-//    m_lastRoundScore = m_score;
-//}
-
--(NSInteger) GetLastRoundScore
-{
-	return m_lastRoundScore;
-}
 
 -(long) GetQuestionsPassed
 {
@@ -341,13 +265,11 @@
 	m_lastKmLeft = const_startKmDistance;
 	m_kmLeft = const_startKmDistance;
 	m_kmLeft_infoBar = const_startKmDistance;
-	m_score = 0;
 	m_easyQuestionsPassed = 0;
 	m_mediumQuestionsPassed = 0;
 	m_hardQuestionsPassed = 0;
 	//m_durration = 0;
 	m_out = NO;
-	m_lastRoundScore = 0;
 	m_totalDistanceFromAllDestinations = 0;
 	m_lastDistanceFromDestination = 0;
 }

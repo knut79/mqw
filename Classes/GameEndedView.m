@@ -275,10 +275,7 @@
 -(void) setUpSinglePlayer:(Game*) gameRef
 {
     UIScreen *screen = [[UIScreen mainScreen] retain];
-//	NSInteger yOffset = 40;
-//	NSInteger yOffsetConstant = 70;
-	
-	//NSMutableArray *players = [[gameRef GetSortedPlayersForGame] retain];
+
 	Player *tempPlayer;
     
     self.userInteractionEnabled = NO;
@@ -316,8 +313,9 @@
     Highscore *hs = [gameRef GetHighscore];
     NSInteger newHighScorePlace = [hs CheckIfNewHighScore:tempPlayer difficultyLevel:[gameRef GetGameDifficulty]];
     if (newHighScorePlace < 99) {
-        NSString *gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"];
+        NSString *gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"set level difficulty"];
         Difficulty diffLevel = [gameRef GetGameDifficulty];
+        /*
         switch (diffLevel) {
             case hardDif:
             case veryhardDif:
@@ -327,7 +325,7 @@
                 gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"medium"];
             default:
                 break;
-        }
+        }*/
         m_localHighscoreLabel.text = [NSString stringWithFormat:@"%@ %@ %@ %@ %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"New local"],gameDifficultyString,[[GlobalSettingsHelper Instance] GetStringByLanguage:@"game highscore"],
                                       [[GlobalSettingsHelper Instance] GetStringByLanguage:@"at place"],newHighScorePlace];
         

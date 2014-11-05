@@ -66,18 +66,6 @@
 		[m_dynamicLabel1 setAlpha:0];
 		[self addSubview:m_dynamicLabel1];
 		
-		m_dynamicLabel2 = [[UILabel alloc] init];
-		[m_dynamicLabel2 setFrame:CGRectMake(60 + m_labelsXoffset, 160 + m_labelsYoffset, 250, 20)];
-		m_dynamicLabel2.backgroundColor = [UIColor clearColor]; 
-		[m_dynamicLabel2 setFont:[UIFont boldSystemFontOfSize:14.0f]];
-		m_dynamicLabel2.textAlignment = NSTextAlignmentCenter;
-//		m_dynamicLabel2.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//		m_dynamicLabel2.layer.shadowOpacity = 1.0;
-//		m_dynamicLabel2.layer.shadowRadius = 1.5;
-		m_dynamicLabel2.shadowColor = [UIColor whiteColor];
-		m_dynamicLabel2.shadowOffset = CGSizeMake(-1,-2);
-		[m_dynamicLabel2 setAlpha:0];
-		[self addSubview:m_dynamicLabel2];
 		
 		m_dynamicLabel3 = [[UILabel alloc] init];
 		[m_dynamicLabel3 setFrame:CGRectMake(60 + m_labelsXoffset, 180 + m_labelsYoffset, 250, 20)];
@@ -132,8 +120,7 @@
 
     //questions passed
     m_dynamicLabel1.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions passed"],[m_playerRef GetQuestionsPassed]];
-    //score
-    m_dynamicLabel2.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],[m_playerRef GetScore]];
+
     //km/miles left
     NSInteger kmLeft = [m_playerRef GetKmLeft];
 
@@ -152,7 +139,6 @@
 	m_playerNameLabel.center = CGPointMake([screen applicationFrame].size.width/2, m_playerNameLabel.frame.origin.y + (m_playerNameLabel.frame.size.height/2) );
 	m_secondsUsedLabel.center = CGPointMake([screen applicationFrame].size.width/2, m_secondsUsedLabel.frame.origin.y + (m_secondsUsedLabel.frame.size.height/2) );
 	m_dynamicLabel1.center = CGPointMake([screen applicationFrame].size.width/2, m_dynamicLabel1.frame.origin.y + (m_dynamicLabel1.frame.size.height/2) );
-	m_dynamicLabel2.center = CGPointMake([screen applicationFrame].size.width/2, m_dynamicLabel2.frame.origin.y + (m_dynamicLabel2.frame.size.height/2) );
 	m_dynamicLabel3.center = CGPointMake([screen applicationFrame].size.width/2, m_dynamicLabel3.frame.origin.y + (m_dynamicLabel3.frame.size.height/2) );
 	m_tapWhenReadyLabel.center = CGPointMake([screen applicationFrame].size.width/2, m_tapWhenReadyLabel.frame.origin.y + (m_tapWhenReadyLabel.frame.size.height/2) );
 	[screen release];
@@ -166,13 +152,6 @@
 	[UIView setAnimationDuration:0.5];
 	[UIView setAnimationDelegate:self];       
 	[UIView setAnimationDidStopSelector:@selector(FinishedFadingOut)];   
-//	[m_playerNameLabel setAlpha:0];
-//	[m_tapWhenReadyLabel setAlpha:0];
-//	[m_secondsUsedLabel setAlpha:0];
-//	[m_dynamicLabel1 setAlpha:0];
-//	[m_dynamicLabel2 setAlpha:0];
-//	[m_dynamicLabel3 setAlpha:0];
-//	[m_skyView setAlpha:0];
     [self setAlpha:0];
 	[UIView commitAnimations];	
 }
@@ -180,9 +159,6 @@
 - (void) FinishedFadingOut
 {
 	self.hidden = YES;
-	//send message fading in game elements
-//	if ([delegate respondsToSelector:@selector(FadeInGameElements)])
-//		[delegate FadeInGameElements];
 	if ([delegate respondsToSelector:@selector(StartPlayer)])
 		[delegate StartPlayer];
 }
@@ -205,7 +181,6 @@
 	[m_tapWhenReadyLabel setAlpha:1];
 	[m_secondsUsedLabel setAlpha:1];
 	[m_dynamicLabel1 setAlpha:1];
-	[m_dynamicLabel2 setAlpha:1];
 	[m_dynamicLabel3 setAlpha:1];
 	[m_skyView setAlpha:0.5];
 }

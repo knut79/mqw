@@ -36,7 +36,7 @@
 	
 	Game *m_game;
 	id <StartGameMenuViewDelegate> delegate;
-	NSMutableArray *m_players;
+	Player *m_player;
 	
 	NSInteger sliderXOffset;
 	NSInteger sliderYOffset;
@@ -47,8 +47,6 @@
 	NSInteger switchXOffset;
 	NSInteger switchYOffset;
 	
-	
-	NSInteger mostPointsGame_NumberOfQuestions;
 	
 	SkyView *m_skyView;
 	UILabel *miniLabel;

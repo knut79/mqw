@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UISwitch-extended.h"
 #import "GlobalSettingsHelper.h"
+#import "EnumHelper.h"
 
 
 @implementation HighscoreGlobalView
@@ -201,7 +202,7 @@
 		//buttonBack.frame = CGRectMake(80.0, 410.0, 180.0, 40.0);
 		[self addSubview:buttonBack];
 		
-		m_showingLevel = hardDif;
+		m_showingLevel = level5;
 
 		
 		m_activityIndicator = [[UIActivityIndicatorView alloc] init];
@@ -270,12 +271,20 @@
 	[button_levelDown setUserInteractionEnabled:FALSE];
 	[button_levelUp setUserInteractionEnabled:FALSE];
 	[switchShowButton setUserInteractionEnabled:FALSE];
-	if (m_showingLevel == easy) {
-		m_showingLevel = medium;
+    if (m_showingLevel == level1) {
+		m_showingLevel = level2;
 		[self changeLevel];
 	}
-	else  if(m_showingLevel == medium){
-		m_showingLevel = hardDif;
+	else  if(m_showingLevel == level2){
+		m_showingLevel = level3;
+		[self changeLevel];
+	}
+	else  if(m_showingLevel == level3){
+		m_showingLevel = level4;
+		[self changeLevel];
+	}
+	else  if(m_showingLevel == level4){
+		m_showingLevel = level5;
 		[self changeLevel];
 	}
 }
@@ -285,12 +294,20 @@
 	[button_levelDown setUserInteractionEnabled:FALSE];
 	[button_levelUp setUserInteractionEnabled:FALSE];
 	[switchShowButton setUserInteractionEnabled:FALSE];
-	if (m_showingLevel == hardDif) {
-		m_showingLevel = medium;
+	if (m_showingLevel == level5) {
+		m_showingLevel = level4;
 		[self changeLevel];
 	}
-	else if(m_showingLevel == medium){
-		m_showingLevel = easy;
+	else if(m_showingLevel == level4){
+		m_showingLevel = level3;
+		[self changeLevel];
+	}
+	else if(m_showingLevel == level3){
+		m_showingLevel = level2;
+		[self changeLevel];
+	}
+	else if(m_showingLevel == level2){
+		m_showingLevel = level1;
 		[self changeLevel];
 	}
 }
@@ -327,26 +344,26 @@
 	CGPoint centerPoint = CGPointMake(m_centerX, m_centerY);
 	NSString *levelString = @"easy";
 	switch (m_showingLevel) {
-		case easy:
+		case level1:
 			button_levelUp.center = CGPointMake(m_centerX, button_levelUp.frame.origin.y + (button_levelUp.frame.size.height/2) );
 			[button_levelDown setAlpha:0];
-			levelString = @"easy";
 			break;
-		case medium:
+		case level2:
+        case level3:
+        case level4:
 			button_levelUp.center = button_levelUpCenter;
 			[button_levelUp setAlpha:1];
 			button_levelDown.center = button_levelDownCenter;
 			[button_levelDown setAlpha:1];
-			levelString = @"medium";
 			break;
-		case hardDif:
-		case veryhardDif:
+		case level5:
 			button_levelDown.center = CGPointMake(m_centerX, button_levelDown.frame.origin.y + (button_levelDown.frame.size.height/2) );
 			[button_levelUp setAlpha:0];
-			levelString = @"hard";
 		default:
 			break;
 	}
+    levelString = [EnumHelper difficultyToString:m_showingLevel] ;
+    
 	[subheaderLabel setAlpha:0];
 	subheaderLabel.center = centerPoint;
 	[UIView commitAnimations];	
@@ -405,20 +422,7 @@
 
 -(void) finishedMovingLabelsIn
 {
-	switch (m_showingLevel) {
-		case easy:
-			subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"];
-			break;
-		case medium:
-			subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"medium"];
-			break;
-		case hardDif:
-		case veryhardDif:
-			subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"hard"];
-			break;
-		default:
-			break;
-	}
+    subheaderLabel.text = [EnumHelper difficultyToNiceString:m_showingLevel];
 	subheaderLabel.center = CGPointMake(m_centerX, subheaderLabel.frame.origin.y + (subheaderLabel.frame.size.height/2));
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.4];
@@ -438,17 +442,7 @@
 	recordTime = FALSE;
 	index = 0;
 	
-	NSString *levelString = @"hard";
-	switch (m_showingLevel) {
-		case easy:
-			levelString = @"easy";
-			break;
-		case medium:
-			levelString = @"medium";
-			break;
-		default:
-			break;
-	}
+	NSString *levelString = [EnumHelper difficultyToString:m_showingLevel];
 	
 	NSString *soapMessage = [NSString stringWithFormat:
 							 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
@@ -504,17 +498,7 @@
 	recordScore = FALSE;
 	recordTime = FALSE;
 	index = 0;
-	NSString *levelString = @"hard";
-	switch (m_showingLevel) {
-		case easy:
-			levelString = @"easy";
-			break;
-		case medium:
-			levelString = @"medium";
-			break;
-		default:
-			break;
-	}
+	NSString *levelString = [EnumHelper difficultyToString:m_showingLevel];
 
 		NSString *soapMessage = [NSString stringWithFormat:
 								 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"

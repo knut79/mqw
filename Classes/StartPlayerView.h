@@ -19,7 +19,6 @@
 	UILabel *m_tapWhenReadyLabel;
 	UILabel *m_secondsUsedLabel;
 	UILabel *m_dynamicLabel1;
-	UILabel *m_dynamicLabel2;
 	UILabel *m_dynamicLabel3;
 	NSInteger m_labelsXoffset;
 	NSInteger m_labelsYoffset;

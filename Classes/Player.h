@@ -18,8 +18,6 @@
 	float m_lastScale;
 	NSInteger m_kmLeft;
 	NSInteger m_lastKmLeft;
-	NSInteger m_score;
-	NSInteger m_lastRoundScore;
 	NSInteger m_easyQuestionsPassed;
 	NSInteger m_mediumQuestionsPassed;
 	NSInteger m_hardQuestionsPassed;
@@ -48,7 +46,7 @@
 }
 -(id) initWithName:(NSString*) name andColor:(UIColor*) color andPlayerSymbol:(NSString*) playerSymbol;
 
--(void) SetPlayerState_Score:(NSInteger) score QuestionsPassed:(NSInteger) questionsPassed GamePoint:(CGPoint) gamePoint KmLeft:(NSInteger) kmLeft
+-(void) SetPlayerState:(NSInteger) questionsPassed GamePoint:(CGPoint) gamePoint KmLeft:(NSInteger) kmLeft
 					TimeUsed:(NSInteger) timeUsed TotalDistance:(NSInteger) totalDistance Out:(BOOL) isOut BarWidth:(NSInteger) barWidth;
 -(NSString*) GetName;
 -(void) SetGamePoint:(CGPoint) gamePoint;
@@ -69,12 +67,8 @@
 
 -(float)GetLastScale;
 -(void)SetLastScale:(float) scale;
--(void) IncreasQuestionsPassedAndScore:(Question*) question;
 -(void) IncreasQuestionsPassed:(Question*) question;
-//-(void) IncreaseRoundScoreBy:(NSInteger) value;
--(void) IncreaseScoreBy:(NSInteger) value;
 -(long) GetQuestionsPassed;
--(NSInteger) GetLastRoundScore;
 -(void) SetPositionByScore:(NSInteger) position;
 
 -(void) StartTimer;
@@ -85,7 +79,7 @@
 -(void) ResetGamePoint;
 -(void) ResetPosition;
 -(NSInteger) GetPositionByScore;
--(NSInteger) GetScore;
+
 -(void) IncreaseScoreWithRoundScore;
 
 -(NSInteger) GetSecondsUsed;
