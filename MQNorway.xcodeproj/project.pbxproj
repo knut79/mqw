@@ -806,9 +806,9 @@
 		72CB8CD41A0BD5BE000E30CF /* 100MaskLand.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD01A0BD5BE000E30CF /* 100MaskLand.png */; };
 		72CB8CD51A0BD5BE000E30CF /* 100MaskWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD11A0BD5BE000E30CF /* 100MaskWater.png */; };
 		72CB8CD71A14283B000E30CF /* capitalsEurope.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD61A14283B000E30CF /* capitalsEurope.txt */; };
-		72CB8CDB1A1429AF000E30CF /* capitalsAfrica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD81A1429AF000E30CF /* capitalsAfrica.txt */; };
 		72CB8CDC1A1429AF000E30CF /* capitalsAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD91A1429AF000E30CF /* capitalsAsia.txt */; };
 		72CB8CDD1A1429AF000E30CF /* capitalsMiddleEast.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CDA1A1429AF000E30CF /* capitalsMiddleEast.txt */; };
+		72CB8CDF1A14ED73000E30CF /* capitalsAfrica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CDE1A14ED72000E30CF /* capitalsAfrica.txt */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1711,9 +1711,9 @@
 		72CB8CD01A0BD5BE000E30CF /* 100MaskLand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 100MaskLand.png; path = resources/graphics/map/100MaskLand.png; sourceTree = "<group>"; };
 		72CB8CD11A0BD5BE000E30CF /* 100MaskWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 100MaskWater.png; path = resources/graphics/map/100MaskWater.png; sourceTree = "<group>"; };
 		72CB8CD61A14283B000E30CF /* capitalsEurope.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsEurope.txt; path = resources/tekst/capitalsEurope.txt; sourceTree = "<group>"; };
-		72CB8CD81A1429AF000E30CF /* capitalsAfrica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAfrica.txt; path = resources/tekst/capitalsAfrica.txt; sourceTree = "<group>"; };
 		72CB8CD91A1429AF000E30CF /* capitalsAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAsia.txt; path = resources/tekst/capitalsAsia.txt; sourceTree = "<group>"; };
 		72CB8CDA1A1429AF000E30CF /* capitalsMiddleEast.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsMiddleEast.txt; path = resources/tekst/capitalsMiddleEast.txt; sourceTree = "<group>"; };
+		72CB8CDE1A14ED72000E30CF /* capitalsAfrica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAfrica.txt; path = resources/tekst/capitalsAfrica.txt; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1980,7 +1980,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				72CB8CD81A1429AF000E30CF /* capitalsAfrica.txt */,
+				72CB8CDE1A14ED72000E30CF /* capitalsAfrica.txt */,
 				72CB8CD91A1429AF000E30CF /* capitalsAsia.txt */,
 				72CB8CDA1A1429AF000E30CF /* capitalsMiddleEast.txt */,
 				72CB8CD61A14283B000E30CF /* capitalsEurope.txt */,
@@ -3687,7 +3687,6 @@
 				7204A2A319D976D600B8AE76 /* world_100_7_2.jpg in Resources */,
 				7204A18A19D976B300B8AE76 /* world_50_7_3.jpg in Resources */,
 				7204A37A19D9799200B8AE76 /* icon.png in Resources */,
-				72CB8CDB1A1429AF000E30CF /* capitalsAfrica.txt in Resources */,
 				7204A29519D976D600B8AE76 /* world_100_6_0.jpg in Resources */,
 				7204A2EF19D976D600B8AE76 /* world_100_13_6.jpg in Resources */,
 				7204A2D719D976D600B8AE76 /* world_100_11_6.jpg in Resources */,
@@ -3903,6 +3902,7 @@
 				727ED16A19F95841000707AA /* UnitedKingdomFlag.png in Resources */,
 				729FC41D19ECA16B00B082E5 /* AzerbaijanFlag.png in Resources */,
 				7204A4A419E40CF600B8AE76 /* UnitedArabEmiratesFlag.png in Resources */,
+				72CB8CDF1A14ED73000E30CF /* capitalsAfrica.txt in Resources */,
 				7204A2B219D976D600B8AE76 /* world_100_8_5.jpg in Resources */,
 				7204A12A19D9769A00B8AE76 /* world_25_3_0.jpg in Resources */,
 				7204A46619E3487200B8AE76 /* EthiopiaFlag.png in Resources */,

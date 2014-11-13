@@ -1,3 +1,27 @@
 2366;1992
 inf;City#Where is the city;Dar es Salaam;10;level1;Tanzania's largest and richest city and a regionally important economic centre. Lost its status as the nation's capital to Dodoma in 1974#nor#spn#fra#ger;Africa#Tanzania
+2370;1627
+inf;City#Where is the city;Medina;10;level1;The burial place of the Islamic prophet Muhammad, it is the second holiest city in Islam after Mecca. Medina is critically significant in Islamic History as Muhammad's final religious base after the Hijrah and the location of his death in 632 AD. #nor#spn#fra#ger;Middle East#Saudi Arabia
+2373;1665
+inf;City#Where is the city;Mecca;10;level1;As the birthplace of Muhammad Mecca is regarded as the holiest city in the religion of Islam  and a pilgrimage to it known as the Hajj is obligatory for all able Muslims. Mecca is home to the Kaaba, by majority description Islam's holiest site.#nor#spn#fra#ger;Middle East#Saudi Arabia
+1944;1396
+inf;City#Where is the city;Barcelona;10;level1;The capital city of the autonomous community of Catalonia in Spain and the country's 2nd largest city#nor#spn#fra#ger;Europe#Spain
+2350;1290
+inf;City#Where is the city;Donetsk;10;level1;An industrial city in Ukraine on the Kalmius River. The city was founded in 1869 by a Welsh businessman, John Hughes, who constructed a steel plant and several coal mines in the region#nor#spn#fra#ger;Europe#Ukraine
+1871;1144
+inf;City#Where is the city;Glasgow;10;level1;The largest city in Scotland, and the third largest in the United Kingdom.#nor#spn#fra#ger;Europe#UK
+2034;1190
+inf;City#Where is the city;Hamburg;10;level1;The second largest city in Germany and the eighth largest city in the European Union. #nor#spn#fra#ger;Europe#Germany
+2249;1402
+inf;City#Where is the city;Istanbul;10;level1;The largest city in Turkey#nor#spn#fra#ger;Europe#Turkey
+2147;1254
+inf;City#Where is the city;Krakow;10;level1;The second largest and one of the oldest cities in Poland. Situated on the Vistula River#nor#spn#fra#ger;Europe#Poland
+2051;1287
+inf;City#Where is the city;Munich;10;level1;The capital and largest city of the German state of Bavaria, on the River Isar north of the Bavarian Alps. Munich is the third largest city in Germany, after Berlin and Hamburg.#nor#spn#fra#ger;Europe#Germany
+2071;1445
+inf;City#Where is the city;Palermo;10;level1;Palermo is located in the northwest of the island of Sicily, right by the Gulf of Palermo in the Tyrrhenian Sea.#nor#spn#fra#ger;Europe#Sicily
+2006;1338
+inf;City#Where is the city;Turin(Torino);10;level1;A city and an important business and cultural centre in northern Italy, capital of the Piedmont region, located mainly on the left bank of the Po River#nor#spn#fra#ger;Europe#Italy
+2059;1332
+inf;City#Where is the city;Venice;10;level1;A city in northeastern Italy sited on a group of 118 small islands separated by canals and linked by bridges.#nor#spn#fra#ger;Europe#Italy
 eof
