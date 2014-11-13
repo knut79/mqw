@@ -128,7 +128,12 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
    
-	[viewController SaveGameData];
+    
+    //_? if in game quit with message
+    [viewController QuitGame];
+    
+    
+	//[viewController SaveGameData];
 	
 	/*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -144,8 +149,8 @@
      */
 	
 	//set up the menu
-	
-	[viewController LoadGameAndResume];
+	[viewController showMessage];
+	//[viewController LoadGameAndResume];
 	
 	
 	//NSLog(@"applicationWillEnterForeground: called");

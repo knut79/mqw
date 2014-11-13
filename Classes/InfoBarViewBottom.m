@@ -343,15 +343,16 @@
         m_numberOfPlayersLeft++;
     }
     
+    /*
     if (([player GetKmLeft] + [player GetCurrentKmTimeBonus]) > 0) {
         playersLeftAfterAnimation ++;
 
         //only singleplayer games wil give highscores
-        [player IncreasQuestionsPassedAndScore:currentQuestion];
+        //[player IncreasQuestionsPassedAndScore:currentQuestion];
 
     }
 
-	[m_gameRef SetPlayersLeft:playersLeftAfterAnimation];
+	[m_gameRef SetPlayersLeft:playersLeftAfterAnimation];*/
 	[player release];
 	[currentQuestion release];
 	
@@ -540,32 +541,27 @@
 	
 	
     //_? GETPLAYER
-	NSArray *players = [[m_gameRef GetSortedPlayersForBars]retain];
+	NSArray *player = [[m_gameRef GetPlayer]retain];
 	//Init the barwidth for each player
 	NSInteger barWidth = 0;
 	NSInteger kmLeft = 0;
 	UIColor *barColor;
-//	NSString *distanceLabel = @"km";
-//	if ([[GlobalSettingsHelper Instance] GetDistance] == mile) {
-//		distanceLabel = @"miles";
-//	}
-	for (Player *player in players) 
-	{
-		barWidth = [player GetBarWidth];
-		kmLeft = [player GetKmLeft_ForInfoBar];
-  		barColor = [[player GetColor] retain];
-        NSString *barText = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString], [player GetDistanceTimeBounusString]];
-        if([player HasGivenUp] == YES)
-        {
-            barWidth = 0;
-            barText = [NSString stringWithFormat:@"%@ %@",[player GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
-        }
-		[self drawBarAndText: context barWidth:barWidth andText:barText
-					   textX:10 textY:30 barX:10 barY:20 barHeight:10 barColor:barColor timeBonusBarWidth:[player GetTimeBonusBarWidth]];
-		[barColor release];
-	}
+
+    barWidth = [player GetBarWidth];
+    kmLeft = [player GetKmLeft_ForInfoBar];
+    barColor = [[player GetColor] retain];
+    NSString *barText = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString], [player GetDistanceTimeBounusString]];
+    if([player HasGivenUp] == YES)
+    {
+        barWidth = 0;
+        barText = [NSString stringWithFormat:@"%@ %@",[player GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
+    }
+    [self drawBarAndText: context barWidth:barWidth andText:barText
+                   textX:10 textY:30 barX:10 barY:20 barHeight:10 barColor:barColor timeBonusBarWidth:[player GetTimeBonusBarWidth]];
+    [barColor release];
+
 	
-	[players release];
+	[player release];
 
 }
 

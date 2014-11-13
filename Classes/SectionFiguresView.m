@@ -12,7 +12,7 @@
 
 @implementation SectionFiguresView
 @synthesize viewref,location;
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame andResolution:(float) resolution
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -20,8 +20,8 @@
         //self.opaque = NO;
     }
 
-    tiledMapViewZoomScale = 25.0;
-    tiledMapViewResolutionPercentage =1;
+    tiledMapViewZoomScale = 1;
+    tiledMapViewResolutionPercentage = resolution;
     return self;
 }
 
@@ -43,11 +43,11 @@
     
 	if ([location isKindOfClass:[Lake class]] || [location isKindOfClass:[UnDefWaterRegion class]])
 	{
-		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_water] ;
+		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%dMaskWater.png", (int)tiledMapViewResolutionPercentage]] ;
 	}
 	else
 	{
-		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_land] ;
+		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%dMaskLand.png", (int)tiledMapViewResolutionPercentage]] ;
 	}
     
 	
@@ -62,7 +62,7 @@
     
 	CGRect t_testRect = CGRectMake(0, 0, testWidth * val2, testHeight * val2);
     
-    mask = CGImageMaskCreate( constMapWidth /2,constMapHeight / 2,
+    mask = CGImageMaskCreate( constMapWidth,constMapHeight ,
 							 CGImageGetBitsPerComponent(maskRef),
 							 CGImageGetBitsPerPixel(maskRef),
 							 CGImageGetBytesPerRow(maskRef),

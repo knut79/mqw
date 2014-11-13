@@ -8,10 +8,6 @@
 
 #define mini_logo_image @"MiniLogo.png"
 
-#define mask_land @"50MaskLand.png"
-
-#define mask_water @"50MaskWater.png"
-
 #define constMapHeight 2944.0
 #define constMapWidth 4096.0
 

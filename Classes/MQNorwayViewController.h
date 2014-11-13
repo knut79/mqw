@@ -44,6 +44,7 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 
 
     CreatePlayerVC* createPlayerVC;
+    UIAlertView *message;
     
     TiledScrollView *playingBoardView;
     WithFiguresView *resultBoardView;
@@ -94,6 +95,9 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 	
 }
 
+-(void) doneAnimatingResult;
+-(void) sectionAnimationDidStop;
+-(void) showMessage;
 -(void) FirstLoad;
 -(void)performTransition;
 -(void)setZoomScale:(CGSize)size;

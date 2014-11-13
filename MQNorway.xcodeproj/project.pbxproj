@@ -547,7 +547,7 @@
 		729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */; };
 		729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44219ED372F00B082E5 /* statesAsia.txt */; };
 		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
-		72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5719FB1E61000E30CF /* capitals.txt */; };
+		72CB8A5819FB1E61000E30CF /* capitalsAmerica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5719FB1E61000E30CF /* capitalsAmerica.txt */; };
 		72CB8A5A1A0167E7000E30CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A591A0167E7000E30CF /* Default-568h@2x.png */; };
 		72CB8B1E1A043FA6000E30CF /* world_100_border_0_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */; };
 		72CB8B1F1A043FA6000E30CF /* world_100_border_0_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5F1A043FA5000E30CF /* world_100_border_0_1.jpg */; };
@@ -801,6 +801,14 @@
 		72CB8CCB1A0450B1000E30CF /* world_25_border_3_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CBF1A0450B1000E30CF /* world_25_border_3_0.jpg */; };
 		72CB8CCC1A0450B1000E30CF /* world_25_border_3_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CC01A0450B1000E30CF /* world_25_border_3_1.jpg */; };
 		72CB8CCD1A0450B1000E30CF /* world_25_border_3_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CC11A0450B1000E30CF /* world_25_border_3_2.jpg */; };
+		72CB8CD21A0BD5BE000E30CF /* 25MaskLand.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CCE1A0BD5BE000E30CF /* 25MaskLand.png */; };
+		72CB8CD31A0BD5BE000E30CF /* 25MaskWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CCF1A0BD5BE000E30CF /* 25MaskWater.png */; };
+		72CB8CD41A0BD5BE000E30CF /* 100MaskLand.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD01A0BD5BE000E30CF /* 100MaskLand.png */; };
+		72CB8CD51A0BD5BE000E30CF /* 100MaskWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD11A0BD5BE000E30CF /* 100MaskWater.png */; };
+		72CB8CD71A14283B000E30CF /* capitalsEurope.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD61A14283B000E30CF /* capitalsEurope.txt */; };
+		72CB8CDB1A1429AF000E30CF /* capitalsAfrica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD81A1429AF000E30CF /* capitalsAfrica.txt */; };
+		72CB8CDC1A1429AF000E30CF /* capitalsAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CD91A1429AF000E30CF /* capitalsAsia.txt */; };
+		72CB8CDD1A1429AF000E30CF /* capitalsMiddleEast.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8CDA1A1429AF000E30CF /* capitalsMiddleEast.txt */; };
 		BE6499D51569830500692E08 /* GlobalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6499D41569830500692E08 /* GlobalHelper.m */; };
 		BE8D7BF91567EEB200D954E8 /* CreatePlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */; };
 		BE8D7BFA1567EEB200D954E8 /* CreatePlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */; };
@@ -1444,7 +1452,7 @@
 		729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanuatuFlag.png; path = resources/graphics/pictureQuestions/VanuatuFlag.png; sourceTree = "<group>"; };
 		729FC44219ED372F00B082E5 /* statesAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAsia.txt; path = resources/tekst/statesAsia.txt; sourceTree = "<group>"; };
 		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
-		72CB8A5719FB1E61000E30CF /* capitals.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitals.txt; path = resources/tekst/capitals.txt; sourceTree = "<group>"; };
+		72CB8A5719FB1E61000E30CF /* capitalsAmerica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAmerica.txt; path = resources/tekst/capitalsAmerica.txt; sourceTree = "<group>"; };
 		72CB8A591A0167E7000E30CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/graphics/GameElements/Default-568h@2x.png"; sourceTree = "<group>"; };
 		72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_0.jpg; path = resources/graphics/map/withborder100/world_100_border_0_0.jpg; sourceTree = "<group>"; };
 		72CB8A5F1A043FA5000E30CF /* world_100_border_0_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_1.jpg; path = resources/graphics/map/withborder100/world_100_border_0_1.jpg; sourceTree = "<group>"; };
@@ -1698,6 +1706,14 @@
 		72CB8CBF1A0450B1000E30CF /* world_25_border_3_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_3_0.jpg; path = resources/graphics/map/withborder25/world_25_border_3_0.jpg; sourceTree = "<group>"; };
 		72CB8CC01A0450B1000E30CF /* world_25_border_3_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_3_1.jpg; path = resources/graphics/map/withborder25/world_25_border_3_1.jpg; sourceTree = "<group>"; };
 		72CB8CC11A0450B1000E30CF /* world_25_border_3_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_25_border_3_2.jpg; path = resources/graphics/map/withborder25/world_25_border_3_2.jpg; sourceTree = "<group>"; };
+		72CB8CCE1A0BD5BE000E30CF /* 25MaskLand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 25MaskLand.png; path = resources/graphics/map/25MaskLand.png; sourceTree = "<group>"; };
+		72CB8CCF1A0BD5BE000E30CF /* 25MaskWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 25MaskWater.png; path = resources/graphics/map/25MaskWater.png; sourceTree = "<group>"; };
+		72CB8CD01A0BD5BE000E30CF /* 100MaskLand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 100MaskLand.png; path = resources/graphics/map/100MaskLand.png; sourceTree = "<group>"; };
+		72CB8CD11A0BD5BE000E30CF /* 100MaskWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 100MaskWater.png; path = resources/graphics/map/100MaskWater.png; sourceTree = "<group>"; };
+		72CB8CD61A14283B000E30CF /* capitalsEurope.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsEurope.txt; path = resources/tekst/capitalsEurope.txt; sourceTree = "<group>"; };
+		72CB8CD81A1429AF000E30CF /* capitalsAfrica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAfrica.txt; path = resources/tekst/capitalsAfrica.txt; sourceTree = "<group>"; };
+		72CB8CD91A1429AF000E30CF /* capitalsAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAsia.txt; path = resources/tekst/capitalsAsia.txt; sourceTree = "<group>"; };
+		72CB8CDA1A1429AF000E30CF /* capitalsMiddleEast.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsMiddleEast.txt; path = resources/tekst/capitalsMiddleEast.txt; sourceTree = "<group>"; };
 		BE6499D31569830500692E08 /* GlobalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalHelper.h; sourceTree = "<group>"; };
 		BE6499D41569830500692E08 /* GlobalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalHelper.m; sourceTree = "<group>"; };
 		BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePlayerVC.h; sourceTree = "<group>"; };
@@ -1964,7 +1980,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				72CB8A5719FB1E61000E30CF /* capitals.txt */,
+				72CB8CD81A1429AF000E30CF /* capitalsAfrica.txt */,
+				72CB8CD91A1429AF000E30CF /* capitalsAsia.txt */,
+				72CB8CDA1A1429AF000E30CF /* capitalsMiddleEast.txt */,
+				72CB8CD61A14283B000E30CF /* capitalsEurope.txt */,
+				72CB8A5719FB1E61000E30CF /* capitalsAmerica.txt */,
 				729FC44219ED372F00B082E5 /* statesAsia.txt */,
 				7204A48A19E34D4500B8AE76 /* statesAfrica.txt */,
 				7204A41319E00B1F00B8AE76 /* statesEastAsia.txt */,
@@ -2640,6 +2660,10 @@
 		EE9898F51330125000CBA780 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				72CB8CCE1A0BD5BE000E30CF /* 25MaskLand.png */,
+				72CB8CCF1A0BD5BE000E30CF /* 25MaskWater.png */,
+				72CB8CD01A0BD5BE000E30CF /* 100MaskLand.png */,
+				72CB8CD11A0BD5BE000E30CF /* 100MaskWater.png */,
 				72CB8A5D1A043F74000E30CF /* tilesborder100 */,
 				72CB8A5C1A043F67000E30CF /* tilesborder50 */,
 				72CB8A5B1A043F49000E30CF /* tilesborder25 */,
@@ -3313,7 +3337,7 @@
 				72CB8BC01A043FA6000E30CF /* world_100_border_13_6.jpg in Resources */,
 				7204A26719D976D600B8AE76 /* world_100_2_2.jpg in Resources */,
 				7204A18419D976B300B8AE76 /* world_50_6_3.jpg in Resources */,
-				72CB8A5819FB1E61000E30CF /* capitals.txt in Resources */,
+				72CB8A5819FB1E61000E30CF /* capitalsAmerica.txt in Resources */,
 				727ED15C19F95841000707AA /* MonacoFlag.png in Resources */,
 				727ED16219F95841000707AA /* ScotlandFlag.png in Resources */,
 				72CB8C931A045097000E30CF /* world_50_border_2_1.jpg in Resources */,
@@ -3438,6 +3462,7 @@
 				7204A2E019D976D600B8AE76 /* world_100_12_3.jpg in Resources */,
 				7204A28B19D976D600B8AE76 /* world_100_5_2.jpg in Resources */,
 				7204A40419DDFE4500B8AE76 /* PeruFlag.png in Resources */,
+				72CB8CD71A14283B000E30CF /* capitalsEurope.txt in Resources */,
 				7204A47719E3487200B8AE76 /* MozambiqueFlag.png in Resources */,
 				7204A16919D976B300B8AE76 /* world_50_2_0.jpg in Resources */,
 				72CB8B631A043FA6000E30CF /* world_100_border_5_9.jpg in Resources */,
@@ -3458,6 +3483,7 @@
 				72CB8B801A043FA6000E30CF /* world_100_border_8_2.jpg in Resources */,
 				7204A27719D976D600B8AE76 /* world_100_3_6.jpg in Resources */,
 				72CB8B441A043FA6000E30CF /* world_100_border_3_2.jpg in Resources */,
+				72CB8CD51A0BD5BE000E30CF /* 100MaskWater.png in Resources */,
 				7204A29D19D976D600B8AE76 /* world_100_6_8.jpg in Resources */,
 				727ED16719F95841000707AA /* SwedenFlag.png in Resources */,
 				7204A3BF19DD7EDD00B8AE76 /* MalaysiaFlag.png in Resources */,
@@ -3473,6 +3499,7 @@
 				7204A26D19D976D600B8AE76 /* world_100_2_8.jpg in Resources */,
 				7204A2DE19D976D600B8AE76 /* world_100_12_1.jpg in Resources */,
 				72CB8BDB1A043FA6000E30CF /* world_100_border_15_9.jpg in Resources */,
+				72CB8CD41A0BD5BE000E30CF /* 100MaskLand.png in Resources */,
 				72CB8CC61A0450B1000E30CF /* world_25_border_1_1.jpg in Resources */,
 				7204A27519D976D600B8AE76 /* world_100_3_4.jpg in Resources */,
 				72CB8B7C1A043FA6000E30CF /* world_100_border_7_10.jpg in Resources */,
@@ -3640,6 +3667,7 @@
 				7204A45F19E3487200B8AE76 /* ChadFlag.png in Resources */,
 				7204A15E19D976B300B8AE76 /* world_50_0_1.jpg in Resources */,
 				7204A38319D9799200B8AE76 /* tapImageNor.png in Resources */,
+				72CB8CD21A0BD5BE000E30CF /* 25MaskLand.png in Resources */,
 				727ED14F19F95841000707AA /* HungaryFlag.png in Resources */,
 				7204A2E119D976D600B8AE76 /* world_100_12_4.jpg in Resources */,
 				7204A26319D976D600B8AE76 /* world_100_1_10.jpg in Resources */,
@@ -3659,6 +3687,7 @@
 				7204A2A319D976D600B8AE76 /* world_100_7_2.jpg in Resources */,
 				7204A18A19D976B300B8AE76 /* world_50_7_3.jpg in Resources */,
 				7204A37A19D9799200B8AE76 /* icon.png in Resources */,
+				72CB8CDB1A1429AF000E30CF /* capitalsAfrica.txt in Resources */,
 				7204A29519D976D600B8AE76 /* world_100_6_0.jpg in Resources */,
 				7204A2EF19D976D600B8AE76 /* world_100_13_6.jpg in Resources */,
 				7204A2D719D976D600B8AE76 /* world_100_11_6.jpg in Resources */,
@@ -3802,6 +3831,7 @@
 				7204A17319D976B300B8AE76 /* world_50_3_4.jpg in Resources */,
 				7204A27F19D976D600B8AE76 /* world_100_4_2.jpg in Resources */,
 				72CB8CA91A045097000E30CF /* world_50_border_5_5.jpg in Resources */,
+				72CB8CD31A0BD5BE000E30CF /* 25MaskWater.png in Resources */,
 				7204A46419E3487200B8AE76 /* EquatorialGuineaFlag.png in Resources */,
 				72CB8BBA1A043FA6000E30CF /* world_100_border_13_0.jpg in Resources */,
 				7204A28519D976D600B8AE76 /* world_100_4_8.jpg in Resources */,
@@ -3823,6 +3853,7 @@
 				72CB8BD61A043FA6000E30CF /* world_100_border_15_4.jpg in Resources */,
 				7204A15D19D976B300B8AE76 /* world_50_0_0.jpg in Resources */,
 				7204A3F519DDFE4500B8AE76 /* CubaFlag.png in Resources */,
+				72CB8CDD1A1429AF000E30CF /* capitalsMiddleEast.txt in Resources */,
 				727ED14919F95841000707AA /* FaroeIslandsFlag.png in Resources */,
 				72CB8B9F1A043FA6000E30CF /* world_100_border_10_9.jpg in Resources */,
 				72CB8BD51A043FA6000E30CF /* world_100_border_15_3.jpg in Resources */,
@@ -3932,6 +3963,7 @@
 				72CB8CA21A045097000E30CF /* world_50_border_4_4.jpg in Resources */,
 				72CB8C941A045097000E30CF /* world_50_border_2_2.jpg in Resources */,
 				72CB8C971A045097000E30CF /* world_50_border_2_5.jpg in Resources */,
+				72CB8CDC1A1429AF000E30CF /* capitalsAsia.txt in Resources */,
 				7204A46919E3487200B8AE76 /* GhanaFlag.png in Resources */,
 				7204A2F919D976D600B8AE76 /* world_100_14_4.jpg in Resources */,
 				72CB8B211A043FA6000E30CF /* world_100_border_0_3.jpg in Resources */,

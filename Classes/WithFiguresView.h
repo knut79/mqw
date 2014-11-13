@@ -39,9 +39,8 @@
 @property (nonatomic, assign) id <WithFiguresViewDelegate> delegate;
 -(void)setGameRef:(Game*) game;
 -(CGImageRef) CreateScaledCGImageFromCGImage:(CGImageRef) image  andScale:(float) scale;
--(NSInteger) DrawLineToPlace:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor andPlayerSymbol:(NSString*) playerSymbol;
--(NSInteger) DrawLineToRegion:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor
-			  andPlayerSymbol:(NSString*) playerSymbol;
+-(NSInteger) DrawLineToPlace:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor;
+-(NSInteger) DrawLineToRegion:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor;
 -(void) DrawPlace:(MpLocation*) loc;
 -(void) DrawRegion:(MpLocation*) loc;
 -(void) DrawPlayerSymbol:(NSString*) playerSymbol andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint;
@@ -52,6 +51,7 @@
 -(void) StrokeUpExludedRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) ResetRegionBoundValues;
 -(void) drawResult_UpdateGameData:(BOOL) updateGameData;
+-(void) AnimateResult;
 @end
 
 

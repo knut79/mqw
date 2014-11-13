@@ -43,7 +43,6 @@
 	
 
 	[alert show];
-	//[alert release];
 	
 	
 	[self setBackgroundColor:[UIColor clearColor]];

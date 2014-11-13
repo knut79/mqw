@@ -113,8 +113,8 @@
 2013;1468
 2016;1466
 2018;1462;sl
-qst;coaLibya##medium#LibyaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Libya;10;easy;Tenth-largest country in the world, and the largest in Africa and in the Mediterranean. Capital: Algiers##spn#fra#ger;Africa#East by Libya
+qst;coaLibya##level2#LibyaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Libya;10;level1;Tenth-largest country in the world, and the largest in Africa and in the Mediterranean. Capital: Algiers##spn#fra#ger;Africa#East by Libya
 2058;1980
 2058;1976;st
 2056;1972
@@ -225,8 +225,8 @@ inf;UnDefRegion;AngolaCambiaNU;10;notUsed;eng#nor#spn#fra#ger
 2070;2110
 2061;2115
 2053;2113;sl
-qst;coaAngola##medium#AngolaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Angola;10;easy;Has vast mineral and petroleum reserves. Capital: Luanda##spn#fra#ger;Africa#Bordered by the Democratic Republic of the Congo on the north;;AngolaCambiaNU
+qst;coaAngola##level2#AngolaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Angola;10;level1;Has vast mineral and petroleum reserves. Capital: Luanda##spn#fra#ger;Africa#Bordered by the Democratic Republic of the Congo on the north;;AngolaCambiaNU
 1951;1842
 1946;1843
 1941;1844
@@ -265,8 +265,8 @@ inf;State;Angola;10;easy;Has vast mineral and petroleum reserves. Capital: Luand
 1950;1826
 1951;1831
 1951;1840
-qst;coaBenin##medium#BeninFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Benin;10;easy;A Marxist-Leninist state called the People's Republic of Benin existed between 1972 and 1990. A majority of the population live on its small southern coastline. Capital: Porto-Novo##spn#fra#ger;Africa#Small stripe
+qst;coaBenin##level2#BeninFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Benin;10;level1;A Marxist-Leninist state called the People's Republic of Benin existed between 1972 and 1990. A majority of the population live on its small southern coastline. Capital: Porto-Novo##spn#fra#ger;Africa#Small stripe
 2206;2120;st
 2204;2120
 2200;2123
@@ -338,8 +338,8 @@ inf;State;Benin;10;easy;A Marxist-Leninist state called the People's Republic of
 2209;2125
 2208;2124
 2207;2120;sl
-qst;coaBotswana##medium#BotswanaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Botswana;10;easy;Botswana is flat, with up to 70 percent of its territory being the Kalahari Desert. This country is among the hardest hit by the HIV/AIDS epidemic. Capital: Gaborone##spn#fra#ger;Africa#Southern Africa middle
+qst;coaBotswana##level2#BotswanaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Botswana;10;level1;Botswana is flat, with up to 70 percent of its territory being the Kalahari Desert. This country is among the hardest hit by the HIV/AIDS epidemic. Capital: Gaborone##spn#fra#ger;Africa#Southern Africa middle
 1857;1797
 1860;1797
 1862;1800
@@ -401,8 +401,8 @@ inf;State;Botswana;10;easy;Botswana is flat, with up to 70 percent of its territ
 1857;1788
 1858;1791
 1857;1795
-qst;coaBurkinaFaso##medium#BurkinaFasoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Burkina Faso;10;easy;Independence from France in 1960. Capital: Ouagadougou##spn#fra#ger;Africa#Mali to the north, Niger to the east, Benin to the southeast
+qst;coaBurkinaFaso##level2#BurkinaFasoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Burkina Faso;10;level1;Independence from France in 1960. Capital: Ouagadougou##spn#fra#ger;Africa#Mali to the north, Niger to the east, Benin to the southeast
 2250;1947;st
 2252;1950
 2253;1953
@@ -430,8 +430,8 @@ inf;State;Burkina Faso;10;easy;Independence from France in 1960. Capital: Ouagad
 2254;1945
 2251;1944
 2249;1946;sl
-qst;coaBurundi##medium#BurundiFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Burundi;10;easy;Burundi is one of the five poorest countries in the world. Capital: Bujumbura##spn#fra#ger;Africa#Landlocked country in the African Great Lakes region
+qst;coaBurundi##level2#BurundiFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Burundi;10;level1;Burundi is one of the five poorest countries in the world. Capital: Bujumbura##spn#fra#ger;Africa#Landlocked country in the African Great Lakes region
 2030;1887
 2032;1890
 2047;1890
@@ -530,8 +530,8 @@ inf;State;Burundi;10;easy;Burundi is one of the five poorest countries in the wo
 2031;1876
 2031;1882
 2030;1887
-qst;coaCameroon##medium#CameroonFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Cameroon;10;easy;Compared with other African countries, Cameroon enjoys relatively high political and social stability. Capital: Yaoundé##spn#fra#ger;hint1#hint2
+qst;coaCameroon##level2#CameroonFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Cameroon;10;level1;Compared with other African countries, Cameroon enjoys relatively high political and social stability. Capital: Yaoundé##spn#fra#ger;hint1#hint2
 1714;1571
 1714;1575
 1715;1577
@@ -590,7 +590,7 @@ inf;State;Cameroon;10;easy;Compared with other African countries, Cameroon enjoy
 1718;1574
 1718;1572
 1715;1570
-inf;State;Canary islands;10;easy;The Canaries are one of Spain's 17 autonomous communities. Mount Teide on Tenerife, the highest mountain in Spain.##spn#fra#ger;Africa#Northwest coast of mainland Africa
+inf;State;Canary islands;10;level1;The Canaries are one of Spain's 17 autonomous communities. Mount Teide on Tenerife, the highest mountain in Spain.##spn#fra#ger;Africa#Northwest coast of mainland Africa
 1648;1738
 1636;1742
 1637;1744
@@ -622,8 +622,8 @@ inf;State;Canary islands;10;easy;The Canaries are one of Spain's 17 autonomous c
 1658;1729
 1657;1731
 1650;1735
-qst;coaCapeVerde##medium#CapeVerdeFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Cape Verde;10;easy;Independence from Portugal in 1975. Capital: Praia##spn#fra#ger;Africa#Island country
+qst;coaCapeVerde##level2#CapeVerdeFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Cape Verde;10;level1;Independence from Portugal in 1975. Capital: Praia##spn#fra#ger;Africa#Island country
 2180;1789
 2181;1792
 2185;1796
@@ -709,8 +709,8 @@ inf;State;Cape Verde;10;easy;Independence from Portugal in 1975. Capital: Praia#
 2168;1790
 2176;1788
 2179;1789
-qst;coaCentralAfricanRepublic##medium#CentralAfricanRepublicFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Central African Republic;10;easy;Central African Republic is among the ten poorest countries in the world. Capital: Bangui##spn#fra#ger;Africa#Landlocked country in Central Africa
+qst;coaCentralAfricanRepublic##level2#CentralAfricanRepublicFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Central African Republic;10;level1;Central African Republic is among the ten poorest countries in the world. Capital: Bangui##spn#fra#ger;Africa#Landlocked country in Central Africa
 2103;1640
 2193;1688
 2193;1734
@@ -784,8 +784,8 @@ inf;State;Central African Republic;10;easy;Central African Republic is among the
 2092;1666
 2090;1646
 2102;1640
-qst;coaChad##medium#ChadFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Chad;10;easy;One of the poorest and most corrupt countries in the world. Capital: N'Djamena##spn#fra#ger;Africa#Landlocked country in Central Africa
+qst;coaChad##level2#ChadFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Chad;10;level1;One of the poorest and most corrupt countries in the world. Capital: N'Djamena##spn#fra#ger;Africa#Landlocked country in Central Africa
 2046;1961
 2050;1963
 2052;1966
@@ -879,8 +879,8 @@ inf;State;Chad;10;easy;One of the poorest and most corrupt countries in the worl
 2056;1954
 2049;1956
 2047;1960;sl
-qst;coaCongo##medium#CongoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Congo;10;easy;Independence from France in 1960. Capital: Brazzaville##spn#fra#ger;Africa#Central Africa
+qst;coaCongo##level2#CongoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Congo;10;level1;Independence from France in 1960. Capital: Brazzaville##spn#fra#ger;Africa#Central Africa
 2060;1984;st
 2065;1982
 2073;1981
@@ -1069,8 +1069,8 @@ inf;State;Congo;10;easy;Independence from France in 1960. Capital: Brazzaville##
 2058;1980
 2057;1980;sl
 2058;1984
-qst;coaDemocraticRepublicOfTheCongo##medium#DemocraticRepublicOfTheCongoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Democratic republic of the Congo;10;easy;Extremely rich in natural resources but political instability. Capital: Kinshasa##spn#fra#ger;Africa#Central African Republic
+qst;coaDemocraticRepublicOfTheCongo##level2#DemocraticRepublicOfTheCongoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Democratic republic of the Congo;10;level1;Extremely rich in natural resources but political instability. Capital: Kinshasa##spn#fra#ger;Africa#Central African Republic
 2414;1784
 2412;1779
 2415;1777
@@ -1086,8 +1086,8 @@ inf;State;Democratic republic of the Congo;10;easy;Extremely rich in natural res
 2407;1789
 2408;1789
 2412;1784;sl
-qst;coaDjibouti##medium#DjiboutiFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Djibouti;10;easy;Located near the world's busiest shipping lanes, controlling access to the Red Sea and Indian Ocean. It serves as a key refueling and transshipment center, and is the principal maritime port for imports to and exports from neighboring Ethiopia.##spn#fra#ger;Africa#Horn of Africa
+qst;coaDjibouti##level2#DjiboutiFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Djibouti;10;level1;Located near the world's busiest shipping lanes, controlling access to the Red Sea and Indian Ocean. It serves as a key refueling and transshipment center, and is the principal maritime port for imports to and exports from neighboring Ethiopia.##spn#fra#ger;Africa#Horn of Africa
 2207;1535
 2208;1536
 2216;1534
@@ -1158,8 +1158,8 @@ inf;State;Djibouti;10;easy;Located near the world's busiest shipping lanes, cont
 2204;1546
 2202;1538
 2206;1535;sl
-qst;coaEgypt##medium#EgyptFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Egypt;10;easy;Modern Egypt is considered to be a regional and middle power, with significant cultural, political, and military influence in North Africa, the Middle East and the Muslim world. Capital: Cairo##spn#fra#ger;Africa#Israel to the northeast
+qst;coaEgypt##level2#EgyptFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Egypt;10;level1;Modern Egypt is considered to be a regional and middle power, with significant cultural, political, and military influence in North Africa, the Middle East and the Muslim world. Capital: Cairo##spn#fra#ger;Africa#Israel to the northeast
 2018;1871
 2018;1873
 2016;1874
@@ -1184,8 +1184,8 @@ inf;UnDefRegion;EquatorialGuineaMalaboNU;10;notUsed;eng#nor#spn#fra#ger
 2041;1890
 2033;1890
 2031;1888
-qst;coaEquatorialGuinea##medium#EquatorialGuineaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Equatorial Guinea;10;easy;The authoritarian regime ruling Equatorial Guinea has one of the worst human rights records in the world (2014) Capital: Malabo##spn#fra#ger;Africa#Small country located in Central Africa
+qst;coaEquatorialGuinea##level2#EquatorialGuineaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Equatorial Guinea;10;level1;The authoritarian regime ruling Equatorial Guinea has one of the worst human rights records in the world (2014) Capital: Malabo##spn#fra#ger;Africa#Small country located in Central Africa
 2359;1705
 2361;1709
 2363;1710
@@ -1252,8 +1252,8 @@ inf;State;Equatorial Guinea;10;easy;The authoritarian regime ruling Equatorial G
 2349;1713
 2354;1711
 2358;1706
-qst;coaEritrea##medium#EritreaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Eritrea;10;easy;Its name Eritrea is based on the Ancient Greek name for the Red Sea. Capital: Asmara##spn#fra#ger;Africa#Horn of Africa
+qst;coaEritrea##level2#EritreaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Eritrea;10;level1;Its name Eritrea is based on the Ancient Greek name for the Red Sea. Capital: Asmara##spn#fra#ger;Africa#Horn of Africa
 2465;1823;st
 2436;1854
 2432;1857
@@ -1337,8 +1337,8 @@ inf;State;Eritrea;10;easy;Its name Eritrea is based on the Ancient Greek name fo
 2442;1819
 2453;1823
 2463;1823;sl
-qst;coaEthiopia##medium#EthiopiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Ethiopia;10;easy;Some of the oldest evidence for modern humans is found in Ethiopia, which is widely considered the region from which Homo sapiens first set out for the Middle East and points beyond. Capital: Addis Ababa##spn#fra#ger;Africa#Horn of Africa
+qst;coaEthiopia##level2#EthiopiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Ethiopia;10;level1;Some of the oldest evidence for modern humans is found in Ethiopia, which is widely considered the region from which Homo sapiens first set out for the Middle East and points beyond. Capital: Addis Ababa##spn#fra#ger;Africa#Horn of Africa
 2048;1902
 2048;1891
 2050;1888
@@ -1397,8 +1397,8 @@ inf;State;Ethiopia;10;easy;Some of the oldest evidence for modern humans is foun
 2032;1904
 2034;1902
 2047;1902
-qst;coaGabon##medium#GabonFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Gabon;10;easy;Independence from France in 1960. Capital: Libreville##spn#fra#ger;Africa#Cameroon to the north
+qst;coaGabon##level2#GabonFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Gabon;10;level1;Independence from France in 1960. Capital: Libreville##spn#fra#ger;Africa#Cameroon to the north
 1727;1764
 1729;1765
 1730;1763
@@ -1422,8 +1422,8 @@ inf;State;Gabon;10;easy;Independence from France in 1960. Capital: Libreville##s
 1736;1758
 1730;1758
 1729;1762
-qst;coaGambia##medium#GambiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Gambia;10;easy;Smallest country on mainland Africa. Capital: Banjul##spn#fra#ger;Africa#Smallest country on mainland Africa
+qst;coaGambia##level2#GambiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Gambia;10;level1;Smallest country on mainland Africa. Capital: Banjul##spn#fra#ger;Africa#Smallest country on mainland Africa
 1884;1857
 1890;1857
 1896;1861
@@ -1468,8 +1468,8 @@ inf;State;Gambia;10;easy;Smallest country on mainland Africa. Capital: Banjul##s
 1888;1851
 1888;1855
 1884;1856;sl
-qst;coaGhana##medium#GhanaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Ghana;10;easy;Ghana has been a significant petroleum and natural gas producer since December 2010, and one of the world's largest gold and diamond producers.Capital: Accra##spn#fra#ger;Africa#Bordered by the Ivory Coast in the west, Burkina Faso in the north
+qst;coaGhana##level2#GhanaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Ghana;10;level1;Ghana has been a significant petroleum and natural gas producer since December 2010, and one of the world's largest gold and diamond producers.Capital: Accra##spn#fra#ger;Africa#Bordered by the Ivory Coast in the west, Burkina Faso in the north
 1731;1774
 1734;1775
 1733;1779
@@ -1493,8 +1493,8 @@ inf;State;Ghana;10;easy;Ghana has been a significant petroleum and natural gas p
 1741;1772
 1735;1772
 1729;1773;sl
-qst;coaGuineaBissau##medium#Guinea-BissauFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;guinea-bissau;10;easy;Guinea-Bissau was once part of the kingdom of Gabu, as well as part of the Mali Empire. Capital: Bissau##spn#fra#ger;Africa#Africa#West Africa
+qst;coaGuineaBissau##level2#Guinea-BissauFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;guinea-bissau;10;level1;Guinea-Bissau was once part of the kingdom of Gabu, as well as part of the Mali Empire. Capital: Bissau##spn#fra#ger;Africa#Africa#West Africa
 1748;1791
 1751;1792
 1753;1796
@@ -1573,8 +1573,8 @@ inf;State;guinea-bissau;10;easy;Guinea-Bissau was once part of the kingdom of Ga
 1755;1783
 1753;1783
 1748;1790;sl
-qst;coaGuinea##medium#GuineaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Guinea;10;easy;Guinea is a predominantly Islamic country, with Muslims representing 85 percent of the population. Capital: Conakry##spn#fra#ger;Africa#West Africa
+qst;coaGuinea##level2#GuineaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Guinea;10;level1;Guinea is a predominantly Islamic country, with Muslims representing 85 percent of the population. Capital: Conakry##spn#fra#ger;Africa#West Africa
 1835;1866
 1844;1862
 1853;1859
@@ -1635,8 +1635,8 @@ inf;State;Guinea;10;easy;Guinea is a predominantly Islamic country, with Muslims
 1836;1853
 1834;1858
 1834;1864;sl
-qst;coaIvoryCoast##medium#IvoryCoastFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Ivory Coast;10;easy;Officially the Republic of Côte d'Ivoire. Capital: Yamoussoukro##spn#fra#ger;Africa#West Africa
+qst;coaIvoryCoast##level2#IvoryCoastFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Ivory Coast;10;level1;Officially the Republic of Côte d'Ivoire. Capital: Yamoussoukro##spn#fra#ger;Africa#West Africa
 2393;1933
 2390;1937
 2388;1939
@@ -1686,8 +1686,8 @@ inf;State;Ivory Coast;10;easy;Officially the Republic of Côte d'Ivoire. Capital
 2386;1882
 2386;1925
 2392;1932;sl
-qst;coaKenya##medium#KenyaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Kenya;10;easy;The capital, Nairobi, is a regional commercial hub. The economy of Kenya is the largest by GDP in Southeast and Central Africa.##spn#fra#ger;Africa#African Great Lakes region
+qst;coaKenya##level2#KenyaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Kenya;10;level1;The capital, Nairobi, is a regional commercial hub. The economy of Kenya is the largest by GDP in Southeast and Central Africa.##spn#fra#ger;Africa#African Great Lakes region
 2240;2258;st
 2236;2259
 2234;2260
@@ -1709,8 +1709,8 @@ inf;State;Kenya;10;easy;The capital, Nairobi, is a regional commercial hub. The 
 2247;2254
 2242;2256
 2240;2257;sl
-qst;coaLesotho##medium#LesothoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Lesotho;10;easy;Landlocked country completely surrounded by South Africa. Capital: Maseru##spn#fra#ger;Africa#Inside South Africa
+qst;coaLesotho##level2#LesothoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Lesotho;10;level1;Landlocked country completely surrounded by South Africa. Capital: Maseru##spn#fra#ger;Africa#Inside South Africa
 2106;2256
 2109;2260
 2111;2265
@@ -1883,8 +1883,8 @@ inf;State;Lesotho;10;easy;Landlocked country completely surrounded by South Afri
 2111;2253
 2108;2254
 2107;2255;sl
-qst;coaSouthAfrica##medium#SouthAfricaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;South Africa;10;easy;Is ranked as an upper-middle income economy by the World Bank, and is considered to be a newly industrialised country. Its economy is the second largest in Africa. Capital: Pretoria##spn#fra#ger;Africa#Tip of africa;Lesotho
+qst;coaSouthAfrica##level2#SouthAfricaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;South Africa;10;level1;Is ranked as an upper-middle income economy by the World Bank, and is considered to be a newly industrialised country. Its economy is the second largest in Africa. Capital: Pretoria##spn#fra#ger;Africa#Tip of africa;Lesotho
 1789;1836
 1793;1840
 1797;1842
@@ -1919,8 +1919,8 @@ inf;State;South Africa;10;easy;Is ranked as an upper-middle income economy by th
 1799;1826
 1792;1831
 1790;1835
-qst;coaLiberia##medium#LiberiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Liberia;10;easy;Liberia is the only country in Africa founded by United States colonization while occupied by native Africans. Capital: Monrovia##spn#fra#ger;Africa#West Africa bordered by Sierra Leone to its west
+qst;coaLiberia##level2#LiberiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Liberia;10;level1;Liberia is the only country in Africa founded by United States colonization while occupied by native Africans. Capital: Monrovia##spn#fra#ger;Africa#West Africa bordered by Sierra Leone to its west
 2052;1513
 2058;1517
 2064;1519
@@ -1993,8 +1993,8 @@ inf;State;Liberia;10;easy;Liberia is the only country in Africa founded by Unite
 2053;1524
 2050;1521
 2051;1514;sl
-qst;coaLibya##medium#LibyaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Libya;10;easy;Libya is the fourth largest country in Africa, and is the 17th largest country in the world. NATO-led a military intervention in 2011 that resulted in the death of Muammar Gaddafi, and the end of his 42-year rule. Capital: Tripoli##spn#fra#ger;Africa#North Africa
+qst;coaLibya##level2#LibyaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Libya;10;level1;Libya is the fourth largest country in Africa, and is the 17th largest country in the world. NATO-led a military intervention in 2011 that resulted in the death of Muammar Gaddafi, and the end of his 42-year rule. Capital: Tripoli##spn#fra#ger;Africa#North Africa
 2422;2131
 2423;2138
 2425;2142
@@ -2075,8 +2075,8 @@ inf;State;Libya;10;easy;Libya is the fourth largest country in Africa, and is th
 2419;2121
 2421;2128
 2420;2130
-qst;coaMadagascar##medium#MadagascarFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Madagascar;10;easy;In 2012, the population of Madagascar was estimated at just over 22 million, 90 percent of whom live on less than two dollars per day. Capital: Antananarivo##spn#fra#ger;Africa#Island
+qst;coaMadagascar##level2#MadagascarFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Madagascar;10;level1;In 2012, the population of Madagascar was estimated at just over 22 million, 90 percent of whom live on less than two dollars per day. Capital: Antananarivo##spn#fra#ger;Africa#Island
 1724;1517
 1727;1517
 1730;1519
@@ -2085,7 +2085,7 @@ inf;State;Madagascar;10;easy;In 2012, the population of Madagascar was estimated
 1724;1522
 1722;1518
 1722;1517
-inf;State;Madeira;10;easy;Madeira was claimed by Portuguese sailors in the service of Infante D. Henrique (Henry the Navigator) in 1419##spn#fra#ger;Coast of Africa#Atlantic Ocean
+inf;State;Madeira;10;level1;Madeira was claimed by Portuguese sailors in the service of Infante D. Henrique (Henry the Navigator) in 1419##spn#fra#ger;Coast of Africa#Atlantic Ocean
 2292;2072;st
 2295;2076
 2298;2075
@@ -2137,8 +2137,8 @@ inf;State;Madeira;10;easy;Madeira was claimed by Portuguese sailors in the servi
 2294;2066
 2293;2070
 2292;2071;sl
-qst;coaMalawi##medium#MalawiFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Malawi;10;easy;Malawi is among the world's least-developed countries. The economy is heavily based in agriculture, with a largely rural population. Capital: Lilongwe##spn#fra#ger;Africa#Landlocked country in southeast Africa
+qst;coaMalawi##level2#MalawiFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Malawi;10;level1;Malawi is among the world's least-developed countries. The economy is heavily based in agriculture, with a largely rural population. Capital: Lilongwe##spn#fra#ger;Africa#Landlocked country in southeast Africa
 1781;1746;st
 1781;1749
 1784;1751
@@ -2240,8 +2240,8 @@ inf;State;Malawi;10;easy;Malawi is among the world's least-developed countries. 
 1786;1736
 1785;1744
 1782;1745;sl
-qst;coaMali##medium#MaliFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Mali;10;easy;The third largest producer of gold in the African continent. Capital: Bamako##spn#fra#ger;Africa#Landlocked country in West Africa
+qst;coaMali##level2#MaliFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Mali;10;level1;The third largest producer of gold in the African continent. Capital: Bamako##spn#fra#ger;Africa#Landlocked country in West Africa
 1769;1586
 1770;1585
 1771;1582
@@ -2314,8 +2314,8 @@ inf;State;Mali;10;easy;The third largest producer of gold in the African contine
 1821;1573
 1821;1587
 1770;1586;sl
-qst;coaMorocco##medium#MoroccoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Morocco;10;easy;Morocco claims the non-self-governing territory of Western Sahara as its Southern Provinces. Morocco annexed the territory in 1975, leading to a guerrilla war with indigenous forces until a cease-fire in 1991. Capital: Rabat##spn#fra#ger;Africa#Both Atlantic and Mediterranean coastlines
+qst;coaMorocco##level2#MoroccoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Morocco;10;level1;Morocco claims the non-self-governing territory of Western Sahara as its Southern Provinces. Morocco annexed the territory in 1975, leading to a guerrilla war with indigenous forces until a cease-fire in 1991. Capital: Rabat##spn#fra#ger;Africa#Both Atlantic and Mediterranean coastlines
 1726;1669
 1730;1675
 1732;1675
@@ -2376,8 +2376,8 @@ inf;State;Morocco;10;easy;Morocco claims the non-self-governing territory of Wes
 1772;1666
 1727;1666
 1725;1673;sl
-qst;coaMauritania##medium#MauritaniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Mauritania;10;easy;It is named after the ancient Berber Kingdom of Mauretania, which existed long ago in the far north of modern-day Morocco. Capital: Nouakchott##spn#fra#ger;Africa#Western North Africa
+qst;coaMauritania##level2#MauritaniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Mauritania;10;level1;It is named after the ancient Berber Kingdom of Mauretania, which existed long ago in the far north of modern-day Morocco. Capital: Nouakchott##spn#fra#ger;Africa#Western North Africa
 2571;2149
 2570;2152
 2573;2153
@@ -2386,8 +2386,8 @@ inf;State;Mauritania;10;easy;It is named after the ancient Berber Kingdom of Mau
 2577;2146
 2575;2146
 2571;2147
-qst;coaMauritius##medium#MauritiusFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Mauritius;10;easy;The people of Mauritius are multiethnic and multicultural. Most Mauritians are multilingual, Mauritian Creole, English, French, and Asian languages are used. Capital: Port Louis##spn#fra#ger;Africa#Island nation in the Indian Ocean
+qst;coaMauritius##level2#MauritiusFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Mauritius;10;level1;The people of Mauritius are multiethnic and multicultural. Most Mauritians are multilingual, Mauritian Creole, English, French, and Asian languages are used. Capital: Port Louis##spn#fra#ger;Africa#Island nation in the Indian Ocean
 2294;2225
 2295;2219
 2293;2219
@@ -2518,8 +2518,8 @@ inf;State;Mauritius;10;easy;The people of Mauritius are multiethnic and multicul
 2285;2225
 2285;2227
 2293;2226;sl
-qst;coaMozambique##medium#MozambiqueFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Mozambique;10;easy;Mozambique is endowed with rich and extensive natural resources. The country's economy is based largely on agriculture. Capital: Maputo##spn#fra#ger;Africa#Indian Ocean to the east
+qst;coaMozambique##level2#MozambiqueFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Mozambique;10;level1;Mozambique is endowed with rich and extensive natural resources. The country's economy is based largely on agriculture. Capital: Maputo##spn#fra#ger;Africa#Indian Ocean to the east
 2106;2254;st
 2110;2253
 2111;2250
@@ -2596,8 +2596,8 @@ inf;State;Mozambique;10;easy;Mozambique is endowed with rich and extensive natur
 2096;2243
 2098;2249
 2104;2254
-qst;coaNamibia##medium#NamibiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Namibia;10;easy;Gained independence from South Africa on 21 March 1990. Capital: Windhoek##spn#fra#ger;Africa#Southern Africa whose western border is the Atlantic Ocean
+qst;coaNamibia##level2#NamibiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Namibia;10;level1;Gained independence from South Africa on 21 March 1990. Capital: Windhoek##spn#fra#ger;Africa#Southern Africa whose western border is the Atlantic Ocean
 2057;1640;st
 2065;1641
 2072;1642
@@ -2670,8 +2670,8 @@ inf;State;Namibia;10;easy;Gained independence from South Africa on 21 March 1990
 2017;1664
 2041;1649
 2055;1640;sl
-qst;coaNiger##medium#NigerFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Niger;10;easy;Largest nation in West Africa. Capital: Niamey##spn#fra#ger;Africa#Landlocked country in Western Africa
+qst;coaNiger##level2#NigerFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Niger;10;level1;Largest nation in West Africa. Capital: Niamey##spn#fra#ger;Africa#Landlocked country in Western Africa
 1951;1842
 1955;1841
 1961;1842
@@ -2766,8 +2766,8 @@ inf;State;Niger;10;easy;Largest nation in West Africa. Capital: Niamey##spn#fra#
 1951;1828
 1951;1837
 1951;1840;sl
-qst;coaNigeria##medium#NigeriaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Nigeria;10;easy;Nigeria is the most populous country in Africa and the seventh most populous country in the world. Capital: Abuja##spn#fra#ger;Africa#West Africa
+qst;coaNigeria##level2#NigeriaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Nigeria;10;level1;Nigeria is the most populous country in Africa and the seventh most populous country in the world. Capital: Abuja##spn#fra#ger;Africa#West Africa
 2257;1928;st
 2254;1929
 2254;1931
@@ -2789,8 +2789,8 @@ inf;State;Nigeria;10;easy;Nigeria is the most populous country in Africa and the
 2268;1927
 2262;1928
 2259;1927;sl
-qst;coaRwanda##medium#RwandaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Rwanda;10;easy;The population is young and predominantly rural, with a density among the highest in Africa. Rwandans are composed of three ethnic groups: the Hutu, Tutsi and Twa. Capital: Kigali##spn#fra#ger;Africa#Central and east Africa
+qst;coaRwanda##level2#RwandaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Rwanda;10;level1;The population is young and predominantly rural, with a density among the highest in Africa. Rwandans are composed of three ethnic groups: the Hutu, Tutsi and Twa. Capital: Kigali##spn#fra#ger;Africa#Central and east Africa
 1992;1908
 1993;1910
 1992;1913
@@ -2799,8 +2799,8 @@ inf;State;Rwanda;10;easy;The population is young and predominantly rural, with a
 1998;1910
 1997;1907
 1993;1907
-qst;coaSaoTomeAndPrincipe##medium#SaoTomeAndPrincipeFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Sao Tome and Principe;10;easy;Consists of two archipelagos around the two main islands: São Tomé and Príncipe. Capital: São Tomé##spn#fra#ger;Africa#Western equatorial coast of Central Africa
+qst;coaSaoTomeAndPrincipe##level2#SaoTomeAndPrincipeFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Sao Tome and Principe;10;level1;Consists of two archipelagos around the two main islands: São Tomé and Príncipe. Capital: São Tomé##spn#fra#ger;Africa#Western equatorial coast of Central Africa
 1722;1744
 1726;1741
 1729;1735
@@ -2860,8 +2860,8 @@ inf;State;Sao Tome and Principe;10;easy;Consists of two archipelagos around the 
 1725;1749
 1725;1746
 1722;1745
-qst;coaSenegal##medium#SenegalFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Senegal;10;easy;Gained independence from France in 1960 Capital: Dakar##spn#fra#ger;Africa#West Africa
+qst;coaSenegal##level2#SenegalFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Senegal;10;level1;Gained independence from France in 1960 Capital: Dakar##spn#fra#ger;Africa#West Africa
 1788;1836
 1781;1832
 1772;1829
@@ -2891,8 +2891,8 @@ inf;State;Senegal;10;easy;Gained independence from France in 1960 Capital: Dakar
 1799;1827
 1792;1831
 1789;1835;sl
-qst;coaSierraLeone##medium#SierraLeoneFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Sierra Leone;10;easy;Sierra Leone has relied on mining, especially diamonds, for its economic base. It is also among the largest producers of titanium and bauxite, a major producer of gold, and has one of the world's largest deposits of rutile. Capital: Freetown##spn#fra#ger;Africa#West Africa
+qst;coaSierraLeone##level2#SierraLeoneFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Sierra Leone;10;level1;Sierra Leone has relied on mining, especially diamonds, for its economic base. It is also among the largest producers of titanium and bauxite, a major producer of gold, and has one of the world's largest deposits of rutile. Capital: Freetown##spn#fra#ger;Africa#West Africa
 2393;1933
 2403;1920
 2409;1914
@@ -2971,8 +2971,8 @@ inf;State;Sierra Leone;10;easy;Sierra Leone has relied on mining, especially dia
 2386;1882
 2386;1924
 2392;1933;sl
-qst;coaSomalia##medium#SomaliaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Somalia;10;easy;Has no central government (2014). Capital: Mogadishu##spn#fra#ger;Africa#Horn of Africa
+qst;coaSomalia##level2#SomaliaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Somalia;10;level1;Has no central government (2014). Capital: Mogadishu##spn#fra#ger;Africa#Horn of Africa
 2329;1862;st
 2328;1859
 2329;1855
@@ -3071,8 +3071,8 @@ inf;State;Somalia;10;easy;Has no central government (2014). Capital: Mogadishu##
 2313;1862
 2317;1862
 2328;1863;sl
-qst;coaSouthSudan##medium#SouthSudanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;South Sudan;10;easy;South Sudan became an independent state on 9 July 2011. Capital: Juba##spn#fra#ger;Africa#Landlocked country in northeastern Africa
+qst;coaSouthSudan##level2#SouthSudanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;South Sudan;10;level1;South Sudan became an independent state on 9 July 2011. Capital: Juba##spn#fra#ger;Africa#Landlocked country in northeastern Africa
 2341;1657
 2340;1661
 2341;1665
@@ -3191,8 +3191,8 @@ inf;State;South Sudan;10;easy;South Sudan became an independent state on 9 July 
 2204;1683
 2204;1658
 2338;1657;sl
-qst;coaSudan##medium#SudanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Sudan;10;easy;Sudan suffers from several challenges. For much of Sudan's history, the nation has suffered from rampant ethnic strife and has been plagued by internal conflicts including two civil wars and the War in the Darfur region. Capital: Khartoum##spn#fra#ger;Africa#Nile Valley of North Africa
+qst;coaSudan##level2#SudanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Sudan;10;level1;Sudan suffers from several challenges. For much of Sudan's history, the nation has suffered from rampant ethnic strife and has been plagued by internal conflicts including two civil wars and the War in the Darfur region. Capital: Khartoum##spn#fra#ger;Africa#Nile Valley of North Africa
 2277;2217;st
 2275;2220
 2274;2222
@@ -3211,8 +3211,8 @@ inf;State;Sudan;10;easy;Sudan suffers from several challenges. For much of Sudan
 2282;2221
 2280;2219
 2278;2218;sl
-qst;coaSwaziland##medium#SwazilandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Swaziland;10;easy;After the Anglo-Boer War, Swaziland was a British protectorate from 1903 until 1967, regaining independence on 6 September 1968. Capital:Lobamba (royal / legislative),  Mbabane (administrative)##spn#fra#ger;Africa#South of South Arfica
+qst;coaSwaziland##level2#SwazilandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Swaziland;10;level1;After the Anglo-Boer War, Swaziland was a British protectorate from 1903 until 1967, regaining independence on 6 September 1968. Capital:Lobamba (royal / legislative),  Mbabane (administrative)##spn#fra#ger;Africa#South of South Arfica
 2381;2032
 2373;2028
 2371;2018
@@ -3286,8 +3286,8 @@ inf;State;Swaziland;10;easy;After the Anglo-Boer War, Swaziland was a British pr
 2363;2042
 2367;2043
 2380;2034;sl
-qst;coaTanzania##medium#TanzaniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Tanzania;10;easy;Tanganyika and Zanzibar merged on 26 April 1964 to form the United Republic of Tanganyika and Zanzibar, and later that same year renamed Tanzania. Capital: Dodoma Largest city: Dar es Salaam##spn#fra#ger;Africa#Great Lakes region
+qst;coaTanzania##level2#TanzaniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Tanzania;10;level1;Tanganyika and Zanzibar merged on 26 April 1964 to form the United Republic of Tanganyika and Zanzibar, and later that same year renamed Tanzania. Capital: Dodoma Largest city: Dar es Salaam##spn#fra#ger;Africa#Great Lakes region
 1938;1844
 1940;1843
 1938;1839
@@ -3317,8 +3317,8 @@ inf;State;Tanzania;10;easy;Tanganyika and Zanzibar merged on 26 April 1964 to fo
 1928;1841
 1932;1846
 1936;1844
-qst;coaTogo##medium#TogoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Togo;10;easy;Togo is a tropical, sub-Saharan nation, highly dependent on agriculture. In 1967, Gnassingbé Eyadéma led a successful military coup, after which he became presiden. Capital: Lomé##spn#fra#ger;Africa#Small stripe West Africa
+qst;coaTogo##level2#TogoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Togo;10;level1;Togo is a tropical, sub-Saharan nation, highly dependent on agriculture. In 1967, Gnassingbé Eyadéma led a successful military coup, after which he became presiden. Capital: Lomé##spn#fra#ger;Africa#Small stripe West Africa
 2019;1461
 2025;1456
 2033;1455
@@ -3382,8 +3382,8 @@ inf;State;Togo;10;easy;Togo is a tropical, sub-Saharan nation, highly dependent 
 2015;1466
 2017;1464
 2018;1462
-qst;coaTunisia##medium#TunisiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Tunisia;10;easy;Tunisia contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert. In 2011, a revolution resulted in the overthrow of the autocratic President Zine El Abidine Ben. Capital: Tunis##spn#fra#ger;Africa#North Africa
+qst;coaTunisia##level2#TunisiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Tunisia;10;level1;Tunisia contains the eastern end of the Atlas Mountains and the northern reaches of the Sahara desert. In 2011, a revolution resulted in the overthrow of the autocratic President Zine El Abidine Ben. Capital: Tunis##spn#fra#ger;Africa#North Africa
 2257;1927;st
 2267;1927
 2270;1926
@@ -3431,8 +3431,8 @@ inf;State;Tunisia;10;easy;Tunisia contains the eastern end of the Atlas Mountain
 2257;1917
 2257;1923
 2257;1926;sl
-qst;coaUganda##medium#UgandaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Uganda;10;easy;Gained independence from Britain on 9 October 1962. Capital: Kampala##spn#fra#ger;Africa#Landlocked country in East Africa
+qst;coaUganda##level2#UgandaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Uganda;10;level1;Gained independence from Britain on 9 October 1962. Capital: Kampala##spn#fra#ger;Africa#Landlocked country in East Africa
 1725;1671
 1726;1661
 1727;1655
@@ -3462,7 +3462,7 @@ inf;State;Uganda;10;easy;Gained independence from Britain on 9 October 1962. Cap
 1772;1666
 1727;1666
 1725;1672
-inf;State;Western Sahara;10;easy;Occupied by Spain since the late 19th century, the Western Sahara has been on the United Nations list of non-self-governing territories since 1963. Claimed by Morocco, and a thin stripe to the east by the partially recognized state Sahrawi Arab Democratic Republic.##spn#fra#ger;Africa#Border to Morocco to the north
+inf;State;Western Sahara;10;level1;Occupied by Spain since the late 19th century, the Western Sahara has been on the United Nations list of non-self-governing territories since 1963. Claimed by Morocco, and a thin stripe to the east by the partially recognized state Sahrawi Arab Democratic Republic.##spn#fra#ger;Africa#Border to Morocco to the north
 2171;2065;st
 2170;2104
 2175;2109
@@ -3562,8 +3562,8 @@ inf;State;Western Sahara;10;easy;Occupied by Spain since the late 19th century, 
 2191;2060
 2192;2064
 2170;2064;sl
-qst;coaZambia##medium#ZambiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Zambia;10;easy;In 2010, the World Bank named Zambia one of the world's fastest economically reformed countries. Independent from the United Kingdom in 1964. Capital: Lusaka##spn#fra#ger;Africa#Landlocked country south in Africa
+qst;coaZambia##level2#ZambiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Zambia;10;level1;In 2010, the World Bank named Zambia one of the world's fastest economically reformed countries. Independent from the United Kingdom in 1964. Capital: Lusaka##spn#fra#ger;Africa#Landlocked country south in Africa
 2254;2174;st
 2259;2174
 2264;2176
@@ -3628,8 +3628,8 @@ inf;State;Zambia;10;easy;In 2010, the World Bank named Zambia one of the world's
 2249;2168
 2250;2171;sl
 2252;2172
-qst;coaZimbabwe##medium#ZimbabweFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Zimbabwe;10;easy;President Robert Mugabe has held power since internationally recognised independence in 1980: as head of government since 1980 and head of state since 1987. Capital: Harare##spn#fra#ger;Africa#Bordered by South Africa to the south
+qst;coaZimbabwe##level2#ZimbabweFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Zimbabwe;10;level1;President Robert Mugabe has held power since internationally recognised independence in 1980: as head of government since 1980 and head of state since 1987. Capital: Harare##spn#fra#ger;Africa#Bordered by South Africa to the south
 2410;2049
 2412;2051
 2413;2052
@@ -3652,8 +3652,8 @@ inf;State;Zimbabwe;10;easy;President Robert Mugabe has held power since internat
 2411;2043
 2410;2046
 2409;2048
-qst;coaComoros##medium#ComorosFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Comoros;10;easy;The third-smallest African nation by area. Capital: Moroni##spn#fra#ger;Africa#Between northeastern Mozambique and northwestern Madagascar
+qst;coaComoros##level2#ComorosFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Comoros;10;level1;The third-smallest African nation by area. Capital: Moroni##spn#fra#ger;Africa#Between northeastern Mozambique and northwestern Madagascar
 2549;1961
 2547;1963
 2560;1961
@@ -3669,8 +3669,8 @@ inf;State;Comoros;10;easy;The third-smallest African nation by area. Capital: Mo
 2531;1974
 2543;1970
 2545;1964
-qst;coaSeychelles##medium#SeychellesFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Seyshelles;10;easy;With a population of 90,024, has the smallest population of any African state (numbers from 2014). Capital: Victoria##spn#fra#ger;Africa#East of mainland Southeast Africa
+qst;coaSeychelles##level2#SeychellesFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Seyshelles;10;level1;With a population of 90,024, has the smallest population of any African state (numbers from 2014). Capital: Victoria##spn#fra#ger;Africa#East of mainland Southeast Africa
 2431;2061
 2431;2063
 2432;2065
@@ -3678,5 +3678,5 @@ inf;State;Seyshelles;10;easy;With a population of 90,024, has the smallest popul
 2436;2061
 2434;2059
 2432;2059
-inf;UnDefRegion;Mayotte;10;easy;An overseas department and region of France. Its biggest city and prefecture is Mamoudzou.##spn#fra#ger;Africa#Northern Mozambique Channel
+inf;UnDefRegion;Mayotte;10;level1;An overseas department and region of France. Its biggest city and prefecture is Mamoudzou.##spn#fra#ger;Africa#Northern Mozambique Channel
 eof

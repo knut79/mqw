@@ -54,5 +54,6 @@
 @protocol AnimateTextViewDelegate <NSObject>
 
 @optional
+-(void) finishedAnimatingResultText;
 - (void)finishedShowingResultMap;
 @end

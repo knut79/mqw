@@ -81,8 +81,6 @@
 			m_lineImageView.center = CGPointMake([self frame].size.width/2, [self frame].size.height - 15);
 
 			[self ShrinkImage];
-			//m_tapToEnlarge.text = [NSString stringWithFormat:@" %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap image to resize"]];
-			//[m_tapToEnlarge setAlpha:1];
 			
 			m_label.textAlignment = NSTextAlignmentLeft;
 			[m_label setFrame:CGRectMake(40, 2, [screen applicationFrame].size.width - 40, 20)];

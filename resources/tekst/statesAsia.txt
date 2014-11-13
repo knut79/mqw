@@ -122,8 +122,8 @@
 2627;1484
 2621;1483
 2619;1481
-qst;coaAfghanistan##medium#AfghanistanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Afghanistan;10;easy;Has been affected by many military campaigns, notably by Alexander the Great, Arab Muslims, Genghis Khan, and in the modern-era by Western powers. Capital: Kabul##spn#fra#ger;Asia#Landlocked country in Central Asia
+qst;coaAfghanistan##level2#AfghanistanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Afghanistan;10;level1;Has been affected by many military campaigns, notably by Alexander the Great, Arab Muslims, Genghis Khan, and in the modern-era by Western powers. Capital: Kabul##spn#fra#ger;Asia#Landlocked country in Central Asia
 2444;1433;st
 2443;1429
 2442;1427
@@ -211,8 +211,8 @@ inf;UnDefRegion;AzerbaijanSmallNU;10;notUsed;eng#nor#spn#fra#ger
 2466;1395
 2469;1393
 2472;1389;sl
-qst;coaAzerbaijan##medium#AzerbaijanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Azerbaijan;10;easy;The country was incorporated into the Soviet Union in 1920 as the Azerbaijan Soviet Socialist Republic. Azerbaijan proclaimed its independence in October 1991, before the official dissolution of the USSR. Capital: Baku##spn#fra#ger;Asia#Caspian Sea to the east;;AzerbaijanSmallNU
+qst;coaAzerbaijan##level2#AzerbaijanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Azerbaijan;10;level1;The country was incorporated into the Soviet Union in 1920 as the Azerbaijan Soviet Socialist Republic. Azerbaijan proclaimed its independence in October 1991, before the official dissolution of the USSR. Capital: Baku##spn#fra#ger;Asia#Caspian Sea to the east;;AzerbaijanSmallNU
 2927;1604
 2924;1606
 2923;1608
@@ -304,8 +304,8 @@ inf;State;Azerbaijan;10;easy;The country was incorporated into the Soviet Union 
 2932;1603
 2931;1604
 2929;1605
-qst;coaBangladesh##medium#BangladeshFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Bangladesh;10;easy;With over 160 million people, among the most densely populated countries. Capital: Dhaka##spn#fra#ger;Asia#Bordered by India
+qst;coaBangladesh##level2#BangladeshFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Bangladesh;10;level1;With over 160 million people, among the most densely populated countries. Capital: Dhaka##spn#fra#ger;Asia#Bordered by India
 2932;1586
 2932;1590
 2932;1591
@@ -338,8 +338,8 @@ inf;State;Bangladesh;10;easy;With over 160 million people, among the most densel
 2936;1583
 2931;1584
 2931;1585
-qst;coaBhutan##medium#BhutanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Bhutan;10;easy;The only country to have officially adopted gross national happiness instead of the gross domestic product as the main development indicator. Capital: Thimphu##spn#fra#ger;Asia#Eastern end of the Himalayas
+qst;coaBhutan##level2#BhutanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Bhutan;10;level1;The only country to have officially adopted gross national happiness instead of the gross domestic product as the main development indicator. Capital: Thimphu##spn#fra#ger;Asia#Eastern end of the Himalayas
 3030;1575
 3029;1579
 3027;1580
@@ -981,8 +981,8 @@ inf;State;Bhutan;10;easy;The only country to have officially adopted gross natio
 3036;1585
 3036;1581
 3031;1576
-qst;coaChina##medium#ChinaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;China;10;easy;Officially the People's Republic of China. China is a recognized nuclear weapons state and has the world's largest standing army, with the second-largest defence budget (2014). Capital: Beijing. Largest city: Shanghai##spn#fra#ger;Asia#Second largest country in Asia
+qst;coaChina##level2#ChinaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;China;10;level1;Officially the People's Republic of China. China is a recognized nuclear weapons state and has the world's largest standing army, with the second-largest defence budget (2014). Capital: Beijing. Largest city: Shanghai##spn#fra#ger;Asia#Second largest country in Asia
 3712;1833
 3711;1838
 3713;1841
@@ -1043,8 +1043,8 @@ inf;State;China;10;easy;Officially the People's Republic of China. China is a re
 3711;1848
 3709;1841
 3710;1837
-qst;coaFederatedStatesOfMicronesia##medium#FederatedStatesOfMicronesiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Federated States of Micronesia;10;easy;An independent sovereign island nation consisting of four states – from west to east, Yap, Chuuk, Pohnpei and Kosrae. Capital: Palikir##spn#fra#ger;Asia#Western Pacific Ocean
+qst;coaFederatedStatesOfMicronesia##level2#FederatedStatesOfMicronesiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Federated States of Micronesia;10;level1;An independent sovereign island nation consisting of four states – from west to east, Yap, Chuuk, Pohnpei and Kosrae. Capital: Palikir##spn#fra#ger;Asia#Western Pacific Ocean
 3935;2122
 3936;2124
 3937;2125
@@ -1087,8 +1087,8 @@ inf;State;Federated States of Micronesia;10;easy;An independent sovereign island
 3939;2117
 3936;2119
 3936;2120
-qst;coaFiji##medium#FijiFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Fiji;10;easy;The country comprises an archipelago of more than 332 islands, of which 110 are permanently inhabited. Capital: Suva##spn#fra#ger;Asia#Northeast of New Zealand's North Island
+qst;coaFiji##level2#FijiFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Fiji;10;level1;The country comprises an archipelago of more than 332 islands, of which 110 are permanently inhabited. Capital: Suva##spn#fra#ger;Asia#Northeast of New Zealand's North Island
 2375;1367
 2376;1367
 2376;1368
@@ -1145,8 +1145,8 @@ inf;State;Fiji;10;easy;The country comprises an archipelago of more than 332 isl
 2384;1364
 2376;1363
 2375;1366;sl
-qst;coaGeorgia##medium#GeorgiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Georgia;10;easy;Georgia was occupied by Soviet Russia in 1921, becoming the Georgian Soviet Socialist Republic and part of the Soviet Union. After independence in 1991, post-communist Georgia suffered from civil unrest and economic crisis for most of the 1990s. Capital: Tbilisi##spn#fra#ger;Asia#Caucasus region of Eurasia
+qst;coaGeorgia##level2#GeorgiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Georgia;10;level1;Georgia was occupied by Soviet Russia in 1921, becoming the Georgian Soviet Socialist Republic and part of the Soviet Union. After independence in 1991, post-communist Georgia suffered from civil unrest and economic crisis for most of the 1990s. Capital: Tbilisi##spn#fra#ger;Asia#Caucasus region of Eurasia
 3216;1654
 3217;1653
 3219;1652
@@ -1154,7 +1154,7 @@ inf;State;Georgia;10;easy;Georgia was occupied by Soviet Russia in 1921, becomin
 3221;1654
 3219;1655
 3217;1655
-inf;UnDefRegion;Hong Kong;10;easy;Hong Kong became a colony of the British Empire after the First Opium War (1839–42). As a result of the negotiations and the 1984 agreement between China and Britain, Hong Kong was handed over to the People's Republic of China and became its first Special Administrative Region on 1 July 1997.##spn#fra#ger;Asia#Southern coast of China
+inf;UnDefRegion;Hong Kong;10;level1;Hong Kong became a colony of the British Empire after the First Opium War (1839–42). As a result of the negotiations and the 1984 agreement between China and Britain, Hong Kong was handed over to the People's Republic of China and became its first Special Administrative Region on 1 July 1997.##spn#fra#ger;Asia#Southern coast of China
 2924;1600
 2926;1602
 2929;1605
@@ -1525,8 +1525,8 @@ inf;UnDefRegion;IndiaEastStripeNU;10;notUsed;eng#nor#spn#fra#ger
 2697;1633
 2698;1635
 2697;1638
-qst;coaIndia##medium#IndiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;India;10;easy;The seventh-largest country by area, the second-most populous country with over 1.2 billion people, and the most populous democracy in the world. (2014) Capital: New Delhi. Largest city: Mumbai.##spn#fra#ger;Asia#South Asia;;IndiaEastStripeNU
+qst;coaIndia##level2#IndiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;India;10;level1;The seventh-largest country by area, the second-most populous country with over 1.2 billion people, and the most populous democracy in the world. (2014) Capital: New Delhi. Largest city: Mumbai.##spn#fra#ger;Asia#South Asia;;IndiaEastStripeNU
 3320;1626
 3318;1625
 3318;1627
@@ -1857,8 +1857,8 @@ inf;UnDefRegion;JapanIslandTowardKoreaNU;10;notUsed;eng#nor#spn#fra#ger
 3505;1419
 3509;1418
 3511;1419
-qst;coaJapan##medium#JapanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Japan;10;easy;Japan is a stratovolcanic archipelago of 6,852 islands. The four largest islands are Honshu, Hokkaido, Kyushu, and Shikoku. Capital: Tokyo##spn#fra#ger;Asia#Island nation in East Asia;;JapanIslandSouthNU#JapanIslandTowardKoreaNU
+qst;coaJapan##level2#JapanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Japan;10;level1;Japan is a stratovolcanic archipelago of 6,852 islands. The four largest islands are Honshu, Hokkaido, Kyushu, and Shikoku. Capital: Tokyo##spn#fra#ger;Asia#Island nation in East Asia;;JapanIslandSouthNU#JapanIslandTowardKoreaNU
 2778;1526
 2775;1523
 2770;1523
@@ -2293,8 +2293,8 @@ inf;UnDefRegion;Kashmir;10;hard;Disputed area that includes an Indian, a Pakista
 2472;1311
 2471;1314
 2478;1318
-qst;coaKazakhstan##medium#KazakhstanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Kazakhstan;10;easy;Kazakhstan was the last of the Soviet republics to declare independence following the dissolution of the Soviet Union in 1991. Kazakhstan is populated by 131 ethnicities, including Kazakh (who make up 63 percent of the population), Russian, Uzbek, Ukrainian, German, Tatar, and Uyghur. Capital: Astana##spn#fra#ger;Asia#Central Asia
+qst;coaKazakhstan##level2#KazakhstanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Kazakhstan;10;level1;Kazakhstan was the last of the Soviet republics to declare independence following the dissolution of the Soviet Union in 1991. Kazakhstan is populated by 131 ethnicities, including Kazakh (who make up 63 percent of the population), Russian, Uzbek, Ukrainian, German, Tatar, and Uyghur. Capital: Astana##spn#fra#ger;Asia#Central Asia
 127;1892
 127;1894
 129;1895
@@ -2339,8 +2339,8 @@ inf;UnDefRegion;KiribatiRegion2NU;10;notUsed;eng#nor#spn#fra#ger
 4007;1901
 4004;1901
 3994;1894
-qst;coaKiribati##medium#KiribatiFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Kiribati;10;easy;The name Kiribati is the local pronunciation of Gilberts, which derives from the main island chain, named the Gilbert Islands after the British explorer Thomas Gilbert, who sailed through the islands in 1788. Capital: South Tarawa##spn#fra#ger;Pacific Ocean#Central tropical Pacific Ocean;;KiribatiRegion1NU#KiribatiRegion2NU
+qst;coaKiribati##level2#KiribatiFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Kiribati;10;level1;The name Kiribati is the local pronunciation of Gilberts, which derives from the main island chain, named the Gilbert Islands after the British explorer Thomas Gilbert, who sailed through the islands in 1788. Capital: South Tarawa##spn#fra#ger;Pacific Ocean#Central tropical Pacific Ocean;;KiribatiRegion1NU#KiribatiRegion2NU
 2727;1382
 2730;1384
 2728;1386
@@ -2443,8 +2443,8 @@ inf;State;Kiribati;10;easy;The name Kiribati is the local pronunciation of Gilbe
 2730;1376
 2728;1379
 2726;1382
-qst;coaKyrgyzstan##medium#KyrgyzstanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Kyrgyzstan;10;easy;Despite Kyrgyzstan's struggle for political stabilization among ethnic conflicts, revolts, economic troubles, transitional governments, and political party conflicts, it maintains a unitary parliamentary republic. Capital: Bishkek##spn#fra#ger;Asia#Landlocked Central Asia
+qst;coaKyrgyzstan##level2#KyrgyzstanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Kyrgyzstan;10;level1;Despite Kyrgyzstan's struggle for political stabilization among ethnic conflicts, revolts, economic troubles, transitional governments, and political party conflicts, it maintains a unitary parliamentary republic. Capital: Bishkek##spn#fra#ger;Asia#Landlocked Central Asia
 2749;1831
 2754;1842
 2754;1852
@@ -2472,8 +2472,8 @@ inf;State;Kyrgyzstan;10;easy;Despite Kyrgyzstan's struggle for political stabili
 2752;1851
 2752;1841
 2749;1832
-qst;coaMaldives##medium#MaldivesFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Maldives;10;easy;The islands gained independence from the British Empire in 1965, and in 1968 became a republic ruled by a president and an authoritarian government. Capital: Malé##spn#fra#ger;Asia#Indian Ocean Arabian Sea
+qst;coaMaldives##level2#MaldivesFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Maldives;10;level1;The islands gained independence from the British Empire in 1965, and in 1968 became a republic ruled by a president and an authoritarian government. Capital: Malé##spn#fra#ger;Asia#Indian Ocean Arabian Sea
 3868;1836
 3870;1837
 3872;1846
@@ -2508,8 +2508,8 @@ inf;State;Maldives;10;easy;The islands gained independence from the British Empi
 3855;1810
 3863;1816
 3865;1830
-qst;coaMarshallIslands##medium#MarshallIslandsFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Marshall Islands;10;easy;The country is part of the larger island group of Micronesia, with the population of 68,480 people spread out over 24 low-lying coral atolls, comprising 1,156 individual islands and islets. Capital: Majuro##spn#fra#ger;Pacific Ocean#Northern Pacific Ocean
+qst;coaMarshallIslands##level2#MarshallIslandsFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Marshall Islands;10;level1;The country is part of the larger island group of Micronesia, with the population of 68,480 people spread out over 24 low-lying coral atolls, comprising 1,156 individual islands and islets. Capital: Majuro##spn#fra#ger;Pacific Ocean#Northern Pacific Ocean
 2934;1264
 2932;1265
 2931;1263
@@ -2709,8 +2709,8 @@ inf;State;Marshall Islands;10;easy;The country is part of the larger island grou
 2937;1263
 2935;1262
 2935;1264
-qst;coaMongolia##medium#MongoliaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Mongolia;10;easy;Mongolia has been ruled by various nomadic empires, including the Xiongnu, the Xianbei, the Rouran, the Turkic Khaganate, and others. In 1206, Genghis Khan founded the Mongol Empire. Capital: Ulan Bator##spn#fra#ger;Asia#Landlocked Central Asia
+qst;coaMongolia##level2#MongoliaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Mongolia;10;level1;Mongolia has been ruled by various nomadic empires, including the Xiongnu, the Xianbei, the Rouran, the Turkic Khaganate, and others. In 1206, Genghis Khan founded the Mongol Empire. Capital: Ulan Bator##spn#fra#ger;Asia#Landlocked Central Asia
 2970;1675
 2972;1675
 2973;1679
@@ -2908,16 +2908,16 @@ inf;State;Mongolia;10;easy;Mongolia has been ruled by various nomadic empires, i
 2971;1665
 2968;1667
 2970;1673
-qst;coaMyanmar##medium#MyanmarFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Myanmar;10;easy;Burma(Myanmar) became an independent nation in 1948, initially as a democratic nation and then, following a coup in 1962, a military dictatorship which formally ended in 2011. Capital: Naypyidaw##spn#fra#ger;Asia#Southeast Asia
+qst;coaMyanmar##level2#MyanmarFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Myanmar;10;level1;Burma(Myanmar) became an independent nation in 1948, initially as a democratic nation and then, following a coup in 1962, a military dictatorship which formally ended in 2011. Capital: Naypyidaw##spn#fra#ger;Asia#Southeast Asia
 3816;1921
 3819;1922
 3821;1921
 3820;1918
 3816;1917
 3816;1919
-qst;coaNauru##medium#NauruFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Nauru;10;easy;During World War II, Nauru was occupied by Japanese troops, who were bypassed by the Allied advance across the Pacific. After the war ended, the country entered into trusteeship again. Nauru gained its independence in 1968. Capital: Yaren##spn#fra#ger;Pacific#South Pacific
+qst;coaNauru##level2#NauruFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Nauru;10;level1;During World War II, Nauru was occupied by Japanese troops, who were bypassed by the Allied advance across the Pacific. After the war ended, the country entered into trusteeship again. Nauru gained its independence in 1968. Capital: Yaren##spn#fra#ger;Pacific#South Pacific
 2922;1587
 2921;1589
 2921;1595
@@ -2990,8 +2990,8 @@ inf;State;Nauru;10;easy;During World War II, Nauru was occupied by Japanese troo
 2919;1583
 2922;1583
 2922;1585
-qst;coaNepal##medium#NepalFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Nepal;10;easy;The mountainous north of Nepal has eight of the world's ten tallest mountains, including the highest point on Earth, Mount Everest. Capital: Kathmandu##spn#fra#ger;Asia#Landlocked country South Asia
+qst;coaNepal##level2#NepalFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Nepal;10;level1;The mountainous north of Nepal has eight of the world's ten tallest mountains, including the highest point on Earth, Mount Everest. Capital: Kathmandu##spn#fra#ger;Asia#Landlocked country South Asia
 3785;2149
 3787;2153
 3789;2156
@@ -3037,15 +3037,15 @@ inf;State;Nepal;10;easy;The mountainous north of Nepal has eight of the world's 
 3797;2155
 3792;2149
 3786;2148
-inf;UnDefRegion;New Caledonia;10;easy;Is a special collectivity of France. British explorer Captain James Cook was the first European to sight New Caledonia, on 4 September 1774. Largest city: Noumea##spn#fra#ger;Asia#Pacific Ocean
+inf;UnDefRegion;New Caledonia;10;level1;Is a special collectivity of France. British explorer Captain James Cook was the first European to sight New Caledonia, on 4 September 1774. Largest city: Noumea##spn#fra#ger;Asia#Pacific Ocean
 4082;2134
 4082;2137
 4083;2137
 4084;2136
 4083;2133
 4081;2133
-qst;coaNiue##medium#NiueFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Niue;10;easy;A self-governing state in free association with New Zealand, and most of its diplomatic relations are conducted by New Zealand on its behalf. Capital: Alofi##spn#fra#ger;Asia#South Pacific Ocean
+qst;coaNiue##level2#NiueFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Niue;10;level1;A self-governing state in free association with New Zealand, and most of its diplomatic relations are conducted by New Zealand on its behalf. Capital: Alofi##spn#fra#ger;Asia#South Pacific Ocean
 3406;1383
 3406;1380
 3403;1379
@@ -3128,8 +3128,8 @@ inf;State;Niue;10;easy;A self-governing state in free association with New Zeala
 3398;1390
 3401;1387
 3405;1384
-qst;coaNorthKorea##medium#NorthKoreaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;North Korea;10;easy;North Korea follows Songun, or military-first policy. It is the world's most militarized society, with a total of 9,495,000 active, reserve, and paramilitary personnel. Its active duty army of 1.21 million is the 4th largest in the world, after China, the U.S., and India. It possesses nuclear weapons. As a result of its isolation, it is sometimes known as the "hermit kingdom". Capital: Pyongyang##spn#fra#ger;Asia#East Asia Korean Peninsula
+qst;coaNorthKorea##level2#NorthKoreaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;North Korea;10;level1;North Korea follows Songun, or military-first policy. It is the world's most militarized society, with a total of 9,495,000 active, reserve, and paramilitary personnel. Its active duty army of 1.21 million is the 4th largest in the world, after China, the U.S., and India. It possesses nuclear weapons. As a result of its isolation, it is sometimes known as the "hermit kingdom". Capital: Pyongyang##spn#fra#ger;Asia#East Asia Korean Peninsula
 2620;1620
 2623;1621
 2627;1618
@@ -3310,8 +3310,8 @@ inf;State;North Korea;10;easy;North Korea follows Songun, or military-first poli
 2622;1610
 2621;1611
 2620;1618;sl
-qst;coaPakistan##medium#PakistanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Pakistan;10;easy;With a population exceeding 180 million people, it is the sixth most populous country. The independence history of Pakistan has been characterised by periods of military rule, political instability and conflicts with neighbouring India. Capital: Islamabad##spn#fra#ger;Asia#Neighboring India
+qst;coaPakistan##level2#PakistanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Pakistan;10;level1;With a population exceeding 180 million people, it is the sixth most populous country. The independence history of Pakistan has been characterised by periods of military rule, political instability and conflicts with neighbouring India. Capital: Islamabad##spn#fra#ger;Asia#Neighboring India
 2574;326
 2580;330
 2584;340
@@ -5714,8 +5714,8 @@ inf;UnDefRegion;RussiaIslandWestNU;10;notUsed;eng#nor#spn#fra#ger
 3630;1318
 3627;1320
 3618;1329
-qst;coaRussia##medium#RussiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Russia;10;easy;Russia is the largest country in the world, covering more than one-eighth of the Earth's inhabited land area. Capital: Moscow##spn#fra#ger;Asia#Europe and Asia;;RussiaIslandFarEastNU#RussiaIslandEastNU#RussiaIslandNorthNU#RussiaIslandWestNU#Kaliningrad
+qst;coaRussia##level2#RussiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Russia;10;level1;Russia is the largest country in the world, covering more than one-eighth of the Earth's inhabited land area. Capital: Moscow##spn#fra#ger;Asia#Europe and Asia;;RussiaIslandFarEastNU#RussiaIslandEastNU#RussiaIslandNorthNU#RussiaIslandWestNU#Kaliningrad
 3698;1990
 3694;1993
 3690;1994
@@ -5779,8 +5779,8 @@ inf;State;Russia;10;easy;Russia is the largest country in the world, covering mo
 3709;1996
 3706;1993
 3700;1989
-qst;coaSolomonIslands##medium#SolomonIslandsFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Solomon Islands;10;easy;The islands have been inhabited for thousands of years. In 1568, the Spanish navigator Álvaro de Mendaña was the first European to visit them, naming them the Islas Salomón. Capital: Honiara##spn#fra#ger;Oceania#East of Papua New Guinea
+qst;coaSolomonIslands##level2#SolomonIslandsFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Solomon Islands;10;level1;The islands have been inhabited for thousands of years. In 1568, the Spanish navigator Álvaro de Mendaña was the first European to visit them, naming them the Islas Salomón. Capital: Honiara##spn#fra#ger;Oceania#East of Papua New Guinea
 4049;2070
 4051;2073
 4055;2072
@@ -5794,8 +5794,8 @@ inf;State;Solomon Islands;10;easy;The islands have been inhabited for thousands 
 4057;2069
 4049;2068
 4049;2069
-qst;coaSamoa##medium#SamoaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Samoa;10;easy;Independent from New Zealand in 1962. Capital: Apia##spn#fra#ger;Oceanian#South Pacific Ocean
+qst;coaSamoa##level2#SamoaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Samoa;10;level1;Independent from New Zealand in 1962. Capital: Apia##spn#fra#ger;Oceanian#South Pacific Ocean
 3337;1447
 3340;1447
 3342;1448
@@ -5875,8 +5875,8 @@ inf;State;Samoa;10;easy;Independent from New Zealand in 1962. Capital: Apia##spn
 3345;1447
 3343;1446
 3339;1446
-qst;coaSouthKorea##medium#SouthKoreaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;South Korea;10;easy;North Korea invaded the South Korea in 1950, leading to the Korean War that ended de facto in 1953. It was annexed by the Japanese Empire in 1910 and after its defeat in 1945, Korea was divided into Soviet and U.S. zones of occupation, with the latter becoming the Republic of Korea in 1948. Capital: Seoul##spn#fra#ger;Asia#Oversea borders with Japan
+qst;coaSouthKorea##level2#SouthKoreaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;South Korea;10;level1;North Korea invaded the South Korea in 1950, leading to the Korean War that ended de facto in 1953. It was annexed by the Japanese Empire in 1910 and after its defeat in 1945, Korea was divided into Soviet and U.S. zones of occupation, with the latter becoming the Republic of Korea in 1948. Capital: Seoul##spn#fra#ger;Asia#Oversea borders with Japan
 2829;1804
 2831;1806
 2830;1808
@@ -5907,8 +5907,8 @@ inf;State;South Korea;10;easy;North Korea invaded the South Korea in 1950, leadi
 2834;1801
 2829;1802
 2828;1803
-qst;coaSriLanka##medium#SriLankaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Sri Lanka;10;easy;The country's recent history has been marred by a thirty-year civil war which decisively ended when Sri Lankan military defeated Liberation Tigers of Tamil Eelam in 2009. Capital: Colombo##spn#fra#ger;Asia#Island country in the northern Indian Ocean
+qst;coaSriLanka##level2#SriLankaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Sri Lanka;10;level1;The country's recent history has been marred by a thirty-year civil war which decisively ended when Sri Lankan military defeated Liberation Tigers of Tamil Eelam in 2009. Capital: Colombo##spn#fra#ger;Asia#Island country in the northern Indian Ocean
 2723;1420
 2724;1416
 2722;1412
@@ -6001,8 +6001,8 @@ inf;State;Sri Lanka;10;easy;The country's recent history has been marred by a th
 2717;1415
 2721;1417
 2722;1419
-qst;coaTajikistan##medium#TajikistanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Tajikistan;10;easy;As a result of the break up of the Soviet Union Tajikistan became an independent nation in 1991. Capital: Dushanbe##spn#fra#ger;Asia#Landlocked Central Asia
+qst;coaTajikistan##level2#TajikistanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Tajikistan;10;level1;As a result of the break up of the Soviet Union Tajikistan became an independent nation in 1991. Capital: Dushanbe##spn#fra#ger;Asia#Landlocked Central Asia
 3040;1800
 3040;1803
 3038;1807
@@ -6193,8 +6193,8 @@ inf;State;Tajikistan;10;easy;As a result of the break up of the Soviet Union Taj
 3044;1791
 3043;1794
 3042;1798
-qst;coaThailand##medium#ThailandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Thailand;10;easy;A constitutional system was established in 1932. Capital: Bangkok##spn#fra#ger;Asia#South by the Gulf of Thailand and Malaysia
+qst;coaThailand##level2#ThailandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Thailand;10;level1;A constitutional system was established in 1932. Capital: Bangkok##spn#fra#ger;Asia#South by the Gulf of Thailand and Malaysia
 4019;2161
 4021;2162
 4023;2162
@@ -6205,8 +6205,8 @@ inf;State;Thailand;10;easy;A constitutional system was established in 1932. Capi
 4024;2158
 4020;2157
 4019;2160
-qst;coaTonga##medium#TongaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Tonga;10;easy;Tonga became known as the Friendly Islands because of the congenial reception accorded to Captain James Cook on his first visit in 1773. Capital: Nukuʻalofa##spn#fra#ger;Asia#Southern Pacific Ocean
+qst;coaTonga##level2#TongaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Tonga;10;level1;Tonga became known as the Friendly Islands because of the congenial reception accorded to Captain James Cook on his first visit in 1773. Capital: Nukuʻalofa##spn#fra#ger;Asia#Southern Pacific Ocean
 2293;1487
 2294;1485
 2291;1482
@@ -6383,8 +6383,8 @@ inf;UnDefRegion;TurkeyCyprusPartNU;10;notUsed;eng#nor#spn#fra#ger
 2335;1472
 2331;1477
 2328;1476
-qst;coaTurkey##medium#TurkeyFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Turkey;10;easy;Turkey's location at the crossroads of Europe and Asia makes it a country of significant geostrategic importance. The Turkish War of Independence (1919–1922), initiated by Mustafa Kemal Atatürk and his colleagues in Anatolia, resulted in the establishment of the modern Republic of Turkey in 1923, with Atatürk as its first president. Capital: Ankara##spn#fra#ger;Asia#Southeastern Europe and Western Asia;;TurkeyCyprusPartNU
+qst;coaTurkey##level2#TurkeyFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Turkey;10;level1;Turkey's location at the crossroads of Europe and Asia makes it a country of significant geostrategic importance. The Turkish War of Independence (1919–1922), initiated by Mustafa Kemal Atatürk and his colleagues in Anatolia, resulted in the establishment of the modern Republic of Turkey in 1923, with Atatürk as its first president. Capital: Ankara##spn#fra#ger;Asia#Southeastern Europe and Western Asia;;TurkeyCyprusPartNU
 2515;1391
 2517;1392
 2516;1394
@@ -6500,8 +6500,8 @@ inf;State;Turkey;10;easy;Turkey's location at the crossroads of Europe and Asia 
 2529;1383
 2524;1385
 2516;1390
-qst;coaTurkmenistan##medium#TurkmenistanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Turkmenistan;10;easy;Annexed by the Russian Empire in 1881, Turkmenistan later figured prominently in the anti-Bolshevik movement in Central Asia. In 1924, Turkmenistan became a constituent republic of the Soviet Union, Turkmen Soviet Socialist Republic (Turkmen SSR). It became independent upon the dissolution of the Soviet Union in 1991. Capital: Ashgabat##spn#fra#ger;Asia#Caspian Sea to the west
+qst;coaTurkmenistan##level2#TurkmenistanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Turkmenistan;10;level1;Annexed by the Russian Empire in 1881, Turkmenistan later figured prominently in the anti-Bolshevik movement in Central Asia. In 1924, Turkmenistan became a constituent republic of the Soviet Union, Turkmen Soviet Socialist Republic (Turkmen SSR). It became independent upon the dissolution of the Soviet Union in 1991. Capital: Ashgabat##spn#fra#ger;Asia#Caspian Sea to the west
 3956;2014
 3958;2014
 3959;2012
@@ -6519,8 +6519,8 @@ inf;State;Turkmenistan;10;easy;Annexed by the Russian Empire in 1881, Turkmenist
 3949;2005
 3955;2009
 3955;2011
-qst;coaTuvalu##medium#TuvaluFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Tuvalu;10;easy;Third-least populous sovereign state in the world, with only the Vatican City and Nauru having fewer inhabitants. Capital: Funafuti##spn#fra#ger;Pacific Ocean#Midway between Hawaii and Australia
+qst;coaTuvalu##level2#TuvaluFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Tuvalu;10;level1;Third-least populous sovereign state in the world, with only the Vatican City and Nauru having fewer inhabitants. Capital: Funafuti##spn#fra#ger;Pacific Ocean#Midway between Hawaii and Australia
 2679;1455
 2682;1455
 2684;1458
@@ -6659,8 +6659,8 @@ inf;State;Tuvalu;10;easy;Third-least populous sovereign state in the world, with
 2678;1446
 2677;1451
 2678;1454
-qst;coaUzbekistan##medium#UzbekistanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Uzbekistan;10;easy;Incorporated into the Russian Empire in the 19th century, and in 1924 it became a bordered constituent republic of the Soviet Union. Became the independent Republic of Uzbekistan on 31 August 1991. Capital: Tashkent##spn#fra#ger;Asia#Landlocked country in Central Asia
+qst;coaUzbekistan##level2#UzbekistanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Uzbekistan;10;level1;Incorporated into the Russian Empire in the 19th century, and in 1924 it became a bordered constituent republic of the Soviet Union. Became the independent Republic of Uzbekistan on 31 August 1991. Capital: Tashkent##spn#fra#ger;Asia#Landlocked country in Central Asia
 3814;2085
 3815;2089
 3815;2093
@@ -6717,6 +6717,6 @@ inf;State;Uzbekistan;10;easy;Incorporated into the Russian Empire in the 19th ce
 3817;2084
 3815;2082
 3814;2084
-qst;coaVanuatu##medium#VanuatuFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Vanuatu;10;easy;The first Europeans to visit the islands were a Spanish expedition led by Portuguese navigator Fernandes de Queirós, who arrived in Espiritu Santo in 1605. He claimed the archipelago for Spain and named it Espiritu Santo (Spanish for Holy Spirit). An independence movement arose in the 1970s, and the Republic of Vanuatu was founded in 1980. Capital: Port Vila##spn#fra#ger;Pacific Ocean#South Pacific Ocean
+qst;coaVanuatu##level2#VanuatuFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Vanuatu;10;level1;The first Europeans to visit the islands were a Spanish expedition led by Portuguese navigator Fernandes de Queirós, who arrived in Espiritu Santo in 1605. He claimed the archipelago for Spain and named it Espiritu Santo (Spanish for Holy Spirit). An independence movement arose in the 1970s, and the Republic of Vanuatu was founded in 1980. Capital: Port Vila##spn#fra#ger;Pacific Ocean#South Pacific Ocean
 eof

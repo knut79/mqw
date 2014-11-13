@@ -1,0 +1,103 @@
+2001;1809
+inf;City#Where is the capital;Abuja;10;level1;Capital city of Nigeria. It is located in the centre of Nigeria. Abuja is a planned city, and was built mainly in the 1980s.#nor#spn#fra#ger;Africa#Nigeria
+1917;1851
+inf;City#Where is the capital;Accra;10;level1;The capital and largest city of Ghana#nor#spn#fra#ger;Africa#Ghana
+2360;1811
+inf;City#Where is the capital;Addis Ababa;10;level1;The capital and largest city of Ethiopia#nor#spn#fra#ger;Africa#Ethiopia
+1954;1464
+inf;City#Where is the capital;Algiers;10;level1;The capital and largest city of Algeria#nor#spn#fra#ger;Africa#Algeria
+2465;2129
+inf;City#Where is the capital;Antananarivo;10;level1;The capital and largest city in Madagascar.#nor#spn#fra#ger;Africa#Large Island
+2362;1738
+inf;City#Where is the capital;Asmara;10;level1;The capital city and largest settlement in Eritrea.#nor#spn#fra#ger;Africa#Eritrea
+1829;1769
+inf;City#Where is the capital;Bamako;10;level1;The capital and largest city of Mali.#nor#spn#fra#ger;Africa#Mali
+2130;1864
+inf;City#Where is the capital;Bangui;10;level1;The capital of the Central African Republic and its largest city.#nor#spn#fra#ger;Africa#Central African Republic
+1731;1760
+inf;City#Where is the capital;Banjul;10;level1;The capital of the Gambia. Banjul is on St Mary's Island (Banjul Island), where the Gambia River enters the Atlantic Ocean.#nor#spn#fra#ger;Africa#Gambia
+1742;1779
+inf;City#Where is the capital;Bissau;10;level1;The capital city of Guinea-Bissau#nor#spn#fra#ger;Africa#West Africa
+2093;1962
+inf;City#Where is the capital;Brazzaville;10;level1;The capital and largest city of the Republic of the Congo and is located on the Congo River.#nor#spn#fra#ger;Africa#Rep. of the Congo
+2254;1951
+inf;City#Where is the capital;Bujumbura;10;level1;The capital, largest city, and main port of Burundi. It ships most of the country's chief export, coffee, as well as cotton, skins, and tin ore#nor#spn#fra#ger;Africa#Burundi
+2129;2325
+inf;City#Where is the capital;Cape Town;10;level1;The second-most populous city in South Africa, after Johannesburg. Is also the legislative capital of the country.#nor#spn#fra#ger;Africa#West Africa
+1764;1805
+inf;City#Where is the capital;Conakry;10;level1;The capital and largest city of Guinea. Conakry is a port city on the Atlantic Ocean and serves as the economic, financial and cultural centre of Guinea.#nor#spn#fra#ger;Africa#Guinea
+1721;1746
+inf;City#Where is the capital;Dakar;10;level1;The capital and largest city of Senegal.#nor#spn#fra#ger;Africa#Senegal
+2327;1985
+inf;City#Where is the capital;Dodoma;10;level1;The national capital of Tanzania.#nor#spn#fra#ger;Africa#Tanzania
+1768;1818
+inf;City#Where is the capital;Freetown;10;level1;Capital and largest city of Sierra Leone.#nor#spn#fra#ger;Africa#Sierra Leone
+2213;2204
+inf;City#Where is the capital;Gaborone;10;level1;The capital and largest city of Botswana.#nor#spn#fra#ger;Africa#Botswana
+2272;2120
+inf;City#Where is the capital;Harare;10;level1;The capital and most populous city of Zimbabwe#nor#spn#fra#ger;Africa#Harare
+2275;1556
+inf;City#Where is the capital;Cairo;10;level1;The capital of Egypt and the largest city in the Middle-East and second-largest in Africa after Lagos#nor#spn#fra#ger;Africa#Egypt
+2291;1911
+inf;City#Where is the capital;Kampala;10;level1;The capital and largest city in Uganda.#nor#spn#fra#ger;Africa#Uganda
+2289;1735
+inf;City#Where is the capital;Khartoum;10;level1;The capital and second largest city of the Republic of Sudan#nor#spn#fra#ger;Africa#Sudan
+2262;1936
+inf;City#Where is the capital;Kigali;10;level1;The capital and largest city of Rwanda.#nor#spn#fra#ger;Africa#Rwanda
+2094;1964
+inf;City#Where is the capital;Kinshasa;10;level1;The capital and the largest city of the Democratic Republic of the Congo. It is located on the Congo River.#nor#spn#fra#ger;Africa#Democratic Republic of the Congo
+2026;1910
+inf;City#Where is the capital;Libreville;10;level1;The capital and largest city of Gabon, in west central Africa. The city is a port on the Komo River, near the Gulf of Guinea.#nor#spn#fra#ger;Africa#Gabon
+2304;2075
+inf;City#Where is the capital;Lilongwe;10;level1;The capital city of Malawi. Named after the Lilongwe river.#nor#spn#fra#ger;Africa#Malawi
+1933;1844
+inf;City#Where is the capital;Lomé;10;level1;The capital and largest city of Togo. Located on the Gulf of Guinea.#nor#spn#fra#ger;Africa#Togo
+2068;2014
+inf;City#Where is the capital;Luanda;10;level1;The capital city of Angola, and the country's most populous and important city#nor#spn#fra#ger;Africa#Angola
+2239;2095
+inf;City#Where is the capital;Lusaka;10;level1;The capital and largest city of Zambia. One of the fastest-developing cities in Southern Africa#nor#spn#fra#ger;Africa#Zambia
+2019;1872
+inf;City#Where is the capital;Malabo;10;level1;The capital of Equatorial Guinea, located on the northern coast of Bioko Island#nor#spn#fra#ger;Africa#Equatorial Guinea
+2290;2220
+inf;City#Where is the capital;Maputo;10;level1;The capital and largest city of Mozambique#nor#spn#fra#ger;Africa#Mozambique
+2232;2264
+inf;City#Where is the capital;Maseru;10;level1;The capital of Lesotho. Located on the Caledon River#nor#spn#fra#ger;Africa#Lesotho
+2274;2225
+inf;City#Where is the capital;Mbabane;10;level1;The capital and largest city in Swaziland#nor#spn#fra#ger;Africa#Swaziland
+2434;1890
+inf;City#Where is the capital;Mogadishu;10;level1;Known locally as Xamar (English: Hamar), is the largest city in Somalia and the nation's capital. Located in the coastal Banaadir region on the Indian Ocean, the city has served as an important port for centuries.#nor#spn#fra#ger;Africa#Somalia
+1797;1843
+inf;City#Where is the capital;Monrovia;10;level1;The capital city of the West African country of Liberia. Located on the Atlantic Coast at Cape Mesurado#nor#spn#fra#ger;Africa#Liberia
+2411;2048
+inf;City#Where is the capital;Moroni;10;level1;The largest city, federal capital and seat of the government of the Union of the Comoros.#nor#spn#fra#ger;Africa#Comoros
+2091;1776
+inf;City#Where is the capital;N'Djamena;10;level1;The capital and largest city of Chad#nor#spn#fra#ger;Africa#Chad
+2338;1929
+inf;City#Where is the capital;Nairobi;10;level1;The capital and largest city of Kenya#nor#spn#fra#ger;Africa#Kenya
+1943;1759
+inf;City#Where is the capital;Niamey;10;level1;The capital and largest city of the West African country Niger.#nor#spn#fra#ger;Africa#Niger
+1737;1705
+inf;City#Where is the capital;Nouakchott;10;level1;Capital and by far the largest city of Mauritania. It is one of the largest cities in the Sahara.#nor#spn#fra#ger;Africa#Mauritania
+1902;1773
+inf;City#Where is the capital;Ouagadougou;10;level1;The capital of Burkina Faso and the administrative, communications, cultural and economic centre of the nation. It is also the country's largest city#nor#spn#fra#ger;Africa#Burkina Faso
+2573;2148
+inf;City#Where is the capital;Port Louis;10;level1;The capital city of Mauritius#nor#spn#fra#ger;Africa#Mauritius
+1949;1841
+inf;City#Where is the capital;Porto-Novo;10;level1;The official capital of the West African nation of Benin, and was the capital of French Dahomey.#nor#spn#fra#ger;Africa#Benin
+2240;2217
+inf;City#Where is the capital;Pretoria;10;level1;One of South Africa three capital cities, serving as the executive (administrative) and de facto national capital. The others are Cape Town, the legislative capital, and Bloemfontein, the judicial capital.#nor#spn#fra#ger;Africa#South Africa
+1841;1503
+inf;City#Where is the capital;Rabat;10;level1;The capital and second largest city of Morocco#nor#spn#fra#ger;Africa#Morocco
+1995;1911
+inf;City#Where is the capital;São Tomé;10;level1;The capital city of São Tomé and Príncipe and is by far that nation's largest town. Its name is Portuguese for "Saint Thomas".#nor#spn#fra#ger;Africa#São Tomé and Príncipe
+2069;1518
+inf;City#Where is the capital;Tripoli;10;level1;The capital city and the largest city of Libya#nor#spn#fra#ger;Africa#Libya
+2550;1966
+inf;City#Where is the capital;Victoria;10;level1;The capital city of the Seychelles and is situated on the north-eastern side of Mahé island#nor#spn#fra#ger;Africa#Seychelles
+2113;2177
+inf;City#Where is the capital;Windhoek;10;level1;The capital and largest city of the Republic of Namibia. It is located in central Namibia in the Khomas Highland plateau area, at around 1,700 metres#nor#spn#fra#ger;Africa#Namibia
+1859;1837
+inf;City#Where is the capital;Yamoussoukro;10;level1;The official political capital and administrative capital city of Côte d'Ivoire(Ivory Coast), while the economic capital of the country is Abidjan.#nor#spn#fra#ger;Africa#Ivory Coast
+2050;1870
+inf;City#Where is the capital;Yaounde;10;level1;The capital of Cameroon and, with a population of approximately 2.5 million, the second largest city in the country after the port city Douala.#nor#spn#fra#ger;Africa#Cameroon
+eof

@@ -20,7 +20,7 @@
 2606;1329
 2601;1330
 2600;1328
-inf;UnDefWaterRegion;Aral Sea;10;easy;Formerly one of the four largest lakes in the world with an area of 68,000 km2, the Aral Sea has been steadily shrinking since the 1960s after the rivers that fed it were diverted by Soviet irrigation projects##spn#fra#ger;Europe#Between Kazakhstan and Uzbekistan
+inf;UnDefWaterRegion;Aral Sea;10;level1;Formerly one of the four largest lakes in the world with an area of 68,000 km2, the Aral Sea has been steadily shrinking since the 1960s after the rivers that fed it were diverted by Soviet irrigation projects##spn#fra#ger;Europe#Between Kazakhstan and Uzbekistan
 2239;1365
 2236;1370
 2237;1374
@@ -114,7 +114,7 @@ inf;UnDefWaterRegion;Aral Sea;10;easy;Formerly one of the four largest lakes in 
 2244;1360
 2244;1364
 2240;1365
-inf;UnDefWaterRegion;Black Sea;10;easy;The Black Sea forms in an east-west trending elliptical depression which lies between Bulgaria, Georgia, Romania, Russia, Turkey, and Ukraine.[4] It is constrained by the Pontic Mountains to the south and by the Caucasus Mountains to the east, and features a wide shelf to the northwest. ##spn#fra#ger;Europe#Southeastern Europe
+inf;UnDefWaterRegion;Black Sea;10;level1;The Black Sea forms in an east-west trending elliptical depression which lies between Bulgaria, Georgia, Romania, Russia, Turkey, and Ukraine.[4] It is constrained by the Pontic Mountains to the south and by the Caucasus Mountains to the east, and features a wide shelf to the northwest. ##spn#fra#ger;Europe#Southeastern Europe
 2477;1319
 2472;1325
 2470;1329
@@ -245,7 +245,7 @@ inf;UnDefWaterRegion;Black Sea;10;easy;The Black Sea forms in an east-west trend
 2482;1313
 2476;1313
 2476;1317
-inf;UnDefWaterRegion;Caspian Sea;10;easy;The largest enclosed inland body of water on Earth by area##spn#fra#ger;Europe#Eastern Europe
+inf;UnDefWaterRegion;Caspian Sea;10;level1;The largest enclosed inland body of water on Earth by area##spn#fra#ger;Europe#Eastern Europe
 2289;1558
 2286;1562
 2289;1565
@@ -335,7 +335,7 @@ inf;UnDefWaterRegion;Caspian Sea;10;easy;The largest enclosed inland body of wat
 2297;1569
 2292;1560
 2291;1556
-inf;UnDefWaterRegion;Red Sea;10;easy;The sea is underlain by the Red Sea Rift which is part of the Great Rift Valley.##spn#fra#ger;Between Africa and Asia#Egypt
+inf;UnDefWaterRegion;Red Sea;10;level1;The sea is underlain by the Red Sea Rift which is part of the Great Rift Valley.##spn#fra#ger;Between Africa and Asia#Egypt
 2994;1729
 2984;1747
 2977;1762
@@ -386,7 +386,7 @@ inf;UnDefWaterRegion;Red Sea;10;easy;The sea is underlain by the Red Sea Rift wh
 3006;1731
 2999;1731
 2996;1730
-inf;UnDefWaterRegion;Adaman Sea;10;easy;The sea has been traditionally used for fishery and transportation of goods between the coastal countries and its coral reefs and islands are popular tourist destinations. The fishery and tourist infrastructure was severely damaged by the 2004 Indian Ocean earthquake and tsunami.##spn#fra#ger;Asia#South of Burma
+inf;UnDefWaterRegion;Adaman Sea;10;level1;The sea has been traditionally used for fishery and transportation of goods between the coastal countries and its coral reefs and islands are popular tourist destinations. The fishery and tourist infrastructure was severely damaged by the 2004 Indian Ocean earthquake and tsunami.##spn#fra#ger;Asia#South of Burma
 2057;1348
 2061;1357
 2069;1360
@@ -433,7 +433,7 @@ inf;UnDefWaterRegion;Adaman Sea;10;easy;The sea has been traditionally used for 
 2057;1336
 2059;1341
 2057;1344
-inf;UnDefWaterRegion;Adriatic Sea;10;easy;The Adriatic's salinity is lower than the Mediterranean's because the Adriatic collects a third of the fresh water flowing into the Mediterranean, acting as a dilution basin.##spn#fra#ger;Europe#Italia
+inf;UnDefWaterRegion;Adriatic Sea;10;level1;The Adriatic's salinity is lower than the Mediterranean's because the Adriatic collects a third of the fresh water flowing into the Mediterranean, acting as a dilution basin.##spn#fra#ger;Europe#Italia
 3447;1990
 3421;1996
 3417;1999
@@ -471,7 +471,7 @@ inf;UnDefWaterRegion;Adriatic Sea;10;easy;The Adriatic's salinity is lower than 
 3451;1981
 3451;1986
 3450;1989
-inf;UnDefWaterRegion;Arafura Sea;10;easy;The Arafura Sea is bordered by Torres Strait and through that the Coral Sea to the east, the Gulf of Carpentaria to the south, the Timor Sea to the west and the Banda and Ceram seas to the northwest.##spn#fra#ger;Oceania#Australia
+inf;UnDefWaterRegion;Arafura Sea;10;level1;The Arafura Sea is bordered by Torres Strait and through that the Coral Sea to the east, the Gulf of Carpentaria to the south, the Timor Sea to the west and the Banda and Ceram seas to the northwest.##spn#fra#ger;Oceania#Australia
 1218;891
 1308;867
 1318;830
@@ -518,7 +518,7 @@ inf;UnDefWaterRegion;Arafura Sea;10;easy;The Arafura Sea is bordered by Torres S
 1136;823
 1203;879
 1213;887
-inf;UnDefWaterRegion;Baffin Bay;10;easy;Located between Baffin Island and the southwest coast of Greenland, is a marginal sea of the North Atlantic Ocean.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Baffin Bay;10;level1;Located between Baffin Island and the southwest coast of Greenland, is a marginal sea of the North Atlantic Ocean.##spn#fra#ger;America#Canada
 3363;1955
 3354;1951
 3332;1955
@@ -565,7 +565,7 @@ inf;UnDefWaterRegion;Baffin Bay;10;easy;Located between Baffin Island and the so
 3388;1952
 3378;1953
 3368;1954
-inf;UnDefWaterRegion;Banda Sea;10;easy;The Banda Sea is a sea in the Maluku Islands of Indonesia, connected to the Pacific Ocean but surrounded by hundreds of islands, as well as the Halmahera and Ceram Seas.##spn#fra#ger;Asia#Indosesia
+inf;UnDefWaterRegion;Banda Sea;10;level1;The Banda Sea is a sea in the Maluku Islands of Indonesia, connected to the Pacific Ocean but surrounded by hundreds of islands, as well as the Halmahera and Ceram Seas.##spn#fra#ger;Asia#Indosesia
 2689;502
 2666;414
 2636;372
@@ -609,7 +609,7 @@ inf;UnDefWaterRegion;Banda Sea;10;easy;The Banda Sea is a sea in the Maluku Isla
 2625;551
 2673;523
 2687;506
-inf;UnDefWaterRegion;Barents Sea;10;easy;Located off the northern coasts of Norway and Russia. Known in the Middle Ages as the Murman Sea.##spn#fra#ger;Europe#Norway
+inf;UnDefWaterRegion;Barents Sea;10;level1;Located off the northern coasts of Norway and Russia. Known in the Middle Ages as the Murman Sea.##spn#fra#ger;Europe#Norway
 137;738
 167;686
 211;656
@@ -712,7 +712,7 @@ inf;UnDefWaterRegion;Barents Sea;10;easy;Located off the northern coasts of Norw
 145;742
 142;741
 138;739
-inf;UnDefWaterRegion;Beaufort Sea;10;easy;Located north of the Northwest Territories, the Yukon, and Alaska, west of Canada's Arctic islands. The sea is named after hydrographer Sir Francis Beaufort.##spn#fra#ger;America#Artic
+inf;UnDefWaterRegion;Beaufort Sea;10;level1;Located north of the Northwest Territories, the Yukon, and Alaska, west of Canada's Arctic islands. The sea is named after hydrographer Sir Francis Beaufort.##spn#fra#ger;America#Artic
 2850;1838
 2905;1854
 2946;1857
@@ -778,7 +778,7 @@ inf;UnDefWaterRegion;Beaufort Sea;10;easy;Located north of the Northwest Territo
 2840;1815
 2846;1823
 2848;1835
-inf;UnDefWaterRegion;Bay of Bengal;10;easy;The Bay of Bengal, the largest bay in the world, forms the northeastern part of the Indian Ocean.##spn#fra#ger;Asia#India
+inf;UnDefWaterRegion;Bay of Bengal;10;level1;The Bay of Bengal, the largest bay in the world, forms the northeastern part of the Indian Ocean.##spn#fra#ger;Asia#India
 1869;1290
 1860;1317
 1857;1329
@@ -803,7 +803,7 @@ inf;UnDefWaterRegion;Bay of Bengal;10;easy;The Bay of Bengal, the largest bay in
 1892;1298
 1880;1293
 1870;1290
-inf;UnDefWaterRegion;Bay of Biscay;10;easy;Is a gulf of the northeast Atlantic Ocean located south of the Celtic Sea. It lies along the western coast of France from Brest south to the Spanish border, and the northern coast of Spain west to Cape Ortegal.##spn#fra#ger;Europe#Western Europe
+inf;UnDefWaterRegion;Bay of Biscay;10;level1;Is a gulf of the northeast Atlantic Ocean located south of the Celtic Sea. It lies along the western coast of France from Brest south to the Spanish border, and the northern coast of Spain west to Cape Ortegal.##spn#fra#ger;Europe#Western Europe
 20;905
 20;908
 16;910
@@ -828,34 +828,34 @@ inf;UnDefRegion;BeringStrait1NU;10;notUsed;eng#nor#spn#fra#ger
 4081;902
 4079;898
 4075;897
-inf;UnDefWaterRegion;Bering Strait;10;easy;The Strait has been the subject of scientific speculation that humans migrated from Asia to North America across a land bridge known as Beringia when lower ocean levels, perhaps a result of glaciers locking up vast amounts of water.##spn#fra#ger;Asia#America;;BeringStrait1NU
+inf;UnDefWaterRegion;Bering Strait;10;level1;The Strait has been the subject of scientific speculation that humans migrated from Asia to North America across a land bridge known as Beringia when lower ocean levels, perhaps a result of glaciers locking up vast amounts of water.##spn#fra#ger;Asia#America;;BeringStrait1NU
 2148;2338
 2146;2336
 2146;2338
 2147;2338
-inf;UnDefRegion;Cape Agulhas;10;easy;Is the geographic southern tip of Africa and the official dividing point between the Atlantic and Indian Oceans.##spn#fra#ger;Africa#South Africa
+inf;UnDefRegion;Cape Agulhas;10;level1;Is the geographic southern tip of Africa and the official dividing point between the Atlantic and Indian Oceans.##spn#fra#ger;Africa#South Africa
 1002;1574
 1002;1578
 1004;1577
 1003;1576
-inf;UnDefRegion;Cape Canaveral;10;easy;Known as Cape Kennedy from 1963 to 1973. Is part of a region known as the Space Coast, and is the site of the Cape Canaveral Air Force Station.##spn#fra#ger;America#Usa
+inf;UnDefRegion;Cape Canaveral;10;level1;Known as Cape Kennedy from 1963 to 1973. Is part of a region known as the Space Coast, and is the site of the Cape Canaveral Air Force Station.##spn#fra#ger;America#Usa
 2131;2327
 2128;2325
 2128;2329
 2129;2330
 2130;2328
 2130;2327
-inf;UnDefRegion;Cape of good hope;10;easy;There is a misconception that the Cape of Good Hope is the southern tip of Africa, because it was once believed to be the dividing point between the Atlantic and Indian Oceans. In fact, the southernmost point is Cape Agulhas.##spn#fra#ger;Africa#South Africa
+inf;UnDefRegion;Cape of good hope;10;level1;There is a misconception that the Cape of Good Hope is the southern tip of Africa, because it was once believed to be the dividing point between the Atlantic and Indian Oceans. In fact, the southernmost point is Cape Agulhas.##spn#fra#ger;Africa#South Africa
 1155;2686
 1153;2684
 1153;2686
 1155;2687
-inf;UnDefRegion;Cape Horn;10;easy;Named after the city of Hoorn in the Netherlands, is the southernmost headland of the Tierra del Fuego archipelago of southern Chile, and is located on the small Hornos Island.##spn#fra#ger;America#South America
+inf;UnDefRegion;Cape Horn;10;level1;Named after the city of Hoorn in the Netherlands, is the southernmost headland of the Tierra del Fuego archipelago of southern Chile, and is located on the small Hornos Island.##spn#fra#ger;America#South America
 3229;2330
 3229;2330
 3228;2330
 3229;2331
-inf;UnDefWaterRegion;Cape Leeuwin;10;easy;Is the most south-westerly mainland point of the Australian Continent, in the state of Western Australia.##spn#fra#ger;Oceania#Western Australia
+inf;UnDefWaterRegion;Cape Leeuwin;10;level1;Is the most south-westerly mainland point of the Australian Continent, in the state of Western Australia.##spn#fra#ger;Oceania#Western Australia
 927;1666
 954;1631
 969;1620
@@ -906,7 +906,7 @@ inf;UnDefWaterRegion;Cape Leeuwin;10;easy;Is the most south-westerly mainland po
 914;1699
 919;1678
 926;1667
-inf;UnDefWaterRegion;Caribbean Sea;10;easy;The entire area of the Caribbean Sea, the numerous islands of the West Indies, and adjacent coasts, are collectively known as the Caribbean.##spn#fra#ger;America#Jamaica
+inf;UnDefWaterRegion;Caribbean Sea;10;level1;The entire area of the Caribbean Sea, the numerous islands of the West Indies, and adjacent coasts, are collectively known as the Caribbean.##spn#fra#ger;America#Jamaica
 3272;1904
 3286;1907
 3289;1905
@@ -951,7 +951,7 @@ inf;UnDefWaterRegion;Caribbean Sea;10;easy;The entire area of the Caribbean Sea,
 3259;1893
 3267;1900
 3270;1903
-inf;UnDefWaterRegion;Celebs Sea;10;easy;The Celebes Sea is a piece of an ancient ocean basin that formed 42 million years ago in a locale removed from any landmass.##spn#fra#ger;Asia#Borneo
+inf;UnDefWaterRegion;Celebs Sea;10;level1;The Celebes Sea is a piece of an ancient ocean basin that formed 42 million years ago in a locale removed from any landmass.##spn#fra#ger;Asia#Borneo
 3950;802
 3955;757
 3956;753
@@ -1013,7 +1013,7 @@ inf;UnDefRegion;CelebsSea1NU;10;notUsed;eng#nor#spn#fra#ger
 32;842
 27;836
 30;821
-inf;UnDefWaterRegion;Chukchi Sea;10;easy;Bounded on the west by the De Long Strait, off Wrangel Island, and in the east by Point Barrow, Alaska, beyond which lies the Beaufort Sea.##spn#fra#ger;America#Asia
+inf;UnDefWaterRegion;Chukchi Sea;10;level1;Bounded on the west by the De Long Strait, off Wrangel Island, and in the east by Point Barrow, Alaska, beyond which lies the Beaufort Sea.##spn#fra#ger;America#Asia
 3661;2210
 3733;2190
 3762;2174
@@ -1107,7 +1107,7 @@ inf;UnDefWaterRegion;Chukchi Sea;10;easy;Bounded on the west by the De Long Stra
 3653;2211
 3657;2212
 3659;2212
-inf;UnDefWaterRegion;Coral Sea;10;easy;The Coral Sea is a marginal sea of the South Pacific off the northeast coast of Australia, and classified as an interim Australian bioregion.##spn#fra#ger;Oceania#Australia
+inf;UnDefWaterRegion;Coral Sea;10;level1;The Coral Sea is a marginal sea of the South Pacific off the northeast coast of Australia, and classified as an interim Australian bioregion.##spn#fra#ger;Oceania#Australia
 1205;912
 1209;912
 1226;914
@@ -1127,7 +1127,7 @@ inf;UnDefWaterRegion;Coral Sea;10;easy;The Coral Sea is a marginal sea of the So
 1196;874
 1208;886
 1201;907
-inf;UnDefWaterRegion;Davis Strait;10;easy;The strait was named for the English explorer John Davis (1550–1605), who explored the area while seeking a Northwest Passage. By the 1650s it was used for whale hunting.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Davis Strait;10;level1;The strait was named for the English explorer John Davis (1550–1605), who explored the area while seeking a Northwest Passage. By the 1650s it was used for whale hunting.##spn#fra#ger;America#Canada
 3555;690
 3550;668
 3550;665
@@ -1234,7 +1234,7 @@ inf;UnDefWaterRegion;Davis Strait;10;easy;The strait was named for the English e
 3572;695
 3562;692
 3557;691
-inf;UnDefWaterRegion;East Siberia Sea;10;easy;This sea is one of the least studied in the Arctic area. It is characterized by severe climate, low water salinity, and a scarcity of flora, fauna and human population, as well as shallow depths (mostly less than 50 m).##spn#fra#ger;Russia#Arctic Ocean
+inf;UnDefWaterRegion;East Siberia Sea;10;level1;This sea is one of the least studied in the Arctic area. It is characterized by severe climate, low water salinity, and a scarcity of flora, fauna and human population, as well as shallow depths (mostly less than 50 m).##spn#fra#ger;Russia#Arctic Ocean
 3663;2210
 3667;2205
 3667;2198
@@ -1301,7 +1301,7 @@ inf;UnDefWaterRegion;East Siberia Sea;10;easy;This sea is one of the least studi
 3655;2212
 3660;2212
 3661;2212
-inf;UnDefWaterRegion;Great barrier reef;10;easy;The Great Barrier Reef is the world's largest coral reef system composed of over 2,900 individual reefs.##spn#fra#ger;Oceania#Australia
+inf;UnDefWaterRegion;Great barrier reef;10;level1;The Great Barrier Reef is the world's largest coral reef system composed of over 2,900 individual reefs.##spn#fra#ger;Oceania#Australia
 552;875
 544;878
 542;879
@@ -1362,7 +1362,7 @@ inf;UnDefWaterRegion;Great barrier reef;10;easy;The Great Barrier Reef is the wo
 563;885
 565;878
 555;876
-inf;UnDefWaterRegion;Great Bear lake;10;easy;The largest lake entirely in Canada (Lake Superior and Lake Huron straddling the Canada-US border are larger), the fourth largest in North America, and the eighth largest in the world.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Great Bear lake;10;level1;The largest lake entirely in Canada (Lake Superior and Lake Huron straddling the Canada-US border are larger), the fourth largest in North America, and the eighth largest in the world.##spn#fra#ger;America#Canada
 612;1014
 608;1014
 604;1015
@@ -1407,7 +1407,7 @@ inf;UnDefWaterRegion;Great Bear lake;10;easy;The largest lake entirely in Canada
 605;1003
 608;1008
 612;1011
-inf;UnDefWaterRegion;Great Slave lake;10;easy;The second-largest lake in the Northwest Territories of Canada, the deepest lake in North America at 614 metres.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Great Slave lake;10;level1;The second-largest lake in the Northwest Territories of Canada, the deepest lake in North America at 614 metres.##spn#fra#ger;America#Canada
 2512;1735
 2502;1779
 2496;1779
@@ -1441,7 +1441,7 @@ inf;UnDefWaterRegion;Great Slave lake;10;easy;The second-largest lake in the Nor
 2489;1743
 2497;1739
 2509;1735
-inf;UnDefWaterRegion;Gulf of Aden;10;easy;Historically the Gulf of Aden was known as "The Gulf of Berbera", named after the ancient Somali port city of Berbera on the south side of the gulf. However as the city of Aden grew during the colonial era, the name of "Gulf of Aden" was popularised.##spn#fra#ger;Africa#Somalia
+inf;UnDefWaterRegion;Gulf of Aden;10;level1;Historically the Gulf of Aden was known as "The Gulf of Berbera", named after the ancient Somali port city of Berbera on the south side of the gulf. However as the city of Aden grew during the colonial era, the name of "Gulf of Aden" was popularised.##spn#fra#ger;Africa#Somalia
 2128;1052
 2145;1049
 2160;1045
@@ -1487,7 +1487,7 @@ inf;UnDefWaterRegion;Gulf of Aden;10;easy;Historically the Gulf of Aden was know
 2117;1044
 2122;1046
 2126;1049
-inf;UnDefWaterRegion;Gulf of Bothnia;10;easy;The northernmost arm of the Baltic Sea. It is situated between Finland's west coast and Sweden's east coast.##spn#fra#ger;Europe#Sweden
+inf;UnDefWaterRegion;Gulf of Bothnia;10;level1;The northernmost arm of the Baltic Sea. It is situated between Finland's west coast and Sweden's east coast.##spn#fra#ger;Europe#Sweden
 3537;2043
 3537;2039
 3525;2038
@@ -1542,7 +1542,7 @@ inf;UnDefWaterRegion;Gulf of Bothnia;10;easy;The northernmost arm of the Baltic 
 3533;2057
 3535;2050
 3537;2047
-inf;UnDefWaterRegion;Gulf of Carpentaria;10;easy;A large, shallow sea enclosed on three sides by northern Australia and bounded on the north by the Arafura Sea##spn#fra#ger;Asia#blabla
+inf;UnDefWaterRegion;Gulf of Carpentaria;10;level1;A large, shallow sea enclosed on three sides by northern Australia and bounded on the north by the Arafura Sea##spn#fra#ger;Asia#blabla
 1835;1865
 1871;1891
 1913;1909
@@ -1570,7 +1570,7 @@ inf;UnDefWaterRegion;Gulf of Carpentaria;10;easy;A large, shallow sea enclosed o
 1860;1853
 1848;1856
 1836;1862
-inf;UnDefWaterRegion;Gulf of Guinea;10;easy;Among the many rivers that drain into the Gulf of Guinea are the Niger and the Volta.##spn#fra#ger;Africa#Atlantic Ocean
+inf;UnDefWaterRegion;Gulf of Guinea;10;level1;Among the many rivers that drain into the Gulf of Guinea are the Niger and the Volta.##spn#fra#ger;Africa#Atlantic Ocean
 2620;1618
 2614;1635
 2608;1644
@@ -1592,7 +1592,7 @@ inf;UnDefWaterRegion;Gulf of Guinea;10;easy;Among the many rivers that drain int
 2598;1613
 2606;1613
 2616;1616
-inf;UnDefWaterRegion;Gulf of Oman;10;easy;Connects the Arabian Sea with the Strait of Hormuz, which then runs to the Persian Gulf.##spn#fra#ger;Asia#Persia
+inf;UnDefWaterRegion;Gulf of Oman;10;level1;Connects the Arabian Sea with the Strait of Hormuz, which then runs to the Persian Gulf.##spn#fra#ger;Asia#Persia
 1221;1251
 1225;1262
 1233;1273
@@ -1619,7 +1619,7 @@ inf;UnDefWaterRegion;Gulf of Oman;10;easy;Connects the Arabian Sea with the Stra
 1244;1242
 1239;1248
 1223;1250
-inf;UnDefWaterRegion;Gulf of saint Lawrence;10;easy;The world's largest estuary, is the outlet of the North American Great Lakes via the Saint Lawrence River into the Atlantic Ocean.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Gulf of saint Lawrence;10;level1;The world's largest estuary, is the outlet of the North American Great Lakes via the Saint Lawrence River into the Atlantic Ocean.##spn#fra#ger;America#Canada
 3129;1704
 3140;1704
 3150;1702
@@ -1647,7 +1647,7 @@ inf;UnDefWaterRegion;Gulf of saint Lawrence;10;easy;The world's largest estuary,
 3121;1694
 3120;1696
 3126;1704
-inf;UnDefWaterRegion;Gulf of Tonkin;10;easy;Is a northern arm of the South China Sea##spn#fra#ger;Asia#Vietnam
+inf;UnDefWaterRegion;Gulf of Tonkin;10;level1;Is a northern arm of the South China Sea##spn#fra#ger;Asia#Vietnam
 930;930
 923;941
 918;948
@@ -1706,7 +1706,7 @@ inf;UnDefWaterRegion;Gulf of Tonkin;10;easy;Is a northern arm of the South China
 1036;998
 1038;995
 931;928
-inf;UnDefWaterRegion;Hudson Bay;10;easy;A large body of saltwater in northeastern Canada. The southern arm of Hudson Bay is called James Bay.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Hudson Bay;10;level1;A large body of saltwater in northeastern Canada. The southern arm of Hudson Bay is called James Bay.##spn#fra#ger;America#Canada
 3211;2004
 3219;2005
 3220;2008
@@ -1766,7 +1766,7 @@ inf;UnDefWaterRegion;Hudson Bay;10;easy;A large body of saltwater in northeaster
 3202;1997
 3203;2000
 3207;2003
-inf;UnDefWaterRegion;Java Sea;10;easy;Shallow sea on the Sunda Shelf. It was formed as sea levels rose at the end of the last ice age.##spn#fra#ger;Asia#Indonesia
+inf;UnDefWaterRegion;Java Sea;10;level1;Shallow sea on the Sunda Shelf. It was formed as sea levels rose at the end of the last ice age.##spn#fra#ger;Asia#Indonesia
 2700;517
 2765;516
 2803;523
@@ -1820,7 +1820,7 @@ inf;UnDefWaterRegion;Java Sea;10;easy;Shallow sea on the Sunda Shelf. It was for
 2609;579
 2651;554
 2695;523
-inf;UnDefWaterRegion;Kara Sea;10;easy;Is named for the Kara River, which is now relatively insignificant but which played an important role in the Russian conquest of northern Siberia.##spn#fra#ger;Asia#Russia
+inf;UnDefWaterRegion;Kara Sea;10;level1;Is named for the Kara River, which is now relatively insignificant but which played an important role in the Russian conquest of northern Siberia.##spn#fra#ger;Asia#Russia
 1283;1201
 1408;1052
 1399;1039
@@ -1849,7 +1849,7 @@ inf;UnDefWaterRegion;Kara Sea;10;easy;Is named for the Kara River, which is now 
 1209;1116
 1223;1155
 1275;1193
-inf;UnDefWaterRegion;Labrador Sea;10;easy;An arm of the North Atlantic Ocean between the Labrador Peninsula and Greenland.##spn#fra#ger;America#Canada
+inf;UnDefWaterRegion;Labrador Sea;10;level1;An arm of the North Atlantic Ocean between the Labrador Peninsula and Greenland.##spn#fra#ger;America#Canada
 2754;1333
 2759;1338
 2762;1342
@@ -1876,7 +1876,7 @@ inf;UnDefWaterRegion;Labrador Sea;10;easy;An arm of the North Atlantic Ocean bet
 2756;1319
 2755;1329
 2754;1332
-inf;Lake;Lake Balkhash;10;easy;Is one of the largest lakes in Asia and 13th largest continental lake in the world. It is located in southeastern Kazakhstan##spn#fra#ger;Asia#Central Asia
+inf;Lake;Lake Balkhash;10;level1;Is one of the largest lakes in Asia and 13th largest continental lake in the world. It is located in southeastern Kazakhstan##spn#fra#ger;Asia#Central Asia
 2071;1755
 2073;1761
 2075;1765
@@ -1893,7 +1893,7 @@ inf;Lake;Lake Balkhash;10;easy;Is one of the largest lakes in Asia and 13th larg
 2066;1750
 2066;1752
 2069;1755
-inf;Lake;Lake Chad;10;easy;Lake Chad is a historically large, shallow, endorheic lake in Africa, the size of which has varied over the centuries. Shrank as much as 95% from about 1963 to 1998.##spn#fra#ger;Africa#Edge of sahara
+inf;Lake;Lake Chad;10;level1;Lake Chad is a historically large, shallow, endorheic lake in Africa, the size of which has varied over the centuries. Shrank as much as 95% from about 1963 to 1998.##spn#fra#ger;Africa#Edge of sahara
 1104;1795
 1101;1798
 1099;1801
@@ -1910,7 +1910,7 @@ inf;Lake;Lake Chad;10;easy;Lake Chad is a historically large, shallow, endorheic
 1109;1798
 1106;1795
 1105;1793
-inf;Lake;Lake Maracaibo;10;easy;Is a large brackish bay in Venezuela. It is connected to the Gulf of Venezuela by Tablazo Strai.##spn#fra#ger;America#South America
+inf;Lake;Lake Maracaibo;10;level1;Is a large brackish bay in Venezuela. It is connected to the Gulf of Venezuela by Tablazo Strai.##spn#fra#ger;America#South America
 792;1185
 790;1190
 790;1197
@@ -1939,7 +1939,7 @@ inf;Lake;Lake Maracaibo;10;easy;Is a large brackish bay in Venezuela. It is conn
 800;1184
 794;1183
 793;1185
-inf;Lake;Lake Winnipeg;10;easy;Is the eleventh-largest freshwater lake on Earth.##spn#fra#ger;America#Canada
+inf;Lake;Lake Winnipeg;10;level1;Is the eleventh-largest freshwater lake on Earth.##spn#fra#ger;America#Canada
 3201;531
 3246;526
 3314;529
@@ -2024,7 +2024,7 @@ inf;Lake;Lake Winnipeg;10;easy;Is the eleventh-largest freshwater lake on Earth.
 3207;578
 3211;560
 3200;532
-inf;UnDefWaterRegion;Laptev Sea;10;easy;Is located between the northern coast of Siberia, the Taimyr Peninsula, Severnaya Zemlya and the New Siberian Islands.##spn#fra#ger;Asia#Russia
+inf;UnDefWaterRegion;Laptev Sea;10;level1;Is located between the northern coast of Siberia, the Taimyr Peninsula, Severnaya Zemlya and the New Siberian Islands.##spn#fra#ger;Asia#Russia
 3291;1652
 3287;1667
 3288;1685
@@ -2039,7 +2039,7 @@ inf;UnDefWaterRegion;Laptev Sea;10;easy;Is located between the northern coast of
 3297;1649
 3295;1651
 3293;1653
-inf;UnDefWaterRegion;Luzon Strait;10;easy;The strait between Taiwan and Luzon island of the Philippines. The strait thereby connects the Philippine Sea to the South China Sea in the western Pacific Ocean.##spn#fra#ger;Asia#Philippines
+inf;UnDefWaterRegion;Luzon Strait;10;level1;The strait between Taiwan and Luzon island of the Philippines. The strait thereby connects the Philippine Sea to the South China Sea in the western Pacific Ocean.##spn#fra#ger;Asia#Philippines
 1908;1451
 1923;1472
 1948;1468
@@ -2146,7 +2146,7 @@ inf;UnDefWaterRegion;Luzon Strait;10;easy;The strait between Taiwan and Luzon is
 1913;1427
 1914;1435
 1909;1449
-inf;UnDefWaterRegion;Mediterranean Sea;10;easy;Is a sea connected to the Atlantic Ocean surrounded by the Mediterranean region and almost completely enclosed by land.##spn#fra#ger;Europe#South Europe
+inf;UnDefWaterRegion;Mediterranean Sea;10;level1;Is a sea connected to the Atlantic Ocean surrounded by the Mediterranean region and almost completely enclosed by land.##spn#fra#ger;Europe#South Europe
 2556;1594
 2558;1607
 2555;1614
@@ -2188,7 +2188,7 @@ inf;UnDefWaterRegion;Mediterranean Sea;10;easy;Is a sea connected to the Atlanti
 2537;1596
 2547;1596
 2552;1594
-inf;UnDefWaterRegion;Persian Gulf;10;easy;Located in Western Asia between Iran to the northeast and the Arabian Peninsula to the southwest. The Persian Gulf is an extension of the Indian Ocean (Gulf of Oman) through the Strait of Hormuz.##spn#fra#ger;Asia#Indian Ocean
+inf;UnDefWaterRegion;Persian Gulf;10;level1;Located in Western Asia between Iran to the northeast and the Arabian Peninsula to the southwest. The Persian Gulf is an extension of the Indian Ocean (Gulf of Oman) through the Strait of Hormuz.##spn#fra#ger;Asia#Indian Ocean
 3559;1266
 3551;1263
 3546;1268
@@ -2323,7 +2323,7 @@ inf;UnDefWaterRegion;Persian Gulf;10;easy;Located in Western Asia between Iran t
 3553;1241
 3554;1250
 3558;1261
-inf;UnDefWaterRegion;Sea of Okhotsk;10;easy;The sea is named after Okhotsk, the first Russian settlement in the Far East.##spn#fra#ger;Asia#Russia
+inf;UnDefWaterRegion;Sea of Okhotsk;10;level1;The sea is named after Okhotsk, the first Russian settlement in the Far East.##spn#fra#ger;Asia#Russia
 1490;2650
 1496;2653
 1501;2658
@@ -2375,5 +2375,5 @@ inf;UnDefRegion;SouthGeorgiaAndTheSouthSandwichIslandsNU;10;notUsed;eng#nor#spn#
 1611;2702
 1611;2699
 1609;2699
-inf;UnDefWaterRegion;South Georgia and the south sandwich islands;10;easy;South Georgia and the South Sandwich Islands (SGSSI) are a British overseas territory.##spn#fra#ger;Atlantic Ocean#Antartic
+inf;UnDefWaterRegion;South Georgia and the south sandwich islands;10;level1;South Georgia and the South Sandwich Islands (SGSSI) are a British overseas territory.##spn#fra#ger;Atlantic Ocean#Antartic
 eof

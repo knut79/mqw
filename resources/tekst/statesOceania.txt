@@ -81,8 +81,8 @@
 3893;2338
 3891;2338
 3888;2332
-qst;coaNewZealand##medium#NewZealandFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;New Zealand;10;easy;Polynesians settled New Zealand in 1250–1300 CE. Capital: Wellington##spn#fra#ger;Oceania#Capital: Wellington
+qst;coaNewZealand##level2#NewZealandFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;New Zealand;10;level1;Polynesians settled New Zealand in 1250–1300 CE. Capital: Wellington##spn#fra#ger;Oceania#Capital: Wellington
 3566;2418
 3565;2427
 3563;2428
@@ -106,7 +106,7 @@ inf;State;New Zealand;10;easy;Polynesians settled New Zealand in 1250–1300 CE.
 3590;2427
 3583;2428
 3570;2419
-inf;Island;Tasmania;10;easy;Tasmania is promoted as the natural state, and A World Apart, Not A World Away owing to its large and relatively unspoiled natural environment. Almost 45% of Tasmania lies in reserves, national parks and World Heritage Sites#nor#spn#fra#ger;Oceania#Australia
+inf;Island;Tasmania;10;level1;Tasmania is promoted as the natural state, and A World Apart, Not A World Away owing to its large and relatively unspoiled natural environment. Almost 45% of Tasmania lies in reserves, national parks and World Heritage Sites#nor#spn#fra#ger;Oceania#Australia
 3585;2397
 3588;2393
 3593;2391
@@ -347,6 +347,6 @@ inf;Island;Tasmania;10;easy;Tasmania is promoted as the natural state, and A Wor
 3570;2388
 3580;2395
 3584;2399
-qst;coaAustralia##medium#AustraliaFlag.png#What county is represented by this flag?##spn#fra#ger#overridingHint1#overridingHint2
-inf;State;Australia;10;easy;World's sixth-largest country by total area. Capital: Canberra##spn#fra#ger;Oceania#Capital: Canberra;;Tazmania
+qst;coaAustralia##level2#AustraliaFlag.png#What county is represented by this flag?##spn#fra#ger#overridingHint1#overridingHint2
+inf;State;Australia;10;level1;World's sixth-largest country by total area. Capital: Canberra##spn#fra#ger;Oceania#Capital: Canberra;;Tazmania
 eof

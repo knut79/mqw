@@ -140,7 +140,7 @@ inf;Island;Martinique;10;hard;Overseas department of France.##spn#fra#ger;Americ
 3441;1480
 3433;1480
 3430;1481
-inf;Island;Honshu island;10;easy;Honshu literally "Main Island" or "Main Province" is the largest and most populous island of Japan.##spn#fra#ger;Asia#Japan
+inf;Island;Honshu island;10;level1;Honshu literally "Main Island" or "Main Province" is the largest and most populous island of Japan.##spn#fra#ger;Asia#Japan
 3166;1890
 3162;1893
 3160;1896
@@ -232,12 +232,12 @@ inf;Island;Honshu island;10;easy;Honshu literally "Main Island" or "Main Provinc
 3178;1894
 3172;1893
 3168;1890
-inf;Island;Borneo;10;easy;Borneo is the third-largest island in the world and the largest island of Asia.##spn#fra#ger;Asia#Indonesia
+inf;Island;Borneo;10;level1;Borneo is the third-largest island in the world and the largest island of Asia.##spn#fra#ger;Asia#Indonesia
 1957;2653
 1956;2655
 1957;2657
 1959;2656
-inf;Island;Bouvet island;10;easy;An uninhabited subantarctic volcanic island and dependency of Norway.##spn#fra#ger;Atlantic Ocean#Antarctica
+inf;Island;Bouvet island;10;level1;An uninhabited subantarctic volcanic island and dependency of Norway.##spn#fra#ger;Atlantic Ocean#Antarctica
 2017;1382
 2016;1384
 2016;1388
@@ -255,7 +255,7 @@ inf;Island;Bouvet island;10;easy;An uninhabited subantarctic volcanic island and
 2021;1376
 2017;1379
 2016;1382
-inf;Island;Corsica;10;easy;Is an island in the Mediterranean Sea belonging to France.##spn#fra#ger;Europe#Mediterranean
+inf;Island;Corsica;10;level1;Is an island in the Mediterranean Sea belonging to France.##spn#fra#ger;Europe#Mediterranean
 951;392
 944;396
 933;398
@@ -478,14 +478,14 @@ inf;Island;Corsica;10;easy;Is an island in the Mediterranean Sea belonging to Fr
 953;388
 955;391
 953;392
-inf;Island;Ellesmere Island;10;easy;World's tenth largest island and Canada's third largest island.##spn#fra#ger;America#Canada
+inf;Island;Ellesmere Island;10;level1;World's tenth largest island and Canada's third largest island.##spn#fra#ger;America#Canada
 657;1694
 654;1695
 653;1696
 654;1698
 658;1698
 660;1695
-inf;Island;Islas Revillagigedo;10;easy;Revillagigedo Archipelago are a group of four Mexican volcanic islands in the Pacific Ocean, known for their unique ecosystem.##spn#fra#ger;America#Mexico
+inf;Island;Islas Revillagigedo;10;level1;Revillagigedo Archipelago are a group of four Mexican volcanic islands in the Pacific Ocean, known for their unique ecosystem.##spn#fra#ger;America#Mexico
 1283;1225
 1273;1231
 1270;1237
@@ -544,7 +544,7 @@ inf;Island;Islas Revillagigedo;10;easy;Revillagigedo Archipelago are a group of 
 1288;1232
 1290;1225
 1285;1225
-inf;Island;Newfoundland Island;10;easy;A Canadian island and the most populous part of the Canadian province of Newfoundland and Labrador.##spn#fra#ger;America#Canada
+inf;Island;Newfoundland Island;10;level1;A Canadian island and the most populous part of the Canadian province of Newfoundland and Labrador.##spn#fra#ger;America#Canada
 2025;1397
 2021;1400
 2020;1403
@@ -570,7 +570,7 @@ inf;Island;Newfoundland Island;10;easy;A Canadian island and the most populous p
 2033;1411
 2030;1402
 2027;1397
-inf;Island;Sardinia;10;easy;Is the second largest island in the Mediterranean Sea. Is a part of Italia.##spn#fra#ger;Europe#Mediterranean
+inf;Island;Sardinia;10;level1;Is the second largest island in the Mediterranean Sea. Is a part of Italia.##spn#fra#ger;Europe#Mediterranean
 2097;1442
 2092;1443
 2089;1443
@@ -597,7 +597,31 @@ inf;Island;Sardinia;10;easy;Is the second largest island in the Mediterranean Se
 2093;1455
 2097;1444
 2098;1442
-inf;Island;Sicily;10;easy;Its most prominent landmark is Mount Etna, which, at 3,350 m, is the tallest active volcano in Europe and one of the most active in the world.##spn#fra#ger;Europe#Mediterranean
+inf;Island;Sicily;10;level1;Its most prominent landmark is Mount Etna, which, at 3,350 m, is the tallest active volcano in Europe and one of the most active in the world.##spn#fra#ger;Europe#Mediterranean
+2526;1771
+2527;1768
+2529;1768
+2531;1769
+2535;1767
+2538;1769
+2541;1770
+2541;1771
+2538;1773
+2534;1775
+2533;1775
+2529;1774
+2526;1772
+inf;Island;Socotra;10;level1;Socotra is part of Yemen.##spn#fra#ger;Middle East#Yemen
+2365;1982
+2365;1986
+2367;1987
+2369;1989
+2370;1989
+2370;1985
+2368;1982
+2368;1979
+2365;1980
+inf;Island;Zanzibar;10;level1;The biggest island off the coast of Tanzania.##spn#fra#ger;Africa#Tanzania
 eof
 
 eg for island and peninsula

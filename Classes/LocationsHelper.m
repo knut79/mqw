@@ -1073,7 +1073,7 @@
 -(void) CategorizeQuestions
 {
 	//categorize the questions
-	m_questionsByCategory = [[NSMutableDictionary alloc] initWithCapacity:4];
+	m_questionsByCategory = [[NSMutableDictionary alloc] initWithCapacity:5];
 	
     NSMutableArray *level5Array = [self CollectQuestionsOnCategory:level5];
 	[m_questionsByCategory setObject:level5Array forKey:@"level5"];
@@ -1190,19 +1190,22 @@
 {
 	NSMutableArray *questionsOnType = nil;
 	NSString *difficultyKey;
-	for (int diff = 0;diff < 3; diff ++) 
+	for (int diff = 1;diff <= 5; diff ++)
 	{
-		if (diff == 3) {
-			difficultyKey = @"veryhardDif";
+		if (diff == 5) {
+			difficultyKey = @"level5";
 		}
-		if (diff == 2) {
-			difficultyKey = @"hardDif";
+		if (diff == 4) {
+			difficultyKey = @"level4";
+		}
+		else if(diff == 3){
+			difficultyKey = @"level3";
+		}
+		else if(diff == 2){
+			difficultyKey = @"level2";
 		}
 		else if(diff == 1){
-			difficultyKey = @"medium";
-		}
-		else if(diff == 0){
-			difficultyKey = @"easy";
+			difficultyKey = @"level1";
 		}
 		
 		

@@ -289,14 +289,14 @@
 2191;899
 2193;903
 2194;910
-qst;coaSweden##medium#SwedenFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Sweden;10;easy;Sweden maintains a Nordic social welfare system that provides universal health care and tertiary education for its citizens. It has the world's eighth-highest per capita income. Capital: Stockholm##spn#fra#ger;Europe#Northern Europe
+qst;coaSweden##level2#SwedenFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Sweden;10;level1;Sweden maintains a Nordic social welfare system that provides universal health care and tertiary education for its citizens. It has the world's eighth-highest per capita income. Capital: Stockholm##spn#fra#ger;Europe#Northern Europe
 eof
 
-qst;coaAb##medium#AbFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Abb;10;easy;bla bla##spn#fra#ger;Asia#blabla
+qst;coaAb##level2#AbFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Abb;10;level1;bla bla##spn#fra#ger;Asia#blabla
 
-qst;coaAb##medium#AbFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Abb;10;easy;bla bla##spn#fra#ger;Asia#blabla
+qst;coaAb##level2#AbFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Abb;10;level1;bla bla##spn#fra#ger;Asia#blabla
 
 eof

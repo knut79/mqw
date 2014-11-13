@@ -332,12 +332,14 @@
 
 
 	Difficulty vDifficulty = level1;
-	if ([slideDifficultyPicker value] >= 1.0) {
-		vDifficulty = level2;
-		if([slideDifficultyPicker value] >= 2.0)
-		{
-			vDifficulty = level3;
-            if([slideDifficultyPicker value] >= 3.0)
+
+    if([slideDifficultyPicker value] >= 2.0)
+    {
+        vDifficulty = level2;
+        if([slideDifficultyPicker value] >= 3.0)
+        {
+            vDifficulty = level3;
+            if([slideDifficultyPicker value] >= 4.0)
             {
                 vDifficulty = level4;
                 if([slideDifficultyPicker value] >= 4.0)
@@ -345,8 +347,8 @@
                     vDifficulty = level5;
                 }
             }
-		}
-	}
+        }
+    }
 
 	if (m_game == nil) {
 		m_game = [[Game alloc] init] ;

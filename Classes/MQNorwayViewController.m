@@ -60,6 +60,9 @@
     [createPlayerVC setDelegate:self];
     [self.view addSubview:createPlayerVC.view];
     
+    message = [[UIAlertView alloc] initWithTitle:@"Sorry!"
+                                       message:@"Not allowed to pause game" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+    
     /*
     if ([[GlobalHelper Instance] getStartFlag] == 0)
     {
@@ -88,6 +91,11 @@
 	createPlayerVC = nil;
     
     [self FirstLoad];
+}
+
+-(void) showMessage
+{
+    [message show];
 }
 
 -(void) FirstLoad
@@ -772,7 +780,7 @@
 	resultBoardView.userInteractionEnabled = YES;
 }
 
-#pragma mark WithFiguresViewDelegate
+#pragma mark AnimateTextViewDelegate
 
 //start next round
 - (void)finishedShowingResultMap{		
@@ -799,6 +807,7 @@
     resultBoardView.sectionFiguresView.center = CGPointMake(([screen applicationFrame].size.width/2), ([screen applicationFrame].size.height/2));
     [screen release];
     
+    [resultBoardView.layer removeAllAnimations];
     
     if (resultBoardView.playerSymbolMiniWindowView != nil) {
         [resultBoardView.playerSymbolMiniWindowView removeFromSuperview];
@@ -864,12 +873,28 @@
 
 }
 
+-(void) finishedAnimatingResultText
+{
+    [resultBoardView.layer removeAllAnimations];
+    [resultBoardView AnimateResult];
+    /*
+    [UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:2.5];
+	[UIView setAnimationDelegate:self];
+    [UIView setAnimationRepeatCount:10];
+    [UIView setAnimationRepeatAutoreverses:YES];
+	[UIView setAnimationDidStopSelector:@selector(doneAnimatingResult)];
+	[resultBoardView setTransform:CGAffineTransformMakeScale(2, 2)];
+	[UIView commitAnimations];
+     */
 
+}
+
+#pragma mark WithFiguresViewDelegate
 //round is finished
 - (void)finishedDrawingResultMap
 {
-    //TEST
-    
+
     UIScreen *screen = [[UIScreen mainScreen] retain];
     CGRect regionBoundsRect = resultBoardView.boundsOfRegion;
     if (regionBoundsRect.size.width > 0 && regionBoundsRect.size.height > 0) {
@@ -881,19 +906,15 @@
         yOffset = yOffset * scaleFactor;
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.5];
+        [UIView setAnimationDidStopSelector:@selector(sectionAnimationDidStop)];
         [UIView setAnimationDelegate:self];
         
         resultBoardView.sectionFiguresView.center = CGPointMake(resultBoardView.sectionFiguresView.center.x + xOffset, resultBoardView.sectionFiguresView.center.y + yOffset);
-        //[resultBoardView.sectionFiguresView setAlpha:1];
         [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(scaleFactor, scaleFactor)];
         [UIView commitAnimations];
         
     }
     [screen release];
-    
-    //END TEST
-    
-	[m_gameRef SetPlayerPositionsByScore];
    
 	if (m_animTextView == nil) {
 		m_animTextView = [[AnimateTextView alloc] initWithFrame:[[self view] bounds]];
@@ -919,12 +940,14 @@
     
     m_animTextView.hidden = NO;
     [m_animTextView setText:[currentPlayer GetPepTalk]];
-    [m_animTextView startTextAnimation];
-
     [currentPlayer release];
+    [m_animTextView startTextAnimation];
+    
+    
+    [resultBoardView drawResult_UpdateGameData:YES];
 
-	
-	
+	   
+    
 	if ([m_gameRef IsTrainingMode] == YES) {
 		//[infoBarBottom SetTrainingText];
 		[infoBarBottom UpdateTrainingText];
@@ -951,6 +974,19 @@
 	[self.view bringSubviewToFront:answerBarTop];
     
 
+}
+/*
+-(void) doneAnimatingResult
+{
+    [resultBoardView setTransform:CGAffineTransformMakeScale(1, 1)];
+}*/
+
+-(void) sectionAnimationDidStop
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    [resultBoardView.sectionFiguresView setAlpha:0];
+    [UIView commitAnimations];
 }
 
 
@@ -1285,12 +1321,12 @@
 
 	
 
-    NSMutableArray *players = [[m_gameRef GetPlayers] retain];
-    Player *singlePlayer = [players objectAtIndex:0];
-    if ([singlePlayer GetKmLeft] <= 0) {
+
+    Player *player = [[m_gameRef GetPlayer] retain];
+    if ([player GetKmLeft] <= 0) {
         gameFinished = YES;
     }
-    [players release];
+    [player release];
 		
 	if (gameFinished == NO) {
 		if ([m_gameRef IsTrainingMode] == NO) {

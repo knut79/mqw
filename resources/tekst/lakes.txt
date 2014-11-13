@@ -48,7 +48,7 @@
 3169;1142
 3165;1146
 3161;1151
-inf;Lake;Lake Baikal;10;easy;Lake Baikal is the freshwater lake with greatest volume in the world, containing roughly 20% of the world's unfrozen surface fresh water, and at 1,642 m, the deepest. It is also among the clearest of all lakes, and thought to be the world's oldest lake at 25 million years##spn#fra#ger;Asia#Siberia
+inf;Lake;Lake Baikal;10;level1;Lake Baikal is the freshwater lake with greatest volume in the world, containing roughly 20% of the world's unfrozen surface fresh water, and at 1,642 m, the deepest. It is also among the clearest of all lakes, and thought to be the world's oldest lake at 25 million years##spn#fra#ger;Asia#Siberia
 981;1386
 977;1385
 974;1388
@@ -79,7 +79,7 @@ inf;Lake;Lake Baikal;10;easy;Lake Baikal is the freshwater lake with greatest vo
 988;1381
 982;1384
 982;1385
-inf;Lake;Lake Erie;10;easy;Is the fourth largest lake (by surface area) of the five Great Lakes in North America, and the tenth largest globally.##spn#fra#ger;America#North America
+inf;Lake;Lake Erie;10;level1;Is the fourth largest lake (by surface area) of the five Great Lakes in North America, and the tenth largest globally.##spn#fra#ger;America#North America
 955;1324
 955;1327
 953;1329
@@ -134,7 +134,7 @@ inf;Lake;Lake Erie;10;easy;Is the fourth largest lake (by surface area) of the f
 947;1321
 952;1323
 954;1323
-inf;Lake;lake michigan;10;easy;Is one of the five Great Lakes of North America and the only one located entirely within the United States. It is the second largest of the Great Lakes by volume and the third largest by surface area##spn#fra#ger;America#North America
+inf;Lake;lake michigan;10;level1;Is one of the five Great Lakes of North America and the only one located entirely within the United States. It is the second largest of the Great Lakes by volume and the third largest by surface area##spn#fra#ger;America#North America
 879;1303
 870;1311
 874;1312
@@ -191,7 +191,7 @@ inf;Lake;lake michigan;10;easy;Is one of the five Great Lakes of North America a
 891;1294
 884;1297
 880;1301
-inf;Lake;Lake Superior;10;easy;It is generally considered the largest freshwater lake in the world by surface area. It is the world's third-largest freshwater lake by volume and the largest by volume in North America##spn#fra#ger;America#North America
+inf;Lake;Lake Superior;10;level1;It is generally considered the largest freshwater lake in the world by surface area. It is the world's third-largest freshwater lake by volume and the largest by volume in North America##spn#fra#ger;America#North America
 1124;2091
 1124;2094
 1125;2095
@@ -211,7 +211,7 @@ inf;Lake;Lake Superior;10;easy;It is generally considered the largest freshwater
 1131;2093
 1128;2090
 1125;2090
-inf;Lake;Lake Titicaca;10;easy;By volume of water, it is the largest lake in South America.[2][3] Lake Maracaibo has a larger surface area, but it is considered to be a large brackish bay due to its direct connection with the sea. It is often called the highest navigable lake in the world, with a surface elevation of 3,812 metres##spn#fra#ger;America#South America
+inf;Lake;Lake Titicaca;10;level1;By volume of water, it is the largest lake in South America.[2][3] Lake Maracaibo has a larger surface area, but it is considered to be a large brackish bay due to its direct connection with the sea. It is often called the highest navigable lake in the world, with a surface elevation of 3,812 metres##spn#fra#ger;America#South America
 2282;1916
 2281;1919
 2280;1922
@@ -243,7 +243,7 @@ inf;Lake;Lake Titicaca;10;easy;By volume of water, it is the largest lake in Sou
 2296;1910
 2285;1913
 2283;1915
-inf;Lake;Lake Victoria;10;easy;With a surface area of 68,800 square kilometres, Lake Victoria is Africa's largest lake by area, and is also the largest tropical lake in the world. Lake Victoria is the world's 2nd largest freshwater lake by surface area##spn#fra#ger;Africa#Kenya
+inf;Lake;Lake Victoria;10;level1;With a surface area of 68,800 square kilometres, Lake Victoria is Africa's largest lake by area, and is also the largest tropical lake in the world. Lake Victoria is the world's 2nd largest freshwater lake by surface area##spn#fra#ger;Africa#Kenya
 1199;2279
 1201;2280
 1203;2283
@@ -259,5 +259,79 @@ inf;Lake;Lake Victoria;10;easy;With a surface area of 68,800 square kilometres, 
 1199;2278
 1198;2277
 1198;2278
-inf;Lake;Mar chiquita lake;10;easy;Located in central Argentina. Its surface area varies considerably, given its shallow depth (about 10 m), and ranges between 2000 and 6000 km².##spn#fra#ger;America#South America
+inf;Lake;Mar chiquita lake;10;level1;Located in central Argentina. Its surface area varies considerably, given its shallow depth (about 10 m), and ranges between 2000 and 6000 km².##spn#fra#ger;America#South America
+2305;2026
+2305;2023
+2307;2022
+2309;2025
+2311;2027
+2313;2030
+2313;2035
+2314;2040
+2317;2045
+2317;2049
+2317;2052
+2314;2055
+2315;2059
+2316;2064
+2319;2074
+2321;2079
+2320;2080
+2316;2077
+2316;2079
+2314;2079
+2312;2077
+2313;2073
+2310;2070
+2310;2067
+2310;2064
+2308;2060
+2308;2057
+2305;2054
+2309;2048
+2309;2045
+2307;2033
+2306;2031
+2305;2028
+inf;Lake;Lake Nyasa;10;level1;Lake Malawi, also known as Lake Nyasa in Tanzania and Lago Niassa in Mozambique, is an African Great Lake and the southernmost lake in the East African Rift system, located between Malawi, Mozambique and Tanzania. It is the ninth largest lake in the world and the third largest and second deepest lake in Africa.##spn#fra#ger;Africa#Malawi and Tanzania
+2250;1958
+2250;1965
+2251;1968
+2248;1971
+2249;1974
+2253;1978
+2253;1981
+2251;1983
+2252;1985
+2253;1988
+2256;1992
+2257;1992
+2257;1995
+2261;1996
+2263;1999
+2263;2005
+2266;2006
+2266;2012
+2269;2012
+2273;2015
+2274;2013
+2273;2009
+2270;2005
+2268;2002
+2268;1995
+2267;1993
+2264;1989
+2263;1988
+2260;1988
+2259;1986
+2259;1983
+2261;1983
+2261;1981
+2259;1976
+2259;1971
+2257;1970
+2257;1966
+2254;1963
+2252;1959
+inf;Lake;Lake Tanganyika;10;level1;Lake Tanganyika is an African Great Lake. It is estimated to be the second largest freshwater lake in the world by volume, and the second deepest, in both cases, after only Lake Baikal in Siberia. It is also the world's longest freshwater lake.##spn#fra#ger;Africa#Tanzania
 eof

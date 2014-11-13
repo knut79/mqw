@@ -269,7 +269,7 @@
 	[screen release];
 	[self FadeIn];
 	
-	[self AnimateElementsIn:[[gameRef GetPlayers] count]];
+	[self AnimateElementsIn:1];
 }
 
 -(void) setUpSinglePlayer:(Game*) gameRef

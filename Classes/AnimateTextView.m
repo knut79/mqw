@@ -78,6 +78,7 @@
 
 -(void) startTextAnimation
 {
+    //tap to continue
 	m_imageName = [[NSString stringWithFormat:@"%@.png",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"tapImage2"]] retain];
 	m_tapMessageImageView.image = [UIImage imageNamed:m_imageName];
 	[m_tapMessageImageView setAlpha:0.0];
@@ -97,6 +98,9 @@
 {
 	[m_messageLabel setTransform:CGAffineTransformIdentity];
 	[self startTapMessage];
+    
+    if ([delegate respondsToSelector:@selector(finishedAnimatingResultText)])
+        [delegate finishedAnimatingResultText];
 }
 
 
@@ -122,23 +126,15 @@
 	//[UIView setAnimationDelay:1.0];
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationRepeatAutoreverses:YES];
-	[UIView setAnimationRepeatCount:3];
+	[UIView setAnimationRepeatCount:10];
 	[UIView setAnimationDelegate:self];
-	[UIView setAnimationDidStopSelector:@selector(tapImageAnimationDone)];
 	[m_tapMessageImageView setAlpha:1.0];
 	[UIView commitAnimations];
 }
 
--(void) tapImageAnimationDone
-{
-//	[m_tapMessageImageView setAlpha:0];
-//	[m_tapMessageImageView setTransform:CGAffineTransformIdentity];
-}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//	NSLog(@"tap on animated view caught");
 	[m_tapMessageImageView setAlpha:0.0];
-	//[self endTapAnimation];
 	[self fadeOut];
 }
 

@@ -24,9 +24,6 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         
-		tiledMapViewZoomScale = 1;
-		tiledMapViewResolutionPercentage = 25;
-		
         UIScreen *screen = [[UIScreen mainScreen] retain];
 		answerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, [screen applicationFrame].size.height -40, [screen applicationFrame].size.width, 40)];
         [screen release];
@@ -44,7 +41,7 @@
         
         [self ResetRegionBoundValues];
         
-        _sectionFiguresView = [[SectionFiguresView alloc] initWithFrame:frame];
+        _sectionFiguresView = [[SectionFiguresView alloc] initWithFrame:frame andResolution:tiledMapViewResolutionPercentage];
         [self addSubview:_sectionFiguresView];
     }
     return self;
@@ -63,20 +60,69 @@
 	m_gameRef = [game retain];
 }
 
-
--(void) setDataForWitFiguresDrawing_DEP: (CGRect) isvBounds andZoomScale:(float)isvZoomScale andResolutionPerc:(float) resPercentage
+//test
+-(void) AnimateResult
 {
-	tiledMapViewZoomScale = isvZoomScale;
-	tilesMapViewBounds = isvBounds;
-	tiledMapViewResolutionPercentage = resPercentage;
+    tiledMapViewResolutionPercentage = 25.0;
+    m_shouldDrawResult = YES;
+    m_shouldUpdateGameData = NO;
+    [self setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
+    [self setNeedsDisplay];
+    [UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:3.5];
+	[UIView setAnimationDelegate:self];
+    //[UIView setAnimationRepeatCount:2];
+    //[UIView setAnimationRepeatAutoreverses:YES];
+    //tiledMapViewResolutionPercentage = 50.0;
+	[UIView setAnimationDidStopSelector:@selector(animatingResultStep2)];
+	[self setTransform:CGAffineTransformMakeScale(1.5, 1.5)];
+	[UIView commitAnimations];
 }
 
-
--(void) setTiledMapViewTileWidth_DEP:(int) width
+-(void) animatingResultStep2
 {
-	tiledMapViewTileWidth = width;
+    m_shouldDrawResult = YES;
+    m_shouldUpdateGameData = NO;
+    [self setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
+    tiledMapViewResolutionPercentage = 50.0;
+    [self setNeedsDisplay];
+    [UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:3.5];
+	[UIView setAnimationDelegate:self];
+    //[UIView setAnimationRepeatCount:2];
+    //[UIView setAnimationRepeatAutoreverses:YES];
+    //tiledMapViewResolutionPercentage = 100.0;
+	[UIView setAnimationDidStopSelector:@selector(animatingResultStep3)];
+	[self setTransform:CGAffineTransformMakeScale(1.5, 1.5)];
+	[UIView commitAnimations];
 }
 
+-(void) animatingResultStep3
+{
+    m_shouldDrawResult = YES;
+    m_shouldUpdateGameData = NO;
+    [self setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
+    tiledMapViewResolutionPercentage = 100.0;
+    [self setNeedsDisplay];
+    [UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:3.5];
+	[UIView setAnimationDelegate:self];
+    //[UIView setAnimationRepeatCount:10];
+    //[UIView setAnimationRepeatAutoreverses:YES];
+	[UIView setAnimationDidStopSelector:@selector(doneAnimatingResult)];
+	[self setTransform:CGAffineTransformMakeScale(1.5, 1.5)];
+	[UIView commitAnimations];
+}
+
+-(void) doneAnimatingResult
+{
+    //[self setTransform:CGAffineTransformMakeScale(1, 1)];
+    tiledMapViewResolutionPercentage = 25.0;
+    /*
+    if ([delegate respondsToSelector:@selector(finishedDrawingResultMap)])
+        [delegate finishedDrawingResultMap];*/
+}
+//end test
 
 -(void) SetTilesMapViewBounds
 {
@@ -86,8 +132,8 @@
 
 	CGPoint centerPoint; 
 	centerPoint = [loc GetCenterPoint];
-	centerPoint.y = centerPoint.y * 0.25 * tiledMapViewZoomScale;
-    centerPoint.x = centerPoint.x * 0.25 * tiledMapViewZoomScale;
+	centerPoint.y = centerPoint.y * (tiledMapViewResolutionPercentage/100.0) * tiledMapViewZoomScale;
+    centerPoint.x = centerPoint.x * (tiledMapViewResolutionPercentage/100.0) * tiledMapViewZoomScale;
 
     UIScreen *screen = [[UIScreen mainScreen] retain];
 	CGRect testRect = CGRectMake(0, 0, [screen applicationFrame].size.width, [screen applicationFrame].size.height);
@@ -96,7 +142,7 @@
     testRect.origin.x += (centerPoint.x - ([screen applicationFrame].size.width/2));
     testRect.origin.y += (centerPoint.y - ([screen applicationFrame].size.height/2));
     
-    CGFloat mapWidth =(constMapWidth * 0.25)*tiledMapViewZoomScale;
+    CGFloat mapWidth =(constMapWidth * (tiledMapViewResolutionPercentage/100.0))*tiledMapViewZoomScale;
 	if (testRect.origin.x >  mapWidth - [screen applicationFrame].size.width)
 	{
 		testRect.origin.x = mapWidth - [screen applicationFrame].size.width;
@@ -105,7 +151,7 @@
 	{
 		testRect.origin.x = 0;
 	}
-    CGFloat mapHeight = (constMapHeight * 0.25)*tiledMapViewZoomScale;
+    CGFloat mapHeight = (constMapHeight * (tiledMapViewResolutionPercentage/100.0))*tiledMapViewZoomScale;
     if (testRect.origin.y > (mapHeight - [screen applicationFrame].size.height))
 	{
 		testRect.origin.y = mapHeight - [screen applicationFrame].size.height;
@@ -145,99 +191,11 @@
 			CGContextTranslateCTM(context, -tilesMapViewBounds.origin.x, -tilesMapViewBounds.origin.y);
 
 			// calculate which rows and columns are visible by doing a bunch of math.
-			float tZoomScale = tiledMapViewZoomScale;
-			int tSizeWidth = tiledMapViewTileWidth;
-			float scaledTileWidth  = tSizeWidth * tZoomScale; 
-			float scaledTileHeight = tSizeWidth * tZoomScale;
-		 
-			if (tiledMapViewTileWidth != 0) 
-			{
-				//set up lastNeededRow and firstneededrow .. column  osv. så det ikke gjøres unødvendig tegning
-				//maxrow og maxcol må settes i forhold til hvilken prosent scale man er i
-				
-				int minCol = tilesMapViewBounds.origin.x/256 - 0.5; //round down
-				int minRow = tilesMapViewBounds.origin.y/256 - 0.5;
-				
-                UIScreen *screen = [[UIScreen mainScreen] retain];
-				float colvar2 = (tilesMapViewBounds.origin.x/scaledTileWidth) ;
-				float colVar3 = ([screen applicationFrame].size.width/scaledTileWidth);
-				int maxCol = (int)(colvar2 + colVar3 + 0.5);
-				
-				float rowVar2 = (tilesMapViewBounds.origin.y/scaledTileHeight) ;
-				float rowVar3 = ([screen applicationFrame].size.height/scaledTileHeight);
-                [screen release];
-				//float rowVar1 = (mapSize.height/256);
-				int maxRow = (int)(rowVar2 + rowVar3  + 0.5);
-
-				//dont draw the map upside down
-				CGContextScaleCTM(context, 1.0, -1.0);
-				long tileStandardHeight = 0;
-				long tileStandardWidth = 0;
-				NSString *imageName;
-				NSString* imageFileName;
-				CGDataProviderRef provider;
-				CGImageRef image;
-				float scaledTileWidthDynamic;
-				float scaledTileHeightDynamic;
-				long currentScaledWidth,currentScaledHeight,endOfColValue;
-
-				for (int row = minRow; row <= maxRow; row++) {
-					for (int col = minCol; col <= maxCol; col++) {
-
-                        if ([m_gameRef UsingBorders]==YES) {
-                            imageName = [NSString stringWithFormat:@"world_%d_border_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
-                        }
-                        else{
-                            imageName = [NSString stringWithFormat:@"world_%d_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
-                        }
-						
-						imageFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageName] ;
-						provider = CGDataProviderCreateWithFilename([imageFileName UTF8String]);
-						
-						image = CGImageCreateWithJPEGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
-						if (image == nil) {
-                            continue;
-                        }
-                        image = [self CreateScaledCGImageFromCGImage:image andScale:tiledMapViewZoomScale];
-						if (image == nil) {
-                            int a = 1;
-                            a++;
-                        }
-
-						currentScaledWidth = CGImageGetWidth(image); 
-						currentScaledHeight = CGImageGetHeight(image) ;
-						endOfColValue = 0;
-						//set standard size at first pass
-						if (row == minRow && col == minCol) {
-							tileStandardWidth = currentScaledWidth;
-							tileStandardHeight = currentScaledHeight;
-						}
-						
-						scaledTileWidthDynamic = scaledTileWidth;
-						scaledTileHeightDynamic = scaledTileHeight;
-						if (tileStandardHeight > currentScaledHeight) {
-							endOfColValue = tileStandardWidth - currentScaledHeight;
-							scaledTileHeightDynamic = currentScaledHeight;
-							
-						}
-						if (tileStandardWidth > currentScaledWidth) {
-							scaledTileWidthDynamic = currentScaledWidth;
-						}
-						//close the gap
-						scaledTileWidthDynamic ++;
-						scaledTileHeightDynamic++;
-						CGFloat x = scaledTileWidth * col;
-                        CGFloat y = -scaledTileHeight * row + (-scaledTileHeight) + endOfColValue;
-						CGContextDrawImage(context, CGRectMake(x,y,scaledTileWidthDynamic,scaledTileHeightDynamic), image);
-						CGImageRelease(image);
-					}
-				}
-				
-			}
-			CGContextScaleCTM(context, 1.0, -1.0);				
+            
+            [self drawTiles:context];
 			
-			//_? change in NMQ
-			NSMutableArray *players = [[m_gameRef GetPlayers] retain];
+						
+			Player *player = [[m_gameRef GetPlayer] retain];
 			
 			//at 100 %
 			Question *question = [[m_gameRef GetQuestion] retain];
@@ -246,120 +204,123 @@
 			NSInteger distanceBetweenPoints;
 			
 			
-			for (Player *player in players) 
-			{
-				if (([player IsOut] == NO) && [player HasGivenUp] == NO) {
-					CGPoint gamePoint = [player GetGamePoint];
-					UIColor *playerColor = [[player GetColor] retain];
-					NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
-					//NSInteger currentKmLeft = [player GetKmLeft];
-					
-					if ([loc isKindOfClass:[MpPlace class]] == YES) 
-					{
-						distanceBetweenPoints = [self DrawLineToPlace:loc andContextRef:context andGamePoint:gamePoint  andLineColor:playerColor andPlayerSymbol:playerSymbolString];
-					}
-					else if([loc isKindOfClass:[MpRegion class]] == YES)
-					{
-						distanceBetweenPoints = [self DrawLineToRegion:loc andContextRef:context andGamePoint:gamePoint  andLineColor:playerColor andPlayerSymbol:playerSymbolString];
-					}
-					
-					[player SetLastDistanceFromDestination:distanceBetweenPoints];
-					
-					[player SetPetTalk:distanceBetweenPoints];
-					
-					if (m_shouldUpdateGameData == YES) {
-						[m_gameRef UpdateAvgDistanceForQuest:distanceBetweenPoints];
-						if ([m_gameRef IsTrainingMode] == NO) {
-							[player DeductKmLeft:distanceBetweenPoints];
-						}
-						
-					}
-					else {
-						m_shouldUpdateGameData = YES;
-					}
-					
-					[playerSymbolString release];
-					[playerColor release];
-				}
+            if (([player IsOut] == NO) && [player HasGivenUp] == NO) {
+                CGPoint gamePoint = [player GetGamePoint];
+                UIColor *playerColor = [[player GetColor] retain];
+                NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
+                //NSInteger currentKmLeft = [player GetKmLeft];
                 
-                if ([player HasGivenUp] == YES) {
-                    [player SetKmLeft:-999];
+                if ([loc isKindOfClass:[MpPlace class]] == YES) 
+                {
+                    distanceBetweenPoints = [self DrawLineToPlace:loc andContextRef:context andGamePoint:gamePoint  andLineColor:playerColor];
                 }
-			}
+                else if([loc isKindOfClass:[MpRegion class]] == YES)
+                {
+                    distanceBetweenPoints = [self DrawLineToRegion:loc andContextRef:context andGamePoint:gamePoint  andLineColor:playerColor];
+                }
+                
+                if ([loc isKindOfClass:[MpPlace class]] == YES)
+                {
+                    [self DrawPlace:loc];
+                }
+                else if([loc isKindOfClass:[MpRegion class]] == YES)
+                {
+                    [self DrawRegion:loc];
+                }
+                
+                [self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
+                
+                if (m_shouldUpdateGameData == YES) {
+                    
+                    [player SetLastDistanceFromDestination:distanceBetweenPoints];
+                
+                    [player SetPetTalk:distanceBetweenPoints];
+                
+                
+                    [m_gameRef UpdateAvgDistanceForQuest:distanceBetweenPoints];
+                    if ([m_gameRef IsTrainingMode] == NO) {
+                        [player DeductKmLeft:distanceBetweenPoints];
+                    }
+                    
+                }
+                /*
+                else {
+                    m_shouldUpdateGameData = YES;
+                }*/
+                
+                [playerSymbolString release];
+                [playerColor release];
+            }
+            
+            if ([player HasGivenUp] == YES) {
+                [player SetKmLeft:-999];
+            }
 			
 			
-			if ([loc isKindOfClass:[MpPlace class]] == YES) 
-			{
-				[self DrawPlace:loc];
-			}
-			else if([loc isKindOfClass:[MpRegion class]] == YES)
-			{
-				[self DrawRegion:loc];
-			}
+			
+
 			
 			
 			//_? change in NMQ
 			//drawn twice because it ends either outside mask or underneath coloring
             bool playersymbolOutsideBoundsOfDevice = false;
-			for (Player *player in players) 
-			{
-				if ([player IsOut] == NO) {
-					CGPoint gamePoint = [player GetGamePoint];
-					
-					NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
-					
-					//NSLog(@"playersymbol %@ x:%d y:%d",playerSymbolString,gamePoint.x,gamePoint.y);
-					[self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
 
+            /*
+            if ([player IsOut] == NO) {
+                CGPoint gamePoint = [player GetGamePoint];
+                
+                NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
+                
+                //NSLog(@"playersymbol %@ x:%d y:%d",playerSymbolString,gamePoint.x,gamePoint.y);
+                [self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
+
+                
+                if(_playerSymbolMiniWindowView != nil)
+                {
+                    [_playerSymbolMiniWindowView setAlpha:0];
+                }
+
+                playersymbolOutsideBoundsOfDevice = [self PlayerSymbolInsideBounds: gamePoint resultMapBounds:tilesMapViewBounds];
+                
+                if (playersymbolOutsideBoundsOfDevice) {
+                    //draw miniwindow with playersymbol location
                     
-                    if(_playerSymbolMiniWindowView != nil)
-                    {
-                        [_playerSymbolMiniWindowView setAlpha:0];
+                    if (_playerSymbolMiniWindowView == nil) {
+                        _playerSymbolMiniWindowView = [[PlayerSymbolMiniWindowView alloc] initWithFrame:self.bounds] ;
                     }
-                    if ([players count] < 2) {
-                        CGPoint gamePoint = [[players objectAtIndex:0] GetGamePoint];
-                        playersymbolOutsideBoundsOfDevice = [self PlayerSymbolInsideBounds: gamePoint resultMapBounds:tilesMapViewBounds];
-                        
-                        if (playersymbolOutsideBoundsOfDevice) {
-                            //draw miniwindow with playersymbol location
-                            
-                            if (_playerSymbolMiniWindowView == nil) {
-                                _playerSymbolMiniWindowView = [[PlayerSymbolMiniWindowView alloc] initWithFrame:self.bounds] ;
-                                //[self  addSubview:_playerSymbolMiniWindowView];
-                            }
-                            
-                            _playerSymbolMiniWindowView.gamePoint =  [[players objectAtIndex:0] GetGamePoint];
-                            
-                            MpLocation *loc = [[question GetLocation] retain];
-                            CGPoint nearestPoint = [loc GetNearestPoint:[[players objectAtIndex:0] GetGamePoint]];
-                            [loc release];
-                            _playerSymbolMiniWindowView.placePoint  = CGPointMake(nearestPoint.x * 0.25,nearestPoint.y * 0.25);
-                            
-                            _playerSymbolMiniWindowView.viewref = self;
-                            [_playerSymbolMiniWindowView setAlpha:1];
-                            
-                            [_playerSymbolMiniWindowView setNeedsDisplay];
-                        }
-                        
-                    }
-
-
                     
-					[playerSymbolString release];
-				}
-			}
+                    _playerSymbolMiniWindowView.gamePoint =  [player GetGamePoint];
+                    
+                    MpLocation *loc = [[question GetLocation] retain];
+                    CGPoint nearestPoint = [loc GetNearestPoint:[player GetGamePoint]];
+                    [loc release];
+                    _playerSymbolMiniWindowView.placePoint  = CGPointMake(nearestPoint.x * (tiledMapViewResolutionPercentage/100.0),nearestPoint.y * (tiledMapViewResolutionPercentage/100.0));
+                    
+                    _playerSymbolMiniWindowView.viewref = self;
+                    [_playerSymbolMiniWindowView setAlpha:1];
+                    
+                    [_playerSymbolMiniWindowView setNeedsDisplay];
+                }
+                
+                [playerSymbolString release];
+            }
 			
-			// like Processing popMatrix
-			CGContextRestoreGState(context);
+			*/
+            
+            
 			
-			[players release];
+			[player release];
 			[loc release];
 			[question release];
 			
+            // like Processing popMatrix
+			CGContextRestoreGState(context);
 
-            
-			if ([delegate respondsToSelector:@selector(finishedDrawingResultMap)])
-				[delegate finishedDrawingResultMap];
+            if (m_shouldUpdateGameData == YES) {
+                if ([delegate respondsToSelector:@selector(finishedDrawingResultMap)])
+                    [delegate finishedDrawingResultMap];
+            }
+			
 			
 		}
 		m_shouldDrawResult = NO;
@@ -369,8 +330,100 @@
 	}
 }
 
+-(void) drawTiles:(CGContextRef) context
+{
+    float tZoomScale = tiledMapViewZoomScale;
+    int tSizeWidth = tiledMapViewTileWidth;
+    float scaledTileWidth  = tSizeWidth * tZoomScale;
+    float scaledTileHeight = tSizeWidth * tZoomScale;
+    
+    if (tiledMapViewTileWidth != 0)
+    {
+        //set up lastNeededRow and firstneededrow .. column  osv. så det ikke gjøres unødvendig tegning
+        //maxrow og maxcol må settes i forhold til hvilken prosent scale man er i
+        
+        int minCol = tilesMapViewBounds.origin.x/256 - 0.5; //round down
+        int minRow = tilesMapViewBounds.origin.y/256 - 0.5;
+        
+        UIScreen *screen = [[UIScreen mainScreen] retain];
+        float colvar2 = (tilesMapViewBounds.origin.x/scaledTileWidth) ;
+        float colVar3 = ([screen applicationFrame].size.width/scaledTileWidth);
+        int maxCol = (int)(colvar2 + colVar3 + 0.5);
+        
+        float rowVar2 = (tilesMapViewBounds.origin.y/scaledTileHeight) ;
+        float rowVar3 = ([screen applicationFrame].size.height/scaledTileHeight);
+        [screen release];
+        //float rowVar1 = (mapSize.height/256);
+        int maxRow = (int)(rowVar2 + rowVar3  + 0.5);
+        
+        //dont draw the map upside down
+        CGContextScaleCTM(context, 1.0, -1.0);
+        long tileStandardHeight = 0;
+        long tileStandardWidth = 0;
+        NSString *imageName;
+        NSString* imageFileName;
+        CGDataProviderRef provider;
+        CGImageRef image;
+        float scaledTileWidthDynamic;
+        float scaledTileHeightDynamic;
+        long currentScaledWidth,currentScaledHeight,endOfColValue;
+        
+        for (int row = minRow; row <= maxRow; row++) {
+            for (int col = minCol; col <= maxCol; col++) {
+                
+                if ([m_gameRef UsingBorders]==YES) {
+                    imageName = [NSString stringWithFormat:@"world_%d_border_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
+                }
+                else{
+                    imageName = [NSString stringWithFormat:@"world_%d_%d_%d.jpg",(int)tiledMapViewResolutionPercentage, col, row];
+                }
+                
+                imageFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:imageName] ;
+                provider = CGDataProviderCreateWithFilename([imageFileName UTF8String]);
+                
+                image = CGImageCreateWithJPEGDataProvider(provider, NULL, true, kCGRenderingIntentDefault);
+                if (image == nil) {
+                    continue;
+                }
+                image = [self CreateScaledCGImageFromCGImage:image andScale:tiledMapViewZoomScale];
+                if (image == nil) {
+                    int a = 1;
+                    a++;
+                }
+                
+                currentScaledWidth = CGImageGetWidth(image);
+                currentScaledHeight = CGImageGetHeight(image) ;
+                endOfColValue = 0;
+                //set standard size at first pass
+                if (row == minRow && col == minCol) {
+                    tileStandardWidth = currentScaledWidth;
+                    tileStandardHeight = currentScaledHeight;
+                }
+                
+                scaledTileWidthDynamic = scaledTileWidth;
+                scaledTileHeightDynamic = scaledTileHeight;
+                if (tileStandardHeight > currentScaledHeight) {
+                    endOfColValue = tileStandardWidth - currentScaledHeight;
+                    scaledTileHeightDynamic = currentScaledHeight;
+                    
+                }
+                if (tileStandardWidth > currentScaledWidth) {
+                    scaledTileWidthDynamic = currentScaledWidth;
+                }
+                //close the gap
+                scaledTileWidthDynamic ++;
+                scaledTileHeightDynamic++;
+                CGFloat x = scaledTileWidth * col;
+                CGFloat y = -scaledTileHeight * row + (-scaledTileHeight) + endOfColValue;
+                CGContextDrawImage(context, CGRectMake(x,y,scaledTileWidthDynamic,scaledTileHeightDynamic), image);
+                CGImageRelease(image);
+            }
+        }
+    }
+    CGContextScaleCTM(context, 1.0, -1.0);
+}
+
 -(NSInteger) DrawLineToRegion:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor
-			  andPlayerSymbol:(NSString*) playerSymbol
 {
 	NSInteger distanceBetweenPoints =0;
 	
@@ -458,12 +511,13 @@
         
 	}
 	//draw player symbol
+    /*
 	NSString *playerSymbolFileName = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:playerSymbol] retain];
 	UIImage *playerSymbolUIImage = [[UIImage imageWithContentsOfFile:playerSymbolFileName] retain];
 	CGImageRef playerSymbolRef = playerSymbolUIImage.CGImage;
 	CGContextDrawImage (context,CGRectMake(scaledGamePoint.x - 15, scaledGamePoint.y - 15, 30, 30),playerSymbolRef);
 	[playerSymbolFileName release];
-	[playerSymbolUIImage release];
+	[playerSymbolUIImage release];*/
 	
 	return distanceBetweenPoints;
 }
@@ -478,11 +532,11 @@
 
 	if ([loc isKindOfClass:[Lake class]] || [loc isKindOfClass:[UnDefWaterRegion class]])
 	{
-		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_water] ;
+		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%dMaskWater.png", (int)tiledMapViewResolutionPercentage]] ;
 	}
 	else
 	{
-		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:mask_land] ;
+		maskFileName = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%dMaskLand.png", (int)tiledMapViewResolutionPercentage]] ;
 	}
 	
 	UIImage *testUIMaskImage = [UIImage imageWithContentsOfFile:maskFileName];
@@ -496,7 +550,7 @@
 
 	CGRect t_testRect = CGRectMake(0, 0, testWidth * val2, testHeight * val2);
 
-    mask = CGImageMaskCreate( constMapWidth /2,constMapHeight / 2,
+    mask = CGImageMaskCreate( constMapWidth ,constMapHeight ,
 							 CGImageGetBitsPerComponent(maskRef),
 							 CGImageGetBitsPerPixel(maskRef),
 							 CGImageGetBytesPerRow(maskRef),
@@ -720,7 +774,6 @@
 
 //_? change in NMQ
 -(NSInteger) DrawLineToPlace:(MpLocation*) loc andContextRef:(CGContextRef) context andGamePoint:(CGPoint) realMapGamePoint andLineColor:(UIColor*)playerColor
-			 andPlayerSymbol:(NSString*) playerSymbol
 {
 	NSInteger distanceBetweenPoints = 0;
 	NSMutableArray *vCoordinate = [(MpPlace*)loc GetCoordinates];
