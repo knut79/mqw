@@ -30,6 +30,9 @@
 		answerLabel.hidden = YES;
 		[self addSubview:answerLabel];
 
+        /*
+        self.contentMode = UIViewContentModeScaleAspectFill;
+        self.autoresizingMask = (UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth);*/
         //TODO : set these values based on how big the resulting area is
 		/*
         tiledMapViewZoomScale = 0.7111111;
@@ -66,16 +69,17 @@
     tiledMapViewResolutionPercentage = 25.0;
     m_shouldDrawResult = YES;
     m_shouldUpdateGameData = NO;
+    [self setClipsToBounds:YES];
     [self setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
     [self setNeedsDisplay];
     [UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:3.5];
+	[UIView setAnimationDuration:2.0];
 	[UIView setAnimationDelegate:self];
     //[UIView setAnimationRepeatCount:2];
     //[UIView setAnimationRepeatAutoreverses:YES];
     //tiledMapViewResolutionPercentage = 50.0;
 	[UIView setAnimationDidStopSelector:@selector(animatingResultStep2)];
-	[self setTransform:CGAffineTransformMakeScale(1.5, 1.5)];
+	[self setTransform:CGAffineTransformMakeScale(1.3, 1.3)];
 	[UIView commitAnimations];
 }
 
@@ -85,15 +89,16 @@
     m_shouldUpdateGameData = NO;
     [self setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
     tiledMapViewResolutionPercentage = 50.0;
-    [self setNeedsDisplay];
+
     [UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:3.5];
+	[UIView setAnimationDuration:2.0];
 	[UIView setAnimationDelegate:self];
+        [self setNeedsDisplay];
     //[UIView setAnimationRepeatCount:2];
     //[UIView setAnimationRepeatAutoreverses:YES];
     //tiledMapViewResolutionPercentage = 100.0;
 	[UIView setAnimationDidStopSelector:@selector(animatingResultStep3)];
-	[self setTransform:CGAffineTransformMakeScale(1.5, 1.5)];
+	[self setTransform:CGAffineTransformMakeScale(1.3, 1.3)];
 	[UIView commitAnimations];
 }
 
@@ -103,14 +108,15 @@
     m_shouldUpdateGameData = NO;
     [self setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
     tiledMapViewResolutionPercentage = 100.0;
-    [self setNeedsDisplay];
+    
     [UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:3.5];
+	[UIView setAnimationDuration:2.0];
 	[UIView setAnimationDelegate:self];
+    [self setNeedsDisplay];
     //[UIView setAnimationRepeatCount:10];
     //[UIView setAnimationRepeatAutoreverses:YES];
 	[UIView setAnimationDidStopSelector:@selector(doneAnimatingResult)];
-	[self setTransform:CGAffineTransformMakeScale(1.5, 1.5)];
+	[self setTransform:CGAffineTransformMakeScale(1.3, 1.3)];
 	[UIView commitAnimations];
 }
 

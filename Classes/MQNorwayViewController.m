@@ -869,6 +869,8 @@
 
 	[answerBarTop FadeOut];
 	[self FadeOutGameElements];
+    
+    [self performTransition];
     [self AnimateQuestion:NO];
 
 }
@@ -1102,30 +1104,38 @@
 	directionsTouchView.center = CGPointMake([screen applicationFrame].size.width - 25, [screen applicationFrame].size.height - 44 - 25);
 	[directionsImage release];*/
     
-	[screen release];
+	
 
     
     touchImageView = [[[TouchImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 50, 50)] retain];
-    touchImageView.center = CGPointMake(160.0, 230.0);
+    touchImageView.center = CGPointMake([screen applicationFrame].size.width/2.0, 230.0);
 	[touchImageView setDelegate:self];
 	[self.view addSubview:touchImageView];
 
 
-	infoBarBottom = [[InfoBarViewBottom alloc]initWithFrame:CGRectMake(0,0, 320, constInfobarBottomHeight)];
+	infoBarBottom = [[InfoBarViewBottom alloc]initWithFrame:CGRectMake(0,0, [screen applicationFrame].size.width, constInfobarBottomHeight)];
     infoBarBottom.center = CGPointMake(infoBarBottom.center.x, [screen applicationFrame].size.height - infoBarBottom.frame.size.height/2);
 	[infoBarBottom setDelegate:self];
 	[[self view] addSubview:infoBarBottom];
 	
 	//set first question
-	questionBarTop = [[QuestionBarViewTop alloc] initWithFrame:CGRectMake(0,0, 320, 40)];
+	questionBarTop = [[QuestionBarViewTop alloc] initWithFrame:CGRectMake(0,0, [screen applicationFrame].size.width, 40)];
 	[questionBarTop setDelegate:self];
 	[self.view addSubview:questionBarTop];
 	[questionBarTop setAlpha:0];
+    
+
 	
-	answerBarTop = [[AnswerBarViewTop alloc] initWithFrame:CGRectMake(0,0, 320, 50)];
+	answerBarTop = [[AnswerBarViewTop alloc] initWithFrame:CGRectMake(0,0, [screen applicationFrame].size.width, 50)];
 	[self.view addSubview:answerBarTop];
 	[answerBarTop setAlpha:0];
-	
+
+    hackBackgroundStatusbar = [[UIView alloc] initWithFrame:CGRectMake(0,-20, [screen applicationFrame].size.width, 20)];
+    hackBackgroundStatusbar.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:hackBackgroundStatusbar];
+	[hackBackgroundStatusbar setAlpha:1];
+    
+    [screen release];
 	//[self setZoomScale:CGSizeMake(1800, 4500)];
     [self setZoomScale:CGSizeMake(constMapWidth, constMapHeight)];
 }
@@ -1371,7 +1381,7 @@
 	[currentPlayer release];
 	[playerName release];
 	
-	[self performTransition];
+	//[self performTransition];
 	
 }
 

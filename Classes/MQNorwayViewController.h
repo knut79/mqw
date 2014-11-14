@@ -64,6 +64,7 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 	
 	Game *m_gameRef;
 	
+    UIView* hackBackgroundStatusbar;
 	QuestionBarViewTop *questionBarTop;
 	AnswerBarViewTop *answerBarTop;
 	InfoBarViewBottom *infoBarBottom;

@@ -45,6 +45,7 @@
 			//ReadQuestionsFromFileToDatabase must be read after all locations are put into the database as
 			//they refere to locations
           //[self ReadLocationsFromFileToDatabase:@"test"];
+            /*
             [self ReadLocationsFromFileToDatabase:@"statesAfrica"];
             [self ReadLocationsFromFileToDatabase:@"statesAsia"];
             [self ReadLocationsFromFileToDatabase:@"statesEastAsia"];
@@ -52,18 +53,22 @@
             [self ReadLocationsFromFileToDatabase:@"statesSouthAmerica"];
             [self ReadLocationsFromFileToDatabase:@"statesNorthAmerica"];
             [self ReadLocationsFromFileToDatabase:@"statesOceania"];
-            [self ReadLocationsFromFileToDatabase:@"capitals"];
+            
             [self ReadLocationsFromFileToDatabase:@"lakes"];
-            [self ReadLocationsFromFileToDatabase:@"islands"];
-            [self ReadLocationsFromFileToDatabase:@"waterRegions"];
+            [self ReadLocationsFromFileToDatabase:@"waterRegions"];*/
+            /*
+            [self ReadLocationsFromFileToDatabase:@"capitalsAfrica"];
+            [self ReadLocationsFromFileToDatabase:@"capitalsAsia"];
+            [self ReadLocationsFromFileToDatabase:@"capitalsMiddleEast"];
+            [self ReadLocationsFromFileToDatabase:@"capitalsEurope"];
+            [self ReadLocationsFromFileToDatabase:@"capitalsAmerica"];*/
+            
+            //[self ReadLocationsFromFileToDatabase:@"places"];
+            //[self ReadLocationsFromFileToDatabase:@"islands"];
+            [self ReadLocationsFromFileToDatabase:@"cities"];
             //*/
             
 //            [self ReadLocationsFromFileToDatabase:@"states"];
-//			[self ReadLocationsFromFileToDatabase:@"cities"];
-//			[self ReadLocationsFromFileToDatabase:@"fjords"];
-//			[self ReadLocationsFromFileToDatabase:@"islands"];
-//			[self ReadLocationsFromFileToDatabase:@"places"];
-//			[self ReadLocationsFromFileToDatabase:@"armsOfCoat"];
 //			[self ReadQuestionsFromFileToDatabase:@"pictureQuestions"];
 		}
 		[existsResult close];
