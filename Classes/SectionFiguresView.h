@@ -16,7 +16,7 @@
     float tiledMapViewResolutionPercentage;
 
 }
-
+- (id)initWithFrame:(CGRect)frame andResolution:(float) resolution;
 @property(nonatomic, retain) UIView *viewref;
 @property(nonatomic, retain) MpLocation *location;
 -(void) StrokeUpRegionsA:(MpLocation*) loc andContextRef:(CGContextRef) context;

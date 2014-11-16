@@ -879,17 +879,6 @@
 {
     [resultBoardView.layer removeAllAnimations];
     [resultBoardView AnimateResult];
-    /*
-    [UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:2.5];
-	[UIView setAnimationDelegate:self];
-    [UIView setAnimationRepeatCount:10];
-    [UIView setAnimationRepeatAutoreverses:YES];
-	[UIView setAnimationDidStopSelector:@selector(doneAnimatingResult)];
-	[resultBoardView setTransform:CGAffineTransformMakeScale(2, 2)];
-	[UIView commitAnimations];
-     */
-
 }
 
 #pragma mark WithFiguresViewDelegate

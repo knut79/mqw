@@ -33,8 +33,7 @@ inf;City#Where is the capital;Dublin;10;level1;The capital and largest city of I
 1884;1144
 inf;City#Where is the capital;Edinburgh;10;level1;The capital city of Scotland#nor#spn#fra#ger;Europe#UK
 2056;1106
-inf;City#Where is the capital;Gothenburg;10;level1;The second largest city in Sweden and the fifth largest in the Nordic countries
-#nor#spn#fra#ger;Europe#Sweden
+inf;City#Where is the capital;Gothenburg;10;level1;The second largest city in Sweden and the fifth largest in the Nordic countries#nor#spn#fra#ger;Europe#Sweden
 2203;1052
 inf;City#Where is the capital;Helsinki;10;level1;The capital and largest city of Finland.#nor#spn#fra#ger;Europe#Finland
 2267;1248

@@ -114,7 +114,7 @@
 	[UIView setAnimationDuration:1.6];
 	[UIView setAnimationDelegate:self];
 	[UIView setAnimationDidStopSelector:@selector(startTapMessageAnimation)];
-	[m_tapMessageImageView setAlpha:0.4];
+	[m_tapMessageImageView setAlpha:0.25];
 	[UIView commitAnimations];
 }
 

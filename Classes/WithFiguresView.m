@@ -75,9 +75,6 @@
     [UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:2.0];
 	[UIView setAnimationDelegate:self];
-    //[UIView setAnimationRepeatCount:2];
-    //[UIView setAnimationRepeatAutoreverses:YES];
-    //tiledMapViewResolutionPercentage = 50.0;
 	[UIView setAnimationDidStopSelector:@selector(animatingResultStep2)];
 	[self setTransform:CGAffineTransformMakeScale(1.3, 1.3)];
 	[UIView commitAnimations];
@@ -271,14 +268,14 @@
 			//drawn twice because it ends either outside mask or underneath coloring
             bool playersymbolOutsideBoundsOfDevice = false;
 
-            /*
+            
             if ([player IsOut] == NO) {
                 CGPoint gamePoint = [player GetGamePoint];
                 
-                NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
+                //NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
                 
                 //NSLog(@"playersymbol %@ x:%d y:%d",playerSymbolString,gamePoint.x,gamePoint.y);
-                [self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
+               // [self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
 
                 
                 if(_playerSymbolMiniWindowView != nil)
@@ -308,10 +305,10 @@
                     [_playerSymbolMiniWindowView setNeedsDisplay];
                 }
                 
-                [playerSymbolString release];
+                //[playerSymbolString release];
             }
 			
-			*/
+			
             
             
 			

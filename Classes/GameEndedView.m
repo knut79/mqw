@@ -292,7 +292,7 @@
     
     
     //score
-    m_scoreLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],[tempPlayer GetScore]];
+    m_scoreLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],123];
     m_scoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  105);
     
     NSInteger time = [tempPlayer GetSecondsUsed];
