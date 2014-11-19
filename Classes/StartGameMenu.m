@@ -80,7 +80,7 @@
 	miniLabel.textColor = [UIColor redColor];
 	[miniLabel setFont:[UIFont boldSystemFontOfSize:12.0f]];
 	miniLabel.transform = CGAffineTransformMakeRotation( M_PI/4 );
-	miniLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
+	miniLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],@"1"];
 	[self addSubview:miniLabel];
 	
 	
@@ -147,7 +147,7 @@
 	borderSwitch = [[UISwitch alloc] initWithFrame: CGRectZero];
 	//[borderSwitch addTarget: self action: @selector(flipMode:) forControlEvents:UIControlEventValueChanged];
 	// Set the desired frame location of onoff here
-	borderSwitch.on = NO;
+	borderSwitch.on = YES;
 	borderSwitch.center = CGPointMake(([screen applicationFrame].size.width/2) +50, 190 + playersYOffset - 20);
 	[self addSubview: borderSwitch];
 	
@@ -285,7 +285,7 @@
 	modeLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
 
 	[buttonBack setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Back"] forState:UIControlStateNormal];
-	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Label"],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
+	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"],@"1"];
 	[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
 	headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start Game"];
 }

@@ -48,6 +48,11 @@
     return self;
 }
 
+-(long) CostOfHint
+{
+    return 500;
+}
+
 -(void) SetTimesLeft:(NSInteger) value
 {
     timesLeft = value;
@@ -91,11 +96,7 @@
 	if (timesLeft <= 0) {
 		[self setAlpha:0];
 	}
-	
-    
-    
-    
-    
+
 	if ([delegate respondsToSelector:@selector(UseHint)])
 		[delegate UseHint];
 	

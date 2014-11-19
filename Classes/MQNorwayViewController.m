@@ -344,9 +344,6 @@
 -(void) RemoveGameElementsForPlayer
 {
     //only remove clock after points animation done
-    
-    
-    
     if ([m_gameRef IsTrainingMode] == NO) {
 
         [clockView stop];
@@ -367,46 +364,57 @@
 -(void) SetPlayerButtons
 {
     if ([m_gameRef IsTrainingMode] == NO) {
-		
-        
-        
+
         if (quitButton == nil) {
             quitButton = [[QuitButtonView alloc] init];
             [quitButton setDelegate:self];
             [[self view] addSubview:quitButton];
         }
-        
-        Player *player = [[m_gameRef GetPlayer] retain];
-        int hintsLeft = 2;//[player GetHintsLeft];
-        if(hintsLeft > 0)
-        {
-            if (hintButton == nil) {
-                hintButton = [[HintButtonView alloc] init];
-                [hintButton setDelegate:self];
-                [[self view] addSubview:hintButton];
-            }
-            
-            [hintButton SetTimesLeft:hintsLeft];
-            [hintButton SetHint:[[m_gameRef GetQuestion] GetHintArray]];
-        }
-		
-        if([player GetPassesLeft] > 0)
-        {
-            if (passButton == nil) {
-                passButton = [[PassButtonView alloc] init];
-                [passButton setDelegate:self];
-                [[self view] addSubview:passButton];
-            }
-            [passButton SetTimesLeft:[player GetPassesLeft]];
 
+        [self SetHintButton];
 
+        [self SetPassButton];
+    }
+}
+
+-(void) SetPassButton
+{
+    Player *player = [[m_gameRef GetPlayer] retain];
+    
+    if([player GetPassesLeft] > 0)
+    {
+        if (passButton == nil) {
+            passButton = [[PassButtonView alloc] init];
+            [passButton setDelegate:self];
+            [[self view] addSubview:passButton];
         }
-        
-        [player release];
+        [passButton SetTimesLeft:[player GetPassesLeft]];
+
     }
     
-    
-    
+    [player release];
+}
+
+-(void) SetHintButton
+{
+    Player *player = [[m_gameRef GetPlayer] retain];
+    int maxHintsPrRound = 2;
+    if (hintButton == nil) {
+        hintButton = [[HintButtonView alloc] init];
+        [hintButton setDelegate:self];
+        [hintButton setAlpha:0];
+        [[self view] addSubview:hintButton];
+    }
+    if ([hintButton CostOfHint] < [player GetKmLeft]) {
+        int hintsForThisRound = (long)[player GetKmLeft]/(long)[hintButton CostOfHint];
+        if(hintsForThisRound > maxHintsPrRound)
+            hintsForThisRound = maxHintsPrRound;
+        
+        [hintButton SetTimesLeft:hintsForThisRound];
+        [hintButton SetHint:[[m_gameRef GetQuestion] GetHintArray]];
+        [hintButton setAlpha:1];
+    }
+    [player release];
 }
 
 -(void) SetPlayerClock
@@ -895,6 +903,7 @@
         int yOffset =([screen applicationFrame].size.height/2) - regionBoundsPoint.y;
         xOffset = xOffset * scaleFactor;
         yOffset = yOffset * scaleFactor;
+        [resultBoardView.sectionFiguresView setAlpha:1];
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.5];
         [UIView setAnimationDidStopSelector:@selector(sectionAnimationDidStop)];
@@ -966,17 +975,14 @@
     
 
 }
-/*
--(void) doneAnimatingResult
-{
-    [resultBoardView setTransform:CGAffineTransformMakeScale(1, 1)];
-}*/
+
 
 -(void) sectionAnimationDidStop
 {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
     [resultBoardView.sectionFiguresView setAlpha:0];
+    [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(1, 1)];
     [UIView commitAnimations];
 }
 
@@ -1433,11 +1439,11 @@
         hintDeductLabel.backgroundColor = [UIColor clearColor];
         hintDeductLabel.textColor = [UIColor redColor];
         hintDeductLabel.textAlignment = NSTextAlignmentCenter;
-        hintDeductLabel.text = @"- 500 km";
+        hintDeductLabel.text = [NSString stringWithFormat:@"- %d km",[hintButton CostOfHint]];
         [self.view addSubview:hintDeductLabel];
     }
     [hintDeductLabel setTransform:CGAffineTransformMakeScale(1.9, 1.9)];
-    hintDeductLabel.center = CGPointMake([screen applicationFrame].size.width /2 , ([screen applicationFrame].size.height /2) -100 );//hintButton.center;//
+    hintDeductLabel.center = CGPointMake([screen applicationFrame].size.width /2 , ([screen applicationFrame].size.height /2) -100 );
     [hintDeductLabel setAlpha:1];
 
     [screen release];
@@ -1462,7 +1468,7 @@
 - (void)deductHintDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
 {
     Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-    [currentPlayer DeductKmLeft:500];
+    [currentPlayer DeductKmLeft:[hintButton CostOfHint]];
     [currentPlayer release];
     
     /*
@@ -1539,61 +1545,56 @@
 		//end convert reel map point
 		
 		
-		Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-		[currentPlayer SetGamePoint:realMapGamePoint];
+		Player *player = [[m_gameRef GetPlayer] retain];
+		[player SetGamePoint:realMapGamePoint];
 		
-		[currentPlayer PauseTimer];
+		[player PauseTimer];
 		
 		
 		BOOL showingResult = NO;
 		
         //if ([m_gameRef CurrentPlayerIsLast] == YES)
 
-			showingResult = YES;
-			
-			//make game point into real map coordinates
-			//CGPoint realMapGamePoint;
-			realMapGamePoint = CGPointMake(gamePoint.x + [playingBoardView bounds].origin.x, gamePoint.y + [playingBoardView bounds].origin.y); 
-			//scale to tile 
-			realMapGamePoint.x = realMapGamePoint.x /[playingBoardView zoomScale] ;
-			realMapGamePoint.y = realMapGamePoint.y /[playingBoardView zoomScale] ;					   
-			//scale to map
-			realMapGamePoint.x = realMapGamePoint.x/ ((float)resolutionPercentage/100); 
-			realMapGamePoint.y = realMapGamePoint.y/ ((float)resolutionPercentage/100);
-			
-			[currentPlayer SetGamePoint:realMapGamePoint];
-			
-			//_?12
-			[touchImageView setAlpha:0];
-			
-			if ([m_gameRef IsTrainingMode] == NO) {
-				[m_gameRef SetGameState:showResult];
-			}
-            
-			[resultBoardView drawResult_UpdateGameData:YES];
-            
-			[self performTransition];
-			
-			[questionBarTop FadeOut];
-			[answerBarTop FadeIn];
-            
-            
-		
-        //this is where we decide if the player should be played
+        showingResult = YES;
         
-		//[m_gameRef SetNextPlayer];
-		Player *nextPlayer = [[m_gameRef GetPlayer] retain];
-        [nextPlayer SetCurrentTimeMultiplier:0];
-        [self SetGameElementsForPlayer:nextPlayer];
+        //make game point into real map coordinates
+        //CGPoint realMapGamePoint;
+        realMapGamePoint = CGPointMake(gamePoint.x + [playingBoardView bounds].origin.x, gamePoint.y + [playingBoardView bounds].origin.y); 
+        //scale to tile 
+        realMapGamePoint.x = realMapGamePoint.x /[playingBoardView zoomScale] ;
+        realMapGamePoint.y = realMapGamePoint.y /[playingBoardView zoomScale] ;					   
+        //scale to map
+        realMapGamePoint.x = realMapGamePoint.x/ ((float)resolutionPercentage/100); 
+        realMapGamePoint.y = realMapGamePoint.y/ ((float)resolutionPercentage/100);
+        
+        [player SetGamePoint:realMapGamePoint];
+        
+        //_?12
+        [touchImageView setAlpha:0];
+        
+        if ([m_gameRef IsTrainingMode] == NO) {
+            [m_gameRef SetGameState:showResult];
+        }
+        
+        [resultBoardView drawResult_UpdateGameData:YES];
+        
+        [self performTransition];
+        
+        [questionBarTop FadeOut];
+        [answerBarTop FadeIn];
+            
+
+        [player SetCurrentTimeMultiplier:0];
+        [self SetGameElementsForPlayer:player];
 		
 		
-		NSString *playerSymbol = [[nextPlayer GetPlayerSymbol] retain];
+		NSString *playerSymbol = [[player GetPlayerSymbol] retain];
 		UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
 		touchImageView.image = image;
 		[image release];
 		[playerSymbol release];
-		[nextPlayer release];
-        [currentPlayer release];
+		[player release];
+
 	}
 	@catch (NSException * e) {
 		NSLog(@"failed in doSetPosition: %@",e);

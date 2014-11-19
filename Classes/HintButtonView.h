@@ -20,6 +20,7 @@
 @property (nonatomic, assign) id <HintButtonViewDelegate> delegate;
 -(void) SetTimesLeft:(NSInteger) value;
 -(void) SetHint:(NSArray*) hints;
+-(long) CostOfHint;
 @end
 
 @protocol HintButtonViewDelegate <NSObject>

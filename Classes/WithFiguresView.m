@@ -207,7 +207,7 @@
 			NSInteger distanceBetweenPoints;
 			
 			
-            if (([player IsOut] == NO) && [player HasGivenUp] == NO) {
+            //if (([player IsOut] == NO) && [player HasGivenUp] == NO) {
                 CGPoint gamePoint = [player GetGamePoint];
                 UIColor *playerColor = [[player GetColor] retain];
                 NSString *playerSymbolString = [[player GetPlayerSymbol] retain];
@@ -253,7 +253,7 @@
                 
                 [playerSymbolString release];
                 [playerColor release];
-            }
+            //}
             
             if ([player HasGivenUp] == YES) {
                 [player SetKmLeft:-999];
