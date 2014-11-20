@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 
 
 @protocol InstructionsViewDelegate;
 @interface InstructionsView : UIView{
     id <InstructionsViewDelegate> delegate;
-	SkyView *m_skyView;
 	UILabel *headerLabel;
 	UIButton *buttonBack;
 	NSString *m_engTextFromFile;

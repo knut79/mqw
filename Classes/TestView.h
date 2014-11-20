@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GlobalSettingsHelper.h"
 #import "ClockView.h"
@@ -19,7 +18,6 @@
 
 @interface TestView : UIView <NSXMLParserDelegate,UIWebViewDelegate,ClockDelegate,SoapHelperDelegate,AddExPlrViewCtrlDelegate> {
 	id <TestViewDelegate> delegate;
-	SkyView *m_skyView;
 	UILabel *headerLabel;
 	UIWebView *m_webView;
 	UIButton *buttonBack;

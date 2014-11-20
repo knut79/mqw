@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 
 @interface EnterBackgroundMenuView : UIView {
-	SkyView *m_skyView;
 	UIButton *buttonResume;
 }
 -(void) FadeOut;

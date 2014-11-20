@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
-#import "SkyView.h"
 #import "Game.h"
 
 @protocol StartPlayerViewDelegate;
@@ -23,7 +22,6 @@
 	NSInteger m_labelsXoffset;
 	NSInteger m_labelsYoffset;
 	Player *m_playerRef;
-	SkyView *m_skyView;
 }
 @property (nonatomic, assign) id <StartPlayerViewDelegate> delegate;
 

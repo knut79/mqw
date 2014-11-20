@@ -1494,7 +1494,7 @@ inf;State;Ghana;10;level1;Ghana has been a significant petroleum and natural gas
 1735;1772
 1729;1773;sl
 qst;coaGuineaBissau##level2#Guinea-BissauFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;guinea-bissau;10;level1;Guinea-Bissau was once part of the kingdom of Gabu, as well as part of the Mali Empire. Capital: Bissau##spn#fra#ger;Africa#Africa#West Africa
+inf;State;guinea-bissau;10;level1;Guinea-Bissau was once part of the kingdom of Gabu, as well as part of the Mali Empire. Capital: Bissau##spn#fra#ger;Africa#West Africa
 1748;1791
 1751;1792
 1753;1796

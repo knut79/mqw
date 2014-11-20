@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 #import "Game.h"
 
 @protocol TrainingEndedViewDelegate;
@@ -16,7 +15,6 @@
 	id <TrainingEndedViewDelegate> delegate;
 	UIButton *buttonMainMenu;
 	UIButton *buttonRestart;
-	SkyView *m_skyView;
 	UILabel *headerLabel;
 	Game *m_gameRef;
 	

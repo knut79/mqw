@@ -19,7 +19,6 @@
 	UIButton *buttonHighscoreLocal;
 	UIButton *buttonHighscoreGlobal;
 	UIButton *buttonBack;
-	SkyView *m_skyView;
 }
 @property (nonatomic, assign) id <HighscoreTopLevelMenuDelegate> delegate;
 -(void) UpdateLabels;

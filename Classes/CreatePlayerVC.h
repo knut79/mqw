@@ -14,11 +14,13 @@
 @interface CreatePlayerVC : UIViewController<NSXMLParserDelegate,UITextFieldDelegate,UIAlertViewDelegate,FBLoginViewDelegate>
 {
     id <CreatePlayerVCDelegate> delegate;
+    BOOL isFirstLoginDone;
 }
 @property (strong, nonatomic) IBOutlet FBLoginView *loginView;
 @property (retain, nonatomic) IBOutlet UILabel *nameLabel;
 @property (retain, nonatomic) IBOutlet UILabel *statusLabel;
 @property (retain, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
+
 
 -(void) WritePlayerID:(NSString*) playerID andName:(NSString*) firstname;
 

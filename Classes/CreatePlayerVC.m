@@ -45,8 +45,10 @@
     
 
     //self.statusLabel.text = @"You're logged in as";
+    /*
     if ([delegate respondsToSelector:@selector(cleanUpCreatePlayerVC)])
-        [delegate cleanUpCreatePlayerVC];
+        [delegate cleanUpCreatePlayerVC];*/
+    isFirstLoginDone = YES;
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
@@ -119,8 +121,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [self WritePlayerID: user.objectID andName:user.first_name];
     
-    if ([delegate respondsToSelector:@selector(cleanUpCreatePlayerVC)])
-        [delegate cleanUpCreatePlayerVC];
+    if(isFirstLoginDone) {
+        if ([delegate respondsToSelector:@selector(cleanUpCreatePlayerVC)])
+            [delegate cleanUpCreatePlayerVC];
+    }
+    isFirstLoginDone = NO;
      
 }
 

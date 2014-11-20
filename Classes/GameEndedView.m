@@ -17,16 +17,13 @@
 - (id)initWithFrame:(CGRect)frame{
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
-		self.backgroundColor = [UIColor clearColor];
-		self.opaque = YES;
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		m_labelsXoffset = 0;
 		m_labelsYoffset = 0;
-		
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0];
-		[self addSubview:m_skyView];
-		
+
+        
 		m_playerNameLabelsArray = [[NSMutableArray alloc] init];
 		for (int i = 0; i < 4; i++) {
 			UILabel *playerNameLabel = [[UILabel alloc] init];
@@ -43,9 +40,6 @@
 			else {
 				playerNameLabel.shadowColor = [UIColor whiteColor];
 				playerNameLabel.shadowOffset = CGSizeMake(-1,-2);
-//				playerNameLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//				playerNameLabel.layer.shadowRadius = 1.5;
-//				playerNameLabel.layer.shadowOpacity = 0.5;
 			}
 
 			
@@ -130,38 +124,7 @@
 		[self addSubview:m_scoreLabel];
 		
         
-        m_localHeaderLabel = [[UILabel alloc] init];
-		[m_localHeaderLabel setFrame:CGRectMake(0, 0, 250, 20)];
-		m_localHeaderLabel.backgroundColor = [UIColor clearColor]; 
-		[m_localHeaderLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-		m_localHeaderLabel.textAlignment = NSTextAlignmentCenter;
-        m_localHeaderLabel.shadowColor = [UIColor whiteColor];
-		m_localHeaderLabel.shadowOffset = CGSizeMake(-1,-2);
-		m_localHeaderLabel.adjustsFontSizeToFitWidth = YES;
-		[m_localHeaderLabel setAlpha:0];
-		[self addSubview:m_localHeaderLabel];
-        
-		m_localHighscoreLabel = [[UILabel alloc] init];
-		[m_localHighscoreLabel setFrame:CGRectMake(0, 0, 250, 20)];
-		m_localHighscoreLabel.backgroundColor = [UIColor clearColor]; 
-		[m_localHighscoreLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-		m_localHighscoreLabel.textAlignment = NSTextAlignmentCenter;
-		m_localHighscoreLabel.shadowColor = [UIColor whiteColor];
-		m_localHighscoreLabel.shadowOffset = CGSizeMake(-1,-2);
-		m_localHighscoreLabel.adjustsFontSizeToFitWidth = YES;
-		[m_localHighscoreLabel setAlpha:0];
-		[self addSubview:m_localHighscoreLabel];
-        
-        m_globalHeaderLabel = [[UILabel alloc] init];
-		[m_globalHeaderLabel setFrame:CGRectMake(0, 0, 250, 20)];
-		m_globalHeaderLabel.backgroundColor = [UIColor clearColor]; 
-		[m_globalHeaderLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-		m_globalHeaderLabel.textAlignment = NSTextAlignmentCenter;
-        m_globalHeaderLabel.shadowColor = [UIColor whiteColor];
-		m_globalHeaderLabel.shadowOffset = CGSizeMake(-1,-2);
-		m_globalHeaderLabel.adjustsFontSizeToFitWidth = YES;
-		[m_globalHeaderLabel setAlpha:0];
-		[self addSubview:m_globalHeaderLabel];
+
         
         m_globalHighscoreLabel = [[UILabel alloc] init];
 		[m_globalHighscoreLabel setFrame:CGRectMake(0, 0, 250, 20)];
@@ -242,7 +205,6 @@
 {
 	m_questionsPassedLabel.text = @"";
 	m_scoreLabel.text = @"";
-	m_localHighscoreLabel.text = @"";
     m_globalHighscoreLabel.text = @"";
 	m_dynamicLabel.text = @"";
 	m_secondsUsedLabel.text = @"";
@@ -276,7 +238,7 @@
 {
     UIScreen *screen = [[UIScreen mainScreen] retain];
 
-	Player *tempPlayer;
+	
     
     self.userInteractionEnabled = NO;
     //NSMutableArray *players = [[gameRef GetPlayers] retain];
@@ -285,7 +247,7 @@
     [headerImage release];
     
     //tempPlayer = [[players objectAtIndex:0] retain];
-    tempPlayer = [[gameRef GetPlayer] retain];
+    Player *tempPlayer = [[gameRef GetPlayer] retain];
     //passed xx questions in easy game
     m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"],[tempPlayer GetQuestionsPassed]];
     m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
@@ -307,8 +269,7 @@
     
     m_secondsUsedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  130);
     
-    m_localHeaderLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Local:"]];
-    m_localHeaderLabel.center = CGPointMake([screen applicationFrame].size.width/2,  175);
+
     
     Highscore *hs = [gameRef GetHighscore];
     NSInteger newHighScorePlace = [hs CheckIfNewHighScore:tempPlayer difficultyLevel:[gameRef GetGameDifficulty]];
@@ -326,26 +287,18 @@
             default:
                 break;
         }*/
-        m_localHighscoreLabel.text = [NSString stringWithFormat:@"%@ %@ %@ %@ %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"New local"],gameDifficultyString,[[GlobalSettingsHelper Instance] GetStringByLanguage:@"game highscore"],
-                                      [[GlobalSettingsHelper Instance] GetStringByLanguage:@"at place"],newHighScorePlace];
-        
-        m_localHighscoreLabel.textAlignment = NSTextAlignmentLeft;
+
         
         UIImage *trophyImage = [[UIImage imageNamed:@"trophy.png"] retain];
         m_highscoreImageView.image = trophyImage;
         [trophyImage release];
         m_highscoreImageView.center = CGPointMake(30,  190);
-        m_localHighscoreLabel.frame = CGRectMake(60,190,[m_localHighscoreLabel frame].size.width,  [m_localHighscoreLabel frame].size.height);
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:1];
         [m_highscoreImageView setAlpha:1];
         [UIView commitAnimations];	
     }
-    else {
-        m_localHighscoreLabel.textAlignment = NSTextAlignmentCenter;
-        m_localHighscoreLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"No local highscore"]];
-        m_localHighscoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  190);
-    }
+
 
     //set score via webservice . This view must be user inactive . enable when not singleplayer. On singleplayer enable when no connection or when result is recived
     //get global position
@@ -365,31 +318,31 @@
     //button "rechallenge" , if challenge taken was won  -> when pressed spinning -> enable button with text "rechallenge of user sendt" eller "no connection with server"
     //
     //and button "continue without challenge"
-    
-    
-    
-    
-    m_globalHeaderLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Global:"]];
-    m_globalHeaderLabel.center = CGPointMake([screen applicationFrame].size.width/2,  220);
-    
+
     m_globalHighscoreLabel.textAlignment = NSTextAlignmentCenter;
     m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Waiting for result..."]];
     m_globalHighscoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  235);
     
     
 
-     challengeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-     [challengeButton addTarget:self action:@selector(doChallenge) forControlEvents:UIControlEventTouchDown];
-     [challengeButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Challenge"] forState:UIControlStateNormal];
-     challengeButton.frame = CGRectMake(0, 0, 180.0, 40.0);
-     challengeButton.center = CGPointMake([screen applicationFrame].size.width/2,350);
-     [self addSubview:challengeButton];
+    challengeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [challengeButton addTarget:self action:@selector(doChallenge) forControlEvents:UIControlEventTouchDown];
+    [challengeButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Challenge"] forState:UIControlStateNormal];
+    challengeButton.layer.borderWidth=1.0f;
+    [challengeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    challengeButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    challengeButton.frame = CGRectMake(0, 0, 180.0, 40.0);
+    challengeButton.center = CGPointMake([screen applicationFrame].size.width/2,350);
+    [self addSubview:challengeButton];
     
     exitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [exitButton addTarget:self action:@selector(doSkip) forControlEvents:UIControlEventTouchDown];
     [exitButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Skip challenging"] forState:UIControlStateNormal];
+    exitButton.layer.borderWidth=1.0f;
+    [exitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    exitButton.layer.borderColor=[[UIColor whiteColor] CGColor];
     exitButton.frame = CGRectMake(0, 0, 180.0, 40.0);
-    exitButton.center = CGPointMake([screen applicationFrame].size.width/2,390);
+    exitButton.center = CGPointMake([screen applicationFrame].size.width/2,420);
     [self addSubview:exitButton];
     
     
@@ -517,13 +470,9 @@
 {
 	[m_questionsPassedLabel setAlpha:1];
 	[m_scoreLabel setAlpha:1];
-	[m_localHighscoreLabel setAlpha:1];
-    [m_localHeaderLabel setAlpha:1];
     [m_globalHighscoreLabel setAlpha:1];
-    [m_globalHeaderLabel setAlpha:1];
 	[m_dynamicLabel setAlpha:1];
 	[m_secondsUsedLabel setAlpha:1];
-	[m_skyView setAlpha:0.5];
 }
 
 #pragma mark AdBar methods

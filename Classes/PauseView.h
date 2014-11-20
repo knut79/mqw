@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 #import "Game.h"
 
 @protocol PauseViewDelegate;
@@ -16,7 +15,6 @@
 	id <PauseViewDelegate> delegate;
 	UIButton *buttonMainMenu;
 	UIButton *buttonResume;
-	SkyView *m_skyView;
 	
 	Game *m_gameRef;
 	

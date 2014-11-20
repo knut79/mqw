@@ -29,8 +29,12 @@
 	m_setPositionButton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 	[m_setPositionButton addTarget:self action:@selector(doSetPosition:) forControlEvents:UIControlEventTouchDown];
 	[m_setPositionButton.titleLabel setFont:[UIFont boldSystemFontOfSize: 12]];
-	[m_setPositionButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position set"] forState:UIControlStateNormal];
-	m_setPositionButton.frame = CGRectMake(220.0, 0.0, 100.0, 40.0);
+    m_setPositionButton.layer.borderWidth=2.0f;
+    [m_setPositionButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    m_setPositionButton.layer.borderColor=[[UIColor blackColor] CGColor];
+    
+	[m_setPositionButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"OK"] forState:UIControlStateNormal];
+	m_setPositionButton.frame = CGRectMake(220.0, 2.0, 98.0, 36.0);
 	[self addSubview:m_setPositionButton];
 
 	m_timerNumerator = 1;
@@ -447,7 +451,7 @@
 	
 	if(m_gameRef != nil)
 	{
-		[m_setPositionButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position set"] forState:UIControlStateNormal];
+		//[m_setPositionButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Position set"] forState:UIControlStateNormal];
 		if ([m_gameRef IsTrainingMode] == YES ) 
 		{
 			return;
@@ -476,7 +480,7 @@
 {
 	if ((barWidth <= 0) && (timeBonusBarWidth <= 0)) {
 		barWidth = 0;
-		theString = @"Player out";
+		theString = @"Game over";
 	}
 	CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
     

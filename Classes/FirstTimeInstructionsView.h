@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 
 @protocol FirstTimeInstructionsDelegate;
 
@@ -20,7 +19,6 @@
 	UILabel *zoomInLabel;
 	UILabel *tapToMoveLabel;
 	UILabel *dragToMoveLabel;
-	SkyView *m_skyView;
 	NSString *m_playerName;
 }
 @property (nonatomic, assign) id <FirstTimeInstructionsDelegate> delegate;

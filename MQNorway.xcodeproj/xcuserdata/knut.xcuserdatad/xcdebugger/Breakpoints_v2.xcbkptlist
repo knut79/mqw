@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/MQNorwayViewController.m"
-            timestampString = "438053227.745216"
+            filePath = "Classes/StartGameMenu.m"
+            timestampString = "438210827.06543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1579"
-            endingLineNumber = "1579"
-            landmarkName = "-SetPositionDone"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
+            landmarkName = "-TellParentToCleanUp"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,45 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Classes/WithFiguresView.m"
-            timestampString = "438051253.335772"
+            filePath = "Classes/StartGameMenu.m"
+            timestampString = "438210952.702465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "-drawRect:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Classes/MQNorwayViewController.m"
-            timestampString = "438053227.745216"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "984"
-            endingLineNumber = "984"
-            landmarkName = "-sectionAnimationDidStop"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Classes/MQNorwayViewController.m"
-            timestampString = "438052438.25341"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "909"
-            endingLineNumber = "909"
-            landmarkName = "-finishedDrawingResultMap"
+            startingLineNumber = "427"
+            endingLineNumber = "427"
+            landmarkName = "-FadeOut"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

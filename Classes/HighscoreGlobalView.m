@@ -20,9 +20,8 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
 		
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0.9];
-		[self addSubview:m_skyView];
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		
 		UIScreen *screen = [[UIScreen mainScreen] retain];
@@ -735,8 +734,7 @@
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.5];
 	[self setAlpha:1];
-	[m_skyView setAlpha:0.9];
-	[UIView commitAnimations];	
+	[UIView commitAnimations];
 }
 
 -(void) FadeOut

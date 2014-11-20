@@ -21,9 +21,9 @@
     if (self) {
 		UIScreen *screen = [[UIScreen mainScreen] retain];
         // Initialization code.
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0.9];
-		[self addSubview:m_skyView];
+
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		headerLabel = [[UILabel alloc] init];
 		[headerLabel setFrame:CGRectMake(100, 0, 250, 40)];
@@ -311,8 +311,7 @@
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.5];
 	[self setAlpha:1];
-	[m_skyView setAlpha:0.9];
-	[UIView commitAnimations];	
+	[UIView commitAnimations];
 }
 
 -(void) FadeOut
@@ -375,7 +374,6 @@
 */
 
 - (void)dealloc {
-	[m_skyView release],m_skyView = nil;
 	[headerLabel release],headerLabel = nil;
 	[m_webView release], m_webView = nil;
 	[buttonBack release], buttonBack = nil;

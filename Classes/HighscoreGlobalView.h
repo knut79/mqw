@@ -6,14 +6,12 @@
 //  Copyright 2011 lemmus. All rights reserved.
 //
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 #import "EnumDefs.h"
 	
 @protocol HighscoreGlobalViewDelegate;
 
 	@interface HighscoreGlobalView : UIView<NSXMLParserDelegate> {
 			id <HighscoreGlobalViewDelegate> delegate;
-		SkyView *m_skyView;
 		NSString *pathEasy;
 		NSString *pathMedium;
 		NSString *pathHard;

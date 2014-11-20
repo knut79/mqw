@@ -19,8 +19,6 @@
 #import "StartPlayerView.h"
 #import "RoundEndedView.h"
 #import "GameEndedView.h"
-#import "SkyView.h"
-#import "RestartView.h"
 #import "AnimateTextView.h"
 #import "FirstTimeInstructionsView.h"
 #import "TapDetectingView.h"
@@ -37,7 +35,7 @@
 
 
 @interface MQNorwayViewController : UIViewController <TouchImageViewDelegate,TapDetectingViewDelegate, 
-TiledScrollViewDataSource,WithFiguresViewDelegate,MainMenuViewDelegate,RestartViewDelegate,
+TiledScrollViewDataSource,WithFiguresViewDelegate,MainMenuViewDelegate,
 StartPlayerViewDelegate,AnimateTextViewDelegate,RoundEndedViewDelegate,GameEndedViewDelegate,InfoBarViewBottomDelegate,
 QuestionBarViewTopDelegate,TrainingEndedViewDelegate,FirstTimeInstructionsDelegate,
 QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlayerVCDelegate> {
@@ -70,7 +68,6 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 	InfoBarViewBottom *infoBarBottom;
 	
 	StartPlayerView *m_startPlayerView;
-	RestartView *m_restartView;
 	NSString *documentsDir;
 	
 	RoundEndedView* m_roundEndedView;
@@ -110,7 +107,6 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 -(void) UnLoadViews;
 -(void) LoadSubViews;
 -(void) SaveGameData;
--(void) LoadGameAndResume;
 -(void) positionPlayerSymbol:(CGPoint)thePoint zoomOffsetScale:(float) zoomOffsetScale;
 -(void) SetPlayerButtons;
 -(void) SetPlayerClock;

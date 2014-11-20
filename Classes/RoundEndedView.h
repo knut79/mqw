@@ -9,7 +9,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
-#import "SkyView.h"
 #import "Game.h"
 
 @protocol RoundEndedViewDelegate;
@@ -25,7 +24,6 @@
 	NSInteger m_playerIndexToAnimate;
 	NSInteger m_numberOfPlayersToAnimate;
 	Player *m_playerRef;
-	SkyView *m_skyView;
 }
 @property (nonatomic, assign) id <RoundEndedViewDelegate> delegate;
 

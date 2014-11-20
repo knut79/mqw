@@ -293,7 +293,6 @@
 		7204A37219D9799200B8AE76 /* BarLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35519D9799100B8AE76 /* BarLine.png */; };
 		7204A37319D9799200B8AE76 /* BarLineDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35619D9799100B8AE76 /* BarLineDown.png */; };
 		7204A37419D9799200B8AE76 /* BarLineUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35719D9799100B8AE76 /* BarLineUp.png */; };
-		7204A37519D9799200B8AE76 /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35819D9799100B8AE76 /* clouds.png */; };
 		7204A37619D9799200B8AE76 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35919D9799100B8AE76 /* Default.png */; };
 		7204A37719D9799200B8AE76 /* directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35A19D9799100B8AE76 /* directions.png */; };
 		7204A37819D9799200B8AE76 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35B19D9799100B8AE76 /* GameOver.png */; };
@@ -855,7 +854,6 @@
 		EE9898B813300FCC00CBA780 /* HighscoreLocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AA13300FCC00CBA780 /* HighscoreLocalView.m */; };
 		EE9898B913300FCC00CBA780 /* InstructionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AC13300FCC00CBA780 /* InstructionsView.m */; };
 		EE9898BA13300FCC00CBA780 /* MainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AE13300FCC00CBA780 /* MainMenuView.m */; };
-		EE9898BB13300FCC00CBA780 /* RestartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B013300FCC00CBA780 /* RestartView.m */; };
 		EE9898BC13300FCC00CBA780 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B213300FCC00CBA780 /* SettingsMenuView.m */; };
 		EE9898BD13300FCC00CBA780 /* StartGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B413300FCC00CBA780 /* StartGameMenu.m */; };
 		EE9898BE13300FCC00CBA780 /* StoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B613300FCC00CBA780 /* StoreView.m */; };
@@ -867,7 +865,6 @@
 		EE9898D01330102700CBA780 /* QuestionBarViewTop.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898CE1330102700CBA780 /* QuestionBarViewTop.m */; };
 		EE9898D31330104200CBA780 /* UISwitch-extended.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898D21330104200CBA780 /* UISwitch-extended.m */; };
 		EE9898D61330104B00CBA780 /* StartPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898D51330104B00CBA780 /* StartPlayerView.m */; };
-		EE9898D91330105300CBA780 /* SkyView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898D81330105300CBA780 /* SkyView.m */; };
 		EE9898DC1330107400CBA780 /* TouchImageView_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898DB1330107400CBA780 /* TouchImageView_Private.m */; };
 		EE9BD26213B6297600DD30BE /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9BD26113B6297600DD30BE /* MagnifierView.m */; };
 		EEA1348F1460309A007F47BC /* HighscoreGlobalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA1348E1460309A007F47BC /* HighscoreGlobalView.m */; };
@@ -1190,7 +1187,6 @@
 		7204A35519D9799100B8AE76 /* BarLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarLine.png; path = resources/graphics/GameElements/BarLine.png; sourceTree = "<group>"; };
 		7204A35619D9799100B8AE76 /* BarLineDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarLineDown.png; path = resources/graphics/GameElements/BarLineDown.png; sourceTree = "<group>"; };
 		7204A35719D9799100B8AE76 /* BarLineUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarLineUp.png; path = resources/graphics/GameElements/BarLineUp.png; sourceTree = "<group>"; };
-		7204A35819D9799100B8AE76 /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clouds.png; path = resources/graphics/GameElements/clouds.png; sourceTree = "<group>"; };
 		7204A35919D9799100B8AE76 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/graphics/GameElements/Default.png; sourceTree = "<group>"; };
 		7204A35A19D9799100B8AE76 /* directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions.png; path = resources/graphics/GameElements/directions.png; sourceTree = "<group>"; };
 		7204A35B19D9799100B8AE76 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = resources/graphics/GameElements/GameOver.png; sourceTree = "<group>"; };
@@ -1806,8 +1802,6 @@
 		EE9898AC13300FCC00CBA780 /* InstructionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsView.m; sourceTree = "<group>"; };
 		EE9898AD13300FCC00CBA780 /* MainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuView.h; sourceTree = "<group>"; };
 		EE9898AE13300FCC00CBA780 /* MainMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuView.m; sourceTree = "<group>"; };
-		EE9898AF13300FCC00CBA780 /* RestartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestartView.h; sourceTree = "<group>"; };
-		EE9898B013300FCC00CBA780 /* RestartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestartView.m; sourceTree = "<group>"; };
 		EE9898B113300FCC00CBA780 /* SettingsMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenuView.h; sourceTree = "<group>"; };
 		EE9898B213300FCC00CBA780 /* SettingsMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenuView.m; sourceTree = "<group>"; };
 		EE9898B313300FCC00CBA780 /* StartGameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameMenu.h; sourceTree = "<group>"; };
@@ -1830,8 +1824,6 @@
 		EE9898D21330104200CBA780 /* UISwitch-extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISwitch-extended.m"; path = "Classes/UISwitch-extended.m"; sourceTree = "<group>"; };
 		EE9898D41330104B00CBA780 /* StartPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPlayerView.h; sourceTree = "<group>"; };
 		EE9898D51330104B00CBA780 /* StartPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPlayerView.m; sourceTree = "<group>"; };
-		EE9898D71330105300CBA780 /* SkyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyView.h; sourceTree = "<group>"; };
-		EE9898D81330105300CBA780 /* SkyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyView.m; sourceTree = "<group>"; };
 		EE9898DA1330107400CBA780 /* TouchImageView_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchImageView_Private.h; sourceTree = "<group>"; };
 		EE9898DB1330107400CBA780 /* TouchImageView_Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchImageView_Private.m; sourceTree = "<group>"; };
 		EE9BD26013B6297600DD30BE /* MagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnifierView.h; sourceTree = "<group>"; };
@@ -1918,8 +1910,6 @@
 				1D3623250D0F684500981E51 /* MQNorwayAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* MQNorwayViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* MQNorwayViewController.m */,
-				EE9898D71330105300CBA780 /* SkyView.h */,
-				EE9898D81330105300CBA780 /* SkyView.m */,
 				EE38C4D91317E1030047EABB /* AnimateTextView.h */,
 				EE38C4DA1317E1030047EABB /* AnimateTextView.m */,
 				EEF403C4134F4785008779D5 /* RoundedRectView.h */,
@@ -2677,7 +2667,6 @@
 				7204A35519D9799100B8AE76 /* BarLine.png */,
 				7204A35619D9799100B8AE76 /* BarLineDown.png */,
 				7204A35719D9799100B8AE76 /* BarLineUp.png */,
-				7204A35819D9799100B8AE76 /* clouds.png */,
 				7204A35919D9799100B8AE76 /* Default.png */,
 				7204A35A19D9799100B8AE76 /* directions.png */,
 				7204A35B19D9799100B8AE76 /* GameOver.png */,
@@ -2932,8 +2921,6 @@
 				EE9898AC13300FCC00CBA780 /* InstructionsView.m */,
 				EE9898AD13300FCC00CBA780 /* MainMenuView.h */,
 				EE9898AE13300FCC00CBA780 /* MainMenuView.m */,
-				EE9898AF13300FCC00CBA780 /* RestartView.h */,
-				EE9898B013300FCC00CBA780 /* RestartView.m */,
 				EE9898B113300FCC00CBA780 /* SettingsMenuView.h */,
 				EE9898B213300FCC00CBA780 /* SettingsMenuView.m */,
 				EE9898B313300FCC00CBA780 /* StartGameMenu.h */,
@@ -3581,7 +3568,6 @@
 				7204A27119D976D600B8AE76 /* world_100_3_0.jpg in Resources */,
 				72CB8B621A043FA6000E30CF /* world_100_border_5_8.jpg in Resources */,
 				72CB8BAB1A043FA6000E30CF /* world_100_border_11_9.jpg in Resources */,
-				7204A37519D9799200B8AE76 /* clouds.png in Resources */,
 				72CB8BCA1A043FA6000E30CF /* world_100_border_14_4.jpg in Resources */,
 				72CB8B301A043FA6000E30CF /* world_100_border_1_6.jpg in Resources */,
 				7204A48519E3487200B8AE76 /* TogoFlag.png in Resources */,
@@ -4032,7 +4018,6 @@
 				EE9898B813300FCC00CBA780 /* HighscoreLocalView.m in Sources */,
 				EE9898B913300FCC00CBA780 /* InstructionsView.m in Sources */,
 				EE9898BA13300FCC00CBA780 /* MainMenuView.m in Sources */,
-				EE9898BB13300FCC00CBA780 /* RestartView.m in Sources */,
 				EE9898BC13300FCC00CBA780 /* SettingsMenuView.m in Sources */,
 				EE9898BD13300FCC00CBA780 /* StartGameMenu.m in Sources */,
 				EE9898BE13300FCC00CBA780 /* StoreView.m in Sources */,
@@ -4047,7 +4032,6 @@
 				728747B519B9B3A900BADE3B /* FMResultSet.m in Sources */,
 				EE9898D31330104200CBA780 /* UISwitch-extended.m in Sources */,
 				EE9898D61330104B00CBA780 /* StartPlayerView.m in Sources */,
-				EE9898D91330105300CBA780 /* SkyView.m in Sources */,
 				EE9898DC1330107400CBA780 /* TouchImageView_Private.m in Sources */,
 				EE3B5F3E1333C1B500E6E77A /* Sqlite.m in Sources */,
 				EEC506E513364DF0008996BB /* SqliteHelper.m in Sources */,

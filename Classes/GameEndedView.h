@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
-#import "SkyView.h"
 #import "Game.h"
 #import "iAd/ADBannerView.h"
 #import "SoapHelper.h"
@@ -25,19 +24,15 @@
 	UIImageView* m_headerImageView;
 	UILabel *m_questionsPassedLabel;
 	UILabel *m_scoreLabel;
-	UILabel *m_localHighscoreLabel;
     UILabel *m_globalHighscoreLabel;
 	UIImageView* m_highscoreImageView;	
 	UILabel *m_dynamicLabel;
 	UILabel *m_secondsUsedLabel;
-    UILabel *m_localHeaderLabel;
-    UILabel *m_globalHeaderLabel;
 	NSInteger m_labelsXoffset;
 	NSInteger m_labelsYoffset;
 	NSInteger m_playerIndexToAnimate;
 	NSInteger m_numberOfPlayersToAnimate;
 	Player *m_playerRef;
-	SkyView *m_skyView;
     
     SoapHelper* ssb;
     UIButton* challengeButton;

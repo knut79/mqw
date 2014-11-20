@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "Game.h"
-#import "SkyView.h"
 
 #define const_sliderGameTypeSwichValue 2.0
 
@@ -46,9 +45,7 @@
 	
 	NSInteger switchXOffset;
 	NSInteger switchYOffset;
-	
-	
-	SkyView *m_skyView;
+
 	UILabel *miniLabel;
 	
 	UISwitch *modeSwitch;

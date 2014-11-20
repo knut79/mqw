@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 
 @interface StoreView : UIView {
-	SkyView *m_skyView;
 	UIButton *buttonBack;
 }
 -(void) FadeOut;

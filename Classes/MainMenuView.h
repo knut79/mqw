@@ -19,7 +19,7 @@
 	SettingsMenuView *settingsMenuView;
 	OtherInfoView* otherInfoView;
 	id <MainMenuViewDelegate> delegate;
-	SkyView *m_skyView;
+	//SkyView *m_skyView;
 	UILabel *loadingLabel;
 	
 	UIButton *buttonStartMenu;

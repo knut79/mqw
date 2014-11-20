@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 
 @protocol StatisticsViewDelegate;
 @interface StatisticsView : UIView <UIWebViewDelegate>{ 
         id <StatisticsViewDelegate> delegate;
-	SkyView *m_skyView;
 	UILabel *headerLabel;
 	UILabel *destinationHeader;
 	UILabel *placeHeader;

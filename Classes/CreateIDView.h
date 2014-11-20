@@ -8,7 +8,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 #import "GlobalSettingsHelper.h"
 #import "SqliteHelper.h"
 
@@ -17,7 +16,6 @@
 
     id <CreateIDViewDelegate> delegate;
 	UILabel *headerLabel;
-	SkyView *m_skyView;
 	
 	UIButton *buttonCreateID;
 	UITextField *emailTextField;

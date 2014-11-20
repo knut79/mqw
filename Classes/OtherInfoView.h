@@ -28,7 +28,6 @@
 	UIButton *buttonHighscoreMenu;
     UIButton *buttonPlayerStatsMenu;
 	UIButton *buttonBack;
-	SkyView *m_skyView;
     PlayerStats* playerstatsViewCtrl;
 }
 @property (nonatomic, assign) id <OtherInfoViewDelegate> delegate;

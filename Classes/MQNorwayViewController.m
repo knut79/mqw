@@ -86,7 +86,10 @@
 //createPlayerVC delegate
 -(void) cleanUpCreatePlayerVC
 {
+    
     [createPlayerVC.view removeFromSuperview];
+    //[createPlayerVC dealloc];
+    //[createPlayerVC release];
 	//[highscoreGlobalView dealloc];
 	createPlayerVC = nil;
     
@@ -140,8 +143,7 @@
     [self.view setFrame:[screen applicationFrame]];
 	
 	m_restoreGameState = NO;
-    
-	
+
     if(mainMenuView == nil)
 	{
 		mainMenuView = [[MainMenuView alloc] initWithFrame:[[self view] bounds]];
@@ -150,152 +152,7 @@
 		[[self view] addSubview:mainMenuView];
 	}
     [mainMenuView FadeIn];
-	
-    
     [screen release];
-
-}
-
-
-
--(void) LoadGameAndResume
-{
-	[[LocationsHelper Instance] ReInitQuestions];
-	//[self LoadSubViews];
-	
-	FMResultSet *resultsSavestate = [[SqliteHelper Instance] executeQuery:@"SELECT * FROM savestate"];
-    [resultsSavestate next];
-	//NSDictionary *dictionarySavestate = [resultsSavestate objectAtIndex:0];
-	
-	if(![[resultsSavestate stringForColumn:@"gameState"] isEqualToString:@"outOfGame"])
-	{
-		//game started
-		//[mainMenuView setAlpha:0];
-		
-		m_gameRef = [[Game alloc] init] ;
-		
-		
-		NSMutableArray *players = [[NSMutableArray alloc] init];
-		FMResultSet *resultsPlayers = [[SqliteHelper Instance] executeQuery:@"SELECT * FROM player"];
-		
-
-		[resultsPlayers next];
-		
-			
-			UIColor *tempColor = [UIColor redColor];
-			
-			Player *tempPlayer = [[Player alloc] initWithName:[resultsPlayers stringForColumn:@"name"] andColor:tempColor andPlayerSymbol:[resultsPlayers stringForColumn:@"symbol"]];
-			
-			NSLog(@"THE VALUE OF gamepoint %@",[resultsPlayers stringForColumn:@"gamemarkerPoint"]);
-			//Convert cgpoint string to real cgpoint value
-			CGPoint storedGamePoint;
-			NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"{}"];
-			NSString *tempString = [NSString stringWithFormat:@"%@",[[resultsPlayers stringForColumn:@"gamemarkerPoint"] stringByTrimmingCharactersInSet:characterSet]];
-			NSArray *simpleSplitArray = [tempString componentsSeparatedByString:@","];
-			if (simpleSplitArray.count == 2) {
-				storedGamePoint = CGPointMake([[simpleSplitArray objectAtIndex:0] intValue], [[simpleSplitArray objectAtIndex:1] intValue]);
-			}
-			
-			
-			NSLog(@"WHAT VALUE : %@", [resultsPlayers stringForColumn:@"secondsUsed"]);
-			
-			[tempPlayer SetPlayerState:[[resultsPlayers stringForColumn:@"questionsPassed"] integerValue]
-								   GamePoint:storedGamePoint
-									  KmLeft:[[resultsPlayers stringForColumn:@"distanceLeft"] integerValue]
-									TimeUsed:[[resultsPlayers stringForColumn:@"secondsUsed"] integerValue]
-							   TotalDistance:[[resultsPlayers stringForColumn:@"totalDistance"] integerValue]
-										 Out:[[resultsPlayers stringForColumn:@"isOut"] boolValue]
-									BarWidth:[[resultsPlayers stringForColumn:@"barWidth"] integerValue]];
-			//Question *quest = [[[Question alloc] initWithLocation:tempLocation andID:[dictionaryPlayer objectForKey:@"questionID"]];
-
-            [m_gameRef SetPlayer:tempPlayer andDifficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]]];
-            [tempPlayer release];
-
-		
-		[resultsPlayers close];
-		
-		
-		
-		
-		
-		
-		NSLog(@"loading game with question %@",[resultsSavestate stringForColumn:@"questionID"] );
-		[m_gameRef SetGameState_QuestionID:[resultsSavestate stringForColumn:@"questionID"] Difficulty:[EnumHelper stringToDifficulty:[resultsSavestate stringForColumn:@"difficulty"]]
-					   currentPlayerByName:[resultsSavestate stringForColumn:@"playerRefTurn"] questionsPassed:[[resultsSavestate stringForColumn:@"gameQuestionsPassed"]integerValue]];
-		
-		Player *currentPlayer = [m_gameRef GetPlayerByName:[resultsSavestate stringForColumn:@"playerRefTurn"]];
-
-		UIScreen *screen = [[UIScreen mainScreen] retain];
-		if ([[resultsSavestate stringForColumn:@"gameState"] isEqualToString:@"inGame"]) {
-			m_restoreGameState = NO;
-			
-			[currentPlayer StartTimer];
-
-			resultBoardView.hidden = YES;
-			playingBoardView.hidden = NO;
-			
-			[resultBoardView setGameRef:m_gameRef];
-			
-			[questionBarTop SetQuestion:[resultsSavestate stringForColumn:@"playerRefTurn"] gameRef:m_gameRef];
-			
-			[infoBarBottom SetGameRef:m_gameRef];
-			NSInteger playerIndex = 0;
-            resultsPlayers = [[SqliteHelper Instance] executeQuery:@"SELECT * FROM player"];
-			while ([resultsPlayers next])
-			{
-				[[players objectAtIndex:playerIndex] SetBarWidth:[[resultsPlayers stringForColumn:@"barWidth"] integerValue]];
-				playerIndex++;
-			}
-			
-			directionsTouchView.center = CGPointMake([screen applicationFrame].size.width - 25, [screen applicationFrame].size.height - 44 - 25);
-			
-			UIImage *image = [[UIImage imageNamed:[currentPlayer GetPlayerSymbol]] retain];
-			touchImageView.image = image;
-			[image release];
-			
-			
-			
-			[self FadeInGameElements];
-		}
-		else if([[resultsSavestate stringForColumn:@"gameState"] isEqualToString:@"showResult"])
-		{
-			m_restoreGameState = YES;
-			//[self FadeInGameElements];
-			//[withFiguresView setAlpha:1];
-			resultBoardView.hidden = NO;
-			playingBoardView.hidden = YES;
-			
-			[resultBoardView setGameRef:m_gameRef];
-			[resultBoardView drawResult_UpdateGameData:NO];
-			[resultBoardView setNeedsDisplay];
-			
-			[answerBarTop SetResult:m_gameRef];
-			[answerBarTop FadeIn];
-			
-			[infoBarBottom SetGameRef:m_gameRef];
-			NSInteger playerIndex = 0;
-            resultsPlayers = [[SqliteHelper Instance] executeQuery:@"SELECT * FROM player"];
-			while ([resultsPlayers next])
-			{
-				//			NSLog(@"---%d",[dictionaryPlayer objectForKey:@"barWidth"]);
-				[[players objectAtIndex:playerIndex] SetBarWidth:[[resultsPlayers stringForColumn:@"barWidth"] integerValue]];
-				playerIndex++;
-			}
-			
-			//_?12
-			directionsTouchView.center = CGPointMake([screen applicationFrame].size.width - 25, [screen applicationFrame].size.height - 44 - 25);
-			
-			//_?12
-			UIImage *image = [[UIImage imageNamed:[currentPlayer GetPlayerSymbol]] retain];
-			touchImageView.image = image;
-			[image release];
-			
-		}
-		//_?12
-		touchImageView.center = CGPointMake([screen applicationFrame].size.width/2, [screen applicationFrame].size.height/2);
-		[screen release];
-		
-	}
 }
 
 
@@ -425,10 +282,8 @@
             //[clockView setDelegate:self];
             [[self view] addSubview:clockView];
         }
-        
 
         [clockView StartClock];
-        
     }
 
 }
@@ -477,10 +332,14 @@
 
 -(void) GiveTimePoints
 {
-    Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-    [currentPlayer SetCurrentKmTimeBonus:[clockView GetMultiplier] * const_timeBonusKm];
-    [currentPlayer SetCurrentTimeMultiplier:[clockView GetMultiplier]];
-    [currentPlayer release]; 
+    Player *player = [[m_gameRef GetPlayer] retain];
+    long timeDistanceBonus = [clockView GetMultiplier] * const_timeBonusKm;
+    if ([player GetKmLeft] > timeDistanceBonus) {
+        [player SetCurrentKmTimeBonus:timeDistanceBonus];
+        [player SetCurrentTimeMultiplier:[clockView GetMultiplier]];
+    }
+
+    [player release];
 }
 
 //-(void) timePointsShown
@@ -893,6 +752,7 @@
 //round is finished
 - (void)finishedDrawingResultMap
 {
+    [self RemoveGameElementsForPlayer];
 
     UIScreen *screen = [[UIScreen mainScreen] retain];
     CGRect regionBoundsRect = resultBoardView.boundsOfRegion;
@@ -1033,19 +893,20 @@
 
 -(void) DisplayMainMenu
 {
-    
-	//[self FadeOutGameElements];
-	
+    /*
+
     [self RemoveGameBoardAndBars];
-	
-	if(mainMenuView == nil)
+
+    [self cleanUpGameElements];
+    */
+    if(mainMenuView == nil)
 	{
 		mainMenuView = [[MainMenuView alloc] initWithFrame:[[self view] bounds]];
 		[mainMenuView setDelegate:self];
 		//mainMenuView.hidden = NO;
 		[[self view] addSubview:mainMenuView];
 	}
-
+    
     [mainMenuView FadeIn];
 }
 
@@ -1053,19 +914,15 @@
 #pragma mark GameEndedViewDelegate
 -(void) GameOver
 {
-    [self cleanUpGameElements];
+    
     //clean up GamesEndedView
     [m_gameEndedView removeFromSuperview];
     m_gameEndedView = nil;
     
-	[self DisplayReplayGameMenu];
-	if (m_restartView == nil) {
-		m_restartView = [[RestartView alloc] initWithFrame:[[self view] bounds]];
-		[m_restartView setDelegate:self];
-		[[self view] addSubview:m_restartView];
-	}
-    [[self view] bringSubviewToFront:m_restartView];
-	[m_restartView FadeIn];
+    [self RemoveGameBoardAndBars];
+    [self cleanUpGameElements];
+    
+    [self DisplayMainMenu];
 }
 
 -(void) LoadGameBoardAndBars
@@ -1137,28 +994,36 @@
 
 -(void) RemoveGameBoardAndBars
 {
-    [playingBoardView release];
+
     [playingBoardView removeFromSuperview];
+    [playingBoardView dealloc];
     playingBoardView = nil;
-    [resultBoardView release];
+
     [resultBoardView removeFromSuperview];
+    [resultBoardView dealloc];
     resultBoardView = nil;
-    [directionsTouchView release];
+
     [directionsTouchView removeFromSuperview];
+    [directionsTouchView dealloc];
     directionsTouchView = nil;
-    [infoBarBottom release];
-    [infoBarBottom removeFromSuperview];
-    infoBarBottom = nil;
-    [questionBarTop release];
-    [questionBarTop removeFromSuperview];
-    questionBarTop = nil;
-    [answerBarTop release];
-    [answerBarTop removeFromSuperview];
-    answerBarTop = nil;
-    [touchImageView release];
-    [touchImageView removeFromSuperview];
-    touchImageView = nil;
     
+    [infoBarBottom removeFromSuperview];
+    [infoBarBottom dealloc];
+    infoBarBottom = nil;
+
+    [questionBarTop removeFromSuperview];
+    [questionBarTop dealloc];
+    questionBarTop = nil;
+    
+    
+    [answerBarTop removeFromSuperview];
+    [answerBarTop dealloc];
+    answerBarTop = nil;
+
+    [touchImageView removeFromSuperview];
+    [touchImageView dealloc];
+    touchImageView = nil;
+
 }
 
 
@@ -1168,9 +1033,6 @@
 {
     [self LoadGameBoardAndBars];
 
-    [mainMenuView removeFromSuperview];
-    mainMenuView = nil;
-    
 	[m_gameRef ResetPlayerData];
 	
 	[self ZoomOutMap];
@@ -1191,6 +1053,14 @@
 	[[self view] bringSubviewToFront:firstTimeInstructionsView];
 	BOOL firstTime = [firstTimeInstructionsView FadeIn];
 	
+    
+    if (mainMenuView != nil) {
+        [mainMenuView removeFromSuperview];
+        //[mainMenuView dealloc];
+        mainMenuView = nil;
+    }
+    
+    
     //if first time , startNEwGame will be called through firstTimeInstructions
 	if (firstTime == NO) {
 		[self PrepareNewGame];
@@ -1203,6 +1073,7 @@
 //Begin game
 -(void) PrepareNewGame
 {
+    
     if (firstTimeInstructionsView != nil) {
         [firstTimeInstructionsView removeFromSuperview];
         firstTimeInstructionsView = nil;
@@ -1349,13 +1220,17 @@
 
 		[m_gameRef SetGameState:outOfGame];
 		if ([m_gameRef IsTrainingMode] == NO) {
-			if(m_gameEndedView == nil)
+
+            if(m_gameEndedView == nil)
 			{
 				m_gameEndedView = [[GameEndedView alloc] initWithFrame:[[self view] bounds]];
 				[m_gameEndedView setDelegate:self];
 				[[self view] addSubview:m_gameEndedView];
 			}
 			[m_gameEndedView SetHeader:m_gameRef];
+            
+            [self RemoveGameBoardAndBars];
+            [self cleanUpGameElements];
 		}
 		else {
 			[self DisplayReplayGameMenu];
@@ -1383,6 +1258,7 @@
 #pragma mark QuitButtonViewDelegate
 -(void) QuitGame
 {
+    [self RemoveGameBoardAndBars];
     [self cleanUpGameElements];
     
 	[self DisplayMainMenu];
@@ -1406,12 +1282,9 @@
     [hintButton removeFromSuperview];
     [hintButton dealloc];
     hintButton = nil;
-    //[resultBoardView.playerSymbolMiniWindowView dealloc];
-    //resultBoardView.playerSymbolMiniWindowView = nil;
     [resultBoardView removeFromSuperview];
     [resultBoardView dealloc];
     resultBoardView = nil;
-    
 }
 
 -(void) GiveUp
@@ -1523,7 +1396,7 @@
 {
 	@try {
 		
-        [self RemoveGameElementsForPlayer];
+        //[self RemoveGameElementsForPlayer];
 
 		
 		[touchImageView setAlpha:0];
@@ -1594,6 +1467,10 @@
 		[image release];
 		[playerSymbol release];
 		[player release];
+        
+        
+        //[self RemoveGameElementsForPlayer];
+        
 
 	}
 	@catch (NSException * e) {

@@ -22,12 +22,8 @@
        
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		
-		self.backgroundColor = [UIColor clearColor];
-		self.opaque = YES;
-		
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0.9];
-		[self addSubview:m_skyView];
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		headerLabel = [[UILabel alloc] init];
 		[headerLabel setFrame:CGRectMake(80, 0, 250, 40)];

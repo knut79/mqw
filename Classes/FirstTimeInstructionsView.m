@@ -21,12 +21,15 @@
 		
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		
-		self.backgroundColor = [UIColor clearColor];
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
+        
 		self.opaque = NO;
 		
+        /*
 		m_skyView = [[SkyView alloc] initWithFrame:frame];
 		[m_skyView setAlpha:0.8];
-		[self addSubview:m_skyView];
+		[self addSubview:m_skyView];*/
        
 		
 		UIImage *dragToMoveImage = [UIImage imageNamed:@"DragToMoveInstr.png"];
@@ -118,30 +121,16 @@
 		headerLabel.shadowOffset = CGSizeMake(2,2);
 		[self addSubview:headerLabel];
 		
-		
-//		buttonDontShowAgain = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//		[buttonDontShowAgain addTarget:self action:@selector(DontShowAgain:) forControlEvents:UIControlEventTouchDown];
-//		[buttonDontShowAgain setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Don´t show again"] forState:UIControlStateNormal];
-//		buttonDontShowAgain.frame = CGRectMake(0, 0, 100, 40);
-//		[buttonDontShowAgain setFont:[UIFont boldSystemFontOfSize:10.0f]];
-//		buttonDontShowAgain.center = CGPointMake([screen applicationFrame].size.width/4,[screen applicationFrame].size.height - 30);
-//		[self addSubview:buttonDontShowAgain];
-//		
-//		buttonShowAgain = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//		[buttonShowAgain addTarget:self action:@selector(ShowAgain:) forControlEvents:UIControlEventTouchDown];
-//		[buttonShowAgain setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Close"] forState:UIControlStateNormal];
-//		buttonShowAgain.frame = CGRectMake(0, 0, 100, 40.0);
-//		[buttonShowAgain setFont:[UIFont boldSystemFontOfSize:12.0f]];
-//		buttonShowAgain.font = [UIFont boldSystemFontOfSize:12.0f];
-//		buttonShowAgain.center = CGPointMake(([screen applicationFrame].size.width/4)*3,[screen applicationFrame].size.height - 30);
-//		[self addSubview:buttonShowAgain];
-		
-		
+
+        
 		buttonDontShowAgain = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonDontShowAgain addTarget:self action:@selector(DontShowAgain:) forControlEvents:UIControlEventTouchDown];
 		[buttonDontShowAgain setTitle:@"OK" forState:UIControlStateNormal];
 		buttonDontShowAgain.frame = CGRectMake(0, 0, 300, 40.0);
-		buttonDontShowAgain.center = CGPointMake(([screen applicationFrame].size.width/2),[screen applicationFrame].size.height - 30);
+        buttonDontShowAgain.layer.borderWidth=1.0f;
+        [buttonDontShowAgain setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonDontShowAgain.layer.borderColor=[[UIColor whiteColor] CGColor];
+		buttonDontShowAgain.center = CGPointMake(([screen applicationFrame].size.width/2),[screen applicationFrame].size.height - 50);
 		[self addSubview:buttonDontShowAgain];
 		
 		self.hidden = YES;

@@ -114,7 +114,7 @@
 
 
 - (void)dealloc {
-	[viewref release];
+	//[viewref release];
     [super dealloc];
 }
 

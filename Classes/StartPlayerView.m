@@ -23,9 +23,8 @@
 		m_labelsXoffset = 0;
 		m_labelsYoffset = 0;
 
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0];
-		[self addSubview:m_skyView];
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		m_playerNameLabel = [[UILabel alloc] init];
 		[m_playerNameLabel setFrame:CGRectMake(60 + m_labelsXoffset, 60 + m_labelsYoffset, 250, 20)];
@@ -170,8 +169,7 @@
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.5];
 	[self SetAlphaIn];
-	[m_skyView setAlpha:0.5];
-	[UIView commitAnimations];	
+	[UIView commitAnimations];
 	[self setUserInteractionEnabled:YES];
 }
 
@@ -182,7 +180,6 @@
 	[m_secondsUsedLabel setAlpha:1];
 	[m_dynamicLabel1 setAlpha:1];
 	[m_dynamicLabel3 setAlpha:1];
-	[m_skyView setAlpha:0.5];
 }
 
 

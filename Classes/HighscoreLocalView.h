@@ -8,7 +8,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import "SkyView.h"
 #import "EnumDefs.h"
 
 @protocol HighscoreLocalViewDelegate;
@@ -16,7 +15,6 @@
 @interface HighscoreLocalView : UIView {
 
     id <HighscoreLocalViewDelegate> delegate;
-	SkyView *m_skyView;
 	NSString *pathEasy;
 	NSString *pathMedium;
 	NSString *pathHard;

@@ -22,7 +22,6 @@
 	CGPoint buttonBackCenter;
 	UILabel *headerLabel;
 	CGPoint headerLabelCenter;
-	SkyView *m_skyView;
 	StoreView *storeView;
 	
 	UIButton *buttonTest;

@@ -19,16 +19,13 @@
 - (id)initWithFrame:(CGRect)frame{
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
-		self.backgroundColor = [UIColor clearColor];
-		self.opaque = YES;
+        UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+		self.backgroundColor = lightBlueColor;
 		
 		m_labelsXoffset = 0;
 		m_labelsYoffset = 0;
 		
-		
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0];
-		[self addSubview:m_skyView];
+
 		
 		m_playerLabelsArray = [[NSMutableArray alloc] init];
 		for (int i = 0; i < 4; i++) {
@@ -216,7 +213,6 @@
 {
 	[m_headerImageView setAlpha:1];
 	[m_questionsLeftLabel setAlpha:1];
-	[m_skyView setAlpha:0.5];
 }
 
 

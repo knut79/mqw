@@ -157,7 +157,6 @@
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.5];
 	[self setAlpha:1];
-	[m_skyView setAlpha:0.9];
 	[UIView commitAnimations];	
 }
 
@@ -175,8 +174,7 @@
 //switch to map view and start game
 - (void)cleanUpStartGameMenuAndStart:(Game *)gameRef {
 
-    [startGameMenu removeFromSuperview];
-    startGameMenu = nil;
+    [self cleanUpStartGameMenu];
     
 	if ([delegate respondsToSelector:@selector(PreStartNewGame:)])
         [delegate PreStartNewGame:gameRef];
@@ -184,8 +182,11 @@
 
 -(void) cleanUpStartGameMenu
 {
+    
     [startGameMenu removeFromSuperview];
+    //[startGameMenu dealloc];
     startGameMenu = nil;
+     
 }
 
 #pragma mark OtherDelegates
@@ -251,6 +252,9 @@
 
 
 - (void)dealloc {
+    /*
+    [startGameMenu release];
+    [buttonStartMenu release];*/
 	[self removeFromSuperview];
     [super dealloc];
 }
