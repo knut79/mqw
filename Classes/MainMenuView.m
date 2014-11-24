@@ -75,18 +75,7 @@
 		buttonChallengesMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
 		buttonChallengesMenu.center = CGPointMake([screen applicationFrame].size.width/2,220);
 		[self addSubview:buttonChallengesMenu];
-		
-		buttonSettingsMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[buttonSettingsMenu addTarget:self action:@selector(gameSettingsMenu:) forControlEvents:UIControlEventTouchDown];
-		[buttonSettingsMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Settings"] forState:UIControlStateNormal];
-        buttonSettingsMenu.layer.borderWidth=1.0f;
-        [buttonSettingsMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        buttonSettingsMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
-		buttonSettingsMenu.frame = CGRectMake(0, 0, 120.0, 40.0);
-		buttonSettingsMenu.center = CGPointMake([screen applicationFrame].size.width/2,300);
-//		[buttonSettingsMenu setAlpha:0];
-		[self addSubview:buttonSettingsMenu];
-		
+
 		buttonOtherInfoMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonOtherInfoMenu addTarget:self action:@selector(otherInfoMenu:) forControlEvents:UIControlEventTouchDown];
 		[buttonOtherInfoMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Status"] forState:UIControlStateNormal];
@@ -95,7 +84,6 @@
         buttonOtherInfoMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
 		buttonOtherInfoMenu.frame = CGRectMake(0, 0, 120.0, 40.0);
 		buttonOtherInfoMenu.center = CGPointMake([screen applicationFrame].size.width/2,360);
-//		[buttonOtherInfoMenu setAlpha:0];
 		[self addSubview:buttonOtherInfoMenu];
 
 
@@ -129,23 +117,10 @@
 	[startGameMenu SetFinishedLoadingGameObjects];
 }
 
--(void)gameSettingsMenu:(id)Sender
-{
-	if(settingsMenuView == nil)
-	{
-		settingsMenuView = [[SettingsMenuView alloc] initWithFrame:[self frame]];
-		[settingsMenuView setDelegate:self];
-		[self addSubview:settingsMenuView];
-	}
-
-    [settingsMenuView FadeIn];
-}
-
 
 -(void) UpdateLabels
 {
 	[buttonOtherInfoMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Status"] forState:UIControlStateNormal];
-	[buttonSettingsMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Settings"] forState:UIControlStateNormal];
 	[buttonStartMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
 }
 
@@ -245,8 +220,6 @@
 
 - (void)cleanUpSettingsMenuView;
 {
-    [settingsMenuView removeFromSuperview];
-    settingsMenuView = nil;
 	[self UpdateLabels];
 }
 

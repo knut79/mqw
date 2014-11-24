@@ -8,22 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "StartGameMenu.h"
-#import "SettingsMenuView.h"
 #import "OtherInfoView.h"
 #import "TakeChallenge.h"
 
 @protocol MainMenuViewDelegate;
 
-@interface MainMenuView : UIView <StartGameMenuViewDelegate,SettingsMenuViewDelegate,OtherInfoViewDelegate,TakeChallengeViewCtrlDelegate> {
+@interface MainMenuView : UIView <StartGameMenuViewDelegate,OtherInfoViewDelegate,TakeChallengeViewCtrlDelegate> {
 	StartGameMenu *startGameMenu;
-	SettingsMenuView *settingsMenuView;
 	OtherInfoView* otherInfoView;
 	id <MainMenuViewDelegate> delegate;
 	//SkyView *m_skyView;
 	UILabel *loadingLabel;
 	
 	UIButton *buttonStartMenu;
-	UIButton *buttonSettingsMenu;
 	UIButton *buttonOtherInfoMenu;
 	UIButton *buttonRestart;
     UIButton *buttonChallengesMenu;

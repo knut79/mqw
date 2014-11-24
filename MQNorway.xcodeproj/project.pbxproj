@@ -854,7 +854,6 @@
 		EE9898B813300FCC00CBA780 /* HighscoreLocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AA13300FCC00CBA780 /* HighscoreLocalView.m */; };
 		EE9898B913300FCC00CBA780 /* InstructionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AC13300FCC00CBA780 /* InstructionsView.m */; };
 		EE9898BA13300FCC00CBA780 /* MainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AE13300FCC00CBA780 /* MainMenuView.m */; };
-		EE9898BC13300FCC00CBA780 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B213300FCC00CBA780 /* SettingsMenuView.m */; };
 		EE9898BD13300FCC00CBA780 /* StartGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B413300FCC00CBA780 /* StartGameMenu.m */; };
 		EE9898BE13300FCC00CBA780 /* StoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B613300FCC00CBA780 /* StoreView.m */; };
 		EE9898C513300FF500CBA780 /* TapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898C013300FF500CBA780 /* TapDetectingView.m */; };
@@ -1802,8 +1801,6 @@
 		EE9898AC13300FCC00CBA780 /* InstructionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsView.m; sourceTree = "<group>"; };
 		EE9898AD13300FCC00CBA780 /* MainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuView.h; sourceTree = "<group>"; };
 		EE9898AE13300FCC00CBA780 /* MainMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuView.m; sourceTree = "<group>"; };
-		EE9898B113300FCC00CBA780 /* SettingsMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsMenuView.h; sourceTree = "<group>"; };
-		EE9898B213300FCC00CBA780 /* SettingsMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsMenuView.m; sourceTree = "<group>"; };
 		EE9898B313300FCC00CBA780 /* StartGameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartGameMenu.h; sourceTree = "<group>"; };
 		EE9898B413300FCC00CBA780 /* StartGameMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartGameMenu.m; sourceTree = "<group>"; };
 		EE9898B513300FCC00CBA780 /* StoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreView.h; sourceTree = "<group>"; };
@@ -2921,8 +2918,6 @@
 				EE9898AC13300FCC00CBA780 /* InstructionsView.m */,
 				EE9898AD13300FCC00CBA780 /* MainMenuView.h */,
 				EE9898AE13300FCC00CBA780 /* MainMenuView.m */,
-				EE9898B113300FCC00CBA780 /* SettingsMenuView.h */,
-				EE9898B213300FCC00CBA780 /* SettingsMenuView.m */,
 				EE9898B313300FCC00CBA780 /* StartGameMenu.h */,
 				EE9898B413300FCC00CBA780 /* StartGameMenu.m */,
 				EE9898B513300FCC00CBA780 /* StoreView.h */,
@@ -4018,7 +4013,6 @@
 				EE9898B813300FCC00CBA780 /* HighscoreLocalView.m in Sources */,
 				EE9898B913300FCC00CBA780 /* InstructionsView.m in Sources */,
 				EE9898BA13300FCC00CBA780 /* MainMenuView.m in Sources */,
-				EE9898BC13300FCC00CBA780 /* SettingsMenuView.m in Sources */,
 				EE9898BD13300FCC00CBA780 /* StartGameMenu.m in Sources */,
 				EE9898BE13300FCC00CBA780 /* StoreView.m in Sources */,
 				EE9898C513300FF500CBA780 /* TapDetectingView.m in Sources */,
