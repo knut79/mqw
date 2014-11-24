@@ -16,6 +16,10 @@
 
 - (id)initWithFrame:(CGRect)frame{
     if ((self = [super initWithFrame:frame])) {
+        
+        
+        //_?AZURE send inn results
+        
         // Initialization code
         UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
 		self.backgroundColor = lightBlueColor;
@@ -65,13 +69,9 @@
 			else {
 				playerDistanceLabel.shadowColor = [UIColor whiteColor];
 				playerDistanceLabel.shadowOffset = CGSizeMake(-1,-2);
-//				playerDistanceLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//				playerDistanceLabel.layer.shadowRadius = 1.5;
-//				playerDistanceLabel.layer.shadowOpacity = 0.5;
+
 			}
-//			playerDistanceLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//			playerDistanceLabel.layer.shadowOpacity = 1.0;
-//			playerDistanceLabel.layer.shadowRadius = 1.5;
+
 			[playerDistanceLabel setFrame:CGRectMake(0, 0, 300, 20)];
 			[m_playerDistanceLabelsArray addObject:playerDistanceLabel];
 			[self addSubview:playerDistanceLabel];
@@ -100,31 +100,12 @@
 		m_questionsPassedLabel.backgroundColor = [UIColor clearColor]; 
 		[m_questionsPassedLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_questionsPassedLabel.textAlignment = NSTextAlignmentCenter;
-//		m_questionsPassedLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//		m_questionsPassedLabel.layer.shadowOpacity = 1.0;
-//		m_questionsPassedLabel.layer.shadowRadius = 1.5;
 		m_questionsPassedLabel.shadowColor = [UIColor whiteColor];
 		m_questionsPassedLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_questionsPassedLabel.adjustsFontSizeToFitWidth = YES;
 		[m_questionsPassedLabel setAlpha:0];
 		[self addSubview:m_questionsPassedLabel];
 		
-		m_scoreLabel = [[UILabel alloc] init];
-		[m_scoreLabel setFrame:CGRectMake(0, 0, 250, 20)];
-		m_scoreLabel.backgroundColor = [UIColor clearColor]; 
-		[m_scoreLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-		m_scoreLabel.textAlignment = NSTextAlignmentCenter;
-//		m_scoreLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//		m_scoreLabel.layer.shadowOpacity = 1.0;
-//		m_scoreLabel.layer.shadowRadius = 1.5;
-		m_scoreLabel.shadowColor = [UIColor whiteColor];
-		m_scoreLabel.shadowOffset = CGSizeMake(-1,-2);
-		m_scoreLabel.adjustsFontSizeToFitWidth = YES;
-		[m_scoreLabel setAlpha:0];
-		[self addSubview:m_scoreLabel];
-		
-        
-
         
         m_globalHighscoreLabel = [[UILabel alloc] init];
 		[m_globalHighscoreLabel setFrame:CGRectMake(0, 0, 250, 20)];
@@ -148,9 +129,6 @@
 		m_dynamicLabel.backgroundColor = [UIColor clearColor]; 
 		[m_dynamicLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_dynamicLabel.textAlignment = NSTextAlignmentCenter;
-//		m_dynamicLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//		m_dynamicLabel.layer.shadowOpacity = 1.0;
-//		m_dynamicLabel.layer.shadowRadius = 1.5;
 		m_dynamicLabel.shadowColor = [UIColor whiteColor];
 		m_dynamicLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_dynamicLabel.adjustsFontSizeToFitWidth = YES;
@@ -163,9 +141,6 @@
 		m_secondsUsedLabel.backgroundColor = [UIColor clearColor]; 
 		[m_secondsUsedLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_secondsUsedLabel.textAlignment = NSTextAlignmentCenter;
-//		m_secondsUsedLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
-//		m_secondsUsedLabel.layer.shadowOpacity = 1.0;
-//		m_secondsUsedLabel.layer.shadowRadius = 1.5;
 		m_secondsUsedLabel.shadowColor = [UIColor whiteColor];
 		m_secondsUsedLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_secondsUsedLabel.adjustsFontSizeToFitWidth = YES;
@@ -204,7 +179,6 @@
 -(void) ResetLabels
 {
 	m_questionsPassedLabel.text = @"";
-	m_scoreLabel.text = @"";
     m_globalHighscoreLabel.text = @"";
 	m_dynamicLabel.text = @"";
 	m_secondsUsedLabel.text = @"";
@@ -247,17 +221,13 @@
     [headerImage release];
     
     //tempPlayer = [[players objectAtIndex:0] retain];
-    Player *tempPlayer = [[gameRef GetPlayer] retain];
+    Player *player = [[gameRef GetPlayer] retain];
     //passed xx questions in easy game
-    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"],[tempPlayer GetQuestionsPassed]];
+    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"],[player GetQuestionsPassed]];
     m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
+
     
-    
-    //score
-    m_scoreLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"],123];
-    m_scoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  105);
-    
-    NSInteger time = [tempPlayer GetSecondsUsed];
+    NSInteger time = [player GetSecondsUsed];
     NSString *seconds = [[NSString stringWithFormat:@"%d",time%60] retain];
     if ([seconds length] == 1 ) {
         m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:0%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],time/60,time%60];
@@ -272,7 +242,7 @@
 
     
     Highscore *hs = [gameRef GetHighscore];
-    NSInteger newHighScorePlace = [hs CheckIfNewHighScore:tempPlayer difficultyLevel:[gameRef GetGameDifficulty]];
+    NSInteger newHighScorePlace = [hs CheckIfNewHighScore:player difficultyLevel:[gameRef GetGameDifficulty]];
     if (newHighScorePlace < 99) {
         NSString *gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"set level difficulty"];
         Difficulty diffLevel = [gameRef GetGameDifficulty];
@@ -346,7 +316,7 @@
     [self addSubview:exitButton];
     
     
-    [tempPlayer release];
+    [player release];
     
     [screen release];
 }
@@ -469,7 +439,6 @@
 -(void) SetAlphaIn
 {
 	[m_questionsPassedLabel setAlpha:1];
-	[m_scoreLabel setAlpha:1];
     [m_globalHighscoreLabel setAlpha:1];
 	[m_dynamicLabel setAlpha:1];
 	[m_secondsUsedLabel setAlpha:1];

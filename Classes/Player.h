@@ -80,8 +80,6 @@
 -(void) ResetPosition;
 -(NSInteger) GetPositionByScore;
 
--(void) IncreaseScoreWithRoundScore;
-
 -(NSInteger) GetSecondsUsed;
 -(NSInteger) GetEasyQuestionsPassed;
 -(NSInteger) GetMediumQuestionsPassed;
@@ -104,7 +102,6 @@
 -(void) SetCurrentTimeMultiplier:(NSInteger) timeMultiplier;
 -(NSInteger) GetCurrentTimeMultiplier;
 
--(void) GiveUp;
 -(BOOL) HasGivenUp;
 
 @end

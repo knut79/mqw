@@ -112,7 +112,6 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 -(void) SetPlayerClock;
 -(void) AnimateAndGiveTimePoints;
 -(void) GiveTimePoints;
--(void) PlayerGaveUp;
 -(void) RemoveGameBoardAndBars;
 -(void) LoadGameBoardAndBars;
 -(void) sectionAnimationDidStop:(CGPoint) oldCenterPoint;

@@ -23,7 +23,6 @@
 	UILabel *m_tapWhenReadyLabel;
 	UIImageView* m_headerImageView;
 	UILabel *m_questionsPassedLabel;
-	UILabel *m_scoreLabel;
     UILabel *m_globalHighscoreLabel;
 	UIImageView* m_highscoreImageView;	
 	UILabel *m_dynamicLabel;

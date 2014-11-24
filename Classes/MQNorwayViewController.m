@@ -792,13 +792,13 @@
 	}
     
     
-    Player *currentPlayer = [[m_gameRef GetPlayer] retain];
+    Player *player = [[m_gameRef GetPlayer] retain];
     
     //add question for challenge
     ChallengeQuestionItem* newQuestion = [[[ChallengeQuestionItem alloc] init] autorelease];
     newQuestion.qid = [[m_gameRef GetQuestion] GetID];
-    newQuestion.kmLeft = [currentPlayer GetKmLeft];   //[currentPlayer GetLastDistanceFromDestination ];
-    newQuestion.kmTimeBonus = [currentPlayer GetCurrentKmTimeBonus];
+    newQuestion.kmLeft = [player GetKmLeft];   //[currentPlayer GetLastDistanceFromDestination ];
+    newQuestion.kmTimeBonus = [player GetCurrentKmTimeBonus];
     newQuestion.answered = 1;
     NSLog(@"Question values %@ %d %d %d", newQuestion.qid,newQuestion.kmLeft,newQuestion.kmTimeBonus,newQuestion.answered);
     [m_gameRef.challenge addQuestion:newQuestion];
@@ -808,14 +808,19 @@
     
     
     m_animTextView.hidden = NO;
-    [m_animTextView setText:[currentPlayer GetPepTalk]];
-    [currentPlayer release];
+    [m_animTextView setText:[player GetPepTalk]];
+    
     [m_animTextView startTextAnimation];
     
     
     [resultBoardView drawResult_UpdateGameData:YES];
     
-    
+    if ([player IsOut] == NO) {
+        Question* question = [[m_gameRef GetQuestion] retain];
+        [player IncreasQuestionsPassed:question];
+        [question release];
+    }
+    [player release];
     
 	if ([m_gameRef IsTrainingMode] == YES) {
 		//[infoBarBottom SetTrainingText];
@@ -1298,15 +1303,6 @@
     resultBoardView = nil;
 }
 
--(void) GiveUp
-{
-    //the current player gives up
-    Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-    [currentPlayer GiveUp];
-    [currentPlayer release];
-    [self PlayerGaveUp]; 
-}
-
 #pragma mark HintButtonViewDelegate
 -(void) UseHint
 {
@@ -1489,78 +1485,6 @@
 	}
 }
 
-
--(void)PlayerGaveUp
-{
-	@try {
-		
-        [self RemoveGameElementsForPlayer];
-        
-		
-		[touchImageView setAlpha:0];
-		
-//		//convert to reel map point
-        CGPoint realMapGamePoint = CGPointMake(9999, 9999); 
-		
-		Player *currentPlayer = [[m_gameRef GetPlayer] retain];
-		[currentPlayer SetGamePoint:realMapGamePoint];
-		
-		[currentPlayer PauseTimer];
-		
-		
-		BOOL showingResult = NO;
-        
-		//if ([m_gameRef CurrentPlayerIsLast] == YES)
-
-			showingResult = YES;
-			
-			//make game point into real map coordinates
-			//CGPoint realMapGamePoint;
-            realMapGamePoint = CGPointMake(9999, 9999); 
-			
-			[currentPlayer SetGamePoint:realMapGamePoint];
-			
-			//_?12
-			[touchImageView setAlpha:0];
-			
-			if ([m_gameRef IsTrainingMode] == NO) {
-				[m_gameRef SetGameState:showResult];
-			}
-			
-			[resultBoardView drawResult_UpdateGameData:YES];
-			[self performTransition];
-			
-			[questionBarTop FadeOut];
-			[answerBarTop FadeIn];
-			
-            /*
-		}
-		else {
-
-			CGPoint realMapGamePoint;
-            realMapGamePoint = CGPointMake(9999, 9999);
-			[currentPlayer SetGamePoint:realMapGamePoint]; 
-		}*/
-		
-		//[m_gameRef SetNextPlayer];
-		Player *nextPlayer = [[m_gameRef GetPlayer] retain];
-        [self SetGameElementsForPlayer:nextPlayer];
-		
-
-		NSString *playerSymbol = [[nextPlayer GetPlayerSymbol] retain];
-		UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
-		touchImageView.image = image;
-		[image release];
-		[playerSymbol release];
-		
-		[self FadeOutGameElements];
-		
-		[nextPlayer release];
-	}
-	@catch (NSException * e) {
-		NSLog(@"failed in doSetPosition: %@",e);
-	}
-}
 
 
 #pragma mark For game menu

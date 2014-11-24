@@ -31,7 +31,6 @@
 	float m_barWidthStart;
 	NSMutableArray *m_kmLeftArray;
 	NSMutableArray *m_barWidthArray;
-	NSInteger m_numberOfPlayersLeft;
 	NSInteger m_timerNumerator;
 	
 	UIButton *m_setPositionButton;

@@ -39,7 +39,6 @@
 
 	m_timerNumerator = 1;
 	
-	m_numberOfPlayersLeft = 0;
 	m_drawUpdatedScore = NO;
 	
 	m_labelPool = [[NSMutableArray alloc] init];
@@ -58,7 +57,6 @@
 	
 	m_timerNumerator = 1;
 	
-	m_numberOfPlayersLeft = 0;
 	Player *player = [[m_gameRef GetPlayer] retain];
 	//Init the barwidth for each player
 
@@ -336,27 +334,17 @@
 -(void) UpdateBars
 {
 	m_timerNumerator = 1;
-	m_numberOfPlayersLeft = 0;
 	int playersLeftAfterAnimation = 0;
 	Question *currentQuestion = [[m_gameRef GetQuestion] retain];
 	Player *player = [[m_gameRef GetPlayer]retain];
 	//Init the barwidth for each player
 
 
-    if ([player IsOut] == NO) {
-        m_numberOfPlayersLeft++;
-    }
-    
     /*
-    if (([player GetKmLeft] + [player GetCurrentKmTimeBonus]) > 0) {
-        playersLeftAfterAnimation ++;
+    if ([player IsOut] == NO) {
+        [player IncreasQuestionsPassed:currentQuestion];
+    }*/
 
-        //only singleplayer games wil give highscores
-        //[player IncreasQuestionsPassedAndScore:currentQuestion];
-
-    }
-
-	[m_gameRef SetPlayersLeft:playersLeftAfterAnimation];*/
 	[player release];
 	[currentQuestion release];
 	

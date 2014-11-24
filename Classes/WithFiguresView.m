@@ -276,6 +276,7 @@
                 
                 //NSLog(@"playersymbol %@ x:%d y:%d",playerSymbolString,gamePoint.x,gamePoint.y);
                // [self DrawPlayerSymbol:playerSymbolString andContextRef:context andGamePoint:gamePoint];
+                //[player IncreasQuestionsPassed:question];
 
                 
                 if(_playerSymbolMiniWindowView != nil)

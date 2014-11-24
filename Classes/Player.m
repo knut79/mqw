@@ -163,10 +163,6 @@
 	m_out = outValue;
 }
 
--(void) GiveUp
-{
-    m_givenUp = YES;
-}
 
 -(BOOL) HasGivenUp
 {
