@@ -361,6 +361,7 @@
 
 // We override the setDelegate: method because we can't manage resolution changes unless we are our own delegate.
 - (void)setDelegate:(id)delegate {
+    //[NSException raise:@"Invalid delegate" format:@"You can't set the delegate of a TiledZoomableScrollView. It is its own delegate."];
     NSLog(@"You can't set the delegate of a TiledZoomableScrollView. It is its own delegate.");
 }
 

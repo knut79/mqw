@@ -543,11 +543,7 @@
     kmLeft = [player GetKmLeft_ForInfoBar];
     barColor = [[player GetColor] retain];
     NSString *barText = [NSString stringWithFormat:@"%d %@ %@",[[GlobalSettingsHelper Instance] ConvertToRightDistance:kmLeft],[[GlobalSettingsHelper Instance] GetDistanceMeasurementString], [player GetDistanceTimeBounusString]];
-    if([player HasGivenUp] == YES)
-    {
-        barWidth = 0;
-        barText = [NSString stringWithFormat:@"%@ %@",[player GetName],[[GlobalSettingsHelper Instance] GetStringByLanguage:@"has given up"]];
-    }
+
     [self drawBarAndText: context barWidth:barWidth andText:barText
                    textX:10 textY:30 barX:10 barY:20 barHeight:10 barColor:barColor timeBonusBarWidth:[player GetTimeBonusBarWidth]];
     [barColor release];

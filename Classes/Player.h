@@ -39,9 +39,6 @@
     NSInteger m_currentKmTimeBonus;
 	NSInteger m_timeBonusBarWidth;
 	NSInteger m_currentTimeMultiplier;
-    BOOL m_givenUp;
-
-	
 
 }
 -(id) initWithName:(NSString*) name andColor:(UIColor*) color andPlayerSymbol:(NSString*) playerSymbol;
@@ -101,7 +98,5 @@
 
 -(void) SetCurrentTimeMultiplier:(NSInteger) timeMultiplier;
 -(NSInteger) GetCurrentTimeMultiplier;
-
--(BOOL) HasGivenUp;
 
 @end

@@ -39,7 +39,6 @@
         m_hints = 2;
         m_passes = 2;
         m_currentKmTimeBonus = 20;
-        m_givenUp = NO;
         m_currentTimeMultiplier = 0;
 	}
 	return self;
@@ -72,10 +71,7 @@
 
 -(NSInteger) GetKmLeft
 {
-    if(m_givenUp == YES)
-        return 0;
-    else
-        return m_kmLeft;
+    return m_kmLeft;
 }
 
 -(NSInteger) GetLastKmLeft
@@ -163,11 +159,6 @@
 	m_out = outValue;
 }
 
-
--(BOOL) HasGivenUp
-{
-    return m_givenUp;
-}
 
 -(void) SetPetTalk:(NSInteger) missedDistance
 {
@@ -318,10 +309,7 @@
 
 -(NSInteger) GetCurrentKmTimeBonus
 {
-    if(m_givenUp == YES)
-        return 0;
-    else
-        return m_currentKmTimeBonus;
+    return m_currentKmTimeBonus;
 }
 
 -(NSString*) GetDistanceTimeBounusString

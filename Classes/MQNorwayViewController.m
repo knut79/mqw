@@ -177,27 +177,6 @@
 	}
 }
 
--(void) SetGameElementsForPlayer:(Player*) player
-{
-
-    //restart clock
-//    if (clockView != nil) {
-//        clockView = [[ClockView alloc] init];
-//        //[clockView setDelegate:self];
-//        [[self view] addSubview:clockView];
-//    }
-//    [clockView StartClock];
-//    
-//   
-//    if (hintButton == nil) {
-//        hintButton = [[HintButtonView alloc] init];
-//        [hintButton setDelegate:self];
-//        [[self view] addSubview:hintButton];
-//    }
-     
-    
-}
-
 -(void) RemoveGameElementsForPlayer
 {
     //only remove clock after points animation done
@@ -702,7 +681,7 @@
         }
     }
 
-    [player release];
+    
     
     //draw bars without showing timebonus
     //____?? DRAW BARS WITHOUT TIMEBONUS
@@ -711,28 +690,13 @@
 
 
 	
-	
-	if (([[m_gameRef GetPlayer] IsOut] == YES) || ([[m_gameRef GetPlayer] HasGivenUp] == YES)) {
-        
-        //[m_gameRef SetNextPlayer];
-		
-        
-        Player *nextPlayer = [[m_gameRef GetPlayer] retain];
-        [self SetGameElementsForPlayer:nextPlayer];
-
-		NSString *playerName = [[nextPlayer GetName] retain];
-		
-		
-		NSString *playerSymbol = [[nextPlayer GetPlayerSymbol] retain];
-		UIImage *image = [[UIImage imageNamed:playerSymbol] retain];
-		touchImageView.image = image;
-		[image release];
-		[playerSymbol release];
-		
-
-		[playerName release];
-		[nextPlayer release];		
-	}
+    if ([player IsOut] == NO) {
+        Question* question = [[m_gameRef GetQuestion] retain];
+        [player IncreasQuestionsPassed:question];
+        [question release];
+    }
+    
+    [player release];
 
 	[answerBarTop FadeOut];
 	[self FadeOutGameElements];
@@ -815,11 +779,7 @@
     
     [resultBoardView drawResult_UpdateGameData:YES];
     
-    if ([player IsOut] == NO) {
-        Question* question = [[m_gameRef GetQuestion] retain];
-        [player IncreasQuestionsPassed:question];
-        [question release];
-    }
+
     [player release];
     
 	if ([m_gameRef IsTrainingMode] == YES) {
@@ -1462,11 +1422,8 @@
         
         [questionBarTop FadeOut];
         [answerBarTop FadeIn];
-            
 
         [player SetCurrentTimeMultiplier:0];
-        [self SetGameElementsForPlayer:player];
-		
 		
 		NSString *playerSymbol = [[player GetPlayerSymbol] retain];
 		UIImage *image = [[UIImage imageNamed:playerSymbol] retain];

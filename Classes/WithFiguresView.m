@@ -254,14 +254,6 @@
                 [playerSymbolString release];
                 [playerColor release];
             //}
-            
-            if ([player HasGivenUp] == YES) {
-                [player SetKmLeft:-999];
-            }
-			
-			
-			
-
 			
 			
 			//_? change in NMQ
