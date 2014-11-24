@@ -5,24 +5,23 @@
 //  Created by knut dullum on 03/04/2011.
 //  Copyright 2011 lemmus. All rights reserved.
 //
-
+#import "HighscoreGlobalView.h"
 #import <UIKit/UIKit.h>
-#import "HighscoreTopLevelMenu.h"
 #import "InstructionsView.h"
 #import "StatisticsView.h"
 #import "PlayerStats.h"
 //#import "StatisticsViewController.h"
 
 @protocol OtherInfoViewDelegate;
-@interface OtherInfoView : UIView<HighscoreTopLevelMenuDelegate,StatisticsViewDelegate,InstructionsViewDelegate> {
+@interface OtherInfoView : UIView<HighscoreGlobalViewDelegate,StatisticsViewDelegate,InstructionsViewDelegate> {
     id <OtherInfoViewDelegate> delegate;
     
 	
 	UILabel *headerLabel;
-	HighscoreTopLevelMenu *highscoreView;
+    HighscoreGlobalView *highscoreGlobalView;
 	InstructionsView *instructionsView;
 	StatisticsView *statisticsView;
-//	StatisticsViewController *statisticsViewController;
+
 	UIButton *buttonInstructionsMenu;
 	UIButton *buttonStatisticsMenu;
 	UIButton *buttonHighscoreMenu;

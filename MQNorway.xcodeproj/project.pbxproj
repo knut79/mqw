@@ -851,7 +851,6 @@
 		EE9898A413300F4200CBA780 /* Mountain.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98989E13300F4200CBA780 /* Mountain.m */; };
 		EE9898A513300F4200CBA780 /* MpPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898A013300F4200CBA780 /* MpPlace.m */; };
 		EE9898A613300F4200CBA780 /* UnDefPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898A213300F4200CBA780 /* UnDefPlace.m */; };
-		EE9898B813300FCC00CBA780 /* HighscoreLocalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AA13300FCC00CBA780 /* HighscoreLocalView.m */; };
 		EE9898B913300FCC00CBA780 /* InstructionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AC13300FCC00CBA780 /* InstructionsView.m */; };
 		EE9898BA13300FCC00CBA780 /* MainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898AE13300FCC00CBA780 /* MainMenuView.m */; };
 		EE9898BD13300FCC00CBA780 /* StartGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898B413300FCC00CBA780 /* StartGameMenu.m */; };
@@ -872,7 +871,6 @@
 		EEA138ED147C2EC1007F47BC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA138EC147C2EC1007F47BC /* AddressBookUI.framework */; };
 		EEA4106A12B9883D006B3A10 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA4106912B9883D006B3A10 /* QuartzCore.framework */; };
 		EEB252C31347148C003B3AAF /* StatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB252C21347148C003B3AAF /* StatisticsView.m */; };
-		EEBC6832142E1C2800EB281F /* HighscoreTopLevelMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC6831142E1C2800EB281F /* HighscoreTopLevelMenu.m */; };
 		EEBC69E91437CA2B00EB281F /* HintButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC69E81437CA2B00EB281F /* HintButtonView.m */; };
 		EEBC69EC1437CAC200EB281F /* PassButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC69EB1437CAC200EB281F /* PassButtonView.m */; };
 		EEBC69EF1437CAD300EB281F /* QuitButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBC69EE1437CAD300EB281F /* QuitButtonView.m */; };
@@ -1795,8 +1793,6 @@
 		EE9898A013300F4200CBA780 /* MpPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MpPlace.m; sourceTree = "<group>"; };
 		EE9898A113300F4200CBA780 /* UnDefPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnDefPlace.h; sourceTree = "<group>"; };
 		EE9898A213300F4200CBA780 /* UnDefPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnDefPlace.m; sourceTree = "<group>"; };
-		EE9898A913300FCC00CBA780 /* HighscoreLocalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreLocalView.h; sourceTree = "<group>"; };
-		EE9898AA13300FCC00CBA780 /* HighscoreLocalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreLocalView.m; sourceTree = "<group>"; };
 		EE9898AB13300FCC00CBA780 /* InstructionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsView.h; sourceTree = "<group>"; };
 		EE9898AC13300FCC00CBA780 /* InstructionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsView.m; sourceTree = "<group>"; };
 		EE9898AD13300FCC00CBA780 /* MainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuView.h; sourceTree = "<group>"; };
@@ -1834,8 +1830,6 @@
 		EEA4106912B9883D006B3A10 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEB252C11347148C003B3AAF /* StatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsView.h; sourceTree = "<group>"; };
 		EEB252C21347148C003B3AAF /* StatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsView.m; sourceTree = "<group>"; };
-		EEBC6830142E1C2800EB281F /* HighscoreTopLevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreTopLevelMenu.h; sourceTree = "<group>"; };
-		EEBC6831142E1C2800EB281F /* HighscoreTopLevelMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreTopLevelMenu.m; sourceTree = "<group>"; };
 		EEBC69E71437CA2B00EB281F /* HintButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintButtonView.h; sourceTree = "<group>"; };
 		EEBC69E81437CA2B00EB281F /* HintButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintButtonView.m; sourceTree = "<group>"; };
 		EEBC69EA1437CAC200EB281F /* PassButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassButtonView.h; sourceTree = "<group>"; };
@@ -3097,10 +3091,6 @@
 		EED5544E14E885810070F3F2 /* Highscore */ = {
 			isa = PBXGroup;
 			children = (
-				EEBC6830142E1C2800EB281F /* HighscoreTopLevelMenu.h */,
-				EEBC6831142E1C2800EB281F /* HighscoreTopLevelMenu.m */,
-				EE9898A913300FCC00CBA780 /* HighscoreLocalView.h */,
-				EE9898AA13300FCC00CBA780 /* HighscoreLocalView.m */,
 				EEA1348D1460309A007F47BC /* HighscoreGlobalView.h */,
 				EEA1348E1460309A007F47BC /* HighscoreGlobalView.m */,
 			);
@@ -4010,7 +4000,6 @@
 				EE9898A413300F4200CBA780 /* Mountain.m in Sources */,
 				EE9898A513300F4200CBA780 /* MpPlace.m in Sources */,
 				EE9898A613300F4200CBA780 /* UnDefPlace.m in Sources */,
-				EE9898B813300FCC00CBA780 /* HighscoreLocalView.m in Sources */,
 				EE9898B913300FCC00CBA780 /* InstructionsView.m in Sources */,
 				EE9898BA13300FCC00CBA780 /* MainMenuView.m in Sources */,
 				EE9898BD13300FCC00CBA780 /* StartGameMenu.m in Sources */,
@@ -4048,7 +4037,6 @@
 				EEEE28D213C5F8C500DF9E3D /* UILabelUnderline.m in Sources */,
 				EEC51CE313FEA843002B0D68 /* TestView.m in Sources */,
 				EEC51E5914015465002B0D68 /* ClockView.m in Sources */,
-				EEBC6832142E1C2800EB281F /* HighscoreTopLevelMenu.m in Sources */,
 				EEBC69E91437CA2B00EB281F /* HintButtonView.m in Sources */,
 				EEBC69EC1437CAC200EB281F /* PassButtonView.m in Sources */,
 				EEBC69EF1437CAD300EB281F /* QuitButtonView.m in Sources */,

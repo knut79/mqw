@@ -17,7 +17,6 @@
 	StartGameMenu *startGameMenu;
 	OtherInfoView* otherInfoView;
 	id <MainMenuViewDelegate> delegate;
-	//SkyView *m_skyView;
 	UILabel *loadingLabel;
 	
 	UIButton *buttonStartMenu;
@@ -25,8 +24,8 @@
 	UIButton *buttonRestart;
     UIButton *buttonChallengesMenu;
     TakeChallenge* takeChallengeViewCtrl;
-	
 }
+
 - (void)SettingsMenuViewHiding;
 -(void) FadeIn;
 -(void) FadeOut;

@@ -225,9 +225,6 @@
 
 
 - (void)dealloc {
-    /*
-    [startGameMenu release];
-    [buttonStartMenu release];*/
 	[self removeFromSuperview];
     [super dealloc];
 }
