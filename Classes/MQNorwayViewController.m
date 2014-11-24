@@ -1072,7 +1072,7 @@
 	[resultBoardView setGameRef:m_gameRef];
 	
 
-    [self PreparPlayer];
+    [self PrepairPlayer];
     
 	
     [[self view] bringSubviewToFront:touchImageView];
@@ -1085,7 +1085,7 @@
     [self StartNewGame];
 }
 
--(void) PreparPlayer
+-(void) PrepairPlayer
 {
     Player *player = [[m_gameRef GetPlayer] retain];
     [player SetCurrentKmTimeBonus:0];
@@ -1205,8 +1205,8 @@
 			}
 			[m_gameEndedView SetHeader:m_gameRef];
             
-            [self RemoveGameBoardAndBars];
-            [self cleanUpGameElements];
+            //[self RemoveGameBoardAndBars];
+            //[self cleanUpGameElements];
 		}
 		else {
 			[self DisplayReplayGameMenu];
