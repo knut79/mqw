@@ -34,6 +34,7 @@
 }
 @property(nonatomic) CGRect boundsOfRegion;
 @property(nonatomic) CGRect tilesMapViewBounds;
+@property(nonatomic) CGPoint lastCenterPoint;
 @property(nonatomic, retain) PlayerSymbolMiniWindowView *playerSymbolMiniWindowView;
 @property(nonatomic, retain) SectionFiguresView *sectionFiguresView;
 @property (nonatomic, assign) id <WithFiguresViewDelegate> delegate;

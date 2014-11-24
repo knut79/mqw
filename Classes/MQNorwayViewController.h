@@ -115,6 +115,7 @@ QuitButtonViewDelegate,PassButtonViewDelegate,HintButtonViewDelegate,CreatePlaye
 -(void) PlayerGaveUp;
 -(void) RemoveGameBoardAndBars;
 -(void) LoadGameBoardAndBars;
+-(void) sectionAnimationDidStop:(CGPoint) oldCenterPoint;
 @end
 
 

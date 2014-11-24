@@ -50,7 +50,6 @@
 	[self addSubview:m_imageView];
 	[self addSubview:m_label];
 	[self addSubview:m_tapToEnlarge];
-//	[m_label setAlpha:0];
     return self;
 }
 
@@ -65,7 +64,7 @@
 		//[UIView setAnimationDidStopSelector:@selector(doMoveOn)];
 		if(self.frame.size.height < 100)
 		{
-			//strech
+			//streech
 			[m_label setFont:[UIFont boldSystemFontOfSize:12.0f]];
 			[m_tapToEnlarge setAlpha:0];
 			[self setFrame:CGRectMake(0, 0, 320, 110)];
@@ -140,44 +139,15 @@
 	
 	m_resultLabel.center = CGPointMake([self frame].size.width/2, -(m_resultLabel.frame.size.height/2));
 	
-//	CGSize labelSize = [m_resultLabel.text sizeWithFont:m_resultLabel.font
-//							  constrainedToSize:m_resultLabel.frame.size
-//								  lineBreakMode:m_resultLabel.lineBreakMode];
-//	m_resultLabel.frame = CGRectMake(
-//							 m_resultLabel.origin.x, m_resultLabel.origin.y, 
-//							 m_resultLabel.size.width, labelSize.height);
-	//m_resultLabel.numberOfLines = 1;
-	//m_resultLabel.adjustsFontSizeToFitWidth = YES;
-	//m_resultLabel.textAlignment = NSTextAlignmentCenter;
-	//m_resultLabel.center = CGPointMake([screen applicationFrame].size.width/2, 28);	
-	
-	
-	//[m_resultLabel setFont:[UIFont systemFontOfSize:12.0f]];
-	
-//	NSLog([NSString stringWithFormat:@"resLab %@ , lab %@",m_resultLabel.text,m_label.text]);
-	
+
 	[m_resultLabel setAlpha:0];
 	
 	[addInfo release];
 	[screen release];	
 	[questionRef release];
-//	[m_resultLabel setAlpha:1];
-//	[m_label setAlpha:1];
+
 }
 
-//-(void) HideResultLabel
-//{
-//	[m_resultLabel setAlpha:0];
-//}
-//
-//-(void) DisplayNonResult
-//{
-//	[UIView beginAnimations:nil context:NULL];
-//	[UIView setAnimationDuration:0.5];
-//	[m_resultLabel setAlpha:0];
-//	[m_label setAlpha:1];
-//	[UIView commitAnimations];	
-//}
 
 
 -(void) FadeIn

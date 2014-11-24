@@ -764,6 +764,7 @@
         xOffset = xOffset * scaleFactor;
         yOffset = yOffset * scaleFactor;
         [resultBoardView.sectionFiguresView setAlpha:1];
+        resultBoardView.lastCenterPoint = resultBoardView.sectionFiguresView.center;
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.5];
         [UIView setAnimationDidStopSelector:@selector(sectionAnimationDidStop)];
@@ -774,15 +775,23 @@
         [UIView commitAnimations];
         
     }
+
     [screen release];
+    
+    [self prepareForNextQuestion];
    
-	if (m_animTextView == nil) {
+
+}
+
+-(void) prepareForNextQuestion
+{
+    if (m_animTextView == nil) {
 		m_animTextView = [[AnimateTextView alloc] initWithFrame:[[self view] bounds]];
 		[m_animTextView setDelegate:self];
 		[[self view] addSubview:m_animTextView];
 	}
-
-
+    
+    
     Player *currentPlayer = [[m_gameRef GetPlayer] retain];
     
     //add question for challenge
@@ -792,7 +801,7 @@
     newQuestion.kmTimeBonus = [currentPlayer GetCurrentKmTimeBonus];
     newQuestion.answered = 1;
     NSLog(@"Question values %@ %d %d %d", newQuestion.qid,newQuestion.kmLeft,newQuestion.kmTimeBonus,newQuestion.answered);
-    [m_gameRef.challenge addQuestion:newQuestion];        
+    [m_gameRef.challenge addQuestion:newQuestion];
     
     
     [questionBarTop FadeOut];
@@ -805,25 +814,25 @@
     
     
     [resultBoardView drawResult_UpdateGameData:YES];
-
-	   
+    
+    
     
 	if ([m_gameRef IsTrainingMode] == YES) {
 		//[infoBarBottom SetTrainingText];
 		[infoBarBottom UpdateTrainingText];
 	}
-	else 
-	{		
+	else
+	{
         if (m_restoreGameState)
         {
             m_restoreGameState = NO;
             [infoBarBottom SetBars];
         }
         else
-        {	
+        {
             [infoBarBottom UpdateBars];
         }
-
+        
 	}
 	[[self view] addSubview:resultBoardView.playerSymbolMiniWindowView];
 	[answerBarTop SetResult:m_gameRef];
@@ -832,8 +841,6 @@
 	[self.view bringSubviewToFront:m_animTextView];
     [self.view bringSubviewToFront:resultBoardView.playerSymbolMiniWindowView];
 	[self.view bringSubviewToFront:answerBarTop];
-    
-
 }
 
 
@@ -841,9 +848,13 @@
 {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.5];
+    //[UIView setAnimationDidStopSelector:@selector(sectionAnimationResetAnimationDidStop)];
+    [UIView setAnimationDelegate:self];
     [resultBoardView.sectionFiguresView setAlpha:0];
+    resultBoardView.sectionFiguresView.center = resultBoardView.lastCenterPoint;
     [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(1, 1)];
     [UIView commitAnimations];
+    //[self prepareForNextQuestion];
 }
 
 

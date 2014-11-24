@@ -52,8 +52,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     datasourceArray = [[NSMutableArray alloc] init];
-//    [datasourceArray addObject:[NSString stringWithFormat:@"hei hei"]];
-//    [datasourceArray addObject:[NSString stringWithFormat:@"lei lei"]];
     [self setWantsFullScreenLayout:YES];
 
 	textFieldUser.clearsOnBeginEditing = YES;
