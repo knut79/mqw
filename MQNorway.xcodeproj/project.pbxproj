@@ -869,7 +869,6 @@
 		EE9898DC1330107400CBA780 /* TouchImageView_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9898DB1330107400CBA780 /* TouchImageView_Private.m */; };
 		EE9BD26213B6297600DD30BE /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9BD26113B6297600DD30BE /* MagnifierView.m */; };
 		EEA1348F1460309A007F47BC /* HighscoreGlobalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA1348E1460309A007F47BC /* HighscoreGlobalView.m */; };
-		EEA1384C14766C57007F47BC /* CreateIDView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA1384B14766C57007F47BC /* CreateIDView.m */; };
 		EEA138EB147C2EB7007F47BC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA138EA147C2EB7007F47BC /* AddressBook.framework */; };
 		EEA138ED147C2EC1007F47BC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA138EC147C2EC1007F47BC /* AddressBookUI.framework */; };
 		EEA4106A12B9883D006B3A10 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA4106912B9883D006B3A10 /* QuartzCore.framework */; };
@@ -1831,8 +1830,6 @@
 		EE9BD26113B6297600DD30BE /* MagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnifierView.m; sourceTree = "<group>"; };
 		EEA1348D1460309A007F47BC /* HighscoreGlobalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreGlobalView.h; sourceTree = "<group>"; };
 		EEA1348E1460309A007F47BC /* HighscoreGlobalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreGlobalView.m; sourceTree = "<group>"; };
-		EEA1384A14766C57007F47BC /* CreateIDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateIDView.h; sourceTree = "<group>"; };
-		EEA1384B14766C57007F47BC /* CreateIDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateIDView.m; sourceTree = "<group>"; };
 		EEA138EA147C2EB7007F47BC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		EEA138EC147C2EC1007F47BC /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		EEA4106912B9883D006B3A10 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -2948,8 +2945,6 @@
 				EEC51CE213FEA843002B0D68 /* TestView.m */,
 				EEC51E5714015465002B0D68 /* ClockView.h */,
 				EEC51E5814015465002B0D68 /* ClockView.m */,
-				EEA1384A14766C57007F47BC /* CreateIDView.h */,
-				EEA1384B14766C57007F47BC /* CreateIDView.m */,
 				BE8D7BF61567EEB200D954E8 /* CreatePlayerVC.h */,
 				BE8D7BF71567EEB200D954E8 /* CreatePlayerVC.m */,
 				BE8D7BF81567EEB200D954E8 /* CreatePlayerVC.xib */,
@@ -4065,7 +4060,6 @@
 				EEBC69EC1437CAC200EB281F /* PassButtonView.m in Sources */,
 				EEBC69EF1437CAD300EB281F /* QuitButtonView.m in Sources */,
 				EEA1348F1460309A007F47BC /* HighscoreGlobalView.m in Sources */,
-				EEA1384C14766C57007F47BC /* CreateIDView.m in Sources */,
 				EE53959114BB9B41008E029F /* SoapHelper.m in Sources */,
 				EE53959814C0D44E008E029F /* Challenge.m in Sources */,
 				EE53959B14C0D4D0008E029F /* ChallengeQuestionItem.m in Sources */,

@@ -217,6 +217,7 @@
     Player *player = [[gameRef GetPlayer] retain];
 
     //move this section
+    /*
     [[GlobalSettingsHelper Instance] GetPlayerName]
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@",
                               @"id", playerID];
@@ -224,7 +225,7 @@
     [highscoreService writeItemItNotExists:item predicate:predicate completion:^{
         
     }];
-    
+    */
     /*
     NSDictionary *item = @{ @"name" : itemText.text, @"fullname" : @"NO name" };
     [highscoreService addItem:item completion:^(NSUInteger index)
