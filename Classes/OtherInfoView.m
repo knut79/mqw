@@ -151,17 +151,6 @@
 
 -(void)highscoreMenu:(id)Sender
 {
-    /*
-	if (highscoreView == nil) {
-		highscoreView = [[HighscoreTopLevelMenu alloc] initWithFrame:[self frame]];
-		[highscoreView setDelegate:self];
-        [self addSubview:highscoreView];
-	}
-	else {
-		[highscoreView UpdateLabels];
-	}
-    [highscoreView FadeIn];*/
-    
     if (highscoreGlobalView == nil) {
 		highscoreGlobalView = [[HighscoreGlobalView alloc] initWithFrame:[self frame]];
 		[highscoreGlobalView setDelegate:self];

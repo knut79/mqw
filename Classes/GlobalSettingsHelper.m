@@ -107,6 +107,16 @@
     m_playerID = [playerID retain];
 }
 
+-(NSString*) GetPlayerFbID
+{
+    return m_playerFbID;
+}
+
+-(void) SetPlayerFbID:(NSString*) playerFbID
+{
+    m_playerFbID = [playerFbID retain];
+}
+
 -(NSString*) GetPlayerName
 {
     return m_playerName;

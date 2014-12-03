@@ -11,14 +11,16 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SoapHelper.h"
 
+
 @implementation GameEndedView
 @synthesize delegate;
+
+
 
 - (id)initWithFrame:(CGRect)frame{
     if ((self = [super initWithFrame:frame])) {
         
-        
-        //_?AZURE send inn results
+        self.highscoreService = [HighscoreService defaultService];
         
         // Initialization code
         UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
@@ -212,28 +214,47 @@
 {
     UIScreen *screen = [[UIScreen mainScreen] retain];
 
-	
+    Player *player = [[gameRef GetPlayer] retain];
+
+    //move this section
+    [[GlobalSettingsHelper Instance] GetPlayerName]
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@",
+                              @"id", playerID];
+    NSDictionary *item = @{ @"UserId" : playerID, @"Name" : firstname };
+    [highscoreService writeItemItNotExists:item predicate:predicate completion:^{
+        
+    }];
+    
+    /*
+    NSDictionary *item = @{ @"name" : itemText.text, @"fullname" : @"NO name" };
+    [highscoreService addItem:item completion:^(NSUInteger index)
+     {
+
+     }];
+    */
+
+    //end move this section
+    
+    
     
     self.userInteractionEnabled = NO;
     //NSMutableArray *players = [[gameRef GetPlayers] retain];
     UIImage *headerImage = [[UIImage imageNamed:@"GameOver.png"] retain];
     m_headerImageView.image = headerImage;
     [headerImage release];
-    
-    //tempPlayer = [[players objectAtIndex:0] retain];
-    Player *player = [[gameRef GetPlayer] retain];
+
     //passed xx questions in easy game
-    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"],[player GetQuestionsPassed]];
+    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"],(int)[player GetQuestionsPassed]];
     m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
 
     
     NSInteger time = [player GetSecondsUsed];
-    NSString *seconds = [[NSString stringWithFormat:@"%d",time%60] retain];
+    NSString *seconds = [[NSString stringWithFormat:@"%d",(int)time%60] retain];
     if ([seconds length] == 1 ) {
-        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:0%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],time/60,time%60];
+        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:0%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
     }
     else {
-        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],time/60,time%60];
+        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
     }
     [seconds release];
     
@@ -246,18 +267,6 @@
     if (newHighScorePlace < 99) {
         NSString *gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"set level difficulty"];
         Difficulty diffLevel = [gameRef GetGameDifficulty];
-        /*
-        switch (diffLevel) {
-            case hardDif:
-            case veryhardDif:
-                gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"hard"];
-                break;
-            case medium:
-                gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"medium"];
-            default:
-                break;
-        }*/
-
         
         UIImage *trophyImage = [[UIImage imageNamed:@"trophy.png"] retain];
         m_highscoreImageView.image = trophyImage;

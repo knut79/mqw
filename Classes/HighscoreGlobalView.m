@@ -23,6 +23,7 @@
         UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
 		self.backgroundColor = lightBlueColor;
 		
+        m_showingLevel = level5;
 		
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		m_centerX = [screen applicationFrame].size.width/2;
@@ -34,8 +35,6 @@
 		headerLabel.backgroundColor = [UIColor clearColor]; 
 		headerLabel.textColor = [UIColor whiteColor];
 		[headerLabel setFont:[UIFont boldSystemFontOfSize:30.0f]];
-		//		headerLabel.shadowColor = [UIColor blackColor];
-		//		headerLabel.shadowOffset = CGSizeMake(2,2);
 		headerLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
 		headerLabel.layer.shadowOpacity = 1.0;
 		headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Highscores"];
@@ -47,7 +46,7 @@
 		subheaderLabel.textColor = [UIColor redColor];
 		[subheaderLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
 		subheaderLabel.transform = CGAffineTransformMakeRotation( M_PI/4 );
-		subheaderLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"hard"];
+		subheaderLabel.text = [EnumHelper difficultyToNiceString:m_showingLevel];
 		subheaderLabelCenter = subheaderLabel.center;
 		[self addSubview:subheaderLabel];
 		
@@ -170,16 +169,20 @@
 		button_levelDown = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[button_levelDown addTarget:self action:@selector(levelDown) forControlEvents:UIControlEventTouchDown];
 		[button_levelDown setTitle:@"<- Level down" forState:UIControlStateNormal];
+        button_levelDown.layer.borderWidth=1.0f;
+        [button_levelDown setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button_levelDown.layer.borderColor=[[UIColor whiteColor] CGColor];
 		button_levelDown.frame = CGRectMake(5, 345, 140, 40);
-		//button_levelDown.frame = CGRectMake(5, 350, 140, 40);
 		button_levelDownCenter = button_levelDown.center;
 		[self addSubview:button_levelDown];
 		
 		button_levelUp = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[button_levelUp addTarget:self action:@selector(levelUp) forControlEvents:UIControlEventTouchDown];
 		[button_levelUp setTitle:@"Level up ->" forState:UIControlStateNormal];
+        button_levelUp.layer.borderWidth=1.0f;
+        [button_levelUp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button_levelUp.layer.borderColor=[[UIColor whiteColor] CGColor];
 		button_levelUp.frame = CGRectMake(170, 345, 140, 40);
-		//button_levelUp.frame = CGRectMake(170, 350, 140, 40);
 		button_levelUpCenter = button_levelUp.center;
 		[self addSubview:button_levelUp];
 		
@@ -190,18 +193,22 @@
 		[switchShowButton addTarget:self action:@selector(goSwitchShow:) forControlEvents:UIControlEventTouchDown];
 		[switchShowButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"View top ten"] forState:UIControlStateNormal];
 		switchShowButton.frame = CGRectMake([screen applicationFrame].size.width/2 - (180/2), 390.0, 180.0, 40.0);
-		//buttonBack.frame = CGRectMake(80.0, 410.0, 180.0, 40.0);
+        switchShowButton.layer.borderWidth=1.0f;
+        [switchShowButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        switchShowButton.layer.borderColor=[[UIColor whiteColor] CGColor];
 		[self addSubview:switchShowButton];
 		showTopTen = false;
 		
 		buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonBack addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchDown];
 		[buttonBack setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Back"] forState:UIControlStateNormal];
+        buttonBack.layer.borderWidth=1.0f;
+        [buttonBack setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonBack.layer.borderColor=[[UIColor whiteColor] CGColor];
 		buttonBack.frame = CGRectMake([screen applicationFrame].size.width/2 - (180/2), 435.0, 180.0, 40.0);
-		//buttonBack.frame = CGRectMake(80.0, 410.0, 180.0, 40.0);
 		[self addSubview:buttonBack];
 		
-		m_showingLevel = level5;
+		
 
 		
 		m_activityIndicator = [[UIActivityIndicatorView alloc] init];
@@ -361,7 +368,7 @@
 		default:
 			break;
 	}
-    levelString = [EnumHelper difficultyToString:m_showingLevel] ;
+    levelString = [EnumHelper difficultyToNiceString:m_showingLevel] ;
     
 	[subheaderLabel setAlpha:0];
 	subheaderLabel.center = centerPoint;

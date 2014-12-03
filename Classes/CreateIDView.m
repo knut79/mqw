@@ -377,37 +377,12 @@
 //			 [NSString stringWithFormat:@"%@",collectedID],@"none",@"none"];
             [[SqliteHelper Instance] executeUpdate:@"INSERT INTO globalID VALUES (?, ?, ?);",
 			 collectedID,@"none",@"none"];
-            //[[GlobalSettingsHelper Instance] SetPlayerID:collectedID];
-            
-            [self FadeOut];
-		}
-	}
-	
-	
-	if (noConnection) {
-		noConnection = FALSE;
 
-		if(buttonIndex == 0)
-		{
-			NSLog(@"no button was pressed\n");
-			globalIDTextField.text = @"";
-			globalIDTextField.placeholder = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Enter new ID"];
-		}
-		else
-		{
-			NSLog(@"yes button was pressed\n");
-            [[GlobalSettingsHelper Instance] SetPlayerID:@"tempID"];
             
             [self FadeOut];
 		}
-        
-        [self FadeOut];
-		
-        
-        //call back to parent class, the parent class should dealloc the 
-		//[self initStartGameElements];
 	}
-	
+		
 }
 
 -(void) FadeOut

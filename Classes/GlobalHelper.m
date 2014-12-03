@@ -33,22 +33,6 @@
 }
 
 
-/*
- NSArray *existsResult = [[SqliteHelper Instance] executeQuery:@"SELECT playerID FROM globalID;"];
- if([existsResult count] == 0)
- {
- //start CreateIDView
- m_createIDView = [[CreateIDView alloc] initWithFrame:[self bounds]];
- [self addSubview:m_createIDView];
- }
- else
- {
- for (NSDictionary *dictionary in existsResult) {
- for (NSString *key in [dictionary keyEnumerator])
- [[GlobalSettingsHelper Instance] SetPlayerID:[NSString stringWithFormat:@"%@",[dictionary objectForKey:@"playerID"]]];
- } 
- }
- */
 -(NSString*) ReadPlayerID
 {
     

@@ -12,6 +12,7 @@
 #import "iAd/ADBannerView.h"
 #import "SoapHelper.h"
 #import "ChallengeViewController.h"
+#import "HighscoreService.h"
 
 @protocol GameEndedViewDelegate;
 
@@ -41,8 +42,10 @@
     
     ADBannerView* adBannerView;
     BOOL adBannerViewIsVisible;
+    
 }
 @property (nonatomic, assign) id <GameEndedViewDelegate> delegate;
+@property (strong, nonatomic) HighscoreService *highscoreService;
 -(void)SetHeader:(Game*) gameRef;
 -(void) FadeIn;
 -(void) FadeOut;

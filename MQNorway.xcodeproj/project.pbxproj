@@ -507,6 +507,9 @@
 		728747B319B9B3A900BADE3B /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747AB19B9B3A900BADE3B /* FMDatabasePool.m */; };
 		728747B419B9B3A900BADE3B /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747AD19B9B3A900BADE3B /* FMDatabaseQueue.m */; };
 		728747B519B9B3A900BADE3B /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 728747B019B9B3A900BADE3B /* FMResultSet.m */; };
+		729DA2B01A2D46C30023F83F /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 729DA2AF1A2D46C30023F83F /* UserService.m */; };
+		729DA2B21A2D47E70023F83F /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729DA2B11A2D47E70023F83F /* WindowsAzureMobileServices.framework */; };
+		729DA2B51A2E81B70023F83F /* HighscoreService.m in Sources */ = {isa = PBXBuildFile; fileRef = 729DA2B41A2E81B70023F83F /* HighscoreService.m */; };
 		729FC41C19ECA16B00B082E5 /* AfghanistanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */; };
 		729FC41D19ECA16B00B082E5 /* AzerbaijanFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */; };
 		729FC41E19ECA16B00B082E5 /* BangladeshFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC3F819ECA16A00B082E5 /* BangladeshFlag.png */; };
@@ -1406,6 +1409,11 @@
 		728747AE19B9B3A900BADE3B /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		728747AF19B9B3A900BADE3B /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		728747B019B9B3A900BADE3B /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		729DA2AE1A2D46C30023F83F /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		729DA2AF1A2D46C30023F83F /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		729DA2B11A2D47E70023F83F /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindowsAzureMobileServices.framework; path = ../MapFight1/WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
+		729DA2B31A2E81B70023F83F /* HighscoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreService.h; sourceTree = "<group>"; };
+		729DA2B41A2E81B70023F83F /* HighscoreService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreService.m; sourceTree = "<group>"; };
 		729FC3F619ECA16A00B082E5 /* AfghanistanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AfghanistanFlag.png; path = resources/graphics/pictureQuestions/AfghanistanFlag.png; sourceTree = "<group>"; };
 		729FC3F719ECA16A00B082E5 /* AzerbaijanFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AzerbaijanFlag.png; path = resources/graphics/pictureQuestions/AzerbaijanFlag.png; sourceTree = "<group>"; };
 		729FC3F819ECA16A00B082E5 /* BangladeshFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BangladeshFlag.png; path = resources/graphics/pictureQuestions/BangladeshFlag.png; sourceTree = "<group>"; };
@@ -1871,6 +1879,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				729DA2B21A2D47E70023F83F /* WindowsAzureMobileServices.framework in Frameworks */,
 				728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */,
 				724026B219E55E5E005E3582 /* FacebookSDK.framework in Frameworks */,
 				EEBF748A148597B40002F9E8 /* iAd.framework in Frameworks */,
@@ -1890,6 +1899,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				729DA2AD1A2D46A00023F83F /* Services */,
 				BE6499D1156982BD00692E08 /* Helpers */,
 				EE53958E14BB9AA7008E029F /* SoapHelpers */,
 				EEBC6997143769F800EB281F /* Buttons */,
@@ -2004,6 +2014,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				729DA2B11A2D47E70023F83F /* WindowsAzureMobileServices.framework */,
 				724026B119E55E5E005E3582 /* FacebookSDK.framework */,
 				728747A319B9B2D000BADE3B /* libsqlite3.dylib */,
 				EEA138EC147C2EC1007F47BC /* AddressBookUI.framework */,
@@ -2310,6 +2321,17 @@
 			);
 			name = tiles100;
 			path = ../tiles/tiles100;
+			sourceTree = "<group>";
+		};
+		729DA2AD1A2D46A00023F83F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				729DA2AE1A2D46C30023F83F /* UserService.h */,
+				729DA2AF1A2D46C30023F83F /* UserService.m */,
+				729DA2B31A2E81B70023F83F /* HighscoreService.h */,
+				729DA2B41A2E81B70023F83F /* HighscoreService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		72CB8A5B1A043F49000E30CF /* tilesborder25 */ = {
@@ -3984,7 +4006,9 @@
 				EE98986313300E3100CBA780 /* Game.m in Sources */,
 				EE98986B13300E5400CBA780 /* Question.m in Sources */,
 				EE98986E13300E6B00CBA780 /* Player.m in Sources */,
+				729DA2B51A2E81B70023F83F /* HighscoreService.m in Sources */,
 				EE98987413300EA400CBA780 /* Answer.m in Sources */,
+				729DA2B01A2D46C30023F83F /* UserService.m in Sources */,
 				EE98987813300EB600CBA780 /* CoordinateHelper.m in Sources */,
 				EE98987B13300EBE00CBA780 /* GlobalSettingsHelper.m in Sources */,
 				EE98987E13300EC500CBA780 /* Highscore.m in Sources */,
@@ -4066,6 +4090,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/knut/Documents/FacebookSDK,
+					/Users/knut/Documents/repositories/MapFight1,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4086,6 +4111,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/knut/Documents/FacebookSDK,
+					/Users/knut/Documents/repositories/MapFight1,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MQNorway_Prefix.pch;

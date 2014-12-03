@@ -39,7 +39,10 @@
     NSInteger m_currentKmTimeBonus;
 	NSInteger m_timeBonusBarWidth;
 	NSInteger m_currentTimeMultiplier;
-
+    /*
+    NSString* m_userId;
+    NSString* m_userFbId;
+*/
 }
 -(id) initWithName:(NSString*) name andColor:(UIColor*) color andPlayerSymbol:(NSString*) playerSymbol;
 
@@ -60,6 +63,13 @@
 -(NSString*) GetPlayerSymbol;
 -(void) SetPetTalk:(NSInteger) missedDistance;
 -(NSString*) GetPepTalk;
+
+/*
+-(void) SetUserId:(NSString*) playerId;
+-(NSString*) GetPlayerId;
+-(void) SetUserFbId:(NSString*) userFbUser;
+-(NSString*) GetUserFbId;
+*/
 
 
 -(float)GetLastScale;

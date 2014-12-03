@@ -20,6 +20,7 @@
 	NSArray* m_languageList;
 	NSInteger m_languageListIndex;
     NSString* m_playerID;
+    NSString* m_playerFbID;
     NSString* m_playerName;
 }
 
@@ -32,6 +33,8 @@
 -(DistanceMeasurement) GetDistanceMeasurement;
 -(NSString*) GetDistanceMeasurementString;
 -(NSString*) GetPlayerID;
+-(NSString*) GetPlayerFbID;
+-(void) SetPlayerFbID:(NSString*) playerFbID;
 -(NSString*) GetPlayerName;
 -(NSInteger) ConvertToRightDistance:(NSInteger) kmDistance;
 -(NSString*) GetStringByLanguage:(NSString*)str;

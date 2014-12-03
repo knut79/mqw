@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GlobalHelper.h"
+#import "GlobalSettingsHelper.h"
 #import <QuartzCore/QuartzCore.h>
 #import <FacebookSDK/FacebookSDK.h>
 @protocol CreatePlayerVCDelegate;
@@ -23,6 +23,8 @@
 
 
 -(void) WritePlayerID:(NSString*) playerID andName:(NSString*) firstname;
+-(void) WritePlayerToServer:(NSString*) playerID andName:(NSString*) firstname;
+-(void) WritePlayerLocally:(NSString*) playerID andName:(NSString*) firstname;
 
 @property (nonatomic, assign) id <CreatePlayerVCDelegate> delegate;
 @end
