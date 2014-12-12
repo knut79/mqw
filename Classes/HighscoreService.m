@@ -56,7 +56,7 @@
         self.client = [client clientWithFilter:self];
         
         // Create an MSTable instance to allow us to work with the TodoItem table
-        self.table = [_client tableWithName:@"User"];
+        self.table = [_client tableWithName:@"Highscore"];
         
         self.items = [[NSMutableArray alloc] init];
         self.busyCount = 0;
@@ -65,7 +65,7 @@
     return self;
 }
 
-- (void)writeItemItNotExists:(NSDictionary *)item predicate:(NSPredicate*) predicate completion:(QSCompletionBlock)completion
+- (void) writeItemIfHigherScore:(NSDictionary *)itemToWrite predicate:(NSPredicate*) predicate completion:(QSCompletionBlock)completion
 {
     // Create a predicate that finds items where complete is false
     
@@ -81,16 +81,68 @@
          }
          items = [results mutableCopy];
          if (items.count == 0) {
-             [self addItem:item completion:^(NSUInteger index)
+             [self addItem:itemToWrite completion:^(NSUInteger index)
               {}];
+         }
+         else
+         {
+             if(items.count > 1)
+                 [NSException raise:@"Error" format:@"Collected more than one highscore row"];
+             
+             //check if answered questions and time is better than the current
+             NSDictionary *item = [items objectAtIndex:0];
+             NSNumber * secondsUsed = [item objectForKey:@"seconds"];
+             NSNumber * questionsAnswered = [item objectForKey:@"answeredQuestions"];
+             
+             NSNumber * secondsUsedToWrite = [itemToWrite objectForKey:@"seconds"];
+             NSNumber * questionsAnsweredToWrite = [itemToWrite objectForKey:@"answeredQuestions"];
+             
+             if ([questionsAnswered longValue] < [questionsAnsweredToWrite longValue] ||
+                 ([questionsAnswered longValue] == [questionsAnsweredToWrite longValue] && [secondsUsed longValue] > [secondsUsedToWrite longValue])) {
+                 [item setValue:secondsUsedToWrite forKey:@"seconds"];
+                 [item setValue:questionsAnsweredToWrite forKey:@"answeredQuestions"];
+                 [self.table update:item completion:^(NSDictionary *item, NSError *error)
+                  {
+                      if (error) {
+                          NSLog(@"error : %@",error);
+                      }
+                  }];
+             }
          }
          
          // Let the caller know that we finished
          completion();
      }];
-    
 }
 
+-(void) readPositionForPlayerResult:(NSDictionary *)item predicate:(NSPredicate*) predicate completion:(QSCompletionBlock)completion
+{
+    
+    /*
+     
+     WITH RankNames AS
+     (
+        SELECT ROW_NUMBER() OVER (ORDER BY AnsweredQuestions desc, Seconds asc) AS RowRank, AnsweredQuestions, Seconds, Level, UserId 
+        FROM [MapFight1].[Highscores]
+     )
+     SELECT RowRank, AnsweredQuestions, Seconds, UserId FROM RankNames
+     WHERE Level =%level% AND UserId like ´%userid%´
+     
+     */
+    
+    /*
+    MSQuery *query = [self.table query];//[self.table queryWithPredicate: predicate];
+    [query re queryStringOrError:]
+    
+    
+    [query orderByAscending:@"answeredQuestions"];
+    [query orderByAscending:@"seconds"];
+    
+    [query readWithCompletion:^(NSArray *results, NSInteger totalCount, NSError *error)
+     {
+         
+     }];*/
+}
 
 -(void)addItem:(NSDictionary *)item completion:(QSCompletionWithIndexBlock)completion
 {
@@ -137,6 +189,18 @@
         // Let the caller know that we have finished
         completion(index);
     }];
+}
+
+- (void) sendScoreGetRankForPlayer:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion
+{
+    //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
+    [self.client
+     invokeAPI:@"highscorerank"
+     data:nil
+     HTTPMethod:@"POST"
+     parameters:jsonDictionary
+     headers:nil
+     completion:completion ];
 }
 
 - (void)busy:(BOOL)busy

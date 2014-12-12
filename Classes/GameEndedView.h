@@ -46,7 +46,10 @@
 }
 @property (nonatomic, assign) id <GameEndedViewDelegate> delegate;
 @property (strong, nonatomic) HighscoreService *highscoreService;
--(void)SetHeader:(Game*) gameRef;
+-(void) setHeader;
+-(void) setGameRef:(Game*) gameRef;
+-(void) sendHighscoreToServer;
+-(void) setUpSinglePlayer;
 -(void) FadeIn;
 -(void) FadeOut;
 -(void) AnimateLastElements;
@@ -55,7 +58,7 @@
 -(void) SetAlphaIn;
 - (void)createAdBannerView;
 -(void) showAdBar;
--(void) setUpSinglePlayer:(Game*) gameRef;
+
 @end
 
 @protocol GameEndedViewDelegate <NSObject>

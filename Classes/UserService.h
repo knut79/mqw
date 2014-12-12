@@ -20,8 +20,9 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
 
 #pragma mark * TodoService public interface
 
-
 @interface UserService : NSObject
+{
+}
 
 @property (nonatomic, strong)   NSArray *items;
 @property (nonatomic, strong)   MSClient *client;
@@ -43,3 +44,4 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
              response:(MSFilterResponseBlock)response;
 
 @end
+

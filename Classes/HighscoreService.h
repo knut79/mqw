@@ -28,7 +28,7 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
 
 + (HighscoreService *)defaultService;
 
-- (void)writeItemItNotExists:(NSDictionary *)item predicate:(NSPredicate*) predicate completion:(QSCompletionBlock)completion;
+- (void)writeItemIfHigherScore:(NSDictionary *)item predicate:(NSPredicate*) predicate completion:(QSCompletionBlock)completion;
 
 - (void)addItem:(NSDictionary *)item
      completion:(QSCompletionWithIndexBlock)completion;
@@ -40,5 +40,8 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
 - (void)handleRequest:(NSURLRequest *)request
                  next:(MSFilterNextBlock)next
              response:(MSFilterResponseBlock)response;
+
+- (void) sendScoreGetRankForPlayer:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
+
 
 @end

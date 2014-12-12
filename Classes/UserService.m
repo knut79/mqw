@@ -30,6 +30,7 @@
 
 @implementation UserService
 
+//@synthesize delegate;
 @synthesize items;
 
 
@@ -93,8 +94,8 @@
                  [NSException raise:@"Error" format:@"Collected more than one player row"];
              
              NSDictionary *item = [items objectAtIndex:0];
-             
              [[GlobalSettingsHelper Instance] SetPlayerID:[item objectForKey:@"id"]];
+
          }
          
          // Let the caller know that we finished
@@ -113,9 +114,11 @@
              NSLog(@"error is %@",error);
          }
          [self logErrorIfNotNil:error];
-         
+         /*
          NSUInteger index = [items count];
-         [(NSMutableArray *)items insertObject:result atIndex:index];
+         [(NSMutableArray *)items insertObject:result atIndex:index];*/
+
+         [[GlobalSettingsHelper Instance] SetPlayerID:[result objectForKey:@"id"]];
          
          // Let the caller know that we finished
          completion(index);

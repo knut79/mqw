@@ -103,11 +103,10 @@
 
 -(void) FirstLoad
 {
-    ssb = [[SoapHelper alloc] init];
-    //_?[ssb setDelegate:self];
+    /*
+     ssb = [[SoapHelper alloc] init];
     [ssb sendDeviceToken];
-    //_?[self sendDeviceToken];
-    
+    */
     [[GlobalHelper Instance] setStartFlag:1];
     
 
@@ -122,15 +121,9 @@
 	
     
     
-    [[GlobalSettingsHelper Instance] SetPlayerID: [GlobalHelper Instance].ReadPlayerID];
+    //[[GlobalSettingsHelper Instance] SetPlayerID: [GlobalHelper Instance].ReadPlayerID];
     [[GlobalSettingsHelper Instance] SetPlayerName: [GlobalHelper Instance].ReadPlayerName];
-    /*
-    FMResultSet *resultsGlobalID = [[SqliteHelper Instance] executeQuery:@"SELECT playerID FROM globalID"];
-    [resultsGlobalID next];
-    if ([resultsGlobalID hasAnotherRow]) {
-		[[GlobalSettingsHelper Instance] SetPlayerID:[resultsGlobalID stringForColumn:@"playerID"]];	}
-	else {
-		[[GlobalSettingsHelper Instance] SetPlayerID:@"tempID"];}*/
+
     
 	[[GlobalSettingsHelper Instance] SetDistanceMeasurement:km];
 	[[GlobalSettingsHelper Instance] SetDocumentsDirectory];
@@ -1203,7 +1196,9 @@
 				[m_gameEndedView setDelegate:self];
 				[[self view] addSubview:m_gameEndedView];
 			}
-			[m_gameEndedView SetHeader:m_gameRef];
+            [m_gameEndedView setGameRef:m_gameRef];
+            [m_gameEndedView sendHighscoreToServer];
+			[m_gameEndedView setHeader];
             
             //[self RemoveGameBoardAndBars];
             //[self cleanUpGameElements];

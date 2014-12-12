@@ -61,6 +61,9 @@
     [buttonSendChallenge setAlpha:.5];
     buttonSendChallenge.userInteractionEnabled = NO;
     
+    UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+    self.view.backgroundColor = lightBlueColor;
+    
     [super viewDidLoad];
 }
 

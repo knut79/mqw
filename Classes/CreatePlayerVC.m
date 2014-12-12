@@ -8,6 +8,9 @@
 #import "UserService.h"
 #import "CreatePlayerVC.h"
 
+//test
+#import "HighscoreService.h"
+
 @implementation CreatePlayerVC
 
 @synthesize loginView, profilePictureView, nameLabel,statusLabel;
@@ -21,12 +24,6 @@
         self.statusLabel.numberOfLines = 1;
         self.statusLabel.adjustsFontSizeToFitWidth = YES;
         self.statusLabel.minimumScaleFactor = 0.5;
-        
-        // Custom initialization
-        /*
-        FBLoginView *loginView = [[FBLoginView alloc] init];
-        loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), 5);
-        [self.view addSubview:loginView];*/
     }
     return self;
 }
@@ -58,6 +55,7 @@
 {
     [super viewDidLoad];
     
+    //@"manage_friendlists" to write
     self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     
 }
@@ -105,11 +103,42 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
     if(isFirstLoginDone) {
         [self WritePlayerID: user.objectID andName:user.first_name];
+        [FBRequestConnection startWithGraphPath:@"/me/friends"
+                                     parameters:nil
+                                     HTTPMethod:@"GET"
+                              completionHandler:^(
+                                                  FBRequestConnection *connection,
+                                                  id result,
+                                                  NSError *error
+                                                  ) {
+                                  if(error)
+                                      NSLog(@"the error is %@",error);
+                                  NSLog(@"the result is %@",result);
+                                  /* handle the result */
+                              }];
         if ([delegate respondsToSelector:@selector(cleanUpCreatePlayerVC)])
             [delegate cleanUpCreatePlayerVC];
     }
     isFirstLoginDone = NO;
      
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result {
+    
+    if([result isKindOfClass:[NSDictionary class]])
+    {
+        NSLog(@"dictionary");
+        result=[result objectForKey:@"data"];
+        if ([result isKindOfClass:[NSArray class]])
+            
+            for(int i=0;i<[result count];i++){
+                
+                NSDictionary *result2=[result objectAtIndex:i];
+                NSString *result1=[result2 objectForKey:@"id"];
+                NSLog(@"uid:%@",result1);
+                //[uids addObject:result1];
+            }
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -121,10 +150,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 -(void) WritePlayerID:(NSString*) playerID andName:(NSString*) firstname
 {
+    
     [self WritePlayerLocally:playerID andName:firstname];
     [self WritePlayerToServer:playerID andName:firstname];
-    
+   
 }
+
 
 -(void) WritePlayerLocally:(NSString*) playerID andName:(NSString*) firstname
 {
@@ -158,24 +189,122 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
     UserService *userService = [UserService defaultService];
-    //NSPredicate * predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"UserId == %@",playerID]];
 
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@",
-                              @"userId", playerID];
-    NSDictionary *item = @{ @"UserId" : playerID, @"Name" : firstname };
+                              @"userFbId", playerID];
+    NSDictionary *item = @{ @"UserFbId" : playerID, @"Name" : firstname };
     [userService writeItemItNotExists:item predicate:predicate completion:^{
     
+        
+        
+        //[self testCode];
+        
     }];
-    
-    /*
-    NSDictionary *item = @{ @"UserId" : playerID, @"Name" : firstname };
-    [userService addItem:item completion:^(NSUInteger index)
-     {}];
-     */
-
 }
 
+-(void) testCode
+{
+    //test code
+    
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    HighscoreService* highscoreService = [HighscoreService defaultService];
+    NSInteger hei = 3;
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    playerId, @"id", @0, @"level",@444,@"seconds",@4,@"questionsAnswered", @(hei),@"distanceLeft",nil];
+    [highscoreService sendScoreGetRankForPlayer:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             NSString* errorMessage = @"There was a problem! ";
+             errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error!"
+                                     message:errorMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             [myAlert show];
+             
+         } else {
+             
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+             
+             
+             
+             NSLog(@"The datastring : %@",newStr);
+             
+             
+             
+             
+             //for testing
+             //NSData *jsonData = [@"{ \"key1\": \"value1\",\"key2\": \"value2\" }" dataUsingEncoding:NSUTF8StringEncoding];
+             
+             
+             //if we have set of values
+             /*
+              
+              //remove front [ and back ] characters
+              if ([newStr rangeOfString: @"]"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+              [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+              NSLog(@"The datastring : %@",newStr);
+              }
+              
+              NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+              
+              while ([newStr rangeOfString: @"}"].length >0) {
+              NSRange match = [newStr rangeOfString: @"}"];
+              NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+              NSLog(@"The substring1 : %@",rowSubstring1);
+              
+              NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];
+              NSLog(@"jsonObject is %@",jsonObject);
+              
+              [dataArray addObject:jsonObject];
+              if ([newStr rangeOfString: @"}"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+              }
+              
+              }
+              */
+             
+             NSData *jsonData = [newStr dataUsingEncoding:NSUTF8StringEncoding];
+             /*
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];*/
+             NSDictionary *jsonObject=[NSJSONSerialization
+                                       JSONObjectWithData:jsonData
+                                       options:NSJSONWritingPrettyPrinted
+                                       error:nil];
+             NSLog(@"jsonObject is %@",jsonObject);
+             
+             NSString* userId = [jsonObject valueForKey:@"userid"];
+             NSInteger npb = [[jsonObject valueForKey:@"newpersonalbest"] intValue];
+             NSInteger rank = [[jsonObject valueForKey:@"rank"] intValue];
+             NSInteger seconds = [[jsonObject objectForKey:@"seconds"] intValue];
+             id questionsAnswered = [[jsonObject objectForKey:@"answeredquestions"] intValue];
+             
+             NSString* successMessage = [NSString stringWithFormat:@"Rank: %@  %ld items marked as complete", @"bal",(long)seconds];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Success!"
+                                     message:successMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             
+             [myAlert show];
+         }
+     }];
 
+}
 
 - (void)dealloc {
     [nameLabel release];

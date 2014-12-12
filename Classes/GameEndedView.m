@@ -194,13 +194,128 @@
 	}
 }
 
--(void)SetHeader:(Game*) gameRef
+-(void)setGameRef:(Game*) gameRef
 {
     m_gameRef = gameRef;
+}
+
+-(void) sendHighscoreToServer
+{
+    
+    m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Waiting for result..."]];
+    [m_globalHighscoreLabel setAlpha:1];
+    
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    NSInteger level = [m_gameRef GetGameDifficulty];
+    
+    
+    Player *player = [[m_gameRef GetPlayer] retain];
+    NSInteger time = [player GetSecondsUsed];
+    NSInteger distance = [player GetKmLeft] < 0 ? 0 : [player GetKmLeft];
+    NSInteger questions = [player GetQuestionsPassed];
+    //test code
+    HighscoreService* highscoreService = [HighscoreService defaultService];
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:playerId, @"id", @(level), @"level",@(time),@"seconds",@(questions),@"questionsAnswered",@(distance),@"distanceLeft", nil];
+    [highscoreService sendScoreGetRankForPlayer:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             NSString* errorMessage = @"There was a problem! ";
+             errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error!"
+                                     message:errorMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             [myAlert show];
+             
+         } else {
+
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+
+             
+             //for testing
+             //NSData *jsonData = [@"{ \"key1\": \"value1\",\"key2\": \"value2\" }" dataUsingEncoding:NSUTF8StringEncoding];
+             
+             
+             //if we have set of values
+             /*
+              
+              //remove front [ and back ] characters
+              if ([newStr rangeOfString: @"]"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+              [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+              NSLog(@"The datastring : %@",newStr);
+              }
+              
+              NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+              
+              while ([newStr rangeOfString: @"}"].length >0) {
+              NSRange match = [newStr rangeOfString: @"}"];
+              NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+              NSLog(@"The substring1 : %@",rowSubstring1);
+              
+              NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];
+              NSLog(@"jsonObject is %@",jsonObject);
+              
+              [dataArray addObject:jsonObject];
+              if ([newStr rangeOfString: @"}"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+              }
+              
+              }
+              */
+             
+             NSData *jsonData = [newStr dataUsingEncoding:NSUTF8StringEncoding];
+             /*
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];*/
+             NSDictionary *jsonObject=[NSJSONSerialization
+                                       JSONObjectWithData:jsonData
+                                       options:NSJSONWritingPrettyPrinted
+                                       error:nil];
+             NSLog(@"jsonObject is %@",jsonObject);
+             
+             NSString* userId = [jsonObject valueForKey:@"userid"];
+             NSInteger npb = [[jsonObject valueForKey:@"newpersonalbest"] intValue];
+             NSInteger rank = [[jsonObject valueForKey:@"rank"] intValue];
+             NSInteger seconds = [[jsonObject objectForKey:@"seconds"] intValue];
+             NSInteger questionsAnswered = [[jsonObject objectForKey:@"answeredquestions"] intValue];
+             NSInteger distanceLeft = [[jsonObject objectForKey:@"answeredquestions"] intValue];
+             
+             NSString* message = [NSString stringWithFormat:@"New personal best for level %ld at rank %ld ",(long)level,(long)rank];
+             if (npb == 0) {
+                 message = [NSString stringWithFormat:@"You have a better score for level %ld at rank %ld ",(long)level,(long)rank];
+             }
+             
+             
+             m_globalHighscoreLabel.text = [NSString stringWithFormat:@"Rank: %ld Questions completed: %ld Seconds: %ld Distance left: %ld",(long)rank,(long)questionsAnswered,(long)seconds,(long)distanceLeft];
+
+         }
+     }];
+
+    //end test
+
+    
+    
+    [player release];
+}
+
+-(void) setHeader
+{
 	[self ResetLabels];
     UIScreen *screen = [[UIScreen mainScreen] retain];
 
-    [self setUpSinglePlayer:gameRef];
+    [self setUpSinglePlayer];
 
 	m_headerImageView.center = CGPointMake([screen applicationFrame].size.width/2,  50);
 
@@ -210,32 +325,12 @@
 	[self AnimateElementsIn:1];
 }
 
--(void) setUpSinglePlayer:(Game*) gameRef
+-(void) setUpSinglePlayer
 {
     UIScreen *screen = [[UIScreen mainScreen] retain];
 
-    Player *player = [[gameRef GetPlayer] retain];
-
-    //move this section
-    /*
-    [[GlobalSettingsHelper Instance] GetPlayerName]
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@",
-                              @"id", playerID];
-    NSDictionary *item = @{ @"UserId" : playerID, @"Name" : firstname };
-    [highscoreService writeItemItNotExists:item predicate:predicate completion:^{
-        
-    }];
-    */
-    /*
-    NSDictionary *item = @{ @"name" : itemText.text, @"fullname" : @"NO name" };
-    [highscoreService addItem:item completion:^(NSUInteger index)
-     {
-
-     }];
-    */
-
-    //end move this section
-    
+    Player *player = [[m_gameRef GetPlayer] retain];
+    NSInteger time = [player GetSecondsUsed];
     
     
     self.userInteractionEnabled = NO;
@@ -249,7 +344,7 @@
     m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
 
     
-    NSInteger time = [player GetSecondsUsed];
+    
     NSString *seconds = [[NSString stringWithFormat:@"%d",(int)time%60] retain];
     if ([seconds length] == 1 ) {
         m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:0%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
@@ -263,11 +358,11 @@
     
 
     
-    Highscore *hs = [gameRef GetHighscore];
-    NSInteger newHighScorePlace = [hs CheckIfNewHighScore:player difficultyLevel:[gameRef GetGameDifficulty]];
+    Highscore *hs = [m_gameRef GetHighscore];
+    NSInteger newHighScorePlace = [hs CheckIfNewHighScore:player difficultyLevel:[m_gameRef GetGameDifficulty]];
     if (newHighScorePlace < 99) {
         NSString *gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"set level difficulty"];
-        Difficulty diffLevel = [gameRef GetGameDifficulty];
+        Difficulty diffLevel = [m_gameRef GetGameDifficulty];
         
         UIImage *trophyImage = [[UIImage imageNamed:@"trophy.png"] retain];
         m_highscoreImageView.image = trophyImage;
@@ -300,7 +395,6 @@
     //and button "continue without challenge"
 
     m_globalHighscoreLabel.textAlignment = NSTextAlignmentCenter;
-    m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Waiting for result..."]];
     m_globalHighscoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  235);
     
     
