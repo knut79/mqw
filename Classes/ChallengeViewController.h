@@ -11,8 +11,12 @@
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
 #import "Challenge.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "UserService.h"
+
+
 @protocol ChallengeViewControllerDelegate;
-@interface ChallengeViewController : UIViewController<UITextFieldDelegate,ABPeoplePickerNavigationControllerDelegate,AddExPlrViewCtrlDelegate>
+@interface ChallengeViewController : UIViewController<UITextFieldDelegate,AddExPlrViewCtrlDelegate,FBFriendPickerDelegate>
 {
     id <ChallengeViewControllerDelegate> delegate;
     NSMutableString *pageStartToLoad;
@@ -22,26 +26,23 @@
     NSMutableArray* assureNoDuplicatesEmails;
     NSMutableArray* assureNoDuplicatesPlayerIDs;
     Challenge* challenge;
+    NSMutableArray* playersToChallenge;
 }
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 @property (nonatomic, assign) id <ChallengeViewControllerDelegate> delegate;
 -(void) setChallenge:(Challenge*) pChallenge;
 @property (retain, nonatomic) IBOutlet UIButton *buttonAddContact;
-- (IBAction)addContactPushed:(id)sender;
-@property (retain, nonatomic) IBOutlet UIButton *buttonAddUser;
-@property (retain, nonatomic) IBOutlet UIButton *buttonAddEmail;
+- (IBAction)addFriendPushed:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *buttonAddRandomUser;
 @property (retain, nonatomic) IBOutlet UIButton *buttonGoBack;
 @property (retain, nonatomic) IBOutlet UIButton *buttonSendChallenge;
-//@property (retain, nonatomic) IBOutlet UITextField *textFieldUser;
+@property (retain, nonatomic) IBOutlet UIButton *buttonRemovePlayer;
+- (IBAction)removePlayerPushed:(id)sender;
+
 - (IBAction)buttonGoBackPushed:(id)sender;
-@property (retain, nonatomic) IBOutlet UITextField *textFieldEmail;
-- (IBAction)addUserPushed:(id)sender;
-- (IBAction)addEmailPushed:(id)sender;
+- (IBAction)addRandomPlayerPushed:(id)sender;
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 - (void) ReloadHtml;
-
--(BOOL)validateEmail: (NSString *) candidate ;
--(BOOL)emailExists:(NSString*) email;
--(BOOL)userExists:(NSString*) user;
 
 @end
 

@@ -38,6 +38,8 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
 - (void)completeItem:(NSDictionary *)item
           completion:(QSCompletionWithIndexBlock)completion;
 
+- (void) getRandomUser:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
+
 
 - (void)handleRequest:(NSURLRequest *)request
                  next:(MSFilterNextBlock)next

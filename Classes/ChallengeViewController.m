@@ -10,12 +10,11 @@
 
 @implementation ChallengeViewController
 @synthesize webView;
-@synthesize buttonAddUser;
-@synthesize buttonAddEmail;
+@synthesize buttonAddRandomUser;
 @synthesize buttonGoBack;
 @synthesize buttonSendChallenge;
-@synthesize textFieldEmail;
 @synthesize buttonAddContact;
+@synthesize buttonRemovePlayer;
 @synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,6 +37,12 @@
 
 - (void)viewDidLoad
 {
+    UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+    self.view.backgroundColor = lightBlueColor;
+    
+    playersToChallenge = [[NSMutableArray alloc] init];
+
+    
     pageStartToLoad = [[[NSMutableString alloc] init] retain];
     [pageStartToLoad appendString:@"<html><head></head><body>"];
     [pageStartToLoad appendString:@"<table border='0' CELLSPACING=3 width='280'>"];
@@ -51,30 +56,43 @@
     assureNoDuplicatesEmails = [[NSMutableArray alloc] init];
     assureNoDuplicatesPlayerIDs = [[NSMutableArray alloc] init];
     
-    textFieldEmail.clearsOnBeginEditing = YES;
-    textFieldEmail.tag = 102;
-    textFieldEmail.delegate = self;
-    textFieldEmail.borderStyle = UITextBorderStyleRoundedRect;
-    textFieldEmail.textAlignment = NSTextAlignmentCenter;
-    textFieldEmail.autocorrectionType = UITextAutocorrectionTypeNo;
-    
     [buttonSendChallenge setAlpha:.5];
     buttonSendChallenge.userInteractionEnabled = NO;
+    buttonSendChallenge.layer.borderWidth=1.0f;
+    [buttonSendChallenge setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonSendChallenge.layer.borderColor=[[UIColor whiteColor] CGColor];
     
-    UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
-    self.view.backgroundColor = lightBlueColor;
+    buttonRemovePlayer.layer.borderWidth=1.0f;
+    [buttonRemovePlayer setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonRemovePlayer.layer.borderColor=[[UIColor whiteColor] CGColor];
+    [buttonRemovePlayer setAlpha:.5];
+    
+    buttonAddContact.layer.borderWidth=1.0f;
+    [buttonAddContact setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonAddContact.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
+    buttonGoBack.layer.borderWidth=1.0f;
+    [buttonGoBack setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonGoBack.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
+    buttonAddRandomUser.layer.borderWidth=1.0f;
+    [buttonAddRandomUser setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonAddRandomUser.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
+    buttonAddRandomUser.layer.borderWidth=1.0f;
+    [buttonAddRandomUser setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    buttonAddRandomUser.layer.borderColor=[[UIColor whiteColor] CGColor];
     
     [super viewDidLoad];
 }
 
 - (void)viewDidUnload
 {
+    self.friendPickerController = nil;
     [self setButtonAddContact:nil];
-    [self setButtonAddUser:nil];
-    [self setButtonAddEmail:nil];
+    [self setButtonAddRandomUser:nil];
     [self setButtonGoBack:nil];
     [self setButtonSendChallenge:nil];
-    [self setTextFieldEmail:nil];
     [self setWebView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -89,104 +107,57 @@
 
 - (void)dealloc {
     [buttonAddContact release];
-    [buttonAddUser release];
-    [buttonAddEmail release];
+    [buttonAddRandomUser release];
     [buttonGoBack release];
     [buttonSendChallenge release];
-    [textFieldEmail release];
     [webView release];
+    [buttonRemovePlayer release];
     [super dealloc];
 }
-- (IBAction)addContactPushed:(id)sender {
-    ABPeoplePickerNavigationController *picker =
-    [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = self;
-    
-    [self presentModalViewController:picker animated:YES];
-    [picker release];
-}
-
-- (void)peoplePickerNavigationControllerDidCancel:
-(ABPeoplePickerNavigationController *)peoplePicker {
-    [self dismissModalViewControllerAnimated:YES];
-}
 
 
-- (BOOL)peoplePickerNavigationController:
-(ABPeoplePickerNavigationController *)peoplePicker
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    @try {
-        ABMultiValueRef emailMultiValue = ABRecordCopyValue(person, kABPersonEmailProperty);
-        NSArray *emailAddresses = [(NSArray *)ABMultiValueCopyArrayOfAllValues(emailMultiValue) autorelease];
-        if ([emailAddresses count] == 0) {
-            UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"No email for contact" 
-                                                                 message:@"This contact is not registrated with email" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil] autorelease];
-            [alertView show]; 
-        } else {
-            for (int i = 0; i< [emailAddresses count]; i++) {
-                if ([self validateEmail:[emailAddresses objectAtIndex:i]] == YES) {
-                    if ([self emailExists:[emailAddresses objectAtIndex:i]] == NO) {
-                        [pageAddressesToLoad appendString:[NSString stringWithFormat:@"<tr><td>Email: %@</td></tr>",[emailAddresses objectAtIndex:i]]];
-                        [self ReloadHtml];
-                    }
-                }
-            }
-        }
 
-        CFRelease(emailMultiValue);
+
+- (IBAction)addFriendPushed:(id)sender {
+
+   
+    if (!FBSession.activeSession.isOpen) {
+        // if the session is closed, then we open it here, and establish a handler for state changes
+        [FBSession openActiveSessionWithReadPermissions:@[@"public_profile", @"user_friends"]
+                                           allowLoginUI:YES
+                                      completionHandler:^(FBSession *session,
+                                                          FBSessionState state,
+                                                          NSError *error) {
+                                          if (error) {
+                                              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                  message:error.localizedDescription
+                                                                                                 delegate:nil
+                                                                                        cancelButtonTitle:@"OK"
+                                                                                        otherButtonTitles:nil];
+                                              [alertView show];
+                                          } else if (session.isOpen) {
+                                              [self addFriendPushed:sender];
+                                          }
+                                      }];
+        return;
     }
-    @catch (NSException *exception) {
-        NSLog(@"ERROR in adding playerID!");
+    
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Pick Friends";
+        self.friendPickerController.delegate = self;
     }
-    @finally {
-        [self dismissModalViewControllerAnimated:YES];
-    }    
-
     
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
     
-    
-    return NO;
+    [self presentViewController:self.friendPickerController animated:YES completion:nil];
 }
 
-
-
-- (BOOL)peoplePickerNavigationController:
-(ABPeoplePickerNavigationController *)peoplePicker
-      shouldContinueAfterSelectingPerson:(ABRecordRef)person
-                                property:(ABPropertyID)property
-                              identifier:(ABMultiValueIdentifier)identifier{
+- (IBAction)addRandomPlayerPushed:(id)sender {
     
-
-    return NO;
-}
-
--(BOOL) emailExists:(NSString*) email
-{
-    BOOL exists = NO;
-    for (int i = 0; i < [assureNoDuplicatesEmails count];i++) {
-        if([((NSString*)[assureNoDuplicatesEmails objectAtIndex:i]) isEqualToString:email] == YES)
-        {
-            exists = YES;
-            break;
-        }
-    }
-    if (exists == NO) 
-        [assureNoDuplicatesEmails addObject:email];
-    
-    return exists;
-}
-
-- (BOOL) validateEmail: (NSString *) candidate {
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    //  return 0;
-    return [emailTest evaluateWithObject:candidate];
-}
-
-
-
-- (IBAction)addUserPushed:(id)sender {
-    
+    /*
     if (addExistingPlayerViewController == nil) {
         addExistingPlayerViewController = [[AddExPlrViewCtrl alloc] initWithNibName:@"AddExPlrViewCtrl" bundle:nil]; 
         [addExistingPlayerViewController setDelegate:self];
@@ -194,49 +165,105 @@
     }
     else
         [addExistingPlayerViewController.view setAlpha:1];
+    */
     
-}
-
-- (IBAction)addEmailPushed:(id)sender {
-    if ((textFieldEmail.text == nil) || [self validateEmail:textFieldEmail.text] ==0) {
-        //errorEmailLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Not valid email format"];
-        //valid = NO;
-        UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Not valid" 
-                                                    message:@"Not valid email" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil] autorelease];
-        [alertView show];
+    //ask for random user
+    UserService* userService = [UserService defaultService];
+    NSMutableString* usedUsers =[[[NSMutableString alloc] init] autorelease];
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    for (int i = 0; i < playersToChallenge.count; i++) {
+        [usedUsers appendString:[NSString stringWithFormat:@"%@;",[[playersToChallenge objectAtIndex:i] valueForKey:@"userid"]]];
     }
-    else
-    {
-
-        if ([self emailExists:textFieldEmail.text] == NO) 
-        {
-            [pageAddressesToLoad appendString:[NSString stringWithFormat:@"<tr><td>Email: %@</td></tr>",textFieldEmail.text]];
-            textFieldEmail.text = @"";
-        
-            [self ReloadHtml];
-        }
+    if (usedUsers.length == 0) {
+        [usedUsers appendString:@"bogus"];
     }
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:playerId, @"id", usedUsers, @"usedusers", nil];
+    [userService getRandomUser:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             NSString* errorMessage = @"There was a problem! ";
+             errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error!"
+                                     message:errorMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             [myAlert show];
+             
+         } else {
+             
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+             
+             
+             //for testing
+             //NSData *jsonData = [@"{ \"key1\": \"value1\",\"key2\": \"value2\" }" dataUsingEncoding:NSUTF8StringEncoding];
+             
+             
+             //if we have set of values
+             /*
+              
+              //remove front [ and back ] characters
+              if ([newStr rangeOfString: @"]"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+              [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+              NSLog(@"The datastring : %@",newStr);
+              }
+              
+              NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+              
+              while ([newStr rangeOfString: @"}"].length >0) {
+              NSRange match = [newStr rangeOfString: @"}"];
+              NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+              NSLog(@"The substring1 : %@",rowSubstring1);
+              
+              NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];
+              NSLog(@"jsonObject is %@",jsonObject);
+              
+              [dataArray addObject:jsonObject];
+              if ([newStr rangeOfString: @"}"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+              }
+              
+              }
+              */
+             
+             NSData *jsonData = [newStr dataUsingEncoding:NSUTF8StringEncoding];
+             /*
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];*/
+             NSDictionary *jsonObject=[NSJSONSerialization
+                                       JSONObjectWithData:jsonData
+                                       options:NSJSONWritingPrettyPrinted
+                                       error:nil];
+             NSLog(@"jsonObject is %@",jsonObject);
+             
+             NSString* userId = [jsonObject valueForKey:@"userId"];
+             NSString* name = [jsonObject valueForKey:@"name"];
+
+             
+             NSDictionary* playerDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:userId,@"userid",name,@"name", nil];
+             //[playerDictionary setValue:userId forKey:@"userid"];
+             //[playerDictionary setValue:name forKey:@"name"];
+             [playersToChallenge addObject:playerDictionary];
+             
+         }
+     }];
+    
+    [self ReloadHtml];
+
+
 }
 
--(BOOL) textFieldShouldReturn:(UITextField *)textField{
-	
-	NSString *value = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-	
-	switch (textField.tag) {
-		case 101:
-//			if ([value length] == 0) {
-//				textFieldUser.placeholder = [NSString stringWithFormat:@"%@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Input user"]];
-//			}
-            break;
 
-		default:
-			break;
-	}
-	
-	[textField resignFirstResponder];
-	
-	return YES;	
-}
 
 #pragma mark delegate method
 -(void) returnSelectedUserAndCleanUp:(NSString*) user
@@ -269,41 +296,55 @@
 
 - (void) ReloadHtml
 {
-    if([assureNoDuplicatesEmails count] + [assureNoDuplicatesPlayerIDs count] == 0)
+    if (webView != nil) {
+		NSMutableString *pageToLoad = [[[NSMutableString alloc] init] autorelease];
+		[pageToLoad appendString:pageStartToLoad];
+        for (int i = 0; i < playersToChallenge.count; i++) {
+            [pageToLoad appendString:[NSString stringWithFormat:@"<tr><<td>%@</td>/tr>",[[playersToChallenge objectAtIndex:i] valueForKey:@"name"]]];
+        }
+        [pageToLoad appendString:pageAddressesToLoad];
+        [pageToLoad appendString:pageEndToLoad];
+        
+		[webView loadHTMLString:pageToLoad baseURL:nil];
+    }
+    
+    if(playersToChallenge.count>0)
     {
+        if (playersToChallenge.count>1) {
+            //[buttonSendChallenge setTitle:[NSString stringWithFormat:@"Send %d challenges",[playersToChallenge.count]] forState:UIControlStateNormal];
+        }
+        else
+        {
+            [buttonSendChallenge setTitle:@"Send 1 challenge" forState:UIControlStateNormal];
+        }
+        [buttonSendChallenge setAlpha:1];
+        buttonSendChallenge.userInteractionEnabled = YES;
+        
+        [buttonRemovePlayer setAlpha:1];
+        buttonRemovePlayer.userInteractionEnabled = YES;
+        
+    }
+    else
+    {
+        [buttonRemovePlayer setAlpha:.5];
+        buttonRemovePlayer.userInteractionEnabled = NO;
+        
         [buttonSendChallenge setTitle:@"No challenges to send" forState:UIControlStateNormal];
         [buttonSendChallenge setAlpha:.5];
         buttonSendChallenge.userInteractionEnabled = NO;
     }
-    else
-    {
-        [buttonSendChallenge setAlpha:1];
-        buttonSendChallenge.userInteractionEnabled = YES;
-
-        if ([assureNoDuplicatesPlayerIDs count] + [assureNoDuplicatesPlayerIDs count] == 1) {
-            [buttonSendChallenge setTitle:@"Send 1 challenge" forState:UIControlStateNormal];
-        }
-        else
-        {
-            [buttonSendChallenge setTitle:[NSString stringWithFormat:@"Send %d challenges",[assureNoDuplicatesPlayerIDs count] + [assureNoDuplicatesEmails count]] forState:UIControlStateNormal];
-        }
-    }
     
-    
-	if (webView != nil) {
-		NSMutableString *pageToLoad = [[[NSMutableString alloc] init] autorelease];
-		[pageToLoad appendString:pageStartToLoad];
-        [pageToLoad appendString:pageAddressesToLoad];
-        [pageToLoad appendString:pageEndToLoad];
-
-		[webView loadHTMLString:pageToLoad baseURL:nil];
-    }
 }
 
 -(void) setChallenge:(Challenge*) pChallenge
 {
     challenge = pChallenge;
 }
+- (IBAction)removePlayerPushed:(id)sender {
+    [playersToChallenge removeLastObject];
+    [self ReloadHtml];
+}
+
 - (IBAction)buttonGoBackPushed:(id)sender {
     [self.view setAlpha:0];
     [self dealloc];
@@ -311,4 +352,28 @@
     if ([delegate respondsToSelector:@selector(cleanUpChallengView)])
         [delegate cleanUpChallengView];
 }
+
+
+- (void)facebookViewControllerDoneWasPressed:(id)sender {
+    
+    // we pick up the users from the selection, and create a string that we use to update the text view
+    // at the bottom of the display; note that self.selection is a property inherited from our base class
+    for (id<FBGraphUser> user in self.friendPickerController.selection) {
+
+        NSDictionary* playerDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:user.objectID,@"userid",user.name,@"name", nil];
+        //[playerDictionary setValue:user.objectID forKey:@"userid"];
+        //[playerDictionary setValue:user.name forKey:@"name"];
+        [playersToChallenge addObject:playerDictionary];
+
+    }
+    
+    [self ReloadHtml];
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)facebookViewControllerCancelWasPressed:(id)sender {
+[self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 @end
