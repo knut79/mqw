@@ -16,9 +16,11 @@
     id <CreatePlayerVCDelegate> delegate;
     BOOL isFirstLoginDone;
 }
+ //#oldFBlogin
 @property (strong, nonatomic) IBOutlet FBLoginView *loginView;
 @property (retain, nonatomic) IBOutlet UILabel *nameLabel;
 @property (retain, nonatomic) IBOutlet UILabel *statusLabel;
+ //#oldFBlogin
 @property (retain, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
 
 

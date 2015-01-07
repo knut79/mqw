@@ -25,6 +25,7 @@
 
 @implementation CreatePlayerVC
 
+ //#oldFBlogin
 @synthesize loginView, profilePictureView, nameLabel,statusLabel;
 @synthesize delegate;
 
@@ -47,6 +48,8 @@
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     [self.view setAlpha:1];
+    
+     //#oldFBlogin
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
     self.statusLabel.text= @"You need to log in to facebook to use the app!";
@@ -73,7 +76,7 @@
     [self loadAuthInfo];
     
     //@"manage_friendlists" to write
-    self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    //self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     
 }
 
@@ -98,8 +101,10 @@
 
 - (void)viewDidUnload
 {
-    self.profilePictureView = nil;
-    self.loginView = nil;
+     //#oldFBlogin
+        self.profilePictureView = nil;
+        self.loginView = nil;
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -120,6 +125,9 @@
                            forIdentifier:@"userid"];
     [KeychainWrapper createKeychainValue:self.todoService.client.currentUser.mobileServiceAuthenticationToken
                            forIdentifier:@"token"];
+    
+    //[self WritePlayerID: self.todoService.client.currentUser.userId
+    //      forIdentifier:@"userid" andName:user.first_name];
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -128,12 +136,16 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     //If you've added the -ObjC flag to your linker options, then you don't have to add this code
     
     // Override point for customization after application launch.
+    //#oldFBlogin
     [FBLoginView class];
+    //#oldFBlogin
     [FBProfilePictureView class];
 
     return YES;
 }
 
+
+ //#oldFBlogin
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -147,6 +159,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     return wasHandled;
 }
 
+
+
+ //#oldFBlogin
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
@@ -166,7 +181,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                                   if(error)
                                       NSLog(@"the error is %@",error);
                                   NSLog(@"the result is %@",result);
-                                  /* handle the result */
+                                  //handle the result
                               }];
         if ([delegate respondsToSelector:@selector(cleanUpCreatePlayerVC)])
             [delegate cleanUpCreatePlayerVC];
@@ -175,6 +190,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
      
 }
 
+
+
+ //#oldFBlogin
 - (void)request:(FBRequest *)request didLoad:(id)result {
     
     if([result isKindOfClass:[NSDictionary class]])
@@ -192,6 +210,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             }
     }
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
