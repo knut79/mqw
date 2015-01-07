@@ -549,6 +549,10 @@
 		729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */; };
 		729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44219ED372F00B082E5 /* statesAsia.txt */; };
 		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
+		72B1EF881A4D08BD00AAF302 /* XML_Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B1EF871A4D08BD00AAF302 /* XML_Dictionary.m */; };
+		72B1EF8B1A4D090200AAF302 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B1EF8A1A4D090200AAF302 /* KeychainWrapper.m */; };
+		72B1EF8D1A4D096D00AAF302 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B1EF8C1A4D096D00AAF302 /* Security.framework */; };
+		72B1EF901A4DCFA300AAF302 /* TestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B1EF8F1A4DCFA300AAF302 /* TestService.m */; };
 		72CB8A5819FB1E61000E30CF /* capitalsAmerica.txt in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5719FB1E61000E30CF /* capitalsAmerica.txt */; };
 		72CB8A5A1A0167E7000E30CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A591A0167E7000E30CF /* Default-568h@2x.png */; };
 		72CB8B1E1A043FA6000E30CF /* world_100_border_0_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */; };
@@ -1452,6 +1456,13 @@
 		729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanuatuFlag.png; path = resources/graphics/pictureQuestions/VanuatuFlag.png; sourceTree = "<group>"; };
 		729FC44219ED372F00B082E5 /* statesAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAsia.txt; path = resources/tekst/statesAsia.txt; sourceTree = "<group>"; };
 		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
+		72B1EF861A4D08BD00AAF302 /* XML_Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XML_Dictionary.h; sourceTree = "<group>"; };
+		72B1EF871A4D08BD00AAF302 /* XML_Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XML_Dictionary.m; sourceTree = "<group>"; };
+		72B1EF891A4D090200AAF302 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		72B1EF8A1A4D090200AAF302 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		72B1EF8C1A4D096D00AAF302 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		72B1EF8E1A4DCFA300AAF302 /* TestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestService.h; sourceTree = "<group>"; };
+		72B1EF8F1A4DCFA300AAF302 /* TestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestService.m; sourceTree = "<group>"; };
 		72CB8A5719FB1E61000E30CF /* capitalsAmerica.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitalsAmerica.txt; path = resources/tekst/capitalsAmerica.txt; sourceTree = "<group>"; };
 		72CB8A591A0167E7000E30CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "resources/graphics/GameElements/Default-568h@2x.png"; sourceTree = "<group>"; };
 		72CB8A5E1A043FA5000E30CF /* world_100_border_0_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = world_100_border_0_0.jpg; path = resources/graphics/map/withborder100/world_100_border_0_0.jpg; sourceTree = "<group>"; };
@@ -1876,6 +1887,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B1EF8D1A4D096D00AAF302 /* Security.framework in Frameworks */,
 				729DA2B21A2D47E70023F83F /* WindowsAzureMobileServices.framework in Frameworks */,
 				728747A419B9B2D000BADE3B /* libsqlite3.dylib in Frameworks */,
 				724026B219E55E5E005E3582 /* FacebookSDK.framework in Frameworks */,
@@ -2011,6 +2023,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72B1EF8C1A4D096D00AAF302 /* Security.framework */,
 				729DA2B11A2D47E70023F83F /* WindowsAzureMobileServices.framework */,
 				724026B119E55E5E005E3582 /* FacebookSDK.framework */,
 				728747A319B9B2D000BADE3B /* libsqlite3.dylib */,
@@ -2327,6 +2340,12 @@
 				729DA2AF1A2D46C30023F83F /* UserService.m */,
 				729DA2B31A2E81B70023F83F /* HighscoreService.h */,
 				729DA2B41A2E81B70023F83F /* HighscoreService.m */,
+				72B1EF861A4D08BD00AAF302 /* XML_Dictionary.h */,
+				72B1EF871A4D08BD00AAF302 /* XML_Dictionary.m */,
+				72B1EF891A4D090200AAF302 /* KeychainWrapper.h */,
+				72B1EF8A1A4D090200AAF302 /* KeychainWrapper.m */,
+				72B1EF8E1A4DCFA300AAF302 /* TestService.h */,
+				72B1EF8F1A4DCFA300AAF302 /* TestService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -3161,6 +3180,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = lemmus;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = A887G5EA37;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MQNorway" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -4001,6 +4025,7 @@
 				EE98986313300E3100CBA780 /* Game.m in Sources */,
 				EE98986B13300E5400CBA780 /* Question.m in Sources */,
 				EE98986E13300E6B00CBA780 /* Player.m in Sources */,
+				72B1EF8B1A4D090200AAF302 /* KeychainWrapper.m in Sources */,
 				729DA2B51A2E81B70023F83F /* HighscoreService.m in Sources */,
 				EE98987413300EA400CBA780 /* Answer.m in Sources */,
 				729DA2B01A2D46C30023F83F /* UserService.m in Sources */,
@@ -4039,6 +4064,7 @@
 				EEC506E513364DF0008996BB /* SqliteHelper.m in Sources */,
 				728747B219B9B3A900BADE3B /* FMDatabaseAdditions.m in Sources */,
 				EE2A4D631340D659001AD178 /* NSArray(dataConversion).m in Sources */,
+				72B1EF881A4D08BD00AAF302 /* XML_Dictionary.m in Sources */,
 				EEB252C31347148C003B3AAF /* StatisticsView.m in Sources */,
 				EE68D0B91348A07900F0F2D9 /* OtherInfoView.m in Sources */,
 				EE68D1711348DD5200F0F2D9 /* AnswerBarViewTop.m in Sources */,
@@ -4049,6 +4075,7 @@
 				EEE7A4A5136B01CB0077033B /* County.m in Sources */,
 				EEE7A983137331150077033B /* FirstTimeInstructionsView.m in Sources */,
 				EEE7AFDB137A717B0077033B /* EnumHelper.m in Sources */,
+				72B1EF901A4DCFA300AAF302 /* TestService.m in Sources */,
 				EE56869013AE543400D180E2 /* PauseView.m in Sources */,
 				EE56885213B2686C00D180E2 /* TrainingEndedView.m in Sources */,
 				EE9BD26213B6297600DD30BE /* MagnifierView.m in Sources */,
@@ -4080,6 +4107,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: knut dullum (AQM6DQYZXS)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4093,6 +4122,8 @@
 				INFOPLIST_FILE = "MQNorway-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = MQNorway;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "54eb46ec-5a3c-4077-91fc-a9ddae23b376";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -4101,6 +4132,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4113,6 +4146,7 @@
 				INFOPLIST_FILE = "MQNorway-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = MQNorway;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -4121,13 +4155,13 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: knut dullum (AQM6DQYZXS)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "54eb46ec-5a3c-4077-91fc-a9ddae23b376";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

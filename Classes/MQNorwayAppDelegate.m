@@ -15,6 +15,8 @@
 #import "SqliteHelper.h"
 #import "GlobalHelper.h"
 
+#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+
 @implementation MQNorwayAppDelegate
 
 @synthesize window;
@@ -37,21 +39,23 @@
 	
 	
     
-    NSLog(@"Registering for push notifications...");    
+    /*
+     NSLog(@"Registering for push notifications...");
     [[UIApplication sharedApplication] 
      registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeAlert | 
       UIRemoteNotificationTypeBadge | 
       UIRemoteNotificationTypeSound)];
+    */
     
-    
-    //getting push notification payload, if we got one while not running app
-    NSDictionary* userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+
     /*for (id key in userInfo) {
      NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
      } */
     
-    
+    //getting push notification payload, if we got one while not running app
+    /*
+    NSDictionary* userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
@@ -62,7 +66,7 @@
             [[GlobalHelper Instance] setBadgeNumber:[[apsInfo objectForKey:@"badge"] intValue]];
         }
     }
-    
+    */
 
     // Add the view controller's view to the window and display.
     [window addSubview:viewController.view];
@@ -71,41 +75,55 @@
     return YES;
 }
 
-- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken { 
-    //bitstring ??
-    //NSString *deviceTokenString = [[NSString alloc] initWithData:deviceToken encoding:NSASCIIStringEncoding];
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+    // TODO: update @"MobileServiceUrl" and @"AppKey" placeholders
+    //
+    //MSClient *client = [MSClient clientWithApplicationURLString:@"MobileServiceUrl" applicationKey:@"AppKey"];
+    MSClient *client = [MSClient clientWithApplicationURLString:@"https://mapfight1.azure-mobile.net" applicationKey:@"SaKOQUnJGCKObnhsMMeWMqdOMeAxrv44"];
     
+    [client.push registerNativeWithDeviceToken:deviceToken tags:@[@"uniqueTag"] completion:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"Error registering for notifications: %@", error);
+        }
+    }];
+    /*
     NSString *deviceTokenStr = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@" " withString:@""];
-    //NSString *str = [NSString stringWithFormat:@"Device Token=%@",deviceTokenTrimmed];
     
     [[GlobalHelper Instance]  setDeviceToken:deviceTokenStr];
     NSLog(@"Device Token=%@",deviceTokenStr);
-    
+    */
     
 }
 
-- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err { 
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
-    NSString *str = [NSString stringWithFormat: @"Error: %@", err];
-    NSLog(@"%@", str);    
+     NSLog(@"Failed to register for remote notifications: %@", error);
     
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    //jumps in here when recieving when app is running
+
+    NSLog(@"%@", userInfo);
+    NSString *message = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:
+                          message delegate:nil cancelButtonTitle:                          
+                          @"OK" otherButtonTitles:nil, nil];
+    /*
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notification" message:
+                          [userInfo objectForKey:@"inAppMessage"] delegate:nil cancelButtonTitle:
+                          @"OK" otherButtonTitles:nil, nil];*/
+    [alert show];
     
     /*
-     for (id key in userInfo) {
-     NSLog(@"key: %@, value: %@", key, [userInfo objectForKey:key]);
-     }   */
-    
     NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
     if (apsInfo != nil) {
         if ([apsInfo objectForKey:@"badge"] != nil) {
             [[GlobalHelper Instance] setBadgeNumber:[[apsInfo objectForKey:@"badge"] intValue]];
         }
     }
+     */
     
     
 }

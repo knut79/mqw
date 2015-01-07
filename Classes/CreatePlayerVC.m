@@ -11,6 +11,18 @@
 //test
 #import "HighscoreService.h"
 
+//!!testcode
+#import "TestService.h"
+#import "KeychainWrapper.h"
+
+
+@interface CreatePlayerVC ()
+
+// Private properties
+@property (strong, nonatomic) TestService *todoService;
+
+@end
+
 @implementation CreatePlayerVC
 
 @synthesize loginView, profilePictureView, nameLabel,statusLabel;
@@ -54,10 +66,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    //!!testcode
+    self.todoService = [TestService defaultService];
+    //insert for test
+    [self loadAuthInfo];
     
     //@"manage_friendlists" to write
     self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    MSClient *client = self.todoService.client;
+    
+    if (client.currentUser != nil) {
+        return;
+    }
+    
+    [client loginWithProvider:@"facebook" controller:self animated:YES completion:^(MSUser *user, NSError *error) {
+        [self saveAuthInfo];
+        //[self refresh];
+    }];
+    
+    // Register for remote notifications
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
 }
 
 
@@ -68,6 +103,23 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+//!!!! testcode
+- (void)loadAuthInfo {
+    NSString *userid = [KeychainWrapper keychainStringFromMatchingIdentifier:@"userid"];
+    if (userid) {
+        NSLog(@"userid: %@", userid);
+        self.todoService.client.currentUser = [[MSUser alloc] initWithUserId:userid];
+        self.todoService.client.currentUser.mobileServiceAuthenticationToken = [KeychainWrapper keychainStringFromMatchingIdentifier:@"token"];
+    }
+}
+
+- (void) saveAuthInfo{
+    [KeychainWrapper createKeychainValue:self.todoService.client.currentUser.userId
+                           forIdentifier:@"userid"];
+    [KeychainWrapper createKeychainValue:self.todoService.client.currentUser.mobileServiceAuthenticationToken
+                           forIdentifier:@"token"];
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -197,12 +249,24 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
         
         
-        //[self testCode];
+        [self testCode];
         
     }];
 }
 
 -(void) testCode
+{
+    NSDictionary *item = @{ @"text" : @"hhheee", @"complete" : @NO };
+
+    [self.todoService addItem:item completion:^(NSUInteger index)
+     {
+         //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+
+     }];
+
+}
+
+-(void) testCode2
 {
     //test code
     
