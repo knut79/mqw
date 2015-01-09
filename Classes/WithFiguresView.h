@@ -51,6 +51,7 @@
 -(void) StrokeUpRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) StrokeUpExludedRegions:(MpLocation*) loc andContextRef:(CGContextRef) context ;
 -(void) ResetRegionBoundValues;
+-(void) ResetZoomAndResolution;
 -(void) drawResult_UpdateGameData:(BOOL) updateGameData;
 -(void) AnimateResult;
 @end

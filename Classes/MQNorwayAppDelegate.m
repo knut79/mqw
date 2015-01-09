@@ -15,6 +15,8 @@
 #import "SqliteHelper.h"
 #import "GlobalHelper.h"
 
+#import "KeychainWrapper.h"
+
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 
 @implementation MQNorwayAppDelegate
@@ -87,10 +89,14 @@
             NSLog(@"Error registering for notifications: %@", error);
         }
     }];
-    /*
+    
+
+    
     NSString *deviceTokenStr = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@" " withString:@""];
     
+    [KeychainWrapper createKeychainValue:deviceTokenStr forIdentifier:@"token"];
+     /*
     [[GlobalHelper Instance]  setDeviceToken:deviceTokenStr];
     NSLog(@"Device Token=%@",deviceTokenStr);
     */

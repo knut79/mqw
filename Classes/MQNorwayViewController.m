@@ -641,7 +641,6 @@
     m_animTextView = nil;
     
     UIScreen *screen = [[UIScreen mainScreen] retain];
-    [resultBoardView ResetRegionBoundValues];
     [resultBoardView.sectionFiguresView setTransform:CGAffineTransformIdentity];
     resultBoardView.sectionFiguresView.center = CGPointMake(([screen applicationFrame].size.width/2), ([screen applicationFrame].size.height/2));
     [screen release];
@@ -716,19 +715,25 @@
     if (regionBoundsRect.size.width > 0 && regionBoundsRect.size.height > 0) {
         CGPoint regionBoundsPoint = CGPointMake(regionBoundsRect.origin.x + (regionBoundsRect.size.width/2), regionBoundsRect.origin.y + (regionBoundsRect.size.height/2));
         float scaleFactor = ([screen applicationFrame].size.width * 0.5)/regionBoundsRect.size.width;
+
+        NSLog(@"scaleFactor  %.2f yregionboundsrect.size.width %f",scaleFactor,regionBoundsRect.size.width);
         int xOffset = ([screen applicationFrame].size.width/2) - regionBoundsPoint.x;
         int yOffset =([screen applicationFrame].size.height/2) - regionBoundsPoint.y;
         xOffset = xOffset * scaleFactor;
         yOffset = yOffset * scaleFactor;
         [resultBoardView.sectionFiguresView setAlpha:1];
-        resultBoardView.lastCenterPoint = resultBoardView.sectionFiguresView.center;
+        
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.5];
         [UIView setAnimationDidStopSelector:@selector(sectionAnimationDidStop)];
         [UIView setAnimationDelegate:self];
         
+        resultBoardView.lastCenterPoint = resultBoardView.sectionFiguresView.center;
+        NSLog(@"old centerpoint x %.2f y %.2f",resultBoardView.sectionFiguresView.center.x,resultBoardView.sectionFiguresView.center.y);
         resultBoardView.sectionFiguresView.center = CGPointMake(resultBoardView.sectionFiguresView.center.x + xOffset, resultBoardView.sectionFiguresView.center.y + yOffset);
         [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(scaleFactor, scaleFactor)];
+        
+         NSLog(@"new centerpoint x %.2f y %.2f",resultBoardView.sectionFiguresView.center.x,resultBoardView.sectionFiguresView.center.y);
         [UIView commitAnimations];
         
     }
@@ -810,6 +815,7 @@
     [UIView setAnimationDelegate:self];
     [resultBoardView.sectionFiguresView setAlpha:0];
     resultBoardView.sectionFiguresView.center = resultBoardView.lastCenterPoint;
+    NSLog(@"restored centerpoint x %.2f y %.2f",resultBoardView.sectionFiguresView.center.x,resultBoardView.sectionFiguresView.center.y);
     [resultBoardView.sectionFiguresView setTransform:CGAffineTransformMakeScale(1, 1)];
     [UIView commitAnimations];
     //[self prepareForNextQuestion];
@@ -1411,6 +1417,8 @@
             [m_gameRef SetGameState:showResult];
         }
         
+        [resultBoardView ResetRegionBoundValues];
+        [resultBoardView ResetZoomAndResolution];
         [resultBoardView drawResult_UpdateGameData:YES];
         
         [self performTransition];

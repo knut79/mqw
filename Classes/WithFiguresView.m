@@ -38,9 +38,8 @@
         tiledMapViewZoomScale = 0.7111111;
 		tiledMapViewResolutionPercentage = (float)25;
          */
-        tiledMapViewZoomScale = 1;
-		tiledMapViewResolutionPercentage = (float)25;
-		tiledMapViewTileWidth = 256;
+        
+        [self ResetZoomAndResolution];
         
         [self ResetRegionBoundValues];
         
@@ -56,6 +55,13 @@
     maxX = -9999;
     minY = 9999;
     maxY = -9999;
+}
+
+-(void) ResetZoomAndResolution
+{
+    tiledMapViewZoomScale = 1;
+    tiledMapViewResolutionPercentage = (float)25;
+    tiledMapViewTileWidth = 256;
 }
 
 
@@ -567,6 +573,7 @@
     
     boundsOfRegion = CGRectMake(minX, minY, maxX - minX, maxY-minY);
     boundsOfRegion = CGRectOffset(boundsOfRegion, -tilesMapViewBounds.origin.x,-tilesMapViewBounds.origin.y);
+    NSLog(@"bounds region default set");
     
     self.sectionFiguresView.viewref = self;
     self.sectionFiguresView.location = loc;

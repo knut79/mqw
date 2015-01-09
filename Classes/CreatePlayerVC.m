@@ -73,13 +73,14 @@
     //!!testcode
     self.todoService = [TestService defaultService];
     //insert for test
-    [self loadAuthInfo];
+    //[self loadAuthInfo];
     
     //@"manage_friendlists" to write
-    //self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    self.loginView.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     
 }
 
+/*
 - (void)viewDidAppear:(BOOL)animated
 {
     MSClient *client = self.todoService.client;
@@ -88,16 +89,20 @@
         return;
     }
     
+    
+ 
     [client loginWithProvider:@"facebook" controller:self animated:YES completion:^(MSUser *user, NSError *error) {
         [self saveAuthInfo];
         //[self refresh];
     }];
+ 
     
+   
     // Register for remote notifications
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
      UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
 }
-
+*/
 
 - (void)viewDidUnload
 {
@@ -125,9 +130,6 @@
                            forIdentifier:@"userid"];
     [KeychainWrapper createKeychainValue:self.todoService.client.currentUser.mobileServiceAuthenticationToken
                            forIdentifier:@"token"];
-    
-    //[self WritePlayerID: self.todoService.client.currentUser.userId
-    //      forIdentifier:@"userid" andName:user.first_name];
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -224,6 +226,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [self WritePlayerLocally:playerID andName:firstname];
     [self WritePlayerToServer:playerID andName:firstname];
+    
+    [KeychainWrapper createKeychainValue:playerID
+                           forIdentifier:@"userid"];
    
 }
 
@@ -268,7 +273,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
         
         
-        [self testCode];
+        //[self testCode];
         
     }];
 }
