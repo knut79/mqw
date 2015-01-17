@@ -431,6 +431,7 @@
     if (challengeViewController == nil) {
         challengeViewController = [[ChallengeViewController alloc] initWithNibName:@"ChallengeViewController" bundle:nil]; 
         [challengeViewController setDelegate:self];
+        [challengeViewController setGameRef:m_gameRef];
         [challengeViewController setChallenge:m_gameRef.challenge];
         [self addSubview:challengeViewController.view];
     }

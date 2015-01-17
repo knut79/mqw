@@ -13,16 +13,18 @@
 
 @protocol MainMenuViewDelegate;
 
-@interface MainMenuView : UIView <StartGameMenuViewDelegate,OtherInfoViewDelegate,TakeChallengeViewCtrlDelegate> {
+@interface MainMenuView : UIView <StartGameMenuViewDelegate,OtherInfoViewDelegate,TakeChallengeViewCtrlDelegate,HighscoreGlobalViewDelegate> {
 	StartGameMenu *startGameMenu;
-	OtherInfoView* otherInfoView;
+	//OtherInfoView* otherInfoView;
+    HighscoreGlobalView *highscoreGlobalView;
 	id <MainMenuViewDelegate> delegate;
 	UILabel *loadingLabel;
 	
 	UIButton *buttonStartMenu;
-	UIButton *buttonOtherInfoMenu;
+	//UIButton *buttonOtherInfoMenu;
 	UIButton *buttonRestart;
     UIButton *buttonChallengesMenu;
+    UIButton * buttonHighscoreMenu;
     TakeChallenge* takeChallengeViewCtrl;
 }
 

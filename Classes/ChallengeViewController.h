@@ -13,6 +13,8 @@
 #import "Challenge.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "UserService.h"
+#import "ChallengeService.h"
+#import "Game.h"
 
 
 @protocol ChallengeViewControllerDelegate;
@@ -27,10 +29,12 @@
     NSMutableArray* assureNoDuplicatesPlayerIDs;
     Challenge* challenge;
     NSMutableArray* playersToChallenge;
+    Game* game;
 }
 @property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 @property (nonatomic, assign) id <ChallengeViewControllerDelegate> delegate;
 -(void) setChallenge:(Challenge*) pChallenge;
+-(void) setGameRef:(Game*) pGame;
 @property (retain, nonatomic) IBOutlet UIButton *buttonAddContact;
 - (IBAction)addFriendPushed:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *buttonAddRandomUser;
@@ -38,6 +42,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *buttonSendChallenge;
 @property (retain, nonatomic) IBOutlet UIButton *buttonRemovePlayer;
 - (IBAction)removePlayerPushed:(id)sender;
+- (IBAction)sendChallengePushed:(id)sender;
 
 - (IBAction)buttonGoBackPushed:(id)sender;
 - (IBAction)addRandomPlayerPushed:(id)sender;

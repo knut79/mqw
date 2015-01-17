@@ -39,6 +39,7 @@
 	NSMutableDictionary *training_oldResultDictionary;
 	NSMutableDictionary *training_newResultDictionary;
 	NSMutableArray *training_placesArray;
+    NSMutableArray * passedQuestions;
     
     Challenge* challenge;
     
@@ -58,6 +59,7 @@
 -(void) ResetPlayerData;
 -(void) IncreasQuestionsPassed;
 -(NSInteger) GetQuestionsPassed;
+-(NSMutableArray*) GetPassedQuestions;
 -(NSInteger) GetPlayersLeft;
 -(void) FirstPlaceSetScore:(NSInteger) score;
 -(void) SecondPlaceSetScore:(NSInteger) score;

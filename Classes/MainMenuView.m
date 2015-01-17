@@ -76,6 +76,7 @@
 		buttonChallengesMenu.center = CGPointMake([screen applicationFrame].size.width/2,220);
 		[self addSubview:buttonChallengesMenu];
 
+        /*
 		buttonOtherInfoMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonOtherInfoMenu addTarget:self action:@selector(otherInfoMenu:) forControlEvents:UIControlEventTouchDown];
 		[buttonOtherInfoMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Status"] forState:UIControlStateNormal];
@@ -85,6 +86,17 @@
 		buttonOtherInfoMenu.frame = CGRectMake(0, 0, 120.0, 40.0);
 		buttonOtherInfoMenu.center = CGPointMake([screen applicationFrame].size.width/2,360);
 		[self addSubview:buttonOtherInfoMenu];
+        */
+        
+        buttonHighscoreMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[buttonHighscoreMenu addTarget:self action:@selector(highscoreMenu:) forControlEvents:UIControlEventTouchDown];
+		[buttonHighscoreMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Highscore"] forState:UIControlStateNormal];
+        buttonHighscoreMenu.layer.borderWidth=1.0f;
+        [buttonHighscoreMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        buttonHighscoreMenu.layer.borderColor=[[UIColor whiteColor] CGColor];
+		buttonHighscoreMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
+		buttonHighscoreMenu.center = CGPointMake([screen applicationFrame].size.width/2,280);
+		[self addSubview:buttonHighscoreMenu];
 
 
 		[screen release];
@@ -120,8 +132,9 @@
 
 -(void) UpdateLabels
 {
-	[buttonOtherInfoMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Status"] forState:UIControlStateNormal];
+	//[buttonOtherInfoMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Status"] forState:UIControlStateNormal];
 	[buttonStartMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
+    [buttonHighscoreMenu setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Highscore"] forState:UIControlStateNormal];
 }
 
 
@@ -196,6 +209,7 @@
     [startGameMenu FadeIn];
 }
 
+/*
 -(void) otherInfoMenu:(id)Sender
 {
 	if(otherInfoView == nil)
@@ -210,13 +224,37 @@
 		[otherInfoView FadeIn];
 	}
 }
+*/
 
+-(void)highscoreMenu:(id)Sender
+{
+    if (highscoreGlobalView == nil) {
+		highscoreGlobalView = [[HighscoreGlobalView alloc] initWithFrame:[self frame]];
+		[highscoreGlobalView setDelegate:self];
+		[self addSubview:highscoreGlobalView];
+		[highscoreGlobalView FadeIn];
+	}
+	else {
+		[highscoreGlobalView UpdateLabels];
+		//if flagged new highscores
+		[highscoreGlobalView FadeIn];
+    }
+}
 
+-(void)cleanUpHigscoreGlobalView
+{
+	[highscoreGlobalView removeFromSuperview];
+	//[highscoreGlobalView dealloc];
+	highscoreGlobalView = nil;
+}
+
+/*
 -(void) cleanUpOtherInfoView
 {
     [otherInfoView removeFromSuperview];
     otherInfoView = nil;
 }
+*/
 
 - (void)cleanUpSettingsMenuView;
 {

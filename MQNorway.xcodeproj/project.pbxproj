@@ -549,6 +549,7 @@
 		729FC44119ECA16B00B082E5 /* VanuatuFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */; };
 		729FC44319ED372F00B082E5 /* statesAsia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44219ED372F00B082E5 /* statesAsia.txt */; };
 		729FC44519ED6AF800B082E5 /* RussiaFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = 729FC44419ED6AF800B082E5 /* RussiaFlag.png */; };
+		72ACDACC1A6368D6008098B5 /* ChallengeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ACDACB1A6368D6008098B5 /* ChallengeService.m */; };
 		72B1EF881A4D08BD00AAF302 /* XML_Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B1EF871A4D08BD00AAF302 /* XML_Dictionary.m */; };
 		72B1EF8B1A4D090200AAF302 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B1EF8A1A4D090200AAF302 /* KeychainWrapper.m */; };
 		72B1EF8D1A4D096D00AAF302 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B1EF8C1A4D096D00AAF302 /* Security.framework */; };
@@ -1456,6 +1457,8 @@
 		729FC41B19ECA16B00B082E5 /* VanuatuFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VanuatuFlag.png; path = resources/graphics/pictureQuestions/VanuatuFlag.png; sourceTree = "<group>"; };
 		729FC44219ED372F00B082E5 /* statesAsia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = statesAsia.txt; path = resources/tekst/statesAsia.txt; sourceTree = "<group>"; };
 		729FC44419ED6AF800B082E5 /* RussiaFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RussiaFlag.png; path = resources/graphics/pictureQuestions/RussiaFlag.png; sourceTree = "<group>"; };
+		72ACDACA1A6368D6008098B5 /* ChallengeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeService.h; sourceTree = "<group>"; };
+		72ACDACB1A6368D6008098B5 /* ChallengeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeService.m; sourceTree = "<group>"; };
 		72B1EF861A4D08BD00AAF302 /* XML_Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XML_Dictionary.h; sourceTree = "<group>"; };
 		72B1EF871A4D08BD00AAF302 /* XML_Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XML_Dictionary.m; sourceTree = "<group>"; };
 		72B1EF891A4D090200AAF302 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
@@ -2346,6 +2349,8 @@
 				72B1EF8A1A4D090200AAF302 /* KeychainWrapper.m */,
 				72B1EF8E1A4DCFA300AAF302 /* TestService.h */,
 				72B1EF8F1A4DCFA300AAF302 /* TestService.m */,
+				72ACDACA1A6368D6008098B5 /* ChallengeService.h */,
+				72ACDACB1A6368D6008098B5 /* ChallengeService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -4075,6 +4080,7 @@
 				EEE7A4A5136B01CB0077033B /* County.m in Sources */,
 				EEE7A983137331150077033B /* FirstTimeInstructionsView.m in Sources */,
 				EEE7AFDB137A717B0077033B /* EnumHelper.m in Sources */,
+				72ACDACC1A6368D6008098B5 /* ChallengeService.m in Sources */,
 				72B1EF901A4DCFA300AAF302 /* TestService.m in Sources */,
 				EE56869013AE543400D180E2 /* PauseView.m in Sources */,
 				EE56885213B2686C00D180E2 /* TrainingEndedView.m in Sources */,

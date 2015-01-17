@@ -255,12 +255,10 @@
              //[playerDictionary setValue:name forKey:@"name"];
              [playersToChallenge addObject:playerDictionary];
              
+             [self ReloadHtml];
+             
          }
      }];
-    
-    [self ReloadHtml];
-
-
 }
 
 
@@ -300,7 +298,7 @@
 		NSMutableString *pageToLoad = [[[NSMutableString alloc] init] autorelease];
 		[pageToLoad appendString:pageStartToLoad];
         for (int i = 0; i < playersToChallenge.count; i++) {
-            [pageToLoad appendString:[NSString stringWithFormat:@"<tr><<td>%@</td>/tr>",[[playersToChallenge objectAtIndex:i] valueForKey:@"name"]]];
+            [pageToLoad appendString:[NSString stringWithFormat:@"<tr><td>%@</td></tr>",[[playersToChallenge objectAtIndex:i] valueForKey:@"name"]]];
         }
         [pageToLoad appendString:pageAddressesToLoad];
         [pageToLoad appendString:pageEndToLoad];
@@ -311,7 +309,7 @@
     if(playersToChallenge.count>0)
     {
         if (playersToChallenge.count>1) {
-            //[buttonSendChallenge setTitle:[NSString stringWithFormat:@"Send %d challenges",[playersToChallenge.count]] forState:UIControlStateNormal];
+            [buttonSendChallenge setTitle:[NSString stringWithFormat:@"Send %lu challenges",(unsigned long)playersToChallenge.count] forState:UIControlStateNormal];
         }
         else
         {
@@ -336,13 +334,82 @@
     
 }
 
+
+-(void) setGameRef:(Game*) pGame
+{
+    game = pGame;
+}
+
+
 -(void) setChallenge:(Challenge*) pChallenge
 {
     challenge = pChallenge;
 }
+
 - (IBAction)removePlayerPushed:(id)sender {
     [playersToChallenge removeLastObject];
     [self ReloadHtml];
+}
+
+- (IBAction)sendChallengePushed:(id)sender {
+    
+    //send challenge to users
+    ChallengeService* challengeService = [ChallengeService defaultService];
+    NSMutableString* usersCommaseparated =[[[NSMutableString alloc] init] autorelease];
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    for (int i = 0; i < playersToChallenge.count; i++) {
+        [usersCommaseparated appendString:[NSString stringWithFormat:@"%@;",[[playersToChallenge objectAtIndex:i] valueForKey:@"userid"]]];
+    }
+    if (usersCommaseparated.length == 0) {
+        [usersCommaseparated appendString:@"bogus"];
+    }
+    
+    
+    NSMutableString* questionsCommaseparated =[[[NSMutableString alloc] init] autorelease];
+    for (int i = 0; i < [game GetPassedQuestions].count;i++)
+    {
+        Question* tempQuestion = [[game GetPassedQuestions] objectAtIndex:i];
+        [questionsCommaseparated appendString:[NSString stringWithFormat:@"%@;",[tempQuestion GetID]]];
+    }
+    
+    /*
+    NSNumber* answers = @([game GetPassedQuestions].count);
+    NSNumber* seconds = @([[game GetPlayer] GetSecondsUsed]);
+    BOOL borders = [game UsingBorders];
+    
+        NSDictionary *testDictionary = [NSDictionary dictionaryWithObjectsAndKeys:playerId, @"id",@([[game GetPlayer] GetSecondsUsed]),@"seconds",nil];
+    NSDictionary *test2Dictionary = [NSDictionary dictionaryWithObjectsAndKeys:@1,@"flags",nil];
+     NSDictionary *test3Dictionary = [NSDictionary dictionaryWithObjectsAndKeys:@([game UsingBorders]),@"borders",nil];
+     */
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:playerId, @"id",usersCommaseparated, @"recipients",questionsCommaseparated,@"questions",@1, @"level",@([game GetPassedQuestions].count),@"answers",@([[game GetPlayer] GetSecondsUsed]),@"seconds",@([game UsingBorders]),@"borders",@YES,@"flags",nil];
+    
+    [challengeService sendChallenge:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             NSString* errorMessage = @"There was a problem! ";
+             errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error!"
+                                     message:errorMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             [myAlert show];
+             
+         } else {
+             
+             //succeded sending challenge
+             [self.view setAlpha:0];
+             [self dealloc];
+             
+             if ([delegate respondsToSelector:@selector(cleanUpChallengView)])
+                 [delegate cleanUpChallengView];
+         }
+     }];
+
 }
 
 - (IBAction)buttonGoBackPushed:(id)sender {

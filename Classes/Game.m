@@ -28,6 +28,7 @@
 		m_gameQuestionsPassed = 0;
 		m_gameState = outOfGame;
         challenge = [[Challenge alloc] init];
+        passedQuestions = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
@@ -129,11 +130,18 @@
     return moreQuestionsForTraining;
 }
 
+-(NSMutableArray*) GetPassedQuestions
+{
+    return passedQuestions;
+}
+
 -(void) SetNextQuestion
 {
-	
-	NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training];
-
+    NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training];
+    
+    //add last question to list representing passed questions
+	[passedQuestions addObject:[questionsOnType objectAtIndex:m_currentQuestionIndex]];
+    
 	m_currentQuestionIndex ++;
 	
 	if (m_training == NO) {
