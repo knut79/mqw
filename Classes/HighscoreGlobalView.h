@@ -10,7 +10,7 @@
 	
 @protocol HighscoreGlobalViewDelegate;
 
-	@interface HighscoreGlobalView : UIView<NSXMLParserDelegate> {
+	@interface HighscoreGlobalView : UIView {
 			id <HighscoreGlobalViewDelegate> delegate;
 		NSString *pathEasy;
 		NSString *pathMedium;

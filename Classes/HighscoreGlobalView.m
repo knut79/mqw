@@ -12,7 +12,14 @@
 #import "UISwitch-extended.h"
 #import "GlobalSettingsHelper.h"
 #import "EnumHelper.h"
+#import "HighscoreService.h"
 
+@interface HighscoreGlobalView ()
+
+// Private properties
+@property (strong, nonatomic) HighscoreService *highscoreService;
+
+@end
 
 @implementation HighscoreGlobalView
 @synthesize delegate;
@@ -62,6 +69,7 @@
 		int labelsXoffset = 0;
 		int labeslYoffset = 0;
 		
+        self.highscoreService = [HighscoreService defaultService];
 		
 		int yPos = 0;
 		NSValue *tempval;
@@ -189,6 +197,7 @@
 		button_levelDown.center = CGPointMake(m_centerX, button_levelDown.frame.origin.y + (button_levelDown.frame.size.height/2) );
 		[button_levelUp setAlpha:0];
 		
+        /*
 		switchShowButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[switchShowButton addTarget:self action:@selector(goSwitchShow:) forControlEvents:UIControlEventTouchDown];
 		[switchShowButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"View top ten"] forState:UIControlStateNormal];
@@ -198,6 +207,7 @@
         switchShowButton.layer.borderColor=[[UIColor whiteColor] CGColor];
 		[self addSubview:switchShowButton];
 		showTopTen = false;
+        */
 		
 		buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonBack addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchDown];
@@ -216,56 +226,10 @@
 		m_activityIndicator.center = CGPointMake([screen applicationFrame].size.width/2,[screen applicationFrame].size.height/2);
 		m_activityIndicator.hidesWhenStopped  = YES;
 		[self addSubview:m_activityIndicator];	
-		[m_activityIndicator startAnimating];
 		[self bringSubviewToFront:m_activityIndicator];
-		
-		
-		recordName = FALSE;
-		recordScore = FALSE;
-		recordTime = FALSE;
 
-		NSString *soapMessage = [NSString stringWithFormat:
-								 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-								 "<SOAP-ENV:Envelope\n"
-								 "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n"
-								 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
-								 "xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-								 "SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-								 "xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-								 "<SOAP-ENV:Body>\n"
-								 "<GetHighscoreList xmlns=\"http://quizmap.net/\">\n"
-								 "<difficulty>hard</difficulty>\n"
-								 "<league>empty</league>\n"
-								 "</GetHighscoreList>\n"
-								 "</SOAP-ENV:Body>\n"
-								 "</SOAP-ENV:Envelope>"
-								 ];
-		
-		index = 0;
-		NSLog(@"%@", soapMessage);
-		
-		NSURL *url = [NSURL URLWithString:@"http://www.quizmap.net/ASP.NET/HighscoreServ.asmx"];
-		NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-		NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-		
-		[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-		[theRequest addValue: @"http://quizmap.net/GetHighscoreList" forHTTPHeaderField:@"SOAPAction"];
-		[theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
-		[theRequest setHTTPMethod:@"POST"];
-		[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-		
-		
-		NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-		
-		if( theConnection )
-		{
-			webData = [[NSMutableData data] retain];
-		}
-		else
-		{
-			NSLog(@"theConnection is NULL");
-		}
-		
+        [self showPlayerHighscore];
+
 		[screen release];
 		[self setAlpha:0];
     }
@@ -274,9 +238,9 @@
 
 -(void) levelUp
 {
-	[button_levelDown setUserInteractionEnabled:FALSE];
-	[button_levelUp setUserInteractionEnabled:FALSE];
-	[switchShowButton setUserInteractionEnabled:FALSE];
+    [button_levelUp setUserInteractionEnabled:TRUE];
+    [button_levelDown setUserInteractionEnabled:TRUE];
+	//[switchShowButton setUserInteractionEnabled:FALSE];
     if (m_showingLevel == level1) {
 		m_showingLevel = level2;
 		[self changeLevel];
@@ -290,6 +254,7 @@
 		[self changeLevel];
 	}
 	else  if(m_showingLevel == level4){
+        [button_levelUp setUserInteractionEnabled:FALSE];
 		m_showingLevel = level5;
 		[self changeLevel];
 	}
@@ -297,9 +262,9 @@
 
 -(void) levelDown
 {
-	[button_levelDown setUserInteractionEnabled:FALSE];
-	[button_levelUp setUserInteractionEnabled:FALSE];
-	[switchShowButton setUserInteractionEnabled:FALSE];
+	[button_levelUp setUserInteractionEnabled:TRUE];
+    [button_levelDown setUserInteractionEnabled:TRUE];
+	//[switchShowButton setUserInteractionEnabled:FALSE];
 	if (m_showingLevel == level5) {
 		m_showingLevel = level4;
 		[self changeLevel];
@@ -313,6 +278,7 @@
 		[self changeLevel];
 	}
 	else if(m_showingLevel == level2){
+        [button_levelDown setUserInteractionEnabled:FALSE];
 		m_showingLevel = level1;
 		[self changeLevel];
 	}
@@ -320,8 +286,7 @@
 
 -(void) clearResults
 {
-	
-	
+
 	for (int i = 0; i < 10; i++) {
 				
 		UILabel *nameTempLabel = [[nameLabels objectAtIndex:i] retain];
@@ -375,55 +340,6 @@
 	[UIView commitAnimations];	
 	
 	[m_activityIndicator startAnimating];
-	
-	recordName = FALSE;
-	recordScore = FALSE;
-	recordTime = FALSE;
-	index = 0;
-	
-	
-	NSString *soapMessage = [NSString stringWithFormat:
-							 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-							 "<SOAP-ENV:Envelope\n"
-							 "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n"
-							 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
-							 "xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-							 "<SOAP-ENV:Body>\n"
-							 "<GetHighscoreList xmlns=\"http://quizmap.net/\">\n"
-							 "<difficulty>%@</difficulty>\n"
-							 "<league>empty</league>\n"
-							 "</GetHighscoreList>\n"
-							 "</SOAP-ENV:Body>\n"
-							 "</SOAP-ENV:Envelope>",levelString
-							 ];
-	
-	
-	NSLog(@"%@",soapMessage);
-	
-	NSURL *url = [NSURL URLWithString:@"http://www.quizmap.net/ASP.NET/HighscoreServ.asmx"];
-	
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-	
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest addValue: @"http://quizmap.net/GetHighscoreList" forHTTPHeaderField:@"SOAPAction"];
-	[theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
-	[theRequest setHTTPMethod:@"POST"];
-	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	
-	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-	
-	if( theConnection )
-	{
-		webData = [[NSMutableData data] retain];
-	}
-	else
-	{
-		NSLog(@"theConnection is NULL");
-	}
 }
 
 -(void) finishedMovingLabelsIn
@@ -441,115 +357,136 @@
 {
 	[self clearResults];
 	[m_activityIndicator startAnimating];
-	headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Highscores"];
 	
-	recordName = FALSE;
-	recordScore = FALSE;
-	recordTime = FALSE;
-	index = 0;
-	
-	NSString *levelString = [EnumHelper difficultyToString:m_showingLevel];
-	
-	NSString *soapMessage = [NSString stringWithFormat:
-							 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-							 "<SOAP-ENV:Envelope\n"
-							 "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n"
-							 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
-							 "xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-							 "<SOAP-ENV:Body>\n"
-							 "<GetListForPlayer xmlns=\"http://quizmap.net/\">\n"
-							 "<playerID>%@</playerID>\n"
-							 "<difficulty>%@</difficulty>\n"
-							 "</GetListForPlayer>\n"
-							 "</SOAP-ENV:Body>\n"
-							 "</SOAP-ENV:Envelope>",[[GlobalSettingsHelper Instance] GetPlayerID],levelString
-							 ];
-	
-	
-	NSLog(@"%@", soapMessage);
-	
-	NSURL *url = [NSURL URLWithString:@"http://www.quizmap.net/ASP.NET/HighscoreServ.asmx"];
-	
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-	
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest addValue: @"http://quizmap.net/GetListForPlayer" forHTTPHeaderField:@"SOAPAction"];
-	[theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
-	[theRequest setHTTPMethod:@"POST"];
-	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	
-	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-	
-	if( theConnection )
-	{
-		webData = [[NSMutableData data] retain];
-	}
-	else
-	{
-		NSLog(@"theConnection is NULL");
-	}
+    
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    //HighscoreService* highscoreService = [HighscoreService defaultService];
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    playerId, @"id", @1, @"level",nil];
+    
+    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         
+         [m_activityIndicator stopAnimating];
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             NSString* errorMessage = @"There was a problem! ";
+             errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error!"
+                                     message:errorMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             [myAlert show];
+             
+             
+             
+         }
+         else {
+             
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+             
+             
+             
+             NSLog(@"The datastring : %@",newStr);
+             
+             
+             
+             
+             //for testing
+             //NSData *jsonData = [@"{ \"key1\": \"value1\",\"key2\": \"value2\" }" dataUsingEncoding:NSUTF8StringEncoding];
+             
+             
+             //if we have set of values
+             
+              
+              //remove front [ and back ] characters
+              if ([newStr rangeOfString: @"]"].length >0) {
+              [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+              [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+              NSLog(@"The datastring : %@",newStr);
+              }
+              
+              NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+              
+              while ([newStr rangeOfString: @"}"].length >0) {
+              NSRange match = [newStr rangeOfString: @"}"];
+              NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+              NSLog(@"The substring1 : %@",rowSubstring1);
+              
+              NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];
+              NSLog(@"jsonObject is %@",jsonObject);
+              
+                  //NSInteger test1 = newStr.length;
+                  //NSInteger test2 = [newStr rangeOfString: @"}"].location + 2 ;
+              [dataArray addObject:jsonObject];
+              if ([newStr rangeOfString: @"}"].location + 2 < newStr.length) {
+                  [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+                }
+              else{
+                  [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
+              }
+              
+                  
+              }
+             
+             
+             NSDictionary *test= [dataArray objectAtIndex:1];
+             
+             
+              //------------------------single value
+             
+             NSData *jsonData = [newStr dataUsingEncoding:NSUTF8StringEncoding];
+             /*
+              NSDictionary *jsonObject=[NSJSONSerialization
+              JSONObjectWithData:jsonData
+              options:NSJSONReadingMutableLeaves
+              error:nil];*/
+             NSDictionary *jsonObject=[NSJSONSerialization
+                                       JSONObjectWithData:jsonData
+                                       options:NSJSONWritingPrettyPrinted
+                                       error:nil];
+             NSLog(@"jsonObject is %@",jsonObject);
+             
+             NSString* userId = [jsonObject valueForKey:@"userid"];
+             NSInteger npb = [[jsonObject valueForKey:@"newpersonalbest"] intValue];
+             NSInteger rank = [[jsonObject valueForKey:@"rank"] intValue];
+             NSInteger seconds = [[jsonObject objectForKey:@"seconds"] intValue];
+             id questionsAnswered = [[jsonObject objectForKey:@"answeredquestions"] intValue];
+             
+             NSString* successMessage = [NSString stringWithFormat:@"Rank: %@  %ld items marked as complete", @"bal",(long)seconds];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Success!"
+                                     message:successMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Okay"
+                                     otherButtonTitles:nil];
+             
+             [myAlert show];
+             
+         }
+         
+     }];
+    
+    
+    
 }
 
+/*
 -(void) showTopTen
 {
 	[self clearResults];
 	[m_activityIndicator startAnimating];
 	headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Top ten"];
-	
-	recordName = FALSE;
-	recordScore = FALSE;
-	recordTime = FALSE;
-	index = 0;
-	NSString *levelString = [EnumHelper difficultyToString:m_showingLevel];
-
-		NSString *soapMessage = [NSString stringWithFormat:
-								 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-								 "<SOAP-ENV:Envelope\n"
-								 "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n"
-								 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
-								 "xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-								 "SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-								 "xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-								 "<SOAP-ENV:Body>\n"
-								 "<GetHighscoreList xmlns=\"http://quizmap.net/\">\n"
-								 "<difficulty>%@</difficulty>\n"
-                                 "<league>none</league>\n"
-								 "</GetHighscoreList>\n"
-								 "</SOAP-ENV:Body>\n"
-								 "</SOAP-ENV:Envelope>",levelString
-								 ];
-	
-	
-	NSLog(@"%@", soapMessage);
-	
-	NSURL *url = [NSURL URLWithString:@"http://www.quizmap.net/ASP.NET/HighscoreServ.asmx"];
-	
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-	
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest addValue: @"http://quizmap.net/GetHighscoreList" forHTTPHeaderField:@"SOAPAction"];
-	[theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
-	[theRequest setHTTPMethod:@"POST"];
-	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	
-	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-	
-	if( theConnection )
-	{
-		webData = [[NSMutableData data] retain];
-	}
-	else
-	{
-		NSLog(@"theConnection is NULL");
-	}
-	
 }
+*/
 
 -(void) UpdateLabels
 {
@@ -568,156 +505,12 @@
 
 
 
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-	[webData setLength: 0];
-}
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-	[webData appendData:data];
-}
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-	NSLog(@"ERROR with theConenction");
-	[connection release];
-	[webData release];
-}
--(void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-	NSLog(@"DONE. Received Bytes: %d", [webData length]);
-	NSString *theXML = [[NSString alloc] initWithBytes: [webData mutableBytes] length:[webData length] encoding:NSUTF8StringEncoding];
-	
-	NSLog(@"%@", theXML);
-	[theXML release];
-	
-	if( xmlParser )
-	{
-		[xmlParser release];
-	}
-	
-	xmlParser = [[NSXMLParser alloc] initWithData: webData];
-	[xmlParser setDelegate: self];
-	[xmlParser setShouldResolveExternalEntities: YES];
-	[xmlParser parse];
-	
-	[connection release];
-	[webData release];
-}
-
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *) namespaceURI qualifiedName:(NSString *)qName
-   attributes: (NSDictionary *)attributeDict
-{
-	
-	if( [elementName isEqualToString:@"place"])
-	{
-        recordPlace = TRUE;    
-	}
-	
-	if( [elementName isEqualToString:@"name"])
-	{
-		recordName = TRUE;
-	}
-	
-	if( [elementName isEqualToString:@"score"])
-	{
-		recordScore = TRUE;
-	}
-	
-	if( [elementName isEqualToString:@"time"])
-	{
-		recordTime = TRUE;
-	}
-    
-    if( [elementName isEqualToString:@"questions"])
-	{
-		recordQuestions = TRUE;
-	}
-
-}
--(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-	if (index < 9) {
-        if(recordName)
-        {
-            UILabel *tempLabel = [[nameLabels objectAtIndex:index] retain];
-            tempLabel.text = [NSString stringWithFormat:@"%d. %@",index + 1, string];
-            [tempLabel release];
-            recordName = FALSE;
-        }
-        
-        if(recordScore)
-        {
-            UILabel *pointsLabel = [[pointsLabels objectAtIndex:index]retain];
-            pointsLabel.text = [NSString stringWithFormat:@"%d", [string intValue]];
-            [pointsLabel release];
-            recordScore = FALSE;
-        }
-        
-        if(recordTime)
-        {
-            UILabel *timeLabel = [[timeLabels objectAtIndex:index]retain];
-            NSString *seconds = [[NSString stringWithFormat:@"%d",[string intValue]%60] retain];
-            if ([seconds length] == 1 ) {
-                timeLabel.text = [NSString stringWithFormat:@"%d:0%d ",[string intValue]/60,[string intValue]%60];
-            }
-            else {
-                timeLabel.text = [NSString stringWithFormat:@"%d:%d ",[string intValue]/60,[string intValue]%60];
-            }
-            [seconds release];
-            [timeLabel release];
-            recordTime = FALSE;
-        }	
-    }
-    else
-    {
-        NSLog(@"Too much soap data returned!");
-        recordTime = FALSE;
-        recordScore = FALSE;
-        recordName = FALSE;
-    }
-
-
-}
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-	if( [elementName isEqualToString:@"Player"])
-	{
-		index ++;
-
-	}
-    if( [elementName isEqualToString:@"anyType"])
-	{
-		index ++;
-	}
-
-
-						  
-	if( [elementName isEqualToString:@"GetHighscoreListResponse"])
-	{
-		[m_activityIndicator stopAnimating];
-		[button_levelDown setUserInteractionEnabled:TRUE];
-		[button_levelUp setUserInteractionEnabled:TRUE];
-		[switchShowButton setUserInteractionEnabled:TRUE];
-		
-	}
-	
-	if( [elementName isEqualToString:@"GetListForPlayerResponse"])
-	{
-		[m_activityIndicator stopAnimating];
-		[button_levelDown setUserInteractionEnabled:TRUE];
-		[button_levelUp setUserInteractionEnabled:TRUE];
-		[switchShowButton setUserInteractionEnabled:TRUE];
-		
-	}
-	
-	
-}
-
 -(void)goBack:(id)Sender
 {
 	[self FadeOut];
 }
 
+/*
 -(void) goSwitchShow:(id)Sender
 {
 	[button_levelDown setUserInteractionEnabled:FALSE];
@@ -734,6 +527,7 @@
 		[self showTopTen];
 	}
 }
+*/
 
 
 -(void) FadeIn

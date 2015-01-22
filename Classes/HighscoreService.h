@@ -42,6 +42,7 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
              response:(MSFilterResponseBlock)response;
 
 - (void) sendScoreGetRankForPlayer:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
+- (void) getHigscoreForPlayerAndLevel:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
 
 
 @end
