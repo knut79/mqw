@@ -7,18 +7,34 @@
 //
 
 #import "TakeChallenge.h"
+#import "GlobalSettingsHelper.h"
+
+#import "HighscoreService.h"
+
+@interface TakeChallenge ()
+
+// Private properties
+@property (strong, nonatomic) HighscoreService *highscoreService;
+
+@end
 
 @implementation TakeChallenge
-@synthesize webView;
-@synthesize challengesTableView;
+@synthesize m_game;
+@synthesize staticChallengesTableView;
 @synthesize backButton;
 @synthesize delegate;
+@synthesize statusButton;
+@synthesize staticChallengesHeader;
+@synthesize dynamicChallengesHeader;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+
+        
+
     }
     return self;
 }
@@ -32,63 +48,265 @@
 }
 
 
-- (void) ReloadHtml
-{
+- (IBAction)statusButtonPushed:(id)sender {
 
-	if (webView != nil) {
-		NSMutableString *pageToLoad = [[[NSMutableString alloc] init] autorelease];
-		[pageToLoad appendString:pageStartToLoad];
-        [pageToLoad appendString:pageEndToLoad];
-        
-		[webView loadHTMLString:pageToLoad baseURL:nil];
+    if (challengeStatusView == nil) {
+        challengeStatusView = [[ChallengeStatusView alloc] initWithFrame:[self.view frame]];
+        [challengeStatusView setDelegate:self];
+        [self.view addSubview:challengeStatusView];
+        [challengeStatusView FadeIn];
+    }
+    else
+    {
+        [challengeStatusView FadeIn];
     }
 }
+
+-(void) cleanUpChallengeStatusView
+{
+    [challengeStatusView release];
+    [challengeStatusView removeFromSuperview];
+    challengeStatusView = nil;
+}
+
+
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
 
+    UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
+    self.view.backgroundColor = lightBlueColor;
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    dynamicChallengesHeader.backgroundColor = [UIColor clearColor];
+    dynamicChallengesHeader.textColor = [UIColor whiteColor];
+    dynamicChallengesHeader.layer.shadowColor = [[UIColor blackColor] CGColor];
+    dynamicChallengesHeader.layer.shadowOpacity = 1.0;
+
+    staticChallengesHeader.backgroundColor = [UIColor clearColor];
+    staticChallengesHeader.textColor = [UIColor whiteColor];
+    staticChallengesHeader.layer.shadowColor = [[UIColor blackColor] CGColor];
+    staticChallengesHeader.layer.shadowOpacity = 1.0;
+    
+    getStaticChallengesRetry = 0;
+    getDynamicChallengesRetry = 0;
+    
+    backButton.layer.borderWidth=1.0f;
+    [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    backButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
+    
+    statusButton.layer.borderWidth=1.0f;
+    [statusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    statusButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    
     datasourceArray = [[NSMutableArray alloc] init];
     
-    [datasourceArray addObject:@"test1"];
-    [datasourceArray addObject:@"test2"];
-    [datasourceArray addObject:@"test3"];
-    [datasourceArray addObject:@"test4"];
+    self.highscoreService = [HighscoreService defaultService];
     
     
-    pageStartToLoad = [[[NSMutableString alloc] init] retain];
-    [pageStartToLoad appendString:@"<html><head></head><body>"];
-    [pageStartToLoad appendString:@"<table border='0' CELLSPACING=3 width='280'>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#C0C0C0><td colspan='2'>Difficulty Creation time</td><td>Status</td></tr>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#FFFFFF><td>creatorID</td><td>questionsAns</td><td>sumKmExceded</td></tr>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#FFFFFF><td>targetID</td><td>questionsAns</td><td>sumKmExceded</td></tr>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#000000><td colspan='3'></td></tr>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#C0C0C0><td colspan='2'>Difficulty Creation time</td><td>Status</td></tr>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#FFFFFF><td>creatorID</td><td>questionsAns</td><td>sumKmExceded</td></tr>"];
-    [pageStartToLoad appendString:@"<tr bgcolor=#FFFFFF><td>targetID</td><td>questionsAns</td><td>sumKmExceded</td></tr>"];
-    
-    pageMiddleToLoad = [[[NSMutableString alloc] init] retain];
-    
-    pageEndToLoad = [[[NSMutableString alloc] init] retain];
-    [pageEndToLoad appendString:@"</table>"];
-    [pageEndToLoad appendString:@"</body></html>"];
-    
-    [self ReloadHtml];
+    [self getStaticChallenges];
+    //[self getChallengesResults];
 }
 
 - (void)viewDidUnload
 {
-    [self setChallengesTableView:nil];
+    [self setStaticChallengesTableView:nil];
     [self setBackButton:nil];
-    [self setWebView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
+
+-(void) getStaticChallenges
+{
+    [activityIndicatorStaticChallenges setAlpha:1];
+	[activityIndicatorStaticChallenges startAnimating];
+	
+    
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    //HighscoreService* highscoreService = [HighscoreService defaultService];
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    playerId, @"id", @1, @"level",nil];
+    
+    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         
+         [activityIndicatorStaticChallenges stopAnimating];
+         [activityIndicatorStaticChallenges setAlpha:0];
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             if (getStaticChallengesRetry < 2 ) {
+                 getStaticChallengesRetry++;
+                 [self getStaticChallenges];
+             }
+             else
+             {
+                 getStaticChallengesRetry = 0;
+                 
+                 NSString* errorMessage = @"There was a problem! ";
+                 errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+                 UIAlertView* myAlert = [[UIAlertView alloc]
+                                         initWithTitle:@"Error!"
+                                         message:errorMessage
+                                         delegate:nil
+                                         cancelButtonTitle:@"Okay"
+                                         otherButtonTitles:nil];
+                 [myAlert show];
+             }
+         }
+         else {
+             getStaticChallengesRetry = 0;
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+             
+             //NSLog(@"The datastring : %@",newStr);
+             
+             //remove front [ and back ] characters
+             if ([newStr rangeOfString: @"]"].length >0) {
+                 [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+                 [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+                 NSLog(@"The datastring : %@",newStr);
+             }
+             
+             NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+             
+            
+             
+             int ind = 0;
+             while ([newStr rangeOfString: @"}"].length >0) {
+                 NSRange match = [newStr rangeOfString: @"}"];
+                 NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+                 NSLog(@"The substring1 : %@",rowSubstring1);
+                 
+                 NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+                 NSDictionary *jsonObject=[NSJSONSerialization
+                                           JSONObjectWithData:jsonData
+                                           options:NSJSONReadingMutableLeaves
+                                           error:nil];
+                 NSLog(@"jsonObject is %@",jsonObject);
+                 
+                 
+                 
+                 [dataArray addObject:jsonObject];
+                 if ([newStr rangeOfString: @"}"].location + 2 < newStr.length) {
+                     [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+                 }
+                 else{
+                     [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
+                 }
+                 
+                 [datasourceArray addObject:[jsonObject objectForKey:@"username"]];
+                 
+                 ind ++;
+             }
+             [staticChallengesTableView reloadData];
+         }
+         
+     }];
+}
+
+/*
+-(void) getChallengesResults
+{
+    [activityIndicatorChallengeResults setAlpha:1];
+	[activityIndicatorChallengeResults startAnimating];
+	
+    
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    //HighscoreService* highscoreService = [HighscoreService defaultService];
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    playerId, @"id", @1, @"level",nil];
+    
+    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         
+         [activityIndicatorChallengeResults stopAnimating];
+         [activityIndicatorChallengeResults setAlpha:0];
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+            
+             
+             if (getChallengesResultsRetry < 2 ) {
+                 getChallengesResultsRetry++;
+                 [self getChallengesResults];
+             }
+             else
+             {
+                 getChallengesResultsRetry = 0;
+                 NSString* errorMessage = @"There was a problem! ";
+                 errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+                 UIAlertView* myAlert = [[UIAlertView alloc]
+                                         initWithTitle:@"Error!"
+                                         message:errorMessage
+                                         delegate:nil
+                                         cancelButtonTitle:@"Okay"
+                                         otherButtonTitles:nil];
+                 [myAlert show];
+             }
+         }
+         else {
+             getChallengesResultsRetry = 0;
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+             
+             //NSLog(@"The datastring : %@",newStr);
+             
+             //remove front [ and back ] characters
+             if ([newStr rangeOfString: @"]"].length >0) {
+                 [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+                 [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+                 NSLog(@"The datastring : %@",newStr);
+             }
+             
+             NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+             [pageMiddleToLoad retain];
+             int ind = 0;
+             while ([newStr rangeOfString: @"}"].length >0) {
+                 NSRange match = [newStr rangeOfString: @"}"];
+                 NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+                 NSLog(@"The substring1 : %@",rowSubstring1);
+                 
+                 NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+                 NSDictionary *jsonObject=[NSJSONSerialization
+                                           JSONObjectWithData:jsonData
+                                           options:NSJSONReadingMutableLeaves
+                                           error:nil];
+                 NSLog(@"jsonObject is %@",jsonObject);
+                 
+                 
+                 
+                 [dataArray addObject:jsonObject];
+                 if ([newStr rangeOfString: @"}"].location + 2 < newStr.length) {
+                     [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+                 }
+                 else{
+                     [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
+                 }
+                 
+                 
+                 [pageMiddleToLoad appendString:[NSString stringWithFormat:@"<tr bgcolor=#FFFFFF><td>creatorID</td><td>%@</td><td>sumKmExceded</td></tr>",[jsonObject objectForKey:@"username"]]];
+                 [pageMiddleToLoad appendString:[NSString stringWithFormat:@"<tr bgcolor=#FFFFFF><td>targetID</td><td>%@</td><td>sumKmExceded</td></tr>",[jsonObject objectForKey:@"username"]]];
+                 
+                 
+                 ind ++;
+             }
+             [pageMiddleToLoad release];
+             
+             [self ReloadHtml];
+             
+         }
+         
+     }];
+}
+*/
+ 
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -145,17 +363,43 @@
 		if(buttonIndex == 0)
 		{
 			NSLog(@"no button was pressed\n");
-            [challengesTableView reloadData];	
+            [staticChallengesTableView reloadData];
             
 		}
 		else
 		{
 			NSLog(@"yes button was pressed\n");
+            
+            
+            
+
+            
+            if (m_game == nil) {
+                m_game = [[Game alloc] init] ;
+            }
+            
+
+                [m_game SetTrainingMode:NO];
+            
+
+                [m_game SetMapBorder:YES];
+
+            
+            Difficulty vDifficulty = level1;
+            Player* m_player = [[Player alloc] initWithName:[[GlobalSettingsHelper Instance] GetPlayerName] andColor:[UIColor redColor] andPlayerSymbol:@"ArrowRed.png"];
+            
+            [m_game SetPlayer:m_player andDifficulty:vDifficulty];
+
+            
+            [self.view setAlpha:0];
+            [self dealloc];
+            
+            if ([delegate respondsToSelector:@selector(cleanUpStartGameMenuAndStart:)])
+                [delegate cleanUpStartGameMenuAndStart:m_game];
+            
+            
 
 		}
-	
-
-	
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -165,9 +409,13 @@
 }
 
 - (void)dealloc {
-    [challengesTableView release];
+    [staticChallengesTableView release];
     [backButton release];
-    [webView release];
+    [activityIndicatorStaticChallenges release];
+    [activityIndicatorDynamicChallenge release];
+    [statusButton release];
+    [staticChallengesHeader release];
+    [dynamicChallengesHeader release];
     [super dealloc];
 }
 - (IBAction)backButtonPushed:(id)sender {
@@ -178,237 +426,5 @@
         [delegate cleanUpTakeChallengeViewCtrl];
 }
 
-
-#pragma mark xmlparser
-
-
--(void) GetTargetChallengesStatus
-{
-	//recordFriends = FALSE;
-	index = 0;
-    [datasourceArray removeAllObjects];
-	
-	
-	NSString *soapMessage = [NSString stringWithFormat:
-							 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-							 "<SOAP-ENV:Envelope\n"
-							 "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n"
-							 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
-							 "xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-							 "<SOAP-ENV:Body>\n"
-							 "<GetTargetChallengesStatus xmlns=\"http://quizmap.net/\">\n"
-							 "<playerID>%@</playerID>\n"
-							 "</GetTargetChallengesStatus>\n"
-							 "</SOAP-ENV:Body>\n"
-							 "</SOAP-ENV:Envelope>",@"pera"
-							 ];//[[GlobalSettingsHelper Instance] GetPlayerID]
-	
-	
-	NSLog(@"%@", soapMessage);
-	
-	NSURL *url = [NSURL URLWithString:@"http://www.quizmap.net/ASP.NET/ChallengeServ.asmx"];
-	
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-	
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest addValue: @"http://quizmap.net/GetTargetChallengesStatus" forHTTPHeaderField:@"SOAPAction"];
-	[theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
-	[theRequest setHTTPMethod:@"POST"];
-	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	
-	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-	
-	if( theConnection )
-	{
-		webData = [[NSMutableData data] retain];
-	}
-	else
-	{
-		NSLog(@"theConnection is NULL");
-	}
-}
-
-
--(void) GetCreatedChallengesStatus
-{
-    
-	//[m_activityIndicator startAnimating];
-    
-	
-	//recordPlayerStartingWith = FALSE;
-	index = 0;
-    [datasourceArray removeAllObjects];
-	
-	
-	NSString *soapMessage = [NSString stringWithFormat:
-							 @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-							 "<SOAP-ENV:Envelope\n"
-							 "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n"
-							 "xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n"
-							 "xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n"
-							 "xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-							 "<SOAP-ENV:Body>\n"
-							 "<GetCreatedChallengesStatus xmlns=\"http://quizmap.net/\">\n"
-							 "<playerIDStartWith>%@</playerIDStartWith>\n"
-							 "</GetCreatedChallengesStatus>\n"
-							 "</SOAP-ENV:Body>\n"
-							 "</SOAP-ENV:Envelope>",@"pera"
-							 ];//[[GlobalSettingsHelper Instance] GetPlayerID]
-	
-	
-	NSLog(@"%@", soapMessage);
-	
-	NSURL *url = [NSURL URLWithString:@"http://www.quizmap.net/ASP.NET/ChallengeServ.asmx"];
-	
-	NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-	NSString *msgLength = [NSString stringWithFormat:@"%d", [soapMessage length]];
-	
-	[theRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[theRequest addValue: @"http://quizmap.net/GetCreatedChallengesStatus" forHTTPHeaderField:@"SOAPAction"];
-	[theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
-	[theRequest setHTTPMethod:@"POST"];
-	[theRequest setHTTPBody: [soapMessage dataUsingEncoding:NSUTF8StringEncoding]];
-	
-	
-	NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-	
-	if( theConnection )
-	{
-		webData = [[NSMutableData data] retain];
-	}
-	else
-	{
-		NSLog(@"theConnection is NULL");
-	}
-}
-
-
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-	[webData setLength: 0];
-}
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-	[webData appendData:data];
-}
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-	NSLog(@"ERROR with theConenction");
-	[connection release];
-	[webData release];
-}
--(void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-	NSLog(@"DONE. Received Bytes: %d", [webData length]);
-	NSString *theXML = [[NSString alloc] initWithBytes: [webData mutableBytes] length:[webData length] encoding:NSUTF8StringEncoding];
-	
-	NSLog(@"%@", theXML);
-	[theXML release];
-	
-	if( xmlParser )
-	{
-		[xmlParser release];
-	}
-	
-	xmlParser = [[NSXMLParser alloc] initWithData: webData];
-	[xmlParser setDelegate: self];
-	[xmlParser setShouldResolveExternalEntities: YES];
-	[xmlParser parse];
-	
-	[connection release];
-	[webData release];
-}
-
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *) namespaceURI qualifiedName:(NSString *)qName
-   attributes: (NSDictionary *)attributeDict
-{
-	
-	if( [elementName isEqualToString:@"status"])
-        recordStatus= TRUE;    
-
-    if( [elementName isEqualToString:@"creationTime"])
-        recordCreationTime= TRUE;    
-
-    if( [elementName isEqualToString:@"difficulty"])
-        recordDifficulty= TRUE;    
-
-    if ([elementName isEqualToString:@"targetResult"]) 
-        readTargetValues = TRUE;
-
-    if ([elementName isEqualToString:@"creatorResult"]) 
-        readCreatorValues = TRUE;
-
-    
-    if ([elementName isEqualToString:@"questionsAns"]) 
-        recordQuestionsAnswered = TRUE;
-
-    if ([elementName isEqualToString:@"sumKmExceded"]) 
-        recordSumKmExceded = TRUE;
-}
--(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-    if (recordStatus) 
-        currentCollectedStatus = string;
-
-    if (recordCreationTime) 
-        currentCollectedCreationTime = string;
-
-    if (recordDifficulty) 
-        currentCollectedDifficulty = string;
-
-    if (readTargetValues) {
-        if (recordQuestionsAnswered) 
-            currentCollectedTargetQuestionsAnswered = string;
-
-        if(recordSumKmExceded)
-            currentCollectedTargetSumKmExceded = string;
-
-    }
-    if (readCreatorValues) {
-        if (recordQuestionsAnswered) 
-            currentCollectedCreatorQuestionsAnswered = string;
-
-        if(recordSumKmExceded)
-            currentCollectedCreatorSumKmExceded = string;
-
-    }
-    
-    
-}
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-	if( [elementName isEqualToString:@"status"])
-        recordStatus= FALSE;    
-    
-    if( [elementName isEqualToString:@"creationTime"])
-        recordCreationTime= FALSE;    
-    
-    if( [elementName isEqualToString:@"difficulty"])
-        recordDifficulty= FALSE;    
-    
-    if ([elementName isEqualToString:@"targetResult"]) 
-        readTargetValues = FALSE;
-    
-    if ([elementName isEqualToString:@"creatorResult"]) 
-        readCreatorValues = FALSE;
-    
-    
-    if ([elementName isEqualToString:@"questionsAns"]) 
-        recordQuestionsAnswered = FALSE;
-    
-    if ([elementName isEqualToString:@"sumKmExceded"]) 
-        recordSumKmExceded = FALSE;
-    
-	if( [elementName isEqualToString:@"GetCreatedChallengesStatusResponse"] || [elementName isEqualToString:@"GetTargetChallengesStatusResponse"] )
-	{
-
-	}
-	
-}
 
 @end

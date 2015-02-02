@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ColorTableViewCell.h"
+#import "Game.h"
+#import "ChallengeStatusView.h"
+
 @protocol TakeChallengeViewCtrlDelegate;
-@interface TakeChallenge : UIViewController<UITableViewDelegate, UITableViewDataSource,NSXMLParserDelegate>
+@interface TakeChallenge : UIViewController<UITableViewDelegate, UITableViewDataSource,NSXMLParserDelegate,ChallengeStatusViewDelegate>
 {
     id <TakeChallengeViewCtrlDelegate> delegate;
     NSMutableArray* datasourceArray;
@@ -26,9 +29,6 @@
     BOOL recordQuestionsAnswered;
     BOOL recordSumKmExceded;
     
-    NSMutableString *pageStartToLoad;
-    NSMutableString *pageMiddleToLoad;
-    NSMutableString *pageEndToLoad;
     
     NSString* currentCollectedStatus;
     NSString* currentCollectedCreationTime;
@@ -37,10 +37,24 @@
     NSString* currentCollectedTargetSumKmExceded;
     NSString* currentCollectedCreatorQuestionsAnswered;
     NSString* currentCollectedCreatorSumKmExceded;
+    IBOutlet UIActivityIndicatorView *activityIndicatorStaticChallenges;
+    IBOutlet UIActivityIndicatorView *activityIndicatorDynamicChallenge;
+    
+    ChallengeStatusView* challengeStatusView;
+    int getStaticChallengesRetry;
+    int getDynamicChallengesRetry;
+    
+    Game *m_game;
+
 }
+@property (retain, nonatomic) IBOutlet UILabel *staticChallengesHeader;
+@property (retain, nonatomic) IBOutlet UILabel *dynamicChallengesHeader;
+@property (retain, nonatomic) IBOutlet UIButton *statusButton;
+- (IBAction)statusButtonPushed:(id)sender;
 - (void) ReloadHtml;
-@property (retain, nonatomic) IBOutlet UIWebView *webView;
-@property (retain, nonatomic) IBOutlet UITableView *challengesTableView;
+@property (nonatomic,retain) Game* m_game;
+
+@property (retain, nonatomic) IBOutlet UITableView *staticChallengesTableView;
 @property (retain, nonatomic) IBOutlet UIButton *backButton;
 - (IBAction)backButtonPushed:(id)sender;
 @property (nonatomic, assign) id <TakeChallengeViewCtrlDelegate> delegate;
@@ -49,5 +63,6 @@
 @protocol TakeChallengeViewCtrlDelegate <NSObject>
 
 @optional
+- (void)cleanUpStartGameMenuAndStart:(Game *)gameRef;
 -(void) cleanUpTakeChallengeViewCtrl;
 @end

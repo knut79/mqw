@@ -66,14 +66,14 @@
 		pointsLabels = [[NSMutableArray alloc] init];
 		pointsLabelsCenter = [[NSMutableArray alloc] init];
 		
-		int labelsXoffset = 0;
+		int labelsXoffset = 25;
 		int labeslYoffset = 0;
 		
         self.highscoreService = [HighscoreService defaultService];
 		
 		int yPos = 0;
 		NSValue *tempval;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 11; i++) {
 			
 			//set labels for names
 			UILabel *playerNameLabel = [[UILabel alloc] init];
@@ -115,6 +115,7 @@
 			[tempval release];
 			[playerTimeLabel release];
 			
+            /*
 			UILabel *playerPointsLabel = [[UILabel alloc] init];
 			[playerPointsLabel setFrame:CGRectMake(280 + labelsXoffset, 100 + yPos + labeslYoffset, 80, 20)];
 			playerPointsLabel.backgroundColor = [UIColor clearColor]; 
@@ -125,7 +126,7 @@
 			tempval = [[NSValue valueWithCGPoint:playerPointsLabel.center] retain];
 			[pointsLabelsCenter addObject:tempval];
 			[tempval release];
-			[playerPointsLabel release];
+			[playerPointsLabel release];*/
 			
 			yPos += 25;
 		}
@@ -135,7 +136,7 @@
 		headerHighscorePosition.backgroundColor = [UIColor clearColor]; 
 		headerHighscorePosition.textColor = [UIColor yellowColor];
 		[headerHighscorePosition setFont:[UIFont boldSystemFontOfSize:10.0f]];
-		headerHighscorePosition.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Pos."];
+		headerHighscorePosition.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Pos./Name"];
 		headerHighscorePosition.layer.shadowColor = [[UIColor blackColor] CGColor];
 		headerHighscorePosition.layer.shadowOpacity = 1.0;
 		[self addSubview:headerHighscorePosition];
@@ -161,7 +162,7 @@
 		headerTime.layer.shadowOpacity = 1.0;
 		[self addSubview:headerTime];
 		
-		
+		/*
 		headerScore = [[UILabel alloc] init];
 		[headerScore setFrame:CGRectMake(275, 60, 90, 40)];
 		headerScore.backgroundColor = [UIColor clearColor]; 
@@ -170,7 +171,7 @@
 		headerScore.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Score"];
 		headerScore.layer.shadowColor = [[UIColor blackColor] CGColor];
 		headerScore.layer.shadowOpacity = 1.0;
-		[self addSubview:headerScore];
+		[self addSubview:headerScore];*/
 		
 		
 		
@@ -180,7 +181,7 @@
         button_levelDown.layer.borderWidth=1.0f;
         [button_levelDown setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         button_levelDown.layer.borderColor=[[UIColor whiteColor] CGColor];
-		button_levelDown.frame = CGRectMake(5, 345, 140, 40);
+		button_levelDown.frame = CGRectMake(5, 385, 140, 40);
 		button_levelDownCenter = button_levelDown.center;
 		[self addSubview:button_levelDown];
 		
@@ -190,7 +191,7 @@
         button_levelUp.layer.borderWidth=1.0f;
         [button_levelUp setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         button_levelUp.layer.borderColor=[[UIColor whiteColor] CGColor];
-		button_levelUp.frame = CGRectMake(170, 345, 140, 40);
+		button_levelUp.frame = CGRectMake(170, 385, 140, 40);
 		button_levelUpCenter = button_levelUp.center;
 		[self addSubview:button_levelUp];
 		
@@ -228,7 +229,7 @@
 		[self addSubview:m_activityIndicator];	
 		[self bringSubviewToFront:m_activityIndicator];
 
-        [self showPlayerHighscore];
+        [self showPlayerHighscore:@5];
 
 		[screen release];
 		[self setAlpha:0];
@@ -287,15 +288,15 @@
 -(void) clearResults
 {
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 11; i++) {
 				
 		UILabel *nameTempLabel = [[nameLabels objectAtIndex:i] retain];
 		nameTempLabel.text = @"";
 		[nameTempLabel release];	
 		
-		UILabel *pointsLabel = [[pointsLabels objectAtIndex:i]retain];
-		pointsLabel.text = @"";
-		[pointsLabel release];
+		UILabel *answersLabel = [[easyQLabels objectAtIndex:i]retain];
+		answersLabel.text = @"";
+		[answersLabel release];
 
 		UILabel *timeLabel = [[timeLabels objectAtIndex:i]retain];
 		timeLabel.text = @"";
@@ -313,8 +314,10 @@
 	[UIView setAnimationDelegate:self]; 
 	[UIView setAnimationDidStopSelector:@selector(finishedMovingLabelsIn)]; 
 	CGPoint centerPoint = CGPointMake(m_centerX, m_centerY);
+    
 	NSString *levelString = @"easy";
-	switch (m_showingLevel) {
+	NSNumber* level = @1;
+    switch (m_showingLevel) {
 		case level1:
 			button_levelUp.center = CGPointMake(m_centerX, button_levelUp.frame.origin.y + (button_levelUp.frame.size.height/2) );
 			[button_levelDown setAlpha:0];
@@ -337,9 +340,8 @@
     
 	[subheaderLabel setAlpha:0];
 	subheaderLabel.center = centerPoint;
-	[UIView commitAnimations];	
 	
-	[m_activityIndicator startAnimating];
+    [self showPlayerHighscore:[NSNumber numberWithInt:m_showingLevel]];
 }
 
 -(void) finishedMovingLabelsIn
@@ -353,7 +355,7 @@
 	[UIView commitAnimations];	
 }
 
--(void) showPlayerHighscore
+-(void) showPlayerHighscore:(NSNumber*) level
 {
 	[self clearResults];
 	[m_activityIndicator startAnimating];
@@ -363,7 +365,7 @@
     //HighscoreService* highscoreService = [HighscoreService defaultService];
     
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    playerId, @"id", @1, @"level",nil];
+                                    playerId, @"id", level, @"level",nil];
     
     [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
@@ -389,20 +391,8 @@
              
              NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
              
+             //NSLog(@"The datastring : %@",newStr);
              
-             
-             NSLog(@"The datastring : %@",newStr);
-             
-             
-             
-             
-             //for testing
-             //NSData *jsonData = [@"{ \"key1\": \"value1\",\"key2\": \"value2\" }" dataUsingEncoding:NSUTF8StringEncoding];
-             
-             
-             //if we have set of values
-             
-              
               //remove front [ and back ] characters
               if ([newStr rangeOfString: @"]"].length >0) {
               [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
@@ -411,7 +401,8 @@
               }
               
               NSMutableArray* dataArray = [[NSMutableArray alloc] init];
-              
+             
+             int ind = 0;
               while ([newStr rangeOfString: @"}"].length >0) {
               NSRange match = [newStr rangeOfString: @"}"];
               NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
@@ -424,8 +415,8 @@
               error:nil];
               NSLog(@"jsonObject is %@",jsonObject);
               
-                  //NSInteger test1 = newStr.length;
-                  //NSInteger test2 = [newStr rangeOfString: @"}"].location + 2 ;
+              
+                  
               [dataArray addObject:jsonObject];
               if ([newStr rangeOfString: @"}"].location + 2 < newStr.length) {
                   [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
@@ -434,21 +425,40 @@
                   [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
               }
               
+                  UILabel *playerNameLabel = [[nameLabels objectAtIndex:ind] retain];
+                  if ([[jsonObject objectForKey:@"userid"] isEqualToString:playerId]) {
+                      [playerNameLabel setText:[NSString stringWithFormat:@"%@. %@",[jsonObject objectForKey:@"rank"],@"You/me"]];
+                  }
+                  else
+                  {
+                      [playerNameLabel setText:[NSString stringWithFormat:@"%@. %@",[jsonObject objectForKey:@"rank"],[jsonObject objectForKey:@"username"]]];
+                  }
                   
+                  
+                  
+                  [playerNameLabel release];
+                  
+                  UILabel *questionsLabel = [[easyQLabels objectAtIndex:ind] retain];
+                  [questionsLabel setText:[NSString stringWithFormat:@"%@",[jsonObject objectForKey:@"answeredquestions"]]];
+                  [questionsLabel release];
+
+                  UILabel *secondsLabel = [[timeLabels objectAtIndex:ind] retain];
+                  [secondsLabel setText:[NSString stringWithFormat:@"%@",[jsonObject objectForKey:@"seconds"]]];
+                  [secondsLabel release];
+
+                  ind ++;
               }
-             
-             
-             NSDictionary *test= [dataArray objectAtIndex:1];
              
              
               //------------------------single value
              
-             NSData *jsonData = [newStr dataUsingEncoding:NSUTF8StringEncoding];
+             //NSData *jsonData = [newStr dataUsingEncoding:NSUTF8StringEncoding];
              /*
               NSDictionary *jsonObject=[NSJSONSerialization
               JSONObjectWithData:jsonData
               options:NSJSONReadingMutableLeaves
               error:nil];*/
+             /*
              NSDictionary *jsonObject=[NSJSONSerialization
                                        JSONObjectWithData:jsonData
                                        options:NSJSONWritingPrettyPrinted
@@ -470,6 +480,7 @@
                                      otherButtonTitles:nil];
              
              [myAlert show];
+             */
              
          }
          
