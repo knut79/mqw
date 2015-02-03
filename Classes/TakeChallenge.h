@@ -15,7 +15,8 @@
 @interface TakeChallenge : UIViewController<UITableViewDelegate, UITableViewDataSource,NSXMLParserDelegate,ChallengeStatusViewDelegate>
 {
     id <TakeChallengeViewCtrlDelegate> delegate;
-    NSMutableArray* datasourceArray;
+    NSMutableArray* datasourceStaticArray;
+    NSMutableArray* datasourceDynamicArray;
     
     NSMutableData *webData;
     NSMutableString *soapResults;
@@ -51,10 +52,10 @@
 @property (retain, nonatomic) IBOutlet UILabel *dynamicChallengesHeader;
 @property (retain, nonatomic) IBOutlet UIButton *statusButton;
 - (IBAction)statusButtonPushed:(id)sender;
-- (void) ReloadHtml;
 @property (nonatomic,retain) Game* m_game;
 
 @property (retain, nonatomic) IBOutlet UITableView *staticChallengesTableView;
+@property (retain, nonatomic) IBOutlet UITableView *dynamicChallengesTableView;
 @property (retain, nonatomic) IBOutlet UIButton *backButton;
 - (IBAction)backButtonPushed:(id)sender;
 @property (nonatomic, assign) id <TakeChallengeViewCtrlDelegate> delegate;

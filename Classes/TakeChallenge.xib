@@ -10,6 +10,7 @@
                 <outlet property="activityIndicatorStaticChallenges" destination="aMY-qJ-aOC" id="dvt-ne-8Yl"/>
                 <outlet property="backButton" destination="5" id="14"/>
                 <outlet property="dynamicChallengesHeader" destination="4" id="K0z-ze-CDU"/>
+                <outlet property="dynamicChallengesTableView" destination="HCl-7k-t1d" id="eZT-ez-7ng"/>
                 <outlet property="staticChallengesHeader" destination="7" id="ARX-Fa-Azh"/>
                 <outlet property="staticChallengesTableView" destination="10" id="7Vg-bm-rOZ"/>
                 <outlet property="statusButton" destination="54m-Cx-bjn" id="sA7-TG-x3r"/>
@@ -29,7 +30,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5">
-                    <rect key="frame" x="114" y="435" width="72" height="37"/>
+                    <rect key="frame" x="111" y="435" width="99" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Back">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,8 +51,27 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="13"/>
-                        <outlet property="delegate" destination="-1" id="12"/>
+                        <outlet property="dataSource" destination="-1" id="K2J-W1-W6g"/>
+                        <outlet property="delegate" destination="-1" id="ohU-iV-93G"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="54m-Cx-bjn">
+                    <rect key="frame" x="111" y="404" width="99" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Status">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="statusButtonPushed:" destination="-1" eventType="touchUpInside" id="20D-u0-kwG"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HCl-7k-t1d">
+                    <rect key="frame" x="20" y="236" width="280" height="149"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Z0Q-sw-Kys"/>
+                        <outlet property="delegate" destination="-1" id="mR3-8T-2mC"/>
                     </connections>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="aMY-qJ-aOC">
@@ -62,16 +82,6 @@
                     <rect key="frame" x="140" y="316" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="54m-Cx-bjn">
-                    <rect key="frame" x="111" y="390" width="78" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Status">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="statusButtonPushed:" destination="-1" eventType="touchUpInside" id="20D-u0-kwG"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

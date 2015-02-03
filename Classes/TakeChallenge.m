@@ -21,6 +21,7 @@
 @implementation TakeChallenge
 @synthesize m_game;
 @synthesize staticChallengesTableView;
+@synthesize dynamicChallengesTableView;
 @synthesize backButton;
 @synthesize delegate;
 @synthesize statusButton;
@@ -31,10 +32,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-
-        
-
     }
     return self;
 }
@@ -103,13 +100,14 @@
     [statusButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     statusButton.layer.borderColor=[[UIColor whiteColor] CGColor];
     
-    datasourceArray = [[NSMutableArray alloc] init];
+    datasourceStaticArray = [[NSMutableArray alloc] init];
+    datasourceDynamicArray = [[NSMutableArray alloc] init];
     
     self.highscoreService = [HighscoreService defaultService];
     
     
     [self getStaticChallenges];
-    //[self getChallengesResults];
+    [self getDynamicChallenges];
 }
 
 - (void)viewDidUnload
@@ -137,17 +135,18 @@
     [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
          
-         [activityIndicatorStaticChallenges stopAnimating];
-         [activityIndicatorStaticChallenges setAlpha:0];
+         
          if (error)
          {
              NSLog(@"Error %@",error);
+             getStaticChallengesRetry++;
              if (getStaticChallengesRetry < 2 ) {
-                 getStaticChallengesRetry++;
                  [self getStaticChallenges];
              }
              else
              {
+                 [activityIndicatorStaticChallenges stopAnimating];
+                 [activityIndicatorStaticChallenges setAlpha:0];
                  getStaticChallengesRetry = 0;
                  
                  NSString* errorMessage = @"There was a problem! ";
@@ -162,6 +161,8 @@
              }
          }
          else {
+             [activityIndicatorStaticChallenges stopAnimating];
+             [activityIndicatorStaticChallenges setAlpha:0];
              getStaticChallengesRetry = 0;
              NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
              
@@ -201,7 +202,7 @@
                      [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
                  }
                  
-                 [datasourceArray addObject:[jsonObject objectForKey:@"username"]];
+                 [datasourceStaticArray addObject:[jsonObject objectForKey:@"username"]];
                  
                  ind ++;
              }
@@ -211,6 +212,98 @@
      }];
 }
 
+
+-(void) getDynamicChallenges
+{
+    [activityIndicatorDynamicChallenge setAlpha:1];
+	[activityIndicatorDynamicChallenge startAnimating];
+	
+    
+    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
+    //HighscoreService* highscoreService = [HighscoreService defaultService];
+    
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    playerId, @"id", @1, @"level",nil];
+    
+    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         
+         
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             getDynamicChallengesRetry++;
+             if (getDynamicChallengesRetry < 2 ) {
+                 [self getDynamicChallenges];
+             }
+             else
+             {
+                 [activityIndicatorDynamicChallenge stopAnimating];
+                 [activityIndicatorDynamicChallenge setAlpha:0];
+                 getDynamicChallengesRetry = 0;
+                 
+                 NSString* errorMessage = @"There was a problem! ";
+                 errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+                 UIAlertView* myAlert = [[UIAlertView alloc]
+                                         initWithTitle:@"Error!"
+                                         message:errorMessage
+                                         delegate:nil
+                                         cancelButtonTitle:@"Okay"
+                                         otherButtonTitles:nil];
+                 [myAlert show];
+             }
+         }
+         else {
+             [activityIndicatorDynamicChallenge stopAnimating];
+             [activityIndicatorDynamicChallenge setAlpha:0];
+             getDynamicChallengesRetry = 0;
+             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+             
+             //NSLog(@"The datastring : %@",newStr);
+             
+             //remove front [ and back ] characters
+             if ([newStr rangeOfString: @"]"].length >0) {
+                 [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
+                 [newStr deleteCharactersInRange: NSMakeRange(0,1)];
+                 NSLog(@"The datastring : %@",newStr);
+             }
+             
+             NSMutableArray* dataArray = [[NSMutableArray alloc] init];
+             
+             
+             
+             int ind = 0;
+             while ([newStr rangeOfString: @"}"].length >0) {
+                 NSRange match = [newStr rangeOfString: @"}"];
+                 NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
+                 NSLog(@"The substring1 : %@",rowSubstring1);
+                 
+                 NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
+                 NSDictionary *jsonObject=[NSJSONSerialization
+                                           JSONObjectWithData:jsonData
+                                           options:NSJSONReadingMutableLeaves
+                                           error:nil];
+                 NSLog(@"jsonObject is %@",jsonObject);
+                 
+                 
+                 
+                 [dataArray addObject:jsonObject];
+                 if ([newStr rangeOfString: @"}"].location + 2 < newStr.length) {
+                     [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
+                 }
+                 else{
+                     [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
+                 }
+                 
+                 [datasourceDynamicArray addObject:[jsonObject objectForKey:@"username"]];
+                 
+                 ind ++;
+             }
+             [dynamicChallengesTableView reloadData];
+         }
+         
+     }];
+}
 /*
 -(void) getChallengesResults
 {
@@ -315,7 +408,15 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [datasourceArray count];
+    if(tableView == staticChallengesTableView)
+    {
+        return [datasourceStaticArray count];
+    }
+    else
+    {
+        return [datasourceDynamicArray count];
+    }
+    
 }
 
 // Customize the appearance of table view cells.
@@ -332,7 +433,15 @@
     // Set up the cell...
     cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15];
     //cell.textLabel.text = [NSString	 stringWithFormat:@"Cell Row #%d", [indexPath row]];
-    cell.textLabel.text = [NSString	 stringWithFormat:@"%@",[datasourceArray objectAtIndex:[indexPath row]]];
+    if(tableView == staticChallengesTableView)
+    {
+        cell.textLabel.text = [NSString	 stringWithFormat:@"%@",[datasourceStaticArray objectAtIndex:[indexPath row]]];
+    }
+    else
+    {
+        cell.textLabel.text = [NSString	 stringWithFormat:@"%@",[datasourceDynamicArray objectAtIndex:[indexPath row]]];
+    }
+    
     
     //try setting color
     if (([indexPath row] % 2) == 0) 
@@ -345,8 +454,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// open a alert with an OK and cancel button
-    	NSString *alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceArray objectAtIndex:[indexPath row]]];
-    	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    
+    NSString *alertString;
+    UIAlertView *alert;
+    if(tableView == staticChallengesTableView)
+    {
+        alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceStaticArray objectAtIndex:[indexPath row]]];
+    	alert = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceStaticArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    }
+    else
+    {
+        alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceDynamicArray objectAtIndex:[indexPath row]]];
+    	alert = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceDynamicArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    }
+    
+    
     	[alert show];
     	[alert release];
     
@@ -416,6 +538,7 @@
     [statusButton release];
     [staticChallengesHeader release];
     [dynamicChallengesHeader release];
+    [dynamicChallengesTableView release];
     [super dealloc];
 }
 - (IBAction)backButtonPushed:(id)sender {

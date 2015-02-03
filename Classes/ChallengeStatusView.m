@@ -171,19 +171,20 @@
     [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
          
-         [activityIndicatorRecentChallenges stopAnimating];
-         [activityIndicatorRecentChallenges setAlpha:0];
+
          if (error)
          {
              NSLog(@"Error %@",error);
              
-             
+             getChallengesResultsRetry++;
              if (getChallengesResultsRetry < 2 ) {
-                 getChallengesResultsRetry++;
+                 
                  [self getChallengesResults];
              }
              else
              {
+                 [activityIndicatorRecentChallenges stopAnimating];
+                 [activityIndicatorRecentChallenges setAlpha:0];
                  getChallengesResultsRetry = 0;
                  NSString* errorMessage = @"There was a problem! ";
                  errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
@@ -197,6 +198,9 @@
              }
          }
          else {
+             
+             [activityIndicatorRecentChallenges stopAnimating];
+             [activityIndicatorRecentChallenges setAlpha:0];
              getChallengesResultsRetry = 0;
              NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
              
@@ -266,19 +270,19 @@
     [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
          
-         [activityIndicatorUserVsUser stopAnimating];
-         [activityIndicatorUserVsUser setAlpha:0];
+         
          if (error)
          {
              NSLog(@"Error %@",error);
              
-             
+             getUserVsUserResultsRetry++;
              if (getUserVsUserResultsRetry < 2 ) {
-                 getUserVsUserResultsRetry++;
                  [self getChallengesResults];
              }
              else
              {
+                 [activityIndicatorUserVsUser stopAnimating];
+                 [activityIndicatorUserVsUser setAlpha:0];
                  getUserVsUserResultsRetry = 0;
                  NSString* errorMessage = @"There was a problem! ";
                  errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
@@ -292,6 +296,8 @@
              }
          }
          else {
+             [activityIndicatorUserVsUser stopAnimating];
+             [activityIndicatorUserVsUser setAlpha:0];
              getUserVsUserResultsRetry = 0;
              NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
              
