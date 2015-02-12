@@ -1,69 +1,69 @@
 2583;1447
-inf;City#Where is the capital;Ashgabat;10;level1;The capital of, and the largest city in, Turkmenistan#nor#spn#fra#ger;Asia#Turkmenistan
+inf;City#Where is the capital;Ashgabat;10;level4;The capital of, and the largest city in, Turkmenistan#nor#spn#fra#ger;Asia#Turkmenistan
 2732;1234
-inf;City#Where is the capital;Astana;10;level1;The capital city of Kazakhstan. It is located on the Ishim River#nor#spn#fra#ger;Asia#Kazakhstan
+inf;City#Where is the capital;Astana;10;level3;The capital city of Kazakhstan. It is located on the Ishim River#nor#spn#fra#ger;Asia#Kazakhstan
 3227;1858
-inf;City#Where is the capital;Bandar Seri Begawan;10;level1;The capital and largest city of the Sultanate of Brunei.#nor#spn#fra#ger;Asia#Brunei
+inf;City#Where is the capital;Bandar Seri Begawan;10;level5;The capital and largest city of the Sultanate of Brunei.#nor#spn#fra#ger;Asia#Brunei
 3063;1757
-inf;City#Where is the capital;Bangkok;10;level1;The capital and the most populous city of Thailand.#nor#spn#fra#ger;Asia#Thailand
+inf;City#Where is the capital;Bangkok;10;level3;The capital and the most populous city of Thailand.#nor#spn#fra#ger;Asia#Thailand
 3243;1418
-inf;City#Where is the capital;Beijing;10;level1;The capital of the People's Republic of China and one of the most populous cities in the world.#nor#spn#fra#ger;Asia#China
+inf;City#Where is the capital;Beijing;10;level2;The capital of the People's Republic of China and one of the most populous cities in the world.#nor#spn#fra#ger;Asia#China
 2767;1374
-inf;City#Where is the capital;Bishkek;10;level1;The capital and the largest city of the Kyrgyz Republic(Kyrgyzstan). #nor#spn#fra#ger;Asia#Kyrgyzstan
+inf;City#Where is the capital;Bishkek;10;level4;The capital and the largest city of the Kyrgyz Republic(Kyrgyzstan). #nor#spn#fra#ger;Asia#Kyrgyzstan
 3616;2344
-inf;City#Where is the capital;Canberra;10;level1;The capital city of Australia. The site of Canberra was selected for the location of the nation's capital in 1908 as a compromise between rivals Sydney and Melbourne, Australia's two largest cities.#nor#spn#fra#ger;Oceania#Australia
+inf;City#Where is the capital;Canberra;10;level3;The capital city of Australia. The site of Canberra was selected for the location of the nation's capital in 1908 as a compromise between rivals Sydney and Melbourne, Australia's two largest cities.#nor#spn#fra#ger;Oceania#Australia
 2829;1836
-inf;City#Where is the capital;Colombo;10;level1;The capital, and largest city of Sri Lanka#nor#spn#fra#ger;Asia#Sri Lanka
+inf;City#Where is the capital;Colombo;10;level3;The capital, and largest city of Sri Lanka#nor#spn#fra#ger;Asia#Sri Lanka
 2948;1636
-inf;City#Where is the capital;Dhaka;10;level1;The capital city of Bangladesh. It is the principal city of Dhaka Division and Dhaka District. Dhaka is the most populous city in Bangladesh and the tenth-largest city in the world#nor#spn#fra#ger;Asia#Bangladesh
+inf;City#Where is the capital;Dhaka;10;level3;The capital city of Bangladesh. It is the principal city of Dhaka Division and Dhaka District. Dhaka is the most populous city in Bangladesh and the tenth-largest city in the world#nor#spn#fra#ger;Asia#Bangladesh
 3348;2012
-inf;City#Where is the capital;Dili;10;level1;The capital, largest city, chief port and commercial center of East Timor.#nor#spn#fra#ger;Asia#East Timor
+inf;City#Where is the capital;Dili;10;level4;The capital, largest city, chief port and commercial center of East Timor.#nor#spn#fra#ger;Asia#East Timor
 2702;1438
-inf;City#Where is the capital;Dushanbe;10;level1;Situated at the confluence of two rivers, Varzob and Kofarnihon, Dushanbe is the capital and largest city of Tajikistan#nor#spn#fra#ger;Asia#Tajikistan
+inf;City#Where is the capital;Dushanbe;10;level5;Situated at the confluence of two rivers, Varzob and Kofarnihon, Dushanbe is the capital and largest city of Tajikistan#nor#spn#fra#ger;Asia#Tajikistan
 3124;1669
-inf;City#Where is the capital;Hanoi;10;level1;The capital of Vietnam and the country's second largest city.#nor#spn#fra#ger;Asia#Vietnam
+inf;City#Where is the capital;Hanoi;10;level4;The capital of Vietnam and the country's second largest city.#nor#spn#fra#ger;Asia#Vietnam
 2751;1506
-inf;City#Where is the capital;Islamabad;10;level1;The national capital city of Pakistan#nor#spn#fra#ger;Asia#Pakistan
+inf;City#Where is the capital;Islamabad;10;level3;The national capital city of Pakistan#nor#spn#fra#ger;Asia#Pakistan
 3135;1984
-inf;City#Where is the capital;Jakarta;10;level1;The capital and largest city of Indonesia, and one of the most populous urban agglomerations in the world.#nor#spn#fra#ger;Asia#Indonesia
+inf;City#Where is the capital;Jakarta;10;level4;The capital and largest city of Indonesia, and one of the most populous urban agglomerations in the world.#nor#spn#fra#ger;Asia#Indonesia
 2706;1496
-inf;City#Where is the capital;Kabul;10;level1;The capital and largest city of Afghanistan.#nor#spn#fra#ger;Asia#Afghanistan
+inf;City#Where is the capital;Kabul;10;level3;The capital and largest city of Afghanistan.#nor#spn#fra#ger;Asia#Afghanistan
 2681;1622
-inf;City#Where is the capital;Karachi;10;level1;The largest and most populous metropolitan city of Pakistan and the main seaport and financial centre of the country.#nor#spn#fra#ger;Asia#Pakistan
+inf;City#Where is the capital;Karachi;10;level3;The largest and most populous metropolitan city of Pakistan and the main seaport and financial centre of the country.#nor#spn#fra#ger;Asia#Pakistan
 2890;1586
-inf;City#Where is the capital;Kathmandu;10;level1;The capital and largest municipality of Nepal.#nor#spn#fra#ger;Asia#Nepal
+inf;City#Where is the capital;Kathmandu;10;level4;The capital and largest municipality of Nepal.#nor#spn#fra#ger;Asia#Nepal
 3077;1878
-inf;City#Where is the capital;Kuala Lumpur;10;level1;The federal capital and most populous city in Malaysia.#nor#spn#fra#ger;Asia#Malaysia
+inf;City#Where is the capital;Kuala Lumpur;10;level4;The federal capital and most populous city in Malaysia.#nor#spn#fra#ger;Asia#Malaysia
 3296;1746
-inf;City#Where is the capital;Manila;10;level1;The capital and second largest city of the Philippines#nor#spn#fra#ger;Asia#Philippines
+inf;City#Where is the capital;Manila;10;level2;The capital and second largest city of the Philippines#nor#spn#fra#ger;Asia#Philippines
 2347;1147
 inf;City#Where is the capital;Moscow;10;level1;The capital city and the most populous federal subject of Russia. The city is a major political, economic, cultural and scientific center in Russia and in Eastern Europe. According to Forbes 2013, Moscow has the largest number of billionaire residents in the world. The second most populous city in Europe after Istanbul#nor#spn#fra#ger;Asia#Russia
 3014;1685
-inf;City#Where is the capital;Naypyidaw;10;level1;The capital city of Burma, also known as Myanmar.#nor#spn#fra#ger;Asia#Myanmar
+inf;City#Where is the capital;Naypyidaw;10;level4;The capital city of Burma, also known as Myanmar.#nor#spn#fra#ger;Asia#Myanmar
 2798;1575
 inf;City#Where is the capital;New Delhi;10;level1;The capital of India and seat of the executive, legislative, and judiciary branches of the Government of India. #nor#spn#fra#ger;Asia#India
 3113;1782
-inf;City#Where is the capital;Phnom Penh;10;level1;The capital and largest city of Cambodia.#nor#spn#fra#ger;Asia#Cambodia
+inf;City#Where is the capital;Phnom Penh;10;level4;The capital and largest city of Cambodia.#nor#spn#fra#ger;Asia#Cambodia
 3594;2022
-inf;City#Where is the capital;Port Moresby;10;level1;The capital and largest city of Papua New Guinea#nor#spn#fra#ger;Asia#Papua New Guinea
+inf;City#Where is the capital;Port Moresby;10;level5;The capital and largest city of Papua New Guinea#nor#spn#fra#ger;Asia#Papua New Guinea
 3350;1431
-inf;City#Where is the capital;Pyongyang;10;level1;The capital of the Democratic People's Republic of Korea (commonly known as North Korea) and the largest city in the country.#nor#spn#fra#ger;Asia#Korea
+inf;City#Where is the capital;Pyongyang;10;level3;The capital of the Democratic People's Republic of Korea (commonly known as North Korea) and the largest city in the country.#nor#spn#fra#ger;Asia#Korea
 3364;1452
-inf;City#Where is the capital;Seoul;10;level1;The capital and largest metropolis of South Korea#nor#spn#fra#ger;Asia#Korea
+inf;City#Where is the capital;Seoul;10;level2;The capital and largest metropolis of South Korea#nor#spn#fra#ger;Asia#Korea
 3302;1540
-inf;City#Where is the capital;Shanghai;10;level1;The largest Chinese city by population and the largest city proper by population in the world.#nor#spn#fra#ger;Asia#China
+inf;City#Where is the capital;Shanghai;10;level2;The largest Chinese city by population and the largest city proper by population in the world.#nor#spn#fra#ger;Asia#China
 3302;1620
-inf;City#Where is the capital;Taipei;10;level1;The capital of Taiwan, a sovereign state in East Asia officially known as the Republic of China.#nor#spn#fra#ger;Asia#Taiwan
+inf;City#Where is the capital;Taipei;10;level3;The capital of Taiwan, a sovereign state in East Asia officially known as the Republic of China.#nor#spn#fra#ger;Asia#Taiwan
 2708;1397
-inf;City#Where is the capital;Tashkent;10;level1;The capital of Uzbekistan.#nor#spn#fra#ger;Asia#Uzbekistan
+inf;City#Where is the capital;Tashkent;10;level5;The capital of Uzbekistan.#nor#spn#fra#ger;Asia#Uzbekistan
 2939;1590
-inf;City#Where is the capital;Thimphu;10;level1;The capital and largest city of Bhutan.#nor#spn#fra#ger;Asia#Bhutan
+inf;City#Where is the capital;Thimphu;10;level5;The capital and largest city of Bhutan.#nor#spn#fra#ger;Asia#Bhutan
 3509;1479
 inf;City#Where is the capital;Tokyo;10;level1;The capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world#nor#spn#fra#ger;Asia#Japan
 3135;1291
-inf;City#Where is the capital;Ulan Bator;10;level1;The capital and the largest city of Mongolia.#nor#spn#fra#ger;Asia#Mongolia
+inf;City#Where is the capital;Ulan Bator;10;level3;The capital and the largest city of Mongolia.#nor#spn#fra#ger;Asia#Mongolia
 3087;1706
-inf;City#Where is the capital;Vientiane;10;level1;The capital and largest city of Laos, situated on the Mekong#nor#spn#fra#ger;Asia#Laos
+inf;City#Where is the capital;Vientiane;10;level5;The capital and largest city of Laos, situated on the Mekong#nor#spn#fra#ger;Asia#Laos
 3907;2431
-inf;City#Where is the capital;Wellington;10;level1;The capital city and second most populous urban area of New Zealand#nor#spn#fra#ger;Asia#New Zealand
+inf;City#Where is the capital;Wellington;10;level3;The capital city and second most populous urban area of New Zealand#nor#spn#fra#ger;Asia#New Zealand
 eof

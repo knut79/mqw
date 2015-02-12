@@ -337,8 +337,8 @@ inf;UnDefRegion;WestIslandIndonesiaNU;10;notUsed;eng#nor#spn#fra#ger
 3171;1900
 3167;1896
 3166;1890;sl
-qst;coaIndonesiaFlag##level2#IndonesiaFlag.png#What asian county is represented by this flag##spn#fra#ger##
-inf;State;Indonesia;10;level1;Consists of approximately 13,466 islands. Capital: Jakarta##spn#fra#ger;Asia#Borneo;;WestIslandIndonesiaNU#EastIslandIndonesiaNU
+qst;coaIndonesiaFlag##level3#IndonesiaFlag.png#What asian county is represented by this flag##spn#fra#ger##
+inf;State;Indonesia;10;level2;Consists of approximately 13,466 islands. Capital: Jakarta##spn#fra#ger;Asia#Borneo;;WestIslandIndonesiaNU#EastIslandIndonesiaNU
 3216;1861
 3224;1859
 3231;1855
@@ -354,8 +354,8 @@ inf;State;Indonesia;10;level1;Consists of approximately 13,466 islands. Capital:
 3220;1866
 3219;1864
 3216;1862;sl
-qst;coaBrunei##level2#BruneiFlag.png#What county is represented by this flag##spn#fra#ger#overridingHint1#overridingHint2
-inf;State;Brunei;10;level1;Located on the north coast of the island of Borneo. Capital: Bandar Seri Begawan##spn#fra#ger;Asia#Borneo
+qst;coaBrunei##level4#BruneiFlag.png#What county is represented by this flag##spn#fra#ger#overridingHint1#overridingHint2
+inf;State;Brunei;10;level3;Located on the north coast of the island of Borneo. Capital: Bandar Seri Begawan##spn#fra#ger;Asia#Borneo
 3092;1783
 3091;1791
 3095;1791
@@ -396,8 +396,8 @@ inf;State;Brunei;10;level1;Located on the north coast of the island of Borneo. C
 3088;1773
 3090;1779
 3090;1781;sl
-qst;coaCambodia##level2#CambodiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Cambodia;10;level1;The official religion is Theravada Buddhism. Capital: Phnom Penh##spn#fra#ger;Asia#Capital: Phnom Penh.
+qst;coaCambodia##level3#CambodiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Cambodia;10;level3;The official religion is Theravada Buddhism. Capital: Phnom Penh##spn#fra#ger;Asia#Capital: Phnom Penh.
 3368;2011
 3363;2015
 3358;2017
@@ -411,8 +411,8 @@ inf;State;Cambodia;10;level1;The official religion is Theravada Buddhism. Capita
 3351;2012
 3361;2010
 3366;2009
-qst;coaEastTimorFlag##level2#EastTimorFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;EastTimor;10;level1;Timor derives from timur, the word for east in Indonesian and Malay. Capital: Dili##spn#fra#ger;Asia#Capital: Dili
+qst;coaEastTimorFlag##level4#EastTimorFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;EastTimor;10;level4;Timor derives from timur, the word for east in Indonesian and Malay. Capital: Dili##spn#fra#ger;Asia#Capital: Dili
 3167;1890
 3171;1894
 3176;1893
@@ -511,8 +511,8 @@ inf;UnDefRegion;EastIslandMalaysiaNU;10;notUsed;eng#nor#spn#fra#ger
 3078;1848
 3080;1847
 3079;1841;sl
-qst;coaMalaysia##level2#MalaysiaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Malaysia;10;level1;The constitution declares Islam the state religion while protecting freedom of religion. Capital: Kuala Lumpur##spn#fra#ger;Oceania#Two similarly sized regions;;EastIslandMalaysiaNU
+qst;coaMalaysia##level3#MalaysiaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Malaysia;10;level2;The constitution declares Islam the state religion while protecting freedom of religion. Capital: Kuala Lumpur##spn#fra#ger;Oceania#Two similarly sized regions;;EastIslandMalaysiaNU
 3117;1751;st
 3127;1755
 3126;1749
@@ -582,8 +582,8 @@ inf;State;Malaysia;10;level1;The constitution declares Islam the state religion 
 3118;1741
 3121;1745
 3118;1750
-qst;coaLaos##level2#LaosFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Laos;10;level1;Has no coastline. Capital: Vientiane##spn#fra#ger;Asia#No coastline
+qst;coaLaos##level4#LaosFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Laos;10;level3;Has no coastline. Capital: Vientiane##spn#fra#ger;Asia#No coastline
 3589;1939
 3590;1940
 3596;1939
@@ -699,8 +699,8 @@ inf;UnDefRegion;EastIslandNewGuineaNU;10;notUsed;eng#nor#spn#fra#ger
 3655;1960
 3630;1945
 3627;1944
-qst;coaNewGuinea##level2#NewGuineaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;New Guinea;10;level1;Largest city Port Moresby. West Papua with Manokwari as its capital. Papua with the city of Jayapura as its capital.##spn#fra#ger;Largest city Port Moresby#Papua;;EastIslandNewGuineaNU#NorthIslandNewGuineaNU
+qst;coaNewGuinea##level4#NewGuineaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;New Guinea;10;level4;Largest city Port Moresby. West Papua with Manokwari as its capital. Papua with the city of Jayapura as its capital.##spn#fra#ger;Largest city Port Moresby#Papua;;EastIslandNewGuineaNU#NorthIslandNewGuineaNU
 3297;1696
 3304;1674
 3303;1687
@@ -830,8 +830,8 @@ inf;State;New Guinea;10;level1;Largest city Port Moresby. West Papua with Manokw
 3289;1707
 3292;1699
 3296;1699
-qst;coaPhillipines##level2#PhilippinesFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Philippines;10;level1;Consists of 7,107 islands. Capital: Manila##spn#fra#ger;A lot of islands#Capital: Manila
+qst;coaPhillipines##level3#PhilippinesFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Philippines;10;level2;Consists of 7,107 islands. Capital: Manila##spn#fra#ger;A lot of islands#Capital: Manila
 3291;1628
 3287;1634
 3286;1639
@@ -857,8 +857,8 @@ inf;State;Philippines;10;level1;Consists of 7,107 islands. Capital: Manila##spn#
 3297;1619
 3294;1625
 3291;1627
-qst;coaTaiwan##level2#TaiwanFlag.png#What county is represented by this flag?##spn#fra#ger#overridingHint1#overridingHint2
-inf;State;Taiwan;10;level1;Officially the Republic of China. Capital: Taipei##spn#fra#ger;Asia#Capital: Taipei
+qst;coaTaiwan##level4#TaiwanFlag.png#What county is represented by this flag?##spn#fra#ger#overridingHint1#overridingHint2
+inf;State;Taiwan;10;level3;Officially the Republic of China. Capital: Taipei##spn#fra#ger;Asia#Capital: Taipei
 3108;1796
 3111;1801
 3114;1802
@@ -956,6 +956,6 @@ inf;State;Taiwan;10;level1;Officially the Republic of China. Capital: Taipei##sp
 3112;1794
 3109;1794
 3106;1795;sl
-qst;coaVietnam##level2#VietnamFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Vietnam;10;level1;Estimated 90.0 million inhabitants as of 2013. Capital: Hanoi##spn#fra#ger;Asia#Capital: Hanoi
+qst;coaVietnam##level3#VietnamFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Vietnam;10;level2;Estimated 90.0 million inhabitants as of 2013. Capital: Hanoi##spn#fra#ger;Asia#Capital: Hanoi
 eof
