@@ -1167,24 +1167,24 @@
 
 	BOOL gameFinished = NO;
 	
-	if ([m_gameRef IsMoreQuestionsForTraining] == NO)
+    if ([m_gameRef HasGameEnded]) {
+        gameFinished = YES;
+    }
+    
+	if ([m_gameRef IsMoreQuestions] == NO)
 		gameFinished = YES;
-
-	
-
-
     Player *player = [[m_gameRef GetPlayer] retain];
     if ([player GetKmLeft] <= 0) {
         gameFinished = YES;
     }
     [player release];
 		
+    
+    
 	if (gameFinished == NO) {
 		if ([m_gameRef IsTrainingMode] == NO) {
 			[m_gameRef SetGameState:inGame];
-
             [self StartPlayer];
-			
 		}
 		else {
 			[infoBarBottom SetTrainingText];
@@ -1206,8 +1206,6 @@
             [m_gameEndedView sendHighscoreToServer];
 			[m_gameEndedView setHeader];
             
-            //[self RemoveGameBoardAndBars];
-            //[self cleanUpGameElements];
 		}
 		else {
 			[self DisplayReplayGameMenu];
@@ -1223,8 +1221,6 @@
 		}
 		
 	}
-	
-	
 	[currentPlayer release];
 	[playerName release];
 	

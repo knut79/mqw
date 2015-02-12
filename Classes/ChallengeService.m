@@ -166,6 +166,30 @@
      completion:completion ];
 }
 
+- (void) getStaticChallengesForUser:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion
+{
+    //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
+    [self.client
+     invokeAPI:@"staticchallenge"
+     data:nil
+     HTTPMethod:@"GET"
+     parameters:jsonDictionary
+     headers:nil
+     completion:completion ];
+}
+
+- (void) getDynamicChallengesForUser:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion
+{
+    //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
+    [self.client
+     invokeAPI:@"highscorerank"
+     data:nil
+     HTTPMethod:@"GET"
+     parameters:jsonDictionary
+     headers:nil
+     completion:completion ];
+}
+
 - (void)busy:(BOOL)busy
 {
     // assumes always executes on UI thread

@@ -92,11 +92,24 @@
 		}
 		
 		
+        /*
 		CGRect imageRect = CGRectMake(-99, -99, 223, 57);
 		m_headerImageView = [[[UIImageView alloc] initWithFrame:imageRect] retain];
 		[m_headerImageView setAlpha:0];
-		[self addSubview:m_headerImageView];
+		[self addSubview:m_headerImageView];*/
 		
+        m_header= [[UILabel alloc] init];
+        [m_header setFrame:CGRectMake(0, 0, 250, 20)];
+		m_header.backgroundColor = [UIColor clearColor];
+		[m_header setFont:[UIFont boldSystemFontOfSize:20.0f]];
+		m_header.textAlignment = NSTextAlignmentCenter;
+		m_header.shadowColor = [UIColor grayColor];
+		m_header.shadowOffset = CGSizeMake(-1,-2);
+        m_header.textColor = [UIColor whiteColor];
+		m_header.adjustsFontSizeToFitWidth = YES;
+		[m_header setAlpha:0];
+		[self addSubview:m_header];
+        
 		m_questionsPassedLabel = [[UILabel alloc] init];
 		[m_questionsPassedLabel setFrame:CGRectMake(0, 0, 250, 20)];
 		m_questionsPassedLabel.backgroundColor = [UIColor clearColor]; 
@@ -334,16 +347,20 @@
     
     
     self.userInteractionEnabled = NO;
-    //NSMutableArray *players = [[gameRef GetPlayers] retain];
+
+    /*
     UIImage *headerImage = [[UIImage imageNamed:@"GameOver.png"] retain];
     m_headerImageView.image = headerImage;
-    [headerImage release];
-
-    //passed xx questions in easy game
-    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Questions completed"],(int)[player GetQuestionsPassed]];
-    m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
+    [headerImage release];*/
 
     
+    
+    m_header.center = CGPointMake([screen applicationFrame].size.width/2,  55);
+    
+    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",@"Questions completed",(int)[player GetQuestionsPassed]];
+    m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
+
+
     
     NSString *seconds = [[NSString stringWithFormat:@"%d",(int)time%60] retain];
     if ([seconds length] == 1 ) {
@@ -401,7 +418,7 @@
 
     challengeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [challengeButton addTarget:self action:@selector(doChallenge) forControlEvents:UIControlEventTouchDown];
-    [challengeButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Challenge"] forState:UIControlStateNormal];
+
     challengeButton.layer.borderWidth=1.0f;
     [challengeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     challengeButton.layer.borderColor=[[UIColor whiteColor] CGColor];
@@ -411,7 +428,7 @@
     
     exitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [exitButton addTarget:self action:@selector(doSkip) forControlEvents:UIControlEventTouchDown];
-    [exitButton setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Skip challenging"] forState:UIControlStateNormal];
+    
     exitButton.layer.borderWidth=1.0f;
     [exitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     exitButton.layer.borderColor=[[UIColor whiteColor] CGColor];
@@ -419,6 +436,21 @@
     exitButton.center = CGPointMake([screen applicationFrame].size.width/2,420);
     [self addSubview:exitButton];
     
+    
+    switch ([m_gameRef GetGameMode]) {
+        case challengeMode:
+            m_header.text = [NSString stringWithFormat:@"Challenge completed"];
+            [exitButton setTitle:@"Continue" forState:UIControlStateNormal];
+            [challengeButton setAlpha:0];
+            break;
+            
+        default:
+            m_header.text = [NSString stringWithFormat:@"Game over"];
+            [exitButton setTitle:@"Skip challenging" forState:UIControlStateNormal];
+            [challengeButton setAlpha:1];
+            [challengeButton setTitle:@"Challenge" forState:UIControlStateNormal];
+            break;
+    }
     
     [player release];
     

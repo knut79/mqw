@@ -41,13 +41,21 @@
     IBOutlet UIActivityIndicatorView *activityIndicatorStaticChallenges;
     IBOutlet UIActivityIndicatorView *activityIndicatorDynamicChallenge;
     
-    ChallengeStatusView* challengeStatusView;
-    int getStaticChallengesRetry;
-    int getDynamicChallengesRetry;
+    UIAlertView *alertStaticChallenge;
+    UIAlertView *alertDynamicChallenge;
     
+    ChallengeStatusView* challengeStatusView;
+    
+    NSMutableDictionary* staticChallengeDataCache;
+    NSMutableDictionary* dynamicChallengeDataCache;
+    NSMutableArray *currentQuestonIds;
+    BOOL currentBorderValue;
+    BOOL currentCompletedValue;
     Game *m_game;
 
 }
+@property (retain, nonatomic) IBOutlet UIButton *retryButton;
+- (IBAction)retryButtonPushed:(id)sender;
 @property (retain, nonatomic) IBOutlet UILabel *staticChallengesHeader;
 @property (retain, nonatomic) IBOutlet UILabel *dynamicChallengesHeader;
 @property (retain, nonatomic) IBOutlet UIButton *statusButton;

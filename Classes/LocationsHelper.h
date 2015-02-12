@@ -38,13 +38,14 @@
 -(void) ShuffleQuestions;
 -(void) OrderQuestionsForTraining:(Difficulty) category;
 -(NSMutableArray *)ShuffleArray:(NSMutableArray*) arrayToShuffle;
--(NSMutableArray *) GetQuestionsOnDifficulty:(Difficulty) difficulty trainingMode:(BOOL) training;
+-(NSMutableArray *) GetQuestionsOnDifficulty:(Difficulty) difficulty gameMode:(gameMode) gm;
 -(NSArray*) StringOfCoordinatesToArray:(NSString*) stringOfCoordinates;
 -(NSString*) CoordinateArrayToString:(NSArray*) coordinateArray;
 -(void) CategorizeQuestions;
 -(void) CategorizeQuestionsForTraining;
 -(void) ReInitQuestions;
 -(NSMutableArray*) CollectQuestionsOnCategoryForTraining:(Difficulty) category;
+-(void) CollectQuestionsOnIds:(NSArray*) ids;
 
 
 @end

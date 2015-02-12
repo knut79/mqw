@@ -23,6 +23,7 @@
 	NSMutableArray *m_linesArray;
 	UILabel *m_tapWhenReadyLabel;
 	UIImageView* m_headerImageView;
+    UILabel *m_header;
 	UILabel *m_questionsPassedLabel;
     UILabel *m_globalHighscoreLabel;
 	UIImageView* m_highscoreImageView;	

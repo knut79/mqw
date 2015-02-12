@@ -6,7 +6,12 @@
  *  Copyright 2011 Lemmus. All rights reserved.
  *
  */
-
+typedef enum
+{
+    regularMode = 1,
+    trainingMode = 2,
+    challengeMode = 3
+} gameMode;
 
 typedef enum
 {

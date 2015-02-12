@@ -37,8 +37,9 @@
 	[m_lineImageView setImage:lineImage];
 	[self addSubview:m_lineImageView];
 
-	[self addSubview:m_imageView];
+	
 	[self addSubview:m_label];
+    [self addSubview:m_imageView];
 	//[self addSubview:m_tapToEnlarge];
 	[self setAlpha:0];
     [screen release];
@@ -108,6 +109,7 @@
         newWidth = orgImageWidth * scaleFactor;
     }
     [m_imageView setFrame:CGRectMake(([screen applicationFrame].size.width/2) - (newWidth/2), ([screen applicationFrame].size.height/2) - (newHeight/2) + yOffset, newWidth, newHeight)];
+    [self bringSubviewToFront:m_imageView];
     [screen release];
 }
 

@@ -8,13 +8,13 @@
 
 #import "TakeChallenge.h"
 #import "GlobalSettingsHelper.h"
-
-#import "HighscoreService.h"
+#import "LocationsHelper.h"
+#import "ChallengeService.h"
 
 @interface TakeChallenge ()
 
 // Private properties
-@property (strong, nonatomic) HighscoreService *highscoreService;
+@property (strong, nonatomic) ChallengeService *challengeService;
 
 @end
 
@@ -27,11 +27,16 @@
 @synthesize statusButton;
 @synthesize staticChallengesHeader;
 @synthesize dynamicChallengesHeader;
+@synthesize retryButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        staticChallengeDataCache = [[NSMutableDictionary alloc] init];
+        dynamicChallengeDataCache = [[NSMutableDictionary alloc] init];
+        currentQuestonIds = [[NSMutableArray alloc] init];
+        retryButton.hidden = YES;
     }
     return self;
 }
@@ -88,8 +93,9 @@
     staticChallengesHeader.layer.shadowColor = [[UIColor blackColor] CGColor];
     staticChallengesHeader.layer.shadowOpacity = 1.0;
     
-    getStaticChallengesRetry = 0;
-    getDynamicChallengesRetry = 0;
+    retryButton.layer.borderWidth=1.0f;
+    [retryButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    retryButton.layer.borderColor=[[UIColor whiteColor] CGColor];
     
     backButton.layer.borderWidth=1.0f;
     [backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -103,11 +109,11 @@
     datasourceStaticArray = [[NSMutableArray alloc] init];
     datasourceDynamicArray = [[NSMutableArray alloc] init];
     
-    self.highscoreService = [HighscoreService defaultService];
+    self.challengeService = [ChallengeService defaultService];
     
     
     [self getStaticChallenges];
-    [self getDynamicChallenges];
+    //[self getDynamicChallenges];
 }
 
 - (void)viewDidUnload
@@ -130,42 +136,37 @@
     //HighscoreService* highscoreService = [HighscoreService defaultService];
     
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    playerId, @"id", @1, @"level",nil];
+                                    playerId, @"id",nil];
     
-    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+    [self.challengeService getStaticChallengesForUser:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
-         
-         
          if (error)
          {
              NSLog(@"Error %@",error);
-             getStaticChallengesRetry++;
-             if (getStaticChallengesRetry < 2 ) {
-                 [self getStaticChallenges];
-             }
-             else
-             {
+
                  [activityIndicatorStaticChallenges stopAnimating];
                  [activityIndicatorStaticChallenges setAlpha:0];
-                 getStaticChallengesRetry = 0;
-                 
-                 NSString* errorMessage = @"There was a problem! ";
-                 errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+
+             
+                 NSString* errorMessage = @"Problem collecting data! ";
+                 //errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
                  UIAlertView* myAlert = [[UIAlertView alloc]
                                          initWithTitle:@"Error!"
                                          message:errorMessage
                                          delegate:nil
-                                         cancelButtonTitle:@"Okay"
+                                         cancelButtonTitle:@"Push retry"
                                          otherButtonTitles:nil];
                  [myAlert show];
-             }
+             
+             retryButton.hidden = NO;
          }
          else {
              [activityIndicatorStaticChallenges stopAnimating];
              [activityIndicatorStaticChallenges setAlpha:0];
-             getStaticChallengesRetry = 0;
+
              NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
              
+             retryButton.hidden = YES;
              //NSLog(@"The datastring : %@",newStr);
              
              //remove front [ and back ] characters
@@ -202,7 +203,48 @@
                      [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
                  }
                  
-                 [datasourceStaticArray addObject:[jsonObject objectForKey:@"username"]];
+                 /*
+                 NSMutableArray *test = [[NSMutableArray alloc] init];
+                 if (ind == 0) {
+                     [test addObject:@"qs00_Benin"];
+                     [test addObject:@"qs00_Angola"];
+                     [test addObject:@"asdf"];
+                     [test addObject:@"coaAngola"];
+                     
+                     [datasourceStaticArray addObject:@"1st static test"];
+                     [staticChallengeDataCache setValue:test forKey:@"1st static test"];
+                 }
+                 else if (ind == 1)
+                 {
+                     [test addObject:@"coaAngola"];
+                     [test addObject:@"qs00_Benin"];
+                     [test addObject:@"qs00_Angola"];
+                     
+                     [datasourceStaticArray addObject:@"2nd static test"];
+                     [staticChallengeDataCache setValue:test forKey:@"2nd static test"];
+                     
+                 }
+                 else
+                 {*/
+                 
+                [datasourceStaticArray addObject:[jsonObject objectForKey:@"title"]];
+                [staticChallengeDataCache setValue:[[jsonObject objectForKey:@"questionIds"] componentsSeparatedByString:@";"] forKey:[jsonObject objectForKey:@"title"]];
+                 if ([jsonObject objectForKey:@"borders"] != NULL) {
+                     [staticChallengeDataCache setValue:@YES forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"borders"]];
+                 }
+                 else
+                 {
+                     [staticChallengeDataCache setValue:@NO forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"borders"]];
+                 }
+                 
+                 if ([jsonObject objectForKey:@"completed"] != NULL) {
+                     [staticChallengeDataCache setValue:@YES forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"completed"]];
+                 }
+                 else
+                 {
+                     [staticChallengeDataCache setValue:@NO forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"completed"]];
+                 }
+                 //}
                  
                  ind ++;
              }
@@ -223,40 +265,35 @@
     //HighscoreService* highscoreService = [HighscoreService defaultService];
     
     NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    playerId, @"id", @1, @"level",nil];
+                                    playerId, @"id",nil];
     
-    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+    [self.challengeService getDynamicChallengesForUser:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
-         
-         
          if (error)
          {
              NSLog(@"Error %@",error);
-             getDynamicChallengesRetry++;
-             if (getDynamicChallengesRetry < 2 ) {
-                 [self getDynamicChallenges];
-             }
-             else
-             {
+
                  [activityIndicatorDynamicChallenge stopAnimating];
                  [activityIndicatorDynamicChallenge setAlpha:0];
-                 getDynamicChallengesRetry = 0;
-                 
-                 NSString* errorMessage = @"There was a problem! ";
-                 errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             
+             
+                 NSString* errorMessage = @"Problem collecting data!";
+                 //errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
                  UIAlertView* myAlert = [[UIAlertView alloc]
                                          initWithTitle:@"Error!"
                                          message:errorMessage
                                          delegate:nil
-                                         cancelButtonTitle:@"Okay"
+                                         cancelButtonTitle:@"Push retry"
                                          otherButtonTitles:nil];
                  [myAlert show];
-             }
+             
+             retryButton.hidden = NO;
+             
          }
          else {
+             retryButton.hidden = YES;
              [activityIndicatorDynamicChallenge stopAnimating];
              [activityIndicatorDynamicChallenge setAlpha:0];
-             getDynamicChallengesRetry = 0;
              NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
              
              //NSLog(@"The datastring : %@",newStr);
@@ -304,101 +341,7 @@
          
      }];
 }
-/*
--(void) getChallengesResults
-{
-    [activityIndicatorChallengeResults setAlpha:1];
-	[activityIndicatorChallengeResults startAnimating];
-	
-    
-    NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
-    //HighscoreService* highscoreService = [HighscoreService defaultService];
-    
-    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    playerId, @"id", @1, @"level",nil];
-    
-    [self.highscoreService getHigscoreForPlayerAndLevel:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
-     {
-         
-         [activityIndicatorChallengeResults stopAnimating];
-         [activityIndicatorChallengeResults setAlpha:0];
-         if (error)
-         {
-             NSLog(@"Error %@",error);
-            
-             
-             if (getChallengesResultsRetry < 2 ) {
-                 getChallengesResultsRetry++;
-                 [self getChallengesResults];
-             }
-             else
-             {
-                 getChallengesResultsRetry = 0;
-                 NSString* errorMessage = @"There was a problem! ";
-                 errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
-                 UIAlertView* myAlert = [[UIAlertView alloc]
-                                         initWithTitle:@"Error!"
-                                         message:errorMessage
-                                         delegate:nil
-                                         cancelButtonTitle:@"Okay"
-                                         otherButtonTitles:nil];
-                 [myAlert show];
-             }
-         }
-         else {
-             getChallengesResultsRetry = 0;
-             NSMutableString* newStr = [[NSMutableString alloc] initWithData:result encoding:NSUTF8StringEncoding];
-             
-             //NSLog(@"The datastring : %@",newStr);
-             
-             //remove front [ and back ] characters
-             if ([newStr rangeOfString: @"]"].length >0) {
-                 [newStr deleteCharactersInRange: NSMakeRange([newStr length]-1, 1)];
-                 [newStr deleteCharactersInRange: NSMakeRange(0,1)];
-                 NSLog(@"The datastring : %@",newStr);
-             }
-             
-             NSMutableArray* dataArray = [[NSMutableArray alloc] init];
-             [pageMiddleToLoad retain];
-             int ind = 0;
-             while ([newStr rangeOfString: @"}"].length >0) {
-                 NSRange match = [newStr rangeOfString: @"}"];
-                 NSString* rowSubstring1 = [newStr substringWithRange:NSMakeRange(0, match.location+1)];
-                 NSLog(@"The substring1 : %@",rowSubstring1);
-                 
-                 NSData *jsonData = [rowSubstring1 dataUsingEncoding:NSUTF8StringEncoding];
-                 NSDictionary *jsonObject=[NSJSONSerialization
-                                           JSONObjectWithData:jsonData
-                                           options:NSJSONReadingMutableLeaves
-                                           error:nil];
-                 NSLog(@"jsonObject is %@",jsonObject);
-                 
-                 
-                 
-                 [dataArray addObject:jsonObject];
-                 if ([newStr rangeOfString: @"}"].location + 2 < newStr.length) {
-                     [newStr deleteCharactersInRange: NSMakeRange(0, match.location + 2)];
-                 }
-                 else{
-                     [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
-                 }
-                 
-                 
-                 [pageMiddleToLoad appendString:[NSString stringWithFormat:@"<tr bgcolor=#FFFFFF><td>creatorID</td><td>%@</td><td>sumKmExceded</td></tr>",[jsonObject objectForKey:@"username"]]];
-                 [pageMiddleToLoad appendString:[NSString stringWithFormat:@"<tr bgcolor=#FFFFFF><td>targetID</td><td>%@</td><td>sumKmExceded</td></tr>",[jsonObject objectForKey:@"username"]]];
-                 
-                 
-                 ind ++;
-             }
-             [pageMiddleToLoad release];
-             
-             [self ReloadHtml];
-             
-         }
-         
-     }];
-}
-*/
+
  
 #pragma mark Table view methods
 
@@ -420,6 +363,7 @@
 }
 
 // Customize the appearance of table view cells.
+
 - (ColorTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
@@ -436,6 +380,7 @@
     if(tableView == staticChallengesTableView)
     {
         cell.textLabel.text = [NSString	 stringWithFormat:@"%@",[datasourceStaticArray objectAtIndex:[indexPath row]]];
+        currentCompletedValue = [[staticChallengeDataCache objectForKey:[NSString stringWithFormat:@"%@_%@",[datasourceStaticArray objectAtIndex:[indexPath row] ],@"completed"]] boolValue];
     }
     else
     {
@@ -444,39 +389,50 @@
     
     
     //try setting color
-    if (([indexPath row] % 2) == 0) 
-        [cell setCellColor:[ UIColor lightGrayColor ] ];
+
+    if (([indexPath row] % 2) == 0)
+    {
+        if (currentCompletedValue)
+        {
+            [cell setCellColor:[UIColor greenColor]];
+        }
+        else
+            [cell setCellColor:[UIColor lightGrayColor ] ];
+    }
     else
-        [cell setCellColor:[ UIColor grayColor ] ];
+    {
+        if (currentCompletedValue)
+            [cell setCellColor:[ UIColor greenColor] ];
+        else
+            [cell setCellColor:[ UIColor grayColor ] ];
+    }
 
     return cell;
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// open a alert with an OK and cancel button
     
     NSString *alertString;
-    UIAlertView *alert;
     if(tableView == staticChallengesTableView)
     {
         alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceStaticArray objectAtIndex:[indexPath row]]];
-    	alert = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceStaticArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    	alertStaticChallenge = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge %@",[datasourceStaticArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+        currentQuestonIds = [staticChallengeDataCache objectForKey:[datasourceStaticArray objectAtIndex:[indexPath row]]];
+        currentBorderValue = [[staticChallengeDataCache objectForKey:[NSString stringWithFormat:@"%@_%@",[datasourceStaticArray objectAtIndex:[indexPath row] ],@"borders"]] boolValue];
+        currentCompletedValue = [[staticChallengeDataCache objectForKey:[NSString stringWithFormat:@"%@_%@",[datasourceStaticArray objectAtIndex:[indexPath row] ],@"completed"]] boolValue];
+        [alertStaticChallenge show];
+    	[alertStaticChallenge release];
     }
     else
     {
         alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceDynamicArray objectAtIndex:[indexPath row]]];
-    	alert = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceDynamicArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    	alertDynamicChallenge = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceDynamicArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+        currentQuestonIds = [dynamicChallengeDataCache objectForKey:[datasourceDynamicArray objectAtIndex:[indexPath row]]];
+        [alertDynamicChallenge show];
+    	[alertDynamicChallenge release];
     }
-    
-    
-    	[alert show];
-    	[alert release];
-    
-    //[self.view setAlpha:0];
-    //[self dealloc];
-    
-//    if ([delegate respondsToSelector:@selector(returnSelectedUserAndCleanUp:)])
-//        [delegate returnSelectedUserAndCleanUp:[datasourceArray objectAtIndex:[indexPath row]]];
 }
 
 - (void)alertView : (UIAlertView *)alertView clickedButtonAtIndex : (NSInteger)buttonIndex
@@ -492,19 +448,13 @@
 		{
 			NSLog(@"yes button was pressed\n");
             
-            
-            
-
-            
             if (m_game == nil) {
                 m_game = [[Game alloc] init] ;
             }
             
-
-                [m_game SetTrainingMode:NO];
-            
-
-                [m_game SetMapBorder:YES];
+            [[LocationsHelper Instance] CollectQuestionsOnIds:currentQuestonIds];
+            [m_game SetGameMode:challengeMode];
+            [m_game SetMapBorder:currentBorderValue];
 
             
             Difficulty vDifficulty = level1;
@@ -539,6 +489,7 @@
     [staticChallengesHeader release];
     [dynamicChallengesHeader release];
     [dynamicChallengesTableView release];
+    [retryButton release];
     [super dealloc];
 }
 - (IBAction)backButtonPushed:(id)sender {
@@ -550,4 +501,8 @@
 }
 
 
+- (IBAction)retryButtonPushed:(id)sender {
+    [self getStaticChallenges];
+    [self getDynamicChallenges];
+}
 @end

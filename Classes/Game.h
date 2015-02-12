@@ -34,12 +34,13 @@
 	Question* m_currentQuestion;
 	GameState m_gameState;
 	Player* m_player;
-	BOOL m_training;
+	gameMode m_gameMode;
     BOOL m_borders;
 	NSMutableDictionary *training_oldResultDictionary;
 	NSMutableDictionary *training_newResultDictionary;
 	NSMutableArray *training_placesArray;
     NSMutableArray * passedQuestions;
+    BOOL m_gameEnded;
     
     Challenge* challenge;
     
@@ -50,22 +51,15 @@
 -(void) SetPlayer:(Player*) player andDifficulty:(Difficulty) difficulty;
 -(void) SetGameState_QuestionID:(NSString*) questionID Difficulty:(Difficulty) diff currentPlayerByName:(NSString*) playerName questionsPassed:(NSInteger) questionsPassed;
 -(Question*) GetQuestion;
--(NSInteger) GetNextPlayerIndex;
 -(Player*) GetPlayer;
 -(void) SetNextQuestion;
--(BOOL) IsMoreQuestionsForTraining;
+-(BOOL) IsMoreQuestions;
 -(void) ResetGameData;
 -(Difficulty) GetGameDifficulty;
 -(void) ResetPlayerData;
 -(void) IncreasQuestionsPassed;
 -(NSInteger) GetQuestionsPassed;
 -(NSMutableArray*) GetPassedQuestions;
--(NSInteger) GetPlayersLeft;
--(void) FirstPlaceSetScore:(NSInteger) score;
--(void) SecondPlaceSetScore:(NSInteger) score;
--(void) ThirdPlaceSetScore:(NSInteger) score;
--(void) FourthPlaceSetScore:(NSInteger) score;
--(BOOL) IsOnePlayerAtTop;
 -(NSInteger) GetCorrectAnswersAndSetScore:(NSInteger) score;
 -(Highscore*) GetHighscore;
 
@@ -73,15 +67,20 @@
 -(void) SaveGame;
 -(void) SetGameState:(GameState) gs;
 
--(void) SetTrainingMode:(BOOL) training;
+-(void) SetGameMode:(gameMode) mode;
 -(void) SetMapBorder:(BOOL) value;
 -(BOOL) IsTrainingMode;
+-(BOOL) isChallenge;
 -(BOOL) UsingBorders;
+-(BOOL) HasGameEnded;
 -(void) ResetTrainingValues;
 -(void) Training_AddOldResult:(NSString*) place avgValue:(NSInteger) value;
 -(void) Training_AddNewResult:(NSString*) place avgValue:(NSInteger) value;
 -(NSArray*) Training_GetPlaces;
 -(NSDictionary*) Training_GetOldResults;
 -(NSDictionary*) Training_GetNewResults;
+
+-(gameMode) GetGameMode;
+
 
 @end

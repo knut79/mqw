@@ -351,9 +351,9 @@
 	}
 
 	if (modeSwitch.on == YES) 
-		[m_game SetTrainingMode:YES];
+		[m_game SetGameMode:trainingMode];
 	else
-		[m_game SetTrainingMode:NO];
+		[m_game SetGameMode:regularMode];
     
     if (borderSwitch.on == YES)
 		[m_game SetMapBorder:YES];

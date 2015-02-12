@@ -1099,6 +1099,12 @@
 	[self CategorizeQuestionsForTraining];
 }
 
+-(void) CategorizeQuestionsForChallenge
+{
+    
+}
+
+
 -(void) CategorizeQuestionsForTraining
 {
 	if (m_trainingQuestionsByCategory == nil) 
@@ -1123,6 +1129,16 @@
 
 -(NSMutableArray*) CollectQuestionsOnCategory:(Difficulty) category
 {
+    /*
+    NSMutableArray *test = [[NSMutableArray alloc] init];
+    [test addObject:@"qs00_Benin"];
+    [test addObject:@"qs00_Angola"];
+    [test addObject:@"asdf"];
+    [test addObject:@"coaAngola"];
+    
+    NSMutableArray*test2 = [[NSMutableArray alloc] init];
+    test2 = [self CollectQuestionsOnIds:test];*/
+    
 	NSMutableArray *collectedQuestons = [[NSMutableArray alloc] init];
 	for (Question *quest in m_questionsList){
 		if ([quest GetDifficulty] == category ) {
@@ -1132,6 +1148,52 @@
 	return [collectedQuestons autorelease];
 }
 
+-(void) CollectQuestionsOnIds:(NSArray*) ids
+{
+    NSMutableArray *collectedQuestons = [[NSMutableArray alloc] init];
+    
+    /*
+	for (Question *quest in m_questionsList){
+		
+        if([self Collection:ids HasId:[quest GetID]])
+        {
+            [collectedQuestons addObject:quest];
+        }
+	}*/
+    
+    //set sortorder after ids
+    for (NSString* aId in ids) {
+        Question* qst = [self GetQuestionOnId:aId];
+        if(qst != NULL)
+            [collectedQuestons addObject:qst];
+        
+    }
+    
+    [m_questionsByCategory setObject:collectedQuestons forKey:@"challenge"];
+}
+
+-(Question*) GetQuestionOnId:(NSString*) aId
+{
+    for (Question* qst in m_questionsList) {
+        if([qst.GetID isEqualToString:aId])
+        {
+            return qst;
+            break;
+        }
+    }
+    return NULL;
+}
+
+-(BOOL) Collection:(NSArray*) ids HasId:(NSString*) theId
+{
+    for (int i = 0; i < ids.count; i++) {
+        if ([[ids objectAtIndex:i] isEqualToString:theId ]) {
+            return YES;
+            break;
+        }
+    }
+    return NO;
+}
 
 -(NSMutableArray*) CollectQuestionsOnCategoryForTraining:(Difficulty) category
 {
@@ -1281,10 +1343,10 @@
     return result;
 }
 
--(NSMutableArray *) GetQuestionsOnDifficulty:(Difficulty) difficulty trainingMode:(BOOL) training
+-(NSMutableArray *) GetQuestionsOnDifficulty:(Difficulty) difficulty gameMode:(gameMode) gm
 {
 	NSMutableArray *qOnType = nil;	
-	if(training == NO)
+	if(gm == regularMode)
 	{
 		switch (difficulty) {
 			case level1:
@@ -1306,7 +1368,11 @@
 				break;
 		}
 	}
-	else 
+    else if (gm == challengeMode)
+    {
+        qOnType = [m_questionsByCategory objectForKey:@"challenge"];
+    }
+	else
 	{
 		switch (difficulty) {
             case level1:

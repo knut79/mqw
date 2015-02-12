@@ -28,6 +28,7 @@
 		m_gameQuestionsPassed = 0;
 		m_gameState = outOfGame;
         challenge = [[Challenge alloc] init];
+        m_gameEnded = NO;
         passedQuestions = [[NSMutableArray alloc] init];
 	}
 	return self;
@@ -44,10 +45,11 @@
 	//[[LocationsHelper Instance] ShuffleQuestions];
 }
 
--(void) SetTrainingMode:(BOOL) training
+-(void) SetGameMode:(gameMode) gm
 {
-	m_training = training;
+    m_gameMode = gm;
 }
+
 
 -(void) SetMapBorder:(BOOL) value
 {
@@ -56,8 +58,14 @@
 
 -(BOOL) IsTrainingMode
 {
-	return m_training;
+	return m_gameMode == trainingMode;
 }
+
+-(BOOL) isChallengeMode
+{
+    return m_gameMode == challengeMode;
+}
+
 
 -(BOOL) UsingBorders
 {
@@ -69,7 +77,7 @@
 	m_initialDifficulty = diff;
 	m_difficulty = m_initialDifficulty;
 	m_gameQuestionsPassed = questionsPassed;
-	NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training];
+	NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty gameMode:m_gameMode];
 	for (int i = 0;i < questionsOnType.count; i++) 
 	{
 		if ([[[questionsOnType objectAtIndex:i] GetID] isEqualToString:questionID]) 
@@ -101,10 +109,15 @@
 
 -(void) ResetGameData
 {
+    m_gameEnded = NO;
 	m_gameQuestionsPassed = 0;
 	m_difficulty = m_initialDifficulty;
 }
 
+-(gameMode) GetGameMode
+{
+    return m_gameMode;
+}
 
 -(Difficulty) GetGameDifficulty
 {
@@ -113,21 +126,36 @@
 
 -(Question*) GetQuestion
 {
-	NSMutableArray *qOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training];
+	NSMutableArray *qOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty gameMode:m_gameMode];
 	Question* returnQuestion = [qOnType objectAtIndex:m_currentQuestionIndex] ;
 	return returnQuestion;
 }
 
--(BOOL) IsMoreQuestionsForTraining
+-(BOOL) HasGameEnded
 {
-    BOOL moreQuestionsForTraining = YES;
-    if (m_training == YES) {
-        if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training] count])
-        {
-            moreQuestionsForTraining = NO;
-        }
+    return m_gameEnded;
+}
+
+-(BOOL) IsMoreQuestions
+{
+    BOOL moreQuestions= YES;
+    switch (m_gameMode) {
+        case trainingMode:
+        case challengeMode:
+            if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty gameMode:m_gameMode] count])
+            {
+                moreQuestions = NO;
+            }
+            break;
+        default:
+            if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:level5 gameMode:m_gameMode] count])
+            {
+                moreQuestions = NO;
+            }
+            break;
+            
     }
-    return moreQuestionsForTraining;
+    return moreQuestions;
 }
 
 -(NSMutableArray*) GetPassedQuestions
@@ -137,14 +165,15 @@
 
 -(void) SetNextQuestion
 {
-    NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty trainingMode:m_training];
+    NSArray *questionsOnType = [[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty gameMode:m_gameMode];
     
     //add last question to list representing passed questions
 	[passedQuestions addObject:[questionsOnType objectAtIndex:m_currentQuestionIndex]];
     
 	m_currentQuestionIndex ++;
 	
-	if (m_training == NO) {
+    
+	if (m_gameMode == regularMode) {
         //reset currentQuestionIndex if all questions for a difficulty level is used
 		if (m_currentQuestionIndex >= [questionsOnType count]) {
 			if (m_difficulty == level1) {
@@ -166,11 +195,21 @@
 			else if (m_difficulty == level5) {
 				m_difficulty = level5;
 				m_currentQuestionIndex = 0;
-                [NSException raise:@"No more questions" format:@"No more questions. All questions on level5 used."];
+                m_gameEnded = YES;
+                //[NSException raise:@"No more questions" format:@"No more questions. All questions on level5 used."];
 			}
 		}
 	}
-	else //Training mode 
+    else if(m_gameMode == challengeMode)
+    {
+        if (m_currentQuestionIndex >= [questionsOnType count])
+        {
+            m_gameEnded = YES;
+            m_currentQuestionIndex = 0;
+            //[NSException raise:@"No more questions" format:@"All questions for challenge answered"];
+        }
+    }
+	else //Training mode
 	{
 		if (m_currentQuestionIndex >= [questionsOnType count])
 		{
@@ -189,7 +228,7 @@
 
 -(Player*) GetPlayer
 {
-	return m_player ;//_? retain inside
+	return m_player ;
 }
 
 
