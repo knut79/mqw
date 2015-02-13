@@ -113,8 +113,8 @@
 2013;1468
 2016;1466
 2018;1462;sl
-qst;coaLibya##level3#LibyaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Libya;10;level2;Tenth-largest country in the world, and the largest in Africa and in the Mediterranean. Capital: Algiers##spn#fra#ger;Africa#East by Libya
+qst;coaAlgeria##level3#AlgeriaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Algeria;10;level2;Tenth-largest country in the world, and the largest in Africa and in the Mediterranean. Capital: Algiers##spn#fra#ger;Africa#East by Libya
 2058;1980
 2058;1976;st
 2056;1972

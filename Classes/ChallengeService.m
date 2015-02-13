@@ -158,7 +158,7 @@
 {
     //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
     [self.client
-     invokeAPI:@"sendchallenge"
+     invokeAPI:@"dynamicchallenge"
      data:nil
      HTTPMethod:@"POST"
      parameters:jsonDictionary
