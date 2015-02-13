@@ -1,21 +1,21 @@
 2538;1627
-inf;City#Where is the capital;Abu Dhabi;10;level1;The capital and the second most populous city in the United Arab Emirates and also capital of the largest of the UAE's seven member emirates.#nor#spn#fra#ger;Middle East#United Arab Emirates
+inf;City#Where is the capital;Abu Dhabi;10;level4;The capital and the second most populous city in the United Arab Emirates and also capital of the largest of the UAE's seven member emirates.#nor#spn#fra#ger;Middle East#United Arab Emirates
 2328;1531
-inf;City#Where is the capital;Amman;10;level1;The capital and most populous city of the Hashemite Kingdom of Jordan.#nor#spn#fra#ger;Middle East#Jordan
+inf;City#Where is the capital;Amman;10;level4;The capital and most populous city of the Hashemite Kingdom of Jordan.#nor#spn#fra#ger;Middle East#Jordan
 2425;1512
-inf;City#Where is the capital;Baghdad;10;level1;The capital of the Republic of Iraq.#nor#spn#fra#ger;Middle East#Iraq
+inf;City#Where is the capital;Baghdad;10;level3;The capital of the Republic of Iraq.#nor#spn#fra#ger;Middle East#Iraq
 2332;1509
-inf;City#Where is the capital;Damascus;10;level1;The capital and the second largest city of Syria after Aleppo.#nor#spn#fra#ger;Middle East#Syria
+inf;City#Where is the capital;Damascus;10;level3;The capital and the second largest city of Syria after Aleppo.#nor#spn#fra#ger;Middle East#Syria
 2506;1617
-inf;City#Where is the capital;Doha;10;level1;The capital city of Qatar and is located on the coast of the Persian Gulf.#nor#spn#fra#ger;Middle East#Qatar
+inf;City#Where is the capital;Doha;10;level4;The capital city of Qatar and is located on the coast of the Persian Gulf.#nor#spn#fra#ger;Middle East#Qatar
 2495;1605
-inf;City#Where is the capital;Manama;10;level1;The capital and largest city of Bahrain.#nor#spn#fra#ger;Middle East#Bahrain
+inf;City#Where is the capital;Manama;10;level5;The capital and largest city of Bahrain.#nor#spn#fra#ger;Middle East#Bahrain
 2586;1637
-inf;City#Where is the capital;Muscat;10;level1;The capital of Oman.#nor#spn#fra#ger;Middle East#Oman
+inf;City#Where is the capital;Muscat;10;level5;The capital of Oman.#nor#spn#fra#ger;Middle East#Oman
 2451;1625
-inf;City#Where is the capital;Riyadh;10;level1;The capital and largest city of Saudi Arabia.#nor#spn#fra#ger;Middle East#Saudi Arabia
+inf;City#Where is the capital;Riyadh;10;level4;The capital and largest city of Saudi Arabia.#nor#spn#fra#ger;Middle East#Saudi Arabia
 2422;1737
-inf;City#Where is the capital;Sana'a;10;level1;The capital of Yemen. Sana'a is one of the oldest continuously inhabited cities in the world. At an altitude of 2,300 metres (7,500 ft), it is also one of the highest capital cities in the world.#nor#spn#fra#ger;Middle East#Yemen
+inf;City#Where is the capital;Sana'a;10;level4;The capital of Yemen. Sana'a is one of the oldest continuously inhabited cities in the world. At an altitude of 2,300 metres (7,500 ft), it is also one of the highest capital cities in the world.#nor#spn#fra#ger;Middle East#Yemen
 2504;1479
-inf;City#Where is the capital;Tehran;10;level1;The capital of Iran and Tehran Province since 1778. #nor#spn#fra#ger;Middle East#Iran
+inf;City#Where is the capital;Tehran;10;level3;The capital of Iran and Tehran Province since 1778. #nor#spn#fra#ger;Middle East#Iran
 eof

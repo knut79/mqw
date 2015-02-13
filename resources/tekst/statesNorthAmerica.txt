@@ -1082,7 +1082,7 @@
 416;1179
 411;1179
 406;1177
-qst;coaCanada##level2#CanadaFlag.png#What county is represented by this flag?##spn#fra#ger##
+qst;coaCanada##level1#CanadaFlag.png#What county is represented by this flag?##spn#fra#ger##
 inf;State;Canada;10;level1;World's second-largest country. Capital: Ottawa. Largest city: Toronto.##spn#fra#ger;America#World's second-largest country
 94;1660
 96;1661
@@ -1116,7 +1116,7 @@ inf;State;Canada;10;level1;World's second-largest country. Capital: Ottawa. Larg
 107;1654
 102;1654
 96;1658
-inf;Island;Hawaii;10;level1;The 50th and most recent U.S. state. Largest city: Honolulu#nor#spn#fra#ger;America#Pacific
+inf;Island;Hawaii;10;level4;The 50th and most recent U.S. state. Largest city: Honolulu#nor#spn#fra#ger;America#Pacific
 4061;964
 4061;966
 4059;968
@@ -1594,7 +1594,7 @@ inf;UnDefRegion;AlaskaWestIslandsNU;10;notUsed;eng#nor#spn#fra#ger
 435;1167
 426;1169
 421;1170;sl
-inf;State;Alaska;10;level1;The United States purchased Alaska from Russia on March 30, 1867, for $7.2 million#nor#spn#fra#ger;America#Northern most U.S. state;;AlaskaNorthIslandNU#AlaskaWestIslandsNU
+inf;State;Alaska;10;level3;The United States purchased Alaska from Russia on March 30, 1867, for $7.2 million#nor#spn#fra#ger;America#Northern most U.S. state;;AlaskaNorthIslandNU#AlaskaWestIslandsNU
 499;1282
 501;1290
 505;1298
@@ -1840,6 +1840,6 @@ inf;State;Alaska;10;level1;The United States purchased Alaska from Russia on Mar
 512;1287
 502;1282
 500;1282;sl
-qst;coaUsa##level2#UsaFlag.png#What county is represented by this flag##spn#fra#ger#overridingHint1#overridingHint2
+qst;coaUsa##level1#UsaFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Usa;10;level1;50 states and a federal district. Capital: Washington, D.C.##spn#fra#ger;America#50 states and a federal district.;;Hawaii#Alaska
 eof

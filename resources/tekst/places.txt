@@ -222,7 +222,7 @@
 2846;1485
 2839;1486
 2834;1483
-inf;UnDefRegion;Tibet;10;level1;Region of China. Tibet is the highest region on Earth, with an average elevation of 4,900 metres#nor#spn#fra#ger;Asia#China
+inf;UnDefRegion;Tibet;10;level3;Region of China. Tibet is the highest region on Earth, with an average elevation of 4,900 metres#nor#spn#fra#ger;Asia#China
 eof
 
 eg.

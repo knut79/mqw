@@ -6,8 +6,8 @@
 2496;1605
 2495;1604
 2493;1605
-qst;coaBahrain##level2#BahrainFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Bahrain;10;level1;Bahrain has the first post-oil economy in the Persian Gulf because the Bahraini economy does not rely on oil. Capital: Manama##spn#fra#ger;Middle east#Near the western shores of the Persian Gulf
+qst;coaBahrain##level4#BahrainFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Bahrain;10;level4;Bahrain has the first post-oil economy in the Persian Gulf because the Bahraini economy does not rely on oil. Capital: Manama##spn#fra#ger;Middle east#Near the western shores of the Persian Gulf
 2477;1440
 2477;1448
 2479;1452
@@ -207,8 +207,8 @@ inf;State;Bahrain;10;level1;Bahrain has the first post-oil economy in the Persia
 2471;1438
 2472;1440
 2475;1440
-qst;coaIran##level2#IranFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Iran;10;level1;Second-largest nation in the Middle East. Capital: Tehran##spn#fra#ger;Middle east#Border to the Caspian Sea and the Persian Gulf
+qst;coaIran##level3#IranFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Iran;10;level2;Second-largest nation in the Middle East. Capital: Tehran##spn#fra#ger;Middle east#Border to the Caspian Sea and the Persian Gulf
 2471;1556
 2463;1555
 2457;1556
@@ -284,7 +284,7 @@ inf;State;Iran;10;level1;Second-largest nation in the Middle East. Capital: Tehr
 2468;1553
 2472;1555
 2473;1556
-qst;coaIraq##level2#IraqFlag.png#What county is represented by this flag##spn#fra#ger##
+qst;coaIraq##level3#IraqFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Iraq;10;level1;Gained independence from Britain in 1932. Capital: Baghdad##spn#fra#ger;Middle east#hint2
 2311;1538
 2309;1540
@@ -328,8 +328,8 @@ inf;State;Iraq;10;level1;Gained independence from Britain in 1932. Capital: Bagh
 2314;1533
 2314;1536
 2312;1537
-qst;coaIsrael##level2#IsraelFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Israel;10;level1;On 29 November 1947, the United Nations General Assembly recommended the adoption and implementation of the Partition Plan for Mandatory Palestine. Capital: Jerusalem##spn#fra#ger;Middle east#Southeastern shore of the Mediterranean Sea
+qst;coaIsrael##level3#IsraelFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Israel;10;level2;On 29 November 1947, the United Nations General Assembly recommended the adoption and implementation of the Partition Plan for Mandatory Palestine. Capital: Jerusalem##spn#fra#ger;Middle east#Southeastern shore of the Mediterranean Sea
 2326;1521
 2324;1522
 2324;1528
@@ -370,8 +370,8 @@ inf;State;Israel;10;level1;On 29 November 1947, the United Nations General Assem
 2340;1526
 2338;1526
 2329;1522
-qst;coaJordan##level2#JordanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Jordan;10;level1;In 1946, Jordan became an independent sovereign state officially known as the Hashemite Kingdom of Transjordan. After capturing the West Bank during the 1948 Arab–Israeli War, Abdullah I took the title King of Jordan. Capital: Amman##spn#fra#ger;Middle east#Bordered by Saudi Arabia to the south
+qst;coaJordan##level4#JordanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Jordan;10;level3;In 1946, Jordan became an independent sovereign state officially known as the Hashemite Kingdom of Transjordan. After capturing the West Bank during the 1948 Arab–Israeli War, Abdullah I took the title King of Jordan. Capital: Amman##spn#fra#ger;Middle east#Bordered by Saudi Arabia to the south
 2471;1557
 2470;1560
 2467;1563
@@ -386,8 +386,8 @@ inf;State;Jordan;10;level1;In 1946, Jordan became an independent sovereign state
 2456;1556
 2466;1556
 2470;1556;sl
-qst;coaKuwait##level2#KuwaitFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Kuwait;10;level1;Kuwait is a constitutional monarchy with an elected parliamentary system. Capital: Kuwait City##spn#fra#ger;Middle east#At the tip of the Persian Gulf
+qst;coaKuwait##level5#KuwaitFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Kuwait;10;level4;Kuwait is a constitutional monarchy with an elected parliamentary system. Capital: Kuwait City##spn#fra#ger;Middle east#At the tip of the Persian Gulf
 2525;1723
 2528;1722
 2531;1722
@@ -444,8 +444,8 @@ inf;State;Kuwait;10;level1;Kuwait is a constitutional monarchy with an elected p
 2545;1682
 2511;1694
 2524;1721;sl
-qst;coaOman##level2#OmanFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Oman;10;level1;Oman is an absolute monarchy in which the Sultan of Oman exercises ultimate authority, but its parliament has some legislative and oversight powers. Capital: Muscat##spn#fra#ger;Middle east#Mouth of the Persian Gulf
+qst;coaOman##level4#OmanFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Oman;10;level3;Oman is an absolute monarchy in which the Sultan of Oman exercises ultimate authority, but its parliament has some legislative and oversight powers. Capital: Muscat##spn#fra#ger;Middle east#Mouth of the Persian Gulf
 2311;1536
 2312;1537
 2314;1535
@@ -468,7 +468,7 @@ inf;UnDefRegion;PalestineWestbankNU;10;notUsed;eng#nor#spn#fra#ger
 2324;1528
 2324;1534
 2323;1538
-inf;State;Palestine;10;level1;A geographic region in Western Asia between the Mediterranean Sea and the Jordan River. Situated at a strategic location between Egypt, Syria and Arabia, and the birthplace of Judaism and Christianity, the region has a long and tumultuous history as a crossroads for religion, culture, commerce, and politics.##spn#fra#ger;Africa#Between the Mediterranean Sea and the Jordan River;;PalestineWestbankNU
+inf;State;Palestine;10;level3;A geographic region in Western Asia between the Mediterranean Sea and the Jordan River. Situated at a strategic location between Egypt, Syria and Arabia, and the birthplace of Judaism and Christianity, the region has a long and tumultuous history as a crossroads for religion, culture, commerce, and politics.##spn#fra#ger;Africa#Between the Mediterranean Sea and the Jordan River;;PalestineWestbankNU
 2497;1624
 2498;1622
 2497;1620
@@ -488,8 +488,8 @@ inf;State;Palestine;10;level1;A geographic region in Western Asia between the Me
 2504;1628
 2498;1625;st
 2498;1625;sl
-qst;coaQatar##level2#QatarFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Qatar;10;level1;Qatar will host the 2022 FIFA World Cup, becoming the first Arab country to host the event. Qatar has the world's third largest natural gas reserves and oil reserves in excess of 25 billion barrels. Capital: Doha##spn#fra#ger;Middle east#Northeastern coast of the Arabian Peninsula
+qst;coaQatar##level4#QatarFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Qatar;10;level4;Qatar will host the 2022 FIFA World Cup, becoming the first Arab country to host the event. Qatar has the world's third largest natural gas reserves and oil reserves in excess of 25 billion barrels. Capital: Doha##spn#fra#ger;Middle east#Northeastern coast of the Arabian Peninsula
 2317;1566
 2316;1568
 2315;1571
@@ -608,8 +608,8 @@ inf;State;Qatar;10;level1;Qatar will host the 2022 FIFA World Cup, becoming the 
 2336;1561
 2329;1567
 2317;1565;sl
-qst;coaSaudiArabia##level2#SaudiArabiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Saudi Arabia;10;level1;Saudi Arabia is the world's dominant oil producer and exporter while it controls world's second largest hydrocarbon reserves. Backed by the energy reserves, the kingdom is categorized as a high income economy and is part of the G-20 major economies. Capital: Riyadh##spn#fra#ger;Middle east#Largest Arab state in Western Asia
+qst;coaSaudiArabia##level3#SaudiArabiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Saudi Arabia;10;level2;Saudi Arabia is the world's dominant oil producer and exporter while it controls world's second largest hydrocarbon reserves. Backed by the energy reserves, the kingdom is categorized as a high income economy and is part of the G-20 major economies. Capital: Riyadh##spn#fra#ger;Middle east#Largest Arab state in Western Asia
 2327;1476
 2325;1480
 2327;1483
@@ -662,8 +662,8 @@ inf;State;Saudi Arabia;10;level1;Saudi Arabia is the world's dominant oil produc
 2334;1472
 2332;1477
 2329;1477
-qst;coaSyria##level2#SyriaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Syria;10;level1;The modern Syrian state was established after World War I as a French mandate, and represented the largest Arab state to emerge from the formerly Ottoman-ruled Arab Levant. It gained independence in April 1946. Capital: Damascus##spn#fra#ger;Middle east#Bordering Lebanon and the Mediterranean Sea to the west
+qst;coaSyria##level4#SyriaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Syria;10;level2;The modern Syrian state was established after World War I as a French mandate, and represented the largest Arab state to emerge from the formerly Ottoman-ruled Arab Levant. It gained independence in April 1946. Capital: Damascus##spn#fra#ger;Middle east#Bordering Lebanon and the Mediterranean Sea to the west
 2558;1607
 2556;1610
 2552;1612
@@ -703,8 +703,8 @@ inf;State;Syria;10;level1;The modern Syrian state was established after World Wa
 2559;1612
 2558;1611
 2558;1608;sl
-qst;coaUnitedArabEmirates##level2#UnitedArabEmiratesFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;United Arab Emirates;10;level1;In 1962, Abu Dhabi became the first of the emirates to begin exporting oil. Capital: Abu Dhabi##spn#fra#ger;Middle east#Persian Gulf
+qst;coaUnitedArabEmirates##level3#UnitedArabEmiratesFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;United Arab Emirates;10;level3;In 1962, Abu Dhabi became the first of the emirates to begin exporting oil. Capital: Abu Dhabi##spn#fra#ger;Middle east#Persian Gulf
 2511;1775
 2513;1776
 2515;1776
@@ -722,7 +722,7 @@ inf;State;United Arab Emirates;10;level1;In 1962, Abu Dhabi became the first of 
 2526;1772
 2523;1774
 2512;1773
-inf;Island;Socotra and Abd al Kuri;10;veryhard;Islands to the south of Yemen. Nothing special happening here##spn#fra#ger;Middle east#Yemen
+inf;Island;Socotra and Abd al Kuri;10;level5;Islands to the south of Yemen. Nothing special happening here##spn#fra#ger;Middle east#Yemen
 2406;1727
 2406;1730
 2404;1734
@@ -791,6 +791,6 @@ inf;Island;Socotra and Abd al Kuri;10;veryhard;Islands to the south of Yemen. No
 2412;1721
 2411;1722
 2406;1726;sl
-qst;coaYemen##level2#YemenFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Yemen;10;level1;Yemen is the second largest country in the Arabian Peninsula. Yemen's territory includes more than 200 islands. Capital: Sana'a##spn#fra#ger;Middle east#Arabian Peninsula;;Socotra and Abd al Kuri
+qst;coaYemen##level4#YemenFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Yemen;10;level3;Yemen is the second largest country in the Arabian Peninsula. Yemen's territory includes more than 200 islands. Capital: Sana'a##spn#fra#ger;Middle east#Arabian Peninsula;;Socotra and Abd al Kuri
 eof

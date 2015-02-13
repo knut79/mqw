@@ -1,89 +1,89 @@
 1975;1213
-inf;City#Where is the capital;Amsterdam;10;level1;The capital city and most populous city of the Kingdom of the Netherlands#nor#spn#fra#ger;Europe#Netherlands
+inf;City#Where is the capital;Amsterdam;10;level2;The capital city and most populous city of the Kingdom of the Netherlands#nor#spn#fra#ger;Europe#Netherlands
 2293;1417
-inf;City#Where is the capital;Ankara;10;level1;The capital of Turkey and the country's second largest city, Istanbul being the largest.#nor#spn#fra#ger;Europe#Turkey
+inf;City#Where is the capital;Ankara;10;level3;The capital of Turkey and the country's second largest city, Istanbul being the largest.#nor#spn#fra#ger;Europe#Turkey
 2189;1447
-inf;City#Where is the capital;Athens;10;level1;The capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning around 3,400 years.#nor#spn#fra#ger;Europe#Greece
+inf;City#Where is the capital;Athens;10;level2;The capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning around 3,400 years.#nor#spn#fra#ger;Europe#Greece
 2486;1411
-inf;City#Where is the capital;Baku;10;level1;The capital and largest city of Azerbaijan, as well as the largest city on the Caspian Sea and of the Caucasus region.#nor#spn#fra#ger;Europe#Azerbaijan
+inf;City#Where is the capital;Baku;10;level3;The capital and largest city of Azerbaijan, as well as the largest city on the Caspian Sea and of the Caucasus region.#nor#spn#fra#ger;Europe#Azerbaijan
 1853;1169
-inf;City#Where is the capital;Belfast;10;level1;The capital and largest city of Northern Ireland. #nor#spn#fra#ger;Europe#UK
+inf;City#Where is the capital;Belfast;10;level3;The capital and largest city of Northern Ireland. #nor#spn#fra#ger;Europe#UK
 2152;1343
-inf;City#Where is the capital;Belgrade;10;level1;The capital and largest city of Serbia. It is located at the confluence of the Sava and Danube rivers, where the Pannonian Plain meets the Balkans.#nor#spn#fra#ger;Europe#Serbia
+inf;City#Where is the capital;Belgrade;10;level4;The capital and largest city of Serbia. It is located at the confluence of the Sava and Danube rivers, where the Pannonian Plain meets the Balkans.#nor#spn#fra#ger;Europe#Serbia
 2071;1210
 inf;City#Where is the capital;Berlin;10;level1;The Capital of Germany and one of the 16 states of Germany. With a population of 3.5 million people (2015), Berlin is Germany's largest city. It is the second most populous city in the European Union#nor#spn#fra#ger;Europe#Germany
 2004;1308
-inf;City#Where is the capital;Bern;10;level1;The Bundesstadt and de facto capital of Switzerland, and, with a population of 137,980 (end of 2013), is the fourth most populous city in Switzerland.#nor#spn#fra#ger;Europe#Switzerland
+inf;City#Where is the capital;Bern;10;level3;The Bundesstadt and de facto capital of Switzerland, and, with a population of 137,980 (end of 2013), is the fourth most populous city in Switzerland.#nor#spn#fra#ger;Europe#Switzerland
 2114;1287
-inf;City#Where is the capital;Bratislava;10;level1;The capital of Slovakia and, with a population of about 500,000, the country's largest city.#nor#spn#fra#ger;Europe#Slovakia
+inf;City#Where is the capital;Bratislava;10;level4;The capital of Slovakia and, with a population of about 500,000, the country's largest city.#nor#spn#fra#ger;Europe#Slovakia
 1969;1241
-inf;City#Where is the capital;Brussels;10;level1;The capital and largest city of Belgium and the de facto capital of the European Union.#nor#spn#fra#ger;Europe#Belgium
+inf;City#Where is the capital;Brussels;10;level3;The capital and largest city of Belgium and the de facto capital of the European Union.#nor#spn#fra#ger;Europe#Belgium
 2217;1349
-inf;City#Where is the capital;Bucharest;10;level1;The capital municipality, cultural, industrial, and financial centre of Romania. It is the largest city in Romania#nor#spn#fra#ger;Europe#Romania
+inf;City#Where is the capital;Bucharest;10;level4;The capital municipality, cultural, industrial, and financial centre of Romania. It is the largest city in Romania#nor#spn#fra#ger;Europe#Romania
 2136;1298
-inf;City#Where is the capital;Budapest;10;level1;The capital and the largest city of Hungary, and one of the largest cities in the European Union.#nor#spn#fra#ger;Europe#Hungary
+inf;City#Where is the capital;Budapest;10;level3;The capital and the largest city of Hungary, and one of the largest cities in the European Union.#nor#spn#fra#ger;Europe#Hungary
 1883;1229
-inf;City#Where is the capital;Cardiff;10;level1;The capital and largest city in Wales and the ninth largest city in the United Kingdom#nor#spn#fra#ger;Europe#UK
+inf;City#Where is the capital;Cardiff;10;level4;The capital and largest city in Wales and the ninth largest city in the United Kingdom#nor#spn#fra#ger;Europe#UK
 2247;1306
-inf;City#Where is the capital;Chisinau;10;level1;The capital and largest city of the Republic of Moldova.#nor#spn#fra#ger;Europe#Moldova
+inf;City#Where is the capital;Chisinau;10;level5;The capital and largest city of the Republic of Moldova.#nor#spn#fra#ger;Europe#Moldova
 2063;1148
-inf;City#Where is the capital;Copenhagen;10;level1;The capital and most populated city of Denmark, and second largest in Scandinavia#nor#spn#fra#ger;Europe#Denmark
+inf;City#Where is the capital;Copenhagen;10;level3;The capital and most populated city of Denmark, and second largest in Scandinavia#nor#spn#fra#ger;Europe#Denmark
 1848;1194
-inf;City#Where is the capital;Dublin;10;level1;The capital and largest city of Ireland.#nor#spn#fra#ger;Europe#Ireland
+inf;City#Where is the capital;Dublin;10;level3;The capital and largest city of Ireland.#nor#spn#fra#ger;Europe#Ireland
 1884;1144
-inf;City#Where is the capital;Edinburgh;10;level1;The capital city of Scotland#nor#spn#fra#ger;Europe#UK
+inf;City#Where is the capital;Edinburgh;10;level3;The capital city of Scotland#nor#spn#fra#ger;Europe#UK
 2056;1106
-inf;City#Where is the capital;Gothenburg;10;level1;The second largest city in Sweden and the fifth largest in the Nordic countries#nor#spn#fra#ger;Europe#Sweden
+inf;City#Where is the capital;Gothenburg;10;level4;The second largest city in Sweden and the fifth largest in the Nordic countries#nor#spn#fra#ger;Europe#Sweden
 2203;1052
-inf;City#Where is the capital;Helsinki;10;level1;The capital and largest city of Finland.#nor#spn#fra#ger;Europe#Finland
+inf;City#Where is the capital;Helsinki;10;level3;The capital and largest city of Finland.#nor#spn#fra#ger;Europe#Finland
 2267;1248
-inf;City#Where is the capital;Kiev;10;level1;The capital and the largest city of Ukraine#nor#spn#fra#ger;Europe#Ukraine
+inf;City#Where is the capital;Kiev;10;level3;The capital and the largest city of Ukraine#nor#spn#fra#ger;Europe#Ukraine
 1815;1436
-inf;City#Where is the capital;Lisbon;10;level1;The capital and the largest city of Portugal. It is the westernmost large city located in continental Europe, as well as its westernmost capital city and the only one along the Atlantic coast.#nor#spn#fra#ger;Europe#Portugal
+inf;City#Where is the capital;Lisbon;10;level4;The capital and the largest city of Portugal. It is the westernmost large city located in continental Europe, as well as its westernmost capital city and the only one along the Atlantic coast.#nor#spn#fra#ger;Europe#Portugal
 2084;1323
-inf;City#Where is the capital;Ljubljana;10;level1;The capital and largest city of Slovenia#nor#spn#fra#ger;Europe#Slovenia
+inf;City#Where is the capital;Ljubljana;10;level4;The capital and largest city of Slovenia#nor#spn#fra#ger;Europe#Slovenia
 1918;1228
 inf;City#Where is the capital;London;10;level1;The capital city of England and the United Kingdom. It is the most populous city in the United Kingdom with a metropolitan area of over 13 million inhabitants. Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.#nor#spn#fra#ger;Europe#UK
 1877;1410
 inf;City#Where is the capital;Madrid;10;level1;The capital and largest city of Spain.  It is the third-largest city in the European Union, after London and Berlin#nor#spn#fra#ger;Europe#Spain
 2233;1183
-inf;City#Where is the capital;Minsk;10;level1;The capital and largest city of Belarus#nor#spn#fra#ger;Europe#Belarus
+inf;City#Where is the capital;Minsk;10;level4;The capital and largest city of Belarus#nor#spn#fra#ger;Europe#Belarus
 2041;1058
-inf;City#Where is the capital;Oslo;10;level1;Capital of Norway. Polar bear are not found on mainland Europe#nor#spn#fra#ger;Europe#Norway
+inf;City#Where is the capital;Oslo;10;level3;Capital of Norway. Polar bear are not found on mainland Europe#nor#spn#fra#ger;Europe#Norway
 1946;1275
 inf;City#Where is the capital;Paris;10;level1;The capital and most populous city of France. Situated on the Seine River.#nor#spn#fra#ger;Europe#France
 2139;1380
-inf;City#Where is the capital;Podgorica;10;level1;The capital and largest city of Montenegro#nor#spn#fra#ger;Europe#Montenegro
+inf;City#Where is the capital;Podgorica;10;level5;The capital and largest city of Montenegro#nor#spn#fra#ger;Europe#Montenegro
 2194;1122
-inf;City#Where is the capital;Riga;10;level1;The capital and largest city of Latvia. Riga is the largest city of the Baltic states#nor#spn#fra#ger;Europe#Latvia
+inf;City#Where is the capital;Riga;10;level4;The capital and largest city of Latvia. Riga is the largest city of the Baltic states#nor#spn#fra#ger;Europe#Latvia
 2061;1389
 inf;City#Where is the capital;Roma;10;level1;The capital of Italy and also of the Province of Rome and of the region of Lazio.#nor#spn#fra#ger;Europe#Italia
 2129;1358
-inf;City#Where is the capital;Sarajevo;10;level1;The capital and largest city of Bosnia and Herzegovina#nor#spn#fra#ger;Europe#Bosnia and Herzegovina
+inf;City#Where is the capital;Sarajevo;10;level2;The capital and largest city of Bosnia and Herzegovina#nor#spn#fra#ger;Europe#Bosnia and Herzegovina
 2164;1387
-inf;City#Where is the capital;Skopje;10;level1;The capital and largest city of the Republic of Macedonia. It was known in the Roman period under the name Scupi.#nor#spn#fra#ger;Europe#Macedonia
+inf;City#Where is the capital;Skopje;10;level4;The capital and largest city of the Republic of Macedonia. It was known in the Roman period under the name Scupi.#nor#spn#fra#ger;Europe#Macedonia
 2184;1376
-inf;City#Where is the capital;Sofia;10;level1;The capital and largest city of Bulgaria. Sofia is located at the foot of Mount Vitosha #nor#spn#fra#ger;Europe#Bulgaria
+inf;City#Where is the capital;Sofia;10;level3;The capital and largest city of Bulgaria. Sofia is located at the foot of Mount Vitosha #nor#spn#fra#ger;Europe#Bulgaria
 2125;1071
-inf;City#Where is the capital;Stockholm;10;level1;The capital of Sweden and the most populous city in Scandinavia#nor#spn#fra#ger;Europe#Sweden
+inf;City#Where is the capital;Stockholm;10;level2;The capital of Sweden and the most populous city in Scandinavia#nor#spn#fra#ger;Europe#Sweden
 2201;1068
-inf;City#Where is the capital;Tallinn;10;level1;The capital and largest city of Estonia.#nor#spn#fra#ger;Europe#Estonia
+inf;City#Where is the capital;Tallinn;10;level4;The capital and largest city of Estonia.#nor#spn#fra#ger;Europe#Estonia
 2429;1391
-inf;City#Where is the capital;Tbilisi;10;level1;The capital and the largest city of Georgia, lying on the banks of the Mtkvari River#nor#spn#fra#ger;Europe#Georgia
+inf;City#Where is the capital;Tbilisi;10;level4;The capital and the largest city of Georgia, lying on the banks of the Mtkvari River#nor#spn#fra#ger;Europe#Georgia
 2145;1397
-inf;City#Where is the capital;Tirana;10;level1;The capital and largest city of Albania.#nor#spn#fra#ger;Europe#Albania
+inf;City#Where is the capital;Tirana;10;level5;The capital and largest city of Albania.#nor#spn#fra#ger;Europe#Albania
 2027;1305
-inf;City#Where is the capital;Vaduz;10;level1;The capital of Liechtenstein#nor#spn#fra#ger;Europe#Liechtenstein
+inf;City#Where is the capital;Vaduz;10;level5;The capital of Liechtenstein#nor#spn#fra#ger;Europe#Liechtenstein
 2084;1476
-inf;City#Where is the capital;Valletta;10;level1;The capital of Malta, colloquially known as Il-Belt (English: The City) in Maltese.#nor#spn#fra#ger;Europe#Malta
+inf;City#Where is the capital;Valletta;10;level4;The capital of Malta, colloquially known as Il-Belt (English: The City) in Maltese.#nor#spn#fra#ger;Europe#Malta
 2105;1286
-inf;City#Where is the capital;Vienna;10;level1;The capital and largest city of Austria.#nor#spn#fra#ger;Europe#Austria
+inf;City#Where is the capital;Vienna;10;level3;The capital and largest city of Austria.#nor#spn#fra#ger;Europe#Austria
 2207;1168
-inf;City#Where is the capital;Vilnius;10;level1;The capital of Lithuania, and its largest city#nor#spn#fra#ger;Europe#Lithuania
+inf;City#Where is the capital;Vilnius;10;level4;The capital of Lithuania, and its largest city#nor#spn#fra#ger;Europe#Lithuania
 2158;1215
-inf;City#Where is the capital;Warsaw;10;level1;The capital and largest city of Poland. It is located on the Vistula River#nor#spn#fra#ger;Europe#Poland
+inf;City#Where is the capital;Warsaw;10;level3;The capital and largest city of Poland. It is located on the Vistula River#nor#spn#fra#ger;Europe#Poland
 2426;1414
-inf;City#Where is the capital;Yerevan;10;level1;The capital and largest city of Armenia and one of the world's oldest continuously inhabited cities#nor#spn#fra#ger;Europe#Armenia
+inf;City#Where is the capital;Yerevan;10;level4;The capital and largest city of Armenia and one of the world's oldest continuously inhabited cities#nor#spn#fra#ger;Europe#Armenia
 2101;1327
-inf;City#Where is the capital;Zagreb;10;level1;The capital and the largest city of the Republic of Croatia. It is located in the northwest of the country, along the Sava river#nor#spn#fra#ger;Europe#Croatia
+inf;City#Where is the capital;Zagreb;10;level4;The capital and the largest city of the Republic of Croatia. It is located in the northwest of the country, along the Sava river#nor#spn#fra#ger;Europe#Croatia
 eof

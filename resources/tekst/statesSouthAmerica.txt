@@ -2,8 +2,8 @@
 1216;1718
 1214;1718
 1215;1712
-qst;coaAntiguaAndBarbuda##level2#AntiguaAndBarbudaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Antigua and Barbuda;10;level1;Twin-island nation lying between the Caribbean Sea and the Atlantic Ocean. Capital: Saint John's##spn#fra#ger;America#Caribbean
+qst;coaAntiguaAndBarbuda##level4#AntiguaAndBarbudaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Antigua and Barbuda;10;level3;Twin-island nation lying between the Caribbean Sea and the Atlantic Ocean. Capital: Saint John's##spn#fra#ger;America#Caribbean
 1257;2330
 1253;2331
 1256;2336
@@ -281,15 +281,15 @@ inf;State;Argentina;10;level1;Eighth-largest country in the world. Capital: Buen
 1033;1610
 1030;1610
 1020;1611
-qst;coaBahamas##level2#BahamasFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Bahamas;10;level1;Consisting of more than 700 islands. The site of Columbus' first landfall in the New World in 1492. Capital: Nassau##spn#fra#ger;America#East of the Florida Keys
+qst;coaBahamas##level5#BahamasFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Bahamas;10;level4;Consisting of more than 700 islands. The site of Columbus' first landfall in the New World in 1492. Capital: Nassau##spn#fra#ger;America#East of the Florida Keys
 1239;1764
 1240;1766
 1243;1765
 1242;1762
 1240;1762
-qst;coaBarbados##level2#BarbadosFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Barbados;10;level1;Outside of the principal Atlantic hurricane belt. Capital: Bridgetown##spn#fra#ger;America#Outside of the principal Atlantic hurricane belt
+qst;coaBarbados##level5#BarbadosFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Barbados;10;level4;Outside of the principal Atlantic hurricane belt. Capital: Bridgetown##spn#fra#ger;America#Outside of the principal Atlantic hurricane belt
 917;1700
 918;1705
 917;1709
@@ -303,8 +303,8 @@ inf;State;Barbados;10;level1;Outside of the principal Atlantic hurricane belt. C
 908;1708
 913;1700
 915;1698;sl
-qst;coaBelize##level2#BelizeFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Belize;10;level1;The only country in Central America that has English as its official language. Capital: Belmopan##spn#fra#ger;Latin America#Northeastern coast of Central America
+qst;coaBelize##level5#BelizeFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Belize;10;level4;The only country in Central America that has English as its official language. Capital: Belmopan##spn#fra#ger;Latin America#Northeastern coast of Central America
 1156;2181
 1162;2173
 1165;2172
@@ -399,8 +399,8 @@ inf;State;Belize;10;level1;The only country in Central America that has English 
 1148;2176
 1148;2181
 1154;2182
-qst;coaBolivia##level2#BoliviaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Bolivia;10;level1;Officially known as the Plurinational State of Bolivia. Capital: La paz and Sucre##spn#fra#ger;South America#Chile to the southwest, and Peru to the west
+qst;coaBolivia##level3#BoliviaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Bolivia;10;level2;Officially known as the Plurinational State of Bolivia. Capital: La paz and Sucre##spn#fra#ger;South America#Chile to the southwest, and Peru to the west
 1332;1866
 1334;1863
 1337;1866
@@ -675,7 +675,7 @@ inf;State;Bolivia;10;level1;Officially known as the Plurinational State of Boliv
 1325;1877
 1328;1873
 1333;1866;sl
-qst;coaBrazil##level2#BrazilFlag.png#What county is represented by this flag?##spn#fra#ger##
+qst;coaBrazil##level1#BrazilFlag.png#What county is represented by this flag?##spn#fra#ger##
 inf;State;Brazil;10;level1;World's fifth largest country. Capital: Brasília. Largest city: São Paulo##spn#fra#ger;South America#Largest country in South America
 1118;2128
 1119;2133
@@ -1043,7 +1043,7 @@ inf;State;Chile;10;level1;Officially the Republic of Chile. Capital: Santiago##s
 1035;1826
 1033;1832;sl
 qst;coaColombia##level2#ColombiaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Colombia;10;level1;Officially the Republic of Colombia. Capital: Bogotá##spn#fra#ger;America#Northwest of South America
+inf;State;Colombia;10;level2;Officially the Republic of Colombia. Capital: Bogotá##spn#fra#ger;America#Northwest of South America
 942;1789
 945;1793
 942;1799
@@ -1071,8 +1071,8 @@ inf;State;Colombia;10;level1;Officially the Republic of Colombia. Capital: Bogot
 950;1788
 946;1787
 944;1787;sl
-qst;coaCostaRica##level2#CostaRicaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Costa Rica;10;level1;One of the most stable, prosperous, and progressive nations in Latin. Capital: San José##spn#fra#ger;America#Caribbean Sea to the east
+qst;coaCostaRica##level3#CostaRicaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Costa Rica;10;level3;One of the most stable, prosperous, and progressive nations in Latin. Capital: San José##spn#fra#ger;America#Caribbean Sea to the east
 1035;1686
 1045;1684
 1054;1682
@@ -1121,15 +1121,15 @@ inf;State;Costa Rica;10;level1;One of the most stable, prosperous, and progressi
 1031;1675
 1041;1675
 1034;1684
-qst;coaCuba##level2#CubaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Cuba;10;level1;Cuba remained a colony of Spain until the Spanish–American War of 1898. Capital: Havana##spn#fra#ger;America#Caribbean
+qst;coaCuba##level3#CubaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Cuba;10;level2;Cuba remained a colony of Spain until the Spanish–American War of 1898. Capital: Havana##spn#fra#ger;America#Caribbean
 1219;1737
 1219;1738
 1220;1739
 1222;1736
 1219;1735
-qst;coaDominica##level2#DominicaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Dominica;10;level1;Has been nicknamed the Nature Isle of the Caribbean. Capital: Roseau##spn#fra#ger;America#Caribbean
+qst;coaDominica##level4#DominicaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Dominica;10;level4;Has been nicknamed the Nature Isle of the Caribbean. Capital: Roseau##spn#fra#ger;America#Caribbean
 1103;1703
 1106;1710
 1109;1707
@@ -1156,8 +1156,8 @@ inf;State;Dominica;10;level1;Has been nicknamed the Nature Isle of the Caribbean
 1104;1698
 1100;1701
 1102;1702
-qst;coaDominicanRepublic##level2#DominicanRepublicFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Dominican Republic;10;level1;The second largest Caribbean nation. Capital: Santo Domingo##spn#fra#ger;America#Caribbean
+qst;coaDominicanRepublic##level4#DominicanRepublicFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Dominican Republic;10;level4;The second largest Caribbean nation. Capital: Santo Domingo##spn#fra#ger;America#Caribbean
 1006;1952
 1011;1947
 1006;1946
@@ -1205,8 +1205,8 @@ inf;State;Dominican Republic;10;level1;The second largest Caribbean nation. Capi
 1004;1960
 1008;1962
 1006;1954;sl
-qst;coaEcuador##level2#EcuadorFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Ecuador;10;level1;Officially the Republic of Ecuador. Capital: Quito##spn#fra#ger;South America#Pacific Ocean to the west;;Galapagos
+qst;coaEcuador##level3#EcuadorFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Ecuador;10;level2;Officially the Republic of Ecuador. Capital: Quito##spn#fra#ger;South America#Pacific Ocean to the west;;Galapagos
 880;1913
 883;1918
 887;1916
@@ -1233,7 +1233,7 @@ inf;State;Ecuador;10;level1;Officially the Republic of Ecuador. Capital: Quito##
 876;1920
 877;1917
 878;1913
-inf;Island;Galapagos;10;hard;Part of Ecuador. Famed for a vast number of endemic species##spn#fra#ger;South America#Pacific Ocean
+inf;Island;Galapagos;10;level4;Part of Ecuador. Famed for a vast number of endemic species##spn#fra#ger;South America#Pacific Ocean
 894;1756
 900;1759
 906;1761
@@ -1248,8 +1248,8 @@ inf;Island;Galapagos;10;hard;Part of Ecuador. Famed for a vast number of endemic
 900;1751
 898;1753
 895;1755;sl
-qst;coaElSalvador##level2#ElSalvadorFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;El Salvador;10;level1;The smallest and the most densely populated country in Central America. Capital: San salvador##spn#fra#ger;America#Latin America
+qst;coaElSalvador##level4#ElSalvadorFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;El Salvador;10;level4;The smallest and the most densely populated country in Central America. Capital: San salvador##spn#fra#ger;America#Latin America
 1305;1848
 1311;1850
 1315;1851
@@ -1271,16 +1271,16 @@ inf;State;El Salvador;10;level1;The smallest and the most densely populated coun
 1301;1855
 1305;1852
 1305;1847;sl
-qst;coaFrenchGuiana##level2#FrenchGuianaFlag.png#What county/department is represented by this flag?##spn#fra#ger##
-inf;State;Colombia;10;level1;Is an overseas department and region of France. Capital: Cayenne##spn#fra#ger;South America#Brazil to the east and south, and Suriname to the west.
+qst;coaFrenchGuiana##level4#FrenchGuianaFlag.png#What county/department is represented by this flag?##spn#fra#ger##
+inf;State;Colombia;10;level4;Is an overseas department and region of France. Capital: Cayenne##spn#fra#ger;South America#Brazil to the east and south, and Suriname to the west.
 1214;1778
 1217;1777
 1218;1774
 1219;1771
 1215;1772
 1214;1775
-qst;coaGrenada##level2#GrenadaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Grenada;10;level1;Consisting of the island of Grenada and six smaller islands. Capital: St. George's##spn#fra#ger;America#Caribbean
+qst;coaGrenada##level5#GrenadaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Grenada;10;level4;Consisting of the island of Grenada and six smaller islands. Capital: St. George's##spn#fra#ger;America#Caribbean
 885;1708;st
 904;1708
 904;1731
@@ -1306,8 +1306,8 @@ inf;State;Grenada;10;level1;Consisting of the island of Grenada and six smaller 
 879;1716
 883;1716
 884;1708
-qst;coaGuatemala##level2#GuatemalaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Guatemala;10;level1;Officially the Republic of Guatemala. Capital: Guatemala City##spn#fra#ger;South America# Mexico to the north and west, the Pacific Ocean to the southwest
+qst;coaGuatemala##level4#GuatemalaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Guatemala;10;level4;Officially the Republic of Guatemala. Capital: Guatemala City##spn#fra#ger;South America# Mexico to the north and west, the Pacific Ocean to the southwest
 1230;1814
 1238;1816
 1247;1822
@@ -1356,8 +1356,8 @@ inf;State;Guatemala;10;level1;Officially the Republic of Guatemala. Capital: Gua
 1229;1824
 1227;1823
 1228;1814;sl
-qst;coaGuyana##level2#GuyanaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Guyana;10;level1;Guyana was originally colonised by the Netherlands. Later, it became a British colony. Officially became a republic in 1970. Capital: Georgetown##spn#fra#ger;America#Caribbean
+qst;coaGuyana##level4#GuyanaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Guyana;10;level3;Guyana was originally colonised by the Netherlands. Later, it became a British colony. Officially became a republic in 1970. Capital: Georgetown##spn#fra#ger;America#Caribbean
 1072;1699
 1073;1702
 1078;1705
@@ -1386,8 +1386,8 @@ inf;State;Guyana;10;level1;Guyana was originally colonised by the Netherlands. L
 1077;1697
 1075;1698
 1074;1699
-qst;coaHaiti##level2#HaitiFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Haiti;10;level1;The third largest Caribbean nation. Capital: Port-au-Prince##spn#fra#ger;South America#Caribbean
+qst;coaHaiti##level4#HaitiFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Haiti;10;level3;The third largest Caribbean nation. Capital: Port-au-Prince##spn#fra#ger;South America#Caribbean
 916;1732
 920;1731
 925;1732
@@ -1420,8 +1420,8 @@ inf;State;Haiti;10;level1;The third largest Caribbean nation. Capital: Port-au-P
 905;1749
 904;1743
 916;1733;sl
-qst;coaHonduras##level2#HondurasFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Honduras;10;level1;Became independent in 1821. Capital: Tegucigalpa##spn#fra#ger;Latin America#Caribbean
+qst;coaHonduras##level4#HondurasFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Honduras;10;level4;Became independent in 1821. Capital: Tegucigalpa##spn#fra#ger;Latin America#Caribbean
 1041;1699
 1046;1700
 1052;1702
@@ -1434,8 +1434,8 @@ inf;State;Honduras;10;level1;Became independent in 1821. Capital: Tegucigalpa##s
 1030;1700
 1033;1698
 1040;1699
-qst;coaJamaica##level2#JamaicaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Jamaica;10;level1;Independence from the United Kingdom in 1962. Capital: Kingston##spn#fra#ger;America#Caribbean
+qst;coaJamaica##level3#JamaicaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Jamaica;10;level3;Independence from the United Kingdom in 1962. Capital: Kingston##spn#fra#ger;America#Caribbean
 573;1567
 575;1570
 574;1572
@@ -1673,8 +1673,8 @@ inf;State;Mexico;10;level1;The 13th largest independent nation in the world. Cap
 933;1762
 931;1764
 924;1765;sl
-qst;coaNicaragua##level2#NicaraguaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Nicaragua;10;level1;Achieved its independence from Spain in 1821. Capital: Managua##spn#fra#ger;America#Bordering Honduras to the north and Costa Rica to the south
+qst;coaNicaragua##level4#NicaraguaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Nicaragua;10;level3;Achieved its independence from Spain in 1821. Capital: Managua##spn#fra#ger;America#Bordering Honduras to the north and Costa Rica to the south
 976;1820
 984;1819
 989;1823
@@ -1713,8 +1713,8 @@ inf;State;Nicaragua;10;level1;Achieved its independence from Spain in 1821. Capi
 976;1813
 977;1814
 975;1820;sl
-qst;coaPanama##level2#PanamaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Panama;10;level1;Panama Canal to be built by the U.S. Army Corps of Engineers between 1904 and 1914. Capital: Panama City##spn#fra#ger;America#Bordered by Costa Rica to the west, Colombia to the southeast
+qst;coaPanama##level4#PanamaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Panama;10;level3;Panama Canal to be built by the U.S. Army Corps of Engineers between 1904 and 1914. Capital: Panama City##spn#fra#ger;America#Bordered by Costa Rica to the west, Colombia to the southeast
 1207;2174;st
 1213;2181
 1213;2184
@@ -1769,8 +1769,8 @@ inf;State;Panama;10;level1;Panama Canal to be built by the U.S. Army Corps of En
 1211;2155
 1211;2162
 1207;2172
-qst;coaParaguay##level2#ParaguayFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Paraguay;10;level1;Independence from Spain in 1811. Capital: Asunción##spn#fra#ger;South America#Bordered by Argentina to the south and southwest
+qst;coaParaguay##level4#ParaguayFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Paraguay;10;level3;Independence from Spain in 1811. Capital: Asunción##spn#fra#ger;South America#Bordered by Argentina to the south and southwest
 1006;1953
 996;1959
 995;1963
@@ -1874,8 +1874,8 @@ inf;State;Paraguay;10;level1;Independence from Spain in 1811. Capital: Asunción
 1003;1962
 1007;1959
 1007;1953;sl
-qst;coaPeru##level2#PeruFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Peru;10;level1;Officially the Republic of Peru. Capital: Lima##spn#fra#ger;America#Western South America
+qst;coaPeru##level3#PeruFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Peru;10;level2;Officially the Republic of Peru. Capital: Lima##spn#fra#ger;America#Western South America
 1154;1700
 1154;1707
 1159;1706
@@ -1886,27 +1886,27 @@ inf;State;Peru;10;level1;Officially the Republic of Peru. Capital: Lima##spn#fra
 1164;1699
 1159;1698
 1155;1700
-qst;coaPuertoRico##level2#PuertoRicoFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Puerto Rico;10;level1;Officially the Commonwealth of Puerto Rico. Originally populated for centuries by the aboriginal people known as Taíno. Capital: San Juan##spn#fra#ger;America#Northeastern Caribbean
+qst;coaPuertoRico##level4#PuertoRicoFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Puerto Rico;10;level3;Officially the Commonwealth of Puerto Rico. Originally populated for centuries by the aboriginal people known as Taíno. Capital: San Juan##spn#fra#ger;America#Northeastern Caribbean
 1205;1714
 1205;1715
 1205;1715
-qst;coaSaintKittsAndNevis##level2#SaintKittsAndNevisFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Saint Kitts and Nevis;10;level1;The smallest sovereign state in the America. Capital: Basseterre##spn#fra#ger;America#Caribbean
+qst;coaSaintKittsAndNevis##level4#SaintKittsAndNevisFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Saint Kitts and Nevis;10;level4;The smallest sovereign state in the America. Capital: Basseterre##spn#fra#ger;America#Caribbean
 1223;1752
 1224;1755
 1225;1755
 1227;1752
-qst;coaSaintLucia##level2#SaintLuciaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Saint Lucia;10;level1;Independent 1979. Capital: Castries##spn#fra#ger;America#Caribbean
+qst;coaSaintLucia##level5#SaintLuciaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Saint Lucia;10;level4;Independent 1979. Capital: Castries##spn#fra#ger;America#Caribbean
 1221;1761
 1221;1764
 1220;1770
 1222;1765
 1224;1762
 1222;1761
-qst;coaVincentAndTheGrenadines##level2#SaintVincentAndTheGrenadinesFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Saint Vincent and the Grenadines;10;level1;Capital: Kingstown##spn#fra#ger;America#Caribbean
+qst;coaVincentAndTheGrenadines##level5#SaintVincentAndTheGrenadinesFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Saint Vincent and the Grenadines;10;level4;Capital: Kingstown##spn#fra#ger;America#Caribbean
 1269;1845
 1270;1845
 1288;1846
@@ -1933,8 +1933,8 @@ inf;State;Saint Vincent and the Grenadines;10;level1;Capital: Kingstown##spn#fra
 1270;1856
 1268;1853
 1269;1846;sl
-qst;coaSuriname##level2#SurinameFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Suriname;10;level1;The only independent entity in the Americas where Dutch is spoken by a majority of the population. Capital: Paramaribo##spn#fra#ger;America#To the west and Brazil to the south
+qst;coaSuriname##level4#SurinameFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Suriname;10;level3;The only independent entity in the Americas where Dutch is spoken by a majority of the population. Capital: Paramaribo##spn#fra#ger;America#To the west and Brazil to the south
 1217;1792
 1219;1796
 1217;1797
@@ -1946,8 +1946,8 @@ inf;State;Suriname;10;level1;The only independent entity in the Americas where D
 1225;1791
 1222;1790
 1219;1791
-qst;coaTrinidadAndTobago##level2#TrinidadAndTobagoFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Trinidad and Tobago;10;level1;Obtained independence in 1962 Capital: Port of Spain##spn#fra#ger;America#Caribbean
+qst;coaTrinidadAndTobago##level4#TrinidadAndTobagoFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Trinidad and Tobago;10;level4;Obtained independence in 1962 Capital: Port of Spain##spn#fra#ger;America#Caribbean
 1312;2323
 1308;2326
 1308;2332
@@ -1984,8 +1984,8 @@ inf;State;Trinidad and Tobago;10;level1;Obtained independence in 1962 Capital: P
 1316;2309
 1311;2314
 1311;2321;sl
-qst;coaUruguay##level2#UruguayFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Uruguay;10;level1;Uruguay is ranked first in Latin America in democracy, peace, lack of corruption, quality of living. Capital: Montevideo##spn#fra#ger;South America#Argentina to its west and Brazil to its north and east
+qst;coaUruguay##level3#UruguayFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Uruguay;10;level3;Uruguay is ranked first in Latin America in democracy, peace, lack of corruption, quality of living. Capital: Montevideo##spn#fra#ger;South America#Argentina to its west and Brazil to its north and east
 1109;1779
 1102;1782
 1104;1790
@@ -2107,6 +2107,6 @@ inf;State;Uruguay;10;level1;Uruguay is ranked first in Latin America in democrac
 1098;1786
 1103;1779
 1108;1778
-qst;coaVenezuela##level2#VenezuelaFlag.png#What county is represented by this flag?##spn#fra#ger##
-inf;State;Venezuela;10;level1;Independent in 1830. Capital: Caracas##spn#fra#ger;South America#Northern coast of South America
+qst;coaVenezuela##level4#VenezuelaFlag.png#What county is represented by this flag?##spn#fra#ger##
+inf;State;Venezuela;10;level2;Independent in 1830. Capital: Caracas##spn#fra#ger;South America#Northern coast of South America
 eof

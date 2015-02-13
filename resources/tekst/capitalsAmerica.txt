@@ -1,79 +1,77 @@
 1264;2211
-inf;City#Where is the capital;Asuncion;10;level1;The capital and largest city of Paraguay.#nor#spn#fra#ger;America#Paraguay
+inf;City#Where is the capital;Asuncion;10;level3;The capital and largest city of Paraguay.#nor#spn#fra#ger;America#Paraguay
 1205;1714
-inf;City#Where is the capital;Basseterre;10;level1;The capital of the Federation of Saint Kitts and Nevis in the West Indies#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Basseterre;10;level5;The capital of the Federation of Saint Kitts and Nevis in the West Indies#nor#spn#fra#ger;America#Caribbean
 909;1714
-inf;City#Where is the capital;Belmopan;10;level1;The capital city of Belize. Its population in 2010 was 13,931#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Belmopan;10;level5;The capital city of Belize. Its population in 2010 was 13,931#nor#spn#fra#ger;America#Caribbean
 1076;1861
-inf;City#Where is the capital;Bogota;10;level1;Is the Capital of Colombia with 6,778,691 inhabitants as of 2005#nor#spn#fra#ger;America#Colombia
+inf;City#Where is the capital;Bogota;10;level2;Is the Capital of Colombia with 6,778,691 inhabitants as of 2005#nor#spn#fra#ger;America#Colombia
 1374;2096
-inf;City#Where is the capital;Brasilia;10;level1;The federal capital of Brazil and the seat of government of the Federal District. The city is located along the Brazilian Highlands in the country's Central-West region. It was founded on April 21, 1960, to serve as the new national capital.#nor#spn#fra#ger;America#Brazil
+inf;City#Where is the capital;Brasilia;10;level2;The federal capital of Brazil and the seat of government of the Federal District. The city is located along the Brazilian Highlands in the country's Central-West region. It was founded on April 21, 1960, to serve as the new national capital.#nor#spn#fra#ger;America#Brazil
 1241;1763
-inf;City#Where is the capital;Bridgetown;10;level1;The capital and largest city of the nation of Barbados.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Bridgetown;10;level4;The capital and largest city of the nation of Barbados.#nor#spn#fra#ger;America#Caribbean
 1255;2334
-inf;City#Where is the capital;Buenos Aires;10;level1;The capital and largest city of Argentina, and the second-largest metropolitan area in South America, after Greater São Paulo.#nor#spn#fra#ger;America#Argentina
+inf;City#Where is the capital;Buenos Aires;10;level2;The capital and largest city of Argentina, and the second-largest metropolitan area in South America, after Greater São Paulo.#nor#spn#fra#ger;America#Argentina
 1158;1793
-inf;City#Where is the capital;Caracas;10;level1;Is the capital, the center of the Greater Caracas Area, and the largest city of Venezuela.#nor#spn#fra#ger;America#Venezuela
+inf;City#Where is the capital;Caracas;10;level2;Is the capital, the center of the Greater Caracas Area, and the largest city of Venezuela.#nor#spn#fra#ger;America#Venezuela
 1226;1753
-inf;City#Where is the capital;Castries;10;level1;The capital and largest city of Saint Lucia#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Castries;10;level4;The capital and largest city of Saint Lucia#nor#spn#fra#ger;America#Caribbean
 1257;1836
-inf;City#Where is the capital;Georgetown;10;level1;The capital of Guyana. Nicknamed Garden City of the Caribbean.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Georgetown;10;level4;The capital of Guyana. Nicknamed Garden City of the Caribbean.#nor#spn#fra#ger;America#Caribbean
 890;1745
-inf;City#Where is the capital;Guatemala city;10;level1;The capital and largest city of the Republic of Guatemala, and the most populous in Central America.#nor#spn#fra#ger;America#Latin America
+inf;City#Where is the capital;Guatemala city;10;level3;The capital and largest city of the Republic of Guatemala, and the most populous in Central America.#nor#spn#fra#ger;America#Latin America
 982;1643
-inf;City#Where is the capital;Havana;10;level1;The capital city, province, major port, and leading commercial centre of Cuba.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Havana;10;level2;The capital city, province, major port, and leading commercial centre of Cuba.#nor#spn#fra#ger;America#Caribbean
 1046;1706
-inf;City#Where is the capital;Kingston;10;level1;The capital and largest city of Jamaica.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Kingston;10;level3;The capital and largest city of Jamaica.#nor#spn#fra#ger;America#Caribbean
 1223;1762
-inf;City#Where is the capital;Kingstown;10;level1;The capital, chief port, and main commercial centre of Saint Vincent and the Grenadines.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Kingstown;10;level4;The capital, chief port, and main commercial centre of Saint Vincent and the Grenadines.#nor#spn#fra#ger;America#Caribbean
 1143;2104
-inf;City#Where is the capital;La Paz;10;level1;It is, de facto, the world's highest administrative capital. While the official capital of Bolivia (and its seat of justice) is Sucre. #nor#spn#fra#ger;America#Bolivia
+inf;City#Where is the capital;La Paz;10;level3;It is, de facto, the world's highest administrative capital. While the official capital of Bolivia (and its seat of justice) is Sucre. #nor#spn#fra#ger;America#Bolivia
 1043;2052
-inf;City#Where is the capital;Lima;10;level1;The capital and the largest city of Peru.#nor#spn#fra#ger;America#Peru
+inf;City#Where is the capital;Lima;10;level2;The capital and the largest city of Peru.#nor#spn#fra#ger;America#Peru
 938;1775
-inf;City#Where is the capital;Managua;10;level1;The capital city of Nicaragua#nor#spn#fra#ger;America#Latin America
+inf;City#Where is the capital;Managua;10;level4;The capital city of Nicaragua#nor#spn#fra#ger;America#Latin America
 791;1688
 inf;City#Where is the capital;Mexico City;10;level1;Capital of Mexico. The 2009 estimated population for the city proper was around 8.84 million people.#nor#spn#fra#ger;America#Central Mexico
 1280;2338
-inf;City#Where is the capital;Montevideo;10;level1;The capital and largest city of Uruguay.#nor#spn#fra#ger;America#Uruguay
+inf;City#Where is the capital;Montevideo;10;level3;The capital and largest city of Uruguay.#nor#spn#fra#ger;America#Uruguay
 1040;1620
-inf;City#Where is the capital;Nassau;10;level1;The capital, largest city, and commercial centre of the Commonwealth of the Bahamas.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Nassau;10;level4;The capital, largest city, and commercial centre of the Commonwealth of the Bahamas.#nor#spn#fra#ger;America#Caribbean
 1058;1332
-inf;City#Where is the capital;Ottawa;10;level1;The capital of Canada. It stands on the south bank of the Ottawa River in the eastern portion of Southern Ontario. Fourth-largest city in Canada.#nor#spn#fra#ger;America#Canada
+inf;City#Where is the capital;Ottawa;10;level2;The capital of Canada. It stands on the south bank of the Ottawa River in the eastern portion of Southern Ontario. Fourth-largest city in Canada.#nor#spn#fra#ger;America#Canada
 1015;1811
-inf;City#Where is the capital;Panama City;10;level1;The capital and largest city of the Republic of Panama#nor#spn#fra#ger;America#Latin America
+inf;City#Where is the capital;Panama City;10;level3;The capital and largest city of the Republic of Panama#nor#spn#fra#ger;America#Latin America
 1292;1847
-inf;City#Where is the capital;Paramaribo;10;level1;The capital and largest city of Suriname#nor#spn#fra#ger;America#Suriname
+inf;City#Where is the capital;Paramaribo;10;level4;The capital and largest city of Suriname#nor#spn#fra#ger;America#Suriname
 1220;1791
-inf;City#Where is the capital;Port of Spain;10;level1;The capital of the Republic of Trinidad and Tobago#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Port of Spain;10;level4;The capital of the Republic of Trinidad and Tobago#nor#spn#fra#ger;America#Caribbean
 1096;1699
-inf;City#Where is the capital;Port-au-prince;10;level1;The capital and largest city of the Caribbean country of Haiti.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Port-au-prince;10;level4;The capital and largest city of the Caribbean country of Haiti.#nor#spn#fra#ger;America#Caribbean
 1024;1915
-inf;City#Where is the capital;Quito;10;level1;The capital city of Ecuador, and at an elevation of 9,350 feet (2,800 meters above sea level), it is the highest official capital city in the world.#nor#spn#fra#ger;America#Ecuador
+inf;City#Where is the capital;Quito;10;level2;The capital city of Ecuador, and at an elevation of 9,350 feet (2,800 meters above sea level), it is the highest official capital city in the world.#nor#spn#fra#ger;America#Ecuador
 1221;1738
-inf;City#Where is the capital;Roseau;10;level1;The capital and largest city of Dominica.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Roseau;10;level4;The capital and largest city of Dominica.#nor#spn#fra#ger;America#Caribbean
 963;1801
-inf;City#Where is the capital#Where is the capital;San Jose;10;level1;Is the capital of Costa Rica#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital#Where is the capital;San Jose;10;level3;Is the capital of Costa Rica#nor#spn#fra#ger;America#Caribbean
 1170;1701
-inf;City#Where is the capital;San Juan;10;level1;Is the capital in the Commonwealth of Puerto Rico#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;San Juan;10;level4;Is the capital in the Commonwealth of Puerto Rico#nor#spn#fra#ger;America#Caribbean
 2062;1357
 2062;1358
 2061;1358
-inf;State;San Marino;10;level1;Is an enclaved microstate surrounded by Italy, situated on the Italian Peninsula on the north-eastern side of the Apennine Mountains. Its size is just over 61 km2 with an estimated population of over 30,000.#nor#spn#fra#ger;Europe#Italia
+inf;State;San Marino;10;level5;Is an enclaved microstate surrounded by Italy, situated on the Italian Peninsula on the north-eastern side of the Apennine Mountains. Its size is just over 61 km2 with an estimated population of over 30,000.#nor#spn#fra#ger;Europe#Italia
 906;1757
-inf;City#Where is the capital;Santiago;10;level1;The capital and largest city of Chile.#nor#spn#fra#ger;America#Chile
+inf;City#Where is the capital;Santiago;10;level3;The capital and largest city of Chile.#nor#spn#fra#ger;America#Chile
 1126;1700
-inf;City#Where is the capital;Santo Domingo;10;level1;Known officially as Santo Domingo de Guzmán, is the capital and largest city in the Dominican Republic and is the largest city in the Caribbean region by population.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Santo Domingo;10;level4;Known officially as Santo Domingo de Guzmán, is the capital and largest city in the Dominican Republic and is the largest city in the Caribbean region by population.#nor#spn#fra#ger;America#Caribbean
 1217;1775
-inf;City#Where is the capital;Saint Georges;10;level1;Is the capital of Grenada. The city is surrounded by a hillside of an old volcano crater and is on a horseshoe-shaped harbor.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Saint Georges;10;level4;Is the capital of Grenada. The city is surrounded by a hillside of an old volcano crater and is on a horseshoe-shaped harbor.#nor#spn#fra#ger;America#Caribbean
 1216;1716
-inf;City#Where is the capital;Saint Johns;10;level1;The capital and largest city of Antigua and Barbuda, a country located in the West Indies in the Caribbean Sea.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Saint Johns;10;level4;The capital and largest city of Antigua and Barbuda, a country located in the West Indies in the Caribbean Sea.#nor#spn#fra#ger;America#Caribbean
 1177;2134
-inf;City#Where is the capital;Sucre;10;level1;The constitutional capital of Bolivia.#nor#spn#fra#ger;America#Bolivia
+inf;City#Where is the capital;Sucre;10;level3;The constitutional capital of Bolivia.#nor#spn#fra#ger;America#Bolivia
 926;1753
-inf;City#Where is the capital;Tegucigalpa;10;level1;The capital of Honduras and seat of government of the Republic#nor#spn#fra#ger;America#Honduras
-2062;1388
-inf;City#Where is the capital;Vatican City;10;level1;Enclave within the city of Rome, with an area of approximately 44 hectares, and a population of 842, is the smallest internationally recognized independent state in the world by both area and population.#nor#spn#fra#ger;America#Caribbean
+inf;City#Where is the capital;Tegucigalpa;10;level4;The capital of Honduras and seat of government of the Republic#nor#spn#fra#ger;America#Honduras
 1043;1433
 inf;City#Where is the capital;Washington DC;10;level1;Formally the District of Columbia and commonly referred to as Washington, "the District", or simply D.C., is the capital of the United States. #nor#spn#fra#ger;America#USA
 eof

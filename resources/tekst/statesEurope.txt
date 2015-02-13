@@ -15,8 +15,8 @@
 2300;1487
 2301;1489
 2302;1489;sl
-qst;coaCyprus##level2#CyprusFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Cyprus;10;level1;The international community considers the northern part of the island as territory of the Republic of Cyprus illegally occupied by Turkish forces Capital: Nicosia##spn#fra#ger;Europe#Island country in the Eastern Mediterranean Sea
+qst;coaCyprus##level5#CyprusFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Cyprus;10;level5;The international community considers the northern part of the island as territory of the Republic of Cyprus illegally occupied by Turkish forces Capital: Nicosia##spn#fra#ger;Europe#Island country in the Eastern Mediterranean Sea
 2147;1423
 2145;1420
 2143;1417
@@ -50,8 +50,8 @@ inf;State;Cyprus;10;level1;The international community considers the northern pa
 2152;1416
 2150;1421
 2148;1422
-qst;coaAlbania##level2#AlbaniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Albania;10;level1;Albania is a member of the United Nations, NATO, the Organization for Security and Co-operation in Europe, the Council of Europe, the World Trade Organization and is one of the founding members of the Union for the Mediterranean. It is also an official candidate for membership in the European Union (2014) Capital: Tirana##spn#fra#ger;Europe#Adriatic Sea to the west
+qst;coaAlbania##level4#AlbaniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Albania;10;level4;Albania is a member of the United Nations, NATO, the Organization for Security and Co-operation in Europe, the Council of Europe, the World Trade Organization and is one of the founding members of the Union for the Mediterranean. It is also an official candidate for membership in the European Union (2014) Capital: Tirana##spn#fra#ger;Europe#Adriatic Sea to the west
 2115;1290
 2111;1284
 2113;1279
@@ -122,8 +122,8 @@ inf;State;Albania;10;level1;Albania is a member of the United Nations, NATO, the
 2113;1296
 2113;1292
 2115;1291
-qst;coaAustria##level2#AustriaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Austria;10;level1;After the collapse of the Habsburg (Austro-Hungarian) Empire in 1918 at the end of World War I, Austria adopted and used the name the Republic of German-Austria (Deutschösterreich, later Österreich) in an attempt for union with Germany, but was forbidden due to the Treaty of Saint-Germain-en-Laye (1919). Capital: Vienna##spn#fra#ger;Europe#Italy to the south
+qst;coaAustria##level4#AustriaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Austria;10;level3;After the collapse of the Habsburg (Austro-Hungarian) Empire in 1918 at the end of World War I, Austria adopted and used the name the Republic of German-Austria (Deutschösterreich, later Österreich) in an attempt for union with Germany, but was forbidden due to the Treaty of Saint-Germain-en-Laye (1919). Capital: Vienna##spn#fra#ger;Europe#Italy to the south
 1591;1438
 1594;1442
 1597;1441
@@ -160,7 +160,7 @@ inf;State;Austria;10;level1;After the collapse of the Habsburg (Austro-Hungarian
 1596;1437
 1593;1434
 1591;1437
-inf;Island;Azores;10;level1;Portuguese islands. There are nine major Azorean islands and an islet cluster, in three main groups.##spn#fra#ger;Europe#Atlantic Ocean
+inf;Island;Azores;10;level5;Portuguese islands. There are nine major Azorean islands and an islet cluster, in three main groups.##spn#fra#ger;Europe#Atlantic Ocean
 2188;1184
 2189;1188
 2189;1191
@@ -277,8 +277,8 @@ inf;Island;Azores;10;level1;Portuguese islands. There are nine major Azorean isl
 2198;1184
 2195;1182
 2191;1184
-qst;coaBelarus##level2#BelarusFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Belarus;10;level1;The parliament of the republic declared the sovereignty of Belarus on 27 July 1990, and during the dissolution of the Soviet Union. Capital: Minsk##spn#fra#ger;Europe#Landlocked country in Eastern Europe
+qst;coaBelarus##level4#BelarusFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Belarus;10;level3;The parliament of the republic declared the sovereignty of Belarus on 27 July 1990, and during the dissolution of the Soviet Union. Capital: Minsk##spn#fra#ger;Europe#Landlocked country in Eastern Europe
 1946;1236
 1947;1239
 1949;1239
@@ -335,8 +335,8 @@ inf;State;Belarus;10;level1;The parliament of the republic declared the sovereig
 1955;1231
 1950;1233
 1947;1236
-qst;coaBelgium##level2#BelgiumFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Belgium;10;level1;Belgium's two largest regions are the Dutch-speaking region of Flanders in the north and the French-speaking southern region of Wallonia. Capital: Brussels##spn#fra#ger;Europe#Western Europe
+qst;coaBelgium##level3#BelgiumFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Belgium;10;level3;Belgium's two largest regions are the Dutch-speaking region of Flanders in the north and the French-speaking southern region of Wallonia. Capital: Brussels##spn#fra#ger;Europe#Western Europe
 2135;613
 2131;613
 2130;616
@@ -381,7 +381,7 @@ inf;Island;Bornholm;10;level1;A Danish island in the Baltic Sea, to the east of 
 1837;1001
 1835;1005
 1832;1006
-inf;Island;Faroe Islands;10;level1;The Faroe Islands have been a self-governing country within the Danish Realm since 1948. Capital: Tórshavn##spn#fra#ger;Europe#Denmark
+inf;Island;Faroe Islands;10;level5;The Faroe Islands have been a self-governing country within the Danish Realm since 1948. Capital: Tórshavn##spn#fra#ger;Europe#Denmark
 2102;1345
 2104;1350
 2107;1356
@@ -418,8 +418,8 @@ inf;Island;Faroe Islands;10;level1;The Faroe Islands have been a self-governing 
 2099;1337
 2098;1343
 2102;1345
-qst;coaBosniaAndHerzegovina##level2#BosniaAndHerzegovinaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Bosnia and Herzegovina;10;level1;Following the dissolution of Yugoslavia, the country proclaimed independence in 1992, which was followed by the Bosnian War, lasting until late 1995. Capital: Sarajevo##spn#fra#ger;Europe#Southeastern Europe
+qst;coaBosniaAndHerzegovina##level5#BosniaAndHerzegovinaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Bosnia and Herzegovina;10;level4;Following the dissolution of Yugoslavia, the country proclaimed independence in 1992, which was followed by the Bosnian War, lasting until late 1995. Capital: Sarajevo##spn#fra#ger;Europe#Southeastern Europe
 2175;1381
 2176;1379
 2175;1372
@@ -466,8 +466,8 @@ inf;State;Bosnia and Herzegovina;10;level1;Following the dissolution of Yugoslav
 2180;1387
 2177;1386
 2175;1383
-qst;coaBulgaria##level2#BulgariaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Bulgaria;10;level1;Bulgaria's population of 7.4 million people is predominantly urbanised and mainly concentrated in the administrative centres of its 28 provinces. Most commercial and cultural activities are centred on the capital and largest city, Sofia##spn#fra#ger;Europe#Black Sea to the east
+qst;coaBulgaria##level4#BulgariaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Bulgaria;10;level3;Bulgaria's population of 7.4 million people is predominantly urbanised and mainly concentrated in the administrative centres of its 28 provinces. Most commercial and cultural activities are centred on the capital and largest city, Sofia##spn#fra#ger;Europe#Black Sea to the east
 2129;1381
 2125;1378
 2122;1379
@@ -541,8 +541,8 @@ inf;State;Bulgaria;10;level1;Bulgaria's population of 7.4 million people is pred
 2122;1373
 2130;1379
 2130;1380
-qst;coaCroatia##level2#CroatiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Croatia;10;level1;A fascist Croatian puppet state existed during World War II. After the war, Croatia became a founding member and a federal constituent of Second Yugoslavia, a constitutionally socialist state. In June 1991, Croatia declared independence, which came into effect on 8 October of the same year. Capital: Zagreb##spn#fra#ger;Europe#Mediterranean
+qst;coaCroatia##level4#CroatiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Croatia;10;level4;A fascist Croatian puppet state existed during World War II. After the war, Croatia became a founding member and a federal constituent of Second Yugoslavia, a constitutionally socialist state. In June 1991, Croatia declared independence, which came into effect on 8 October of the same year. Capital: Zagreb##spn#fra#ger;Europe#Mediterranean
 2064;1267
 2067;1268
 2071;1273
@@ -613,8 +613,8 @@ inf;State;Croatia;10;level1;A fascist Croatian puppet state existed during World
 2062;1257
 2062;1260
 2064;1266
-qst;coaCzechRepublic##level2#CzechRepublicFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Czech Republic;10;level1;Fell under German occupation during World War II. By 1945, a major portion of the country was liberated by the Red Army, and the subsequent gratitude towards the Soviets. Capital: Prague##spn#fra#ger;Europe#Germany to the west
+qst;coaCzechRepublic##level4#CzechRepublicFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Czech Republic;10;level4;Fell under German occupation during World War II. By 1945, a major portion of the country was liberated by the Red Army, and the subsequent gratitude towards the Soviets. Capital: Prague##spn#fra#ger;Europe#Germany to the west
 2017;1164
 2024;1165
 2029;1165
@@ -681,8 +681,8 @@ inf;State;Czech Republic;10;level1;Fell under German occupation during World War
 2014;1159
 2013;1163
 2017;1164
-qst;coaDenmark##level2#DenmarkFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Denmark;10;level1;The Constitution of Denmark was signed on 5 June 1849, ending the absolute monarchy which had begun in 1660. It establishes a constitutional monarchy—the current monarch is Queen Margrethe II—organised as a parliamentary democracy. Capital: Copenhagen##spn#fra#ger;Europe#Northern Europe;;Bornholm#Faroe Islands#Greenland
+qst;coaDenmark##level4#DenmarkFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Denmark;10;level3;The Constitution of Denmark was signed on 5 June 1849, ending the absolute monarchy which had begun in 1660. It establishes a constitutional monarchy—the current monarch is Queen Margrethe II—organised as a parliamentary democracy. Capital: Copenhagen##spn#fra#ger;Europe#Northern Europe;;Bornholm#Faroe Islands#Greenland
 2170;1097
 2168;1102
 2170;1102
@@ -770,8 +770,8 @@ inf;State;Denmark;10;level1;The Constitution of Denmark was signed on 5 June 184
 2167;1094
 2167;1095
 2169;1096
-qst;coaEstonia##level2#EstoniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Estonia;10;level1;With a population of 1.3 million, it is one of the least-populous member states of the European Union (2014). Capital: Tallinn##spn#fra#ger;Europe#Baltic
+qst;coaEstonia##level5#EstoniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Estonia;10;level4;With a population of 1.3 million, it is one of the least-populous member states of the European Union (2014). Capital: Tallinn##spn#fra#ger;Europe#Baltic
 1885;1193
 1886;1196
 1886;1200
@@ -876,7 +876,7 @@ inf;State;Estonia;10;level1;With a population of 1.3 million, it is one of the l
 1883;1186
 1884;1189
 1883;1192
-qst;coaEngland##level2#EnglandFlag.png#What county is represented by this flag##spn#fra#ger##
+qst;coaEngland##level1#EnglandFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;England;10;level1;The Industrial Revolution began in 18th-century England, transforming its society into the world's first industrialised nation. Capital: London##spn#fra#ger;Europe#United Kingdom
 2231;1046
 2234;1043
@@ -1045,8 +1045,8 @@ inf;State;England;10;level1;The Industrial Revolution began in 18th-century Engl
 2218;1050
 2224;1050
 2231;1048
-qst;coaFinland##level2#FinlandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Finland;10;level1;Finland was a relative latecomer to industrialisation, remaining a largely agrarian country until the 1950s. Capital: Helsinki##spn#fra#ger;Europe#Nordic country
+qst;coaFinland##level4#FinlandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Finland;10;level3;Finland was a relative latecomer to industrialisation, remaining a largely agrarian country until the 1950s. Capital: Helsinki##spn#fra#ger;Europe#Nordic country
 1898;1366
 1901;1364
 1902;1358
@@ -1375,7 +1375,7 @@ inf;State;France;10;level1;By area, France is the 42nd largest country in the wo
 2001;1185
 1999;1188
 1998;1191
-qst;coaGermany##level2#GermanyFlag.png#What county is represented by this flag##spn#fra#ger##
+qst;coaGermany##level1#GermanyFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Germany;10;level1;As a global leader in several industrial and technological sectors, it is both the world's third-largest exporter and third-largest importer of goods (2014). Capital: Berlin##spn#fra#ger;Europe#European Union
 2148;1423
 2148;1424
@@ -1478,8 +1478,8 @@ inf;State;Germany;10;level1;As a global leader in several industrial and technol
 2151;1420
 2150;1421
 2147;1422;sl
-qst;coaGreece##level2#GreeceFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Greece;10;level1;Modern Greece traces its roots to the civilization of Ancient Greece, which began with the Aegean Civilizations of the Bronze Age. Considered the cradle of all Western civilization, Greece is the birthplace of democracy, Western philosophy, the Olympic Games, Western literature and historiography, political science, major scientific and mathematical principles and Western drama including both tragedy and comedy. Capital: Athens##spn#fra#ger;Europe#Southern Europe
+qst;coaGreece##level3#GreeceFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Greece;10;level2;Modern Greece traces its roots to the civilization of Ancient Greece, which began with the Aegean Civilizations of the Bronze Age. Considered the cradle of all Western civilization, Greece is the birthplace of democracy, Western philosophy, the Olympic Games, Western literature and historiography, political science, major scientific and mathematical principles and Western drama including both tragedy and comedy. Capital: Athens##spn#fra#ger;Europe#Southern Europe
 1328;959
 1331;967
 1333;975
@@ -1985,8 +1985,8 @@ inf;State;Greece;10;level1;Modern Greece traces its roots to the civilization of
 1323;937
 1325;958
 1327;959
-qst;coaGreenland##level2#GreenlandFlag.png#What island is represented by this flag##spn#fra#ger##
-inf;Island;Greenland;10;level1;An autonomous country within the Kingdom of Denmark. Having been claimed by Denmark–Norway for centuries, Greenland (Danish: Grønland) became a Danish colony in 1814, and a part of the Danish Realm in 1953 under the Constitution of Denmark. Capital: Nuuk##spn#fra#ger;Europe#Big Island
+qst;coaGreenland##level5#GreenlandFlag.png#What island is represented by this flag##spn#fra#ger##
+inf;Island;Greenland;10;level3;An autonomous country within the Kingdom of Denmark. Having been claimed by Denmark–Norway for centuries, Greenland (Danish: Grønland) became a Danish colony in 1814, and a part of the Danish Realm in 1953 under the Constitution of Denmark. Capital: Nuuk##spn#fra#ger;Europe#Big Island
 2104;1309
 2107;1312
 2108;1315
@@ -2047,8 +2047,8 @@ inf;Island;Greenland;10;level1;An autonomous country within the Kingdom of Denma
 2108;1306
 2104;1308
 2103;1310
-qst;coaHungary##level2#HungaryFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Hungary;10;level1;Hungary's current borders were first established by the Treaty of Trianon (1920) after World War I. Capital: Budapest##spn#fra#ger;Europe#Landlocked country in Central Europe
+qst;coaHungary##level3#HungaryFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Hungary;10;level3;Hungary's current borders were first established by the Treaty of Trianon (1920) after World War I. Capital: Budapest##spn#fra#ger;Europe#Landlocked country in Central Europe
 1841;1157
 1838;1159
 1836;1162
@@ -2120,8 +2120,8 @@ inf;State;Hungary;10;level1;Hungary's current borders were first established by 
 1833;1155
 1837;1153
 1840;1156
-qst;coaIreland##level2#IrelandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Ireland;10;level1;Following the Irish War of Independence and the subsequent Anglo-Irish Treaty, Ireland gained effective independence from the United Kingdom as the Irish Free State in 1922. Capital: Dublin##spn#fra#ger;Europe#United Kingdom
+qst;coaIreland##level4#IrelandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Ireland;10;level3;Following the Irish War of Independence and the subsequent Anglo-Irish Treaty, Ireland gained effective independence from the United Kingdom as the Irish Free State in 1922. Capital: Dublin##spn#fra#ger;Europe#United Kingdom
 1664;940
 1664;945
 1665;948
@@ -2243,8 +2243,8 @@ inf;State;Ireland;10;level1;Following the Irish War of Independence and the subs
 1652;939
 1658;940
 1664;939
-qst;coaIceland##level2#IcelandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Iceland;10;level1;From 1262 to 1918, Iceland was ruled by Norway and later Denmark. The country became independent in 1918 and a republic in 1944. Capital: Reykjavík##spn#fra#ger;Europe#North Atlantic
+qst;coaIceland##level4#IcelandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Iceland;10;level4;From 1262 to 1918, Iceland was ruled by Norway and later Denmark. The country became independent in 1918 and a republic in 1944. Capital: Reykjavík##spn#fra#ger;Europe#North Atlantic
 1868;1173
 1866;1177
 1864;1179
@@ -2254,8 +2254,8 @@ inf;State;Iceland;10;level1;From 1262 to 1918, Iceland was ruled by Norway and l
 1871;1176
 1870;1173
 1868;1173
-qst;coaIsleOfMan##level2#IsleOfManFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Isle of Man;10;level1;A self-governing British Crown dependency located in the Irish Sea between the islands of Great Britain and Ireland. Capital: Douglas##spn#fra#ger;Europe#UK
+qst;coaIsleOfMan##level5#IsleOfManFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Isle of Man;10;level5;A self-governing British Crown dependency located in the Irish Sea between the islands of Great Britain and Ireland. Capital: Douglas##spn#fra#ger;Europe#UK
 2007;1360
 2011;1360
 2014;1357
@@ -2471,7 +2471,7 @@ inf;State;Isle of Man;10;level1;A self-governing British Crown dependency locate
 2003;1353
 2007;1353
 2006;1357
-qst;coaItaly##level2#ItalyFlag.png#What county is represented by this flag##spn#fra#ger##
+qst;coaItaly##level1#ItalyFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Italy;10;level1;The sovereign states of San Marino and the Vatican City are enclaves within Italy. It is considered to be a major European power able to exert its influence on a global scale. Capital: Rome##spn#fra#ger;Europe#Southern Europe
 1823;745
 1823;748
@@ -2489,7 +2489,7 @@ inf;State;Italy;10;level1;The sovereign states of San Marino and the Vatican Cit
 1827;742
 1824;743
 1824;744
-inf;State;Jan Mayen;10;level1;Jan Mayen Island is a volcanic island in the Arctic Ocean and a part of the Kingdom of Norway.##spn#fra#ger;Europe#Atlantic Ocean
+inf;State;Jan Mayen;10;level5;Jan Mayen Island is a volcanic island in the Arctic Ocean and a part of the Kingdom of Norway.##spn#fra#ger;Europe#Atlantic Ocean
 2159;1157
 2163;1156
 2171;1162
@@ -2512,7 +2512,7 @@ inf;State;Jan Mayen;10;level1;Jan Mayen Island is a volcanic island in the Arcti
 2158;1163
 2159;1160
 2158;1157
-inf;State;Kaliningrad;10;level1;The locality was a site of the ancient Old Prussian settlement/fort Twangste. In 1255, a new fortress was built on this site by the Teutonic Knights during the Northern Crusades, and was named Königsberg. Russian region geographically separated from the rest of the country.##spn#fra#ger;Europe#Baltic
+inf;State;Kaliningrad;10;level4;The locality was a site of the ancient Old Prussian settlement/fort Twangste. In 1255, a new fortress was built on this site by the Teutonic Knights during the Northern Crusades, and was named Königsberg. Russian region geographically separated from the rest of the country.##spn#fra#ger;Europe#Baltic
 2154;1388
 2154;1385
 2150;1383
@@ -2533,8 +2533,8 @@ inf;State;Kaliningrad;10;level1;The locality was a site of the ancient Old Pruss
 2160;1385
 2156;1386
 2155;1388
-qst;coaKosovo##level2#KosovoFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Kosovo;10;level1;A partially recognised state in Southeastern Europe that declared independence from Serbia in February 2008 as the Republic of Kosovo. Capital: Pristina##spn#fra#ger;Europe#Southeastern Europe
+qst;coaKosovo##level4#KosovoFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Kosovo;10;level3;A partially recognised state in Southeastern Europe that declared independence from Serbia in February 2008 as the Republic of Kosovo. Capital: Pristina##spn#fra#ger;Europe#Southeastern Europe
 2159;1141
 2164;1136
 2170;1134
@@ -2599,13 +2599,13 @@ inf;State;Kosovo;10;level1;A partially recognised state in Southeastern Europe t
 2157;1133
 2157;1140
 2157;1141
-qst;coaLatvia##level2#LatviaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Latvia;10;level1;The Republic of Latvia was founded on 18 November 1918. However, its de facto independence was interrupted at the outset of World War II. In 1940, the country was forcibly incorporated into the Soviet Union, invaded and occupied by Nazi Germany in 1941, and re-occupied by the Soviets in 1944. Capital: Riga##spn#fra#ger;Europe#Baltic
+qst;coaLatvia##level5#LatviaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Latvia;10;level4;The Republic of Latvia was founded on 18 November 1918. However, its de facto independence was interrupted at the outset of World War II. In 1940, the country was forcibly incorporated into the Soviet Union, invaded and occupied by Nazi Germany in 1941, and re-occupied by the Soviets in 1944. Capital: Riga##spn#fra#ger;Europe#Baltic
 2028;1305
 2029;1306
 2028;1306
-qst;coaLiechtenstein##level2#LiechtensteinFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Liechtenstein;10;level1;Microstate in Central Europe. Liechtenstein is the richest (by measure of GDP per capita) country in the world and the only country to lie entirely in the Alps. Capital: Vaduz##spn#fra#ger;Europe#Alps
+qst;coaLiechtenstein##level5#LiechtensteinFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Liechtenstein;10;level5;Microstate in Central Europe. Liechtenstein is the richest (by measure of GDP per capita) country in the world and the only country to lie entirely in the Alps. Capital: Vaduz##spn#fra#ger;Europe#Alps
 2159;1157
 2163;1156
 2170;1162
@@ -2663,8 +2663,8 @@ inf;State;Liechtenstein;10;level1;Microstate in Central Europe. Liechtenstein is
 2159;1148
 2160;1151
 2159;1155
-qst;coaLithuania##level2#LithuaniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Lithuania;10;level1;Lithuania became the first Soviet republic to declare the restoration of an independent State after the Soviet Union break-up. Capital: Vilnius##spn#fra#ger;Europe#Baltic
+qst;coaLithuania##level5#LithuaniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Lithuania;10;level4;Lithuania became the first Soviet republic to declare the restoration of an independent State after the Soviet Union break-up. Capital: Vilnius##spn#fra#ger;Europe#Baltic
 1988;1253
 1985;1257
 1985;1258
@@ -2679,8 +2679,8 @@ inf;State;Lithuania;10;level1;Lithuania became the first Soviet republic to decl
 1989;1257
 1989;1254
 1989;1252
-qst;coaLuxembourg##level2#LuxembourgFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Luxembourg;10;level1;As a representative democracy with a constitutional monarch, it is headed by a grand duke and is the world's only remaining grand duchy. Capital: Luxembourg##spn#fra#ger;Europe#Western Europe
+qst;coaLuxembourg##level4#LuxembourgFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Luxembourg;10;level4;As a representative democracy with a constitutional monarch, it is headed by a grand duke and is the world's only remaining grand duchy. Capital: Luxembourg##spn#fra#ger;Europe#Western Europe
 2160;1385
 2157;1385
 2156;1389
@@ -2703,8 +2703,8 @@ inf;State;Luxembourg;10;level1;As a representative democracy with a constitution
 2174;1382
 2165;1383
 2161;1384
-qst;coaMacedonia##level2#MacedoniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Macedonia;10;level1;Has over 50 lakes, plus sixteen mountains higher than 2,000 m. Capital: Skopje##spn#fra#ger;Europe#Balkan
+qst;coaMacedonia##level5#MacedoniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Macedonia;10;level4;Has over 50 lakes, plus sixteen mountains higher than 2,000 m. Capital: Skopje##spn#fra#ger;Europe#Balkan
 2080;1474
 2082;1477
 2085;1478
@@ -2712,8 +2712,8 @@ inf;State;Macedonia;10;level1;Has over 50 lakes, plus sixteen mountains higher t
 2086;1472
 2082;1472
 2081;1472
-qst;coaMalta##level2#MaltaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Malta;10;level1;Malta's location has given it great strategic importance as a naval base throughout history. Capital: Valletta##spn#fra#ger;Europe#Mediterranean
+qst;coaMalta##level5#MaltaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Malta;10;level4;Malta's location has given it great strategic importance as a naval base throughout history. Capital: Valletta##spn#fra#ger;Europe#Mediterranean
 2240;1332
 2244;1332
 2244;1328
@@ -2760,13 +2760,13 @@ inf;State;Malta;10;level1;Malta's location has given it great strategic importan
 2239;1321
 2240;1328
 2240;1331
-qst;coaMoldova##level2#MoldovaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Moldova;10;level1;A strip of Moldova's internationally recognised territory on the east bank of the river Dniester has been under the de facto control of the breakaway government of Transnistria since 1990. Capital: Chișinău##spn#fra#ger;Europe#Eastern Europe
+qst;coaMoldova##level5#MoldovaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Moldova;10;level4;A strip of Moldova's internationally recognised territory on the east bank of the river Dniester has been under the de facto control of the breakaway government of Transnistria since 1990. Capital: Chișinău##spn#fra#ger;Europe#Eastern Europe
 2003;1361
 2005;1360
 2003;1360
-qst;coaMonaco##level2#MonacoFlag.png#What european microstate is represented by this flag##spn#fra#ger##
-inf;State;Monaco;10;level1;A sovereign city-state and microstate, located on the French Riviera. Capital Monaco##spn#fra#ger;Europe#France
+qst;coaMonaco##level5#MonacoFlag.png#What european microstate is represented by this flag##spn#fra#ger##
+inf;State;Monaco;10;level4;A sovereign city-state and microstate, located on the French Riviera. Capital Monaco##spn#fra#ger;Europe#France
 2139;1390
 2139;1384
 2144;1378
@@ -2787,8 +2787,8 @@ inf;State;Monaco;10;level1;A sovereign city-state and microstate, located on the
 2130;1380
 2132;1383
 2137;1388
-qst;coaMontenegro##level2#MontenegroFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Montenegro;10;level1;From 1918, it was a part of Yugoslavia. On the basis of an independence referendum held on 21 May 2006, Montenegro declared independence on 3 June of that year. Capital: Podgorica##spn#fra#ger;Europe#Southeastern Europe
+qst;coaMontenegro##level5#MontenegroFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Montenegro;10;level4;From 1918, it was a part of Yugoslavia. On the basis of an independence referendum held on 21 May 2006, Montenegro declared independence on 3 June of that year. Capital: Podgorica##spn#fra#ger;Europe#Southeastern Europe
 1957;1231
 1962;1232
 1965;1233
@@ -3156,8 +3156,8 @@ inf;State;Northern Ireland;10;level1;Is a part of the United Kingdom of Great Br
 2044;1079
 2042;1076
 2041;1075
-qst;coaNorway##level2#NorwayFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Norway;10;level1;Norway has extensive reserves of petroleum and natural gas. Capital: Oslo##spn#fra#ger;Europe#Northern Europe;;Svalbard#Jan Mayen
+qst;coaNorway##level4#NorwayFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Norway;10;level3;Norway has extensive reserves of petroleum and natural gas. Capital: Oslo##spn#fra#ger;Europe#Northern Europe;;Svalbard#Jan Mayen
 2081;1182
 2082;1189
 2083;1197
@@ -3273,8 +3273,8 @@ inf;State;Norway;10;level1;Norway has extensive reserves of petroleum and natura
 2096;1176
 2088;1180
 2082;1181
-qst;coaPoland##level2#PolandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Poland;10;level1;Many historians trace the establishment of a Polish state to 966, when Mieszko I, ruler of a territory roughly coextensive with that of present-day Poland, converted to Christianity. Capital: Warsaw##spn#fra#ger;Europe#Eastern europe
+qst;coaPoland##level3#PolandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Poland;10;level2;Many historians trace the establishment of a Polish state to 966, when Mieszko I, ruler of a territory roughly coextensive with that of present-day Poland, converted to Christianity. Capital: Warsaw##spn#fra#ger;Europe#Eastern europe
 1817;1461
 1821;1460
 1825;1460
@@ -3331,8 +3331,8 @@ inf;State;Poland;10;level1;Many historians trace the establishment of a Polish s
 1818;1451
 1816;1457
 1815;1461
-qst;coaPortugal##level2#PortugalFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Portugal;10;level1;Portugal's international status was greatly reduced during the 19th century, especially following the Independence of Brazil.##spn#fra#ger;Europe#South Europe
+qst;coaPortugal##level3#PortugalFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Portugal;10;level2;Portugal's international status was greatly reduced during the 19th century, especially following the Independence of Brazil.##spn#fra#ger;Europe#South Europe
 2246;1360
 2246;1356
 2246;1351
@@ -3407,8 +3407,8 @@ inf;State;Portugal;10;level1;Portugal's international status was greatly reduced
 2237;1356
 2239;1358
 2245;1360
-qst;coaRomania##level2#RomaniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Romania;10;level1;Gained independence from the Ottoman Empire in 1877, and at the end of World War I, Transylvania, Bukovina and Bessarabia united with the sovereign Kingdom of Romania. Capital: Bucharest##spn#fra#ger;Europe#East Europe
+qst;coaRomania##level3#RomaniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Romania;10;level3;Gained independence from the Ottoman Empire in 1877, and at the end of World War I, Transylvania, Bukovina and Bessarabia united with the sovereign Kingdom of Romania. Capital: Bucharest##spn#fra#ger;Europe#East Europe
 1897;1147
 1892;1150
 1890;1152
@@ -3534,8 +3534,8 @@ inf;State;Romania;10;level1;Gained independence from the Ottoman Empire in 1877,
 1891;1140
 1897;1143
 1898;1146
-qst;coaScotland##level2#ScotlandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Scotland;10;level1;Is a country that is part of the United Kingdom. The Kingdom of Scotland emerged as an independent sovereign state in the Early Middle Ages and continued to exist until 1707. Capital: Edinburgh. Largest city: Glasgow##spn#fra#ger;Europe#United Kingdom;;Shetland
+qst;coaScotland##level3#ScotlandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Scotland;10;level3;Is a country that is part of the United Kingdom. The Kingdom of Scotland emerged as an independent sovereign state in the Early Middle Ages and continued to exist until 1707. Capital: Edinburgh. Largest city: Glasgow##spn#fra#ger;Europe#United Kingdom;;Shetland
 2153;1373
 2156;1369
 2158;1367
@@ -3587,8 +3587,8 @@ inf;State;Scotland;10;level1;Is a country that is part of the United Kingdom. Th
 2142;1369
 2148;1371
 2153;1375
-qst;coaSerbia##level2#SerbiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Serbia;10;level1;In 2008 the parliament of UNMIK Kosovo declared independence, with divergent responses from the international community. Capital: Belgrade##spn#fra#ger;Europe#Balkan
+qst;coaSerbia##level4#SerbiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Serbia;10;level3;In 2008 the parliament of UNMIK Kosovo declared independence, with divergent responses from the international community. Capital: Belgrade##spn#fra#ger;Europe#Balkan
 1898;1049
 1894;1052
 1894;1054
@@ -3610,7 +3610,7 @@ inf;State;Serbia;10;level1;In 2008 the parliament of UNMIK Kosovo declared indep
 1902;1041
 1895;1043
 1898;1047
-inf;Island;Shetland;10;level1;A subarctic archipelago of Scotland##spn#fra#ger;Europe#Scotland
+inf;Island;Shetland;10;level5;A subarctic archipelago of Scotland##spn#fra#ger;Europe#Scotland
 2125;1273
 2115;1276
 2113;1279
@@ -3654,8 +3654,8 @@ inf;Island;Shetland;10;level1;A subarctic archipelago of Scotland##spn#fra#ger;E
 2131;1264
 2127;1268
 2125;1272
-qst;coaSlovakia##level2#SlovakiaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Slovakia;10;level1;Became an independent state on 1 January 1993 after the peaceful dissolution of Czechoslovakia. Slovakia is a member state of the European Union. Capital: Bratislava##spn#fra#ger;Europe#Central Europe
+qst;coaSlovakia##level4#SlovakiaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Slovakia;10;level3;Became an independent state on 1 January 1993 after the peaceful dissolution of Czechoslovakia. Slovakia is a member state of the European Union. Capital: Bratislava##spn#fra#ger;Europe#Central Europe
 2084;1317
 2081;1316
 2075;1317
@@ -3693,8 +3693,8 @@ inf;State;Slovakia;10;level1;Became an independent state on 1 January 1993 after
 2091;1313
 2088;1315
 2085;1317
-qst;coaSlovenia##level2#SloveniaFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Slovenia;10;level1;Slovenia split from Yugoslavia and became an independent country. In 2004, it entered NATO and the European Union in 2007. Capital: Ljubljana##spn#fra#ger;Europe#Central Europe
+qst;coaSlovenia##level4#SloveniaFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Slovenia;10;level4;Slovenia split from Yugoslavia and became an independent country. In 2004, it entered NATO and the European Union in 2007. Capital: Ljubljana##spn#fra#ger;Europe#Central Europe
 1835;1459
 1839;1459
 1842;1460
@@ -4136,7 +4136,7 @@ inf;State;Spain;10;level1;Spain is the second largest country in Western Europe 
 2083;466
 2078;469
 2077;470
-inf;Island;Svalbard;10;level1;A Norwegian archipelago in the Arctic Ocean, about midway between continental Norway and the North Pole.##spn#fra#ger;Europe#Norway
+inf;Island;Svalbard;10;level5;A Norwegian archipelago in the Arctic Ocean, about midway between continental Norway and the North Pole.##spn#fra#ger;Europe#Norway
 2194;912
 2193;913
 2191;913
@@ -4483,8 +4483,8 @@ inf;State;Sweden;10;level1;Sweden maintains a Nordic social welfare system that 
 1993;1308
 1993;1310
 1989;1314
-qst;coaSwitzerland##level2#SwitzerlandFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Switzerland;10;level1;The establishment of the Swiss Confederation is traditionally dated to 1 August 1291, which is celebrated annually as Swiss National Day. Capital: Bern. Largest city: Zürich##spn#fra#ger;Europe#Central Europe
+qst;coaSwitzerland##level3#SwitzerlandFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Switzerland;10;level3;The establishment of the Swiss Confederation is traditionally dated to 1 August 1291, which is celebrated annually as Swiss National Day. Capital: Bern. Largest city: Zürich##spn#fra#ger;Europe#Central Europe
 2189;1248
 2177;1265
 2178;1268
@@ -4712,8 +4712,8 @@ inf;State;Switzerland;10;level1;The establishment of the Swiss Confederation is 
 2194;1246
 2193;1248
 2190;1249
-qst;coaUkraine##level2#UkraineFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Ukraine;10;level1;Ukraine has long been a global breadbasket because of its extensive, fertile farmlands. In 2011, it was the world's third-largest grain exporter with that year's harvest being much larger than average.Ukraine is one of the ten most attractive agricultural land acquisition regions. Capital: Kiev##spn#fra#ger;Europe#Eastern Europe
+qst;coaUkraine##level3#UkraineFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Ukraine;10;level3;Ukraine has long been a global breadbasket because of its extensive, fertile farmlands. In 2011, it was the world's third-largest grain exporter with that year's harvest being much larger than average.Ukraine is one of the ten most attractive agricultural land acquisition regions. Capital: Kiev##spn#fra#ger;Europe#Eastern Europe
 1887;1227
 1887;1222
 1884;1219
@@ -4762,8 +4762,8 @@ inf;State;Ukraine;10;level1;Ukraine has long been a global breadbasket because o
 1878;1231
 1882;1232
 1886;1228
-qst;coaWales##level2#WalesFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;Wales;10;level1;A country that is part of the United Kingdom and the island of Great Britain. Capital: Cardiff.##spn#fra#ger;Europe#United Kingdom
+qst;coaWales##level4#WalesFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;Wales;10;level4;A country that is part of the United Kingdom and the island of Great Britain. Capital: Cardiff.##spn#fra#ger;Europe#United Kingdom
 1867;1237
 1866;1242
 1862;1244
@@ -4998,6 +4998,6 @@ inf;State;Wales;10;level1;A country that is part of the United Kingdom and the i
 1870;1235
 1870;1237
 1866;1237
-qst;coaUnitedKingdom##level2#UnitedKingdomFlag.png#What county is represented by this flag##spn#fra#ger##
+qst;coaUnitedKingdom##level1#UnitedKingdomFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;United Kingdom;10;level1;The UK consists of four countries: England, Scotland, Wales, and Northern Ireland. The United Kingdom is a developed country and has the world's sixth-largest economy by nominal GDP and eighth-largest by purchasing power parity. It was the world's first industrialised country and the world's foremost power during the 19th and early 20th centuries. Capital: London##spn#fra#ger;Europe#Atlantic Ocean;;Wales#Isle of Man#North Ireland#Scotland
 eof
