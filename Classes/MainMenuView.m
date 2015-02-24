@@ -27,7 +27,6 @@
 		
 		UIScreen *screen = [[UIScreen mainScreen] retain];
 		
-		
 		//put before skyview to make less visible
 		UILabel *copyrightLabel = [[UILabel alloc] init];
 		[copyrightLabel setFrame:CGRectMake(80, 0, 180, 40)];
@@ -39,13 +38,6 @@
 		copyrightLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@""];
 		[self addSubview:copyrightLabel];
 		[copyrightLabel release];
-		
-		
-        /*
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0.5];
-		[self addSubview:m_skyView];
-        */
 		
 		//UIImage *miniLogoImage = [UIImage imageNamed:@"miniLogoMainMenu.png"];
 		NSLog(@"minilogo is:%@",mini_logo_image);
@@ -75,6 +67,16 @@
 		buttonChallengesMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
 		buttonChallengesMenu.center = CGPointMake([screen applicationFrame].size.width/2,220);
 		[self addSubview:buttonChallengesMenu];
+        [buttonChallengesMenu setAlpha:0];
+        
+        
+        
+        activityIndicatorCollectingId = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
+        [self addSubview:activityIndicatorCollectingId];
+        activityIndicatorCollectingId.center = CGPointMake([screen applicationFrame].size.width/2,220);
+        
+        [activityIndicatorCollectingId startAnimating];
+        
 
         /*
 		buttonOtherInfoMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -97,6 +99,7 @@
 		buttonHighscoreMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
 		buttonHighscoreMenu.center = CGPointMake([screen applicationFrame].size.width/2,280);
 		[self addSubview:buttonHighscoreMenu];
+        [buttonHighscoreMenu setAlpha:0];
 
 
 		[screen release];
@@ -113,6 +116,13 @@
     return self;
 }
 
+-(void) ShowChallengeButton
+{
+    [activityIndicatorCollectingId stopAnimating];
+    
+    [buttonChallengesMenu setAlpha:1];
+    [buttonHighscoreMenu setAlpha:1];
+}
 
 -(void)LoadGameObjects
 {

@@ -35,7 +35,7 @@ inf;City;Lhasa;10;level5;Capital of Tibet Autonomous Region. It is the second mo
 3569;2379
 inf;City;Melbourne;10;level4;The capital and most populous city in the state of Victoria, and the second most populous city in Australia. #nor#spn#fra#ger;Oceania#Australia
 2925;1651
-inf;City;Kolkata(Calcutta);10;level1;The capital of the Indian state of West Bengal. Located on the east bank of the Hooghly river#nor#spn#fra#ger;Asia#Indian
+inf;City;Kolkata(Calcutta);10;level4;The capital of the Indian state of West Bengal. Located on the east bank of the Hooghly river#nor#spn#fra#ger;Asia#Indian
 3237;2299
 inf;City;Perth;10;level5;The capital and largest city of the Australian state of Western Australia. It is the fourth most populous city in Australia#nor#spn#fra#ger;Oceania#Australia
 2748;1695

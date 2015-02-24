@@ -16,7 +16,7 @@
 
 @protocol TestViewDelegate;
 
-@interface TestView : UIView <NSXMLParserDelegate,UIWebViewDelegate,ClockDelegate,SoapHelperDelegate,AddExPlrViewCtrlDelegate> {
+@interface TestView : UIView <NSXMLParserDelegate,UIWebViewDelegate,ClockDelegate,AddExPlrViewCtrlDelegate> {
 	id <TestViewDelegate> delegate;
 	UILabel *headerLabel;
 	UIWebView *m_webView;

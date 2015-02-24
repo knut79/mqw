@@ -337,7 +337,7 @@ inf;UnDefRegion;WestIslandIndonesiaNU;10;notUsed;eng#nor#spn#fra#ger
 3171;1900
 3167;1896
 3166;1890;sl
-qst;coaIndonesiaFlag##level3#IndonesiaFlag.png#What asian county is represented by this flag##spn#fra#ger##
+qst;coaIndonesia##level3#IndonesiaFlag.png#What asian county is represented by this flag##spn#fra#ger##
 inf;State;Indonesia;10;level2;Consists of approximately 13,466 islands. Capital: Jakarta##spn#fra#ger;Asia#Borneo;;WestIslandIndonesiaNU#EastIslandIndonesiaNU
 3216;1861
 3224;1859
@@ -411,8 +411,8 @@ inf;State;Cambodia;10;level3;The official religion is Theravada Buddhism. Capita
 3351;2012
 3361;2010
 3366;2009
-qst;coaEastTimorFlag##level4#EastTimorFlag.png#What county is represented by this flag##spn#fra#ger##
-inf;State;EastTimor;10;level4;Timor derives from timur, the word for east in Indonesian and Malay. Capital: Dili##spn#fra#ger;Asia#Capital: Dili
+qst;coaEastTimor##level4#EastTimorFlag.png#What county is represented by this flag##spn#fra#ger##
+inf;State;East Timor;10;level4;Timor derives from timur, the word for east in Indonesian and Malay. Capital: Dili##spn#fra#ger;Asia#Capital: Dili
 3167;1890
 3171;1894
 3176;1893

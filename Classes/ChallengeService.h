@@ -49,5 +49,8 @@ typedef void (^QSBusyUpdateBlock) (BOOL busy);
 - (void) getStaticChallengesForUser:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
 - (void) getDynamicChallengesForUser:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
 
+//test
+- (void) insertTestData:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion;
+
 @end
 

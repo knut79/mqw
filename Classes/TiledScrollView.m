@@ -56,6 +56,8 @@
 	[self removeFromSuperview];
     [reusableTiles release];
     [tileContainerView release];
+    //dealloc when it is its own delegate
+    //test , fails when skip challenge is pushed
     [super dealloc];
 }
 

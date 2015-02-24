@@ -100,11 +100,12 @@
 	slideDifficultyPicker.frame  = CGRectMake(50 + sliderXOffset,60 + sliderYOffset,120,20);
 	slideDifficultyPicker.center = CGPointMake([screen applicationFrame].size.width/2, 120 + sliderYOffset);
 	slideDifficultyPicker.minimumValue = 1;
-	slideDifficultyPicker.maximumValue = 6;
+	slideDifficultyPicker.maximumValue = 5;
 	slideDifficultyPicker.value = 1;
 	[slideDifficultyPicker addTarget:self action:@selector(sliderDifficultyValueChanged:) forControlEvents:UIControlEventValueChanged];
 	[self addSubview:slideDifficultyPicker];		
 	
+    /*
 	modeLabel = [[UILabel alloc] init];
 	[modeLabel setFrame:CGRectMake(0, 0, 200, 30)];
 	modeLabel.center = CGPointMake(([screen applicationFrame].size.width/2)-50, 190 + playersYOffset + 20);
@@ -124,7 +125,7 @@
 	modeSwitch.on = NO; 
 	modeSwitch.center = CGPointMake(([screen applicationFrame].size.width/2) +50, 190 + playersYOffset + 20);
 	[self addSubview: modeSwitch];
-    
+    */
     
     
 	borderLabel = [[UILabel alloc] init];
@@ -172,7 +173,7 @@
 	[self addSubview:buttonBack];
 	
 	
-    
+    /*
 	playerOneTextField = [[UITextField alloc] initWithFrame:CGRectMake(10 + playersXOffset, 100 + playersYOffset, 150, 27)];
 	playerOneTextField.center = CGPointMake(([screen applicationFrame].size.width/2) - 10, 130 + playersYOffset);
 	playerOneTextField.clearsOnBeginEditing = YES;
@@ -192,7 +193,7 @@
     playerOneTextField.layer.borderColor=[[UIColor redColor]CGColor];
     playerOneTextField.layer.borderWidth= 2.0f;
     playerOneTextField.autocorrectionType = UITextAutocorrectionTypeNo;
-	[self addSubview:playerOneTextField];
+	[self addSubview:playerOneTextField];*/
 	
 
 	slideGameTypePicker = [[UISlider alloc] init];
@@ -210,7 +211,7 @@
 	[screen release];
 }
 
-
+/*
 - (IBAction)flipMode:(id)sender {
 	
 	[UIView beginAnimations:nil context:NULL];
@@ -222,7 +223,7 @@
 	if (modeSwitch.on) 
 	{
 		[miniLabel setAlpha:0];
-		[playerOneTextField setAlpha:0];
+		//[playerOneTextField setAlpha:0];
 		[UIView setAnimationDidStopSelector:@selector(doMoveOn)];
 		headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start training"];
 		[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start training"] forState:UIControlStateNormal];
@@ -231,13 +232,14 @@
 	else
 	{
 		[miniLabel setAlpha:1];
-		[playerOneTextField setAlpha:0.5];
+		//[playerOneTextField setAlpha:0.5];
 		headerLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start Game"];
 		[buttonStart setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Start game"] forState:UIControlStateNormal];
 	}
 	
 	[UIView commitAnimations];	
 }
+*/
 
 - (IBAction) sliderDifficultyValueChanged:(UISlider *)sender {  
 	[self UpdateSliderDifficultyValue];
@@ -250,21 +252,10 @@
 
 -(void) UpdateSliderDifficultyValue
 {
-    /*
-	NSString *value = [[NSString alloc] initWithString:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"easy"]];
-	if ([slideDifficultyPicker value] >= 1.5) {
-		
-		if([slideDifficultyPicker value] >= 2.5)
-		{
-			value = [[[GlobalSettingsHelper Instance] GetStringByLanguage:@"hard"] retain];
-		}
-		else {
-			value = [[[GlobalSettingsHelper Instance] GetStringByLanguage:@"normal"] retain];
-		}
-	}*/
+
 	miniLabel.text = [NSString stringWithFormat:@"%@: %i",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Level"],(int)[slideDifficultyPicker value]];
     difficultyLabel.text = [NSString stringWithFormat:@"%@: %i",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"],(int) [slideDifficultyPicker value]];
-	//[value release];
+
 }
 
 -(void)goBack:(id)Sender
@@ -278,7 +269,7 @@
 {
 	slideDifficultyPicker.value = 1;
 	[self UpdateSliderDifficultyValue];
-	modeLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
+	//modeLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Training mode:"];
 
 	[buttonBack setTitle:[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Back"] forState:UIControlStateNormal];
 	difficultyLabel.text = [NSString stringWithFormat:@"%@: %@",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Difficulty"],@"1"];
@@ -301,7 +292,7 @@
 	return [pickerArray objectAtIndex:row];
 }
 
-		 
+/*
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
 	
 	NSString *value = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -320,11 +311,12 @@
 	
 	return YES;	
 }
+*/
 
 -(void)startGame:(id)Sender
 {
 
-    m_player = [[Player alloc] initWithName:[[GlobalSettingsHelper Instance] GetPlayerName] andColor:playerOneTextField.textColor andPlayerSymbol:@"ArrowRed.png"];
+    m_player = [[Player alloc] initWithName:[[GlobalSettingsHelper Instance] GetPlayerName] andColor:[UIColor redColor] andPlayerSymbol:@"ArrowRed.png"];
 
 
 	Difficulty vDifficulty = level1;
@@ -350,10 +342,15 @@
 		m_game = [[Game alloc] init] ;
 	}
 
+    /*
 	if (modeSwitch.on == YES) 
 		[m_game SetGameMode:trainingMode];
 	else
 		[m_game SetGameMode:regularMode];
+    */
+    
+    
+    [m_game SetGameMode:regularMode];
     
     if (borderSwitch.on == YES)
 		[m_game SetMapBorder:YES];
@@ -368,14 +365,10 @@
 	
 	
 	//need to be sure the keyboard is closed, its only for player games this is necessary
-	[playerOneTextField resignFirstResponder];
+	//[playerOneTextField resignFirstResponder];
 
 	[self FadeOutAndStartGame];
 }
-
-
-
-
 
 -(void) ShowLoadingGameObjects
 {

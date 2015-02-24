@@ -16,7 +16,7 @@
 
 @protocol GameEndedViewDelegate;
 
-@interface GameEndedView : UIView<ADBannerViewDelegate,SoapHelperDelegate,ChallengeViewControllerDelegate> {
+@interface GameEndedView : UIView<ADBannerViewDelegate,ChallengeViewControllerDelegate> {
 	id <GameEndedViewDelegate> delegate;
 	NSMutableArray *m_playerNameLabelsArray;
 	NSMutableArray *m_playerDistanceLabelsArray;
@@ -35,7 +35,7 @@
 	NSInteger m_numberOfPlayersToAnimate;
 	Player *m_playerRef;
     
-    SoapHelper* ssb;
+    //SoapHelper* ssb;
     UIButton* challengeButton;
     UIButton* exitButton;
     Game* m_gameRef;

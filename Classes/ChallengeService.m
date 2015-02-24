@@ -154,6 +154,18 @@
     }];
 }
 
+- (void) insertTestData:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion
+{
+    //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
+    [self.client
+     invokeAPI:@"test"
+     data:nil
+     HTTPMethod:@"POST"
+     parameters:jsonDictionary
+     headers:nil
+     completion:completion ];
+}
+
 - (void) sendChallenge:(NSDictionary*) jsonDictionary completion:(MSAPIDataBlock)completion
 {
     //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
@@ -170,7 +182,7 @@
 {
     //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
     [self.client
-     invokeAPI:@"staticchallenge"
+     invokeAPI:@"StaticChallenge"
      data:nil
      HTTPMethod:@"GET"
      parameters:jsonDictionary
@@ -182,7 +194,7 @@
 {
     //NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys: @"1", @"level", nil];
     [self.client
-     invokeAPI:@"highscorerank"
+     invokeAPI:@"DynamicChallenge"
      data:nil
      HTTPMethod:@"GET"
      parameters:jsonDictionary

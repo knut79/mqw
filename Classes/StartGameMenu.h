@@ -28,7 +28,7 @@
 	UILabel *headerLabel;
 	//UILabel *infoOrGlobalIDLabel;
 	
-	UITextField *playerOneTextField;
+	//UITextField *playerOneTextField;
 
 	UIButton *buttonBack;
 	UIButton *buttonStart;
@@ -48,8 +48,10 @@
 
 	UILabel *miniLabel;
 	
+    /*
 	UISwitch *modeSwitch;
 	UILabel *modeLabel;
+    */
     
     UISwitch *borderSwitch;
 	UILabel *borderLabel;

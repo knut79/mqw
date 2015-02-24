@@ -392,24 +392,7 @@
     }
 
 
-    //set score via webservice . This view must be user inactive . enable when not singleplayer. On singleplayer enable when no connection or when result is recived
-    //get global position
-    ssb = [[SoapHelper alloc] init];
-    [ssb setDelegate:self];
-    [ssb setScore];
-    //give notice if points are better than current global score (result from setscorebridge.setscore) V
-    
-    
-    //if challenge is taken , inform if this is won or lost. X
-    //else just ask if user wants to challenge someone X
-    
-       
-    
-    //set up 
-    //button "challenge friends" -> opens new view where contacts with emails can be added, emails can be manually written or (search /Users/lambchopnot/Projects/MQNorway/MQNorway/Classes/QuestionBarViewTop.mup users)
-    //button "rechallenge" , if challenge taken was won  -> when pressed spinning -> enable button with text "rechallenge of user sendt" eller "no connection with server"
-    //
-    //and button "continue without challenge"
+
 
     m_globalHighscoreLabel.textAlignment = NSTextAlignmentCenter;
     m_globalHighscoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  235);
@@ -472,7 +455,7 @@
 #pragma mark challengeViewControllerDelegate
 -(void) cleanUpChallengView
 {
-    [challengeViewController removeFromParentViewController];
+    //[challengeViewController removeFromParentViewController];
     challengeViewController = nil; 
 }
 
@@ -630,7 +613,7 @@
     m_tapWhenReadyLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap when ready"];
 	m_tapWhenReadyLabel.center = CGPointMake([screen applicationFrame].size.width/2, 270);
     
-    m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[ssb getUserMessage]];
+    //m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[ssb getUserMessage]];
     [screen release];
 }
 
@@ -641,7 +624,7 @@
     m_tapWhenReadyLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Tap when ready"];
 	m_tapWhenReadyLabel.center = CGPointMake([screen applicationFrame].size.width/2, 270);
     
-    m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[ssb getUserMessage]];
+    //m_globalHighscoreLabel.text = [NSString stringWithFormat:@"%@",[ssb getUserMessage]];
     [screen release];
 }
 

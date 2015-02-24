@@ -39,9 +39,10 @@
 		headerLabel.layer.shadowOpacity = 1.0;
 		[self addSubview:headerLabel];
         
+        /*
         SoapHelper* ssb = [[SoapHelper alloc] init];
         [ssb setDelegate:self];
-        [ssb setScore];
+        [ssb setScore];*/
 		
 		clockView = [[ClockView alloc] init];
 //		//clockView.center = CGPointMake([screen applicationFrame].size.width/2, 90 + (m_webView.frame.size.height/2));

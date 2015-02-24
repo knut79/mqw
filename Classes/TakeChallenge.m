@@ -113,7 +113,7 @@
     
     
     [self getStaticChallenges];
-    //[self getDynamicChallenges];
+    [self getDynamicChallenges];
 }
 
 - (void)viewDidUnload
@@ -134,9 +134,37 @@
     
     NSString *playerId = [[GlobalSettingsHelper Instance] GetPlayerID];
     //HighscoreService* highscoreService = [HighscoreService defaultService];
-    
-    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+    /*
+    NSDictionary *jsonDictionaryTest = [NSDictionary dictionaryWithObjectsAndKeys:
                                     playerId, @"id",nil];
+    
+    
+    [self.challengeService insertTestData:jsonDictionaryTest completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
+     {
+         if (error)
+         {
+             NSLog(@"Error %@",error);
+             
+             [activityIndicatorStaticChallenges stopAnimating];
+             [activityIndicatorStaticChallenges setAlpha:0];
+             
+             
+             NSString* errorMessage = @"Problem collecting data! ";
+             //errorMessage = [errorMessage stringByAppendingString:[error localizedDescription]];
+             UIAlertView* myAlert = [[UIAlertView alloc]
+                                     initWithTitle:@"Error!"
+                                     message:errorMessage
+                                     delegate:nil
+                                     cancelButtonTitle:@"Push retry"
+                                     otherButtonTitles:nil];
+             [myAlert show];
+             
+             retryButton.hidden = NO;
+         }
+     }];
+    */
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    playerId, @"id",@"true",@"getcompleted",@"true",@"getnotcompleted",nil];
     
     [self.challengeService getStaticChallengesForUser:jsonDictionary completion:^(NSData* result, NSHTTPURLResponse* response, NSError* error)
      {
@@ -203,29 +231,6 @@
                      [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
                  }
                  
-                 /*
-                 NSMutableArray *test = [[NSMutableArray alloc] init];
-                 if (ind == 0) {
-                     [test addObject:@"qs00_Benin"];
-                     [test addObject:@"qs00_Angola"];
-                     [test addObject:@"asdf"];
-                     [test addObject:@"coaAngola"];
-                     
-                     [datasourceStaticArray addObject:@"1st static test"];
-                     [staticChallengeDataCache setValue:test forKey:@"1st static test"];
-                 }
-                 else if (ind == 1)
-                 {
-                     [test addObject:@"coaAngola"];
-                     [test addObject:@"qs00_Benin"];
-                     [test addObject:@"qs00_Angola"];
-                     
-                     [datasourceStaticArray addObject:@"2nd static test"];
-                     [staticChallengeDataCache setValue:test forKey:@"2nd static test"];
-                     
-                 }
-                 else
-                 {*/
                  
                 [datasourceStaticArray addObject:[jsonObject objectForKey:@"title"]];
                 [staticChallengeDataCache setValue:[[jsonObject objectForKey:@"questionIds"] componentsSeparatedByString:@";"] forKey:[jsonObject objectForKey:@"title"]];
@@ -244,7 +249,7 @@
                  {
                      [staticChallengeDataCache setValue:@NO forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"completed"]];
                  }
-                 //}
+                 
                  
                  ind ++;
              }
@@ -332,7 +337,25 @@
                      [newStr deleteCharactersInRange: NSMakeRange(0, newStr.length)];
                  }
                  
-                 [datasourceDynamicArray addObject:[jsonObject objectForKey:@"username"]];
+
+                 [datasourceDynamicArray addObject:[jsonObject objectForKey:@"title"]];
+                 [dynamicChallengeDataCache setValue:[[jsonObject objectForKey:@"questionIds"] componentsSeparatedByString:@";"] forKey:[jsonObject objectForKey:@"title"]];
+                 if ([jsonObject objectForKey:@"borders"] != NULL) {
+                     [dynamicChallengeDataCache setValue:@YES forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"borders"]];
+                 }
+                 else
+                 {
+                     [dynamicChallengeDataCache setValue:@NO forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"borders"]];
+                 }
+                 
+                 if ([jsonObject objectForKey:@"completed"] != NULL) {
+                     [dynamicChallengeDataCache setValue:@YES forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"completed"]];
+                 }
+                 else
+                 {
+                     [dynamicChallengeDataCache setValue:@NO forKey:[NSString stringWithFormat:@"%@_%@",[jsonObject objectForKey:@"title"],@"completed"]];
+                 }
+                 
                  
                  ind ++;
              }
@@ -384,6 +407,7 @@
     }
     else
     {
+        currentCompletedValue = [[dynamicChallengeDataCache objectForKey:[NSString stringWithFormat:@"%@_%@",[datasourceDynamicArray objectAtIndex:[indexPath row] ],@"completed"]] boolValue];
         cell.textLabel.text = [NSString	 stringWithFormat:@"%@",[datasourceDynamicArray objectAtIndex:[indexPath row]]];
     }
     
@@ -430,6 +454,8 @@
         alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceDynamicArray objectAtIndex:[indexPath row]]];
     	alertDynamicChallenge = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceDynamicArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
         currentQuestonIds = [dynamicChallengeDataCache objectForKey:[datasourceDynamicArray objectAtIndex:[indexPath row]]];
+        currentBorderValue = [[dynamicChallengeDataCache objectForKey:[NSString stringWithFormat:@"%@_%@",[datasourceDynamicArray objectAtIndex:[indexPath row] ],@"borders"]] boolValue];
+        currentCompletedValue = [[dynamicChallengeDataCache objectForKey:[NSString stringWithFormat:@"%@_%@",[datasourceDynamicArray objectAtIndex:[indexPath row] ],@"completed"]] boolValue];
         [alertDynamicChallenge show];
     	[alertDynamicChallenge release];
     }
@@ -442,6 +468,7 @@
 		{
 			NSLog(@"no button was pressed\n");
             [staticChallengesTableView reloadData];
+            [dynamicChallengesTableView reloadData];
             
 		}
 		else
@@ -464,7 +491,7 @@
 
             
             [self.view setAlpha:0];
-            [self dealloc];
+            //[self dealloc];
             
             if ([delegate respondsToSelector:@selector(cleanUpStartGameMenuAndStart:)])
                 [delegate cleanUpStartGameMenuAndStart:m_game];

@@ -62,12 +62,13 @@
     
 	CGRect t_testRect = CGRectMake(0, 0, testWidth * val2, testHeight * val2);
     
-    mask = CGImageMaskCreate( constMapWidth,constMapHeight ,
-							 CGImageGetBitsPerComponent(maskRef),
-							 CGImageGetBitsPerPixel(maskRef),
-							 CGImageGetBytesPerRow(maskRef),
-							 CGImageGetDataProvider(maskRef), NULL, false);
-    
+
+    mask = CGImageMaskCreate( CGImageGetWidth(maskRef),
+                             CGImageGetHeight(maskRef),
+                             CGImageGetBitsPerComponent(maskRef),
+                             CGImageGetBitsPerPixel(maskRef),
+                             CGImageGetBytesPerRow(maskRef),
+                             CGImageGetDataProvider(maskRef), NULL, false);
     
     
 	CGContextClipToMask(context, t_testRect, mask);

@@ -1905,7 +1905,7 @@ inf;State;Saint Lucia;10;level4;Independent 1979. Capital: Castries##spn#fra#ger
 1222;1765
 1224;1762
 1222;1761
-qst;coaVincentAndTheGrenadines##level5#SaintVincentAndTheGrenadinesFlag.png#What county is represented by this flag?##spn#fra#ger##
+qst;coaSaintVincentAndTheGrenadines##level5#SaintVincentAndTheGrenadinesFlag.png#What county is represented by this flag?##spn#fra#ger##
 inf;State;Saint Vincent and the Grenadines;10;level4;Capital: Kingstown##spn#fra#ger;America#Caribbean
 1269;1845
 1270;1845

@@ -267,6 +267,12 @@ inf;State;Angola;10;level1;Has vast mineral and petroleum reserves. Capital: Lua
 1951;1840
 qst;coaBenin##level2#BeninFlag.png#What county is represented by this flag##spn#fra#ger##
 inf;State;Benin;10;level1;A Marxist-Leninist state called the People's Republic of Benin existed between 1972 and 1990. A majority of the population live on its small southern coastline. Capital: Porto-Novo##spn#fra#ger;Africa#Small stripe
+2956;1560
+inf;City;Lhasa;10;level1;Capital of Tibet Autonomous Region. It is the second most populous city on the Tibetan Plateau after Xining and, at an altitude of 3,490 metres #nor#spn#fra#ger;Asia#Tibet
+3569;2379
+inf;City;Melbourne;10;level1;The capital and most populous city in the state of Victoria, and the second most populous city in Australia. #nor#spn#fra#ger;Oceania#Australia
+2925;1651
+inf;City;Kolkata(Calcutta);10;level1;The capital of the Indian state of West Bengal. Located on the east bank of the Hooghly river#nor#spn#fra#ger;Asia#Indian
 eof
 
 qst;coaAb##level2#AbFlag.png#What county is represented by this flag##spn#fra#ger##

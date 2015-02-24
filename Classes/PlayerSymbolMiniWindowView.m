@@ -205,11 +205,6 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetRGBStrokeColor(context, 1.0, 0, 0, 1);
     
-    /*
-    CGContextSetLineWidth(context, 2.0);
-    CGFloat dash[] = {0.0, 3.0};
-    CGContextSetLineCap(context, kCGLineCapButt);
-    CGContextSetLineDash(context, 0.0, dash, 4);*/
     int placeXToDrawAgainst = playerSymbolLocation.x + placePointDiff.x + placePointManipulateX;
     int placeYToDrawAgainst = playerSymbolLocation.y + placePointDiff.y;
     CGContextMoveToPoint(context, playerSymbolLocation.x, playerSymbolLocation.y);
@@ -218,11 +213,6 @@
     CGContextClosePath(context);
     CGContextStrokePath(context);
     
-    //reset line draw attributest
-    /*
-    CGContextSetLineWidth(context, 1.0);
-    CGContextSetLineDash(context, 0, NULL, 0);
-    */
     
     xSelfPosition = placeXToDrawAgainst < 40 ? (320-40) : 40;
     ySelfPosition = placeYToDrawAgainst < 40 ? (480 -90) : 90;

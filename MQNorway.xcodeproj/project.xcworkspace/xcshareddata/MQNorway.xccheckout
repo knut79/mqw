@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2E274C33-051C-4A4A-A9C1-38D3F1912C82</string>
+	<string>475224D5-D48D-491C-A241-2F670C42D9A2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MQNorway</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9ADFE750-FD24-4634-B6BA-F9EAA3105A21</key>
+		<key>9DF0FEE09B41E5F2494360E7590731FE047F8735</key>
 		<string>https://github.com/knut79/mqw.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MQNorway.xcodeproj/project.xcworkspace</string>
+	<string>MQNorway.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9ADFE750-FD24-4634-B6BA-F9EAA3105A21</key>
+		<key>9DF0FEE09B41E5F2494360E7590731FE047F8735</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/knut79/mqw.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9ADFE750-FD24-4634-B6BA-F9EAA3105A21</string>
+	<string>9DF0FEE09B41E5F2494360E7590731FE047F8735</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9ADFE750-FD24-4634-B6BA-F9EAA3105A21</string>
+			<string>9DF0FEE09B41E5F2494360E7590731FE047F8735</string>
 			<key>IDESourceControlWCCName</key>
 			<string>mqw</string>
 		</dict>

@@ -26,8 +26,10 @@
     UIButton *buttonChallengesMenu;
     UIButton * buttonHighscoreMenu;
     TakeChallenge* takeChallengeViewCtrl;
+    
+    UIActivityIndicatorView *activityIndicatorCollectingId;
 }
-
+-(void) ShowChallengeButton;
 - (void)SettingsMenuViewHiding;
 -(void) FadeIn;
 -(void) FadeOut;

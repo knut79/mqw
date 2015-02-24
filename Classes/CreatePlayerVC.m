@@ -272,6 +272,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [userService writeItemItNotExists:item predicate:predicate completion:^{
     
         
+        if ([delegate respondsToSelector:@selector(updateMainMenuReadyForChallenge)])
+            [delegate updateMainMenuReadyForChallenge];
         
         //[self testCode];
         

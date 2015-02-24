@@ -357,7 +357,7 @@ inf;UnDefRegion;BjornoyaNorwayNU;10;notUsed;eng#nor#spn#fra#ger
 2093;1158
 2090;1155
 2086;1155
-inf;Island;Bornholm;10;level1;A Danish island in the Baltic Sea, to the east of most of Denmark, south of Sweden, and north of Poland. Strategically located in the Baltic Sea, Bornholm has been fought over for centuries. It has usually been ruled by Denmark, but also by Lübeck and Sweden.##spn#fra#ger;Europe#Baltic Sea
+inf;Island;Bornholm;10;level5;A Danish island in the Baltic Sea, to the east of most of Denmark, south of Sweden, and north of Poland. Strategically located in the Baltic Sea, Bornholm has been fought over for centuries. It has usually been ruled by Denmark, but also by Lübeck and Sweden.##spn#fra#ger;Europe#Baltic Sea
 1833;1007
 1837;1009
 1839;1009

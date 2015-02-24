@@ -148,7 +148,7 @@
             }
             break;
         default:
-            if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:level5 gameMode:m_gameMode] count])
+            if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty gameMode:m_gameMode] count])
             {
                 moreQuestions = NO;
             }

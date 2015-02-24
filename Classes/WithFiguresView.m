@@ -358,6 +358,21 @@
         //float rowVar1 = (mapSize.height/256);
         int maxRow = (int)(rowVar2 + rowVar3  + 0.5);
         
+        
+        //hack
+        if (tiledMapViewResolutionPercentage == 25) {
+            maxRow = maxRow > 2 ? 2 : maxRow;
+            maxCol = maxCol > 3 ? 3 : maxCol;
+        }
+        if (tiledMapViewResolutionPercentage == 50) {
+            maxRow = maxRow > 5 ? 5 : maxRow;
+            maxCol = maxCol > 7 ? 7 : maxCol;
+        }
+        if (tiledMapViewResolutionPercentage == 100) {
+            maxRow = maxRow > 11 ? 11 : maxRow;
+            maxCol = maxCol > 15 ? 15 : maxCol;
+        }
+        
         //dont draw the map upside down
         CGContextScaleCTM(context, 1.0, -1.0);
         long tileStandardHeight = 0;
@@ -502,7 +517,7 @@
         CGContextSetLineWidth(context, 2.0);
         CGFloat dash[] = {0.0, 3.0};
         CGContextSetLineCap(context, kCGLineCapButt);
-        CGContextSetLineDash(context, 0.0, dash, 4);
+        CGContextSetLineDash(context, 0.0, dash, 2);
 		CGContextMoveToPoint(context, nearestPoint.x, nearestPoint.y);
 		CGContextAddLineToPoint( context, scaledGamePoint.x,scaledGamePoint.y);
 		CGContextStrokePath(context);
@@ -512,14 +527,6 @@
         CGContextSetLineDash(context, 0, NULL, 0);
         
 	}
-	//draw player symbol
-    /*
-	NSString *playerSymbolFileName = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:playerSymbol] retain];
-	UIImage *playerSymbolUIImage = [[UIImage imageWithContentsOfFile:playerSymbolFileName] retain];
-	CGImageRef playerSymbolRef = playerSymbolUIImage.CGImage;
-	CGContextDrawImage (context,CGRectMake(scaledGamePoint.x - 15, scaledGamePoint.y - 15, 30, 30),playerSymbolRef);
-	[playerSymbolFileName release];
-	[playerSymbolUIImage release];*/
 	
 	return distanceBetweenPoints;
 }
@@ -552,13 +559,15 @@
 
 	CGRect t_testRect = CGRectMake(0, 0, testWidth * val2, testHeight * val2);
 
-    mask = CGImageMaskCreate( constMapWidth ,constMapHeight ,
-							 CGImageGetBitsPerComponent(maskRef),
-							 CGImageGetBitsPerPixel(maskRef),
-							 CGImageGetBytesPerRow(maskRef),
-							 CGImageGetDataProvider(maskRef), NULL, false);
-    
 
+    mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                        CGImageGetHeight(maskRef),
+                                        CGImageGetBitsPerComponent(maskRef),
+                                        CGImageGetBitsPerPixel(maskRef),
+                                        CGImageGetBytesPerRow(maskRef),
+                                        CGImageGetDataProvider(maskRef), NULL, false);
+    
+    
     
 	CGContextClipToMask(context, t_testRect, mask);
 	CGImageRelease(mask);
@@ -573,7 +582,6 @@
     
     boundsOfRegion = CGRectMake(minX, minY, maxX - minX, maxY-minY);
     boundsOfRegion = CGRectOffset(boundsOfRegion, -tilesMapViewBounds.origin.x,-tilesMapViewBounds.origin.y);
-    NSLog(@"bounds region default set");
     
     self.sectionFiguresView.viewref = self;
     self.sectionFiguresView.location = loc;
@@ -850,7 +858,7 @@
             CGContextSetLineWidth(context, 2.0);
             CGFloat dash[] = {0.0, 3.0};
             CGContextSetLineCap(context, kCGLineCapButt);
-            CGContextSetLineDash(context, 0.0, dash, 4);
+            CGContextSetLineDash(context, 0.0, dash, 2);
 
 			CGContextMoveToPoint(context, realMapGamePoint.x, realMapGamePoint.y);
 			CGContextAddLineToPoint( context, placeGamePoint.x,placeGamePoint.y);

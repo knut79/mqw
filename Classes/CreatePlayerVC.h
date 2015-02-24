@@ -33,5 +33,6 @@
 
 @protocol CreatePlayerVCDelegate <NSObject>
 @optional
+-(void) updateMainMenuReadyForChallenge;
 -(void) cleanUpCreatePlayerVC;
 @end

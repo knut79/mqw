@@ -96,6 +96,11 @@
     [self FirstLoad];
 }
 
+-(void) updateMainMenuReadyForChallenge
+{
+    [mainMenuView ShowChallengeButton];
+}
+
 -(void) showMessage
 {
     [message show];
@@ -710,9 +715,12 @@
 {
     [self RemoveGameElementsForPlayer];
 
+    
     UIScreen *screen = [[UIScreen mainScreen] retain];
     CGRect regionBoundsRect = resultBoardView.boundsOfRegion;
-    if (regionBoundsRect.size.width > 0 && regionBoundsRect.size.height > 0) {
+    Question *question = [[m_gameRef GetQuestion] retain];
+    MpLocation *loc = [[question GetLocation] retain];
+    if (regionBoundsRect.size.width > 0 && regionBoundsRect.size.height > 0 && [loc isKindOfClass:[MpRegion class]] == YES) {
         CGPoint regionBoundsPoint = CGPointMake(regionBoundsRect.origin.x + (regionBoundsRect.size.width/2), regionBoundsRect.origin.y + (regionBoundsRect.size.height/2));
         float scaleFactor = ([screen applicationFrame].size.width * 0.5)/regionBoundsRect.size.width;
 
@@ -739,6 +747,9 @@
     }
 
     [screen release];
+    [question release];
+    [loc release];
+    
     
     [self prepareForNextQuestion];
    
@@ -881,6 +892,7 @@
 		//mainMenuView.hidden = NO;
 		[[self view] addSubview:mainMenuView];
 	}
+    [mainMenuView ShowChallengeButton];
     
     [mainMenuView FadeIn];
 }
@@ -894,7 +906,7 @@
     [m_gameEndedView removeFromSuperview];
     m_gameEndedView = nil;
     
-    [self RemoveGameBoardAndBars];
+    //[self RemoveGameBoardAndBars];
     [self cleanUpGameElements];
     
     [self DisplayMainMenu];
@@ -970,13 +982,15 @@
 -(void) RemoveGameBoardAndBars
 {
 
+    /*
     [playingBoardView removeFromSuperview];
     [playingBoardView dealloc];
     playingBoardView = nil;
 
+    /*
     [resultBoardView removeFromSuperview];
     [resultBoardView dealloc];
-    resultBoardView = nil;
+    resultBoardView = nil;*/
 
     [directionsTouchView removeFromSuperview];
     [directionsTouchView dealloc];
@@ -995,10 +1009,11 @@
     [answerBarTop dealloc];
     answerBarTop = nil;
 
+    /*
     [touchImageView removeFromSuperview];
     [touchImageView dealloc];
     touchImageView = nil;
-
+*/
 }
 
 
@@ -1034,6 +1049,7 @@
         //[mainMenuView dealloc];
         mainMenuView = nil;
     }
+    
     
     
     //if first time , startNEwGame will be called through firstTimeInstructions
@@ -1232,7 +1248,7 @@
 -(void) QuitGame
 {
     [self RemoveGameBoardAndBars];
-    [self cleanUpGameElements];
+    //[self cleanUpGameElements];
     
 	[self DisplayMainMenu];
 }
@@ -1243,6 +1259,7 @@
     [loop dealloc];
     loop = nil;
     [clockView stop];
+    
     [clockView removeFromSuperview];    
     [clockView dealloc];
     clockView = nil;
@@ -1255,9 +1272,11 @@
     [hintButton removeFromSuperview];
     [hintButton dealloc];
     hintButton = nil;
+    /*
     [resultBoardView removeFromSuperview];
     [resultBoardView dealloc];
     resultBoardView = nil;
+     */
 }
 
 #pragma mark HintButtonViewDelegate
