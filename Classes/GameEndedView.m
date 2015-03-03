@@ -20,6 +20,8 @@
 - (id)initWithFrame:(CGRect)frame{
     if ((self = [super initWithFrame:frame])) {
         
+        //m_gameRef = gameRef;
+        
         self.highscoreService = [HighscoreService defaultService];
         
         // Initialization code
@@ -28,7 +30,6 @@
 		
 		m_labelsXoffset = 0;
 		m_labelsYoffset = 0;
-
         
 		m_playerNameLabelsArray = [[NSMutableArray alloc] init];
 		for (int i = 0; i < 4; i++) {
@@ -48,8 +49,6 @@
 				playerNameLabel.shadowOffset = CGSizeMake(-1,-2);
 			}
 
-			
-			
 			[playerNameLabel setFrame:CGRectMake(0, 0, 300, 20)];
 			[m_playerNameLabelsArray addObject:playerNameLabel];
 			[self addSubview:playerNameLabel];
@@ -107,7 +106,7 @@
 		m_header.shadowOffset = CGSizeMake(-1,-2);
         m_header.textColor = [UIColor whiteColor];
 		m_header.adjustsFontSizeToFitWidth = YES;
-		[m_header setAlpha:0];
+		[m_header setAlpha:1];
 		[self addSubview:m_header];
         
 		m_questionsPassedLabel = [[UILabel alloc] init];
@@ -210,6 +209,7 @@
 -(void)setGameRef:(Game*) gameRef
 {
     m_gameRef = gameRef;
+    [self setHeader];
 }
 
 -(void) sendHighscoreToServer

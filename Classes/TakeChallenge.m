@@ -111,6 +111,7 @@
     
     self.challengeService = [ChallengeService defaultService];
     
+ 
     
     [self getStaticChallenges];
     [self getDynamicChallenges];
@@ -418,17 +419,30 @@
     {
         if (currentCompletedValue)
         {
-            [cell setCellColor:[UIColor greenColor]];
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
         }
         else
-            [cell setCellColor:[UIColor lightGrayColor ] ];
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+
+        cell.textLabel.textColor = [UIColor whiteColor];
+        //cell.backgroundColor = lightBlueColor;
+        [cell setCellColor:[UIColor lightGrayColor ] ];
+
     }
     else
     {
         if (currentCompletedValue)
-            [cell setCellColor:[ UIColor greenColor] ];
+        {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
         else
-            [cell setCellColor:[ UIColor grayColor ] ];
+        {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        cell.textLabel.textColor = [UIColor whiteColor];
+        [cell setCellColor:[ UIColor grayColor ] ];
     }
 
     return cell;

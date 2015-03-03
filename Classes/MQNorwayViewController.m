@@ -1212,9 +1212,11 @@
 		[m_gameRef SetGameState:outOfGame];
 		if ([m_gameRef IsTrainingMode] == NO) {
 
+            //TODO: check if nil second time around
+            //TODO: setup as static challenge, dynamic challenge or regular
             if(m_gameEndedView == nil)
 			{
-				m_gameEndedView = [[GameEndedView alloc] initWithFrame:[[self view] bounds]];
+                m_gameEndedView = [[GameEndedView alloc] initWithFrame:[[self view] bounds]];
 				[m_gameEndedView setDelegate:self];
 				[[self view] addSubview:m_gameEndedView];
 			}

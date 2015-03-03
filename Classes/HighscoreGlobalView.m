@@ -341,7 +341,11 @@
 	[subheaderLabel setAlpha:0];
 	subheaderLabel.center = centerPoint;
 	
+    [UIView commitAnimations];
+    
     [self showPlayerHighscore:[NSNumber numberWithInt:m_showingLevel]];
+    
+    
 }
 
 -(void) finishedMovingLabelsIn

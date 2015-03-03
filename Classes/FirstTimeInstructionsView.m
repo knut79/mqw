@@ -26,17 +26,57 @@
         
 		self.opaque = NO;
 		
-        /*
-		m_skyView = [[SkyView alloc] initWithFrame:frame];
-		[m_skyView setAlpha:0.8];
-		[self addSubview:m_skyView];*/
+        //[screen applicationFrame].size.height/2;
        
 		
+        float topmargin = 0.1;
+        //10% top margin
+        float middlehortizontalmargin = 0.06;
+        //10% middle
+        float pictureheight = 0.3;
+        //30% for picture height
+        //30% bottom margin
+
+        float middleverticalmargin = 0.1;
+        //10% middlevertialmargin
+        float leftmargin = 0.1;
+        //10% left margin , 20% middle, 10% right margin
+        float picturewidth = 0.4;
+        //40% width pr picture
+        
+        //
 		UIImage *dragToMoveImage = [UIImage imageNamed:@"DragToMoveInstr.png"];
-		UIImageView *dragToMoveImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 191)];
-		dragToMoveImageView.center = CGPointMake(([screen applicationFrame].size.width /4 ) + 20, (dragToMoveImageView.frame.size.height /2 ) +35);
+        //150 * 191
+		UIImageView *dragToMoveImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [screen applicationFrame].size.width * picturewidth, [screen applicationFrame].size.height * pictureheight)];
+		dragToMoveImageView.center = CGPointMake((dragToMoveImageView.frame.size.width/2) +
+                                                 [screen applicationFrame].size.width * leftmargin , (dragToMoveImageView.frame.size.height/2) +
+                                                 [screen applicationFrame].size.height * topmargin);
 		[dragToMoveImageView setImage:dragToMoveImage];
 		[self addSubview:dragToMoveImageView];
+        
+        UIImage *tapToMoveImage = [UIImage imageNamed:@"TapToMoveInstr.png"];
+        UIImageView *tapToMoveImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [screen applicationFrame].size.width * picturewidth, [screen applicationFrame].size.height * pictureheight)];;
+        tapToMoveImageView.center = CGPointMake((tapToMoveImageView.frame.size.width/2) +
+                                                [screen applicationFrame].size.width * (leftmargin+picturewidth + middlehortizontalmargin),(tapToMoveImageView.frame.size.height/2) +
+                                                [screen applicationFrame].size.height * topmargin);
+        [tapToMoveImageView setImage:tapToMoveImage];
+        [self addSubview:tapToMoveImageView];
+        
+        UIImage *zoomInImage = [UIImage imageNamed:@"ZoomInInstr.png"];
+        UIImageView *zoomInImageImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [screen applicationFrame].size.width * picturewidth, [screen applicationFrame].size.height * pictureheight)];;
+        zoomInImageImageView.center = CGPointMake((zoomInImageImageView.frame.size.width/2) +
+                                                  [screen applicationFrame].size.width * leftmargin, (zoomInImageImageView.frame.size.height/2) +
+                                                  [screen applicationFrame].size.height * (topmargin+pictureheight + middleverticalmargin));
+        [zoomInImageImageView setImage:zoomInImage];
+        [self addSubview:zoomInImageImageView];
+        
+        UIImage *zoomOutImage = [UIImage imageNamed:@"ZoomOutInstr.png"];
+        UIImageView *zoomOutImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [screen applicationFrame].size.width * picturewidth, [screen applicationFrame].size.height * pictureheight)];
+        zoomOutImageView.center = CGPointMake((zoomOutImageView.frame.size.width/2) +
+                                              [screen applicationFrame].size.width * (leftmargin+picturewidth + middlehortizontalmargin), (zoomOutImageView.frame.size.height/2) +
+                                              [screen applicationFrame].size.height * (topmargin+pictureheight + middleverticalmargin));
+        [zoomOutImageView setImage:zoomOutImage];
+        [self addSubview:zoomOutImageView];
 		
 		
 		dragToMoveLabel = [[UILabel alloc] init];
@@ -51,13 +91,6 @@
 		dragToMoveLabel.shadowOffset = CGSizeMake(2,2);
 		[self addSubview:dragToMoveLabel];
 		
-		UIImage *tapToMoveImage = [UIImage imageNamed:@"TapToMoveInstr.png"];
-		UIImageView *tapToMoveImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 191)];
-		tapToMoveImageView.center = CGPointMake((([screen applicationFrame].size.width /4 ) * 3) + 20,(tapToMoveImageView.frame.size.height /2 ) + 35);
-		[tapToMoveImageView setImage:tapToMoveImage];
-		[self addSubview:tapToMoveImageView];
-
-		
 		tapToMoveLabel = [[UILabel alloc] init];
 		[tapToMoveLabel setFrame:CGRectMake(0, 0, 160, 40)];
 		tapToMoveLabel.backgroundColor = [UIColor clearColor]; 
@@ -69,14 +102,7 @@
 		tapToMoveLabel.shadowColor = [UIColor blackColor];
 		tapToMoveLabel.shadowOffset = CGSizeMake(2,2);
 		[self addSubview:tapToMoveLabel];
-		
-		UIImage *zoomInImage = [UIImage imageNamed:@"ZoomInInstr.png"];
-		UIImageView *zoomInImageImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 191)];
-		zoomInImageImageView.center = CGPointMake(([screen applicationFrame].size.width / 4 ) + 20, (dragToMoveImageView.frame.size.height /2 ) +225);
-		[zoomInImageImageView setImage:zoomInImage];
-		[self addSubview:zoomInImageImageView];
-		
-		
+
 		zoomInLabel = [[UILabel alloc] init];
 		[zoomInLabel setFrame:CGRectMake(0, 0, 160, 40)];
 		zoomInLabel.backgroundColor = [UIColor clearColor]; 
@@ -88,14 +114,7 @@
 		zoomInLabel.shadowColor = [UIColor blackColor];
 		zoomInLabel.shadowOffset = CGSizeMake(2,2);
 		[self addSubview:zoomInLabel];
-		
-		UIImage *zoomOutImage = [UIImage imageNamed:@"ZoomOutInstr.png"];
-		UIImageView *zoomOutImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 191)];
-		zoomOutImageView.center = CGPointMake((([screen applicationFrame].size.width /4 ) * 3) + 20, (dragToMoveImageView.frame.size.height /2 ) +225);
-		[zoomOutImageView setImage:zoomOutImage];
-		[self addSubview:zoomOutImageView];
 
-		
 		zoomOutLabel = [[UILabel alloc] init];
 		[zoomOutLabel setFrame:CGRectMake(0, 0, 160, 40)];
 		zoomOutLabel.backgroundColor = [UIColor clearColor]; 
@@ -107,9 +126,7 @@
 		zoomOutLabel.shadowColor = [UIColor blackColor];
 		zoomOutLabel.shadowOffset = CGSizeMake(2,2);
 		[self addSubview:zoomOutLabel];
-		
-		
-		
+
 		headerLabel = [[UILabel alloc] init];
 		[headerLabel setFrame:CGRectMake(80, 0, 300, 40)];
 		headerLabel.center = CGPointMake([screen applicationFrame].size.width/2, 20);
@@ -120,23 +137,19 @@
 		headerLabel.shadowColor = [UIColor blackColor];
 		headerLabel.shadowOffset = CGSizeMake(2,2);
 		[self addSubview:headerLabel];
-		
 
-        
 		buttonDontShowAgain = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonDontShowAgain addTarget:self action:@selector(DontShowAgain:) forControlEvents:UIControlEventTouchDown];
 		[buttonDontShowAgain setTitle:@"OK" forState:UIControlStateNormal];
-		buttonDontShowAgain.frame = CGRectMake(0, 0, 300, 40.0);
+		buttonDontShowAgain.frame = CGRectMake(0, 0, [screen applicationFrame].size.width * 0.8, [screen applicationFrame].size.height * 0.1);
         buttonDontShowAgain.layer.borderWidth=1.0f;
         [buttonDontShowAgain setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         buttonDontShowAgain.layer.borderColor=[[UIColor whiteColor] CGColor];
-		buttonDontShowAgain.center = CGPointMake(([screen applicationFrame].size.width/2),[screen applicationFrame].size.height - 50);
+		buttonDontShowAgain.center = CGPointMake(([screen applicationFrame].size.width/2),[screen applicationFrame].size.height - ([screen applicationFrame].size.height * 0.1));
 		[self addSubview:buttonDontShowAgain];
 		
 		self.hidden = YES;
-		
 		[screen release];
-		
     }
     return self;
 }

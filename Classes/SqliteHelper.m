@@ -23,7 +23,13 @@
 		if(!Instance)
 		{
             
-            NSString *dbPath = @"/tmp/tmp.db";
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                                                 NSUserDomainMask,
+                                                                 YES);
+            NSString *dbPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"file.db"];
+            
+            
+            //NSString *dbPath = @"/tmp/tmp.db";
             //NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"SQLiteTest.db"]
             
             // delete the old db.

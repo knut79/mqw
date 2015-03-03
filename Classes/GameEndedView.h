@@ -47,6 +47,7 @@
 }
 @property (nonatomic, assign) id <GameEndedViewDelegate> delegate;
 @property (strong, nonatomic) HighscoreService *highscoreService;
+//- (id)initWithFrame:(CGRect)frame gameRef:(Game*) gameRef;
 -(void) setHeader;
 -(void) setGameRef:(Game*) gameRef;
 -(void) sendHighscoreToServer;
