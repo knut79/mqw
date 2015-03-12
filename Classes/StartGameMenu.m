@@ -385,12 +385,12 @@
 	m_loadingLabel = [[UILabel alloc] init];
 	[m_loadingLabel setFrame:CGRectMake(0, 0, 250, 40)];
 	m_loadingLabel.backgroundColor = [UIColor clearColor]; 
-	m_loadingLabel.textColor = [UIColor redColor];
+	m_loadingLabel.textColor = [UIColor whiteColor];
 	[m_loadingLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
 	m_loadingLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
 	m_loadingLabel.layer.shadowOpacity = 1.0;
 	m_loadingLabel.center = buttonStart.center;
-	m_loadingLabel.text = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"Loading game objects"];
+	m_loadingLabel.text = @"Loading game objects";
 	m_loadingLabel.textAlignment = NSTextAlignmentCenter;		
 	[self addSubview:m_loadingLabel];    
 

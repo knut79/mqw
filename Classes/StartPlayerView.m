@@ -46,7 +46,8 @@
 //		m_secondsUsedLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
 //		m_secondsUsedLabel.layer.shadowOpacity = 1.0;
 //		m_secondsUsedLabel.layer.shadowRadius = 1.5;
-		m_secondsUsedLabel.shadowColor = [UIColor whiteColor];
+        m_secondsUsedLabel.textColor = [UIColor whiteColor];
+		m_secondsUsedLabel.shadowColor = [UIColor blackColor];
 		m_secondsUsedLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_secondsUsedLabel.textAlignment = NSTextAlignmentCenter;
 		[m_secondsUsedLabel setAlpha:0];
@@ -59,7 +60,8 @@
 //		m_dynamicLabel1.layer.shadowColor = [[UIColor whiteColor] CGColor];
 //		m_dynamicLabel1.layer.shadowOpacity = 1.0;
 //		m_dynamicLabel1.layer.shadowRadius = 1.5;
-		m_dynamicLabel1.shadowColor = [UIColor whiteColor];
+        m_dynamicLabel1.textColor = [UIColor whiteColor];
+		m_dynamicLabel1.shadowColor = [UIColor blackColor];
 		m_dynamicLabel1.shadowOffset = CGSizeMake(-1,-2);
 		m_dynamicLabel1.textAlignment = NSTextAlignmentCenter;
 		[m_dynamicLabel1 setAlpha:0];
@@ -74,7 +76,8 @@
 //		m_dynamicLabel3.layer.shadowColor = [[UIColor whiteColor] CGColor];
 //		m_dynamicLabel3.layer.shadowOpacity = 1.0;
 //		m_dynamicLabel3.layer.shadowRadius = 1.5;
-		m_dynamicLabel3.shadowColor = [UIColor whiteColor];
+        m_dynamicLabel3.textColor = [UIColor whiteColor];
+		m_dynamicLabel3.shadowColor = [UIColor blackColor];
 		m_dynamicLabel3.shadowOffset = CGSizeMake(-1,-2);
 		[m_dynamicLabel3 setAlpha:0];
 		[self addSubview:m_dynamicLabel3];

@@ -154,7 +154,10 @@
    
     
     //_? if in game quit with message
-    [viewController QuitGame];
+    if ([[GlobalSettingsHelper Instance] inGame]) {
+        [viewController QuitGame];
+    }
+    
     
     
 	//[viewController SaveGameData];
@@ -173,7 +176,11 @@
      */
 	
 	//set up the menu
-	[viewController showMessage];
+    if ([[GlobalSettingsHelper Instance] inGame]) {
+        [[GlobalSettingsHelper Instance] setOutOfGame];
+        [viewController showMessage];
+    }
+	
 	//[viewController LoadGameAndResume];
 	
 	

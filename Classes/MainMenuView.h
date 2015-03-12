@@ -28,6 +28,7 @@
     TakeChallenge* takeChallengeViewCtrl;
     
     UIActivityIndicatorView *activityIndicatorCollectingId;
+    UILabel * activityMessageLabel;
 }
 -(void) ShowChallengeButton;
 - (void)SettingsMenuViewHiding;

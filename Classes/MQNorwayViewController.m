@@ -276,7 +276,8 @@
         timePointsLabel.backgroundColor = [UIColor clearColor]; 
         [timePointsLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
         timePointsLabel.textAlignment = NSTextAlignmentCenter;
-        timePointsLabel.shadowColor = [UIColor whiteColor];
+        timePointsLabel.textColor = [UIColor whiteColor];
+        timePointsLabel.shadowColor = [UIColor blackColor];
         timePointsLabel.shadowOffset = CGSizeMake(-1,-2);
         timePointsLabel.text = [NSString stringWithFormat:@"%d x %d %@ %@",[clockView GetMultiplier],
                                 [[GlobalSettingsHelper Instance] ConvertToRightDistance:const_timeBonusKm],
@@ -1064,7 +1065,7 @@
 //Begin game
 -(void) PrepareNewGame
 {
-    
+    [[GlobalSettingsHelper Instance] setInGame];
     if (firstTimeInstructionsView != nil) {
         [firstTimeInstructionsView removeFromSuperview];
         firstTimeInstructionsView = nil;
@@ -1210,6 +1211,7 @@
 	else {
 
 		[m_gameRef SetGameState:outOfGame];
+        [[GlobalSettingsHelper Instance] setOutOfGame];
 		if ([m_gameRef IsTrainingMode] == NO) {
 
             //TODO: check if nil second time around

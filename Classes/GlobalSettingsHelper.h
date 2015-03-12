@@ -22,6 +22,7 @@
     NSString* m_playerID;
     NSString* m_playerFbID;
     NSString* m_playerName;
+    BOOL m_inGame;
 }
 
 +(GlobalSettingsHelper*) Instance;
@@ -44,5 +45,8 @@
 -(void) SetPlayerID:(NSString*) playerID;
 -(void) SetPlayerName:(NSString*) playerName;
 -(NSString*) uuid;
+-(BOOL) inGame;
+-(void) setOutOfGame;
+-(void) setInGame;
 
 @end

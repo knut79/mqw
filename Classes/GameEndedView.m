@@ -31,6 +31,7 @@
 		m_labelsXoffset = 0;
 		m_labelsYoffset = 0;
         
+        /*
 		m_playerNameLabelsArray = [[NSMutableArray alloc] init];
 		for (int i = 0; i < 4; i++) {
 			UILabel *playerNameLabel = [[UILabel alloc] init];
@@ -89,6 +90,7 @@
 			[self addSubview:lineImageView];
 			[lineImage release];
 		}
+        */
 		
 		
         /*
@@ -114,7 +116,8 @@
 		m_questionsPassedLabel.backgroundColor = [UIColor clearColor]; 
 		[m_questionsPassedLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_questionsPassedLabel.textAlignment = NSTextAlignmentCenter;
-		m_questionsPassedLabel.shadowColor = [UIColor whiteColor];
+        m_questionsPassedLabel.textColor = [UIColor whiteColor];
+		m_questionsPassedLabel.shadowColor = [UIColor blackColor];
 		m_questionsPassedLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_questionsPassedLabel.adjustsFontSizeToFitWidth = YES;
 		[m_questionsPassedLabel setAlpha:0];
@@ -126,24 +129,22 @@
 		m_globalHighscoreLabel.backgroundColor = [UIColor clearColor]; 
 		[m_globalHighscoreLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_globalHighscoreLabel.textAlignment = NSTextAlignmentCenter;
-		m_globalHighscoreLabel.shadowColor = [UIColor whiteColor];
+        m_globalHighscoreLabel.textColor = [UIColor whiteColor];
+		m_globalHighscoreLabel.shadowColor = [UIColor blackColor];
 		m_globalHighscoreLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_globalHighscoreLabel.adjustsFontSizeToFitWidth = YES;
 		[m_globalHighscoreLabel setAlpha:0];
 		[self addSubview:m_globalHighscoreLabel];
 		
-		
-		CGRect tropyImageRect = CGRectMake(-99, -99, 50, 57);
-		m_highscoreImageView = [[[UIImageView alloc] initWithFrame:tropyImageRect] retain];
-		[m_highscoreImageView setAlpha:0];
-		[self addSubview:m_highscoreImageView];
+
 		
 		m_dynamicLabel = [[UILabel alloc] init];
 		[m_dynamicLabel setFrame:CGRectMake(0, 0, 250, 20)];
 		m_dynamicLabel.backgroundColor = [UIColor clearColor]; 
 		[m_dynamicLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_dynamicLabel.textAlignment = NSTextAlignmentCenter;
-		m_dynamicLabel.shadowColor = [UIColor whiteColor];
+        m_dynamicLabel.textColor = [UIColor whiteColor];
+		m_dynamicLabel.shadowColor = [UIColor blackColor];
 		m_dynamicLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_dynamicLabel.adjustsFontSizeToFitWidth = YES;
 		[m_dynamicLabel setAlpha:0];
@@ -155,7 +156,8 @@
 		m_secondsUsedLabel.backgroundColor = [UIColor clearColor]; 
 		[m_secondsUsedLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
 		m_secondsUsedLabel.textAlignment = NSTextAlignmentCenter;
-		m_secondsUsedLabel.shadowColor = [UIColor whiteColor];
+        m_secondsUsedLabel.textColor = [UIColor whiteColor];
+		m_secondsUsedLabel.shadowColor = [UIColor blackColor];
 		m_secondsUsedLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_secondsUsedLabel.adjustsFontSizeToFitWidth = YES;
 		[m_secondsUsedLabel setAlpha:0];
@@ -196,6 +198,7 @@
     m_globalHighscoreLabel.text = @"";
 	m_dynamicLabel.text = @"";
 	m_secondsUsedLabel.text = @"";
+    /*
 	for (int i = 0; i < 4; i++) {
 		UILabel *playerNameLabel = [m_playerNameLabelsArray objectAtIndex:i];
 		playerNameLabel.text = @"";
@@ -203,7 +206,7 @@
 		playerDistanceLabel.text = @"";
 		UIImageView *lineImageView = [m_linesArray objectAtIndex:i];
 		lineImageView.center = CGPointMake(-99,-99);
-	}
+	}*/
 }
 
 -(void)setGameRef:(Game*) gameRef
@@ -375,21 +378,9 @@
     
 
     
-    Highscore *hs = [m_gameRef GetHighscore];
-    NSInteger newHighScorePlace = [hs CheckIfNewHighScore:player difficultyLevel:[m_gameRef GetGameDifficulty]];
-    if (newHighScorePlace < 99) {
-        NSString *gameDifficultyString = [[GlobalSettingsHelper Instance] GetStringByLanguage:@"set level difficulty"];
-        Difficulty diffLevel = [m_gameRef GetGameDifficulty];
-        
-        UIImage *trophyImage = [[UIImage imageNamed:@"trophy.png"] retain];
-        m_highscoreImageView.image = trophyImage;
-        [trophyImage release];
-        m_highscoreImageView.center = CGPointMake(30,  190);
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:1];
-        [m_highscoreImageView setAlpha:1];
-        [UIView commitAnimations];	
-    }
+    //Highscore *hs = [m_gameRef GetHighscore];
+    //NSInteger newHighScorePlace = [hs CheckIfNewHighScore:player difficultyLevel:[m_gameRef GetGameDifficulty]];
+
 
 
 
@@ -477,14 +468,14 @@
 	[UIView setAnimationDelegate:self]; 	      
 	[UIView setAnimationDidStopSelector:@selector(FinishedAnimatingPlayer)];  
 	[UIView setAnimationDuration:0.5];
-
+/*
 	UILabel *playerNameLabel = [m_playerNameLabelsArray objectAtIndex:m_playerIndexToAnimate];
 	[playerNameLabel setAlpha:1]; 
 	UILabel *playerDistanceLabel = [m_playerDistanceLabelsArray objectAtIndex:m_playerIndexToAnimate];
 	[playerDistanceLabel setAlpha:1];
 	UIImageView *lineImageView = [m_linesArray objectAtIndex:m_playerIndexToAnimate];
 	[lineImageView setAlpha:1];
-
+*/
 	m_playerIndexToAnimate --;
 	[UIView commitAnimations];	
 }

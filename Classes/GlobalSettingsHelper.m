@@ -189,6 +189,17 @@
 	return [result autorelease];
 }
 
-
+-(BOOL) inGame
+{
+    return m_inGame;
+}
+-(void) setOutOfGame
+{
+    m_inGame = NO;
+}
+-(void) setInGame
+{
+    m_inGame = YES;
+}
 
 @end

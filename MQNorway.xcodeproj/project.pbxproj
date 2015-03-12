@@ -296,7 +296,6 @@
 		7204A37619D9799200B8AE76 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35919D9799100B8AE76 /* Default.png */; };
 		7204A37719D9799200B8AE76 /* directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35A19D9799100B8AE76 /* directions.png */; };
 		7204A37819D9799200B8AE76 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35B19D9799100B8AE76 /* GameOver.png */; };
-		7204A37919D9799200B8AE76 /* icon_old.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35C19D9799200B8AE76 /* icon_old.png */; };
 		7204A37A19D9799200B8AE76 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35D19D9799200B8AE76 /* icon.png */; };
 		7204A37B19D9799200B8AE76 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35E19D9799200B8AE76 /* line.png */; };
 		7204A37C19D9799200B8AE76 /* loop.png in Resources */ = {isa = PBXBuildFile; fileRef = 7204A35F19D9799200B8AE76 /* loop.png */; };
@@ -1195,7 +1194,6 @@
 		7204A35919D9799100B8AE76 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = resources/graphics/GameElements/Default.png; sourceTree = "<group>"; };
 		7204A35A19D9799100B8AE76 /* directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = directions.png; path = resources/graphics/GameElements/directions.png; sourceTree = "<group>"; };
 		7204A35B19D9799100B8AE76 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = resources/graphics/GameElements/GameOver.png; sourceTree = "<group>"; };
-		7204A35C19D9799200B8AE76 /* icon_old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_old.png; path = resources/graphics/GameElements/icon_old.png; sourceTree = "<group>"; };
 		7204A35D19D9799200B8AE76 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = resources/graphics/GameElements/icon.png; sourceTree = "<group>"; };
 		7204A35E19D9799200B8AE76 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = resources/graphics/GameElements/line.png; sourceTree = "<group>"; };
 		7204A35F19D9799200B8AE76 /* loop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loop.png; path = resources/graphics/GameElements/loop.png; sourceTree = "<group>"; };
@@ -2707,7 +2705,6 @@
 				7204A35919D9799100B8AE76 /* Default.png */,
 				7204A35A19D9799100B8AE76 /* directions.png */,
 				7204A35B19D9799100B8AE76 /* GameOver.png */,
-				7204A35C19D9799200B8AE76 /* icon_old.png */,
 				7204A35D19D9799200B8AE76 /* icon.png */,
 				7204A35E19D9799200B8AE76 /* line.png */,
 				7204A35F19D9799200B8AE76 /* loop.png */,
@@ -3948,7 +3945,6 @@
 				7204A2BA19D976D600B8AE76 /* world_100_9_1.jpg in Resources */,
 				7204A40A19DDFE4500B8AE76 /* TaiwanFlag.png in Resources */,
 				7204A25319D976D600B8AE76 /* world_100_0_6.jpg in Resources */,
-				7204A37919D9799200B8AE76 /* icon_old.png in Resources */,
 				7204A2FA19D976D600B8AE76 /* world_100_14_5.jpg in Resources */,
 				72CB8B571A043FA6000E30CF /* world_100_border_4_9.jpg in Resources */,
 				72CB8CA71A045097000E30CF /* world_50_border_5_3.jpg in Resources */,

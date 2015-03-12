@@ -39,8 +39,9 @@
 			if (i==0) {
 //				playerNameLabel.layer.shadowRadius = 2.0;
 //				playerNameLabel.layer.shadowOpacity = 1.0;
+                playerNameLabel.textColor = [UIColor whiteColor];
 				[playerNameLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
-				playerNameLabel.shadowColor = [UIColor whiteColor];
+				playerNameLabel.shadowColor = [UIColor blackColor];
 				playerNameLabel.shadowOffset = CGSizeMake(-1,-2);
 			}
 			else{ 
@@ -70,7 +71,8 @@
 //		m_questionsLeftLabel.layer.shadowColor = [[UIColor whiteColor] CGColor];
 //		m_questionsLeftLabel.layer.shadowOpacity = 1.0;
 //		m_questionsLeftLabel.layer.shadowRadius = 1.5;
-		m_questionsLeftLabel.shadowColor = [UIColor whiteColor];
+        m_questionsLeftLabel.textColor = [UIColor whiteColor];
+		m_questionsLeftLabel.shadowColor = [UIColor blackColor];
 		m_questionsLeftLabel.shadowOffset = CGSizeMake(-1,-2);
 		m_questionsLeftLabel.textAlignment = NSTextAlignmentCenter;
 		m_questionsLeftLabel.adjustsFontSizeToFitWidth = YES;

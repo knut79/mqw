@@ -7,6 +7,7 @@
 //
 
 #import "QuitButtonView.h"
+#import "GlobalSettingsHelper.h"
 
 
 @implementation QuitButtonView
@@ -63,7 +64,7 @@
     else
     {
         NSLog(@"yes button was pressed\n");
-
+        [[GlobalSettingsHelper Instance] setOutOfGame];
         if ([delegate respondsToSelector:@selector(QuitGame)])
             [delegate QuitGame];
     }

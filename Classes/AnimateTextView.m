@@ -41,8 +41,9 @@
 		m_messageLabel.center = CGPointMake([screen applicationFrame].size.width /2 , [screen applicationFrame].size.height /2 );
 		m_messageLabel.backgroundColor = [UIColor clearColor]; 
 		[m_messageLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
+        m_messageLabel.textColor = [UIColor whiteColor];
 		m_messageLabel.textAlignment = NSTextAlignmentCenter;
-		m_messageLabel.shadowColor = [UIColor whiteColor];
+		m_messageLabel.shadowColor = [UIColor blackColor];
 		m_messageLabel.shadowOffset = CGSizeMake(-1,-2);
 		[m_messageLabel setAlpha:0];
 		[self addSubview:m_messageLabel];
@@ -50,7 +51,7 @@
 		
 		CGRect imageRect = CGRectMake(0,0, 223, 57);
 		m_tapMessageImageView = [[[UIImageView alloc] initWithFrame:imageRect] retain];
-		m_tapMessageImageView.center = CGPointMake([screen applicationFrame].size.width /2 , [screen applicationFrame].size.height /2 );
+		m_tapMessageImageView.center = CGPointMake([screen applicationFrame].size.width /2 , [screen applicationFrame].size.height /2 - ([screen applicationFrame].size.height * 0.1));
 		m_imageName = [[NSString stringWithFormat:@"%@.png",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"tapImage2"]] retain];
 		m_tapMessageImageView.image = [UIImage imageNamed:m_imageName];
 		[m_tapMessageImageView setAlpha:0];

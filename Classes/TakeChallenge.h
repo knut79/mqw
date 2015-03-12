@@ -54,6 +54,8 @@
     Game *m_game;
 
 }
+-(void) FadeIn;
+
 @property (retain, nonatomic) IBOutlet UIButton *retryButton;
 - (IBAction)retryButtonPushed:(id)sender;
 @property (retain, nonatomic) IBOutlet UILabel *staticChallengesHeader;

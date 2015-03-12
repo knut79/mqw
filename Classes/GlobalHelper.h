@@ -30,4 +30,5 @@
 -(int) getFacebookPostingPoint;
 -(int) getSecondsBetweenFBPostPoint;
 
+
 @end

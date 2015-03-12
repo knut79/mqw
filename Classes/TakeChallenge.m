@@ -81,7 +81,10 @@
     UIColor *lightBlueColor = [UIColor colorWithRed: 100.0/255.0 green: 149.0/255.0 blue:237.0/255.0 alpha: 1.0];
     self.view.backgroundColor = lightBlueColor;
     
+    
     [super viewDidLoad];
+    
+    [self.view setAlpha:0];
     
     dynamicChallengesHeader.backgroundColor = [UIColor clearColor];
     dynamicChallengesHeader.textColor = [UIColor whiteColor];
@@ -116,6 +119,16 @@
     [self getStaticChallenges];
     [self getDynamicChallenges];
 }
+
+-(void) FadeIn
+{
+    self.view.hidden = NO;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [self.view setAlpha:1];
+    [UIView commitAnimations];
+}
+
 
 - (void)viewDidUnload
 {
@@ -534,11 +547,24 @@
     [super dealloc];
 }
 - (IBAction)backButtonPushed:(id)sender {
+    /*
     [self.view setAlpha:0];
     [self dealloc];
     
     if ([delegate respondsToSelector:@selector(cleanUpTakeChallengeViewCtrl)])
-        [delegate cleanUpTakeChallengeViewCtrl];
+        [delegate cleanUpTakeChallengeViewCtrl];*/
+    [self FadeOut];
+}
+
+
+-(void) FadeOut
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(cleanUpTakeChallengeViewCtrl)];
+    [self.view setAlpha:0];
+    [UIView commitAnimations];
 }
 
 

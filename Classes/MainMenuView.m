@@ -57,6 +57,7 @@
 		buttonStartMenu.frame = CGRectMake(0, 0, 160.0, 40.0);
 		buttonStartMenu.center = CGPointMake([screen applicationFrame].size.width/2,160);
 		[self addSubview:buttonStartMenu];
+        [buttonStartMenu setAlpha:0];
         
         buttonChallengesMenu = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[buttonChallengesMenu addTarget:self action:@selector(takeChallengeGameMenu:) forControlEvents:UIControlEventTouchDown];
@@ -69,11 +70,22 @@
 		[self addSubview:buttonChallengesMenu];
         [buttonChallengesMenu setAlpha:0];
         
-        
+       
+        activityMessageLabel = [[UILabel alloc] init];
+        [activityMessageLabel setFrame:CGRectMake(0, 0, 250, 40)];
+        activityMessageLabel.backgroundColor = [UIColor clearColor];
+        activityMessageLabel.textColor = [UIColor whiteColor];
+        [activityMessageLabel setFont:[UIFont boldSystemFontOfSize:18.0f]];
+        activityMessageLabel.layer.shadowColor = [[UIColor blackColor] CGColor];
+        activityMessageLabel.layer.shadowOpacity = 1.0;
+        activityMessageLabel.center = CGPointMake([screen applicationFrame].size.width/2,[screen applicationFrame].size.height*0.55);
+        activityMessageLabel.text = @"Collecting user data";
+        activityMessageLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:activityMessageLabel];
         
         activityIndicatorCollectingId = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
         [self addSubview:activityIndicatorCollectingId];
-        activityIndicatorCollectingId.center = CGPointMake([screen applicationFrame].size.width/2,220);
+        activityIndicatorCollectingId.center = CGPointMake([screen applicationFrame].size.width/2,[screen applicationFrame].size.height*0.45);
         
         [activityIndicatorCollectingId startAnimating];
         
@@ -122,6 +134,12 @@
     
     [buttonChallengesMenu setAlpha:1];
     [buttonHighscoreMenu setAlpha:1];
+    [buttonStartMenu setAlpha:1];
+    
+    activityIndicatorCollectingId.hidden = YES;
+    activityMessageLabel.hidden = YES;
+    [activityIndicatorCollectingId removeFromSuperview];
+    [activityMessageLabel removeFromSuperview];
 }
 
 -(void)LoadGameObjects
@@ -194,9 +212,12 @@
         takeChallengeViewCtrl = [[TakeChallenge alloc] initWithNibName:@"TakeChallenge" bundle:nil]; 
         [takeChallengeViewCtrl setDelegate:self];
         [self addSubview:takeChallengeViewCtrl.view];
+        [takeChallengeViewCtrl FadeIn];
     }
     else
-        [takeChallengeViewCtrl.view setAlpha:1];
+    {
+        [takeChallengeViewCtrl FadeIn];
+    }
 }
 
 -(void) cleanUpTakeChallengeViewCtrl

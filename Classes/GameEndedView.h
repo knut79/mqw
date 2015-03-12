@@ -18,15 +18,14 @@
 
 @interface GameEndedView : UIView<ADBannerViewDelegate,ChallengeViewControllerDelegate> {
 	id <GameEndedViewDelegate> delegate;
-	NSMutableArray *m_playerNameLabelsArray;
-	NSMutableArray *m_playerDistanceLabelsArray;
-	NSMutableArray *m_linesArray;
+	//NSMutableArray *m_playerNameLabelsArray;
+	//NSMutableArray *m_playerDistanceLabelsArray;
+	//NSMutableArray *m_linesArray;
 	UILabel *m_tapWhenReadyLabel;
 	UIImageView* m_headerImageView;
     UILabel *m_header;
 	UILabel *m_questionsPassedLabel;
     UILabel *m_globalHighscoreLabel;
-	UIImageView* m_highscoreImageView;	
 	UILabel *m_dynamicLabel;
 	UILabel *m_secondsUsedLabel;
 	NSInteger m_labelsXoffset;

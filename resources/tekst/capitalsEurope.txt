@@ -57,7 +57,7 @@ inf;City#Where is the capital;Podgorica;10;level5;The capital and largest city o
 2194;1122
 inf;City#Where is the capital;Riga;10;level4;The capital and largest city of Latvia. Riga is the largest city of the Baltic states#nor#spn#fra#ger;Europe#Latvia
 2061;1389
-inf;City#Where is the capital;Roma;10;level1;The capital of Italy and also of the Province of Rome and of the region of Lazio.#nor#spn#fra#ger;Europe#Italia
+inf;City#Where is the capital;Rome;10;level1;The capital of Italy and also of the Province of Rome and of the region of Lazio.#nor#spn#fra#ger;Europe#Italia
 2129;1358
 inf;City#Where is the capital;Sarajevo;10;level2;The capital and largest city of Bosnia and Herzegovina#nor#spn#fra#ger;Europe#Bosnia and Herzegovina
 2164;1387
