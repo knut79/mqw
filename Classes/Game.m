@@ -63,7 +63,11 @@
 
 -(BOOL) isChallengeMode
 {
-    return m_gameMode == challengeMode;
+    BOOL returnValue = NO;
+    if (m_gameMode == staticChallengeMode || m_gameMode == dynamicChallengeMode) {
+        returnValue = YES;
+    }
+    return returnValue;
 }
 
 
@@ -141,7 +145,8 @@
     BOOL moreQuestions= YES;
     switch (m_gameMode) {
         case trainingMode:
-        case challengeMode:
+        case staticChallengeMode:
+        case dynamicChallengeMode:
             if (m_currentQuestionIndex >= [[[LocationsHelper Instance] GetQuestionsOnDifficulty:m_difficulty gameMode:m_gameMode] count])
             {
                 moreQuestions = NO;
@@ -200,7 +205,7 @@
 			}
 		}
 	}
-    else if(m_gameMode == challengeMode)
+    else if(m_gameMode == staticChallengeMode || m_gameMode == dynamicChallengeMode)
     {
         if (m_currentQuestionIndex >= [questionsOnType count])
         {

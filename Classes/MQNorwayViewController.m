@@ -1222,9 +1222,8 @@
 				[m_gameEndedView setDelegate:self];
 				[[self view] addSubview:m_gameEndedView];
 			}
-            [m_gameEndedView setGameRef:m_gameRef];
+            [m_gameEndedView setGameRefAndElements:m_gameRef];
             [m_gameEndedView sendHighscoreToServer];
-			[m_gameEndedView setHeader];
             
 		}
 		else {

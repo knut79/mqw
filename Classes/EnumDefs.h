@@ -10,7 +10,8 @@ typedef enum
 {
     regularMode = 1,
     trainingMode = 2,
-    challengeMode = 3
+    staticChallengeMode = 3,
+    dynamicChallengeMode = 4
 } gameMode;
 
 typedef enum

@@ -1366,7 +1366,7 @@
 				break;
 		}
 	}
-    else if (gm == challengeMode)
+    else if (gm == staticChallengeMode || gm == dynamicChallengeMode)
     {
         qOnType = [m_questionsByCategory objectForKey:@"challenge"];
     }

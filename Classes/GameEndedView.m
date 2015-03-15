@@ -31,73 +31,6 @@
 		m_labelsXoffset = 0;
 		m_labelsYoffset = 0;
         
-        /*
-		m_playerNameLabelsArray = [[NSMutableArray alloc] init];
-		for (int i = 0; i < 4; i++) {
-			UILabel *playerNameLabel = [[UILabel alloc] init];
-			playerNameLabel.numberOfLines = 1;
-			playerNameLabel.adjustsFontSizeToFitWidth = YES;
-			playerNameLabel.backgroundColor = [UIColor clearColor]; 
-			[playerNameLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-			playerNameLabel.textAlignment = NSTextAlignmentCenter;
-			if (i == 0) {
-				playerNameLabel.layer.shadowColor = [[UIColor yellowColor] CGColor];
-				playerNameLabel.layer.shadowRadius = 2.5;
-				playerNameLabel.layer.shadowOpacity = 1.0;
-			}
-			else {
-				playerNameLabel.shadowColor = [UIColor whiteColor];
-				playerNameLabel.shadowOffset = CGSizeMake(-1,-2);
-			}
-
-			[playerNameLabel setFrame:CGRectMake(0, 0, 300, 20)];
-			[m_playerNameLabelsArray addObject:playerNameLabel];
-			[self addSubview:playerNameLabel];
-		}
-		
-		m_playerDistanceLabelsArray = [[NSMutableArray alloc] init];
-		for (int i = 0; i < 4; i++) {
-			UILabel *playerDistanceLabel = [[UILabel alloc] init];
-			playerDistanceLabel.numberOfLines = 1;
-			playerDistanceLabel.adjustsFontSizeToFitWidth = YES;
-			playerDistanceLabel.backgroundColor = [UIColor clearColor]; 
-			[playerDistanceLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
-			playerDistanceLabel.textAlignment = NSTextAlignmentCenter;
-			if (i == 0) {
-				playerDistanceLabel.layer.shadowColor = [[UIColor yellowColor] CGColor];
-				playerDistanceLabel.layer.shadowRadius = 2.5;
-				playerDistanceLabel.layer.shadowOpacity = 1.0;
-			}
-			else {
-				playerDistanceLabel.shadowColor = [UIColor whiteColor];
-				playerDistanceLabel.shadowOffset = CGSizeMake(-1,-2);
-
-			}
-
-			[playerDistanceLabel setFrame:CGRectMake(0, 0, 300, 20)];
-			[m_playerDistanceLabelsArray addObject:playerDistanceLabel];
-			[self addSubview:playerDistanceLabel];
-		}
-		
-		m_linesArray = [[NSMutableArray alloc] init];
-		for (int i = 0; i < 4; i++) {
-			UIImage *lineImage = [[UIImage imageNamed:@"line.png"] retain];
-			CGRect imageRect = CGRectMake(-99, -99, 200, 4);
-			UIImageView* lineImageView = [[[UIImageView alloc] initWithFrame:imageRect] retain];
-			lineImageView.image = lineImage;
-			[lineImageView setAlpha:0];
-			[m_linesArray addObject:lineImageView];
-			[self addSubview:lineImageView];
-			[lineImage release];
-		}
-        */
-		
-		
-        /*
-		CGRect imageRect = CGRectMake(-99, -99, 223, 57);
-		m_headerImageView = [[[UIImageView alloc] initWithFrame:imageRect] retain];
-		[m_headerImageView setAlpha:0];
-		[self addSubview:m_headerImageView];*/
 		
         m_header= [[UILabel alloc] init];
         [m_header setFrame:CGRectMake(0, 0, 250, 20)];
@@ -209,10 +142,133 @@
 	}*/
 }
 
--(void)setGameRef:(Game*) gameRef
+-(void)setGameRefAndElements:(Game*) gameRef
 {
     m_gameRef = gameRef;
-    [self setHeader];
+    [self setElementsForGamemode];
+}
+
+-(void) setElementsForGamemode
+{
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    
+    [self setupLabels];
+    [self setupButtons];
+    
+    m_headerImageView.center = CGPointMake([screen applicationFrame].size.width/2,  50);
+    
+    [screen release];
+    [self FadeIn];
+    
+    [self AnimateElementsIn:1];
+}
+
+-(void) setupLabels
+{
+    [self ResetLabels];
+    
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    
+    Player *player = [[m_gameRef GetPlayer] retain];
+    NSInteger time = [player GetSecondsUsed];
+    
+    self.userInteractionEnabled = NO;
+    
+    m_header.center = CGPointMake([screen applicationFrame].size.width/2,  55);
+    
+    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",@"Questions completed",(int)[player GetQuestionsPassed]];
+    m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
+    
+    NSString *seconds = [[NSString stringWithFormat:@"%d",(int)time%60] retain];
+    if ([seconds length] == 1 ) {
+        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:0%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
+    }
+    else {
+        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
+    }
+    [seconds release];
+    
+    m_secondsUsedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  130);
+    
+    m_globalHighscoreLabel.textAlignment = NSTextAlignmentCenter;
+    m_globalHighscoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  235);
+    
+    switch ([m_gameRef GetGameMode]) {
+        case staticChallengeMode:
+
+            m_header.text = [NSString stringWithFormat:@"Challenge completed"];
+            //or m_header.text = [NSString stringWithFormat:@"Challenge failed"];
+            break;
+        case dynamicChallengeMode:
+            m_header.text = [NSString stringWithFormat:@"You won the challenge"];
+            //or m_header.text = [NSString stringWithFormat:@"You lost the challenge"];
+            break;
+        default:
+            m_header.text = [NSString stringWithFormat:@"Game over"];
+            break;
+    }
+    
+    [player release];
+    [screen release];
+}
+
+-(void) setupButtons
+{
+    UIScreen *screen = [[UIScreen mainScreen] retain];
+    
+    challengeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [challengeButton addTarget:self action:@selector(doChallenge) forControlEvents:UIControlEventTouchDown];
+    
+    challengeButton.layer.borderWidth=1.0f;
+    [challengeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    challengeButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    challengeButton.frame = CGRectMake(0, 0, 180.0, 40.0);
+    challengeButton.center = CGPointMake([screen applicationFrame].size.width/2,350);
+    [self addSubview:challengeButton];
+    
+    exitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [exitButton addTarget:self action:@selector(doSkip) forControlEvents:UIControlEventTouchDown];
+    
+    exitButton.layer.borderWidth=1.0f;
+    [exitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    exitButton.layer.borderColor=[[UIColor whiteColor] CGColor];
+    exitButton.frame = CGRectMake(0, 0, 180.0, 40.0);
+    exitButton.center = CGPointMake([screen applicationFrame].size.width/2,420);
+    [self addSubview:exitButton];
+    
+ 
+    [exitButton setTitle:@"Skip challenging" forState:UIControlStateNormal];
+    [challengeButton setAlpha:1];
+    
+    
+    
+    switch ([m_gameRef GetGameMode]) {
+        case staticChallengeMode:
+            [challengeButton setTitle:@"Challenge" forState:UIControlStateNormal];
+            break;
+        case dynamicChallengeMode:
+            [challengeButton setTitle:@"Rechallenge" forState:UIControlStateNormal];
+            break;
+        default:
+            [challengeButton setTitle:@"Challenge" forState:UIControlStateNormal];
+            break;
+    }
+    /*
+    switch ([m_gameRef GetGameMode]) {
+        case challengeMode:
+            [exitButton setTitle:@"Continue" forState:UIControlStateNormal];
+            [challengeButton setAlpha:0];
+            break;
+            
+        default:
+            [exitButton setTitle:@"Skip challenging" forState:UIControlStateNormal];
+            [challengeButton setAlpha:1];
+            [challengeButton setTitle:@"Challenge" forState:UIControlStateNormal];
+            break;
+    }
+    */
+    
+    [screen release];
 }
 
 -(void) sendHighscoreToServer
@@ -326,113 +382,10 @@
     [player release];
 }
 
--(void) setHeader
-{
-	[self ResetLabels];
-    UIScreen *screen = [[UIScreen mainScreen] retain];
-
-    [self setUpSinglePlayer];
-
-	m_headerImageView.center = CGPointMake([screen applicationFrame].size.width/2,  50);
-
-	[screen release];
-	[self FadeIn];
-	
-	[self AnimateElementsIn:1];
-}
-
--(void) setUpSinglePlayer
-{
-    UIScreen *screen = [[UIScreen mainScreen] retain];
-
-    Player *player = [[m_gameRef GetPlayer] retain];
-    NSInteger time = [player GetSecondsUsed];
-    
-    
-    self.userInteractionEnabled = NO;
-
-    /*
-    UIImage *headerImage = [[UIImage imageNamed:@"GameOver.png"] retain];
-    m_headerImageView.image = headerImage;
-    [headerImage release];*/
-
-    
-    
-    m_header.center = CGPointMake([screen applicationFrame].size.width/2,  55);
-    
-    m_questionsPassedLabel.text = [NSString stringWithFormat:@"%@: %d",@"Questions completed",(int)[player GetQuestionsPassed]];
-    m_questionsPassedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  85);
-
-
-    
-    NSString *seconds = [[NSString stringWithFormat:@"%d",(int)time%60] retain];
-    if ([seconds length] == 1 ) {
-        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:0%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
-    }
-    else {
-        m_secondsUsedLabel.text = [NSString stringWithFormat:@"%@: %d:%d",[[GlobalSettingsHelper Instance] GetStringByLanguage:@"Time used"],(int)time/60,(int)time%60];
-    }
-    [seconds release];
-    
-    m_secondsUsedLabel.center = CGPointMake([screen applicationFrame].size.width/2,  130);
-    
-
-    
-    //Highscore *hs = [m_gameRef GetHighscore];
-    //NSInteger newHighScorePlace = [hs CheckIfNewHighScore:player difficultyLevel:[m_gameRef GetGameDifficulty]];
-
-
-
-
-
-    m_globalHighscoreLabel.textAlignment = NSTextAlignmentCenter;
-    m_globalHighscoreLabel.center = CGPointMake([screen applicationFrame].size.width/2,  235);
-    
-    
-
-    challengeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [challengeButton addTarget:self action:@selector(doChallenge) forControlEvents:UIControlEventTouchDown];
-
-    challengeButton.layer.borderWidth=1.0f;
-    [challengeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    challengeButton.layer.borderColor=[[UIColor whiteColor] CGColor];
-    challengeButton.frame = CGRectMake(0, 0, 180.0, 40.0);
-    challengeButton.center = CGPointMake([screen applicationFrame].size.width/2,350);
-    [self addSubview:challengeButton];
-    
-    exitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [exitButton addTarget:self action:@selector(doSkip) forControlEvents:UIControlEventTouchDown];
-    
-    exitButton.layer.borderWidth=1.0f;
-    [exitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    exitButton.layer.borderColor=[[UIColor whiteColor] CGColor];
-    exitButton.frame = CGRectMake(0, 0, 180.0, 40.0);
-    exitButton.center = CGPointMake([screen applicationFrame].size.width/2,420);
-    [self addSubview:exitButton];
-    
-    
-    switch ([m_gameRef GetGameMode]) {
-        case challengeMode:
-            m_header.text = [NSString stringWithFormat:@"Challenge completed"];
-            [exitButton setTitle:@"Continue" forState:UIControlStateNormal];
-            [challengeButton setAlpha:0];
-            break;
-            
-        default:
-            m_header.text = [NSString stringWithFormat:@"Game over"];
-            [exitButton setTitle:@"Skip challenging" forState:UIControlStateNormal];
-            [challengeButton setAlpha:1];
-            [challengeButton setTitle:@"Challenge" forState:UIControlStateNormal];
-            break;
-    }
-    
-    [player release];
-    
-    [screen release];
-}
-
 -(void) doChallenge
 {
+    
+    //_? TODO send challenge info
     NSLog(@"questions : %@",[m_gameRef.challenge getQuestionIDs]);
     if (challengeViewController == nil) {
         challengeViewController = [[ChallengeViewController alloc] initWithNibName:@"ChallengeViewController" bundle:nil]; 
@@ -468,15 +421,8 @@
 	[UIView setAnimationDelegate:self]; 	      
 	[UIView setAnimationDidStopSelector:@selector(FinishedAnimatingPlayer)];  
 	[UIView setAnimationDuration:0.5];
-/*
-	UILabel *playerNameLabel = [m_playerNameLabelsArray objectAtIndex:m_playerIndexToAnimate];
-	[playerNameLabel setAlpha:1]; 
-	UILabel *playerDistanceLabel = [m_playerDistanceLabelsArray objectAtIndex:m_playerIndexToAnimate];
-	[playerDistanceLabel setAlpha:1];
-	UIImageView *lineImageView = [m_linesArray objectAtIndex:m_playerIndexToAnimate];
-	[lineImageView setAlpha:1];
-*/
-	m_playerIndexToAnimate --;
+
+    m_playerIndexToAnimate --;
 	[UIView commitAnimations];	
 }
 

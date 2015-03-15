@@ -51,6 +51,7 @@
     NSMutableArray *currentQuestonIds;
     BOOL currentBorderValue;
     BOOL currentCompletedValue;
+    BOOL isStaticChallengeMode;
     Game *m_game;
 
 }

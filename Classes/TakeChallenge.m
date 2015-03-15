@@ -468,6 +468,7 @@
     NSString *alertString;
     if(tableView == staticChallengesTableView)
     {
+        isStaticChallengeMode = YES;
         alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceStaticArray objectAtIndex:[indexPath row]]];
     	alertStaticChallenge = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge %@",[datasourceStaticArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
         currentQuestonIds = [staticChallengeDataCache objectForKey:[datasourceStaticArray objectAtIndex:[indexPath row]]];
@@ -478,6 +479,7 @@
     }
     else
     {
+        isStaticChallengeMode = NO;
         alertString = [NSString stringWithFormat:@"Clicked on %@", [datasourceDynamicArray objectAtIndex:[indexPath row]]];
     	alertDynamicChallenge = [[UIAlertView alloc] initWithTitle:alertString message:[NSString stringWithFormat:@"Take challenge by %@",[datasourceDynamicArray objectAtIndex:[indexPath row]]] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
         currentQuestonIds = [dynamicChallengeDataCache objectForKey:[datasourceDynamicArray objectAtIndex:[indexPath row]]];
@@ -507,7 +509,14 @@
             }
             
             [[LocationsHelper Instance] CollectQuestionsOnIds:currentQuestonIds];
-            [m_game SetGameMode:challengeMode];
+            if (isStaticChallengeMode) {
+                [m_game SetGameMode:staticChallengeMode];
+            }
+            else
+            {
+               [m_game SetGameMode:dynamicChallengeMode];
+            }
+            
             [m_game SetMapBorder:currentBorderValue];
 
             

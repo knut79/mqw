@@ -48,9 +48,9 @@
 @property (strong, nonatomic) HighscoreService *highscoreService;
 //- (id)initWithFrame:(CGRect)frame gameRef:(Game*) gameRef;
 -(void) setHeader;
--(void) setGameRef:(Game*) gameRef;
+-(void) setGameRefAndElements:(Game*) gameRef;
 -(void) sendHighscoreToServer;
--(void) setUpSinglePlayer;
+-(void) setElementsForGamemode;
 -(void) FadeIn;
 -(void) FadeOut;
 -(void) AnimateLastElements;
